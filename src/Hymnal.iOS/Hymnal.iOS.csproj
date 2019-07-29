@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A737FCED-1BDA-412A-BD1E-35275D961D30}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Hymnal.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>Hymnal.iOS</AssemblyName>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI</MtouchExtraArgs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI</MtouchExtraArgs>
+    <MtouchLink>SdkOnly</MtouchLink>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Linker\LinkerPleaseInclude.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Setup.cs" />
+    <Compile Include="Styles\ColorPalette.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist">
+      <SubType>Designer</SubType>
+    </None>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="LaunchScreen.storyboard">
+      <SubType>Designer</SubType>
+    </InterfaceDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="MvvmCross">
+      <Version>6.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.CodeAnalysis">
+      <Version>6.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.3.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms">
+      <Version>4.1.0.618606</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
+      <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
+      <Name>Hymnal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hymnal.UI\Hymnal.UI.csproj">
+      <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>
+      <Name>Hymnal.UI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\launch_image.png" />
+    <BundleResource Include="Resources\launch_image%402x.png" />
+    <BundleResource Include="Resources\launch_image%403x.png" />
+    <BundleResource Include="Resources\hamburger%402x.png" />
+    <BundleResource Include="Resources\hamburger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+  </Target>
+</Project>
