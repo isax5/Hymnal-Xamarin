@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvxViews:MvxContentPage
+    x:Class="Hymnal.UI.Pages.NumberPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    x:TypeArguments="viewModels:NumberViewModel"
+    BackgroundColor="Gray">
+
+    <Shell.SearchHandler>
+        <SearchHandler x:Name="SearchHandler" Placeholder="enter bla bla" />
+    </Shell.SearchHandler>
+
+    <ScrollView>
+        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Entry
+                x:Name="HymnNumber"
+                Keyboard="Numeric"
+                WidthRequest="200">
+                <Entry.Behaviors>
+                    <behaviors:XamarinFastEntryBehaviour
+                        IsNumeric="True"
+                        Mask="###"
+                        MaxLength="3" />
+                </Entry.Behaviors>
+            </Entry>
+
+            <Button
+                Command="{Binding OpenHymnCommand}"
+                CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
+                Text="Abrir" />
+
+        </StackLayout>
+    </ScrollView>
+
+</mvxViews:MvxContentPage>

@@ -6,10 +6,10 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(TabbedPosition.Root, NoHistory = true, WrapInNavigationPage = true, Title = "Himnario")]
-    public partial class RootPage : MvxTabbedPage<RootViewModel>
+    [MvxTabbedPagePresentation(WrapInNavigationPage = false, Title = "Number")]
+    public partial class NumberPage : MvxContentPage<NumberViewModel>
     {
-        public RootPage()
+        public NumberPage()
         {
             InitializeComponent();
         }

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvxViews:MvxContentPage
+    x:Class="Hymnal.UI.Pages.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    x:TypeArguments="viewModels:SettingsViewModel">
+
+    <mvxViews:MvxContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="{OnPlatform iOS=17, Android=15}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+            </Style>
+
+            <Style TargetType="Grid">
+                <Setter Property="Padding" Value="15, 12" />
+            </Style>
+
+            <OnPlatform
+                x:Key="HightViewCell"
+                x:TypeArguments="x:Double"
+                Android="70"
+                iOS="50" />
+        </ResourceDictionary>
+    </mvxViews:MvxContentPage.Resources>
+
+    <TableView
+        HasUnevenRows="True"
+        HeightRequest="50"
+        Intent="Settings">
+        <TableRoot Title="hola">
+            <TableSection Title="Visualización y tipografía">
+
+                <ViewCell Height="{StaticResource HightViewCell}">
+                    <Grid>
+                        <Label Text="Alineación de Texto" />
+                    </Grid>
+                </ViewCell>
+
+                <ViewCell Height="{StaticResource HightViewCell}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label Grid.Column="0" Text="Tamaño letra" />
+
+                        <Label
+                            Grid.Column="1"
+                            Margin="15,0"
+                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
+
+                        <Stepper
+                            x:Name="LetterSize"
+                            Grid.Column="2"
+                            Maximum="40"
+                            Minimum="10"
+                            Value="18" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+
+            <TableSection Title="Developer">
+                <ViewCell>
+                    <Grid>
+                        <Label Text="Ayuda" />
+                    </Grid>
+                </ViewCell>
+
+                <ViewCell>
+                    <Grid>
+                        <Label Text="Desarollador" />
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+
+        </TableRoot>
+    </TableView>
+
+</mvxViews:MvxContentPage>

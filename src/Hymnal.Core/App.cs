@@ -1,6 +1,6 @@
+using Hymnal.Core.ViewModels;
 using MvvmCross.IoC;
 using MvvmCross.ViewModels;
-using Hymnal.Core.ViewModels.Root;
 
 namespace Hymnal.Core
 {
