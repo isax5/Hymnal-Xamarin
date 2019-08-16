@@ -11,6 +11,15 @@
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <resources:Colors />
+
+                <ResourceDictionary>
+                    <Style TargetType="NavigationPage">
+                        <Setter Property="BackgroundColor" Value="Black"/>
+                        <Setter Property="BarBackgroundColor" Value="Black"/>
+                        <Setter Property="BarTextColor" Value="White"/>
+                    </Style>
+                </ResourceDictionary>
+
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 
