@@ -4,14 +4,18 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:NumberViewModel"
-    BackgroundColor="Gray">
+    x:TypeArguments="viewModels:NumberViewModel">
 
-    <Shell.SearchHandler>
-        <SearchHandler x:Name="SearchHandler" Placeholder="enter bla bla" />
-    </Shell.SearchHandler>
+    <mvxViews:MvxContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{Binding OpenRecordsCommand}"
+            Priority="1"
+            Text="Records" />
+        <ToolbarItem Command="{Binding OpenSearchCommand}" Text="Buscar" />
+    </mvxViews:MvxContentPage.ToolbarItems>
 
     <ScrollView>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">

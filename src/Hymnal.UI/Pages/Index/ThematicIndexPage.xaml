@@ -7,12 +7,6 @@
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     x:TypeArguments="viewModels:ThematicIndexViewModel">
 
-    <mvxViews:MvxContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <Label Text="gato 1" />
-            </StackLayout>
-        </ScrollView>
-    </mvxViews:MvxContentPage.Content>
+    <ListView />
 
 </mvxViews:MvxContentPage>

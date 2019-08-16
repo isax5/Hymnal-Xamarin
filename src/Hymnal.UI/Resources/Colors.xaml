@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                    x:Class="Hymnal.UI.Resources.Colors"
-                    xmlns:local="clr-namespace:Hymnal.UI.Resources">
+<ResourceDictionary
+    x:Class="Hymnal.UI.Resources.Colors"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Hymnal.UI.Resources">
 
     <Color x:Key="PrimaryColor">#4c555a</Color>
     <Color x:Key="PrimaryDarkColor">#242c31</Color>
@@ -14,5 +15,7 @@
 
     <Color x:Key="PrimaryTextColor">#000000</Color>
     <Color x:Key="SecondaryTextColor">#ffffff</Color>
+
+    <Color x:Key="BackgroudColor">#ffffff</Color>
 
 </ResourceDictionary>

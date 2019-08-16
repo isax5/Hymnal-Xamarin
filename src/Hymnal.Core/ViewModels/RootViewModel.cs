@@ -5,10 +5,10 @@ namespace Hymnal.Core.ViewModels
 {
     public class RootViewModel : MvxViewModel
     {
-        private readonly IMvxNavigationService _navigationService;
+        private readonly IMvxNavigationService navigationService;
         public RootViewModel(IMvxNavigationService navigationService)
         {
-            _navigationService = navigationService;
+            this.navigationService = navigationService;
         }
 
         private bool loaded = false;
@@ -21,10 +21,10 @@ namespace Hymnal.Core.ViewModels
 
             loaded = true;
 
-            await _navigationService.Navigate<NumberViewModel>();
-            await _navigationService.Navigate<IndexViewModel>();
-            await _navigationService.Navigate<FavoritesViewModel>();
-            await _navigationService.Navigate<SettingsViewModel>();
+            await navigationService.Navigate<NumberViewModel>();
+            await navigationService.Navigate<IndexViewModel>();
+            await navigationService.Navigate<FavoritesViewModel>();
+            await navigationService.Navigate<SettingsViewModel>();
         }
     }
 }

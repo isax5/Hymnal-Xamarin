@@ -3,7 +3,8 @@
     x:Class="Hymnal.UI.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:d="clr-namespace:MvvmCross.Forms;assembly=MvvmCross.Forms"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:resources="clr-namespace:Hymnal.UI.Resources">
     <Application.Resources>
 
@@ -14,12 +15,12 @@
 
                 <ResourceDictionary>
                     <Style TargetType="NavigationPage">
-                        <Setter Property="BackgroundColor" Value="Black"/>
-                        <Setter Property="BarBackgroundColor" Value="Black"/>
-                        <Setter Property="BarTextColor" Value="White"/>
+                        <Setter Property="BackgroundColor" Value="{DynamicResource BackgroudColor}" />
+                        <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
+                        <Setter Property="BarBackgroundColor" Value="Black" />
+                        <Setter Property="BarTextColor" Value="White" />
                     </Style>
                 </ResourceDictionary>
-
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
 

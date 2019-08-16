@@ -26,5 +26,8 @@ namespace Hymnal.Core.ViewModels
                 navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = number });
             }
         }
+
+        public MvxCommand OpenRecordsCommand => new MvxCommand(() => navigationService.Navigate<RecordsViewModel>());
+        public MvxCommand OpenSearchCommand => new MvxCommand(() => navigationService.Navigate<SearchViewModel>());
     }
 }

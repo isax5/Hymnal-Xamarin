@@ -53,15 +53,15 @@ namespace Himnario.iOS.Renderers
         public override void ViewWillAppear(bool animated)
         {
             // Navegacion iOS 11
-            if (UIDevice.CurrentDevice.CheckSystemVersion(11, 0) && NavigationController.NavigationBar != null)
-            {
-                NavigationController.NavigationBar.PrefersLargeTitles = true;
+            //if (UIDevice.CurrentDevice.CheckSystemVersion(11, 0) && NavigationController.NavigationBar != null)
+            //{
+            //    NavigationController.NavigationBar.PrefersLargeTitles = true;
 
-                //NavigationController.NavigationBar.LargeTitleTextAttributes = new UIStringAttributes
-                //{
+            //    //NavigationController.NavigationBar.LargeTitleTextAttributes = new UIStringAttributes
+            //    //{
 
-                //};
-            }
+            //    //};
+            //}
 
             if (!isLoaded)
             {
