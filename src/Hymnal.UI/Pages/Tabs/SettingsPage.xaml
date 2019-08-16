@@ -41,27 +41,42 @@
                     </Grid>
                 </ViewCell>
 
-                <ViewCell Height="{StaticResource HightViewCell}">
+                <ViewCell Height="{OnPlatform iOS=75, Android=95}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="auto" />
-                            <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
 
-                        <Label Grid.Column="0" Text="Tamaño letra" />
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
 
                         <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="Tamaño letra" />
+
+                        <Label
+                            Grid.Row="0"
                             Grid.Column="1"
                             Margin="15,0"
                             Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
 
-                        <Stepper
+                        <Slider
                             x:Name="LetterSize"
-                            Grid.Column="2"
-                            Maximum="40"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Maximum="50"
+                            MaximumTrackColor="{DynamicResource PrimaryColor}"
                             Minimum="10"
+                            MinimumTrackColor="{DynamicResource AccentColor}"
+                            ThumbColor="{DynamicResource AccentColor}"
+                            ValueChanged="LetterSize_ValueChanged"
                             Value="18" />
+
                     </Grid>
                 </ViewCell>
             </TableSection>

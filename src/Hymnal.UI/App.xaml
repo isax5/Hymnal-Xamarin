@@ -16,9 +16,9 @@
                 <ResourceDictionary>
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource BackgroudColor}" />
+                        <Setter Property="BarBackgroundColor" Value="{DynamicResource BackgroudColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource SecondaryTextColor}" />
                         <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
-                        <Setter Property="BarBackgroundColor" Value="Black" />
-                        <Setter Property="BarTextColor" Value="White" />
                     </Style>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>

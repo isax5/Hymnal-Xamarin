@@ -1,9 +1,9 @@
-using MvvmCross.Forms.Views;
-using MvvmCross.Forms.Presenters.Attributes;
-using Xamarin.Forms.Xaml;
+using System;
 using Hymnal.Core.ViewModels;
-using Xamarin.Forms.PlatformConfiguration;
-using Xamarin.Forms.PlatformConfiguration.iOSSpecific;
+using MvvmCross.Forms.Presenters.Attributes;
+using MvvmCross.Forms.Views;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages
 {
@@ -15,5 +15,7 @@ namespace Hymnal.UI.Pages
         {
             InitializeComponent();
         }
+
+        private void LetterSize_ValueChanged(object sender, ValueChangedEventArgs e) => LetterSize.Value = Math.Round(e.NewValue, 0);
     }
 }

@@ -16,6 +16,6 @@
     <Color x:Key="PrimaryTextColor">#000000</Color>
     <Color x:Key="SecondaryTextColor">#ffffff</Color>
 
-    <Color x:Key="BackgroudColor">#ffffff</Color>
+    <Color x:Key="BackgroudColor">#000000</Color>
 
 </ResourceDictionary>

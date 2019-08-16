@@ -7,8 +7,7 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:NumberViewModel"
-    Visual="Material">
+    x:TypeArguments="viewModels:NumberViewModel">
 
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
@@ -32,8 +31,6 @@
                         MaxLength="3" />
                 </Entry.Behaviors>
             </Entry>
-
-            <ActivityIndicator IsRunning="True" />
 
             <Button
                 Command="{Binding OpenHymnCommand}"
