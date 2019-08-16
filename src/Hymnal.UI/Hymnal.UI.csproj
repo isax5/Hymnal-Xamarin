@@ -9,6 +9,7 @@
     <PackageReference Include="MvvmCross.CodeAnalysis" Version="6.3.1" />
     <PackageReference Include="MvvmCross.Forms" Version="6.3.1" />
     <PackageReference Include="Xamarin.Forms" Version="4.1.0.673156" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.1.0.673156" />
     <PackageReference Include="Xamarin.HotReload" Version="1.4.15" />
     <PackageReference Include="XamarinFastEntry.Behaviors" Version="1.1.1" />
   </ItemGroup>

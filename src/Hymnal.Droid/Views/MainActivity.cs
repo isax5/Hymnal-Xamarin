@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using MvvmCross.Forms.Platforms.Android.Views;
 using Hymnal.Core.ViewModels.Main;
+using Xamarin.Forms;
 
 namespace Hymnal.Droid
 {
@@ -24,6 +25,8 @@ namespace Hymnal.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+
+            FormsMaterial.Init(this, bundle);
         }
     }
 }

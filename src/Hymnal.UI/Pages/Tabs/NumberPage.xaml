@@ -7,7 +7,8 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:NumberViewModel">
+    x:TypeArguments="viewModels:NumberViewModel"
+    Visual="Material">
 
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
@@ -19,6 +20,7 @@
 
     <ScrollView>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+
             <Entry
                 x:Name="HymnNumber"
                 Keyboard="Numeric"
@@ -31,10 +33,13 @@
                 </Entry.Behaviors>
             </Entry>
 
+            <ActivityIndicator IsRunning="True" />
+
             <Button
                 Command="{Binding OpenHymnCommand}"
                 CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
-                Text="Abrir" />
+                Text="Abrir"
+                Visual="Material" />
 
         </StackLayout>
     </ScrollView>

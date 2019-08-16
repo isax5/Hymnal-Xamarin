@@ -6,4 +6,5 @@
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     xmlns:views="clr-namespace:Hymnal.UI.Pages"
-    x:TypeArguments="viewModels:RootViewModel" />
+    x:TypeArguments="viewModels:RootViewModel"
+    Visual="Material" />
