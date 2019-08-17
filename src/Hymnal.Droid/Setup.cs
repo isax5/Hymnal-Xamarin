@@ -1,4 +1,7 @@
 using Android.App;
+using Hymnal.Core.Services;
+using Hymnal.SharedNatives.Services;
+using MvvmCross;
 using MvvmCross.Forms.Platforms.Android.Core;
 using Xamarin.Forms;
 
@@ -15,6 +18,9 @@ namespace Hymnal.Droid
         protected override void InitializeFirstChance()
         {
             base.InitializeFirstChance();
+
+            // Native services register
+            Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
         }
 
         protected override void InitializeLastChance()

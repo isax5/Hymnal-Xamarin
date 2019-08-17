@@ -1,3 +1,6 @@
+using Hymnal.Core.Services;
+using Hymnal.SharedNatives.Services;
+using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using Xamarin.Forms;
 
@@ -8,6 +11,9 @@ namespace Hymnal.iOS
         protected override void InitializeFirstChance()
         {
             base.InitializeFirstChance();
+
+            // Native services register
+            Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
         }
 
         protected override void InitializeLastChance()
