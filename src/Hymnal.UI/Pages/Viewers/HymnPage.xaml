@@ -3,6 +3,7 @@
     x:Class="Hymnal.UI.Pages.HymnPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Hymn.ID, StringFormat='# {0}'}"
@@ -10,35 +11,44 @@
 
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem Text="Favorite" />
-        <ToolbarItem
-            Command="{Binding CloseCommand}"
-            Priority="-1"
-            Text="Close" />
+        <OnPlatform x:TypeArguments="ToolbarItem">
+            <OnPlatform.iOS>
+                <ToolbarItem
+                    Command="{Binding CloseCommand}"
+                    Priority="-1"
+                    Text="Close" />
+            </OnPlatform.iOS>
+        </OnPlatform>
+
         <ToolbarItem Command="{Binding OpenSheetCommand}" Text="Sheet 2" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
-    <mvxViews:MvxContentPage.Content>
-        <ScrollView Padding="10">
-            <StackLayout>
-                <Label Text="{Binding Hymn.Title}" />
-
-                <ListView
-                    CachingStrategy="RecycleElement"
-                    HasUnevenRows="True"
-                    IsEnabled="False"
-                    ItemsSource="{Binding Lyric}"
-                    SelectionMode="None"
-                    SeparatorVisibility="None">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label LineBreakMode="WordWrap" Text="{Binding .}" />
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-        </ScrollView>
-    </mvxViews:MvxContentPage.Content>
+    <ListView
+        iOS:ListView.RowAnimationsEnabled="False"
+        CachingStrategy="RecycleElement"
+        HasUnevenRows="True"
+        ItemsSource="{Binding Lyric}"
+        SelectionMode="None"
+        SeparatorVisibility="None">
+        <ListView.Header>
+            <Grid Padding="25">
+                <Label
+                    FontSize="Title"
+                    Text="{Binding Hymn.Title}"
+                    TextColor="{DynamicResource PrimaryTextColor}" />
+            </Grid>
+        </ListView.Header>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Label
+                        Margin="10"
+                        LineBreakMode="WordWrap"
+                        Text="{Binding .}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </mvxViews:MvxContentPage>

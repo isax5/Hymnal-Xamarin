@@ -2,6 +2,7 @@ using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Uap.Core;
+using Xamarin.Forms;
 
 namespace Hymnal.UWP
 {
