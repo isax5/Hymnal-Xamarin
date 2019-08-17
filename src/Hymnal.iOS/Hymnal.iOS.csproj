@@ -70,7 +70,7 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Renderers\ContentPageRenderer.cs" />
+    <Compile Include="Renderers\CustomContentPageRenderer.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Styles\ColorPalette.cs" />
     <None Include="Entitlements.plist" />
