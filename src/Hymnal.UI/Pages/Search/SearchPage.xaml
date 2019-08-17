@@ -3,6 +3,44 @@
     x:Class="Hymnal.UI.Pages.SearchPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:SearchViewModel" />
+    x:TypeArguments="viewModels:SearchViewModel"
+    Visual="Material"
+    mc:Ignorable="d">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <SearchBar
+            Grid.Row="0"
+            CancelButtonColor="{DynamicResource PrimaryColor}"
+            Placeholder="Buscar....."
+            PlaceholderColor="{DynamicResource PrimaryLightColor}"
+            TextColor="{DynamicResource PrimaryColor}" />
+
+        <ListView Grid.Row="1">
+            <ListView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Hola</x:String>
+                    <x:String>Hola</x:String>
+                    <x:String>Hola</x:String>
+                    <x:String>Hola</x:String>
+                    <x:String>Hola2</x:String>
+                </x:Array>
+            </ListView.ItemsSource>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+
+</mvxViews:MvxContentPage>

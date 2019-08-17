@@ -20,8 +20,6 @@ namespace Hymnal.Droid
         protected override void InitializeLastChance()
         {
             base.InitializeLastChance();
-
-
         }
     }
 }

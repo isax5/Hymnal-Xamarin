@@ -1,3 +1,4 @@
+using System;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
@@ -12,6 +13,12 @@ namespace Hymnal.UI.Pages
         public NumberPage()
         {
             InitializeComponent();
+        }
+
+        private void OpenButton_Clicked(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(HymnNumber.Text))
+                HymnNumber.Focus();
         }
     }
 }

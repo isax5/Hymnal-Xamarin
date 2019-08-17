@@ -1,5 +1,8 @@
-using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
+using Hymnal.Core.Services;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -8,6 +11,15 @@ namespace Hymnal.Core.ViewModels
 {
     public class HymnViewModel : MvxViewModel<HymnId>
     {
+        private Hymn hymn;
+        public Hymn Hymn
+        {
+            get => hymn;
+            set => SetProperty(ref hymn, value);
+        }
+
+        public MvxObservableCollection<string> Lyric { get; set; } = new MvxObservableCollection<string>();
+
         private HymnId hymnId;
         public HymnId HymnId
         {
@@ -16,10 +28,12 @@ namespace Hymnal.Core.ViewModels
         }
 
         private readonly IMvxNavigationService navigationService;
+        private readonly IHymnsService hymnsService;
 
-        public HymnViewModel(IMvxNavigationService navigationService)
+        public HymnViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
         {
             this.navigationService = navigationService;
+            this.hymnsService = hymnsService;
         }
 
         public override void Prepare(HymnId parameter)
@@ -27,6 +41,14 @@ namespace Hymnal.Core.ViewModels
             HymnId = parameter;
         }
 
+        public override async Task Initialize()
+        {
+            await base.Initialize();
+
+            // Do something
+            Hymn = await hymnsService.GetHymnAsync(hymnId.Number);
+            Lyric.AddRange(Hymn.Content.Split('¶'));
+        }
 
 
         #region Commands

@@ -1,16 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Android.App;
-using Android.Content;
+using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using MvvmCross.Forms.Platforms.Android.Views;
 using Hymnal.Core.ViewModels.Main;
+using MvvmCross.Forms.Platforms.Android.Views;
 using Xamarin.Forms;
 
 namespace Hymnal.Droid
@@ -27,6 +20,14 @@ namespace Hymnal.Droid
             base.OnCreate(bundle);
 
             FormsMaterial.Init(this, bundle);
+            Xamarin.Essentials.Platform.Init(this, bundle);
+        }
+
+        public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Permission[] grantResults)
+        {
+            Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+
+            base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
     }
 }

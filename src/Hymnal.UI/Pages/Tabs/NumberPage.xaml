@@ -33,10 +33,10 @@
             </Entry>
 
             <Button
+                Clicked="OpenButton_Clicked"
                 Command="{Binding OpenHymnCommand}"
                 CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
-                Text="Abrir"
-                Visual="Material" />
+                Text="Abrir" />
 
         </StackLayout>
     </ScrollView>

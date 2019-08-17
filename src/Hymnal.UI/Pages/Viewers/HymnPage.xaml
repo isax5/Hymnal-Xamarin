@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    Title="{Binding Hymn.ID, StringFormat='# {0}'}"
     x:TypeArguments="viewModels:HymnViewModel">
 
     <!--<NavigationPage.TitleView>
@@ -30,9 +31,30 @@
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <mvxViews:MvxContentPage.Content>
-        <ScrollView>
+        <ScrollView Padding="10">
             <StackLayout>
-                <Label Text="{Binding HymnId.Number}" />
+                <!--<Label Text="{Binding HymnId.Number}" />-->
+                <!--<Label Text="{Binding Hymn.ID}" />-->
+                <Label Text="{Binding Hymn.Title}" />
+                <!--<Label Text="{Binding Hymn.TitlePlain}" />-->
+                <!--<Label Text="{Binding Hymn.Preview}" />-->
+                <!--<Label Text="{Binding Hymn.Content}" />-->
+
+                <ListView
+                    CachingStrategy="RecycleElement"
+                    HasUnevenRows="True"
+                    IsEnabled="False"
+                    ItemsSource="{Binding Lyric}"
+                    SelectionMode="None"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label LineBreakMode="WordWrap" Text="{Binding .}" />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             </StackLayout>
         </ScrollView>
     </mvxViews:MvxContentPage.Content>

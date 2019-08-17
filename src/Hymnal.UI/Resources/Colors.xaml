@@ -7,6 +7,7 @@
 
     <Color x:Key="PrimaryColor">#4c555a</Color>
     <Color x:Key="PrimaryDarkColor">#242c31</Color>
+    <!--  Placeholder  -->
     <Color x:Key="PrimaryLightColor">#788187</Color>
 
     <Color x:Key="AccentColor">#24b780</Color>
@@ -16,6 +17,7 @@
     <Color x:Key="PrimaryTextColor">#000000</Color>
     <Color x:Key="SecondaryTextColor">#ffffff</Color>
 
-    <Color x:Key="BackgroudColor">#000000</Color>
+    <Color x:Key="PrimaryBackgroudColor">#000000</Color>
+    <Color x:Key="SecondaryBackgroudColor">#ffffff</Color>
 
 </ResourceDictionary>
