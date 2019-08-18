@@ -142,6 +142,11 @@ namespace Hymnal.Core.Models
             .Select(h => new ObservableGroupCollection<string, Hymn>(h));
 
         }
+
+        public static IEnumerable<Hymn> GetRange(this IEnumerable<Hymn> hymns, int start, int end)
+        {
+            return hymns.OrderByNumber().Where(h => h.ID >= start && h.ID <= end);
+        }
     }
 
     /// <summary>

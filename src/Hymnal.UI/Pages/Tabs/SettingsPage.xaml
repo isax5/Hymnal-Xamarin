@@ -37,14 +37,15 @@
 
                 <ViewCell Height="{StaticResource HightViewCell}">
                     <Grid>
-                        <Label Text="Alineación de Texto" />
+                        <Label Text="Alineación de Texto" TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
 
-                <ViewCell Height="{OnPlatform iOS=75, Android=95}">
+                <ViewCell Height="{OnPlatform iOS=150, Android=150}">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
 
@@ -56,13 +57,15 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
-                            Text="Tamaño letra" />
+                            Text="Tamaño letra"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
 
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
                             Margin="15,0"
-                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
+                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
 
                         <Slider
                             x:Name="LetterSize"
@@ -77,6 +80,15 @@
                             ValueChanged="LetterSize_ValueChanged"
                             Value="18" />
 
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
+                            Text="Example"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="FillAndExpand" />
+
                     </Grid>
                 </ViewCell>
             </TableSection>
@@ -84,13 +96,19 @@
             <TableSection Title="Developer">
                 <ViewCell>
                     <Grid>
-                        <Label Text="Ayuda" />
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding HelpCommand}" />
+                        </Grid.GestureRecognizers>
+                        <Label Text="Ayuda" TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
 
                 <ViewCell>
                     <Grid>
-                        <Label Text="Desarollador" />
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
+                        </Grid.GestureRecognizers>
+                        <Label Text="Desarollador" TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
             </TableSection>

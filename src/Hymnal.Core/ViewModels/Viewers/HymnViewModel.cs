@@ -49,7 +49,7 @@ namespace Hymnal.Core.ViewModels
 
             // Do something
             Hymn = await hymnsService.GetHymnAsync(hymnId.Number);
-            Lyric.AddRange(Hymn.Content.Split('¶'));
+            Lyric.AddRange(Hymn.Content.Split('¶').Select(ss => ss.Trim()));
         }
 
 

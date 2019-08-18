@@ -35,6 +35,9 @@
     <EmbeddedResource Update="Pages\About\DevelopersPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Pages\About\HelpPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\Thematic\ThematicHymnsListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

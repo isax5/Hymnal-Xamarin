@@ -5,4 +5,18 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:ThematicSubGroupViewModel" />
+    Title="{Binding Thematic.ThematicName}"
+    x:TypeArguments="viewModels:ThematicSubGroupViewModel">
+
+    <ListView
+        CachingStrategy="RecycleElement"
+        ItemsSource="{Binding Thematic.Ambits}"
+        SelectedItem="{Binding SelectedAmbit, Mode=TwoWay}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding AmbitName}" TextColor="{DynamicResource PrimaryTextColor}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
+</mvxViews:MvxContentPage>

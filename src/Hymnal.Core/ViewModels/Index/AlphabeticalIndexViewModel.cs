@@ -27,6 +27,7 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
+
         public AlphabeticalIndexViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
         {
             this.navigationService = navigationService;

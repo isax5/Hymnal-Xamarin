@@ -13,11 +13,18 @@ namespace Hymnal.Core.ViewModels
             this.navigationService = navigationService;
         }
 
-        public MvxCommand HolaCommand => new MvxCommand(Hola);
+        public MvxCommand HelpCommand => new MvxCommand(HelpExecute);
 
-        private void Hola()
+        private void HelpExecute()
         {
-            navigationService.Navigate<HymnViewModel>();
+            navigationService.Navigate<HelpViewModel>();
+        }
+
+        public MvxCommand DeveloperCommand => new MvxCommand(DeveloperExecute);
+
+        private void DeveloperExecute()
+        {
+            navigationService.Navigate<DevelopersViewModel>();
         }
     }
 }

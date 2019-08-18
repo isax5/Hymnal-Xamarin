@@ -7,6 +7,12 @@
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     x:TypeArguments="viewModels:ThematicIndexViewModel">
 
-    <ListView />
+    <ListView ItemsSource="{Binding Thematics}" SelectedItem="{Binding SelectedThematic, Mode=TwoWay}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding ThematicName}" TextColor="{DynamicResource PrimaryTextColor}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </mvxViews:MvxContentPage>

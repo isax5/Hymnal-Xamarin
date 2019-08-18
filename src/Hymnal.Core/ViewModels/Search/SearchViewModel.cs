@@ -1,5 +1,6 @@
 using System.Threading.Tasks;
 using Hymnal.Core.Models;
+using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -12,6 +13,19 @@ namespace Hymnal.Core.ViewModels
         private readonly IHymnsService hymnsService;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
+        public Hymn SelectedHymn
+        {
+            get => null;
+            set
+            {
+                if (value == null)
+                    return;
+
+                SelectedHymnExecute(value);
+                RaisePropertyChanged(nameof(SelectedHymn));
+            }
+        }
+
 
         public SearchViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
         {
@@ -24,6 +38,12 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
 
             Hymns.AddRange((await hymnsService.GetHymnListAsync()).OrderByNumber());
+        }
+
+
+        private void SelectedHymnExecute(Hymn hymn)
+        {
+            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.ID });
         }
     }
 }
