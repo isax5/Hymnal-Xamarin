@@ -11,6 +11,10 @@ namespace Hymnal.Core.ViewModels
 {
     public class HymnViewModel : MvxViewModel<HymnId>
     {
+        private readonly IMvxNavigationService navigationService;
+        private readonly IHymnsService hymnsService;
+
+
         private Hymn hymn;
         public Hymn Hymn
         {
@@ -27,8 +31,6 @@ namespace Hymnal.Core.ViewModels
             set => SetProperty(ref hymnId, value);
         }
 
-        private readonly IMvxNavigationService navigationService;
-        private readonly IHymnsService hymnsService;
 
         public HymnViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
         {

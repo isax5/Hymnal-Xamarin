@@ -17,7 +17,7 @@
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
-                        <Setter Property="BarTextColor" Value="{DynamicResource SecondaryTextColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
                         <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
                     </Style>
                 </ResourceDictionary>

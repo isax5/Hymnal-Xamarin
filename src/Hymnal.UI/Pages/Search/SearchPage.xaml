@@ -24,19 +24,58 @@
             PlaceholderColor="{DynamicResource PrimaryLightColor}"
             TextColor="{DynamicResource PrimaryColor}" />
 
-        <ListView Grid.Row="1">
-            <ListView.ItemsSource>
-                <x:Array Type="{x:Type x:String}">
-                    <x:String>Hola</x:String>
-                    <x:String>Hola</x:String>
-                    <x:String>Hola</x:String>
-                    <x:String>Hola</x:String>
-                    <x:String>Hola2</x:String>
-                </x:Array>
-            </ListView.ItemsSource>
+        <ListView
+            Grid.Row="1"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding Hymns}"
+            RowHeight="45">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding .}" />
+                    <ViewCell>
+                        <Grid
+                            Padding="20,0"
+                            ColumnSpacing="0"
+                            RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.7*" />
+                                <RowDefinition Height="0.3*" />
+                            </Grid.RowDefinitions>
+
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                FontSize="Large"
+                                Text="{Binding ID}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="Large"
+                                Text="{Binding Title}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Prevew  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                FontSize="Micro"
+                                Text="{Binding Preview}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+                    </ViewCell>
+                    <!--<TextCell
+                        Detail="{Binding Preview}"
+                        Text="{Binding Title}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />-->
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

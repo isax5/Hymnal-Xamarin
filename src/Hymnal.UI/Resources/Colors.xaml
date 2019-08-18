@@ -15,7 +15,8 @@
     <Color x:Key="AccentLightColor">#64eab0</Color>
 
     <Color x:Key="PrimaryTextColor">#000000</Color>
-    <Color x:Key="SecondaryTextColor">#ffffff</Color>
+    <Color x:Key="SecondaryTextColor">#666666</Color>
+    <Color x:Key="NavBarTextColor">#ffffff</Color>
 
     <Color x:Key="PrimaryBackgroudColor">#000000</Color>
     <Color x:Key="SecondaryBackgroudColor">#ffffff</Color>

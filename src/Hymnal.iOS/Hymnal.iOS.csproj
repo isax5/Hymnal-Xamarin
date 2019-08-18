@@ -70,7 +70,7 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="Renderers\CustomContentPageRenderer.cs" />
+    <Compile Include="Renderers\ContentPageRenderer.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Styles\ColorPalette.cs" />
     <None Include="Entitlements.plist" />
@@ -85,6 +85,7 @@
       <Visible>false</Visible>
     </ImageAsset>
     <BundleResource Include="Resources\hymns.es.json" />
+    <BundleResource Include="Resources\thematicList.es.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">

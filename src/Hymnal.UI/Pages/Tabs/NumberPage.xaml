@@ -10,12 +10,15 @@
     x:TypeArguments="viewModels:NumberViewModel">
 
     <mvxViews:MvxContentPage.ToolbarItems>
-        <ToolbarItem Command="{Binding OpenSearchCommand}" Text="Buscar" />
         <ToolbarItem
             x:Name="RecordsToolbarItem"
             Command="{Binding OpenRecordsCommand}"
             Priority="-1"
             Text="Records" />
+        <ToolbarItem
+            Command="{Binding OpenSearchCommand}"
+            Priority="1"
+            Text="Buscar" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <ScrollView>

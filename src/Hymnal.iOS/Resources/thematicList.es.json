@@ -1,0 +1,328 @@
+[
+  {
+    "thematic": "El culto",
+    "ambits": [
+      {
+        "ambit": "Adoración y alabanza",
+        "star": 1,
+        "end": 21,
+        "backimage": "Fondo1a21"
+      },
+      {
+        "ambit": "Inicio del culto",
+        "star": 22,
+        "end": 34,
+        "backimage": "Fondo22a34"
+      },
+      {
+        "ambit": "Cierre del culto",
+        "star": 35,
+        "end": 45,
+        "backimage": "Fondo35a45"
+      },
+      {
+        "ambit": "Culto matutino",
+        "star": 46,
+        "end": 47,
+        "backimage": "Fondo46a52"
+      },
+      {
+        "ambit": "Culto vespertino",
+        "star": 48,
+        "end": 52,
+        "backimage": "Fondo46a52"
+      }
+    ]
+  },
+  {
+    "thematic": "Dios el padre",
+    "ambits": [
+      {
+        "ambit": "Amor y fidelidad de Dios",
+        "star": 53,
+        "end": 59,
+        "fondo": "Fondo53a59"
+      },
+      {
+        "ambit": "Majestad y poder de Dios",
+        "star": 60,
+        "end": 70,
+        "fondo": "Fondo60a77"
+      }backimage    ]
+  },
+  {
+    "thematic": "Jesucristo",
+    "ambits": [
+      {
+        "ambit": "Nacimiento de Cristo",
+        "star": 78,
+        "end": 92,
+        "backimage": "Fondo78a92"
+      },
+      {
+        "ambit": "Muerte de Cristo",
+        "star": 93,
+        "end": 102,
+        "backimage": "Fondo93a102"
+      },
+      {
+        "ambit": "Resurrección de Cristo",
+        "star": 103,
+        "end": 106,
+        "backimage": "Fondo103a106"
+      },
+      {
+        "ambit": "Amor de Cristo",
+        "star": 107,
+        "end": 126,
+        "backimage": "Fondo107a126"
+      },
+      {
+        "ambit": "Alabanza a Cristo",
+        "star": 127,
+        "end": 157,
+        "backimage": "Fondo127a157"
+      },
+      {
+        "ambit": "Segunda venida de Cristo",
+        "star": 158,
+        "end": 189,
+        "backimage": "Fondo158a189"
+      }
+    ]
+  },
+  {
+    "thematic": "El Espíritu Santo",
+    "ambits": [
+      {
+        "ambit": "El Espíritu Santo",
+        "star": 190,
+        "end": 203,
+        "backimage": "Fondo190a203"
+      }
+    ]
+  },
+  {
+    "thematic": "Las Sagradas Escrituras",
+    "ambits": [
+      {
+        "ambit": "Las Sagradas Escrituras",
+        "star": 204,
+        "end": 208,
+        "backimage": "Fondo204a208"
+      }
+    ]
+  },
+  {
+    "thematic": "El evangelio",
+    "ambits": [
+      {
+        "ambit": "Invitación",
+        "star": 209,
+        "end": 237,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Arrepentimiento",
+        "star": 238,
+        "end": 244,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Consagración",
+        "star": 245,
+        "end": 283,
+        "backimage": "Fondo245a283"
+      },
+      {
+        "ambit": "Salvación y redención",
+        "star": 284,
+        "end": 310,
+        "backimage": "Fondo284a315"
+      },
+      {
+        "ambit": "Juicio",
+        "star": 311,
+        "end": 315,
+        "backimage": "Fondo284a315"
+      },
+      {
+        "ambit": "Hogar celestial",
+        "star": 316,
+        "end": 344,
+        "backimage": "Fondo316a344"
+      }
+    ]
+  },
+  {
+    "thematic": "La vida cristiana",
+    "ambits": [
+      {
+        "ambit": "Gozo y paz",
+        "star": 345,
+        "end": 364,
+        "backimage": "Fondo345a364"
+      },
+      {
+        "ambit": "Gratitud",
+        "star": 365,
+        "end": 372,
+        "backimage": "Fondo365a372"
+      },
+      {
+        "ambit": "Oración y comunion",
+        "star": 373,
+        "end": 390,
+        "backimage": "Fondo373a390"
+      },
+      {
+        "ambit": "Confianza y seguridad",
+        "star": 391,
+        "end": 438,
+        "backimage": "Fondo391a438"
+      },
+      {
+        "ambit": "Petición y anhelo",
+        "star": 439,
+        "end": 465,
+        "backimage": "Fondo439a465"
+      },
+      {
+        "ambit": "Dirección divina",
+        "star": 466,
+        "end": 473,
+        "backimage": "Fondo466a473"
+      },
+      {
+        "ambit": "Peregrinación",
+        "star": 474,
+        "end": 486,
+        "backimage": "Fondo474a486"
+      },
+      {
+        "ambit": "Obediencia",
+        "star": 487,
+        "end": 490,
+        "backimage": "Fondo487a490"
+      },
+      {
+        "ambit": "Servicio cristiano",
+        "star": 491,
+        "end": 504,
+        "backimage": "Fondo491a504"
+      },
+      {
+        "ambit": "Lucha contra el mal",
+        "star": 505,
+        "end": 520,
+        "backimage": "Fondo505a520"
+      },
+      {
+        "ambit": "Mayordomía",
+        "star": 521,
+        "end": 525,
+        "backimage": "Fondo521a527"
+      },
+      {
+        "ambit": "Amor y la patria",
+        "star": 526,
+        "end": 527,
+        "backimage": "Fondo521a527"
+      }
+    ]
+  },
+  {
+    "thematic": "La iglesia",
+    "ambits": [
+      {
+        "ambit": "Iglesia",
+        "star": 528,
+        "end": 533,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Escuala Sabática",
+        "star": 534,
+        "end": 534,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Sábado",
+        "star": 535,
+        "end": 550,
+        "backimage": "Fondo535a550"
+      },
+      {
+        "ambit": "Misión de la Iglesia",
+        "star": 551,
+        "end": 578,
+        "backimage": "Fondo551a578"
+      },
+      {
+        "ambit": "Bautismo",
+        "star": 579,
+        "end": 580,
+        "backimage": "Fondo579a580"
+      },
+      {
+        "ambit": "Cena del Señor",
+        "star": 581,
+        "end": 586,
+        "backimage": "Fondo581a586"
+      },
+      {
+        "ambit": "Dedicación de un templo",
+        "star": 587,
+        "end": 587,
+        "backimage": "Fondo587a587"
+      },
+      {
+        "ambit": "Funeral",
+        "star": 588,
+        "end": 588,
+        "backimage": "Fondo588a588"
+      }
+    ]
+  },
+  {
+    "thematic": "El hogar cristiano",
+    "ambits": [
+      {
+        "ambit": "Boda",
+        "star": 589,
+        "end": 589,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Hogar cristiano",
+        "star": 590,
+        "end": 596,
+        "backimage": "Fondo590a596"
+      },
+      {
+        "ambit": "Dedicación de un niño",
+        "star": 597,
+        "end": 597,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Niños",
+        "star": 598,
+        "end": 607,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Jóvenes",
+        "star": 608,
+        "end": 613,
+        "backimage": "Fondo608a613"
+      },
+      {
+        "ambit": "Amenes",
+        "star": 614,
+        "end": 614,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  }
+]

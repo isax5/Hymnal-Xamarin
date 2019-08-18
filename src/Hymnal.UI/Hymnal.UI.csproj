@@ -23,6 +23,9 @@
     <Compile Update="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Pages\Thematic\ThematicHymnsListPage.xaml.cs">
+      <DependentUpon>ThematicHymnsListPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Resources\Colors.xaml.cs">
       <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
@@ -32,7 +35,7 @@
     <EmbeddedResource Update="Pages\About\DevelopersPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Thematic\HymnsListPage.xaml">
+    <EmbeddedResource Update="Pages\Thematic\ThematicHymnsListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Records\RecordsPage.xaml">

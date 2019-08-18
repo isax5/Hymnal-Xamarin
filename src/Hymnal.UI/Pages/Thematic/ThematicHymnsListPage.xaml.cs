@@ -7,9 +7,9 @@ namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
-    public partial class HymnsListPage : MvxContentPage<HymnsListViewModel>
+    public partial class ThematicHymnsListPage : MvxContentPage<ThematicHymnsListViewModel>
     {
-        public HymnsListPage()
+        public ThematicHymnsListPage()
         {
             InitializeComponent();
         }
