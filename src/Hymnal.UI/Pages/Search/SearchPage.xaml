@@ -18,10 +18,12 @@
         </Grid.RowDefinitions>
 
         <SearchBar
+            x:Name="HymnSearchBar"
             Grid.Row="0"
             CancelButtonColor="{DynamicResource PrimaryColor}"
             Placeholder="Buscar....."
             PlaceholderColor="{DynamicResource PrimaryLightColor}"
+            Text="{Binding TextSearchBar}"
             TextColor="{DynamicResource PrimaryColor}" />
 
         <ListView

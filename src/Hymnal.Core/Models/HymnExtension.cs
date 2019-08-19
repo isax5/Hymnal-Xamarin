@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using MvvmCross.ViewModels;
 
 namespace Hymnal.Core.Models
@@ -146,6 +147,60 @@ namespace Hymnal.Core.Models
         public static IEnumerable<Hymn> GetRange(this IEnumerable<Hymn> hymns, int start, int end)
         {
             return hymns.OrderByNumber().Where(h => h.ID >= start && h.ID <= end);
+        }
+
+        /// <summary>
+        /// Search query
+        /// </summary>
+        /// <param name="hymns"></param>
+        /// <param name="query"></param>
+        /// <returns></returns>
+        public static IEnumerable<Hymn> SearchQuery(this IEnumerable<Hymn> hymns, string query)
+        {
+            return hymns.Where(h =>
+            {
+                var queryRendered = query.ToUpper().Trim();
+
+                var titleRendered = h.Title.ToUpper()
+                .Replace('Á', 'A')
+                .Replace('É', 'E')
+                .Replace('Í', 'I')
+                .Replace('Ó', 'O')
+                .Replace('Ú', 'U')
+                .Replace('Ñ', 'N')
+                .Replace("¡", string.Empty)
+                .Replace("!", string.Empty)
+                .Replace("¿", string.Empty)
+                .Replace("?", string.Empty)
+                .Replace(",", string.Empty)
+                .Replace(".", string.Empty)
+                .Replace(":", string.Empty);
+
+                var contentRendered = h.Content.ToUpper()
+                .Replace('Á', 'A')
+                .Replace('É', 'E')
+                .Replace('Í', 'I')
+                .Replace('Ó', 'O')
+                .Replace('Ú', 'U')
+                .Replace('Ñ', 'N')
+                .Replace("¡", string.Empty)
+                .Replace("!", string.Empty)
+                .Replace("¿", string.Empty)
+                .Replace("?", string.Empty)
+                .Replace(",", string.Empty)
+                .Replace(".", string.Empty)
+                .Replace(":", string.Empty);
+
+
+                return
+                h.Id.ToUpper().Contains(queryRendered) ||
+
+                h.Title.ToUpper().Contains(queryRendered) ||
+                titleRendered.Contains(queryRendered) ||
+
+                h.Content.ToUpper().Contains(queryRendered) ||
+                contentRendered.Contains(queryRendered);
+            });
         }
     }
 

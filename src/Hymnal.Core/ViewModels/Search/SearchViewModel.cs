@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
@@ -26,6 +28,17 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
+        private string textSearchBar;
+        public string TextSearchBar
+        {
+            get => textSearchBar;
+            set
+            {
+                SetProperty(ref textSearchBar, value);
+                TextSearchExecuteAsync(value);
+            }
+        }
+
 
         public SearchViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
         {
@@ -40,6 +53,20 @@ namespace Hymnal.Core.ViewModels
             Hymns.AddRange((await hymnsService.GetHymnListAsync()).OrderByNumber());
         }
 
+
+        private async void TextSearchExecuteAsync(string text)
+        {
+            Hymns.Clear();
+            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync()).OrderByNumber();
+
+            if (string.IsNullOrWhiteSpace(text))
+            {
+                Hymns.AddRange(hymns);
+                return;
+            }
+
+            Hymns.AddRange(hymns.SearchQuery(text));
+        }
 
         private void SelectedHymnExecute(Hymn hymn)
         {

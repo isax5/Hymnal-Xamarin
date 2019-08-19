@@ -13,5 +13,17 @@ namespace Hymnal.UI.Pages
         {
             InitializeComponent();
         }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            HymnSearchBar.Focus();
+
+            HymnSearchBar.SearchButtonPressed += (s, e) =>
+            {
+                HymnSearchBar.Unfocus();
+            };
+        }
     }
 }
