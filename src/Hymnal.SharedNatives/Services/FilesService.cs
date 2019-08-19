@@ -17,5 +17,11 @@ namespace Hymnal.SharedNatives.Services
                 }
             }
         }
+
+        public string GetPathFile(string fileName)
+        {
+            var libraryPath = FileSystem.AppDataDirectory;
+            return Path.Combine(libraryPath, fileName);
+        }
     }
 }

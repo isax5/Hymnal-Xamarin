@@ -193,7 +193,7 @@ namespace Hymnal.Core.Models
 
 
                 return
-                h.Id.ToUpper().Contains(queryRendered) ||
+                h.IdString.ToUpper().Contains(queryRendered) ||
 
                 h.Title.ToUpper().Contains(queryRendered) ||
                 titleRendered.Contains(queryRendered) ||

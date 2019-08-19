@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Newtonsoft.Json;
 
 namespace Hymnal.Core.Models
@@ -8,9 +5,9 @@ namespace Hymnal.Core.Models
     public class Hymn
     {
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public string IdString { get; set; }
 
-        public int ID => int.Parse(Id);
+        public int ID => int.Parse(IdString);
 
         [JsonProperty("title")]
         public string Title { get; set; }
