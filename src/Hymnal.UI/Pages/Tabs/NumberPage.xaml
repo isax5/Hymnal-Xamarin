@@ -1,24 +1,26 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<mvxViews:MvxContentPage
+<base:CustomMvxContentPage
     x:Class="Hymnal.UI.Pages.NumberPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:NumberViewModel">
+    x:TypeArguments="viewModels:NumberViewModel"
+    BackgroundColor="Transparent">
 
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="RecordsToolbarItem"
             Command="{Binding OpenRecordsCommand}"
-            Priority="-1"
-            Text="Records" />
+            IconImageSource="ToolbarRecords"
+            Priority="-1" />
         <ToolbarItem
             Command="{Binding OpenSearchCommand}"
-            Priority="1"
-            Text="Buscar" />
+            IconImageSource="ToolbarSearch"
+            Priority="1" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <ScrollView>
@@ -45,4 +47,4 @@
         </StackLayout>
     </ScrollView>
 
-</mvxViews:MvxContentPage>
+</base:CustomMvxContentPage>

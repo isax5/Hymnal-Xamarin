@@ -6,7 +6,7 @@ namespace Hymnal.UI.Services
 {
     public class DialogService : IDialogService
     {
-        public Page MainPage { get; set; } = Application.Current.MainPage;
+        public Page MainPage { get; set; } = App.Current.MainPage;
 
         public Task Alert(string title, string message, string cancel)
         {

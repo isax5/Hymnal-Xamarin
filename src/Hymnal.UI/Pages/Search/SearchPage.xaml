@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<mvxViews:MvxContentPage
+<base:CustomMvxContentPage
     x:Class="Hymnal.UI.Pages.SearchPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
@@ -28,6 +29,7 @@
 
         <ListView
             Grid.Row="1"
+            BackgroundColor="Transparent"
             CachingStrategy="RecycleElement"
             ItemsSource="{Binding Hymns}"
             RowHeight="45"
@@ -88,4 +90,4 @@
 
     </Grid>
 
-</mvxViews:MvxContentPage>
+</base:CustomMvxContentPage>

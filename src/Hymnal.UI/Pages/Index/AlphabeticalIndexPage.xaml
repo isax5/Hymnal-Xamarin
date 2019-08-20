@@ -5,9 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:AlphabeticalIndexViewModel">
+    x:TypeArguments="viewModels:AlphabeticalIndexViewModel"
+    BackgroundColor="Transparent">
 
     <ListView
+        BackgroundColor="Transparent"
         CachingStrategy="RecycleElement"
         GroupDisplayBinding="{Binding Key}"
         GroupShortNameBinding="{Binding Key}"

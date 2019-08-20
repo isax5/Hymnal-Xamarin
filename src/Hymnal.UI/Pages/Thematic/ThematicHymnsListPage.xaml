@@ -1,14 +1,16 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<mvxViews:MvxContentPage
+<base:CustomMvxContentPage
     x:Class="Hymnal.UI.Pages.ThematicHymnsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Ambit.AmbitName}"
     x:TypeArguments="viewModels:ThematicHymnsListViewModel">
 
     <ListView
+        BackgroundColor="Transparent"
         CachingStrategy="RecycleElement"
         ItemsSource="{Binding Hymns}"
         RowHeight="45"
@@ -63,4 +65,4 @@
         </ListView.ItemTemplate>
     </ListView>
 
-</mvxViews:MvxContentPage>
+</base:CustomMvxContentPage>

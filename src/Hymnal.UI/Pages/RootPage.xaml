@@ -7,4 +7,5 @@
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     xmlns:views="clr-namespace:Hymnal.UI.Pages"
     x:TypeArguments="viewModels:RootViewModel"
+    Style="{DynamicResource TabbedPageStyle}"
     Visual="Material" />

@@ -5,9 +5,11 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:NumericalIndexViewModel">
+    x:TypeArguments="viewModels:NumericalIndexViewModel"
+    BackgroundColor="Transparent">
 
     <ListView
+        BackgroundColor="Transparent"
         CachingStrategy="RecycleElement"
         GroupDisplayBinding="{Binding Key}"
         GroupShortNameBinding="{Binding Key}"
@@ -36,9 +38,9 @@
                             Grid.Row="0"
                             Grid.RowSpan="2"
                             Grid.Column="0"
-                            TextColor="{DynamicResource PrimaryTextColor}"
                             FontSize="Large"
                             Text="{Binding Number}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="CenterAndExpand" />
 
                         <!--  Title  -->
@@ -54,9 +56,9 @@
                         <Label
                             Grid.Row="1"
                             Grid.Column="1"
-                            TextColor="{DynamicResource SecondaryTextColor}"
                             FontSize="Micro"
                             Text="{Binding Preview}"
+                            TextColor="{DynamicResource SecondaryTextColor}"
                             VerticalOptions="CenterAndExpand" />
 
                     </Grid>

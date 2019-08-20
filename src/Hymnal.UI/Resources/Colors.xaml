@@ -21,4 +21,7 @@
     <Color x:Key="PrimaryBackgroudColor">#000000</Color>
     <Color x:Key="SecondaryBackgroudColor">#ffffff</Color>
 
+    <Color x:Key="SelectedTabColor">#ffffff</Color>
+    <Color x:Key="UnselectedTabColor">#4F5252</Color>
+
 </ResourceDictionary>

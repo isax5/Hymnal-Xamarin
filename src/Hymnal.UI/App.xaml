@@ -14,11 +14,22 @@
                 <resources:Colors />
 
                 <ResourceDictionary>
+
+                    <!--  BackImage Dynamic Link  -->
+                    <FileImageSource x:Key="BackImage" File="Background" />
+
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                         <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
                         <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
+                    </Style>
+
+                    <Style x:Key="TabbedPageStyle" TargetType="mvxViews:MvxTabbedPage">
+                        <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
+                        <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
+                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                     </Style>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>

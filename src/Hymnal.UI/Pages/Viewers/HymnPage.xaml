@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<mvxViews:MvxContentPage
+<base:CustomMvxContentPage
     x:Class="Hymnal.UI.Pages.HymnPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
@@ -16,16 +17,18 @@
             Text="Close" />
         <ToolbarItem
             Command="{Binding FavoriteCommand}"
+            IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
             Priority="1"
             Text="Favorite" />
         <ToolbarItem
             Command="{Binding OpenSheetCommand}"
-            Priority="2"
-            Text="Sheet" />
+            IconImageSource="ToolbarSheet"
+            Priority="2" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <ListView
         iOS:ListView.RowAnimationsEnabled="False"
+        BackgroundColor="Transparent"
         CachingStrategy="RecycleElement"
         HasUnevenRows="True"
         ItemsSource="{Binding Lyric}"
@@ -35,6 +38,8 @@
             <Grid Padding="25">
                 <Label
                     FontSize="Title"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
                     Text="{Binding Hymn.Title}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
             </Grid>
@@ -52,4 +57,4 @@
         </ListView.ItemTemplate>
     </ListView>
 
-</mvxViews:MvxContentPage>
+</base:CustomMvxContentPage>

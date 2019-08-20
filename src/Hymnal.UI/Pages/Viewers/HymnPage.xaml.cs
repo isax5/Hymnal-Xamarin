@@ -1,14 +1,13 @@
 using Hymnal.Core.ViewModels;
+using Hymnal.UI.Pages.Base;
 using MvvmCross.Forms.Presenters.Attributes;
-using MvvmCross.Forms.Views;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [MvxModalPresentation(WrapInNavigationPage = true, Title = "Title 1")]
-    public partial class HymnPage : MvxContentPage<HymnViewModel>
+    public partial class HymnPage : CustomMvxContentPage<HymnViewModel>
     {
         public HymnPage()
         {

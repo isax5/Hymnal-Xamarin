@@ -1,14 +1,14 @@
 using System;
 using Hymnal.Core.ViewModels;
+using Hymnal.UI.Pages.Base;
 using MvvmCross.Forms.Presenters.Attributes;
-using MvvmCross.Forms.Views;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Title = "Number")]
-    public partial class NumberPage : MvxContentPage<NumberViewModel>
+    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Title = "Number", Icon = "TabNumber")]
+    public partial class NumberPage : CustomMvxContentPage<NumberViewModel>
     {
         public NumberPage()
         {

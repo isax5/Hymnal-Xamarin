@@ -78,6 +78,126 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <ImageAsset Include="Media.xcassets\Background.imageset\Background.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\Background.imageset\Background@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\Background.imageset\Background@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\Background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarRecords.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSearch.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSheet.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabFavorites.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabIndex.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabNumber.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabSettings.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabFavorites.imageset\TabFavorites.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabFavorites.imageset\TabFavorites@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabFavorites.imageset\TabFavorites@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabIndex.imageset\TabIndex.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabIndex.imageset\TabIndex@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabIndex.imageset\TabIndex@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabNumber.imageset\TabNumber.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabNumber.imageset\TabNumber@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabNumber.imageset\TabNumber@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabSettings.imageset\TabSettings.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabSettings.imageset\TabSettings@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\TabSettings.imageset\TabSettings@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarRecords.imageset\ToolbarRecords.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarRecords.imageset\ToolbarRecords@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarRecords.imageset\ToolbarRecords@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSearch.imageset\ToolbarSearch.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSearch.imageset\ToolbarSearch@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSearch.imageset\ToolbarSearch@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSheet.imageset\ToolbarSheet.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSheet.imageset\ToolbarSheet@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarSheet.imageset\ToolbarSheet@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
