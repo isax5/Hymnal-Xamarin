@@ -1,15 +1,38 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using MvvmCross.ViewModels;
 
 namespace Hymnal.Core.Models
 {
     public static class HymnExtension
     {
+        public static FavoriteHymn ToFavoriteHymn(this Hymn hymn)
+        {
+            return new FavoriteHymn
+            {
+                NumberString = hymn.NumberString,
+                Title = hymn.Title,
+                TitlePlain = hymn.TitlePlain,
+                Preview = hymn.Preview,
+                Content = hymn.Content
+            };
+        }
+
+        public static HistoryHymn ToHistoryHymn(this Hymn hymn)
+        {
+            return new HistoryHymn
+            {
+                NumberString = hymn.NumberString,
+                Title = hymn.Title,
+                TitlePlain = hymn.TitlePlain,
+                Preview = hymn.Preview,
+                Content = hymn.Content
+            };
+        }
+
         public static IEnumerable<Hymn> OrderByNumber(this IEnumerable<Hymn> hymns)
         {
-            return hymns.OrderBy(h => h.ID);
+            return hymns.OrderBy(h => h.Number);
         }
 
         public static IEnumerable<Hymn> OrderByTitle(this IEnumerable<Hymn> hymns)
@@ -26,7 +49,7 @@ namespace Hymnal.Core.Models
         {
             return hymns.GroupBy(h =>
             {
-                switch (h.ID / 10)
+                switch (h.Number / 10)
                 {
                     case 0:
                     case 1:
@@ -146,7 +169,7 @@ namespace Hymnal.Core.Models
 
         public static IEnumerable<Hymn> GetRange(this IEnumerable<Hymn> hymns, int start, int end)
         {
-            return hymns.OrderByNumber().Where(h => h.ID >= start && h.ID <= end);
+            return hymns.OrderByNumber().Where(h => h.Number >= start && h.Number <= end);
         }
 
         /// <summary>
@@ -193,7 +216,7 @@ namespace Hymnal.Core.Models
 
 
                 return
-                h.IdString.ToUpper().Contains(queryRendered) ||
+                h.NumberString.ToUpper().Contains(queryRendered) ||
 
                 h.Title.ToUpper().Contains(queryRendered) ||
                 titleRendered.Contains(queryRendered) ||

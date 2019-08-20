@@ -40,7 +40,7 @@ namespace Hymnal.Core.Services
         {
             IEnumerable<Hymn> hymns = await GetHymnListAsync();
 
-            return hymns.First(h => h.ID == number);
+            return hymns.First(h => h.Number == number);
         }
 
         public async Task<IEnumerable<Thematic>> GetThematicListAsync()

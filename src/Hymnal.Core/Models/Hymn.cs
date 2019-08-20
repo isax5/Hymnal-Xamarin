@@ -5,9 +5,9 @@ namespace Hymnal.Core.Models
     public class Hymn
     {
         [JsonProperty("id")]
-        public string IdString { get; set; }
+        public string NumberString { get; set; }
 
-        public int ID => int.Parse(IdString);
+        public int Number => int.Parse(NumberString);
 
         [JsonProperty("title")]
         public string Title { get; set; }

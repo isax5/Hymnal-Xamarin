@@ -1,5 +1,6 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
+using Hymnal.UI.Services;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Uap.Core;
 
@@ -13,6 +14,8 @@ namespace Hymnal.UWP
 
             // Native services register
             Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
+            Mvx.IoCProvider.RegisterType<IDataStorageService, DataStorageService>();
+            Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
         }
     }
 }

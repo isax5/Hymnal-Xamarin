@@ -4,5 +4,7 @@ namespace Hymnal.Core
     {
         public const string HYMNS_FILE_SPANISH = "hymns.es.json";
         public const string THEMATIC_LIST_FILE_SPANISH = "thematicList.es.json";
+
+        public const int MAXIMUM_RECORDS = 100;
     }
 }

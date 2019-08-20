@@ -70,7 +70,7 @@ namespace Hymnal.Core.ViewModels
 
         private void SelectedHymnExecute(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.ID });
+            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.Number });
         }
     }
 }

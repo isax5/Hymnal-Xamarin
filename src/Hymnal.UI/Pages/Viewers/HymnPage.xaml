@@ -6,7 +6,7 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    Title="{Binding Hymn.ID, StringFormat='# {0}'}"
+    Title="{Binding Hymn.Number, StringFormat='# {0}'}"
     x:TypeArguments="viewModels:HymnViewModel">
 
     <mvxViews:MvxContentPage.ToolbarItems>
@@ -14,7 +14,10 @@
             Command="{Binding CloseCommand}"
             Priority="-1"
             Text="Close" />
-        <ToolbarItem Priority="1" Text="Favorite" />
+        <ToolbarItem
+            Command="{Binding FavoriteCommand}"
+            Priority="1"
+            Text="Favorite" />
         <ToolbarItem
             Command="{Binding OpenSheetCommand}"
             Priority="2"

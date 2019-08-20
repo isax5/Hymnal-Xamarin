@@ -36,15 +36,15 @@ namespace Hymnal.Core.ViewModels
 
         public override async Task Initialize()
         {
-            await base.Initialize();
-
             Hymns.AddRange((await hymnsService.GetHymnListAsync()).OrderByTitle().GroupByTitle());
+
+            await base.Initialize();
         }
 
 
         private void SelectedHymnExecute(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.ID });
+            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.Number });
         }
     }
 }

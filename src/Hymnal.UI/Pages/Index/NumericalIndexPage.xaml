@@ -38,7 +38,7 @@
                             Grid.Column="0"
                             TextColor="{DynamicResource PrimaryTextColor}"
                             FontSize="Large"
-                            Text="{Binding ID}"
+                            Text="{Binding Number}"
                             VerticalOptions="CenterAndExpand" />
 
                         <!--  Title  -->

@@ -7,6 +7,59 @@
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     x:TypeArguments="viewModels:FavoritesViewModel">
 
-    <ListView />
+    <ListView
+        CachingStrategy="RecycleElement"
+        ItemsSource="{Binding Hymns}"
+        RowHeight="45"
+        SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <Grid
+                        Padding="20,0"
+                        ColumnSpacing="0"
+                        RowSpacing="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0.2*" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="0.7*" />
+                            <RowDefinition Height="0.3*" />
+                        </Grid.RowDefinitions>
+
+                        <!--  Number  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            FontSize="Large"
+                            Text="{Binding Number}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <!--  Title  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Large"
+                            Text="{Binding Title}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <!--  Preview  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Micro"
+                            Text="{Binding Preview}"
+                            TextColor="{DynamicResource SecondaryTextColor}"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </mvxViews:MvxContentPage>

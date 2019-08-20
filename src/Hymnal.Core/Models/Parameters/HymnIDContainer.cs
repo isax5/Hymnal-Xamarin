@@ -8,5 +8,7 @@ namespace Hymnal.Core.Models.Parameter
     public class HymnId
     {
         public int Number { get; set; }
+
+        public bool SaveInHistory { get; set; } = true;
     }
 }

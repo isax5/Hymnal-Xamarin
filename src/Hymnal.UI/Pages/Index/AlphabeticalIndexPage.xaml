@@ -55,7 +55,7 @@
                             Grid.RowSpan="2"
                             Grid.Column="1"
                             FontSize="Large"
-                            Text="{Binding ID}"
+                            Text="{Binding Number}"
                             TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="CenterAndExpand" />
 

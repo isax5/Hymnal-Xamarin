@@ -1,7 +1,9 @@
+using System;
+
 namespace Hymnal.Core.Models
 {
-    public class HistoryHymn : Hymn, IEntity
+    public class HistoryHymn : Hymn
     {
-        public int Id { get; set; }
+        public DateTime SavedAt { get; set; } = DateTime.Now;
     }
 }

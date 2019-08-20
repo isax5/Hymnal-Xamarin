@@ -35,9 +35,9 @@ namespace Hymnal.Core.ViewModels
 
         public override async Task Initialize()
         {
-            await base.Initialize();
-
             Thematics.AddRange(await hymnsService.GetThematicListAsync());
+
+            await base.Initialize();
         }
 
 
