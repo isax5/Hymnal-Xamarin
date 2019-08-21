@@ -5,12 +5,13 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+    xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     x:TypeArguments="viewModels:NumberViewModel"
-    BackgroundImageSource="{DynamicResource BackImage}"
-    BackgroundColor="Transparent">
+    BackgroundColor="Transparent"
+    BackgroundImageSource="{DynamicResource BackImage}">
 
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
@@ -44,6 +45,8 @@
                 Command="{Binding OpenHymnCommand}"
                 CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
                 Text="Abrir" />
+
+            <Label Text="{i18n:Translate Hello}" />
 
         </StackLayout>
     </ScrollView>
