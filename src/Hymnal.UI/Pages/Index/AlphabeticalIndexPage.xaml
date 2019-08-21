@@ -22,6 +22,7 @@
                 <ViewCell>
                     <Grid
                         Padding="20,0"
+                        BackgroundColor="Transparent"
                         ColumnSpacing="0"
                         RowSpacing="0">
                         <Grid.ColumnDefinitions>

@@ -1,7 +1,9 @@
-using MvvmCross.Forms.Views;
-using MvvmCross.Forms.Presenters.Attributes;
-using Xamarin.Forms.Xaml;
+using System;
 using Hymnal.Core.ViewModels;
+using MvvmCross.Forms.Presenters.Attributes;
+using MvvmCross.Forms.Views;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages
 {
@@ -15,6 +17,15 @@ namespace Hymnal.UI.Pages
         public ThematicIndexPage()
         {
             InitializeComponent();
+
+            if (Device.RuntimePlatform == Device.Android)
+            {
+                try
+                {
+                    SetDynamicResource(BackgroundImageSourceProperty, nameof(App.Current.BackLightImage));
+                }
+                catch (Exception) { }
+            }
         }
     }
 }

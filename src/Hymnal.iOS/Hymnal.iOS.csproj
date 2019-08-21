@@ -206,10 +206,18 @@
     </ImageAsset>
     <BundleResource Include="Resources\hymns.es.json" />
     <BundleResource Include="Resources\thematicList.es.json" />
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\Contents.json" />
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight.png" />
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%402x.png" />
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%403x.png" />
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">

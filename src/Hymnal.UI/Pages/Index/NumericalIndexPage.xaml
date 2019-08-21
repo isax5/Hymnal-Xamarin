@@ -6,7 +6,7 @@
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     x:TypeArguments="viewModels:NumericalIndexViewModel"
-    BackgroundColor="Transparent">
+    >
 
     <ListView
         BackgroundColor="Transparent"
