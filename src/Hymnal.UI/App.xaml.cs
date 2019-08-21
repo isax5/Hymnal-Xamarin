@@ -8,6 +8,9 @@ namespace Hymnal.UI
 
         public FileImageSource BackImage => (FileImageSource)Resources["BackImage"];
 
+        public FileImageSource BackLightImage => (FileImageSource)Resources["BackLightImage"];
+
+
         public App()
         {
             Current = this;

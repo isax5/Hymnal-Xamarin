@@ -206,6 +206,10 @@
     </ImageAsset>
     <BundleResource Include="Resources\hymns.es.json" />
     <BundleResource Include="Resources\thematicList.es.json" />
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\Contents.json" />
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight.png" />
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%402x.png" />
+    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%403x.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
@@ -346,6 +350,9 @@
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
       <Visible>false</Visible>
     </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Media.xcassets\BackgroundLight.imageset\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

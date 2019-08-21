@@ -10,7 +10,7 @@ namespace Hymnal.UI.Pages.Base
         {
             try
             {
-                SetDynamicResource(BackgroundImageSourceProperty, nameof(App.Current.BackImage));
+                SetDynamicResource(BackgroundImageSourceProperty, nameof(App.Current.BackLightImage));
             }
             catch (Exception) { }
         }

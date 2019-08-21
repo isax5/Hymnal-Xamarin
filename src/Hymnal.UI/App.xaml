@@ -17,6 +17,7 @@
 
                     <!--  BackImage Dynamic Link  -->
                     <FileImageSource x:Key="BackImage" File="Background" />
+                    <FileImageSource x:Key="BackLightImage" File="BackgroundLight" />
 
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
