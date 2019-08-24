@@ -61,10 +61,17 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution</CodesignKey>
+    <CodesignKey>iPhone Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI</MtouchExtraArgs>
     <MtouchLink>SdkOnly</MtouchLink>
+    <CodesignProvision>Himnario Adventista SPA -iOS Distr. March 21, 2019</CodesignProvision>
+    <BuildIpa>true</BuildIpa>
+    <IpaIncludeArtwork>false</IpaIncludeArtwork>
+    <OptimizePNGs>true</OptimizePNGs>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
+    <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
@@ -219,6 +226,8 @@
     <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%403x.png">
       <Visible>false</Visible>
     </ImageAsset>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">

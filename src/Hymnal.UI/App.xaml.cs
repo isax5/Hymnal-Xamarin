@@ -16,7 +16,7 @@ namespace Hymnal.UI
             Current = this;
             InitializeComponent();
 
-            HotReloader.Current.Run(this);
+            //HotReloader.Current.Run(this);
         }
     }
 }
