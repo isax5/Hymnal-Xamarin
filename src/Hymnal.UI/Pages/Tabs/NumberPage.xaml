@@ -33,68 +33,100 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
+            x:Name="MainStack"
             HorizontalOptions="CenterAndExpand"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}"
-            VerticalOptions="CenterAndExpand">
-
-            <Grid Padding="0">
-                <Frame
-                    BackgroundColor="White"
-                    CornerRadius="10"
-                    HasShadow="True"
-                    HorizontalOptions="CenterAndExpand"
-                    Opacity="0.3"
-                    VerticalOptions="FillAndExpand"
-                    WidthRequest="{Binding Source={x:Reference MainStack}, Path=Width}" />
-
-                <StackLayout
-                    x:Name="MainStack"
-                    HorizontalOptions="CenterAndExpand"
-                    Orientation="Horizontal">
-                    <Label
-                        AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                        AbsoluteLayout.LayoutFlags="All"
-                        FontAttributes="Bold"
-                        FontSize="45"
-                        Text="#"
-                        VerticalOptions="FillAndExpand"
-                        VerticalTextAlignment="Center" />
-
-                    <Entry
-                        x:Name="HymnNumber"
-                        AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
-                        AbsoluteLayout.LayoutFlags="All"
-                        BackgroundColor="Transparent"
-                        FontAttributes="Bold"
-                        FontSize="40"
+                                                                  Property=Width}">
+            <StackLayout
+                x:Name="ContainerStack"
+                Margin="0,30">
+                <Grid Padding="0">
+                    <Frame
+                        BackgroundColor="White"
+                        CornerRadius="10"
+                        HasShadow="True"
                         HorizontalOptions="CenterAndExpand"
-                        HorizontalTextAlignment="Center"
-                        Keyboard="Numeric"
-                        Placeholder="...."
-                        PlaceholderColor="Black"
-                        VerticalOptions="CenterAndExpand"
-                        Visual="Default"
-                        WidthRequest="150">
-                        <Entry.Behaviors>
-                            <behaviors:XamarinFastEntryBehaviour
-                                IsNumeric="True"
-                                Mask="###" />
-                        </Entry.Behaviors>
-                    </Entry>
-                </StackLayout>
-            </Grid>
+                        Opacity="0.3"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />
 
-            <Button
-                Clicked="OpenButton_Clicked"
-                Command="{Binding OpenHymnCommand}"
-                CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
-                HorizontalOptions="CenterAndExpand"
-                Text="Abrir"
-                WidthRequest="200" />
+                    <StackLayout
+                        x:Name="EntryContainer"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Label
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            FontAttributes="Bold"
+                            FontSize="45"
+                            Text="#"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center" />
 
+                        <Entry
+                            x:Name="HymnNumber"
+                            AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontSize="40"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Numeric"
+                            Placeholder="...."
+                            PlaceholderColor="Black"
+                            VerticalOptions="CenterAndExpand"
+                            Visual="Default"
+                            WidthRequest="150">
+                            <Entry.Behaviors>
+                                <behaviors:XamarinFastEntryBehaviour
+                                    IsNumeric="True"
+                                    Mask="###" />
+                            </Entry.Behaviors>
+                        </Entry>
+                    </StackLayout>
+                </Grid>
+
+                <Button
+                    Clicked="OpenButton_Clicked"
+                    Command="{Binding OpenHymnCommand}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="Abrir"
+                    WidthRequest="200" />
+
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="OrientationStates">
+                        <VisualState x:Name="Portrait">
+                            <VisualState.Setters>
+                                <Setter Property="Orientation" Value="Vertical" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Landscape">
+                            <VisualState.Setters>
+                                <Setter Property="Orientation" Value="Horizontal" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </StackLayout>
+
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="OrientationStates">
+                    <VisualState x:Name="Portrait">
+                        <VisualState.Setters>
+                            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Landscape">
+                        <VisualState.Setters>
+                            <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
         </StackLayout>
     </RelativeLayout>
 
