@@ -1,3 +1,4 @@
+using Hymnal.Core;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
@@ -16,6 +17,9 @@ namespace Hymnal.UI.Pages
 
             if (Device.RuntimePlatform != Device.iOS)
                 ToolbarItems.Remove(CloseToolbar);
+
+            if (!Constants.USING_SHEETS)
+                ToolbarItems.Remove(SheetToolbar);
         }
     }
 }

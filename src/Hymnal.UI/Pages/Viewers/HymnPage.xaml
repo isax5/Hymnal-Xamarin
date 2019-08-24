@@ -23,6 +23,7 @@
             Priority="1"
             Text="Favorite" />
         <ToolbarItem
+            x:Name="SheetToolbar"
             Command="{Binding OpenSheetCommand}"
             IconImageSource="ToolbarSheet"
             Priority="2" />
