@@ -1,6 +1,6 @@
 using Hymnal.Core.ViewModels;
-using Hymnal.UI.Pages.Base;
 using MvvmCross.Forms.Presenters.Attributes;
+using MvvmCross.Forms.Views;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages.Tabs
@@ -8,7 +8,7 @@ namespace Hymnal.UI.Pages.Tabs
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [MvxTabbedPagePresentation(WrapInNavigationPage = false, Title = "Index", Icon = "TabIndex")]
     [MvxCarouselPagePresentation(CarouselPosition.Root, NoHistory = true)]
-    public partial class IndexPage : CustomMvxCarouselPage<IndexViewModel>
+    public partial class IndexPage : MvxCarouselPage<IndexViewModel>
     {
         public IndexPage()
         {

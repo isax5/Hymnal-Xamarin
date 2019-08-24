@@ -12,5 +12,7 @@ namespace Hymnal.Core
         public const int MAXIMUM_RECORDS = 100;
 
         public const int DEFAULT_HYMNALS_FONT_SIZE = 18;
+        public const int MINIMUM_HYMNALS_FONT_SIZE = 12;
+        public const int MAXIMUM_HYMNALS_FONT_SIZE = 55;
     }
 }

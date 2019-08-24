@@ -1,68 +1,91 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<base:CustomMvxContentPage
+<mvxViews:MvxContentPage
     x:Class="Hymnal.UI.Pages.ThematicHymnsListPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Ambit.AmbitName}"
-    x:TypeArguments="viewModels:ThematicHymnsListViewModel">
+    x:TypeArguments="viewModels:ThematicHymnsListViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
-    <ListView
-        BackgroundColor="Transparent"
-        CachingStrategy="RecycleElement"
-        ItemsSource="{Binding Hymns}"
-        RowHeight="45"
-        SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
-                    <Grid
-                        Padding="20,0"
-                        ColumnSpacing="0"
-                        RowSpacing="0">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="0.2*" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="0.7*" />
-                            <RowDefinition Height="0.3*" />
-                        </Grid.RowDefinitions>
 
-                        <!--  Number  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.RowSpan="2"
-                            Grid.Column="0"
-                            FontSize="Large"
-                            Text="{Binding Number}"
-                            TextColor="{DynamicResource PrimaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+    <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
 
-                        <!--  Title  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            FontSize="Large"
-                            Text="{Binding Title}"
-                            TextColor="{DynamicResource PrimaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+        <StackLayout
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
 
-                        <!--  Preview  -->
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            FontSize="Micro"
-                            Text="{Binding Preview}"
-                            TextColor="{DynamicResource SecondaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+        <ListView
+            BackgroundColor="Transparent"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding Hymns}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            RowHeight="45"
+            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Padding="20,0"
+                            ColumnSpacing="0"
+                            RowSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.2*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.7*" />
+                                <RowDefinition Height="0.3*" />
+                            </Grid.RowDefinitions>
 
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                FontSize="Large"
+                                Text="{Binding Number}"
+                                TextColor="{DynamicResource PrimaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
 
-</base:CustomMvxContentPage>
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="Large"
+                                Text="{Binding Title}"
+                                TextColor="{DynamicResource PrimaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Preview  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                FontSize="Micro"
+                                Text="{Binding Preview}"
+                                TextColor="{DynamicResource SecondaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </RelativeLayout>
+
+</mvxViews:MvxContentPage>

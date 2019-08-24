@@ -66,9 +66,9 @@
                             Grid.Row="1"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
-                            Maximum="50"
+                            Maximum="{Binding MaximumHymnFontSize}"
                             MaximumTrackColor="{DynamicResource PrimaryColor}"
-                            Minimum="10"
+                            Minimum="{Binding MinimumHymnFontSize}"
                             MinimumTrackColor="{DynamicResource AccentColor}"
                             ThumbColor="{DynamicResource AccentColor}"
                             ValueChanged="LetterSize_ValueChanged"
@@ -93,7 +93,9 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding HelpCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label Text="Ayuda" TextColor="{DynamicResource PrimaryTextColor}" />
+                        <Label
+                            Text="Ayuda"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
 
@@ -102,7 +104,9 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label Text="Desarollador" TextColor="{DynamicResource PrimaryTextColor}" />
+                        <Label
+                            Text="Desarollador"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
             </TableSection>

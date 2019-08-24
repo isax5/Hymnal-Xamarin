@@ -1,24 +1,49 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<base:CustomMvxContentPage
+<mvxViews:MvxContentPage
     x:Class="Hymnal.UI.Pages.ThematicSubGroupPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Thematic.ThematicName}"
-    x:TypeArguments="viewModels:ThematicSubGroupViewModel">
+    x:TypeArguments="viewModels:ThematicSubGroupViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
-    <ListView
-        BackgroundColor="Transparent"
-        CachingStrategy="RecycleElement"
-        ItemsSource="{Binding Thematic.Ambits}"
-        SelectedItem="{Binding SelectedAmbit, Mode=TwoWay}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding AmbitName}" TextColor="{DynamicResource PrimaryTextColor}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
 
-</base:CustomMvxContentPage>
+    <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <ListView
+            BackgroundColor="Transparent"
+            CachingStrategy="RecycleElement"
+            ItemsSource="{Binding Thematic.Ambits}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            SelectedItem="{Binding SelectedAmbit, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Text="{Binding AmbitName}"
+                        TextColor="{DynamicResource PrimaryTextColor}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </RelativeLayout>
+
+</mvxViews:MvxContentPage>

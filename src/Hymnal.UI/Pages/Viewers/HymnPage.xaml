@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<base:CustomMvxContentPage
+<mvxViews:MvxContentPage
     x:Class="Hymnal.UI.Pages.HymnPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:base="clr-namespace:Hymnal.UI.Pages.Base"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
-    x:TypeArguments="viewModels:HymnViewModel">
-
+    x:TypeArguments="viewModels:HymnViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
 
     <mvxViews:MvxContentPage.ToolbarItems>
@@ -30,9 +29,17 @@
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
         <StackLayout
-            BackgroundColor="White"
-            Opacity="0.4"
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            Opacity="{DynamicResource BackgroundWhiteFilterHymnLetters}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -76,4 +83,4 @@
         </ListView>
     </RelativeLayout>
 
-</base:CustomMvxContentPage>
+</mvxViews:MvxContentPage>

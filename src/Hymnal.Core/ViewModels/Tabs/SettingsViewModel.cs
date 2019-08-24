@@ -15,6 +15,8 @@ namespace Hymnal.Core.ViewModels
             get => preferencesService.HymnalsFontSize;
             set => preferencesService.HymnalsFontSize = value;
         }
+        public int MinimumHymnFontSize => Constants.MINIMUM_HYMNALS_FONT_SIZE;
+        public int MaximumHymnFontSize => Constants.MAXIMUM_HYMNALS_FONT_SIZE;
 
         public SettingsViewModel(
             IMvxNavigationService navigationService,

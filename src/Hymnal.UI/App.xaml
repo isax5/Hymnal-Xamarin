@@ -15,9 +15,15 @@
 
                 <ResourceDictionary>
 
+                    <x:String x:Key="BackgroundImageFile">Background</x:String>
+
+                    <x:Double x:Key="BackgroundWhiteFilter">0.3</x:Double>
+                    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.4</x:Double>
+
                     <!--  BackImage Dynamic Link  -->
-                    <FileImageSource x:Key="BackImage" File="Background" />
-                    <FileImageSource x:Key="BackLightImage" File="BackgroundLight" />
+                    <FileImageSource
+                        x:Key="BackImage"
+                        File="{StaticResource BackgroundImageFile}" />
 
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
@@ -26,7 +32,9 @@
                         <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
                     </Style>
 
-                    <Style x:Key="TabbedPageStyle" TargetType="mvxViews:MvxTabbedPage">
+                    <Style
+                        x:Key="TabbedPageStyle"
+                        TargetType="mvxViews:MvxTabbedPage">
                         <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
                         <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
                         <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
