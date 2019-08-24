@@ -15,6 +15,11 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IDataStorageService dataStorageService;
+        private readonly IPreferencesService preferencesService;
+
+        public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
+        public int HymnFontSize => preferencesService.HymnalsFontSize;
+
         private Hymn hymn;
         public Hymn Hymn
         {
@@ -42,11 +47,13 @@ namespace Hymnal.Core.ViewModels
         public HymnViewModel(
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
-            IDataStorageService dataStorageService)
+            IDataStorageService dataStorageService,
+            IPreferencesService preferencesService)
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.dataStorageService = dataStorageService;
+            this.preferencesService = preferencesService;
         }
 
         public override void Prepare(HymnId parameter)

@@ -10,8 +10,11 @@
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
     x:TypeArguments="viewModels:HymnViewModel">
 
+
+
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
+            x:Name="CloseToolbar"
             Command="{Binding CloseCommand}"
             Priority="-1"
             Text="Close" />
@@ -26,35 +29,51 @@
             Priority="2" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
-    <ListView
-        iOS:ListView.RowAnimationsEnabled="False"
-        BackgroundColor="Transparent"
-        CachingStrategy="RecycleElement"
-        HasUnevenRows="True"
-        ItemsSource="{Binding Lyric}"
-        SelectionMode="None"
-        SeparatorVisibility="None">
-        <ListView.Header>
-            <Grid Padding="25">
-                <Label
-                    FontSize="Title"
-                    HorizontalOptions="FillAndExpand"
-                    HorizontalTextAlignment="Center"
-                    Text="{Binding Hymn.Title}"
-                    TextColor="{DynamicResource PrimaryTextColor}" />
-            </Grid>
-        </ListView.Header>
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <ViewCell>
+    <RelativeLayout>
+        <StackLayout
+            BackgroundColor="White"
+            Opacity="0.4"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <ListView
+            x:Name="listView"
+            iOS:ListView.RowAnimationsEnabled="False"
+            BackgroundColor="Transparent"
+            CachingStrategy="RecycleElement"
+            HasUnevenRows="True"
+            ItemsSource="{Binding Lyric}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            SelectionMode="None"
+            SeparatorVisibility="None">
+            <ListView.Header>
+                <Grid Padding="25">
                     <Label
-                        Margin="10"
-                        LineBreakMode="WordWrap"
-                        Text="{Binding .}"
+                        FontSize="{Binding Path=BindingContext.HymnTitleFontSize, Source={x:Reference listView}}"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Text="{Binding Hymn.Title}"
                         TextColor="{DynamicResource PrimaryTextColor}" />
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                </Grid>
+            </ListView.Header>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Label
+                            Margin="10"
+                            FontSize="{Binding Path=BindingContext.HymnFontSize, Source={x:Reference listView}}"
+                            LineBreakMode="WordWrap"
+                            Text="{Binding .}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </RelativeLayout>
 
 </base:CustomMvxContentPage>

@@ -1,6 +1,7 @@
 using Hymnal.Core.ViewModels;
 using Hymnal.UI.Pages.Base;
 using MvvmCross.Forms.Presenters.Attributes;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages
@@ -12,6 +13,9 @@ namespace Hymnal.UI.Pages
         public HymnPage()
         {
             InitializeComponent();
+
+            if (Device.RuntimePlatform != Device.iOS)
+                ToolbarItems.Remove(CloseToolbar);
         }
     }
 }

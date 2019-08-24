@@ -10,5 +10,7 @@ namespace Hymnal.Core
         public const string THEMATIC_LIST_FILE_SPANISH = "thematicList.es.json";
 
         public const int MAXIMUM_RECORDS = 100;
+
+        public const int DEFAULT_HYMNALS_FONT_SIZE = 18;
     }
 }

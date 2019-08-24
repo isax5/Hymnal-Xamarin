@@ -26,17 +26,16 @@
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <ScrollView>
-        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-
+        <StackLayout
+            x:Name="MainStack"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
             <Entry
                 x:Name="HymnNumber"
                 Keyboard="Numeric"
                 WidthRequest="200">
                 <Entry.Behaviors>
-                    <behaviors:XamarinFastEntryBehaviour
-                        IsNumeric="True"
-                        Mask="###"
-                        MaxLength="3" />
+                    <behaviors:XamarinFastEntryBehaviour IsNumeric="True" Mask="###" />
                 </Entry.Behaviors>
             </Entry>
 
@@ -46,8 +45,20 @@
                 CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
                 Text="Abrir" />
 
-            <Label Text="{i18n:Translate Hello}" />
-
+            <!--<VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="OrientationStates">
+                    <VisualState x:Name="Portrait">
+                        <VisualState.Setters>
+                            <Setter Property="Padding" Value="0, 80, 0, 0" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Landscape">
+                        <VisualState.Setters>
+                            <Setter Property="Padding" Value="0, 50, 0, 0" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>-->
         </StackLayout>
     </ScrollView>
 

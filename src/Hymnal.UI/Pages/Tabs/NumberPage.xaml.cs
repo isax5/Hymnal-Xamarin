@@ -2,6 +2,7 @@ using System;
 using Hymnal.Core.ViewModels;
 using Hymnal.UI.Pages.Base;
 using MvvmCross.Forms.Presenters.Attributes;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.UI.Pages
@@ -13,6 +14,12 @@ namespace Hymnal.UI.Pages
         public NumberPage()
         {
             InitializeComponent();
+
+            SizeChanged += (s, args) =>
+            {
+                var visualState = Width > Height ? "Landscape" : "Portrait";
+                VisualStateManager.GoToState(MainStack, visualState);
+            };
         }
 
         private void OpenButton_Clicked(object sender, EventArgs e)

@@ -35,12 +35,6 @@
         <TableRoot Title="hola">
             <TableSection Title="Visualización y tipografía">
 
-                <ViewCell Height="{StaticResource HightViewCell}">
-                    <Grid>
-                        <Label Text="Alineación de Texto" TextColor="{DynamicResource PrimaryTextColor}" />
-                    </Grid>
-                </ViewCell>
-
                 <ViewCell Height="{OnPlatform iOS=150, Android=150}">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -78,7 +72,7 @@
                             MinimumTrackColor="{DynamicResource AccentColor}"
                             ThumbColor="{DynamicResource AccentColor}"
                             ValueChanged="LetterSize_ValueChanged"
-                            Value="18" />
+                            Value="{Binding HymnFontSize}" />
 
                         <Label
                             Grid.Row="2"
