@@ -8,6 +8,7 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    Title="{i18n:Translate Number}"
     x:TypeArguments="viewModels:NumberViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
@@ -41,7 +42,8 @@
                                                                   Property=Width}">
             <StackLayout
                 x:Name="ContainerStack"
-                Margin="0,30">
+                Margin="0,30"
+                Padding="0,0,0,60">
                 <Grid Padding="0">
                     <Frame
                         BackgroundColor="White"
@@ -94,7 +96,7 @@
                     Command="{Binding OpenHymnCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
-                    Text="Abrir"
+                    Text="{i18n:Translate Open}"
                     WidthRequest="200" />
 
                 <VisualStateManager.VisualStateGroups>

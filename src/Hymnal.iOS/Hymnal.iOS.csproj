@@ -209,23 +209,8 @@
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
     <BundleResource Include="Resources\hymns.es.json" />
     <BundleResource Include="Resources\thematicList.es.json" />
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%402x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\BackgroundLight.imageset\BackgroundLight%403x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
@@ -325,13 +310,6 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\launch_image.png" />
-    <BundleResource Include="Resources\launch_image%402x.png" />
-    <BundleResource Include="Resources\launch_image%403x.png" />
-    <BundleResource Include="Resources\hamburger%402x.png" />
-    <BundleResource Include="Resources\hamburger.png" />
-  </ItemGroup>
-  <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
       <Visible>false</Visible>
     </ImageAsset>
@@ -372,8 +350,15 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Media.xcassets\BackgroundLight.imageset\" />
+    <BundleResource Include="Resources\LogoSplash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LogoSplash%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\LogoSplash%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

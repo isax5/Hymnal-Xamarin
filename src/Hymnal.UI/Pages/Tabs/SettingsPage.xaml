@@ -3,10 +3,11 @@
     x:Class="Hymnal.UI.Pages.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    Title="Settings"
+    Title="{i18n:Translate Settings}"
     x:TypeArguments="viewModels:SettingsViewModel">
 
     <mvxViews:MvxContentPage.Resources>
@@ -32,8 +33,8 @@
         HasUnevenRows="True"
         HeightRequest="50"
         Intent="Settings">
-        <TableRoot Title="hola">
-            <TableSection Title="Visualización y tipografía">
+        <TableRoot>
+            <TableSection Title="{i18n:Translate DisplayAndTypography}">
 
                 <ViewCell Height="{OnPlatform iOS=150, Android=150}">
                     <Grid>
@@ -51,7 +52,7 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
-                            Text="Tamaño letra"
+                            Text="{i18n:Translate LetterSize}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
 
                         <Label
@@ -79,7 +80,7 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
                             FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
-                            Text="Example"
+                            Text="{i18n:Translate Example}"
                             TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="FillAndExpand" />
 
@@ -87,14 +88,14 @@
                 </ViewCell>
             </TableSection>
 
-            <TableSection Title="Developer">
+            <TableSection Title="{i18n:Translate Developing}">
                 <ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding HelpCommand}" />
                         </Grid.GestureRecognizers>
                         <Label
-                            Text="Ayuda"
+                            Text="{i18n:Translate Help}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
@@ -105,7 +106,7 @@
                             <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
                         <Label
-                            Text="Desarollador"
+                            Text="{i18n:Translate Developer}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>

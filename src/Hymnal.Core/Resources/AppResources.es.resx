@@ -12,7 +12,53 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Hello" xml:space="preserve">
-    <value>Hola mundo</value>
+  <data name="AdventistHymnal" xml:space="preserve">
+    <value>Himnario Adventista</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="Developer" xml:space="preserve">
+    <value>Desarrollador</value>
+  </data>
+  <data name="Developing" xml:space="preserve">
+    <value>Desarrollo</value>
+  </data>
+  <data name="DisplayAndTypography" xml:space="preserve">
+    <value>Visualización y Tipografía</value>
+  </data>
+  <data name="Example" xml:space="preserve">
+    <value>Ejemplo</value>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoritos</value>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ayuda</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historial</value>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Índice</value>
+  </data>
+  <data name="LetterSize" xml:space="preserve">
+    <value>Tamaño de letra</value>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Número</value>
+  </data>
+  <data name="Open" xml:space="preserve">
+    <value>Abrir</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="Searcher" xml:space="preserve">
+    <value>Buscar ....</value>
+    <comment>Placeholder of searcher</comment>
   </data>
 </root>

@@ -1,4 +1,5 @@
 using System;
+using Hymnal.Core.Helpers;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
@@ -8,7 +9,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Title = "Settings", Icon = "TabSettings")]
+    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Icon = "TabSettings")]
     public partial class SettingsPage : MvxContentPage<SettingsViewModel>
     {
         public SettingsPage()

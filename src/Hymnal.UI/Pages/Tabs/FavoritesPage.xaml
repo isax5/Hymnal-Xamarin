@@ -3,7 +3,9 @@
     x:Class="Hymnal.UI.Pages.FavoritesPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    Title="{i18n:Translate Favorites}"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     x:TypeArguments="viewModels:FavoritesViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">

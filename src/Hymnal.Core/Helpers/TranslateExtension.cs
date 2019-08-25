@@ -2,13 +2,14 @@ using System;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
+using Hymnal.Core.Resources;
 
 namespace Hymnal.Core.Helpers
 {
     public class TranslateExtension
     {
         private const string ResourceId = "Hymnal.Core.Resources.AppResources";
-        private static readonly Lazy<ResourceManager> Resmgr = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
+        private static readonly Lazy<ResourceManager> LanguajesResourcesManager = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
 
         public string Text { get; set; }
 
@@ -19,7 +20,7 @@ namespace Hymnal.Core.Helpers
 
             CultureInfo ci = Constants.CurrentCultureInfo;
 
-            var translation = Resmgr.Value.GetString(Text, ci);
+            var translation = LanguajesResourcesManager.Value.GetString(Text, ci);
 
             if (translation == null)
             {
@@ -34,5 +35,14 @@ namespace Hymnal.Core.Helpers
             }
             return translation;
         }
+    }
+
+
+    /// <summary>
+    /// This class exposes the translations to use in C# Code
+    /// </summary>
+    public static class Languajes
+    {
+        public static string AdventistHymnal => AppResources.AdventistHymnal;
     }
 }

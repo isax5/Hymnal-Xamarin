@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages.Tabs
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(WrapInNavigationPage = false, Title = "Index", Icon = "TabIndex")]
+    [MvxTabbedPagePresentation(WrapInNavigationPage = false, Icon = "TabIndex")]
     [MvxCarouselPagePresentation(CarouselPosition.Root, NoHistory = true)]
     public partial class IndexPage : MvxCarouselPage<IndexViewModel>
     {

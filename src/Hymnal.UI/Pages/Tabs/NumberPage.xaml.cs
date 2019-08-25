@@ -8,7 +8,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Title = "Number", Icon = "TabNumber")]
+    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Icon = "TabNumber")]
     public partial class NumberPage : MvxContentPage<NumberViewModel>
     {
         public NumberPage()

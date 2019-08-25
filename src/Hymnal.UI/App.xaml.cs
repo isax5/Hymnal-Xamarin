@@ -6,17 +6,12 @@ namespace Hymnal.UI
     {
         public static new App Current;
 
-        public FileImageSource BackImage => (FileImageSource)Resources["BackImage"];
-
-        public FileImageSource BackLightImage => (FileImageSource)Resources["BackLightImage"];
-
-
         public App()
         {
             Current = this;
             InitializeComponent();
 
-            //HotReloader.Current.Run(this);
+            HotReloader.Current.Run(this);
         }
     }
 }

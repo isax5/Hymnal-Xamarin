@@ -6,9 +6,70 @@
     </header>
     <body>
       <group id="HYMNAL.CORE/RESOURCES/APPRESOURCES.RESX" datatype="resx">
-        <trans-unit id="Hello" translate="yes" xml:space="preserve">
-          <source>Hello World</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Hola mundo</target>
+        <trans-unit id="AdventistHymnal" translate="yes" xml:space="preserve">
+          <source>Adventist Hymnal</source>
+          <target state="final">Himnario Adventista</target>
+        </trans-unit>
+        <trans-unit id="Close" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="final" state-qualifier="tm-suggestion">Cerrar</target>
+        </trans-unit>
+        <trans-unit id="Developer" translate="yes" xml:space="preserve">
+          <source>Developer</source>
+          <target state="final" state-qualifier="tm-suggestion">Desarrollador</target>
+        </trans-unit>
+        <trans-unit id="Developing" translate="yes" xml:space="preserve">
+          <source>Developing</source>
+          <target state="final" state-qualifier="tm-suggestion">Desarrollo</target>
+        </trans-unit>
+        <trans-unit id="DisplayAndTypography" translate="yes" xml:space="preserve">
+          <source>Display and typography</source>
+          <target state="final">Visualización y Tipografía</target>
+        </trans-unit>
+        <trans-unit id="Example" translate="yes" xml:space="preserve">
+          <source>Example</source>
+          <target state="final" state-qualifier="tm-suggestion">Ejemplo</target>
+        </trans-unit>
+        <trans-unit id="Favorites" translate="yes" xml:space="preserve">
+          <source>Favorites</source>
+          <target state="final" state-qualifier="tm-suggestion">Favoritos</target>
+        </trans-unit>
+        <trans-unit id="Help" translate="yes" xml:space="preserve">
+          <source>Help</source>
+          <target state="final" state-qualifier="tm-suggestion">Ayuda</target>
+        </trans-unit>
+        <trans-unit id="History" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="final" state-qualifier="tm-suggestion">Historial</target>
+        </trans-unit>
+        <trans-unit id="Index" translate="yes" xml:space="preserve">
+          <source>Index</source>
+          <target state="final" state-qualifier="tm-suggestion">Índice</target>
+        </trans-unit>
+        <trans-unit id="LetterSize" translate="yes" xml:space="preserve">
+          <source>Letter size</source>
+          <target state="final">Tamaño de letra</target>
+        </trans-unit>
+        <trans-unit id="Number" translate="yes" xml:space="preserve">
+          <source>Number</source>
+          <target state="final" state-qualifier="tm-suggestion">Número</target>
+        </trans-unit>
+        <trans-unit id="Open" translate="yes" xml:space="preserve">
+          <source>Open</source>
+          <target state="final" state-qualifier="tm-suggestion">Abrir</target>
+        </trans-unit>
+        <trans-unit id="Search" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="final" state-qualifier="tm-suggestion">Buscar</target>
+        </trans-unit>
+        <trans-unit id="Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="final">Ajustes</target>
+        </trans-unit>
+        <trans-unit id="Searcher" translate="yes" xml:space="preserve">
+          <source>Search ....</source>
+          <target state="final">Buscar ....</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder of searcher</note>
         </trans-unit>
       </group>
     </body>

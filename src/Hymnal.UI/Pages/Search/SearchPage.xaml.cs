@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false, Title = "Buscar")]
+    [MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
     public partial class SearchPage : MvxContentPage<SearchViewModel>
     {
         public SearchPage()

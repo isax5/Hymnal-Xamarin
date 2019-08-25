@@ -17,15 +17,6 @@ namespace Hymnal.UI.Pages
         public ThematicIndexPage()
         {
             InitializeComponent();
-
-            if (Device.RuntimePlatform == Device.Android)
-            {
-                try
-                {
-                    SetDynamicResource(BackgroundImageSourceProperty, nameof(App.Current.BackLightImage));
-                }
-                catch (Exception) { }
-            }
         }
     }
 }
