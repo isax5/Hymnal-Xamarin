@@ -213,6 +213,11 @@
     <BundleResource Include="Resources\thematicList.es.json" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
+    <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\ru.lproj\InfoPlist.strings" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
@@ -359,6 +364,13 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\Base.lproj\" />
+    <Folder Include="Resources\es.lproj\" />
+    <Folder Include="Resources\en.lproj\" />
+    <Folder Include="Resources\pt.lproj\" />
+    <Folder Include="Resources\ru.lproj\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
