@@ -138,6 +138,9 @@
   <data name="Favorites" xml:space="preserve">
     <value>Favorites</value>
   </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Font Size</value>
+  </data>
   <data name="Help" xml:space="preserve">
     <value>Help</value>
   </data>
@@ -146,9 +149,6 @@
   </data>
   <data name="Index" xml:space="preserve">
     <value>Index</value>
-  </data>
-  <data name="LetterSize" xml:space="preserve">
-    <value>Letter size</value>
   </data>
   <data name="Number" xml:space="preserve">
     <value>Number</value>

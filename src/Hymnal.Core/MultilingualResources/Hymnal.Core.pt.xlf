@@ -46,10 +46,6 @@
           <source>Index</source>
           <target state="final" state-qualifier="tm-suggestion">Índice</target>
         </trans-unit>
-        <trans-unit id="LetterSize" translate="yes" xml:space="preserve">
-          <source>Letter size</source>
-          <target state="final">Tamanho da Fonte</target>
-        </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
           <target state="final" state-qualifier="tm-suggestion">Número</target>
@@ -70,6 +66,10 @@
           <source>Search ....</source>
           <target state="translated">Pesquisar ....</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Placeholder of searcher</note>
+        </trans-unit>
+        <trans-unit id="FontSize" translate="yes" xml:space="preserve">
+          <source>Font Size</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamanho da fonte</target>
         </trans-unit>
       </group>
     </body>

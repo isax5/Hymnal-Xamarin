@@ -124,6 +124,15 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Font Size.
+        /// </summary>
+        internal static string FontSize {
+            get {
+                return ResourceManager.GetString("FontSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Help.
         /// </summary>
         internal static string Help {
@@ -147,15 +156,6 @@ namespace Hymnal.Core.Resources {
         internal static string Index {
             get {
                 return ResourceManager.GetString("Index", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Letter size.
-        /// </summary>
-        internal static string LetterSize {
-            get {
-                return ResourceManager.GetString("LetterSize", resourceCulture);
             }
         }
         

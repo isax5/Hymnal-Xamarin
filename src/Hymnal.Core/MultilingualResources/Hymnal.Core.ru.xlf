@@ -46,10 +46,6 @@
           <source>Index</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Индекс</target>
         </trans-unit>
-        <trans-unit id="LetterSize" translate="yes" xml:space="preserve">
-          <source>Letter size</source>
-          <target state="needs-review-translation">Размер письма</target>
-        </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Число</target>
@@ -70,6 +66,10 @@
         <trans-unit id="Settings" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="translated">Параметры</target>
+        </trans-unit>
+        <trans-unit id="FontSize" translate="yes" xml:space="preserve">
+          <source>Font Size</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Размер Шрифта</target>
         </trans-unit>
       </group>
     </body>

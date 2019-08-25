@@ -42,9 +42,6 @@
   <data name="Index" xml:space="preserve">
     <value>Индекс</value>
   </data>
-  <data name="LetterSize" xml:space="preserve">
-    <value>Размер письма</value>
-  </data>
   <data name="Number" xml:space="preserve">
     <value>Число</value>
   </data>

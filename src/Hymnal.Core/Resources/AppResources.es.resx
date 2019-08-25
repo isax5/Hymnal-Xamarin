@@ -42,9 +42,6 @@
   <data name="Index" xml:space="preserve">
     <value>Índice</value>
   </data>
-  <data name="LetterSize" xml:space="preserve">
-    <value>Tamaño de letra</value>
-  </data>
   <data name="Number" xml:space="preserve">
     <value>Número</value>
   </data>
