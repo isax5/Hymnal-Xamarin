@@ -352,13 +352,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <BundleResource Include="Resources\LogoSplash.png" />
+    <BundleResource Include="Resources\Hymn\LogoSplash.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\LogoSplash%402x.png" />
+    <BundleResource Include="Resources\Hymn\LogoSplash%402x.png" />
   </ItemGroup>
   <ItemGroup>
-    <BundleResource Include="Resources\LogoSplash%403x.png" />
+    <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
