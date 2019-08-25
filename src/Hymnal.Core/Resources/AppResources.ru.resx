@@ -58,4 +58,7 @@
   <data name="Settings" xml:space="preserve">
     <value>Параметры</value>
   </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Размер Шрифта</value>
+  </data>
 </root>

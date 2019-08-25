@@ -52,7 +52,7 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
-                            Text="{i18n:Translate LetterSize}"
+                            Text="{i18n:Translate FontSize}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
 
                         <Label

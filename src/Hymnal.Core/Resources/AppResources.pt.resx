@@ -58,4 +58,7 @@
     <value>Pesquisar ....</value>
     <comment>Placeholder of searcher</comment>
   </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Tamanho da fonte</value>
+  </data>
 </root>
