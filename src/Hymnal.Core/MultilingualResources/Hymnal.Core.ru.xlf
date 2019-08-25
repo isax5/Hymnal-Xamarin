@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="urn:oasis:names:tc:xliff:document:1.2 xliff-core-1.2-transitional.xsd">
+  <file datatype="xml" source-language="en" target-language="ru" original="HYMNAL.CORE/RESOURCES/APPRESOURCES.RESX" tool-id="MultilingualAppToolkit" product-name="n/a" product-version="n/a" build-num="n/a">
+    <header>
+      <tool tool-id="MultilingualAppToolkit" tool-name="Multilingual App Toolkit" tool-version="4.0.6914.0" tool-company="Microsoft" />
+    </header>
+    <body>
+      <group id="HYMNAL.CORE/RESOURCES/APPRESOURCES.RESX" datatype="resx">
+        <trans-unit id="AdventistHymnal" translate="yes" xml:space="preserve">
+          <source>Adventist Hymnal</source>
+          <target state="needs-review-translation">Адвентистская песнь</target>
+        </trans-unit>
+        <trans-unit id="Close" translate="yes" xml:space="preserve">
+          <source>Close</source>
+          <target state="needs-review-translation">Закрыть</target>
+        </trans-unit>
+        <trans-unit id="Developer" translate="yes" xml:space="preserve">
+          <source>Developer</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Разработчик</target>
+        </trans-unit>
+        <trans-unit id="Developing" translate="yes" xml:space="preserve">
+          <source>Developing</source>
+          <target state="needs-review-translation">Развивающийся</target>
+        </trans-unit>
+        <trans-unit id="DisplayAndTypography" translate="yes" xml:space="preserve">
+          <source>Display and typography</source>
+          <target state="needs-review-translation">Дисплей и типография</target>
+        </trans-unit>
+        <trans-unit id="Example" translate="yes" xml:space="preserve">
+          <source>Example</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Образцы</target>
+        </trans-unit>
+        <trans-unit id="Favorites" translate="yes" xml:space="preserve">
+          <source>Favorites</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Избранное</target>
+        </trans-unit>
+        <trans-unit id="Help" translate="yes" xml:space="preserve">
+          <source>Help</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Справка</target>
+        </trans-unit>
+        <trans-unit id="History" translate="yes" xml:space="preserve">
+          <source>History</source>
+          <target state="needs-review-translation">Журнал</target>
+        </trans-unit>
+        <trans-unit id="Index" translate="yes" xml:space="preserve">
+          <source>Index</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Индекс</target>
+        </trans-unit>
+        <trans-unit id="LetterSize" translate="yes" xml:space="preserve">
+          <source>Letter size</source>
+          <target state="needs-review-translation">Размер письма</target>
+        </trans-unit>
+        <trans-unit id="Number" translate="yes" xml:space="preserve">
+          <source>Number</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Число</target>
+        </trans-unit>
+        <trans-unit id="Open" translate="yes" xml:space="preserve">
+          <source>Open</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Открыть</target>
+        </trans-unit>
+        <trans-unit id="Search" translate="yes" xml:space="preserve">
+          <source>Search</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Поиск</target>
+        </trans-unit>
+        <trans-unit id="Searcher" translate="yes" xml:space="preserve">
+          <source>Search ....</source>
+          <target state="needs-review-translation">Поиск ...</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder of searcher</note>
+        </trans-unit>
+        <trans-unit id="Settings" translate="yes" xml:space="preserve">
+          <source>Settings</source>
+          <target state="translated">Параметры</target>
+        </trans-unit>
+      </group>
+    </body>
+  </file>
+</xliff>
