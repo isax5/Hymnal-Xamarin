@@ -70,6 +70,24 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Cancel.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Choose your hymnal.
+        /// </summary>
+        internal static string ChooseYourHymnal {
+            get {
+                return ResourceManager.GetString("ChooseYourHymnal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Close.
         /// </summary>
         internal static string Close {

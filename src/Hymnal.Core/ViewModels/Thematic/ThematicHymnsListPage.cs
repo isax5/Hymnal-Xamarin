@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
@@ -11,7 +12,7 @@ namespace Hymnal.Core.ViewModels
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
-
+        private readonly IPreferencesService preferencesService;
         private Ambit ambit;
         public Ambit Ambit
         {
@@ -34,11 +35,19 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
+        private readonly HymnalLanguage language;
 
-        public ThematicHymnsListViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
+        public ThematicHymnsListViewModel(
+            IMvxNavigationService navigationService,
+            IHymnsService hymnsService,
+            IPreferencesService preferencesService
+            )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
+            this.preferencesService = preferencesService;
+
+            language = this.preferencesService.ConfiguratedHymnalLanguage;
         }
 
         public override void Prepare(Ambit parameter)
@@ -50,13 +59,17 @@ namespace Hymnal.Core.ViewModels
         {
             await base.Initialize();
 
-            Hymns.AddRange((await hymnsService.GetHymnListAsync()).GetRange(Ambit.Star, Ambit.End));
+            Hymns.AddRange((await hymnsService.GetHymnListAsync(language)).GetRange(Ambit.Star, Ambit.End));
         }
 
 
         private void SelectedHymnExecute(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.Number });
+            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            {
+                Number = hymn.Number,
+                HymnalLanguage = language
+            });
         }
     }
 }

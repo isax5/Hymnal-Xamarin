@@ -1,10 +1,10 @@
+using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
-using System.Linq;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -13,9 +13,9 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IDataStorageService dataStorageService;
 
-        public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
+        public MvxObservableCollection<HistoryHymn> Hymns { get; set; } = new MvxObservableCollection<HistoryHymn>();
 
-        public Hymn SelectedHymn
+        public HistoryHymn SelectedHymn
         {
             get => null;
             set
@@ -42,9 +42,13 @@ namespace Hymnal.Core.ViewModels
         }
 
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private void SelectedHymnExecute(HistoryHymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.Number });
+            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            {
+                Number = hymn.Number,
+                HymnalLanguage = hymn.HymnalLanguage
+            });
         }
     }
 }

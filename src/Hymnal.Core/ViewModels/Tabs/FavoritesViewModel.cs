@@ -16,7 +16,7 @@ namespace Hymnal.Core.ViewModels
 
         public MvxObservableCollection<FavoriteHymn> Hymns { get; set; } = new MvxObservableCollection<FavoriteHymn>();
 
-        public Hymn SelectedHymn
+        public FavoriteHymn SelectedHymn
         {
             get => null;
             set
@@ -72,9 +72,13 @@ namespace Hymnal.Core.ViewModels
                 Hymns.Remove(item);
         }
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private void SelectedHymnExecute(FavoriteHymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.Number });
+            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            {
+                Number = hymn.Number,
+                HymnalLanguage = hymn.HymnalLanguage
+            });
         }
     }
 }

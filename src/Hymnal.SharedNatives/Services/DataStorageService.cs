@@ -19,7 +19,6 @@ namespace Hymnal.SharedNatives.Services
         public List<T> GetItems<T>()
         {
             var text = Preferences.Get(identifier<T>(), string.Empty);
-
             return string.IsNullOrWhiteSpace(text) ? new List<T>() : JsonConvert.DeserializeObject<List<T>>(text);
         }
 

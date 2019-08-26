@@ -71,6 +71,15 @@
           <source>Font Size</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Размер Шрифта</target>
         </trans-unit>
+        <trans-unit id="Cancel" translate="yes" xml:space="preserve">
+          <source>Cancel</source>
+          <target state="new">Cancel</target>
+        </trans-unit>
+        <trans-unit id="ChooseYourHymnal" translate="yes" xml:space="preserve">
+          <source>Choose your hymnal</source>
+          <target state="needs-review-translation">Выберите свой гимн</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
+        </trans-unit>
       </group>
     </body>
   </file>

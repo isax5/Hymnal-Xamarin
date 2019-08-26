@@ -61,4 +61,11 @@
   <data name="FontSize" xml:space="preserve">
     <value>Tamaño de fuente</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="ChooseYourHymnal" xml:space="preserve">
+    <value>Elige tu himnario</value>
+    <comment>Settings. Choose hymnal</comment>
+  </data>
 </root>

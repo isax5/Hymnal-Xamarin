@@ -79,7 +79,7 @@
                                 Grid.Row="1"
                                 Grid.Column="1"
                                 FontSize="Micro"
-                                Text="{Binding Preview}"
+                                Text="{Binding Content}"
                                 TextColor="{DynamicResource SecondaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />
 

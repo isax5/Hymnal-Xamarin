@@ -1,32 +1,31 @@
 using System.Collections.Generic;
 using System.Linq;
+using Hymnal.Core.Models;
 using MvvmCross.ViewModels;
 
-namespace Hymnal.Core.Models
+namespace Hymnal.Core.Extensions
 {
-    public static class HymnExtension
+    public static class HymnExtensions
     {
-        public static FavoriteHymn ToFavoriteHymn(this Hymn hymn)
+        public static FavoriteHymn ToFavoriteHymn(this Hymn hymn, HymnalLanguage hymnalLanguage)
         {
             return new FavoriteHymn
             {
-                NumberString = hymn.NumberString,
+                Number = hymn.Number,
                 Title = hymn.Title,
-                TitlePlain = hymn.TitlePlain,
-                Preview = hymn.Preview,
-                Content = hymn.Content
+                Content = hymn.Content,
+                HymnalLanguage = hymnalLanguage
             };
         }
 
-        public static HistoryHymn ToHistoryHymn(this Hymn hymn)
+        public static HistoryHymn ToHistoryHymn(this Hymn hymn, HymnalLanguage hymnalLanguage)
         {
             return new HistoryHymn
             {
-                NumberString = hymn.NumberString,
+                Number = hymn.Number,
                 Title = hymn.Title,
-                TitlePlain = hymn.TitlePlain,
-                Preview = hymn.Preview,
-                Content = hymn.Content
+                Content = hymn.Content,
+                HymnalLanguage = hymnalLanguage
             };
         }
 
@@ -216,7 +215,7 @@ namespace Hymnal.Core.Models
 
 
                 return
-                h.NumberString.ToUpper().Contains(queryRendered) ||
+                h.Number.ToString().ToUpper().Contains(queryRendered) ||
 
                 h.Title.ToUpper().Contains(queryRendered) ||
                 titleRendered.Contains(queryRendered) ||

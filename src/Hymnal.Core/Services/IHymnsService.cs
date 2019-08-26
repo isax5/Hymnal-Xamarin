@@ -6,10 +6,10 @@ namespace Hymnal.Core.Services
 {
     public interface IHymnsService
     {
-        Task<IEnumerable<Hymn>> GetHymnListAsync();
+        Task<IEnumerable<Hymn>> GetHymnListAsync(HymnalLanguage language);
 
-        Task<Hymn> GetHymnAsync(int number);
+        Task<Hymn> GetHymnAsync(int number, HymnalLanguage language);
 
-        Task<IEnumerable<Thematic>> GetThematicListAsync();
+        Task<IEnumerable<Thematic>> GetThematicListAsync(HymnalLanguage language);
     }
 }

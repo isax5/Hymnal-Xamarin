@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
@@ -10,7 +11,7 @@ using MvvmCross.ViewModels;
 
 namespace Hymnal.Core.ViewModels
 {
-    public class HymnViewModel : MvxViewModel<HymnId>
+    public class HymnViewModel : MvxViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
@@ -36,8 +37,8 @@ namespace Hymnal.Core.ViewModels
 
         public MvxObservableCollection<string> Lyric { get; set; } = new MvxObservableCollection<string>();
 
-        private HymnId hymnId;
-        public HymnId HymnId
+        private HymnIdParameter hymnId;
+        public HymnIdParameter HymnParameter
         {
             get => hymnId;
             set => SetProperty(ref hymnId, value);
@@ -56,21 +57,21 @@ namespace Hymnal.Core.ViewModels
             this.preferencesService = preferencesService;
         }
 
-        public override void Prepare(HymnId parameter)
+        public override void Prepare(HymnIdParameter parameter)
         {
-            HymnId = parameter;
+            HymnParameter = parameter;
         }
 
         public override async Task Initialize()
         {
-            Hymn = await hymnsService.GetHymnAsync(hymnId.Number);
+            Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
             Lyric.AddRange(Hymn.Content.Split('¶').Select(ss => ss.Trim()));
 
             // Is Favorite
             IsFavorite = dataStorageService.GetItems<FavoriteHymn>().Exists(h => h.Number == Hymn.Number);
 
             // History
-            if (HymnId.SaveInHistory)
+            if (HymnParameter.SaveInHistory)
             {
                 List<HistoryHymn> history = dataStorageService.GetItems<HistoryHymn>();
 
@@ -78,7 +79,7 @@ namespace Hymnal.Core.ViewModels
                 history.RemoveAll(h => h.Number == Hymn.Number);
 
                 // add new in History
-                history.Add(Hymn.ToHistoryHymn());
+                history.Add(Hymn.ToHistoryHymn(HymnParameter.HymnalLanguage));
 
                 history = history.OrderByDescending(h => h.SavedAt).ToList();
 
@@ -98,7 +99,7 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand OpenSheetCommand => new MvxCommand(OpenSheet);
         private void OpenSheet()
         {
-            navigationService.Navigate<MusicSheetViewModel, HymnId>(HymnId);
+            navigationService.Navigate<MusicSheetViewModel, HymnIdParameter>(HymnParameter);
         }
 
         public MvxCommand FavoriteCommand => new MvxCommand(FavoriteExecute);
@@ -107,9 +108,9 @@ namespace Hymnal.Core.ViewModels
             List<FavoriteHymn> favorites = dataStorageService.GetItems<FavoriteHymn>();
 
             if (IsFavorite)
-                favorites.RemoveAll(h => h.Number == HymnId.Number);
+                favorites.RemoveAll(h => h.Number == HymnParameter.Number);
             else
-                favorites.Add(Hymn.ToFavoriteHymn());
+                favorites.Add(Hymn.ToFavoriteHymn(HymnParameter.HymnalLanguage));
 
             dataStorageService.ReplaceItems(favorites);
 

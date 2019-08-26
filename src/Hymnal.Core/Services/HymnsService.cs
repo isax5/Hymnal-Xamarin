@@ -13,45 +13,52 @@ namespace Hymnal.Core.Services
         /// <summary>
         /// <see cref="Hymn"/> cache
         /// </summary>
-        private static IEnumerable<Hymn> hymnList;
+        private static Dictionary<string, IEnumerable<Hymn>> HymnsDictionary = new Dictionary<string, IEnumerable<Hymn>>();
 
         /// <summary>
         /// Thematic cache
         /// </summary>
-        private static IEnumerable<Thematic> thematicList;
+        private static Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new Dictionary<string, IEnumerable<Thematic>>();
 
         public HymnsService(IFilesService filesService)
         {
             this.filesService = filesService;
         }
 
-        public async Task<IEnumerable<Hymn>> GetHymnListAsync()
+        public async Task<IEnumerable<Hymn>> GetHymnListAsync(HymnalLanguage language)
         {
-            if (hymnList == null || hymnList.Count() == 0)
+            if (!HymnsDictionary.ContainsKey(language.TwoLetterISOLanguageName))
             {
-                var file = await filesService.ReadFileAsync(Constants.HYMNS_FILE_SPANISH);
-                hymnList = JsonConvert.DeserializeObject<List<Hymn>>(file);
+                var file = await filesService.ReadFileAsync(language.HymnsFileName);
+                List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
+                HymnsDictionary.Add(language.TwoLetterISOLanguageName, hymns);
             }
 
-            return hymnList;
+            return HymnsDictionary[language.TwoLetterISOLanguageName];
         }
 
-        public async Task<Hymn> GetHymnAsync(int number)
+        public async Task<Hymn> GetHymnAsync(int number, HymnalLanguage language)
         {
-            IEnumerable<Hymn> hymns = await GetHymnListAsync();
+            IEnumerable<Hymn> hymns = await GetHymnListAsync(language);
 
             return hymns.First(h => h.Number == number);
         }
 
-        public async Task<IEnumerable<Thematic>> GetThematicListAsync()
+        public async Task<IEnumerable<Thematic>> GetThematicListAsync(HymnalLanguage language)
         {
-            if (thematicList == null || thematicList.Count() == 0)
+            if (!language.SupportThematicList)
             {
-                var file = await filesService.ReadFileAsync(Constants.THEMATIC_LIST_FILE_SPANISH);
-                thematicList = JsonConvert.DeserializeObject<List<Thematic>>(file);
+                return new List<Thematic>();
             }
 
-            return thematicList;
+            if (!ThematicDictionary.ContainsKey(language.TwoLetterISOLanguageName))
+            {
+                var file = await filesService.ReadFileAsync(language.ThematicHymnsFileName);
+                List<Thematic> thematicList = JsonConvert.DeserializeObject<List<Thematic>>(file);
+                ThematicDictionary.Add(language.TwoLetterISOLanguageName, thematicList);
+            }
+
+            return ThematicDictionary[language.TwoLetterISOLanguageName];
         }
     }
 }

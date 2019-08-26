@@ -41,8 +41,9 @@ namespace Hymnal.Core.Helpers
     /// <summary>
     /// This class exposes the translations to use in C# Code
     /// </summary>
-    public static class Languajes
+    public static class Languages
     {
-        public static string AdventistHymnal => AppResources.AdventistHymnal;
+        public static string ChooseYourHymnal => AppResources.ChooseYourHymnal;
+        public static string Cancel => AppResources.Cancel;
     }
 }

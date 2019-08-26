@@ -218,6 +218,7 @@
     <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ru.lproj\InfoPlist.strings" />
+    <BundleResource Include="Resources\hymns.en.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
@@ -365,13 +366,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\Base.lproj\" />
-    <Folder Include="Resources\es.lproj\" />
-    <Folder Include="Resources\en.lproj\" />
-    <Folder Include="Resources\pt.lproj\" />
-    <Folder Include="Resources\ru.lproj\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

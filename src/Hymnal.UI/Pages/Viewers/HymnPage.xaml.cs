@@ -8,7 +8,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxModalPresentation(WrapInNavigationPage = true, Title = "Title 1")]
+    [MvxModalPresentation(WrapInNavigationPage = true)]
     public partial class HymnPage : MvxContentPage<HymnViewModel>
     {
         public HymnPage()

@@ -105,6 +105,7 @@
     <None Include="Hymnal.UWP_TemporaryKey.pfx" />
     <Content Include="hymns.es.json" />
     <Content Include="thematicList.es.json" />
+    <Content Include="hymns.en.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BadgeLogo.scale-100.png" />

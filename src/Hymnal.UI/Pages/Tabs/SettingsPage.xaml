@@ -36,6 +36,39 @@
         <TableRoot>
             <TableSection Title="{i18n:Translate DisplayAndTypography}">
 
+                <!--  Choose Language  -->
+                <ViewCell Height="{OnPlatform iOS=70, Android=70}">
+                    <Grid>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
+                        </Grid.GestureRecognizers>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Text="{i18n:Translate ChooseYourHymnal}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
+
+                        <Label
+                            Grid.Row="1"
+                            FontSize="Micro"
+                            TextColor="{DynamicResource SecondaryTextColor}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Path=HymnalLanguage.Detail, Mode=OneWay}" />
+                                    <Span Text=" " />
+                                    <Span Text="{Binding Path=HymnalLanguage.Name, Mode=OneWay}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                    </Grid>
+                </ViewCell>
+
+                <!--  Font Size  -->
                 <ViewCell Height="{OnPlatform iOS=150, Android=150}">
                     <Grid>
                         <Grid.ColumnDefinitions>
@@ -89,6 +122,8 @@
             </TableSection>
 
             <TableSection Title="{i18n:Translate Developing}">
+
+                <!--  Help  -->
                 <ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>
@@ -100,6 +135,7 @@
                     </Grid>
                 </ViewCell>
 
+                <!--  Developer  -->
                 <ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>

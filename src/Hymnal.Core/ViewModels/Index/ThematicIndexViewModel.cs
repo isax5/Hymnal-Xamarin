@@ -1,4 +1,3 @@
-using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
 using MvvmCross.Navigation;
@@ -10,6 +9,7 @@ namespace Hymnal.Core.ViewModels
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
+        private readonly IPreferencesService preferencesService;
 
         public MvxObservableCollection<Thematic> Thematics { get; set; } = new MvxObservableCollection<Thematic>();
 
@@ -26,20 +26,48 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
+        private HymnalLanguage loadedLanguage;
 
-        public ThematicIndexViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
+        public ThematicIndexViewModel(
+            IMvxNavigationService navigationService,
+            IHymnsService hymnsService,
+            IPreferencesService preferencesService
+            )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
+            this.preferencesService = preferencesService;
         }
 
-        public override async Task Initialize()
+        public override void ViewAppearing()
         {
-            Thematics.AddRange(await hymnsService.GetThematicListAsync());
-
-            await base.Initialize();
+            base.ViewAppearing();
+            CheckAsync();
         }
 
+        private async void CheckAsync()
+        {
+            HymnalLanguage newLanguage = preferencesService.ConfiguratedHymnalLanguage;
+
+            if (loadedLanguage == null)
+            {
+                loadedLanguage = newLanguage;
+            }
+            else
+            {
+                // If the Language changed
+                if (!newLanguage.Equals(loadedLanguage))
+                {
+                    loadedLanguage = newLanguage;
+                    Thematics.Clear();
+                }
+            }
+
+            if (loadedLanguage.SupportThematicList && Thematics.Count == 0)
+            {
+                Thematics.AddRange(await hymnsService.GetThematicListAsync(loadedLanguage));
+            }
+        }
 
         private void SelectedThematicExecute(Thematic thematic)
         {

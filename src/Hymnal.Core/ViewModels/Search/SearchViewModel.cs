@@ -1,6 +1,6 @@
-using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
@@ -13,6 +13,7 @@ namespace Hymnal.Core.ViewModels
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
+        private readonly IPreferencesService preferencesService;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
         public Hymn SelectedHymn
@@ -39,25 +40,32 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
+        private readonly HymnalLanguage language;
 
-        public SearchViewModel(IMvxNavigationService navigationService, IHymnsService hymnsService)
+        public SearchViewModel(
+            IMvxNavigationService navigationService,
+            IHymnsService hymnsService,
+            IPreferencesService preferencesService
+            )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
+            this.preferencesService = preferencesService;
+
+            language = this.preferencesService.ConfiguratedHymnalLanguage;
         }
 
         public override async Task Initialize()
         {
             await base.Initialize();
-
-            Hymns.AddRange((await hymnsService.GetHymnListAsync()).OrderByNumber());
+            TextSearchExecuteAsync(string.Empty);
         }
 
 
         private async void TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
-            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync()).OrderByNumber();
+            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(language)).OrderByNumber();
 
             if (string.IsNullOrWhiteSpace(text))
             {
@@ -70,7 +78,11 @@ namespace Hymnal.Core.ViewModels
 
         private void SelectedHymnExecute(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnId>(new HymnId { Number = hymn.Number });
+            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            {
+                Number = hymn.Number,
+                HymnalLanguage = language
+            });
         }
     }
 }

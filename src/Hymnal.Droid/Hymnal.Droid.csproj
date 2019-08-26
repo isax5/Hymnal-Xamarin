@@ -79,6 +79,7 @@
     <ProguardConfiguration Include="proguard.cfg" />
     <AndroidAsset Include="Assets\hymns.es.json" />
     <AndroidAsset Include="Assets\thematicList.es.json" />
+    <AndroidAsset Include="Assets\hymns.en.json" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

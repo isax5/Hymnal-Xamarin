@@ -61,4 +61,8 @@
   <data name="FontSize" xml:space="preserve">
     <value>Tamanho da fonte</value>
   </data>
+  <data name="ChooseYourHymnal" xml:space="preserve">
+    <value>Escolha o seu hinário</value>
+    <comment>Settings. Choose hymnal</comment>
+  </data>
 </root>

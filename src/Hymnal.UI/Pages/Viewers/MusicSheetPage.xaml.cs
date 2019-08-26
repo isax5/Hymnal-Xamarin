@@ -6,7 +6,7 @@ using Hymnal.Core.ViewModels;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxModalPresentation(WrapInNavigationPage = true, Title = "Sheets")]
+    [MvxModalPresentation(WrapInNavigationPage = true)]
     public partial class MusicSheetPage : MvxContentPage<MusicSheetViewModel>
     {
         public MusicSheetPage()

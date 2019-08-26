@@ -4,10 +4,10 @@ using MvvmCross.ViewModels;
 
 namespace Hymnal.Core.ViewModels
 {
-    public class MusicSheetViewModel : MvxViewModel<HymnId>
+    public class MusicSheetViewModel : MvxViewModel<HymnIdParameter>
     {
-        private HymnId hymn;
-        public HymnId HymnId
+        private HymnIdParameter hymn;
+        public HymnIdParameter HymnId
         {
             get => hymn;
             set => SetProperty(ref hymn, value);
@@ -20,7 +20,7 @@ namespace Hymnal.Core.ViewModels
             this.navigationService = navigationService;
         }
 
-        public override void Prepare(HymnId parameter)
+        public override void Prepare(HymnIdParameter parameter)
         {
             HymnId = parameter;
         }

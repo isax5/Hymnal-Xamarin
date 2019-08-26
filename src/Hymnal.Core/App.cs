@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using System.Linq;
+using Hymnal.Core.Models;
 using Hymnal.Core.Resources;
 using Hymnal.Core.Services;
 using Hymnal.Core.ViewModels;
@@ -11,9 +14,7 @@ namespace Hymnal.Core
     {
         public override void Initialize()
         {
-            Constants.CurrentCultureInfo = Mvx.IoCProvider.Resolve<IMultilingualService>().DeviceCultureInfo;
-
-            AppResources.Culture = Constants.CurrentCultureInfo;
+            ConfigurateLocalization();
 
             CreatableTypes()
                 .EndingWith("Service")
@@ -21,6 +22,31 @@ namespace Hymnal.Core
                 .RegisterAsLazySingleton();
 
             RegisterAppStart<RootViewModel>();
+        }
+
+        private void ConfigurateLocalization()
+        {
+            // Configurating language of the device
+            Constants.CurrentCultureInfo = Mvx.IoCProvider.Resolve<IMultilingualService>().DeviceCultureInfo;
+            AppResources.Culture = Constants.CurrentCultureInfo;
+
+
+            // Configurating language of the hymnals
+            IPreferencesService settingsService = Mvx.IoCProvider.Resolve<IPreferencesService>();
+
+            if (settingsService.ConfiguratedHymnalLanguage == null)
+            {
+                List<HymnalLanguage> lngs = Constants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == Constants.CurrentCultureInfo.TwoLetterISOLanguageName);
+
+                if (lngs.Count == 0)
+                {
+                    settingsService.ConfiguratedHymnalLanguage = Constants.HymnsLanguages.First();
+                }
+                else
+                {
+                    settingsService.ConfiguratedHymnalLanguage = lngs.First();
+                }
+            }
         }
     }
 }

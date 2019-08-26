@@ -1,4 +1,6 @@
+using System.Collections.Generic;
 using System.Globalization;
+using Hymnal.Core.Models;
 
 namespace Hymnal.Core
 {
@@ -6,10 +8,28 @@ namespace Hymnal.Core
     {
         public static CultureInfo CurrentCultureInfo { get; set; }
 
-        public const bool USING_SHEETS = false;
+        public static List<HymnalLanguage> HymnsLanguages = new List<HymnalLanguage>
+        {
+            // Default language version
+            new HymnalLanguage
+            {
+                Name = "New Adventist Hymnal",
+                Detail = "English",
+                TwoLetterISOLanguageName = "en",
+                HymnsFileName = "hymns.en.json"
+            },
+            new HymnalLanguage
+            {
+                Name = "Nuevo Himnario Adventista",
+                Detail = "Español",
+                TwoLetterISOLanguageName = "es",
+                HymnsFileName = "hymns.es.json",
+                ThematicHymnsFileName = "thematicList.es.json"
+            }
+        };
 
-        public const string HYMNS_FILE_SPANISH = "hymns.es.json";
-        public const string THEMATIC_LIST_FILE_SPANISH = "thematicList.es.json";
+
+        public const bool USING_SHEETS = false;
 
         public const int MAXIMUM_RECORDS = 100;
 
