@@ -33,7 +33,7 @@ namespace Hymnal.Core.ViewModels
         public AlphabeticalIndexViewModel(
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService,
+            IPreferencesService preferencesService
             )
         {
             this.navigationService = navigationService;
