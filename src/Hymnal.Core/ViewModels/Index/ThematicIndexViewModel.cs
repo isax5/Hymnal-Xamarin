@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
 using MvvmCross.Navigation;
@@ -39,13 +40,19 @@ namespace Hymnal.Core.ViewModels
             this.preferencesService = preferencesService;
         }
 
+        public override async Task Initialize()
+        {
+            await CheckAsync();
+            await base.Initialize();
+        }
+
         public override void ViewAppearing()
         {
             base.ViewAppearing();
             CheckAsync();
         }
 
-        private async void CheckAsync()
+        private async Task CheckAsync()
         {
             HymnalLanguage newLanguage = preferencesService.ConfiguratedHymnalLanguage;
 

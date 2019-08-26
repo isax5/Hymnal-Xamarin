@@ -90,7 +90,7 @@
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="2"
-                                Margin="10,0"
+                                Margin="5,0,0,0"
                                 FontSize="Micro"
                                 Text="{Binding SavedAt, StringFormat='{0:dd/MM}'}"
                                 VerticalOptions="CenterAndExpand" />

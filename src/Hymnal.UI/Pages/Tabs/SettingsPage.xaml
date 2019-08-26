@@ -59,7 +59,7 @@
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="{Binding Path=HymnalLanguage.Detail, Mode=OneWay}" />
-                                    <Span Text=" " />
+                                    <Span Text=" - " />
                                     <Span Text="{Binding Path=HymnalLanguage.Name, Mode=OneWay}" />
                                 </FormattedString>
                             </Label.FormattedText>
