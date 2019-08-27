@@ -209,7 +209,7 @@
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <BundleResource Include="Resources\hymns.es.json" />
+    <BundleResource Include="Resources\hymnal.es.json" />
     <BundleResource Include="Resources\thematicList.es.json" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork%402x" />
@@ -218,7 +218,8 @@
     <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ru.lproj\InfoPlist.strings" />
-    <BundleResource Include="Resources\hymns.en.json" />
+    <BundleResource Include="Resources\hymnal.en.json" />
+    <BundleResource Include="Resources\hymnal.ru.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">

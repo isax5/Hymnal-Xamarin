@@ -16,15 +16,22 @@ namespace Hymnal.Core
                 Name = "New Adventist Hymnal",
                 Detail = "English",
                 TwoLetterISOLanguageName = "en",
-                HymnsFileName = "hymns.en.json"
+                HymnsFileName = "hymnal.en.json"
             },
             new HymnalLanguage
             {
                 Name = "Nuevo Himnario Adventista",
                 Detail = "Español",
                 TwoLetterISOLanguageName = "es",
-                HymnsFileName = "hymns.es.json",
+                HymnsFileName = "hymnal.es.json",
                 ThematicHymnsFileName = "thematicList.es.json"
+            },
+            new HymnalLanguage
+            {
+                Name = "Гимны Надежды",
+                Detail = "Русский",
+                TwoLetterISOLanguageName = "ru",
+                HymnsFileName = "hymnal.ru.json"
             }
         };
 
