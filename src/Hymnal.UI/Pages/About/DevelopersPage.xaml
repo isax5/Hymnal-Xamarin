@@ -3,8 +3,43 @@
     x:Class="Hymnal.UI.Pages.DevelopersPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Developer}"
-    x:TypeArguments="viewModels:DevelopersViewModel" />
+    x:TypeArguments="viewModels:DevelopersViewModel">
+
+    <ScrollView Padding="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Title  -->
+            <Label
+                Grid.Row="0"
+                FontSize="Title"
+                Text="{i18n:Translate Developing}" />
+
+            <Label Grid.Row="1">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            Text="Diseño"
+                            TextDecorations="Underline" />
+                        <Span Text=" y " />
+                        <Span
+                            Text="Programación"
+                            TextDecorations="Underline">
+                            <Span.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding DevelperSelectedCommand}" />
+                            </Span.GestureRecognizers>
+                        </Span>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+    </ScrollView>
+
+</mvxViews:MvxContentPage>

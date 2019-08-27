@@ -7,6 +7,7 @@ namespace Hymnal.Core.ViewModels
     {
         private IMvxNavigationService _navigationService;
 
+
         public DevelopersViewModel(IMvxNavigationService navigationService)
         {
             _navigationService = navigationService;
