@@ -222,6 +222,7 @@
     <BundleResource Include="Resources\OldHymnal.en.json" />
     <BundleResource Include="Resources\NewHymnal.ru.json" />
     <BundleResource Include="Resources\NewHymnal.es.json" />
+    <BundleResource Include="Resources\OldHymnalThematicList.es.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">

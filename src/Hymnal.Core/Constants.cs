@@ -49,7 +49,8 @@ namespace Hymnal.Core
                 Name = "Antigua Versión",
                 Detail = "Español",
                 TwoLetterISOLanguageName = "es",
-                HymnsFileName = "OldHymnal.es.json"
+                HymnsFileName = "OldHymnal.es.json",
+                ThematicHymnsFileName = "OldHymnalThematicList.es.json"
             },
 
             // RUSSIAN

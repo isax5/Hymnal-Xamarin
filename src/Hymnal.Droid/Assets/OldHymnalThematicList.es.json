@@ -1,0 +1,370 @@
+[  
+  {  
+    "thematic":"El culto",
+    "ambits":[  
+      {  
+        "ambit":"Adoración y alabanza",
+        "star":1,
+        "end":24,
+        "backimage":"Fondo1a21"
+      },
+      {  
+        "ambit":"Apertura",
+        "star":25,
+        "end":31,
+        "backimage":"Fondo22a34"
+      },
+      {  
+        "ambit":"Clausura",
+        "star":32,
+        "end":37,
+        "backimage":"Fondo35a45"
+      },
+      {  
+        "ambit":"Matutinos",
+        "star":38,
+        "end":40,
+        "backimage":"Fondo46a52"
+      },
+      {  
+        "ambit":"Vespertinos",
+        "star":41,
+        "end":50,
+        "backimage":"Fondo46a52"
+      },
+      {  
+        "ambit":"Preces",
+        "star":51,
+        "end":60,
+        "backimage":"Fondo46a52"
+      }
+    ]
+  },
+  {  
+    "thematic":"Dios el padre",
+    "ambits":[  
+      {  
+        "ambit":"Su amor",
+        "star":61,
+        "end":64,
+        "fondo":"Fondo53a59"
+      },
+      {  
+        "ambit":"Su majestad",
+        "star":65,
+        "end":72,
+        "fondo":"Fondo60a77"
+      },
+      {  
+        "ambit":"Su providencia",
+        "star":73,
+        "end":76,
+        "fondo":"Fondo60a77"
+      },
+      {  
+        "ambit":"Su poder enla Naturaleza",
+        "star":77,
+        "end":81,
+        "fondo":"Fondo60a77"
+      }
+    ]
+  },
+  {  
+    "thematic":"Jesucristo",
+    "ambits":[  
+      {  
+        "ambit":"Su primer advenimiento",
+        "star":82,
+        "end":87,
+        "backimage":"Fondo78a92"
+      },
+      {  
+        "ambit":"Su vida y ministerio",
+        "star":88,
+        "end":89,
+        "backimage":"Fondo93a102"
+      },
+      {  
+        "ambit":"Su sufrimiento y muerte",
+        "star":90,
+        "end":99,
+        "backimage":"Fondo103a106"
+      },
+      {  
+        "ambit":"Su resurección y ascensión",
+        "star":100,
+        "end":104,
+        "backimage":"Fondo107a126"
+      },
+      {  
+        "ambit":"Su amor y ternura",
+        "star":105,
+        "end":135,
+        "backimage":"Fondo127a157"
+      },
+      {  
+        "ambit":"Su alavanza y gloria",
+        "star":136,
+        "end":159,
+        "backimage":"Fondo158a189"
+      },
+      {  
+        "ambit":"Su segundo advenimiento",
+        "star":160,
+        "end":180,
+        "backimage":"Fondo158a189"
+      },
+      {  
+        "ambit":"Su reino y señorío",
+        "star":181,
+        "end":186,
+        "backimage":"Fondo158a189"
+      }
+    ]
+  },
+  {  
+    "thematic":"El Espíritu Santo",
+    "ambits":[  
+      {  
+        "ambit":"El Espíritu Santo",
+        "star":187,
+        "end":195,
+        "backimage":"Fondo190a203"
+      }
+    ]
+  },
+  {  
+    "thematic":"Las Sagradas Escrituras",
+    "ambits":[  
+      {  
+        "ambit":"Las Sagradas Escrituras",
+        "star":196,
+        "end":201,
+        "backimage":"Fondo204a208"
+      }
+    ]
+  },
+  {  
+    "thematic":"El evangelio",
+    "ambits":[  
+      {  
+        "ambit":"Llamado",
+        "star":202,
+        "end":227,
+        "backimage":"Fondo209a237"
+      },
+      {  
+        "ambit":"Arrepentimiento",
+        "star":228,
+        "end":232,
+        "backimage":"Fondo238a244"
+      },
+      {  
+        "ambit":"Fe y confianza",
+        "star":233,
+        "end":256,
+        "backimage":"Fondo238a244"
+      },
+      {  
+        "ambit":"Consagración",
+        "star":257,
+        "end":280,
+        "backimage":"Fondo245a283"
+      },
+      {  
+        "ambit":"Salvación y redención",
+        "star":281,
+        "end":304,
+        "backimage":"Fondo284a315"
+      },
+      {  
+        "ambit":"La recompenza de los justos",
+        "star":305,
+        "end":313,
+        "backimage":"Fondo284a315"
+      },
+      {  
+        "ambit":"La vida eterna",
+        "star":314,
+        "end":320,
+        "backimage":"Fondo316a344"
+      }
+    ]
+  },
+  {  
+    "thematic":"La vida cristiana",
+    "ambits":[  
+      {  
+        "ambit":"Gozo y paz",
+        "star":321,
+        "end":336,
+        "backimage":"Fondo345a364"
+      },
+      {  
+        "ambit":"Oración y meditación",
+        "star":337,
+        "end":349,
+        "backimage":"Fondo365a372"
+      },
+      {  
+        "ambit":"El trabajo y el deber",
+        "star":350,
+        "end":368,
+        "backimage":"Fondo373a390"
+      },
+      {  
+        "ambit":"Lealtad",
+        "star":369,
+        "end":372,
+        "backimage":"Fondo391a438"
+      },
+      {  
+        "ambit":"La lucha contra el mal",
+        "star":373,
+        "end":383,
+        "backimage":"Fondo439a465"
+      },
+      {  
+        "ambit":"Peregrinación",
+        "star":384,
+        "end":392,
+        "backimage":"Fondo474a486"
+      },
+      {  
+        "ambit":"El discipulado",
+        "star":393,
+        "end":401,
+        "backimage":"Fondo487a490"
+      },
+      {  
+        "ambit":"Esperanza y anhelo",
+        "star":402,
+        "end":413,
+        "backimage":"Fondo491a504"
+      },
+      {  
+        "ambit":"Dirección divina",
+        "star":414,
+        "end":434,
+        "backimage":"Fondo505a520"
+      }
+    ]
+  },
+  {  
+    "thematic":"La iglesia y las doctrinas",
+    "ambits":[  
+      {  
+        "ambit":"La iglesia",
+        "star":435,
+        "end":438,
+        "backimage":"Fondo528a534"
+      },
+      {  
+        "ambit":"La escuala Sabática",
+        "star":439,
+        "end":440,
+        "backimage":"Fondo528a534"
+      },
+      {  
+        "ambit":"El ministerio y las misiones",
+        "star":441,
+        "end":451,
+        "backimage":"Fondo535a550"
+      },
+      {  
+        "ambit":"La juventud",
+        "star":452,
+        "end":460,
+        "backimage":"Fondo551a578"
+      },
+      {  
+        "ambit":"El bautismo",
+        "star":461,
+        "end":464,
+        "backimage":"Fondo579a580"
+      },
+      {  
+        "ambit":"El sábado",
+        "star":465,
+        "end":477,
+        "backimage":"Fondo581a586"
+      },
+      {  
+        "ambit":"La Cena del Señor",
+        "star":478,
+        "end":484,
+        "backimage":"Fondo587a587"
+      },
+      {  
+        "ambit":"Los diezmos y las ofrendas",
+        "star":485,
+        "end":487,
+        "backimage":"Fondo588a588"
+      },
+      {  
+        "ambit":"Los reunión de obreros",
+        "star":488,
+        "end":490,
+        "backimage":"Fondo588a588"
+      },
+      {  
+        "ambit":"El juicio final",
+        "star":491,
+        "end":493,
+        "backimage":"Fondo588a588"
+      },
+      {  
+        "ambit":"La tierra nueva",
+        "star":494,
+        "end":508,
+        "backimage":"Fondo588a588"
+      }
+    ]
+  },
+  {  
+    "thematic":"El hogar cristiano",
+    "ambits":[  
+      {  
+        "ambit":"El hogar y los niños",
+        "star":509,
+        "end":511,
+        "backimage":"Fondo589a589"
+      },
+      {  
+        "ambit":"La boda",
+        "star":512,
+        "end":512,
+        "backimage":"Fondo589a589"
+      },
+      {  
+        "ambit":"Los niños",
+        "star":513,
+        "end":521,
+        "backimage":"Fondo597a607"
+      }
+    ]
+  },
+  {  
+    "thematic":"Ocasiones Especiales",
+    "ambits":[  
+      {  
+        "ambit":"Dedicación",
+        "star":522,
+        "end":522,
+        "backimage":"Fondo589a589"
+      },
+      {  
+        "ambit":"Funeral",
+        "star":523,
+        "end":526,
+        "backimage":"Fondo589a589"
+      },
+      {  
+        "ambit":"Temperancia",
+        "star":527,
+        "end":527,
+        "backimage":"Fondo597a607"
+      }
+    ]
+  }
+]
