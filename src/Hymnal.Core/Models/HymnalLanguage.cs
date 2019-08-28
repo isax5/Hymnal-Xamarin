@@ -2,6 +2,10 @@ namespace Hymnal.Core.Models
 {
     public class HymnalLanguage
     {
+        /// <summary>
+        /// Identifier for comparative Equals
+        /// </summary>
+        public string Id { get; set; }
         public string TwoLetterISOLanguageName { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
@@ -19,11 +23,7 @@ namespace Hymnal.Core.Models
 
             var hl = obj as HymnalLanguage;
 
-            if (TwoLetterISOLanguageName == hl.TwoLetterISOLanguageName
-                && HymnsFileName == hl.HymnsFileName
-                && ThematicHymnsFileName == hl.ThematicHymnsFileName
-                && Name == hl.Name
-                && Detail == hl.Detail)
+            if (Id == hl.Id)
             {
                 return true;
             }

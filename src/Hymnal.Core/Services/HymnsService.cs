@@ -27,14 +27,14 @@ namespace Hymnal.Core.Services
 
         public async Task<IEnumerable<Hymn>> GetHymnListAsync(HymnalLanguage language)
         {
-            if (!HymnsDictionary.ContainsKey(language.TwoLetterISOLanguageName))
+            if (!HymnsDictionary.ContainsKey(language.Id))
             {
                 var file = await filesService.ReadFileAsync(language.HymnsFileName);
                 List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
-                HymnsDictionary.Add(language.TwoLetterISOLanguageName, hymns);
+                HymnsDictionary.Add(language.Id, hymns);
             }
 
-            return HymnsDictionary[language.TwoLetterISOLanguageName];
+            return HymnsDictionary[language.Id];
         }
 
         public async Task<Hymn> GetHymnAsync(int number, HymnalLanguage language)
@@ -51,14 +51,14 @@ namespace Hymnal.Core.Services
                 return new List<Thematic>();
             }
 
-            if (!ThematicDictionary.ContainsKey(language.TwoLetterISOLanguageName))
+            if (!ThematicDictionary.ContainsKey(language.Id))
             {
                 var file = await filesService.ReadFileAsync(language.ThematicHymnsFileName);
                 List<Thematic> thematicList = JsonConvert.DeserializeObject<List<Thematic>>(file);
-                ThematicDictionary.Add(language.TwoLetterISOLanguageName, thematicList);
+                ThematicDictionary.Add(language.Id, thematicList);
             }
 
-            return ThematicDictionary[language.TwoLetterISOLanguageName];
+            return ThematicDictionary[language.Id];
         }
     }
 }

@@ -35,8 +35,6 @@ namespace Hymnal.Core.ViewModels
             set => SetProperty(ref isFavorite, value);
         }
 
-        public MvxObservableCollection<string> Lyric { get; set; } = new MvxObservableCollection<string>();
-
         private HymnIdParameter hymnId;
         public HymnIdParameter HymnParameter
         {
@@ -65,7 +63,6 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
             Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
-            Lyric.AddRange(Hymn.Content.Split('¶').Select(ss => ss.Trim()));
 
             // Is Favorite
             IsFavorite = dataStorageService.GetItems<FavoriteHymn>().Exists(h => h.Number == Hymn.Number);

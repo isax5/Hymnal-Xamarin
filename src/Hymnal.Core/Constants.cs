@@ -8,30 +8,59 @@ namespace Hymnal.Core
     {
         public static CultureInfo CurrentCultureInfo { get; set; }
 
+        /// <summary>
+        /// Configuration items
+        /// </summary>
         public static List<HymnalLanguage> HymnsLanguages = new List<HymnalLanguage>
         {
-            // Default language version
+            // ENGLISH
+            // Default language version - default english version
             new HymnalLanguage
             {
-                Name = "New Adventist Hymnal",
+                Id = "en-newVersion",
+                Name = "New Version",
                 Detail = "English",
                 TwoLetterISOLanguageName = "en",
-                HymnsFileName = "hymnal.en.json"
+                HymnsFileName = "NewHymnal.en.json"
             },
             new HymnalLanguage
             {
-                Name = "Nuevo Himnario Adventista",
+                Id = "en-oldVersion",
+                Name = "Old Version",
+                Detail = "English",
+                TwoLetterISOLanguageName = "en",
+                HymnsFileName = "OldHymnal.en.json"
+            },
+
+            // SPANISH
+            // default spanish version
+            new HymnalLanguage
+            {
+                Id = "es-newVersion",
+                Name = "Nueva Versión 2009",
                 Detail = "Español",
                 TwoLetterISOLanguageName = "es",
-                HymnsFileName = "hymnal.es.json",
-                ThematicHymnsFileName = "thematicList.es.json"
+                HymnsFileName = "NewHymnal.es.json",
+                ThematicHymnsFileName = "NewHymnalThematicList.es.json"
             },
             new HymnalLanguage
             {
+                Id = "es-oldVersion",
+                Name = "Antigua Versión",
+                Detail = "Español",
+                TwoLetterISOLanguageName = "es",
+                HymnsFileName = "OldHymnal.es.json"
+            },
+
+            // RUSSIAN
+            // default russian version
+            new HymnalLanguage
+            {
+                Id = "ru-newVersion",
                 Name = "Гимны Надежды",
                 Detail = "Русский",
                 TwoLetterISOLanguageName = "ru",
-                HymnsFileName = "hymnal.ru.json"
+                HymnsFileName = "NewHymnal.ru.json"
             }
         };
 

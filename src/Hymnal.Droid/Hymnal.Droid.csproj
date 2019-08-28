@@ -77,9 +77,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProguardConfiguration Include="proguard.cfg" />
-    <AndroidAsset Include="Assets\hymns.es.json" />
-    <AndroidAsset Include="Assets\thematicList.es.json" />
-    <AndroidAsset Include="Assets\hymns.en.json" />
+    <AndroidAsset Include="Assets\OldHymnal.es.json" />
+    <AndroidAsset Include="Assets\NewHymnal.en.json" />
+    <AndroidAsset Include="Assets\OldHymnal.en.json" />
+    <AndroidAsset Include="Assets\NewHymnal.ru.json" />
+    <AndroidAsset Include="Assets\NewHymnal.es.json" />
+    <AndroidAsset Include="Assets\NewHymnalThematicList.es.json" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -337,6 +340,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\TabNumber.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="..\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
