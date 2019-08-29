@@ -21,7 +21,8 @@ namespace Hymnal.Core
                 Name = "New Version",
                 Detail = "English",
                 TwoLetterISOLanguageName = "en",
-                HymnsFileName = "NewHymnal.en.json"
+                HymnsFileName = "NewHymnal.en.json",
+                ThematicHymnsFileName = "NewHymnalThematicList.en.json"
             },
             new HymnalLanguage
             {

@@ -30,13 +30,15 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{D86EA0D6-8581-45CA-8AF0-16AF124E4839}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitignore = .gitignore
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{B5B24C14-6AE6-4F30-A089-F22876B55AA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{740B4B75-7B30-458C-846D-5E14B54B51BC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.SharedNatives", "src\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj", "{1AC8149A-B28F-4DB6-A65E-31E379605528}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.SharedNatives", "src\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj", "{1AC8149A-B28F-4DB6-A65E-31E379605528}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

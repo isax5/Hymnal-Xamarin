@@ -38,8 +38,11 @@ namespace Hymnal.Core.Extensions
         {
             return hymns.OrderBy(h =>
             {
-                if (h.Title.First().Equals('¡') || h.Title.First().Equals('¿'))
-                    return h.Title.Substring(1);
+                if (!char.IsLetter(h.Title.First()))
+                {
+                    var ss = h.Title.Substring(1);
+                    return ss;
+                }
                 return h.Title;
             });
         }
@@ -151,7 +154,7 @@ namespace Hymnal.Core.Extensions
         {
             return hymns.GroupBy(h =>
             {
-                if (h.Title[0].Equals('¡') || h.Title[0].Equals('¿'))
+                if (!char.IsLetter(h.Title[0]))
                     return h.Title[1].ToString();
 
                 if (h.Title[0].Equals('Á'))

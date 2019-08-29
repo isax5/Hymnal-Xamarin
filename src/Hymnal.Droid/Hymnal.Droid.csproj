@@ -84,6 +84,7 @@
     <AndroidAsset Include="Assets\NewHymnal.es.json" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.es.json" />
     <AndroidAsset Include="Assets\OldHymnalThematicList.es.json" />
+    <AndroidAsset Include="Assets\NewHymnalThematicList.en.json" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
