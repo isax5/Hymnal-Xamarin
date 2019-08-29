@@ -2,6 +2,9 @@ using Newtonsoft.Json;
 
 namespace Hymnal.Core.Models
 {
+    /// <summary>
+    /// <see cref="Ambit"/> for <see cref="Thematic"/> for <see cref="Hymn"/>
+    /// </summary>
     public class Ambit
     {
         [JsonProperty("ambit")]

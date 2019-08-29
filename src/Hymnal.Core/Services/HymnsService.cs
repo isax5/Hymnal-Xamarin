@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Newtonsoft.Json;
 
@@ -16,7 +17,7 @@ namespace Hymnal.Core.Services
         private static Dictionary<string, IEnumerable<Hymn>> HymnsDictionary = new Dictionary<string, IEnumerable<Hymn>>();
 
         /// <summary>
-        /// Thematic cache
+        /// <see cref="Thematic"/> cache
         /// </summary>
         private static Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new Dictionary<string, IEnumerable<Thematic>>();
 
@@ -29,7 +30,7 @@ namespace Hymnal.Core.Services
         {
             if (!HymnsDictionary.ContainsKey(language.Id))
             {
-                var file = await filesService.ReadFileAsync(language.HymnsFileName);
+                var file = await filesService.ReadFileAsync(language.Configuration().HymnsFileName);
                 List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
                 HymnsDictionary.Add(language.Id, hymns);
             }
@@ -53,7 +54,7 @@ namespace Hymnal.Core.Services
 
             if (!ThematicDictionary.ContainsKey(language.Id))
             {
-                var file = await filesService.ReadFileAsync(language.ThematicHymnsFileName);
+                var file = await filesService.ReadFileAsync(language.Configuration().ThematicHymnsFileName);
                 List<Thematic> thematicList = JsonConvert.DeserializeObject<List<Thematic>>(file);
                 ThematicDictionary.Add(language.Id, thematicList);
             }
