@@ -27,6 +27,9 @@
             Command="{Binding OpenSheetCommand}"
             IconImageSource="ToolbarSheet"
             Priority="2" />
+        <ToolbarItem
+            Command="{Binding PlayCommand}"
+            Text="Play" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>

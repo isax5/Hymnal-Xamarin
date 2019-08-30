@@ -19,6 +19,7 @@ namespace Hymnal.iOS
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
             Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
+            Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
         }
 
         protected override void InitializeLastChance()

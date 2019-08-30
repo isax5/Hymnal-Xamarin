@@ -62,7 +62,7 @@
     <value>Размер Шрифта</value>
   </data>
   <data name="ChooseYourHymnal" xml:space="preserve">
-    <value>Выберите свой гимн</value>
+    <value>Выберите гимн</value>
     <comment>Settings. Choose hymnal</comment>
   </data>
 </root>
