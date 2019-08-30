@@ -1,11 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <mvxViews:MvxCarouselPage
-    x:Class="Hymnal.UI.Pages.Tabs.IndexPage"
+    x:Class="Hymnal.UI.Pages.IndexPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-    xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Index}"
     x:TypeArguments="viewModels:IndexViewModel"
