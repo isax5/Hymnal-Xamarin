@@ -7,5 +7,7 @@ namespace Hymnal.Core.Services
         int HymnalsFontSize { get; set; }
 
         HymnalLanguage ConfiguratedHymnalLanguage { get; set; }
+
+        bool FirstTimeOpening { get; set; }
     }
 }

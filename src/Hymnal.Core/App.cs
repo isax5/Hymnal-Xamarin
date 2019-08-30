@@ -14,7 +14,7 @@ namespace Hymnal.Core
     {
         public override void Initialize()
         {
-            ConfigurateLocalization();
+            SetUp();
 
             CreatableTypes()
                 .EndingWith("Service")
@@ -24,28 +24,38 @@ namespace Hymnal.Core
             RegisterAppStart<RootViewModel>();
         }
 
-        private void ConfigurateLocalization()
+        private void SetUp()
         {
-            // Configurating language of the device
             Constants.CurrentCultureInfo = Mvx.IoCProvider.Resolve<IMultilingualService>().DeviceCultureInfo;
+            IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
+
+
+            // Configurating language of the device
             AppResources.Culture = Constants.CurrentCultureInfo;
 
 
-            // Configurating language of the hymnals
-            IPreferencesService settingsService = Mvx.IoCProvider.Resolve<IPreferencesService>();
 
-            if (settingsService.ConfiguratedHymnalLanguage == null)
+            // Configurating language of the hymnals
+            if (preferencesService.ConfiguratedHymnalLanguage == null)
             {
                 List<HymnalLanguage> lngs = Constants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == Constants.CurrentCultureInfo.TwoLetterISOLanguageName);
 
                 if (lngs.Count == 0)
                 {
-                    settingsService.ConfiguratedHymnalLanguage = Constants.HymnsLanguages.First();
+                    preferencesService.ConfiguratedHymnalLanguage = Constants.HymnsLanguages.First();
                 }
                 else
                 {
-                    settingsService.ConfiguratedHymnalLanguage = lngs.First();
+                    preferencesService.ConfiguratedHymnalLanguage = lngs.First();
                 }
+            }
+
+
+            // Configurate First Time opening
+            if (preferencesService.FirstTimeOpening)
+            {
+
+                preferencesService.FirstTimeOpening = false;
             }
         }
     }

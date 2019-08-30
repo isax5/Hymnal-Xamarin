@@ -27,5 +27,11 @@ namespace Hymnal.SharedNatives.Services
                 Preferences.Set(nameof(ConfiguratedHymnalLanguage), text);
             }
         }
+
+        public bool FirstTimeOpening
+        {
+            get => Preferences.Get(nameof(FirstTimeOpening), true);
+            set => Preferences.Set(nameof(FirstTimeOpening), value);
+        }
     }
 }
