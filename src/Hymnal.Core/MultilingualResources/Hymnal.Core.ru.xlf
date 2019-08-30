@@ -32,7 +32,7 @@
         </trans-unit>
         <trans-unit id="Favorites" translate="yes" xml:space="preserve">
           <source>Favorites</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Избранное</target>
+          <target state="translated">Настройки</target>
         </trans-unit>
         <trans-unit id="Help" translate="yes" xml:space="preserve">
           <source>Help</source>
@@ -44,11 +44,11 @@
         </trans-unit>
         <trans-unit id="Index" translate="yes" xml:space="preserve">
           <source>Index</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Индекс</target>
+          <target state="translated">Гимны</target>
         </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Число</target>
+          <target state="translated">Номера</target>
         </trans-unit>
         <trans-unit id="Open" translate="yes" xml:space="preserve">
           <source>Open</source>

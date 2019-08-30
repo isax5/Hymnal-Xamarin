@@ -31,7 +31,7 @@
     <value>Образцы</value>
   </data>
   <data name="Favorites" xml:space="preserve">
-    <value>Избранное</value>
+    <value>Настройки</value>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Справка</value>
@@ -40,10 +40,10 @@
     <value>Журнал</value>
   </data>
   <data name="Index" xml:space="preserve">
-    <value>Индекс</value>
+    <value>Гимны</value>
   </data>
   <data name="Number" xml:space="preserve">
-    <value>Число</value>
+    <value>Номера</value>
   </data>
   <data name="Open" xml:space="preserve">
     <value>Открыть</value>
