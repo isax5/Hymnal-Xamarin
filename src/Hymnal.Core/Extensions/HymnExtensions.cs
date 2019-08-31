@@ -139,7 +139,31 @@ namespace Hymnal.Core.Extensions
 
                     case 60:
                     case 61:
+                    case 62:
+                    case 63:
+                    case 64:
                         return "600";
+
+                    case 65:
+                    case 66:
+                    case 67:
+                    case 68:
+                    case 69:
+                        return "650";
+
+                    case 70:
+                    case 71:
+                    case 72:
+                    case 73:
+                    case 74:
+                        return "700";
+
+                    case 75:
+                    case 76:
+                    case 77:
+                    case 78:
+                    case 79:
+                        return "750";
 
                     default:
                         break;
