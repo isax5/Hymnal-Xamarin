@@ -26,14 +26,13 @@ namespace Hymnal.Core
 
         private void SetUp()
         {
-            Constants.CurrentCultureInfo = Mvx.IoCProvider.Resolve<IMultilingualService>().DeviceCultureInfo;
+            IMultilingualService multilingualService = Mvx.IoCProvider.Resolve<IMultilingualService>();
             IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
-
+            IAppInformationService appInformationService = Mvx.IoCProvider.Resolve<IAppInformationService>();
 
             // Configurating language of the device
+            Constants.CurrentCultureInfo = multilingualService.DeviceCultureInfo;
             AppResources.Culture = Constants.CurrentCultureInfo;
-
-
 
             // Configurating language of the hymnals
             if (preferencesService.ConfiguratedHymnalLanguage == null)
@@ -50,12 +49,13 @@ namespace Hymnal.Core
                 }
             }
 
-
-            // Configurate First Time opening
-            if (preferencesService.FirstTimeOpening)
+            // Configurate First Time opening this version
+            if (preferencesService.LastVersionOpened != appInformationService.VersionString)
             {
+                preferencesService.LastVersionOpened = appInformationService.VersionString;
 
-                preferencesService.FirstTimeOpening = false;
+                // Do somethink
+
             }
         }
     }

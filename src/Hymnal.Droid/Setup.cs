@@ -26,11 +26,8 @@ namespace Hymnal.Droid
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
             Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
-        }
-
-        protected override void InitializeLastChance()
-        {
-            base.InitializeLastChance();
+            Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
+            Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
         }
     }
 }

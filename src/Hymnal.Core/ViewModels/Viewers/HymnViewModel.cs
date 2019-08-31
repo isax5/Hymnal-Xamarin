@@ -17,6 +17,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IDataStorageService dataStorageService;
         private readonly IPreferencesService preferencesService;
+        private readonly IMediaService mediaService;
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
@@ -26,6 +27,13 @@ namespace Hymnal.Core.ViewModels
         {
             get => hymn;
             set => SetProperty(ref hymn, value);
+        }
+
+        private HymnalLanguage language;
+        public HymnalLanguage Language
+        {
+            get => language;
+            set => SetProperty(ref language, value);
         }
 
         private bool isFavorite;
@@ -47,17 +55,21 @@ namespace Hymnal.Core.ViewModels
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
             IDataStorageService dataStorageService,
-            IPreferencesService preferencesService)
+            IPreferencesService preferencesService,
+            IMediaService mediaService
+            )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.dataStorageService = dataStorageService;
             this.preferencesService = preferencesService;
+            this.mediaService = mediaService;
         }
 
         public override void Prepare(HymnIdParameter parameter)
         {
             HymnParameter = parameter;
+            Language = HymnParameter.HymnalLanguage.Configuration();
         }
 
         public override async Task Initialize()
@@ -65,7 +77,7 @@ namespace Hymnal.Core.ViewModels
             Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
 
             // Is Favorite
-            IsFavorite = dataStorageService.GetItems<FavoriteHymn>().Exists(h => h.Number == Hymn.Number);
+            IsFavorite = dataStorageService.GetItems<FavoriteHymn>().Exists(h => h.Number == Hymn.Number && h.HymnalLanguage.Equals(Language));
 
             // History
             if (HymnParameter.SaveInHistory)
@@ -73,7 +85,7 @@ namespace Hymnal.Core.ViewModels
                 List<HistoryHymn> history = dataStorageService.GetItems<HistoryHymn>();
 
                 // was this hymn in the history?
-                history.RemoveAll(h => h.Number == Hymn.Number);
+                history.RemoveAll(h => h.Number == Hymn.Number && h.HymnalLanguage.Equals(Language));
 
                 // add new in History
                 history.Add(Hymn.ToHistoryHymn(HymnParameter.HymnalLanguage));
@@ -105,13 +117,19 @@ namespace Hymnal.Core.ViewModels
             List<FavoriteHymn> favorites = dataStorageService.GetItems<FavoriteHymn>();
 
             if (IsFavorite)
-                favorites.RemoveAll(h => h.Number == HymnParameter.Number);
+                favorites.RemoveAll(h => h.Number == HymnParameter.Number && h.HymnalLanguage.Equals(Language));
             else
-                favorites.Add(Hymn.ToFavoriteHymn(HymnParameter.HymnalLanguage));
+                favorites.Add(Hymn.ToFavoriteHymn(Language));
 
             dataStorageService.ReplaceItems(favorites);
 
             IsFavorite = !IsFavorite;
+        }
+
+        public MvxCommand PlayCommand => new MvxCommand(PlayExecute);
+        private void PlayExecute()
+        {
+            mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
         }
 
         public MvxCommand CloseCommand => new MvxCommand(Close);

@@ -23,7 +23,7 @@
     <Compile Update="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Pages\Thematic\ThematicHymnsListPage.xaml.cs">
+    <Compile Update="Pages\Index\Thematic\ThematicHymnsListPage.xaml.cs">
       <DependentUpon>ThematicHymnsListPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Resources\Colors.xaml.cs">
@@ -38,7 +38,7 @@
     <EmbeddedResource Update="Pages\About\HelpPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Thematic\ThematicHymnsListPage.xaml">
+    <EmbeddedResource Update="Pages\Index\Thematic\ThematicHymnsListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Records\RecordsPage.xaml">
@@ -47,7 +47,7 @@
     <EmbeddedResource Update="Pages\Search\SearchPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Pages\Thematic\ThematicSubGroupPage.xaml">
+    <EmbeddedResource Update="Pages\Index\Thematic\ThematicSubGroupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Viewers\MusicSheetPage.xaml">

@@ -8,11 +8,11 @@
       <group id="HYMNAL.CORE/RESOURCES/APPRESOURCES.RESX" datatype="resx">
         <trans-unit id="AdventistHymnal" translate="yes" xml:space="preserve">
           <source>Adventist Hymnal</source>
-          <target state="needs-review-translation">Адвентистская песнь</target>
+          <target state="final">Адвентистская песнь</target>
         </trans-unit>
         <trans-unit id="Close" translate="yes" xml:space="preserve">
           <source>Close</source>
-          <target state="needs-review-translation">Закрыть</target>
+          <target state="final">Закрыть</target>
         </trans-unit>
         <trans-unit id="Developer" translate="yes" xml:space="preserve">
           <source>Developer</source>
@@ -48,7 +48,7 @@
         </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
-          <target state="translated">Номера</target>
+          <target state="final">Номера</target>
         </trans-unit>
         <trans-unit id="Open" translate="yes" xml:space="preserve">
           <source>Open</source>
@@ -77,8 +77,16 @@
         </trans-unit>
         <trans-unit id="ChooseYourHymnal" translate="yes" xml:space="preserve">
           <source>Choose your hymnal</source>
-          <target state="needs-review-translation">Выберите свой гимн</target>
+          <target state="final">Выберите гимн</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
+        </trans-unit>
+        <trans-unit id="AppVersion" translate="yes" xml:space="preserve">
+          <source>App Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Версия приложения</target>
+        </trans-unit>
+        <trans-unit id="AppBuild" translate="yes" xml:space="preserve">
+          <source>App Build</source>
+          <target state="translated">Версия сборки</target>
         </trans-unit>
       </group>
     </body>

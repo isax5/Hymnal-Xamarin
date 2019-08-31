@@ -42,7 +42,9 @@ namespace Hymnal.Core
                 Detail = "Español",
                 TwoLetterISOLanguageName = "es",
                 HymnsFileName = "NewHymnal.es.json",
-                ThematicHymnsFileName = "NewHymnalThematicList.es.json"
+                ThematicHymnsFileName = "NewHymnalThematicList.es.json",
+                SungMusic = "https://storage.googleapis.com/hymnals-music/es/sung/###.mp3",
+                InstrumentalMusic = @"https://storage.googleapis.com/hymnals-music/es/instruments/###.mp3"
             },
             new HymnalLanguage
             {
@@ -66,8 +68,6 @@ namespace Hymnal.Core
             }
         };
 
-
-        public const bool USING_SHEETS = false;
 
         public const int MAXIMUM_RECORDS = 100;
 

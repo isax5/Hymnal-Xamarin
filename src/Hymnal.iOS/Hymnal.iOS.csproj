@@ -238,6 +238,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="LibVLCSharp">
+      <Version>3.2.1</Version>
+    </PackageReference>
     <PackageReference Include="MvvmCross">
       <Version>6.3.1</Version>
     </PackageReference>
@@ -249,6 +252,9 @@
     </PackageReference>
     <PackageReference Include="Plugin.Multilingual">
       <Version>1.0.2</Version>
+    </PackageReference>
+    <PackageReference Include="VideoLAN.LibVLC.iOS">
+      <Version>3.1.5</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.2.0</Version>

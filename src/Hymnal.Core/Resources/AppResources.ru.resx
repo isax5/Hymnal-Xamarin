@@ -62,7 +62,13 @@
     <value>Размер Шрифта</value>
   </data>
   <data name="ChooseYourHymnal" xml:space="preserve">
-    <value>Выберите свой гимн</value>
+    <value>Выберите гимн</value>
     <comment>Settings. Choose hymnal</comment>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Версия приложения</value>
+  </data>
+  <data name="AppBuild" xml:space="preserve">
+    <value>Версия сборки</value>
   </data>
 </root>

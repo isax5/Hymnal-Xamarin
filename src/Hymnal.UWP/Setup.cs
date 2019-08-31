@@ -18,6 +18,8 @@ namespace Hymnal.UWP
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
             Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
+            Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
+            Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
         }
     }
 }

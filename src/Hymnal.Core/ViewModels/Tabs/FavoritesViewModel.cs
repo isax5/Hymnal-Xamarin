@@ -49,6 +49,7 @@ namespace Hymnal.Core.ViewModels
             // Update list
             IOrderedEnumerable<FavoriteHymn> favorites = dataStorageService.GetItems<FavoriteHymn>().OrderByDescending(h => h.SavedAt);
 
+            // If there weren't hymns in the list before
             if (Hymns.Count() == 0)
             {
                 Hymns.AddRange(favorites);
@@ -56,7 +57,8 @@ namespace Hymnal.Core.ViewModels
             }
 
             // Add new Hymns
-            foreach (FavoriteHymn item in favorites.Where(h1 => Hymns.Where(h2 => h2.Number == h1.Number).Count() == 0))
+            foreach (FavoriteHymn item in favorites.Where(
+                h1 => Hymns.Where(h2 => h2.Number == h1.Number && h2.HymnalLanguage.Equals(h1.HymnalLanguage)).Count() == 0))
             {
                 var position = Hymns.Where(h => h.SavedAt > item.SavedAt).Count();
                 Hymns.Insert(position, item);
@@ -64,10 +66,12 @@ namespace Hymnal.Core.ViewModels
 
             // Remove no favorites hymns
             var removeList = new List<FavoriteHymn>();
-            foreach (FavoriteHymn item in Hymns.Where(h1 => favorites.Where(h2 => h2.Number == h1.Number).Count() == 0))
+            foreach (FavoriteHymn item in Hymns.Where(
+                h1 => favorites.Where(h2 => h2.Number == h1.Number && h2.HymnalLanguage.Equals(h1.HymnalLanguage)).Count() == 0))
             {
                 removeList.Add(item);
             }
+
             foreach (FavoriteHymn item in removeList)
                 Hymns.Remove(item);
         }

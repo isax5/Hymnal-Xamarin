@@ -8,6 +8,6 @@ namespace Hymnal.Core.Services
 
         HymnalLanguage ConfiguratedHymnalLanguage { get; set; }
 
-        bool FirstTimeOpening { get; set; }
+        string LastVersionOpened { get; set; }
     }
 }
