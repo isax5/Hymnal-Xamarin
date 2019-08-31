@@ -19,18 +19,19 @@
             Priority="-1"
             Text="{i18n:Translate Close}" />
         <ToolbarItem
+            x:Name="MusicToolbar"
+            Command="{Binding PlayCommand}"
+            IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
+            Priority="1" />
+        <ToolbarItem
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
-            Priority="1" />
+            Priority="2" />
         <ToolbarItem
             x:Name="SheetToolbar"
             Command="{Binding OpenSheetCommand}"
             IconImageSource="ToolbarSheet"
-            Priority="2" />
-        <ToolbarItem
-            x:Name="MusicToolbar"
-            Command="{Binding PlayCommand}"
-            Text="Play" />
+            Priority="3" />
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>

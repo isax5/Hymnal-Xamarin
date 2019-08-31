@@ -4,5 +4,6 @@ namespace Hymnal.Core.Services
     {
         void Play(string url);
         void Stop();
+        bool IsPlaying { get; }
     }
 }

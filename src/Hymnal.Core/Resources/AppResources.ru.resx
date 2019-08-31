@@ -61,6 +61,9 @@
   <data name="FontSize" xml:space="preserve">
     <value>Размер Шрифта</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отмена</value>
+  </data>
   <data name="ChooseYourHymnal" xml:space="preserve">
     <value>Выберите гимн</value>
     <comment>Settings. Choose hymnal</comment>
@@ -70,5 +73,14 @@
   </data>
   <data name="AppBuild" xml:space="preserve">
     <value>Версия сборки</value>
+  </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>Нет подключения к интернету</value>
+  </data>
+  <data name="WeHadAProblem" xml:space="preserve">
+    <value>У нас была проблема</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Хорошо</value>
   </data>
 </root>

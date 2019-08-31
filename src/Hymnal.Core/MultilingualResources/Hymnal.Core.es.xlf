@@ -88,6 +88,18 @@
           <source>App Build</source>
           <target state="final">Versión de compilación</target>
         </trans-unit>
+        <trans-unit id="NoInternetConnection" translate="yes" xml:space="preserve">
+          <source>There is no Internet connection</source>
+          <target state="final">No hay conexión a Internet</target>
+        </trans-unit>
+        <trans-unit id="WeHadAProblem" translate="yes" xml:space="preserve">
+          <source>We had a problem</source>
+          <target state="final">Tuvimos un problema</target>
+        </trans-unit>
+        <trans-unit id="Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="final">Ok</target>
+        </trans-unit>
       </group>
     </body>
   </file>

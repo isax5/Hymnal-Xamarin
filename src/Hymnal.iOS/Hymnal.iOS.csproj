@@ -99,7 +99,31 @@
     <ImageAsset Include="Media.xcassets\Background.imageset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
     <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse@3x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue@2x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue@3x.png">
       <Visible>false</Visible>
     </ImageAsset>
     <ImageAsset Include="Media.xcassets\ToolbarRecords.imageset\Contents.json">
@@ -225,6 +249,7 @@
     <BundleResource Include="Resources\NewHymnal.es.json" />
     <BundleResource Include="Resources\OldHymnalThematicList.es.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.en.json" />
+    <BundleResource Include="Resources\OldHymnalThematicList.en.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">

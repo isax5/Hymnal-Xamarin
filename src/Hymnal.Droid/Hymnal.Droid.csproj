@@ -85,6 +85,7 @@
     <AndroidAsset Include="Assets\NewHymnalThematicList.es.json" />
     <AndroidAsset Include="Assets\OldHymnalThematicList.es.json" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.en.json" />
+    <AndroidAsset Include="Assets\OldHymnalThematicList.en.json" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -348,7 +349,36 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\TabNumber.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ToolbarPlayingFalse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\ToolbarPlayingTrue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ToolbarPlayingTrue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-mdpi\ToolbarPlayingFalse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ToolbarPlayingFalse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\ToolbarPlayingTrue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ToolbarPlayingTrue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\ToolbarPlayingFalse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ToolbarPlayingFalse.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxxhdpi\ToolbarPlayingTrue.png" />
+  </ItemGroup>
   <Import Project="..\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

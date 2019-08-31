@@ -28,6 +28,7 @@ namespace Hymnal.Droid
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
             Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
+            Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
         }
     }
 }

@@ -61,6 +61,9 @@
   <data name="FontSize" xml:space="preserve">
     <value>Tamanho da fonte</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
   <data name="ChooseYourHymnal" xml:space="preserve">
     <value>Escolha o seu hinário</value>
     <comment>Settings. Choose hymnal</comment>
@@ -70,5 +73,14 @@
   </data>
   <data name="AppBuild" xml:space="preserve">
     <value>Versão de compilação</value>
+  </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>Não há conexão com a Internet</value>
+  </data>
+  <data name="WeHadAProblem" xml:space="preserve">
+    <value>Tivemos um problema</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Está bem</value>
   </data>
 </root>

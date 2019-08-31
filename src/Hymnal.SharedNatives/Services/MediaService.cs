@@ -35,5 +35,7 @@ namespace Hymnal.SharedNatives.Services
         {
             MediaPlayer.Stop();
         }
+
+        public bool IsPlaying => MediaPlayer.IsPlaying;
     }
 }

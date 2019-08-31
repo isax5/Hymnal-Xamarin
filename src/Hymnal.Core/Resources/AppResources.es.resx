@@ -74,4 +74,13 @@
   <data name="AppBuild" xml:space="preserve">
     <value>Versión de compilación</value>
   </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>No hay conexión a Internet</value>
+  </data>
+  <data name="WeHadAProblem" xml:space="preserve">
+    <value>Tuvimos un problema</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
+  </data>
 </root>

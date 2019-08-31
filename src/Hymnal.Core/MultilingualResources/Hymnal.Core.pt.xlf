@@ -73,7 +73,7 @@
         </trans-unit>
         <trans-unit id="Cancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
-          <target state="new">Cancel</target>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Cancelar</target>
         </trans-unit>
         <trans-unit id="ChooseYourHymnal" translate="yes" xml:space="preserve">
           <source>Choose your hymnal</source>
@@ -87,6 +87,18 @@
         <trans-unit id="AppBuild" translate="yes" xml:space="preserve">
           <source>App Build</source>
           <target state="translated">Versão de compilação</target>
+        </trans-unit>
+        <trans-unit id="NoInternetConnection" translate="yes" xml:space="preserve">
+          <source>There is no Internet connection</source>
+          <target state="translated">Não há conexão com a Internet</target>
+        </trans-unit>
+        <trans-unit id="WeHadAProblem" translate="yes" xml:space="preserve">
+          <source>We had a problem</source>
+          <target state="translated">Tivemos um problema</target>
+        </trans-unit>
+        <trans-unit id="Ok" translate="yes" xml:space="preserve">
+          <source>Ok</source>
+          <target state="translated">Está bem</target>
         </trans-unit>
       </group>
     </body>

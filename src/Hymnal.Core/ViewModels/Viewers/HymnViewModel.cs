@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
+using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
@@ -18,6 +19,8 @@ namespace Hymnal.Core.ViewModels
         private readonly IDataStorageService dataStorageService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaService mediaService;
+        private readonly IConnectivityService connectivityService;
+        private readonly IDialogService dialogService;
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
@@ -43,6 +46,13 @@ namespace Hymnal.Core.ViewModels
             set => SetProperty(ref isFavorite, value);
         }
 
+        private bool isPlaying;
+        public bool IsPlaying
+        {
+            get => isPlaying;
+            set => SetProperty(ref isPlaying, value);
+        }
+
         private HymnIdParameter hymnId;
         public HymnIdParameter HymnParameter
         {
@@ -56,7 +66,9 @@ namespace Hymnal.Core.ViewModels
             IHymnsService hymnsService,
             IDataStorageService dataStorageService,
             IPreferencesService preferencesService,
-            IMediaService mediaService
+            IMediaService mediaService,
+            IConnectivityService connectivityService,
+            IDialogService dialogService
             )
         {
             this.navigationService = navigationService;
@@ -64,6 +76,8 @@ namespace Hymnal.Core.ViewModels
             this.dataStorageService = dataStorageService;
             this.preferencesService = preferencesService;
             this.mediaService = mediaService;
+            this.connectivityService = connectivityService;
+            this.dialogService = dialogService;
         }
 
         public override void Prepare(HymnIdParameter parameter)
@@ -75,6 +89,8 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
             Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
+
+            IsPlaying = mediaService.IsPlaying;
 
             // Is Favorite
             IsFavorite = dataStorageService.GetItems<FavoriteHymn>().Exists(h => h.Number == Hymn.Number && h.HymnalLanguage.Equals(Language));
@@ -129,7 +145,24 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand PlayCommand => new MvxCommand(PlayExecute);
         private void PlayExecute()
         {
-            mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
+            // Check internet connection
+            if (!connectivityService.InternetAccess)
+            {
+                dialogService.Alert(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
+                return;
+            }
+
+            // Stop/Start playing
+            if (IsPlaying)
+            {
+                mediaService.Stop();
+                IsPlaying = false;
+            }
+            else
+            {
+                mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
+                IsPlaying = true;
+            }
         }
 
         public MvxCommand CloseCommand => new MvxCommand(Close);

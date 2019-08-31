@@ -163,8 +163,14 @@
   <data name="Index" xml:space="preserve">
     <value>Index</value>
   </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>There is no Internet connection</value>
+  </data>
   <data name="Number" xml:space="preserve">
     <value>Number</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>Ok</value>
   </data>
   <data name="Open" xml:space="preserve">
     <value>Open</value>
@@ -178,5 +184,8 @@
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="WeHadAProblem" xml:space="preserve">
+    <value>We had a problem</value>
   </data>
 </root>

@@ -21,6 +21,7 @@ namespace Hymnal.iOS
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
             Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
+            Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
         }
 
         public override void InitializePrimary()

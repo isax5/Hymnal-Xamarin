@@ -45,5 +45,8 @@ namespace Hymnal.Core.Helpers
     {
         public static string ChooseYourHymnal => AppResources.ChooseYourHymnal;
         public static string Cancel => AppResources.Cancel;
+        public static string WeHadAProblem => AppResources.WeHadAProblem;
+        public static string Ok => AppResources.Ok;
+        public static string NoInternetConnection => AppResources.NoInternetConnection;
     }
 }
