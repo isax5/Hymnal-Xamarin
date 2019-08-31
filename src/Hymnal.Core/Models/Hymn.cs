@@ -12,5 +12,7 @@ namespace Hymnal.Core.Models
 
         [JsonProperty("content")]
         public string Content { get; set; }
+
+        public string PlainContent => Content.Replace("\n", " ");
     }
 }

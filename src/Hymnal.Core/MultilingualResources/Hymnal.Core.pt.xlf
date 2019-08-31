@@ -80,6 +80,14 @@
           <target state="final">Escolha o seu hinário</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
         </trans-unit>
+        <trans-unit id="AppVersion" translate="yes" xml:space="preserve">
+          <source>App Version</source>
+          <target state="needs-review-translation" state-qualifier="tm-suggestion">Versão do Aplicativo</target>
+        </trans-unit>
+        <trans-unit id="AppBuild" translate="yes" xml:space="preserve">
+          <source>App Build</source>
+          <target state="translated">Versão de compilação</target>
+        </trans-unit>
       </group>
     </body>
   </file>

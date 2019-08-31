@@ -65,4 +65,10 @@
     <value>Escolha o seu hinário</value>
     <comment>Settings. Choose hymnal</comment>
   </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Versão do Aplicativo</value>
+  </data>
+  <data name="AppBuild" xml:space="preserve">
+    <value>Versão de compilação</value>
+  </data>
 </root>

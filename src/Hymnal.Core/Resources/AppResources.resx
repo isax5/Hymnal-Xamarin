@@ -120,6 +120,12 @@
   <data name="AdventistHymnal" xml:space="preserve">
     <value>Adventist Hymnal</value>
   </data>
+  <data name="AppBuild" xml:space="preserve">
+    <value>App Build</value>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>App Version</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>

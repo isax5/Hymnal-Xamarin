@@ -15,6 +15,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IPreferencesService preferencesService;
         private readonly IDialogService dialogService;
+        private readonly IAppInformationService appInformationService;
 
         public int HymnFontSize
         {
@@ -23,6 +24,20 @@ namespace Hymnal.Core.ViewModels
         }
         public int MinimumHymnFontSize => Constants.MINIMUM_HYMNALS_FONT_SIZE;
         public int MaximumHymnFontSize => Constants.MAXIMUM_HYMNALS_FONT_SIZE;
+
+        private string appVersionString;
+        public string AppVersionString
+        {
+            get => appVersionString;
+            set => SetProperty(ref appVersionString, value);
+        }
+
+        private string appBuildString;
+        public string AppBuildString
+        {
+            get => appBuildString;
+            set => SetProperty(ref appBuildString, value);
+        }
 
         private HymnalLanguage hymnalLanguage;
         public HymnalLanguage HymnalLanguage
@@ -34,18 +49,23 @@ namespace Hymnal.Core.ViewModels
         public SettingsViewModel(
             IMvxNavigationService navigationService,
             IPreferencesService preferencesService,
-            IDialogService dialogService
+            IDialogService dialogService,
+            IAppInformationService appInformationService
             )
         {
             this.navigationService = navigationService;
             this.preferencesService = preferencesService;
             this.dialogService = dialogService;
+            this.appInformationService = appInformationService;
         }
 
         public override async Task Initialize()
         {
             await base.Initialize();
             HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage;
+
+            AppVersionString = appInformationService.VersionString;
+            AppBuildString = appInformationService.BuildString;
         }
 
 

@@ -28,10 +28,10 @@ namespace Hymnal.SharedNatives.Services
             }
         }
 
-        public bool FirstTimeOpening
+        public string LastVersionOpened
         {
-            get => Preferences.Get(nameof(FirstTimeOpening), true);
-            set => Preferences.Set(nameof(FirstTimeOpening), value);
+            get => Preferences.Get(nameof(LastVersionOpened), string.Empty);
+            set => Preferences.Set(nameof(LastVersionOpened), value);
         }
     }
 }

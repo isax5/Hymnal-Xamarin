@@ -28,6 +28,7 @@
             IconImageSource="ToolbarSheet"
             Priority="2" />
         <ToolbarItem
+            x:Name="MusicToolbar"
             Command="{Binding PlayCommand}"
             Text="Play" />
     </mvxViews:MvxContentPage.ToolbarItems>
