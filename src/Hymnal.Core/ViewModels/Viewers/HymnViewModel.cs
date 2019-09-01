@@ -119,6 +119,13 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
         }
 
+        public override void ViewAppearing()
+        {
+            // This is necesary for when the hymn finished in background
+            IsPlaying = mediaService.IsPlaying;
+            base.ViewAppearing();
+        }
+
 
         #region Commands
         public MvxCommand OpenSheetCommand => new MvxCommand(OpenSheet);

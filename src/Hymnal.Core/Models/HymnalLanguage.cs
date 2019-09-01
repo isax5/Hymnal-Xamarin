@@ -10,6 +10,7 @@ namespace Hymnal.Core.Models
         public string Name { get; set; }
         public string Detail { get; set; }
         public string HymnsFileName { get; set; }
+
         public string ThematicHymnsFileName { get; set; }
         public bool SupportThematicList => !string.IsNullOrWhiteSpace(ThematicHymnsFileName);
 
@@ -17,7 +18,8 @@ namespace Hymnal.Core.Models
         public string InstrumentalMusic { get; set; }
         public bool SupportMusic => !string.IsNullOrWhiteSpace(SungMusic) || !string.IsNullOrWhiteSpace(InstrumentalMusic);
 
-        public bool SupportSheets { get; set; } = false;
+        public string HymnsSheetsFileName { get; set; }
+        public bool SupportSheets => !string.IsNullOrWhiteSpace(HymnsSheetsFileName);
 
         public override bool Equals(object obj)
         {

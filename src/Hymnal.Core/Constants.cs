@@ -46,7 +46,8 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "es",
                 HymnsFileName = "NewHymnal.es.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.es.json",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/instrumental/###.mp3"
+                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/instrumental/###.mp3",
+                HymnsSheetsFileName = "PianoSheet_NewHymnal_es_###"
             },
             new HymnalLanguage
             {
@@ -67,7 +68,8 @@ namespace Hymnal.Core
                 Name = "Гимны Надежды",
                 Detail = "Русский",
                 TwoLetterISOLanguageName = "ru",
-                HymnsFileName = "NewHymnal.ru.json"
+                HymnsFileName = "NewHymnal.ru.json",
+                HymnsSheetsFileName = "PianoSheet_NewHymnal_ru_###"
             }
         };
 

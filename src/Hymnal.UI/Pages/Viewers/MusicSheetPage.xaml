@@ -5,4 +5,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    x:TypeArguments="viewModels:MusicSheetViewModel" />
+    x:TypeArguments="viewModels:MusicSheetViewModel"
+    Visual="Material">
+
+    <ScrollView Padding="5">
+        <StackLayout>
+            <Image Source="{Binding ImageSource}" />
+            <Image Source="{Binding ImageSource, StringFormat='{0}_1'}" />
+            <Image Source="{Binding ImageSource, StringFormat='{0}_2'}" />
+            <Image Source="{Binding ImageSource, StringFormat='{0}_3'}" />
+        </StackLayout>
+    </ScrollView>
+
+</mvxViews:MvxContentPage>

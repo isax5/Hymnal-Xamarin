@@ -39,5 +39,10 @@ namespace Hymnal.Core.Extensions
             // the number will not change
             return hymnalLanguage.SungMusic.Replace("###", hymnNumber.ToString("D3"));
         }
+
+        public static string GetMusicSheetSource(this HymnalLanguage hymnalLanguage, int hymnNymber)
+        {
+            return hymnalLanguage.HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
+        }
     }
 }

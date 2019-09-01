@@ -73,44 +73,7 @@
                     TextColor="{DynamicResource PrimaryTextColor}" />
             </StackLayout>
         </ScrollView>
-        <!--
-        <ListView
-            x:Name="listView"
-            iOS:ListView.RowAnimationsEnabled="False"
-            BackgroundColor="Transparent"
-            CachingStrategy="RecycleElement"
-            HasUnevenRows="True"
-            ItemsSource="{Binding Lyric}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}"
-            SelectionMode="None"
-            SeparatorVisibility="None">
-            <ListView.Header>
-                <Grid Padding="25">
-                    <Label
-                        FontSize="{Binding Path=BindingContext.HymnTitleFontSize, Source={x:Reference listView}}"
-                        HorizontalOptions="FillAndExpand"
-                        HorizontalTextAlignment="Center"
-                        Text="{Binding Hymn.Title}"
-                        TextColor="{DynamicResource PrimaryTextColor}" />
-                </Grid>
-            </ListView.Header>
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Label
-                            Margin="10"
-                            FontSize="{Binding Path=BindingContext.HymnFontSize, Source={x:Reference listView}}"
-                            LineBreakMode="WordWrap"
-                            Text="{Binding .}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-        -->
+
     </RelativeLayout>
 
 </mvxViews:MvxContentPage>

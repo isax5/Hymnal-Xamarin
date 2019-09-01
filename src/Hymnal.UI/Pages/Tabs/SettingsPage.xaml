@@ -124,6 +124,7 @@
             <TableSection Title="{i18n:Translate Developing}">
 
                 <!--  Help  -->
+                <!--
                 <ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>
@@ -134,8 +135,10 @@
                             TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
+                -->
 
                 <!--  Developer  -->
+                <!--
                 <ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>
@@ -146,6 +149,7 @@
                             TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
+                -->
 
                 <TextCell
                     Detail="{Binding AppVersionString}"
