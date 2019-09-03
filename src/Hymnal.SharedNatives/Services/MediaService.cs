@@ -1,3 +1,4 @@
+using System;
 using Hymnal.Core.Services;
 using LibVLCSharp.Shared;
 
@@ -8,6 +9,23 @@ namespace Hymnal.SharedNatives.Services
         private static bool Initialize = false;
         private static readonly LibVLC LibVLC = new LibVLC();
         private static readonly MediaPlayer MediaPlayer = new MediaPlayer(LibVLC);
+
+        public event EventHandler<EventArgs> Playing
+        {
+            add => MediaPlayer.Playing += value;
+            remove => MediaPlayer.Playing -= value;
+        }
+        public event EventHandler<EventArgs> Stopped
+        {
+            add => MediaPlayer.Stopped += value;
+            remove => MediaPlayer.Stopped -= value;
+        }
+        public event EventHandler<EventArgs> EndReached
+        {
+            add => MediaPlayer.EndReached += value;
+            remove => MediaPlayer.EndReached -= value;
+        }
+
 
         public MediaService()
         {
@@ -31,10 +49,7 @@ namespace Hymnal.SharedNatives.Services
             MediaPlayer.Play();
         }
 
-        public void Stop()
-        {
-            MediaPlayer.Stop();
-        }
+        public void Stop() => MediaPlayer.Stop();
 
         public bool IsPlaying => MediaPlayer.IsPlaying;
     }

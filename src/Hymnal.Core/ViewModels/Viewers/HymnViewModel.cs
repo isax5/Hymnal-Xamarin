@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -78,6 +79,17 @@ namespace Hymnal.Core.ViewModels
             this.mediaService = mediaService;
             this.connectivityService = connectivityService;
             this.dialogService = dialogService;
+
+            this.mediaService.Playing += MediaService_Playing;
+            this.mediaService.Stopped += MediaService_Stopped;
+            this.mediaService.EndReached += MediaService_EndReached;
+        }
+
+        ~HymnViewModel()
+        {
+            mediaService.Playing -= MediaService_Playing;
+            mediaService.Stopped -= MediaService_Stopped;
+            mediaService.EndReached -= MediaService_EndReached;
         }
 
         public override void Prepare(HymnIdParameter parameter)
@@ -119,13 +131,22 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
         }
 
-        public override void ViewAppearing()
+        #region Events
+        private void MediaService_Playing(object sender, EventArgs e)
         {
-            // This is necesary for when the hymn finished in background
-            IsPlaying = mediaService.IsPlaying;
-            base.ViewAppearing();
+            IsPlaying = true;
         }
 
+        private void MediaService_Stopped(object sender, EventArgs e)
+        {
+            IsPlaying = false;
+        }
+
+        private void MediaService_EndReached(object sender, EventArgs e)
+        {
+            IsPlaying = false;
+        }
+        #endregion
 
         #region Commands
         public MvxCommand OpenSheetCommand => new MvxCommand(OpenSheet);
@@ -163,11 +184,13 @@ namespace Hymnal.Core.ViewModels
             if (IsPlaying)
             {
                 mediaService.Stop();
+                // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
                 IsPlaying = false;
             }
             else
             {
                 mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
+                // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
                 IsPlaying = true;
             }
         }
@@ -178,5 +201,7 @@ namespace Hymnal.Core.ViewModels
             navigationService.Close(this);
         }
         #endregion
+
+
     }
 }
