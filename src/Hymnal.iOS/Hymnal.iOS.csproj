@@ -23,10 +23,11 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI</MtouchExtraArgs>
+    <PlatformTarget>x64</PlatformTarget>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>none</DebugType>
@@ -402,6 +403,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
+  <!--
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_001.png" />
   </ItemGroup>
@@ -3762,6 +3764,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
+  -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
