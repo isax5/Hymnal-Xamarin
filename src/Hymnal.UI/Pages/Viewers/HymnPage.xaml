@@ -8,6 +8,7 @@
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
+    iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:HymnViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 

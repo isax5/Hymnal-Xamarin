@@ -13541,26 +13541,26 @@ namespace Hymnal.Droid
 			// aapt resource value: 0x7f020054
 			public const int avd_hide_password = 2130837588;
 			
-			// aapt resource value: 0x7f020146
-			public const int avd_hide_password_1 = 2130837830;
+			// aapt resource value: 0x7f0205a6
+			public const int avd_hide_password_1 = 2130838950;
 			
-			// aapt resource value: 0x7f020147
-			public const int avd_hide_password_2 = 2130837831;
+			// aapt resource value: 0x7f0205a7
+			public const int avd_hide_password_2 = 2130838951;
 			
-			// aapt resource value: 0x7f020148
-			public const int avd_hide_password_3 = 2130837832;
+			// aapt resource value: 0x7f0205a8
+			public const int avd_hide_password_3 = 2130838952;
 			
 			// aapt resource value: 0x7f020055
 			public const int avd_show_password = 2130837589;
 			
-			// aapt resource value: 0x7f020149
-			public const int avd_show_password_1 = 2130837833;
+			// aapt resource value: 0x7f0205a9
+			public const int avd_show_password_1 = 2130838953;
 			
-			// aapt resource value: 0x7f02014a
-			public const int avd_show_password_2 = 2130837834;
+			// aapt resource value: 0x7f0205aa
+			public const int avd_show_password_2 = 2130838954;
 			
-			// aapt resource value: 0x7f02014b
-			public const int avd_show_password_3 = 2130837835;
+			// aapt resource value: 0x7f0205ab
+			public const int avd_show_password_3 = 2130838955;
 			
 			// aapt resource value: 0x7f020056
 			public const int Background = 2130837590;
@@ -14228,11 +14228,11 @@ namespace Hymnal.Droid
 			// aapt resource value: 0x7f020133
 			public const int notification_icon_background = 2130837811;
 			
-			// aapt resource value: 0x7f020144
-			public const int notification_template_icon_bg = 2130837828;
+			// aapt resource value: 0x7f0205a4
+			public const int notification_template_icon_bg = 2130838948;
 			
-			// aapt resource value: 0x7f020145
-			public const int notification_template_icon_low_bg = 2130837829;
+			// aapt resource value: 0x7f0205a5
+			public const int notification_template_icon_low_bg = 2130838949;
 			
 			// aapt resource value: 0x7f020134
 			public const int notification_tile_bg = 2130837812;
@@ -14241,46 +14241,3406 @@ namespace Hymnal.Droid
 			public const int notify_panel_notification_icon_bg = 2130837813;
 			
 			// aapt resource value: 0x7f020136
-			public const int splash_screen = 2130837814;
+			public const int PianoSheet_NewHymnal_es_001 = 2130837814;
 			
 			// aapt resource value: 0x7f020137
-			public const int TabFavorites = 2130837815;
+			public const int PianoSheet_NewHymnal_es_002 = 2130837815;
 			
 			// aapt resource value: 0x7f020138
-			public const int TabIndex = 2130837816;
+			public const int PianoSheet_NewHymnal_es_003 = 2130837816;
 			
 			// aapt resource value: 0x7f020139
-			public const int TabNumber = 2130837817;
+			public const int PianoSheet_NewHymnal_es_004 = 2130837817;
 			
 			// aapt resource value: 0x7f02013a
-			public const int TabSettings = 2130837818;
+			public const int PianoSheet_NewHymnal_es_005 = 2130837818;
 			
 			// aapt resource value: 0x7f02013b
-			public const int ToolbarFavoriteFalse = 2130837819;
+			public const int PianoSheet_NewHymnal_es_006 = 2130837819;
 			
 			// aapt resource value: 0x7f02013c
-			public const int ToolbarFavoriteTrue = 2130837820;
+			public const int PianoSheet_NewHymnal_es_007 = 2130837820;
 			
 			// aapt resource value: 0x7f02013d
-			public const int ToolbarPlayingFalse = 2130837821;
+			public const int PianoSheet_NewHymnal_es_008 = 2130837821;
 			
 			// aapt resource value: 0x7f02013e
-			public const int ToolbarPlayingTrue = 2130837822;
+			public const int PianoSheet_NewHymnal_es_009 = 2130837822;
 			
 			// aapt resource value: 0x7f02013f
-			public const int ToolbarRecords = 2130837823;
+			public const int PianoSheet_NewHymnal_es_010 = 2130837823;
 			
 			// aapt resource value: 0x7f020140
-			public const int ToolbarSearch = 2130837824;
+			public const int PianoSheet_NewHymnal_es_011 = 2130837824;
 			
 			// aapt resource value: 0x7f020141
-			public const int ToolbarSheet = 2130837825;
+			public const int PianoSheet_NewHymnal_es_012 = 2130837825;
 			
 			// aapt resource value: 0x7f020142
-			public const int tooltip_frame_dark = 2130837826;
+			public const int PianoSheet_NewHymnal_es_013 = 2130837826;
 			
 			// aapt resource value: 0x7f020143
-			public const int tooltip_frame_light = 2130837827;
+			public const int PianoSheet_NewHymnal_es_014 = 2130837827;
+			
+			// aapt resource value: 0x7f020144
+			public const int PianoSheet_NewHymnal_es_015 = 2130837828;
+			
+			// aapt resource value: 0x7f020145
+			public const int PianoSheet_NewHymnal_es_016 = 2130837829;
+			
+			// aapt resource value: 0x7f020146
+			public const int PianoSheet_NewHymnal_es_017 = 2130837830;
+			
+			// aapt resource value: 0x7f020147
+			public const int PianoSheet_NewHymnal_es_018 = 2130837831;
+			
+			// aapt resource value: 0x7f020148
+			public const int PianoSheet_NewHymnal_es_019 = 2130837832;
+			
+			// aapt resource value: 0x7f020149
+			public const int PianoSheet_NewHymnal_es_020 = 2130837833;
+			
+			// aapt resource value: 0x7f02014a
+			public const int PianoSheet_NewHymnal_es_021 = 2130837834;
+			
+			// aapt resource value: 0x7f02014b
+			public const int PianoSheet_NewHymnal_es_022 = 2130837835;
+			
+			// aapt resource value: 0x7f02014c
+			public const int PianoSheet_NewHymnal_es_023 = 2130837836;
+			
+			// aapt resource value: 0x7f02014d
+			public const int PianoSheet_NewHymnal_es_024 = 2130837837;
+			
+			// aapt resource value: 0x7f02014e
+			public const int PianoSheet_NewHymnal_es_025 = 2130837838;
+			
+			// aapt resource value: 0x7f02014f
+			public const int PianoSheet_NewHymnal_es_026 = 2130837839;
+			
+			// aapt resource value: 0x7f020150
+			public const int PianoSheet_NewHymnal_es_027 = 2130837840;
+			
+			// aapt resource value: 0x7f020151
+			public const int PianoSheet_NewHymnal_es_028 = 2130837841;
+			
+			// aapt resource value: 0x7f020152
+			public const int PianoSheet_NewHymnal_es_029 = 2130837842;
+			
+			// aapt resource value: 0x7f020153
+			public const int PianoSheet_NewHymnal_es_030 = 2130837843;
+			
+			// aapt resource value: 0x7f020154
+			public const int PianoSheet_NewHymnal_es_031 = 2130837844;
+			
+			// aapt resource value: 0x7f020155
+			public const int PianoSheet_NewHymnal_es_032 = 2130837845;
+			
+			// aapt resource value: 0x7f020156
+			public const int PianoSheet_NewHymnal_es_033 = 2130837846;
+			
+			// aapt resource value: 0x7f020157
+			public const int PianoSheet_NewHymnal_es_034 = 2130837847;
+			
+			// aapt resource value: 0x7f020158
+			public const int PianoSheet_NewHymnal_es_035 = 2130837848;
+			
+			// aapt resource value: 0x7f020159
+			public const int PianoSheet_NewHymnal_es_036 = 2130837849;
+			
+			// aapt resource value: 0x7f02015a
+			public const int PianoSheet_NewHymnal_es_037 = 2130837850;
+			
+			// aapt resource value: 0x7f02015b
+			public const int PianoSheet_NewHymnal_es_038 = 2130837851;
+			
+			// aapt resource value: 0x7f02015c
+			public const int PianoSheet_NewHymnal_es_039 = 2130837852;
+			
+			// aapt resource value: 0x7f02015d
+			public const int PianoSheet_NewHymnal_es_040 = 2130837853;
+			
+			// aapt resource value: 0x7f02015e
+			public const int PianoSheet_NewHymnal_es_041 = 2130837854;
+			
+			// aapt resource value: 0x7f02015f
+			public const int PianoSheet_NewHymnal_es_042 = 2130837855;
+			
+			// aapt resource value: 0x7f020160
+			public const int PianoSheet_NewHymnal_es_043 = 2130837856;
+			
+			// aapt resource value: 0x7f020161
+			public const int PianoSheet_NewHymnal_es_044 = 2130837857;
+			
+			// aapt resource value: 0x7f020162
+			public const int PianoSheet_NewHymnal_es_045 = 2130837858;
+			
+			// aapt resource value: 0x7f020163
+			public const int PianoSheet_NewHymnal_es_046 = 2130837859;
+			
+			// aapt resource value: 0x7f020164
+			public const int PianoSheet_NewHymnal_es_047 = 2130837860;
+			
+			// aapt resource value: 0x7f020165
+			public const int PianoSheet_NewHymnal_es_048 = 2130837861;
+			
+			// aapt resource value: 0x7f020166
+			public const int PianoSheet_NewHymnal_es_049 = 2130837862;
+			
+			// aapt resource value: 0x7f020167
+			public const int PianoSheet_NewHymnal_es_050 = 2130837863;
+			
+			// aapt resource value: 0x7f020168
+			public const int PianoSheet_NewHymnal_es_051 = 2130837864;
+			
+			// aapt resource value: 0x7f020169
+			public const int PianoSheet_NewHymnal_es_052 = 2130837865;
+			
+			// aapt resource value: 0x7f02016a
+			public const int PianoSheet_NewHymnal_es_053 = 2130837866;
+			
+			// aapt resource value: 0x7f02016b
+			public const int PianoSheet_NewHymnal_es_054 = 2130837867;
+			
+			// aapt resource value: 0x7f02016c
+			public const int PianoSheet_NewHymnal_es_055 = 2130837868;
+			
+			// aapt resource value: 0x7f02016d
+			public const int PianoSheet_NewHymnal_es_056 = 2130837869;
+			
+			// aapt resource value: 0x7f02016e
+			public const int PianoSheet_NewHymnal_es_057 = 2130837870;
+			
+			// aapt resource value: 0x7f02016f
+			public const int PianoSheet_NewHymnal_es_058 = 2130837871;
+			
+			// aapt resource value: 0x7f020170
+			public const int PianoSheet_NewHymnal_es_059 = 2130837872;
+			
+			// aapt resource value: 0x7f020171
+			public const int PianoSheet_NewHymnal_es_060 = 2130837873;
+			
+			// aapt resource value: 0x7f020172
+			public const int PianoSheet_NewHymnal_es_061 = 2130837874;
+			
+			// aapt resource value: 0x7f020173
+			public const int PianoSheet_NewHymnal_es_062 = 2130837875;
+			
+			// aapt resource value: 0x7f020174
+			public const int PianoSheet_NewHymnal_es_063 = 2130837876;
+			
+			// aapt resource value: 0x7f020175
+			public const int PianoSheet_NewHymnal_es_064 = 2130837877;
+			
+			// aapt resource value: 0x7f020176
+			public const int PianoSheet_NewHymnal_es_065 = 2130837878;
+			
+			// aapt resource value: 0x7f020177
+			public const int PianoSheet_NewHymnal_es_066 = 2130837879;
+			
+			// aapt resource value: 0x7f020178
+			public const int PianoSheet_NewHymnal_es_067 = 2130837880;
+			
+			// aapt resource value: 0x7f020179
+			public const int PianoSheet_NewHymnal_es_068 = 2130837881;
+			
+			// aapt resource value: 0x7f02017a
+			public const int PianoSheet_NewHymnal_es_069 = 2130837882;
+			
+			// aapt resource value: 0x7f02017b
+			public const int PianoSheet_NewHymnal_es_070 = 2130837883;
+			
+			// aapt resource value: 0x7f02017c
+			public const int PianoSheet_NewHymnal_es_071 = 2130837884;
+			
+			// aapt resource value: 0x7f02017d
+			public const int PianoSheet_NewHymnal_es_072 = 2130837885;
+			
+			// aapt resource value: 0x7f02017e
+			public const int PianoSheet_NewHymnal_es_073 = 2130837886;
+			
+			// aapt resource value: 0x7f02017f
+			public const int PianoSheet_NewHymnal_es_074 = 2130837887;
+			
+			// aapt resource value: 0x7f020180
+			public const int PianoSheet_NewHymnal_es_075 = 2130837888;
+			
+			// aapt resource value: 0x7f020181
+			public const int PianoSheet_NewHymnal_es_076 = 2130837889;
+			
+			// aapt resource value: 0x7f020182
+			public const int PianoSheet_NewHymnal_es_077 = 2130837890;
+			
+			// aapt resource value: 0x7f020183
+			public const int PianoSheet_NewHymnal_es_078 = 2130837891;
+			
+			// aapt resource value: 0x7f020184
+			public const int PianoSheet_NewHymnal_es_079 = 2130837892;
+			
+			// aapt resource value: 0x7f020185
+			public const int PianoSheet_NewHymnal_es_080 = 2130837893;
+			
+			// aapt resource value: 0x7f020186
+			public const int PianoSheet_NewHymnal_es_081 = 2130837894;
+			
+			// aapt resource value: 0x7f020187
+			public const int PianoSheet_NewHymnal_es_082 = 2130837895;
+			
+			// aapt resource value: 0x7f020188
+			public const int PianoSheet_NewHymnal_es_083 = 2130837896;
+			
+			// aapt resource value: 0x7f020189
+			public const int PianoSheet_NewHymnal_es_084 = 2130837897;
+			
+			// aapt resource value: 0x7f02018a
+			public const int PianoSheet_NewHymnal_es_085 = 2130837898;
+			
+			// aapt resource value: 0x7f02018b
+			public const int PianoSheet_NewHymnal_es_086 = 2130837899;
+			
+			// aapt resource value: 0x7f02018c
+			public const int PianoSheet_NewHymnal_es_087 = 2130837900;
+			
+			// aapt resource value: 0x7f02018d
+			public const int PianoSheet_NewHymnal_es_088 = 2130837901;
+			
+			// aapt resource value: 0x7f02018e
+			public const int PianoSheet_NewHymnal_es_089 = 2130837902;
+			
+			// aapt resource value: 0x7f02018f
+			public const int PianoSheet_NewHymnal_es_090 = 2130837903;
+			
+			// aapt resource value: 0x7f020190
+			public const int PianoSheet_NewHymnal_es_091 = 2130837904;
+			
+			// aapt resource value: 0x7f020191
+			public const int PianoSheet_NewHymnal_es_092 = 2130837905;
+			
+			// aapt resource value: 0x7f020192
+			public const int PianoSheet_NewHymnal_es_093 = 2130837906;
+			
+			// aapt resource value: 0x7f020193
+			public const int PianoSheet_NewHymnal_es_094 = 2130837907;
+			
+			// aapt resource value: 0x7f020194
+			public const int PianoSheet_NewHymnal_es_095 = 2130837908;
+			
+			// aapt resource value: 0x7f020195
+			public const int PianoSheet_NewHymnal_es_096 = 2130837909;
+			
+			// aapt resource value: 0x7f020196
+			public const int PianoSheet_NewHymnal_es_097 = 2130837910;
+			
+			// aapt resource value: 0x7f020197
+			public const int PianoSheet_NewHymnal_es_098 = 2130837911;
+			
+			// aapt resource value: 0x7f020198
+			public const int PianoSheet_NewHymnal_es_099 = 2130837912;
+			
+			// aapt resource value: 0x7f020199
+			public const int PianoSheet_NewHymnal_es_100 = 2130837913;
+			
+			// aapt resource value: 0x7f02019a
+			public const int PianoSheet_NewHymnal_es_101 = 2130837914;
+			
+			// aapt resource value: 0x7f02019b
+			public const int PianoSheet_NewHymnal_es_102 = 2130837915;
+			
+			// aapt resource value: 0x7f02019c
+			public const int PianoSheet_NewHymnal_es_103 = 2130837916;
+			
+			// aapt resource value: 0x7f02019d
+			public const int PianoSheet_NewHymnal_es_104 = 2130837917;
+			
+			// aapt resource value: 0x7f02019e
+			public const int PianoSheet_NewHymnal_es_105 = 2130837918;
+			
+			// aapt resource value: 0x7f02019f
+			public const int PianoSheet_NewHymnal_es_106 = 2130837919;
+			
+			// aapt resource value: 0x7f0201a0
+			public const int PianoSheet_NewHymnal_es_107 = 2130837920;
+			
+			// aapt resource value: 0x7f0201a1
+			public const int PianoSheet_NewHymnal_es_108 = 2130837921;
+			
+			// aapt resource value: 0x7f0201a2
+			public const int PianoSheet_NewHymnal_es_109 = 2130837922;
+			
+			// aapt resource value: 0x7f0201a3
+			public const int PianoSheet_NewHymnal_es_110 = 2130837923;
+			
+			// aapt resource value: 0x7f0201a4
+			public const int PianoSheet_NewHymnal_es_111 = 2130837924;
+			
+			// aapt resource value: 0x7f0201a5
+			public const int PianoSheet_NewHymnal_es_112 = 2130837925;
+			
+			// aapt resource value: 0x7f0201a6
+			public const int PianoSheet_NewHymnal_es_113 = 2130837926;
+			
+			// aapt resource value: 0x7f0201a7
+			public const int PianoSheet_NewHymnal_es_114 = 2130837927;
+			
+			// aapt resource value: 0x7f0201a8
+			public const int PianoSheet_NewHymnal_es_115 = 2130837928;
+			
+			// aapt resource value: 0x7f0201a9
+			public const int PianoSheet_NewHymnal_es_116 = 2130837929;
+			
+			// aapt resource value: 0x7f0201aa
+			public const int PianoSheet_NewHymnal_es_117 = 2130837930;
+			
+			// aapt resource value: 0x7f0201ab
+			public const int PianoSheet_NewHymnal_es_118 = 2130837931;
+			
+			// aapt resource value: 0x7f0201ac
+			public const int PianoSheet_NewHymnal_es_119 = 2130837932;
+			
+			// aapt resource value: 0x7f0201ad
+			public const int PianoSheet_NewHymnal_es_120 = 2130837933;
+			
+			// aapt resource value: 0x7f0201ae
+			public const int PianoSheet_NewHymnal_es_121 = 2130837934;
+			
+			// aapt resource value: 0x7f0201af
+			public const int PianoSheet_NewHymnal_es_122 = 2130837935;
+			
+			// aapt resource value: 0x7f0201b0
+			public const int PianoSheet_NewHymnal_es_123 = 2130837936;
+			
+			// aapt resource value: 0x7f0201b1
+			public const int PianoSheet_NewHymnal_es_124 = 2130837937;
+			
+			// aapt resource value: 0x7f0201b2
+			public const int PianoSheet_NewHymnal_es_125 = 2130837938;
+			
+			// aapt resource value: 0x7f0201b3
+			public const int PianoSheet_NewHymnal_es_126 = 2130837939;
+			
+			// aapt resource value: 0x7f0201b4
+			public const int PianoSheet_NewHymnal_es_127 = 2130837940;
+			
+			// aapt resource value: 0x7f0201b5
+			public const int PianoSheet_NewHymnal_es_128 = 2130837941;
+			
+			// aapt resource value: 0x7f0201b6
+			public const int PianoSheet_NewHymnal_es_129 = 2130837942;
+			
+			// aapt resource value: 0x7f0201b7
+			public const int PianoSheet_NewHymnal_es_130 = 2130837943;
+			
+			// aapt resource value: 0x7f0201b8
+			public const int PianoSheet_NewHymnal_es_131 = 2130837944;
+			
+			// aapt resource value: 0x7f0201b9
+			public const int PianoSheet_NewHymnal_es_132 = 2130837945;
+			
+			// aapt resource value: 0x7f0201ba
+			public const int PianoSheet_NewHymnal_es_133 = 2130837946;
+			
+			// aapt resource value: 0x7f0201bb
+			public const int PianoSheet_NewHymnal_es_134 = 2130837947;
+			
+			// aapt resource value: 0x7f0201bc
+			public const int PianoSheet_NewHymnal_es_135 = 2130837948;
+			
+			// aapt resource value: 0x7f0201bd
+			public const int PianoSheet_NewHymnal_es_136 = 2130837949;
+			
+			// aapt resource value: 0x7f0201be
+			public const int PianoSheet_NewHymnal_es_137 = 2130837950;
+			
+			// aapt resource value: 0x7f0201bf
+			public const int PianoSheet_NewHymnal_es_138 = 2130837951;
+			
+			// aapt resource value: 0x7f0201c0
+			public const int PianoSheet_NewHymnal_es_139 = 2130837952;
+			
+			// aapt resource value: 0x7f0201c1
+			public const int PianoSheet_NewHymnal_es_140 = 2130837953;
+			
+			// aapt resource value: 0x7f0201c2
+			public const int PianoSheet_NewHymnal_es_141 = 2130837954;
+			
+			// aapt resource value: 0x7f0201c3
+			public const int PianoSheet_NewHymnal_es_142 = 2130837955;
+			
+			// aapt resource value: 0x7f0201c4
+			public const int PianoSheet_NewHymnal_es_143 = 2130837956;
+			
+			// aapt resource value: 0x7f0201c5
+			public const int PianoSheet_NewHymnal_es_144 = 2130837957;
+			
+			// aapt resource value: 0x7f0201c6
+			public const int PianoSheet_NewHymnal_es_145 = 2130837958;
+			
+			// aapt resource value: 0x7f0201c7
+			public const int PianoSheet_NewHymnal_es_146 = 2130837959;
+			
+			// aapt resource value: 0x7f0201c8
+			public const int PianoSheet_NewHymnal_es_147 = 2130837960;
+			
+			// aapt resource value: 0x7f0201c9
+			public const int PianoSheet_NewHymnal_es_148 = 2130837961;
+			
+			// aapt resource value: 0x7f0201ca
+			public const int PianoSheet_NewHymnal_es_149 = 2130837962;
+			
+			// aapt resource value: 0x7f0201cb
+			public const int PianoSheet_NewHymnal_es_150 = 2130837963;
+			
+			// aapt resource value: 0x7f0201cc
+			public const int PianoSheet_NewHymnal_es_151 = 2130837964;
+			
+			// aapt resource value: 0x7f0201cd
+			public const int PianoSheet_NewHymnal_es_152 = 2130837965;
+			
+			// aapt resource value: 0x7f0201ce
+			public const int PianoSheet_NewHymnal_es_153 = 2130837966;
+			
+			// aapt resource value: 0x7f0201cf
+			public const int PianoSheet_NewHymnal_es_154 = 2130837967;
+			
+			// aapt resource value: 0x7f0201d0
+			public const int PianoSheet_NewHymnal_es_155 = 2130837968;
+			
+			// aapt resource value: 0x7f0201d1
+			public const int PianoSheet_NewHymnal_es_156 = 2130837969;
+			
+			// aapt resource value: 0x7f0201d2
+			public const int PianoSheet_NewHymnal_es_157 = 2130837970;
+			
+			// aapt resource value: 0x7f0201d3
+			public const int PianoSheet_NewHymnal_es_158 = 2130837971;
+			
+			// aapt resource value: 0x7f0201d4
+			public const int PianoSheet_NewHymnal_es_159 = 2130837972;
+			
+			// aapt resource value: 0x7f0201d5
+			public const int PianoSheet_NewHymnal_es_160 = 2130837973;
+			
+			// aapt resource value: 0x7f0201d6
+			public const int PianoSheet_NewHymnal_es_161 = 2130837974;
+			
+			// aapt resource value: 0x7f0201d7
+			public const int PianoSheet_NewHymnal_es_162 = 2130837975;
+			
+			// aapt resource value: 0x7f0201d8
+			public const int PianoSheet_NewHymnal_es_163 = 2130837976;
+			
+			// aapt resource value: 0x7f0201d9
+			public const int PianoSheet_NewHymnal_es_164 = 2130837977;
+			
+			// aapt resource value: 0x7f0201da
+			public const int PianoSheet_NewHymnal_es_165 = 2130837978;
+			
+			// aapt resource value: 0x7f0201db
+			public const int PianoSheet_NewHymnal_es_166 = 2130837979;
+			
+			// aapt resource value: 0x7f0201dc
+			public const int PianoSheet_NewHymnal_es_167 = 2130837980;
+			
+			// aapt resource value: 0x7f0201dd
+			public const int PianoSheet_NewHymnal_es_168 = 2130837981;
+			
+			// aapt resource value: 0x7f0201de
+			public const int PianoSheet_NewHymnal_es_169 = 2130837982;
+			
+			// aapt resource value: 0x7f0201df
+			public const int PianoSheet_NewHymnal_es_170 = 2130837983;
+			
+			// aapt resource value: 0x7f0201e0
+			public const int PianoSheet_NewHymnal_es_171 = 2130837984;
+			
+			// aapt resource value: 0x7f0201e1
+			public const int PianoSheet_NewHymnal_es_172 = 2130837985;
+			
+			// aapt resource value: 0x7f0201e2
+			public const int PianoSheet_NewHymnal_es_173 = 2130837986;
+			
+			// aapt resource value: 0x7f0201e3
+			public const int PianoSheet_NewHymnal_es_174 = 2130837987;
+			
+			// aapt resource value: 0x7f0201e4
+			public const int PianoSheet_NewHymnal_es_175 = 2130837988;
+			
+			// aapt resource value: 0x7f0201e5
+			public const int PianoSheet_NewHymnal_es_176 = 2130837989;
+			
+			// aapt resource value: 0x7f0201e6
+			public const int PianoSheet_NewHymnal_es_177 = 2130837990;
+			
+			// aapt resource value: 0x7f0201e7
+			public const int PianoSheet_NewHymnal_es_178 = 2130837991;
+			
+			// aapt resource value: 0x7f0201e8
+			public const int PianoSheet_NewHymnal_es_179 = 2130837992;
+			
+			// aapt resource value: 0x7f0201e9
+			public const int PianoSheet_NewHymnal_es_180 = 2130837993;
+			
+			// aapt resource value: 0x7f0201ea
+			public const int PianoSheet_NewHymnal_es_181 = 2130837994;
+			
+			// aapt resource value: 0x7f0201eb
+			public const int PianoSheet_NewHymnal_es_182 = 2130837995;
+			
+			// aapt resource value: 0x7f0201ec
+			public const int PianoSheet_NewHymnal_es_183 = 2130837996;
+			
+			// aapt resource value: 0x7f0201ed
+			public const int PianoSheet_NewHymnal_es_184 = 2130837997;
+			
+			// aapt resource value: 0x7f0201ee
+			public const int PianoSheet_NewHymnal_es_185 = 2130837998;
+			
+			// aapt resource value: 0x7f0201ef
+			public const int PianoSheet_NewHymnal_es_186 = 2130837999;
+			
+			// aapt resource value: 0x7f0201f0
+			public const int PianoSheet_NewHymnal_es_187 = 2130838000;
+			
+			// aapt resource value: 0x7f0201f1
+			public const int PianoSheet_NewHymnal_es_188 = 2130838001;
+			
+			// aapt resource value: 0x7f0201f2
+			public const int PianoSheet_NewHymnal_es_189 = 2130838002;
+			
+			// aapt resource value: 0x7f0201f3
+			public const int PianoSheet_NewHymnal_es_190 = 2130838003;
+			
+			// aapt resource value: 0x7f0201f4
+			public const int PianoSheet_NewHymnal_es_191 = 2130838004;
+			
+			// aapt resource value: 0x7f0201f5
+			public const int PianoSheet_NewHymnal_es_192 = 2130838005;
+			
+			// aapt resource value: 0x7f0201f6
+			public const int PianoSheet_NewHymnal_es_193 = 2130838006;
+			
+			// aapt resource value: 0x7f0201f7
+			public const int PianoSheet_NewHymnal_es_194 = 2130838007;
+			
+			// aapt resource value: 0x7f0201f8
+			public const int PianoSheet_NewHymnal_es_195 = 2130838008;
+			
+			// aapt resource value: 0x7f0201f9
+			public const int PianoSheet_NewHymnal_es_196 = 2130838009;
+			
+			// aapt resource value: 0x7f0201fa
+			public const int PianoSheet_NewHymnal_es_197 = 2130838010;
+			
+			// aapt resource value: 0x7f0201fb
+			public const int PianoSheet_NewHymnal_es_198 = 2130838011;
+			
+			// aapt resource value: 0x7f0201fc
+			public const int PianoSheet_NewHymnal_es_199 = 2130838012;
+			
+			// aapt resource value: 0x7f0201fd
+			public const int PianoSheet_NewHymnal_es_200 = 2130838013;
+			
+			// aapt resource value: 0x7f0201fe
+			public const int PianoSheet_NewHymnal_es_201 = 2130838014;
+			
+			// aapt resource value: 0x7f0201ff
+			public const int PianoSheet_NewHymnal_es_202 = 2130838015;
+			
+			// aapt resource value: 0x7f020200
+			public const int PianoSheet_NewHymnal_es_203 = 2130838016;
+			
+			// aapt resource value: 0x7f020201
+			public const int PianoSheet_NewHymnal_es_204 = 2130838017;
+			
+			// aapt resource value: 0x7f020202
+			public const int PianoSheet_NewHymnal_es_205 = 2130838018;
+			
+			// aapt resource value: 0x7f020203
+			public const int PianoSheet_NewHymnal_es_206 = 2130838019;
+			
+			// aapt resource value: 0x7f020204
+			public const int PianoSheet_NewHymnal_es_207 = 2130838020;
+			
+			// aapt resource value: 0x7f020205
+			public const int PianoSheet_NewHymnal_es_208 = 2130838021;
+			
+			// aapt resource value: 0x7f020206
+			public const int PianoSheet_NewHymnal_es_209 = 2130838022;
+			
+			// aapt resource value: 0x7f020207
+			public const int PianoSheet_NewHymnal_es_210 = 2130838023;
+			
+			// aapt resource value: 0x7f020208
+			public const int PianoSheet_NewHymnal_es_211 = 2130838024;
+			
+			// aapt resource value: 0x7f020209
+			public const int PianoSheet_NewHymnal_es_212 = 2130838025;
+			
+			// aapt resource value: 0x7f02020a
+			public const int PianoSheet_NewHymnal_es_213 = 2130838026;
+			
+			// aapt resource value: 0x7f02020b
+			public const int PianoSheet_NewHymnal_es_214 = 2130838027;
+			
+			// aapt resource value: 0x7f02020c
+			public const int PianoSheet_NewHymnal_es_215 = 2130838028;
+			
+			// aapt resource value: 0x7f02020d
+			public const int PianoSheet_NewHymnal_es_216 = 2130838029;
+			
+			// aapt resource value: 0x7f02020e
+			public const int PianoSheet_NewHymnal_es_217 = 2130838030;
+			
+			// aapt resource value: 0x7f02020f
+			public const int PianoSheet_NewHymnal_es_218 = 2130838031;
+			
+			// aapt resource value: 0x7f020210
+			public const int PianoSheet_NewHymnal_es_219 = 2130838032;
+			
+			// aapt resource value: 0x7f020211
+			public const int PianoSheet_NewHymnal_es_220 = 2130838033;
+			
+			// aapt resource value: 0x7f020212
+			public const int PianoSheet_NewHymnal_es_221 = 2130838034;
+			
+			// aapt resource value: 0x7f020213
+			public const int PianoSheet_NewHymnal_es_222 = 2130838035;
+			
+			// aapt resource value: 0x7f020214
+			public const int PianoSheet_NewHymnal_es_223 = 2130838036;
+			
+			// aapt resource value: 0x7f020215
+			public const int PianoSheet_NewHymnal_es_224 = 2130838037;
+			
+			// aapt resource value: 0x7f020216
+			public const int PianoSheet_NewHymnal_es_225 = 2130838038;
+			
+			// aapt resource value: 0x7f020217
+			public const int PianoSheet_NewHymnal_es_226 = 2130838039;
+			
+			// aapt resource value: 0x7f020218
+			public const int PianoSheet_NewHymnal_es_227 = 2130838040;
+			
+			// aapt resource value: 0x7f020219
+			public const int PianoSheet_NewHymnal_es_228 = 2130838041;
+			
+			// aapt resource value: 0x7f02021a
+			public const int PianoSheet_NewHymnal_es_229 = 2130838042;
+			
+			// aapt resource value: 0x7f02021b
+			public const int PianoSheet_NewHymnal_es_230 = 2130838043;
+			
+			// aapt resource value: 0x7f02021c
+			public const int PianoSheet_NewHymnal_es_231 = 2130838044;
+			
+			// aapt resource value: 0x7f02021d
+			public const int PianoSheet_NewHymnal_es_232 = 2130838045;
+			
+			// aapt resource value: 0x7f02021e
+			public const int PianoSheet_NewHymnal_es_233 = 2130838046;
+			
+			// aapt resource value: 0x7f02021f
+			public const int PianoSheet_NewHymnal_es_234 = 2130838047;
+			
+			// aapt resource value: 0x7f020220
+			public const int PianoSheet_NewHymnal_es_235 = 2130838048;
+			
+			// aapt resource value: 0x7f020221
+			public const int PianoSheet_NewHymnal_es_236 = 2130838049;
+			
+			// aapt resource value: 0x7f020222
+			public const int PianoSheet_NewHymnal_es_237 = 2130838050;
+			
+			// aapt resource value: 0x7f020223
+			public const int PianoSheet_NewHymnal_es_238 = 2130838051;
+			
+			// aapt resource value: 0x7f020224
+			public const int PianoSheet_NewHymnal_es_239 = 2130838052;
+			
+			// aapt resource value: 0x7f020225
+			public const int PianoSheet_NewHymnal_es_240 = 2130838053;
+			
+			// aapt resource value: 0x7f020226
+			public const int PianoSheet_NewHymnal_es_241 = 2130838054;
+			
+			// aapt resource value: 0x7f020227
+			public const int PianoSheet_NewHymnal_es_242 = 2130838055;
+			
+			// aapt resource value: 0x7f020228
+			public const int PianoSheet_NewHymnal_es_243 = 2130838056;
+			
+			// aapt resource value: 0x7f020229
+			public const int PianoSheet_NewHymnal_es_244 = 2130838057;
+			
+			// aapt resource value: 0x7f02022a
+			public const int PianoSheet_NewHymnal_es_245 = 2130838058;
+			
+			// aapt resource value: 0x7f02022b
+			public const int PianoSheet_NewHymnal_es_246 = 2130838059;
+			
+			// aapt resource value: 0x7f02022c
+			public const int PianoSheet_NewHymnal_es_247 = 2130838060;
+			
+			// aapt resource value: 0x7f02022d
+			public const int PianoSheet_NewHymnal_es_248 = 2130838061;
+			
+			// aapt resource value: 0x7f02022e
+			public const int PianoSheet_NewHymnal_es_249 = 2130838062;
+			
+			// aapt resource value: 0x7f02022f
+			public const int PianoSheet_NewHymnal_es_250 = 2130838063;
+			
+			// aapt resource value: 0x7f020230
+			public const int PianoSheet_NewHymnal_es_251 = 2130838064;
+			
+			// aapt resource value: 0x7f020231
+			public const int PianoSheet_NewHymnal_es_252 = 2130838065;
+			
+			// aapt resource value: 0x7f020232
+			public const int PianoSheet_NewHymnal_es_253 = 2130838066;
+			
+			// aapt resource value: 0x7f020233
+			public const int PianoSheet_NewHymnal_es_254 = 2130838067;
+			
+			// aapt resource value: 0x7f020234
+			public const int PianoSheet_NewHymnal_es_255 = 2130838068;
+			
+			// aapt resource value: 0x7f020235
+			public const int PianoSheet_NewHymnal_es_256 = 2130838069;
+			
+			// aapt resource value: 0x7f020236
+			public const int PianoSheet_NewHymnal_es_257 = 2130838070;
+			
+			// aapt resource value: 0x7f020237
+			public const int PianoSheet_NewHymnal_es_258 = 2130838071;
+			
+			// aapt resource value: 0x7f020238
+			public const int PianoSheet_NewHymnal_es_259 = 2130838072;
+			
+			// aapt resource value: 0x7f020239
+			public const int PianoSheet_NewHymnal_es_260 = 2130838073;
+			
+			// aapt resource value: 0x7f02023a
+			public const int PianoSheet_NewHymnal_es_261 = 2130838074;
+			
+			// aapt resource value: 0x7f02023b
+			public const int PianoSheet_NewHymnal_es_262 = 2130838075;
+			
+			// aapt resource value: 0x7f02023c
+			public const int PianoSheet_NewHymnal_es_263 = 2130838076;
+			
+			// aapt resource value: 0x7f02023d
+			public const int PianoSheet_NewHymnal_es_264 = 2130838077;
+			
+			// aapt resource value: 0x7f02023e
+			public const int PianoSheet_NewHymnal_es_265 = 2130838078;
+			
+			// aapt resource value: 0x7f02023f
+			public const int PianoSheet_NewHymnal_es_266 = 2130838079;
+			
+			// aapt resource value: 0x7f020240
+			public const int PianoSheet_NewHymnal_es_267 = 2130838080;
+			
+			// aapt resource value: 0x7f020241
+			public const int PianoSheet_NewHymnal_es_268 = 2130838081;
+			
+			// aapt resource value: 0x7f020242
+			public const int PianoSheet_NewHymnal_es_269 = 2130838082;
+			
+			// aapt resource value: 0x7f020243
+			public const int PianoSheet_NewHymnal_es_270 = 2130838083;
+			
+			// aapt resource value: 0x7f020244
+			public const int PianoSheet_NewHymnal_es_271 = 2130838084;
+			
+			// aapt resource value: 0x7f020245
+			public const int PianoSheet_NewHymnal_es_272 = 2130838085;
+			
+			// aapt resource value: 0x7f020246
+			public const int PianoSheet_NewHymnal_es_273 = 2130838086;
+			
+			// aapt resource value: 0x7f020247
+			public const int PianoSheet_NewHymnal_es_274 = 2130838087;
+			
+			// aapt resource value: 0x7f020248
+			public const int PianoSheet_NewHymnal_es_275 = 2130838088;
+			
+			// aapt resource value: 0x7f020249
+			public const int PianoSheet_NewHymnal_es_276 = 2130838089;
+			
+			// aapt resource value: 0x7f02024a
+			public const int PianoSheet_NewHymnal_es_277 = 2130838090;
+			
+			// aapt resource value: 0x7f02024b
+			public const int PianoSheet_NewHymnal_es_278 = 2130838091;
+			
+			// aapt resource value: 0x7f02024c
+			public const int PianoSheet_NewHymnal_es_279 = 2130838092;
+			
+			// aapt resource value: 0x7f02024d
+			public const int PianoSheet_NewHymnal_es_280 = 2130838093;
+			
+			// aapt resource value: 0x7f02024e
+			public const int PianoSheet_NewHymnal_es_281 = 2130838094;
+			
+			// aapt resource value: 0x7f02024f
+			public const int PianoSheet_NewHymnal_es_282 = 2130838095;
+			
+			// aapt resource value: 0x7f020250
+			public const int PianoSheet_NewHymnal_es_283 = 2130838096;
+			
+			// aapt resource value: 0x7f020251
+			public const int PianoSheet_NewHymnal_es_284 = 2130838097;
+			
+			// aapt resource value: 0x7f020252
+			public const int PianoSheet_NewHymnal_es_285 = 2130838098;
+			
+			// aapt resource value: 0x7f020253
+			public const int PianoSheet_NewHymnal_es_286 = 2130838099;
+			
+			// aapt resource value: 0x7f020254
+			public const int PianoSheet_NewHymnal_es_287 = 2130838100;
+			
+			// aapt resource value: 0x7f020255
+			public const int PianoSheet_NewHymnal_es_288 = 2130838101;
+			
+			// aapt resource value: 0x7f020256
+			public const int PianoSheet_NewHymnal_es_289 = 2130838102;
+			
+			// aapt resource value: 0x7f020257
+			public const int PianoSheet_NewHymnal_es_290 = 2130838103;
+			
+			// aapt resource value: 0x7f020258
+			public const int PianoSheet_NewHymnal_es_291 = 2130838104;
+			
+			// aapt resource value: 0x7f020259
+			public const int PianoSheet_NewHymnal_es_292 = 2130838105;
+			
+			// aapt resource value: 0x7f02025a
+			public const int PianoSheet_NewHymnal_es_293 = 2130838106;
+			
+			// aapt resource value: 0x7f02025b
+			public const int PianoSheet_NewHymnal_es_294 = 2130838107;
+			
+			// aapt resource value: 0x7f02025c
+			public const int PianoSheet_NewHymnal_es_295 = 2130838108;
+			
+			// aapt resource value: 0x7f02025d
+			public const int PianoSheet_NewHymnal_es_296 = 2130838109;
+			
+			// aapt resource value: 0x7f02025e
+			public const int PianoSheet_NewHymnal_es_297 = 2130838110;
+			
+			// aapt resource value: 0x7f02025f
+			public const int PianoSheet_NewHymnal_es_298 = 2130838111;
+			
+			// aapt resource value: 0x7f020260
+			public const int PianoSheet_NewHymnal_es_299 = 2130838112;
+			
+			// aapt resource value: 0x7f020261
+			public const int PianoSheet_NewHymnal_es_300 = 2130838113;
+			
+			// aapt resource value: 0x7f020262
+			public const int PianoSheet_NewHymnal_es_301 = 2130838114;
+			
+			// aapt resource value: 0x7f020263
+			public const int PianoSheet_NewHymnal_es_302 = 2130838115;
+			
+			// aapt resource value: 0x7f020264
+			public const int PianoSheet_NewHymnal_es_303 = 2130838116;
+			
+			// aapt resource value: 0x7f020265
+			public const int PianoSheet_NewHymnal_es_304 = 2130838117;
+			
+			// aapt resource value: 0x7f020266
+			public const int PianoSheet_NewHymnal_es_305 = 2130838118;
+			
+			// aapt resource value: 0x7f020267
+			public const int PianoSheet_NewHymnal_es_306 = 2130838119;
+			
+			// aapt resource value: 0x7f020268
+			public const int PianoSheet_NewHymnal_es_307 = 2130838120;
+			
+			// aapt resource value: 0x7f020269
+			public const int PianoSheet_NewHymnal_es_308 = 2130838121;
+			
+			// aapt resource value: 0x7f02026a
+			public const int PianoSheet_NewHymnal_es_309 = 2130838122;
+			
+			// aapt resource value: 0x7f02026b
+			public const int PianoSheet_NewHymnal_es_310 = 2130838123;
+			
+			// aapt resource value: 0x7f02026c
+			public const int PianoSheet_NewHymnal_es_311 = 2130838124;
+			
+			// aapt resource value: 0x7f02026d
+			public const int PianoSheet_NewHymnal_es_312 = 2130838125;
+			
+			// aapt resource value: 0x7f02026e
+			public const int PianoSheet_NewHymnal_es_313 = 2130838126;
+			
+			// aapt resource value: 0x7f02026f
+			public const int PianoSheet_NewHymnal_es_314 = 2130838127;
+			
+			// aapt resource value: 0x7f020270
+			public const int PianoSheet_NewHymnal_es_315 = 2130838128;
+			
+			// aapt resource value: 0x7f020271
+			public const int PianoSheet_NewHymnal_es_316 = 2130838129;
+			
+			// aapt resource value: 0x7f020272
+			public const int PianoSheet_NewHymnal_es_317 = 2130838130;
+			
+			// aapt resource value: 0x7f020273
+			public const int PianoSheet_NewHymnal_es_318 = 2130838131;
+			
+			// aapt resource value: 0x7f020274
+			public const int PianoSheet_NewHymnal_es_319 = 2130838132;
+			
+			// aapt resource value: 0x7f020275
+			public const int PianoSheet_NewHymnal_es_320 = 2130838133;
+			
+			// aapt resource value: 0x7f020276
+			public const int PianoSheet_NewHymnal_es_321 = 2130838134;
+			
+			// aapt resource value: 0x7f020277
+			public const int PianoSheet_NewHymnal_es_322 = 2130838135;
+			
+			// aapt resource value: 0x7f020278
+			public const int PianoSheet_NewHymnal_es_323 = 2130838136;
+			
+			// aapt resource value: 0x7f020279
+			public const int PianoSheet_NewHymnal_es_324 = 2130838137;
+			
+			// aapt resource value: 0x7f02027a
+			public const int PianoSheet_NewHymnal_es_325 = 2130838138;
+			
+			// aapt resource value: 0x7f02027b
+			public const int PianoSheet_NewHymnal_es_326 = 2130838139;
+			
+			// aapt resource value: 0x7f02027c
+			public const int PianoSheet_NewHymnal_es_327 = 2130838140;
+			
+			// aapt resource value: 0x7f02027d
+			public const int PianoSheet_NewHymnal_es_328 = 2130838141;
+			
+			// aapt resource value: 0x7f02027e
+			public const int PianoSheet_NewHymnal_es_329 = 2130838142;
+			
+			// aapt resource value: 0x7f02027f
+			public const int PianoSheet_NewHymnal_es_330 = 2130838143;
+			
+			// aapt resource value: 0x7f020280
+			public const int PianoSheet_NewHymnal_es_331 = 2130838144;
+			
+			// aapt resource value: 0x7f020281
+			public const int PianoSheet_NewHymnal_es_332 = 2130838145;
+			
+			// aapt resource value: 0x7f020282
+			public const int PianoSheet_NewHymnal_es_333 = 2130838146;
+			
+			// aapt resource value: 0x7f020283
+			public const int PianoSheet_NewHymnal_es_334 = 2130838147;
+			
+			// aapt resource value: 0x7f020284
+			public const int PianoSheet_NewHymnal_es_335 = 2130838148;
+			
+			// aapt resource value: 0x7f020285
+			public const int PianoSheet_NewHymnal_es_336 = 2130838149;
+			
+			// aapt resource value: 0x7f020286
+			public const int PianoSheet_NewHymnal_es_337 = 2130838150;
+			
+			// aapt resource value: 0x7f020287
+			public const int PianoSheet_NewHymnal_es_338 = 2130838151;
+			
+			// aapt resource value: 0x7f020288
+			public const int PianoSheet_NewHymnal_es_339 = 2130838152;
+			
+			// aapt resource value: 0x7f020289
+			public const int PianoSheet_NewHymnal_es_340 = 2130838153;
+			
+			// aapt resource value: 0x7f02028a
+			public const int PianoSheet_NewHymnal_es_341 = 2130838154;
+			
+			// aapt resource value: 0x7f02028b
+			public const int PianoSheet_NewHymnal_es_342 = 2130838155;
+			
+			// aapt resource value: 0x7f02028c
+			public const int PianoSheet_NewHymnal_es_343 = 2130838156;
+			
+			// aapt resource value: 0x7f02028d
+			public const int PianoSheet_NewHymnal_es_344 = 2130838157;
+			
+			// aapt resource value: 0x7f02028e
+			public const int PianoSheet_NewHymnal_es_345 = 2130838158;
+			
+			// aapt resource value: 0x7f02028f
+			public const int PianoSheet_NewHymnal_es_346 = 2130838159;
+			
+			// aapt resource value: 0x7f020290
+			public const int PianoSheet_NewHymnal_es_347 = 2130838160;
+			
+			// aapt resource value: 0x7f020291
+			public const int PianoSheet_NewHymnal_es_348 = 2130838161;
+			
+			// aapt resource value: 0x7f020292
+			public const int PianoSheet_NewHymnal_es_349 = 2130838162;
+			
+			// aapt resource value: 0x7f020293
+			public const int PianoSheet_NewHymnal_es_350 = 2130838163;
+			
+			// aapt resource value: 0x7f020294
+			public const int PianoSheet_NewHymnal_es_351 = 2130838164;
+			
+			// aapt resource value: 0x7f020295
+			public const int PianoSheet_NewHymnal_es_352 = 2130838165;
+			
+			// aapt resource value: 0x7f020296
+			public const int PianoSheet_NewHymnal_es_353 = 2130838166;
+			
+			// aapt resource value: 0x7f020297
+			public const int PianoSheet_NewHymnal_es_354 = 2130838167;
+			
+			// aapt resource value: 0x7f020298
+			public const int PianoSheet_NewHymnal_es_355 = 2130838168;
+			
+			// aapt resource value: 0x7f020299
+			public const int PianoSheet_NewHymnal_es_356 = 2130838169;
+			
+			// aapt resource value: 0x7f02029a
+			public const int PianoSheet_NewHymnal_es_357 = 2130838170;
+			
+			// aapt resource value: 0x7f02029b
+			public const int PianoSheet_NewHymnal_es_358 = 2130838171;
+			
+			// aapt resource value: 0x7f02029c
+			public const int PianoSheet_NewHymnal_es_359 = 2130838172;
+			
+			// aapt resource value: 0x7f02029d
+			public const int PianoSheet_NewHymnal_es_360 = 2130838173;
+			
+			// aapt resource value: 0x7f02029e
+			public const int PianoSheet_NewHymnal_es_361 = 2130838174;
+			
+			// aapt resource value: 0x7f02029f
+			public const int PianoSheet_NewHymnal_es_362 = 2130838175;
+			
+			// aapt resource value: 0x7f0202a0
+			public const int PianoSheet_NewHymnal_es_363 = 2130838176;
+			
+			// aapt resource value: 0x7f0202a1
+			public const int PianoSheet_NewHymnal_es_364 = 2130838177;
+			
+			// aapt resource value: 0x7f0202a2
+			public const int PianoSheet_NewHymnal_es_365 = 2130838178;
+			
+			// aapt resource value: 0x7f0202a3
+			public const int PianoSheet_NewHymnal_es_366 = 2130838179;
+			
+			// aapt resource value: 0x7f0202a4
+			public const int PianoSheet_NewHymnal_es_367 = 2130838180;
+			
+			// aapt resource value: 0x7f0202a5
+			public const int PianoSheet_NewHymnal_es_368 = 2130838181;
+			
+			// aapt resource value: 0x7f0202a6
+			public const int PianoSheet_NewHymnal_es_369 = 2130838182;
+			
+			// aapt resource value: 0x7f0202a7
+			public const int PianoSheet_NewHymnal_es_370 = 2130838183;
+			
+			// aapt resource value: 0x7f0202a8
+			public const int PianoSheet_NewHymnal_es_371 = 2130838184;
+			
+			// aapt resource value: 0x7f0202a9
+			public const int PianoSheet_NewHymnal_es_372 = 2130838185;
+			
+			// aapt resource value: 0x7f0202aa
+			public const int PianoSheet_NewHymnal_es_373 = 2130838186;
+			
+			// aapt resource value: 0x7f0202ab
+			public const int PianoSheet_NewHymnal_es_374 = 2130838187;
+			
+			// aapt resource value: 0x7f0202ac
+			public const int PianoSheet_NewHymnal_es_375 = 2130838188;
+			
+			// aapt resource value: 0x7f0202ad
+			public const int PianoSheet_NewHymnal_es_376 = 2130838189;
+			
+			// aapt resource value: 0x7f0202ae
+			public const int PianoSheet_NewHymnal_es_377 = 2130838190;
+			
+			// aapt resource value: 0x7f0202af
+			public const int PianoSheet_NewHymnal_es_378 = 2130838191;
+			
+			// aapt resource value: 0x7f0202b0
+			public const int PianoSheet_NewHymnal_es_379 = 2130838192;
+			
+			// aapt resource value: 0x7f0202b1
+			public const int PianoSheet_NewHymnal_es_380 = 2130838193;
+			
+			// aapt resource value: 0x7f0202b2
+			public const int PianoSheet_NewHymnal_es_381 = 2130838194;
+			
+			// aapt resource value: 0x7f0202b3
+			public const int PianoSheet_NewHymnal_es_382 = 2130838195;
+			
+			// aapt resource value: 0x7f0202b4
+			public const int PianoSheet_NewHymnal_es_383 = 2130838196;
+			
+			// aapt resource value: 0x7f0202b5
+			public const int PianoSheet_NewHymnal_es_384 = 2130838197;
+			
+			// aapt resource value: 0x7f0202b6
+			public const int PianoSheet_NewHymnal_es_385 = 2130838198;
+			
+			// aapt resource value: 0x7f0202b7
+			public const int PianoSheet_NewHymnal_es_386 = 2130838199;
+			
+			// aapt resource value: 0x7f0202b8
+			public const int PianoSheet_NewHymnal_es_387 = 2130838200;
+			
+			// aapt resource value: 0x7f0202b9
+			public const int PianoSheet_NewHymnal_es_388 = 2130838201;
+			
+			// aapt resource value: 0x7f0202ba
+			public const int PianoSheet_NewHymnal_es_389 = 2130838202;
+			
+			// aapt resource value: 0x7f0202bb
+			public const int PianoSheet_NewHymnal_es_390 = 2130838203;
+			
+			// aapt resource value: 0x7f0202bc
+			public const int PianoSheet_NewHymnal_es_391 = 2130838204;
+			
+			// aapt resource value: 0x7f0202bd
+			public const int PianoSheet_NewHymnal_es_392 = 2130838205;
+			
+			// aapt resource value: 0x7f0202be
+			public const int PianoSheet_NewHymnal_es_393 = 2130838206;
+			
+			// aapt resource value: 0x7f0202bf
+			public const int PianoSheet_NewHymnal_es_394 = 2130838207;
+			
+			// aapt resource value: 0x7f0202c0
+			public const int PianoSheet_NewHymnal_es_395 = 2130838208;
+			
+			// aapt resource value: 0x7f0202c1
+			public const int PianoSheet_NewHymnal_es_396 = 2130838209;
+			
+			// aapt resource value: 0x7f0202c2
+			public const int PianoSheet_NewHymnal_es_397 = 2130838210;
+			
+			// aapt resource value: 0x7f0202c3
+			public const int PianoSheet_NewHymnal_es_398 = 2130838211;
+			
+			// aapt resource value: 0x7f0202c4
+			public const int PianoSheet_NewHymnal_es_399 = 2130838212;
+			
+			// aapt resource value: 0x7f0202c5
+			public const int PianoSheet_NewHymnal_es_400 = 2130838213;
+			
+			// aapt resource value: 0x7f0202c6
+			public const int PianoSheet_NewHymnal_es_401 = 2130838214;
+			
+			// aapt resource value: 0x7f0202c7
+			public const int PianoSheet_NewHymnal_es_402 = 2130838215;
+			
+			// aapt resource value: 0x7f0202c8
+			public const int PianoSheet_NewHymnal_es_403 = 2130838216;
+			
+			// aapt resource value: 0x7f0202c9
+			public const int PianoSheet_NewHymnal_es_404 = 2130838217;
+			
+			// aapt resource value: 0x7f0202ca
+			public const int PianoSheet_NewHymnal_es_405 = 2130838218;
+			
+			// aapt resource value: 0x7f0202cb
+			public const int PianoSheet_NewHymnal_es_406 = 2130838219;
+			
+			// aapt resource value: 0x7f0202cc
+			public const int PianoSheet_NewHymnal_es_407 = 2130838220;
+			
+			// aapt resource value: 0x7f0202cd
+			public const int PianoSheet_NewHymnal_es_408 = 2130838221;
+			
+			// aapt resource value: 0x7f0202ce
+			public const int PianoSheet_NewHymnal_es_409 = 2130838222;
+			
+			// aapt resource value: 0x7f0202cf
+			public const int PianoSheet_NewHymnal_es_410 = 2130838223;
+			
+			// aapt resource value: 0x7f0202d0
+			public const int PianoSheet_NewHymnal_es_411 = 2130838224;
+			
+			// aapt resource value: 0x7f0202d1
+			public const int PianoSheet_NewHymnal_es_412 = 2130838225;
+			
+			// aapt resource value: 0x7f0202d2
+			public const int PianoSheet_NewHymnal_es_413 = 2130838226;
+			
+			// aapt resource value: 0x7f0202d3
+			public const int PianoSheet_NewHymnal_es_414 = 2130838227;
+			
+			// aapt resource value: 0x7f0202d4
+			public const int PianoSheet_NewHymnal_es_415 = 2130838228;
+			
+			// aapt resource value: 0x7f0202d5
+			public const int PianoSheet_NewHymnal_es_416 = 2130838229;
+			
+			// aapt resource value: 0x7f0202d6
+			public const int PianoSheet_NewHymnal_es_417 = 2130838230;
+			
+			// aapt resource value: 0x7f0202d7
+			public const int PianoSheet_NewHymnal_es_418 = 2130838231;
+			
+			// aapt resource value: 0x7f0202d8
+			public const int PianoSheet_NewHymnal_es_419 = 2130838232;
+			
+			// aapt resource value: 0x7f0202d9
+			public const int PianoSheet_NewHymnal_es_420 = 2130838233;
+			
+			// aapt resource value: 0x7f0202da
+			public const int PianoSheet_NewHymnal_es_421 = 2130838234;
+			
+			// aapt resource value: 0x7f0202db
+			public const int PianoSheet_NewHymnal_es_422 = 2130838235;
+			
+			// aapt resource value: 0x7f0202dc
+			public const int PianoSheet_NewHymnal_es_423 = 2130838236;
+			
+			// aapt resource value: 0x7f0202dd
+			public const int PianoSheet_NewHymnal_es_424 = 2130838237;
+			
+			// aapt resource value: 0x7f0202de
+			public const int PianoSheet_NewHymnal_es_425 = 2130838238;
+			
+			// aapt resource value: 0x7f0202df
+			public const int PianoSheet_NewHymnal_es_426 = 2130838239;
+			
+			// aapt resource value: 0x7f0202e0
+			public const int PianoSheet_NewHymnal_es_427 = 2130838240;
+			
+			// aapt resource value: 0x7f0202e1
+			public const int PianoSheet_NewHymnal_es_428 = 2130838241;
+			
+			// aapt resource value: 0x7f0202e2
+			public const int PianoSheet_NewHymnal_es_429 = 2130838242;
+			
+			// aapt resource value: 0x7f0202e3
+			public const int PianoSheet_NewHymnal_es_430 = 2130838243;
+			
+			// aapt resource value: 0x7f0202e4
+			public const int PianoSheet_NewHymnal_es_431 = 2130838244;
+			
+			// aapt resource value: 0x7f0202e5
+			public const int PianoSheet_NewHymnal_es_432 = 2130838245;
+			
+			// aapt resource value: 0x7f0202e6
+			public const int PianoSheet_NewHymnal_es_433 = 2130838246;
+			
+			// aapt resource value: 0x7f0202e7
+			public const int PianoSheet_NewHymnal_es_434 = 2130838247;
+			
+			// aapt resource value: 0x7f0202e8
+			public const int PianoSheet_NewHymnal_es_435 = 2130838248;
+			
+			// aapt resource value: 0x7f0202e9
+			public const int PianoSheet_NewHymnal_es_436 = 2130838249;
+			
+			// aapt resource value: 0x7f0202ea
+			public const int PianoSheet_NewHymnal_es_437 = 2130838250;
+			
+			// aapt resource value: 0x7f0202eb
+			public const int PianoSheet_NewHymnal_es_438 = 2130838251;
+			
+			// aapt resource value: 0x7f0202ec
+			public const int PianoSheet_NewHymnal_es_439 = 2130838252;
+			
+			// aapt resource value: 0x7f0202ed
+			public const int PianoSheet_NewHymnal_es_440 = 2130838253;
+			
+			// aapt resource value: 0x7f0202ee
+			public const int PianoSheet_NewHymnal_es_441 = 2130838254;
+			
+			// aapt resource value: 0x7f0202ef
+			public const int PianoSheet_NewHymnal_es_442 = 2130838255;
+			
+			// aapt resource value: 0x7f0202f0
+			public const int PianoSheet_NewHymnal_es_443 = 2130838256;
+			
+			// aapt resource value: 0x7f0202f1
+			public const int PianoSheet_NewHymnal_es_444 = 2130838257;
+			
+			// aapt resource value: 0x7f0202f2
+			public const int PianoSheet_NewHymnal_es_445 = 2130838258;
+			
+			// aapt resource value: 0x7f0202f3
+			public const int PianoSheet_NewHymnal_es_446 = 2130838259;
+			
+			// aapt resource value: 0x7f0202f4
+			public const int PianoSheet_NewHymnal_es_447 = 2130838260;
+			
+			// aapt resource value: 0x7f0202f5
+			public const int PianoSheet_NewHymnal_es_448 = 2130838261;
+			
+			// aapt resource value: 0x7f0202f6
+			public const int PianoSheet_NewHymnal_es_449 = 2130838262;
+			
+			// aapt resource value: 0x7f0202f7
+			public const int PianoSheet_NewHymnal_es_450 = 2130838263;
+			
+			// aapt resource value: 0x7f0202f8
+			public const int PianoSheet_NewHymnal_es_451 = 2130838264;
+			
+			// aapt resource value: 0x7f0202f9
+			public const int PianoSheet_NewHymnal_es_452 = 2130838265;
+			
+			// aapt resource value: 0x7f0202fa
+			public const int PianoSheet_NewHymnal_es_453 = 2130838266;
+			
+			// aapt resource value: 0x7f0202fb
+			public const int PianoSheet_NewHymnal_es_454 = 2130838267;
+			
+			// aapt resource value: 0x7f0202fc
+			public const int PianoSheet_NewHymnal_es_455 = 2130838268;
+			
+			// aapt resource value: 0x7f0202fd
+			public const int PianoSheet_NewHymnal_es_456 = 2130838269;
+			
+			// aapt resource value: 0x7f0202fe
+			public const int PianoSheet_NewHymnal_es_457 = 2130838270;
+			
+			// aapt resource value: 0x7f0202ff
+			public const int PianoSheet_NewHymnal_es_458 = 2130838271;
+			
+			// aapt resource value: 0x7f020300
+			public const int PianoSheet_NewHymnal_es_459 = 2130838272;
+			
+			// aapt resource value: 0x7f020301
+			public const int PianoSheet_NewHymnal_es_460 = 2130838273;
+			
+			// aapt resource value: 0x7f020302
+			public const int PianoSheet_NewHymnal_es_461 = 2130838274;
+			
+			// aapt resource value: 0x7f020303
+			public const int PianoSheet_NewHymnal_es_462 = 2130838275;
+			
+			// aapt resource value: 0x7f020304
+			public const int PianoSheet_NewHymnal_es_463 = 2130838276;
+			
+			// aapt resource value: 0x7f020305
+			public const int PianoSheet_NewHymnal_es_464 = 2130838277;
+			
+			// aapt resource value: 0x7f020306
+			public const int PianoSheet_NewHymnal_es_465 = 2130838278;
+			
+			// aapt resource value: 0x7f020307
+			public const int PianoSheet_NewHymnal_es_466 = 2130838279;
+			
+			// aapt resource value: 0x7f020308
+			public const int PianoSheet_NewHymnal_es_467 = 2130838280;
+			
+			// aapt resource value: 0x7f020309
+			public const int PianoSheet_NewHymnal_es_468 = 2130838281;
+			
+			// aapt resource value: 0x7f02030a
+			public const int PianoSheet_NewHymnal_es_469 = 2130838282;
+			
+			// aapt resource value: 0x7f02030b
+			public const int PianoSheet_NewHymnal_es_470 = 2130838283;
+			
+			// aapt resource value: 0x7f02030c
+			public const int PianoSheet_NewHymnal_es_471 = 2130838284;
+			
+			// aapt resource value: 0x7f02030d
+			public const int PianoSheet_NewHymnal_es_472 = 2130838285;
+			
+			// aapt resource value: 0x7f02030e
+			public const int PianoSheet_NewHymnal_es_473 = 2130838286;
+			
+			// aapt resource value: 0x7f02030f
+			public const int PianoSheet_NewHymnal_es_474 = 2130838287;
+			
+			// aapt resource value: 0x7f020310
+			public const int PianoSheet_NewHymnal_es_475 = 2130838288;
+			
+			// aapt resource value: 0x7f020311
+			public const int PianoSheet_NewHymnal_es_476 = 2130838289;
+			
+			// aapt resource value: 0x7f020312
+			public const int PianoSheet_NewHymnal_es_477 = 2130838290;
+			
+			// aapt resource value: 0x7f020313
+			public const int PianoSheet_NewHymnal_es_478 = 2130838291;
+			
+			// aapt resource value: 0x7f020314
+			public const int PianoSheet_NewHymnal_es_479 = 2130838292;
+			
+			// aapt resource value: 0x7f020315
+			public const int PianoSheet_NewHymnal_es_480 = 2130838293;
+			
+			// aapt resource value: 0x7f020316
+			public const int PianoSheet_NewHymnal_es_481 = 2130838294;
+			
+			// aapt resource value: 0x7f020317
+			public const int PianoSheet_NewHymnal_es_482 = 2130838295;
+			
+			// aapt resource value: 0x7f020318
+			public const int PianoSheet_NewHymnal_es_483 = 2130838296;
+			
+			// aapt resource value: 0x7f020319
+			public const int PianoSheet_NewHymnal_es_484 = 2130838297;
+			
+			// aapt resource value: 0x7f02031a
+			public const int PianoSheet_NewHymnal_es_485 = 2130838298;
+			
+			// aapt resource value: 0x7f02031b
+			public const int PianoSheet_NewHymnal_es_486 = 2130838299;
+			
+			// aapt resource value: 0x7f02031c
+			public const int PianoSheet_NewHymnal_es_487 = 2130838300;
+			
+			// aapt resource value: 0x7f02031d
+			public const int PianoSheet_NewHymnal_es_488 = 2130838301;
+			
+			// aapt resource value: 0x7f02031e
+			public const int PianoSheet_NewHymnal_es_489 = 2130838302;
+			
+			// aapt resource value: 0x7f02031f
+			public const int PianoSheet_NewHymnal_es_490 = 2130838303;
+			
+			// aapt resource value: 0x7f020320
+			public const int PianoSheet_NewHymnal_es_491 = 2130838304;
+			
+			// aapt resource value: 0x7f020321
+			public const int PianoSheet_NewHymnal_es_492 = 2130838305;
+			
+			// aapt resource value: 0x7f020322
+			public const int PianoSheet_NewHymnal_es_493 = 2130838306;
+			
+			// aapt resource value: 0x7f020323
+			public const int PianoSheet_NewHymnal_es_494 = 2130838307;
+			
+			// aapt resource value: 0x7f020324
+			public const int PianoSheet_NewHymnal_es_495 = 2130838308;
+			
+			// aapt resource value: 0x7f020325
+			public const int PianoSheet_NewHymnal_es_496 = 2130838309;
+			
+			// aapt resource value: 0x7f020326
+			public const int PianoSheet_NewHymnal_es_497 = 2130838310;
+			
+			// aapt resource value: 0x7f020327
+			public const int PianoSheet_NewHymnal_es_498 = 2130838311;
+			
+			// aapt resource value: 0x7f020328
+			public const int PianoSheet_NewHymnal_es_499 = 2130838312;
+			
+			// aapt resource value: 0x7f020329
+			public const int PianoSheet_NewHymnal_es_500 = 2130838313;
+			
+			// aapt resource value: 0x7f02032a
+			public const int PianoSheet_NewHymnal_es_501 = 2130838314;
+			
+			// aapt resource value: 0x7f02032b
+			public const int PianoSheet_NewHymnal_es_502 = 2130838315;
+			
+			// aapt resource value: 0x7f02032c
+			public const int PianoSheet_NewHymnal_es_503 = 2130838316;
+			
+			// aapt resource value: 0x7f02032d
+			public const int PianoSheet_NewHymnal_es_504 = 2130838317;
+			
+			// aapt resource value: 0x7f02032e
+			public const int PianoSheet_NewHymnal_es_505 = 2130838318;
+			
+			// aapt resource value: 0x7f02032f
+			public const int PianoSheet_NewHymnal_es_506 = 2130838319;
+			
+			// aapt resource value: 0x7f020330
+			public const int PianoSheet_NewHymnal_es_507 = 2130838320;
+			
+			// aapt resource value: 0x7f020331
+			public const int PianoSheet_NewHymnal_es_508 = 2130838321;
+			
+			// aapt resource value: 0x7f020332
+			public const int PianoSheet_NewHymnal_es_509 = 2130838322;
+			
+			// aapt resource value: 0x7f020333
+			public const int PianoSheet_NewHymnal_es_510 = 2130838323;
+			
+			// aapt resource value: 0x7f020334
+			public const int PianoSheet_NewHymnal_es_511 = 2130838324;
+			
+			// aapt resource value: 0x7f020335
+			public const int PianoSheet_NewHymnal_es_512 = 2130838325;
+			
+			// aapt resource value: 0x7f020336
+			public const int PianoSheet_NewHymnal_es_513 = 2130838326;
+			
+			// aapt resource value: 0x7f020337
+			public const int PianoSheet_NewHymnal_es_514 = 2130838327;
+			
+			// aapt resource value: 0x7f020338
+			public const int PianoSheet_NewHymnal_es_515 = 2130838328;
+			
+			// aapt resource value: 0x7f020339
+			public const int PianoSheet_NewHymnal_es_516 = 2130838329;
+			
+			// aapt resource value: 0x7f02033a
+			public const int PianoSheet_NewHymnal_es_517 = 2130838330;
+			
+			// aapt resource value: 0x7f02033b
+			public const int PianoSheet_NewHymnal_es_518 = 2130838331;
+			
+			// aapt resource value: 0x7f02033c
+			public const int PianoSheet_NewHymnal_es_519 = 2130838332;
+			
+			// aapt resource value: 0x7f02033d
+			public const int PianoSheet_NewHymnal_es_520 = 2130838333;
+			
+			// aapt resource value: 0x7f02033e
+			public const int PianoSheet_NewHymnal_es_521 = 2130838334;
+			
+			// aapt resource value: 0x7f02033f
+			public const int PianoSheet_NewHymnal_es_522 = 2130838335;
+			
+			// aapt resource value: 0x7f020340
+			public const int PianoSheet_NewHymnal_es_523 = 2130838336;
+			
+			// aapt resource value: 0x7f020341
+			public const int PianoSheet_NewHymnal_es_524 = 2130838337;
+			
+			// aapt resource value: 0x7f020342
+			public const int PianoSheet_NewHymnal_es_525 = 2130838338;
+			
+			// aapt resource value: 0x7f020343
+			public const int PianoSheet_NewHymnal_es_526 = 2130838339;
+			
+			// aapt resource value: 0x7f020344
+			public const int PianoSheet_NewHymnal_es_527 = 2130838340;
+			
+			// aapt resource value: 0x7f020345
+			public const int PianoSheet_NewHymnal_es_528 = 2130838341;
+			
+			// aapt resource value: 0x7f020346
+			public const int PianoSheet_NewHymnal_es_529 = 2130838342;
+			
+			// aapt resource value: 0x7f020347
+			public const int PianoSheet_NewHymnal_es_530 = 2130838343;
+			
+			// aapt resource value: 0x7f020348
+			public const int PianoSheet_NewHymnal_es_531 = 2130838344;
+			
+			// aapt resource value: 0x7f020349
+			public const int PianoSheet_NewHymnal_es_532 = 2130838345;
+			
+			// aapt resource value: 0x7f02034a
+			public const int PianoSheet_NewHymnal_es_533 = 2130838346;
+			
+			// aapt resource value: 0x7f02034b
+			public const int PianoSheet_NewHymnal_es_534 = 2130838347;
+			
+			// aapt resource value: 0x7f02034c
+			public const int PianoSheet_NewHymnal_es_535 = 2130838348;
+			
+			// aapt resource value: 0x7f02034d
+			public const int PianoSheet_NewHymnal_es_536 = 2130838349;
+			
+			// aapt resource value: 0x7f02034e
+			public const int PianoSheet_NewHymnal_es_537 = 2130838350;
+			
+			// aapt resource value: 0x7f02034f
+			public const int PianoSheet_NewHymnal_es_538 = 2130838351;
+			
+			// aapt resource value: 0x7f020350
+			public const int PianoSheet_NewHymnal_es_539 = 2130838352;
+			
+			// aapt resource value: 0x7f020351
+			public const int PianoSheet_NewHymnal_es_540 = 2130838353;
+			
+			// aapt resource value: 0x7f020352
+			public const int PianoSheet_NewHymnal_es_541 = 2130838354;
+			
+			// aapt resource value: 0x7f020353
+			public const int PianoSheet_NewHymnal_es_542 = 2130838355;
+			
+			// aapt resource value: 0x7f020354
+			public const int PianoSheet_NewHymnal_es_543 = 2130838356;
+			
+			// aapt resource value: 0x7f020355
+			public const int PianoSheet_NewHymnal_es_544 = 2130838357;
+			
+			// aapt resource value: 0x7f020356
+			public const int PianoSheet_NewHymnal_es_545 = 2130838358;
+			
+			// aapt resource value: 0x7f020357
+			public const int PianoSheet_NewHymnal_es_546 = 2130838359;
+			
+			// aapt resource value: 0x7f020358
+			public const int PianoSheet_NewHymnal_es_547 = 2130838360;
+			
+			// aapt resource value: 0x7f020359
+			public const int PianoSheet_NewHymnal_es_548 = 2130838361;
+			
+			// aapt resource value: 0x7f02035a
+			public const int PianoSheet_NewHymnal_es_549 = 2130838362;
+			
+			// aapt resource value: 0x7f02035b
+			public const int PianoSheet_NewHymnal_es_550 = 2130838363;
+			
+			// aapt resource value: 0x7f02035c
+			public const int PianoSheet_NewHymnal_es_551 = 2130838364;
+			
+			// aapt resource value: 0x7f02035d
+			public const int PianoSheet_NewHymnal_es_552 = 2130838365;
+			
+			// aapt resource value: 0x7f02035e
+			public const int PianoSheet_NewHymnal_es_553 = 2130838366;
+			
+			// aapt resource value: 0x7f02035f
+			public const int PianoSheet_NewHymnal_es_554 = 2130838367;
+			
+			// aapt resource value: 0x7f020360
+			public const int PianoSheet_NewHymnal_es_555 = 2130838368;
+			
+			// aapt resource value: 0x7f020361
+			public const int PianoSheet_NewHymnal_es_556 = 2130838369;
+			
+			// aapt resource value: 0x7f020362
+			public const int PianoSheet_NewHymnal_es_557 = 2130838370;
+			
+			// aapt resource value: 0x7f020363
+			public const int PianoSheet_NewHymnal_es_558 = 2130838371;
+			
+			// aapt resource value: 0x7f020364
+			public const int PianoSheet_NewHymnal_es_559 = 2130838372;
+			
+			// aapt resource value: 0x7f020365
+			public const int PianoSheet_NewHymnal_es_560 = 2130838373;
+			
+			// aapt resource value: 0x7f020366
+			public const int PianoSheet_NewHymnal_es_561 = 2130838374;
+			
+			// aapt resource value: 0x7f020367
+			public const int PianoSheet_NewHymnal_es_562 = 2130838375;
+			
+			// aapt resource value: 0x7f020368
+			public const int PianoSheet_NewHymnal_es_563 = 2130838376;
+			
+			// aapt resource value: 0x7f020369
+			public const int PianoSheet_NewHymnal_es_564 = 2130838377;
+			
+			// aapt resource value: 0x7f02036a
+			public const int PianoSheet_NewHymnal_es_565 = 2130838378;
+			
+			// aapt resource value: 0x7f02036b
+			public const int PianoSheet_NewHymnal_es_566 = 2130838379;
+			
+			// aapt resource value: 0x7f02036c
+			public const int PianoSheet_NewHymnal_es_567 = 2130838380;
+			
+			// aapt resource value: 0x7f02036d
+			public const int PianoSheet_NewHymnal_es_568 = 2130838381;
+			
+			// aapt resource value: 0x7f02036e
+			public const int PianoSheet_NewHymnal_es_569 = 2130838382;
+			
+			// aapt resource value: 0x7f02036f
+			public const int PianoSheet_NewHymnal_es_570 = 2130838383;
+			
+			// aapt resource value: 0x7f020370
+			public const int PianoSheet_NewHymnal_es_571 = 2130838384;
+			
+			// aapt resource value: 0x7f020371
+			public const int PianoSheet_NewHymnal_es_572 = 2130838385;
+			
+			// aapt resource value: 0x7f020372
+			public const int PianoSheet_NewHymnal_es_573 = 2130838386;
+			
+			// aapt resource value: 0x7f020373
+			public const int PianoSheet_NewHymnal_es_574 = 2130838387;
+			
+			// aapt resource value: 0x7f020374
+			public const int PianoSheet_NewHymnal_es_575 = 2130838388;
+			
+			// aapt resource value: 0x7f020375
+			public const int PianoSheet_NewHymnal_es_576 = 2130838389;
+			
+			// aapt resource value: 0x7f020376
+			public const int PianoSheet_NewHymnal_es_577 = 2130838390;
+			
+			// aapt resource value: 0x7f020377
+			public const int PianoSheet_NewHymnal_es_578 = 2130838391;
+			
+			// aapt resource value: 0x7f020378
+			public const int PianoSheet_NewHymnal_es_579 = 2130838392;
+			
+			// aapt resource value: 0x7f020379
+			public const int PianoSheet_NewHymnal_es_580 = 2130838393;
+			
+			// aapt resource value: 0x7f02037a
+			public const int PianoSheet_NewHymnal_es_581 = 2130838394;
+			
+			// aapt resource value: 0x7f02037b
+			public const int PianoSheet_NewHymnal_es_582 = 2130838395;
+			
+			// aapt resource value: 0x7f02037c
+			public const int PianoSheet_NewHymnal_es_583 = 2130838396;
+			
+			// aapt resource value: 0x7f02037d
+			public const int PianoSheet_NewHymnal_es_584 = 2130838397;
+			
+			// aapt resource value: 0x7f02037e
+			public const int PianoSheet_NewHymnal_es_585 = 2130838398;
+			
+			// aapt resource value: 0x7f02037f
+			public const int PianoSheet_NewHymnal_es_586 = 2130838399;
+			
+			// aapt resource value: 0x7f020380
+			public const int PianoSheet_NewHymnal_es_587 = 2130838400;
+			
+			// aapt resource value: 0x7f020381
+			public const int PianoSheet_NewHymnal_es_588 = 2130838401;
+			
+			// aapt resource value: 0x7f020382
+			public const int PianoSheet_NewHymnal_es_589 = 2130838402;
+			
+			// aapt resource value: 0x7f020383
+			public const int PianoSheet_NewHymnal_es_590 = 2130838403;
+			
+			// aapt resource value: 0x7f020384
+			public const int PianoSheet_NewHymnal_es_591 = 2130838404;
+			
+			// aapt resource value: 0x7f020385
+			public const int PianoSheet_NewHymnal_es_592 = 2130838405;
+			
+			// aapt resource value: 0x7f020386
+			public const int PianoSheet_NewHymnal_es_593 = 2130838406;
+			
+			// aapt resource value: 0x7f020387
+			public const int PianoSheet_NewHymnal_es_594 = 2130838407;
+			
+			// aapt resource value: 0x7f020388
+			public const int PianoSheet_NewHymnal_es_595 = 2130838408;
+			
+			// aapt resource value: 0x7f020389
+			public const int PianoSheet_NewHymnal_es_596 = 2130838409;
+			
+			// aapt resource value: 0x7f02038a
+			public const int PianoSheet_NewHymnal_es_597 = 2130838410;
+			
+			// aapt resource value: 0x7f02038b
+			public const int PianoSheet_NewHymnal_es_598 = 2130838411;
+			
+			// aapt resource value: 0x7f02038c
+			public const int PianoSheet_NewHymnal_es_599 = 2130838412;
+			
+			// aapt resource value: 0x7f02038d
+			public const int PianoSheet_NewHymnal_es_600 = 2130838413;
+			
+			// aapt resource value: 0x7f02038e
+			public const int PianoSheet_NewHymnal_es_601 = 2130838414;
+			
+			// aapt resource value: 0x7f02038f
+			public const int PianoSheet_NewHymnal_es_602 = 2130838415;
+			
+			// aapt resource value: 0x7f020390
+			public const int PianoSheet_NewHymnal_es_603 = 2130838416;
+			
+			// aapt resource value: 0x7f020391
+			public const int PianoSheet_NewHymnal_es_604 = 2130838417;
+			
+			// aapt resource value: 0x7f020392
+			public const int PianoSheet_NewHymnal_es_605 = 2130838418;
+			
+			// aapt resource value: 0x7f020393
+			public const int PianoSheet_NewHymnal_es_606 = 2130838419;
+			
+			// aapt resource value: 0x7f020394
+			public const int PianoSheet_NewHymnal_es_607 = 2130838420;
+			
+			// aapt resource value: 0x7f020395
+			public const int PianoSheet_NewHymnal_es_608 = 2130838421;
+			
+			// aapt resource value: 0x7f020396
+			public const int PianoSheet_NewHymnal_es_609 = 2130838422;
+			
+			// aapt resource value: 0x7f020397
+			public const int PianoSheet_NewHymnal_es_610 = 2130838423;
+			
+			// aapt resource value: 0x7f020398
+			public const int PianoSheet_NewHymnal_es_611 = 2130838424;
+			
+			// aapt resource value: 0x7f020399
+			public const int PianoSheet_NewHymnal_es_612 = 2130838425;
+			
+			// aapt resource value: 0x7f02039a
+			public const int PianoSheet_NewHymnal_es_613 = 2130838426;
+			
+			// aapt resource value: 0x7f02039b
+			public const int PianoSheet_NewHymnal_es_614 = 2130838427;
+			
+			// aapt resource value: 0x7f02039c
+			public const int PianoSheet_NewHymnal_ru_001 = 2130838428;
+			
+			// aapt resource value: 0x7f02039d
+			public const int PianoSheet_NewHymnal_ru_002 = 2130838429;
+			
+			// aapt resource value: 0x7f02039e
+			public const int PianoSheet_NewHymnal_ru_002_1 = 2130838430;
+			
+			// aapt resource value: 0x7f02039f
+			public const int PianoSheet_NewHymnal_ru_003 = 2130838431;
+			
+			// aapt resource value: 0x7f0203a0
+			public const int PianoSheet_NewHymnal_ru_004 = 2130838432;
+			
+			// aapt resource value: 0x7f0203a1
+			public const int PianoSheet_NewHymnal_ru_005 = 2130838433;
+			
+			// aapt resource value: 0x7f0203a2
+			public const int PianoSheet_NewHymnal_ru_006 = 2130838434;
+			
+			// aapt resource value: 0x7f0203a3
+			public const int PianoSheet_NewHymnal_ru_007 = 2130838435;
+			
+			// aapt resource value: 0x7f0203a4
+			public const int PianoSheet_NewHymnal_ru_008 = 2130838436;
+			
+			// aapt resource value: 0x7f0203a5
+			public const int PianoSheet_NewHymnal_ru_009 = 2130838437;
+			
+			// aapt resource value: 0x7f0203a6
+			public const int PianoSheet_NewHymnal_ru_009_1 = 2130838438;
+			
+			// aapt resource value: 0x7f0203a7
+			public const int PianoSheet_NewHymnal_ru_010 = 2130838439;
+			
+			// aapt resource value: 0x7f0203a8
+			public const int PianoSheet_NewHymnal_ru_011 = 2130838440;
+			
+			// aapt resource value: 0x7f0203a9
+			public const int PianoSheet_NewHymnal_ru_012 = 2130838441;
+			
+			// aapt resource value: 0x7f0203aa
+			public const int PianoSheet_NewHymnal_ru_013 = 2130838442;
+			
+			// aapt resource value: 0x7f0203ab
+			public const int PianoSheet_NewHymnal_ru_014 = 2130838443;
+			
+			// aapt resource value: 0x7f0203ac
+			public const int PianoSheet_NewHymnal_ru_014_1 = 2130838444;
+			
+			// aapt resource value: 0x7f0203ad
+			public const int PianoSheet_NewHymnal_ru_015 = 2130838445;
+			
+			// aapt resource value: 0x7f0203ae
+			public const int PianoSheet_NewHymnal_ru_016 = 2130838446;
+			
+			// aapt resource value: 0x7f0203af
+			public const int PianoSheet_NewHymnal_ru_017 = 2130838447;
+			
+			// aapt resource value: 0x7f0203b0
+			public const int PianoSheet_NewHymnal_ru_018 = 2130838448;
+			
+			// aapt resource value: 0x7f0203b1
+			public const int PianoSheet_NewHymnal_ru_019 = 2130838449;
+			
+			// aapt resource value: 0x7f0203b2
+			public const int PianoSheet_NewHymnal_ru_020 = 2130838450;
+			
+			// aapt resource value: 0x7f0203b3
+			public const int PianoSheet_NewHymnal_ru_020_1 = 2130838451;
+			
+			// aapt resource value: 0x7f0203b4
+			public const int PianoSheet_NewHymnal_ru_021 = 2130838452;
+			
+			// aapt resource value: 0x7f0203b5
+			public const int PianoSheet_NewHymnal_ru_021_1 = 2130838453;
+			
+			// aapt resource value: 0x7f0203b6
+			public const int PianoSheet_NewHymnal_ru_022 = 2130838454;
+			
+			// aapt resource value: 0x7f0203b7
+			public const int PianoSheet_NewHymnal_ru_022_1 = 2130838455;
+			
+			// aapt resource value: 0x7f0203b8
+			public const int PianoSheet_NewHymnal_ru_023 = 2130838456;
+			
+			// aapt resource value: 0x7f0203b9
+			public const int PianoSheet_NewHymnal_ru_024 = 2130838457;
+			
+			// aapt resource value: 0x7f0203ba
+			public const int PianoSheet_NewHymnal_ru_024_1 = 2130838458;
+			
+			// aapt resource value: 0x7f0203bb
+			public const int PianoSheet_NewHymnal_ru_025 = 2130838459;
+			
+			// aapt resource value: 0x7f0203bc
+			public const int PianoSheet_NewHymnal_ru_026 = 2130838460;
+			
+			// aapt resource value: 0x7f0203bd
+			public const int PianoSheet_NewHymnal_ru_027 = 2130838461;
+			
+			// aapt resource value: 0x7f0203be
+			public const int PianoSheet_NewHymnal_ru_027_1 = 2130838462;
+			
+			// aapt resource value: 0x7f0203bf
+			public const int PianoSheet_NewHymnal_ru_028 = 2130838463;
+			
+			// aapt resource value: 0x7f0203c0
+			public const int PianoSheet_NewHymnal_ru_029 = 2130838464;
+			
+			// aapt resource value: 0x7f0203c1
+			public const int PianoSheet_NewHymnal_ru_030 = 2130838465;
+			
+			// aapt resource value: 0x7f0203c2
+			public const int PianoSheet_NewHymnal_ru_030_1 = 2130838466;
+			
+			// aapt resource value: 0x7f0203c3
+			public const int PianoSheet_NewHymnal_ru_031 = 2130838467;
+			
+			// aapt resource value: 0x7f0203c4
+			public const int PianoSheet_NewHymnal_ru_032 = 2130838468;
+			
+			// aapt resource value: 0x7f0203c5
+			public const int PianoSheet_NewHymnal_ru_033 = 2130838469;
+			
+			// aapt resource value: 0x7f0203c6
+			public const int PianoSheet_NewHymnal_ru_033_1 = 2130838470;
+			
+			// aapt resource value: 0x7f0203c7
+			public const int PianoSheet_NewHymnal_ru_034 = 2130838471;
+			
+			// aapt resource value: 0x7f0203c8
+			public const int PianoSheet_NewHymnal_ru_034_1 = 2130838472;
+			
+			// aapt resource value: 0x7f0203c9
+			public const int PianoSheet_NewHymnal_ru_035 = 2130838473;
+			
+			// aapt resource value: 0x7f0203ca
+			public const int PianoSheet_NewHymnal_ru_036 = 2130838474;
+			
+			// aapt resource value: 0x7f0203cb
+			public const int PianoSheet_NewHymnal_ru_037 = 2130838475;
+			
+			// aapt resource value: 0x7f0203cc
+			public const int PianoSheet_NewHymnal_ru_038 = 2130838476;
+			
+			// aapt resource value: 0x7f0203cd
+			public const int PianoSheet_NewHymnal_ru_039 = 2130838477;
+			
+			// aapt resource value: 0x7f0203ce
+			public const int PianoSheet_NewHymnal_ru_039_1 = 2130838478;
+			
+			// aapt resource value: 0x7f0203cf
+			public const int PianoSheet_NewHymnal_ru_040 = 2130838479;
+			
+			// aapt resource value: 0x7f0203d0
+			public const int PianoSheet_NewHymnal_ru_041 = 2130838480;
+			
+			// aapt resource value: 0x7f0203d1
+			public const int PianoSheet_NewHymnal_ru_042 = 2130838481;
+			
+			// aapt resource value: 0x7f0203d2
+			public const int PianoSheet_NewHymnal_ru_042_1 = 2130838482;
+			
+			// aapt resource value: 0x7f0203d3
+			public const int PianoSheet_NewHymnal_ru_043 = 2130838483;
+			
+			// aapt resource value: 0x7f0203d4
+			public const int PianoSheet_NewHymnal_ru_044 = 2130838484;
+			
+			// aapt resource value: 0x7f0203d5
+			public const int PianoSheet_NewHymnal_ru_045 = 2130838485;
+			
+			// aapt resource value: 0x7f0203d6
+			public const int PianoSheet_NewHymnal_ru_045_1 = 2130838486;
+			
+			// aapt resource value: 0x7f0203d7
+			public const int PianoSheet_NewHymnal_ru_046 = 2130838487;
+			
+			// aapt resource value: 0x7f0203d8
+			public const int PianoSheet_NewHymnal_ru_046_1 = 2130838488;
+			
+			// aapt resource value: 0x7f0203d9
+			public const int PianoSheet_NewHymnal_ru_047 = 2130838489;
+			
+			// aapt resource value: 0x7f0203da
+			public const int PianoSheet_NewHymnal_ru_048 = 2130838490;
+			
+			// aapt resource value: 0x7f0203db
+			public const int PianoSheet_NewHymnal_ru_049 = 2130838491;
+			
+			// aapt resource value: 0x7f0203dc
+			public const int PianoSheet_NewHymnal_ru_050 = 2130838492;
+			
+			// aapt resource value: 0x7f0203dd
+			public const int PianoSheet_NewHymnal_ru_051 = 2130838493;
+			
+			// aapt resource value: 0x7f0203de
+			public const int PianoSheet_NewHymnal_ru_051_1 = 2130838494;
+			
+			// aapt resource value: 0x7f0203df
+			public const int PianoSheet_NewHymnal_ru_052 = 2130838495;
+			
+			// aapt resource value: 0x7f0203e0
+			public const int PianoSheet_NewHymnal_ru_052_1 = 2130838496;
+			
+			// aapt resource value: 0x7f0203e1
+			public const int PianoSheet_NewHymnal_ru_053 = 2130838497;
+			
+			// aapt resource value: 0x7f0203e2
+			public const int PianoSheet_NewHymnal_ru_054 = 2130838498;
+			
+			// aapt resource value: 0x7f0203e3
+			public const int PianoSheet_NewHymnal_ru_055 = 2130838499;
+			
+			// aapt resource value: 0x7f0203e4
+			public const int PianoSheet_NewHymnal_ru_056 = 2130838500;
+			
+			// aapt resource value: 0x7f0203e5
+			public const int PianoSheet_NewHymnal_ru_056_1 = 2130838501;
+			
+			// aapt resource value: 0x7f0203e6
+			public const int PianoSheet_NewHymnal_ru_057 = 2130838502;
+			
+			// aapt resource value: 0x7f0203e7
+			public const int PianoSheet_NewHymnal_ru_057_1 = 2130838503;
+			
+			// aapt resource value: 0x7f0203e8
+			public const int PianoSheet_NewHymnal_ru_058 = 2130838504;
+			
+			// aapt resource value: 0x7f0203e9
+			public const int PianoSheet_NewHymnal_ru_058_1 = 2130838505;
+			
+			// aapt resource value: 0x7f0203ea
+			public const int PianoSheet_NewHymnal_ru_059 = 2130838506;
+			
+			// aapt resource value: 0x7f0203eb
+			public const int PianoSheet_NewHymnal_ru_060 = 2130838507;
+			
+			// aapt resource value: 0x7f0203ec
+			public const int PianoSheet_NewHymnal_ru_061 = 2130838508;
+			
+			// aapt resource value: 0x7f0203ed
+			public const int PianoSheet_NewHymnal_ru_061_1 = 2130838509;
+			
+			// aapt resource value: 0x7f0203ee
+			public const int PianoSheet_NewHymnal_ru_062 = 2130838510;
+			
+			// aapt resource value: 0x7f0203ef
+			public const int PianoSheet_NewHymnal_ru_062_1 = 2130838511;
+			
+			// aapt resource value: 0x7f0203f0
+			public const int PianoSheet_NewHymnal_ru_063 = 2130838512;
+			
+			// aapt resource value: 0x7f0203f1
+			public const int PianoSheet_NewHymnal_ru_063_1 = 2130838513;
+			
+			// aapt resource value: 0x7f0203f2
+			public const int PianoSheet_NewHymnal_ru_064 = 2130838514;
+			
+			// aapt resource value: 0x7f0203f3
+			public const int PianoSheet_NewHymnal_ru_064_1 = 2130838515;
+			
+			// aapt resource value: 0x7f0203f4
+			public const int PianoSheet_NewHymnal_ru_065 = 2130838516;
+			
+			// aapt resource value: 0x7f0203f5
+			public const int PianoSheet_NewHymnal_ru_066 = 2130838517;
+			
+			// aapt resource value: 0x7f0203f6
+			public const int PianoSheet_NewHymnal_ru_067 = 2130838518;
+			
+			// aapt resource value: 0x7f0203f7
+			public const int PianoSheet_NewHymnal_ru_067_1 = 2130838519;
+			
+			// aapt resource value: 0x7f0203f8
+			public const int PianoSheet_NewHymnal_ru_068 = 2130838520;
+			
+			// aapt resource value: 0x7f0203f9
+			public const int PianoSheet_NewHymnal_ru_068_1 = 2130838521;
+			
+			// aapt resource value: 0x7f0203fa
+			public const int PianoSheet_NewHymnal_ru_069 = 2130838522;
+			
+			// aapt resource value: 0x7f0203fb
+			public const int PianoSheet_NewHymnal_ru_069_1 = 2130838523;
+			
+			// aapt resource value: 0x7f0203fc
+			public const int PianoSheet_NewHymnal_ru_070 = 2130838524;
+			
+			// aapt resource value: 0x7f0203fd
+			public const int PianoSheet_NewHymnal_ru_070_1 = 2130838525;
+			
+			// aapt resource value: 0x7f0203fe
+			public const int PianoSheet_NewHymnal_ru_071 = 2130838526;
+			
+			// aapt resource value: 0x7f0203ff
+			public const int PianoSheet_NewHymnal_ru_072 = 2130838527;
+			
+			// aapt resource value: 0x7f020400
+			public const int PianoSheet_NewHymnal_ru_073 = 2130838528;
+			
+			// aapt resource value: 0x7f020401
+			public const int PianoSheet_NewHymnal_ru_074 = 2130838529;
+			
+			// aapt resource value: 0x7f020402
+			public const int PianoSheet_NewHymnal_ru_075 = 2130838530;
+			
+			// aapt resource value: 0x7f020403
+			public const int PianoSheet_NewHymnal_ru_076 = 2130838531;
+			
+			// aapt resource value: 0x7f020404
+			public const int PianoSheet_NewHymnal_ru_076_1 = 2130838532;
+			
+			// aapt resource value: 0x7f020405
+			public const int PianoSheet_NewHymnal_ru_077 = 2130838533;
+			
+			// aapt resource value: 0x7f020406
+			public const int PianoSheet_NewHymnal_ru_078 = 2130838534;
+			
+			// aapt resource value: 0x7f020407
+			public const int PianoSheet_NewHymnal_ru_079 = 2130838535;
+			
+			// aapt resource value: 0x7f020408
+			public const int PianoSheet_NewHymnal_ru_080 = 2130838536;
+			
+			// aapt resource value: 0x7f020409
+			public const int PianoSheet_NewHymnal_ru_081 = 2130838537;
+			
+			// aapt resource value: 0x7f02040a
+			public const int PianoSheet_NewHymnal_ru_081_1 = 2130838538;
+			
+			// aapt resource value: 0x7f02040b
+			public const int PianoSheet_NewHymnal_ru_082 = 2130838539;
+			
+			// aapt resource value: 0x7f02040c
+			public const int PianoSheet_NewHymnal_ru_083 = 2130838540;
+			
+			// aapt resource value: 0x7f02040d
+			public const int PianoSheet_NewHymnal_ru_084 = 2130838541;
+			
+			// aapt resource value: 0x7f02040e
+			public const int PianoSheet_NewHymnal_ru_085 = 2130838542;
+			
+			// aapt resource value: 0x7f02040f
+			public const int PianoSheet_NewHymnal_ru_086 = 2130838543;
+			
+			// aapt resource value: 0x7f020410
+			public const int PianoSheet_NewHymnal_ru_087 = 2130838544;
+			
+			// aapt resource value: 0x7f020411
+			public const int PianoSheet_NewHymnal_ru_088 = 2130838545;
+			
+			// aapt resource value: 0x7f020412
+			public const int PianoSheet_NewHymnal_ru_089 = 2130838546;
+			
+			// aapt resource value: 0x7f020413
+			public const int PianoSheet_NewHymnal_ru_090 = 2130838547;
+			
+			// aapt resource value: 0x7f020414
+			public const int PianoSheet_NewHymnal_ru_091 = 2130838548;
+			
+			// aapt resource value: 0x7f020415
+			public const int PianoSheet_NewHymnal_ru_092 = 2130838549;
+			
+			// aapt resource value: 0x7f020416
+			public const int PianoSheet_NewHymnal_ru_093 = 2130838550;
+			
+			// aapt resource value: 0x7f020417
+			public const int PianoSheet_NewHymnal_ru_094 = 2130838551;
+			
+			// aapt resource value: 0x7f020418
+			public const int PianoSheet_NewHymnal_ru_095 = 2130838552;
+			
+			// aapt resource value: 0x7f020419
+			public const int PianoSheet_NewHymnal_ru_096 = 2130838553;
+			
+			// aapt resource value: 0x7f02041a
+			public const int PianoSheet_NewHymnal_ru_097 = 2130838554;
+			
+			// aapt resource value: 0x7f02041b
+			public const int PianoSheet_NewHymnal_ru_097_1 = 2130838555;
+			
+			// aapt resource value: 0x7f02041c
+			public const int PianoSheet_NewHymnal_ru_098 = 2130838556;
+			
+			// aapt resource value: 0x7f02041d
+			public const int PianoSheet_NewHymnal_ru_099 = 2130838557;
+			
+			// aapt resource value: 0x7f02041e
+			public const int PianoSheet_NewHymnal_ru_100 = 2130838558;
+			
+			// aapt resource value: 0x7f02041f
+			public const int PianoSheet_NewHymnal_ru_100_1 = 2130838559;
+			
+			// aapt resource value: 0x7f020420
+			public const int PianoSheet_NewHymnal_ru_101 = 2130838560;
+			
+			// aapt resource value: 0x7f020421
+			public const int PianoSheet_NewHymnal_ru_101_1 = 2130838561;
+			
+			// aapt resource value: 0x7f020422
+			public const int PianoSheet_NewHymnal_ru_102 = 2130838562;
+			
+			// aapt resource value: 0x7f020423
+			public const int PianoSheet_NewHymnal_ru_103 = 2130838563;
+			
+			// aapt resource value: 0x7f020424
+			public const int PianoSheet_NewHymnal_ru_104 = 2130838564;
+			
+			// aapt resource value: 0x7f020425
+			public const int PianoSheet_NewHymnal_ru_105 = 2130838565;
+			
+			// aapt resource value: 0x7f020426
+			public const int PianoSheet_NewHymnal_ru_106 = 2130838566;
+			
+			// aapt resource value: 0x7f020427
+			public const int PianoSheet_NewHymnal_ru_107 = 2130838567;
+			
+			// aapt resource value: 0x7f020428
+			public const int PianoSheet_NewHymnal_ru_108 = 2130838568;
+			
+			// aapt resource value: 0x7f020429
+			public const int PianoSheet_NewHymnal_ru_109 = 2130838569;
+			
+			// aapt resource value: 0x7f02042a
+			public const int PianoSheet_NewHymnal_ru_110 = 2130838570;
+			
+			// aapt resource value: 0x7f02042b
+			public const int PianoSheet_NewHymnal_ru_110_1 = 2130838571;
+			
+			// aapt resource value: 0x7f02042c
+			public const int PianoSheet_NewHymnal_ru_111 = 2130838572;
+			
+			// aapt resource value: 0x7f02042d
+			public const int PianoSheet_NewHymnal_ru_112 = 2130838573;
+			
+			// aapt resource value: 0x7f02042e
+			public const int PianoSheet_NewHymnal_ru_113 = 2130838574;
+			
+			// aapt resource value: 0x7f02042f
+			public const int PianoSheet_NewHymnal_ru_114 = 2130838575;
+			
+			// aapt resource value: 0x7f020430
+			public const int PianoSheet_NewHymnal_ru_115 = 2130838576;
+			
+			// aapt resource value: 0x7f020431
+			public const int PianoSheet_NewHymnal_ru_116 = 2130838577;
+			
+			// aapt resource value: 0x7f020432
+			public const int PianoSheet_NewHymnal_ru_116_1 = 2130838578;
+			
+			// aapt resource value: 0x7f020433
+			public const int PianoSheet_NewHymnal_ru_117 = 2130838579;
+			
+			// aapt resource value: 0x7f020434
+			public const int PianoSheet_NewHymnal_ru_117_1 = 2130838580;
+			
+			// aapt resource value: 0x7f020435
+			public const int PianoSheet_NewHymnal_ru_118 = 2130838581;
+			
+			// aapt resource value: 0x7f020436
+			public const int PianoSheet_NewHymnal_ru_118_1 = 2130838582;
+			
+			// aapt resource value: 0x7f020437
+			public const int PianoSheet_NewHymnal_ru_119 = 2130838583;
+			
+			// aapt resource value: 0x7f020438
+			public const int PianoSheet_NewHymnal_ru_120 = 2130838584;
+			
+			// aapt resource value: 0x7f020439
+			public const int PianoSheet_NewHymnal_ru_121 = 2130838585;
+			
+			// aapt resource value: 0x7f02043a
+			public const int PianoSheet_NewHymnal_ru_121_1 = 2130838586;
+			
+			// aapt resource value: 0x7f02043b
+			public const int PianoSheet_NewHymnal_ru_122 = 2130838587;
+			
+			// aapt resource value: 0x7f02043c
+			public const int PianoSheet_NewHymnal_ru_123 = 2130838588;
+			
+			// aapt resource value: 0x7f02043d
+			public const int PianoSheet_NewHymnal_ru_123_1 = 2130838589;
+			
+			// aapt resource value: 0x7f02043e
+			public const int PianoSheet_NewHymnal_ru_124 = 2130838590;
+			
+			// aapt resource value: 0x7f02043f
+			public const int PianoSheet_NewHymnal_ru_125 = 2130838591;
+			
+			// aapt resource value: 0x7f020440
+			public const int PianoSheet_NewHymnal_ru_126 = 2130838592;
+			
+			// aapt resource value: 0x7f020441
+			public const int PianoSheet_NewHymnal_ru_127 = 2130838593;
+			
+			// aapt resource value: 0x7f020442
+			public const int PianoSheet_NewHymnal_ru_128 = 2130838594;
+			
+			// aapt resource value: 0x7f020443
+			public const int PianoSheet_NewHymnal_ru_129 = 2130838595;
+			
+			// aapt resource value: 0x7f020444
+			public const int PianoSheet_NewHymnal_ru_130 = 2130838596;
+			
+			// aapt resource value: 0x7f020445
+			public const int PianoSheet_NewHymnal_ru_131 = 2130838597;
+			
+			// aapt resource value: 0x7f020446
+			public const int PianoSheet_NewHymnal_ru_132 = 2130838598;
+			
+			// aapt resource value: 0x7f020447
+			public const int PianoSheet_NewHymnal_ru_133 = 2130838599;
+			
+			// aapt resource value: 0x7f020448
+			public const int PianoSheet_NewHymnal_ru_134 = 2130838600;
+			
+			// aapt resource value: 0x7f020449
+			public const int PianoSheet_NewHymnal_ru_135 = 2130838601;
+			
+			// aapt resource value: 0x7f02044a
+			public const int PianoSheet_NewHymnal_ru_136 = 2130838602;
+			
+			// aapt resource value: 0x7f02044b
+			public const int PianoSheet_NewHymnal_ru_137 = 2130838603;
+			
+			// aapt resource value: 0x7f02044c
+			public const int PianoSheet_NewHymnal_ru_138 = 2130838604;
+			
+			// aapt resource value: 0x7f02044d
+			public const int PianoSheet_NewHymnal_ru_138_1 = 2130838605;
+			
+			// aapt resource value: 0x7f02044e
+			public const int PianoSheet_NewHymnal_ru_139 = 2130838606;
+			
+			// aapt resource value: 0x7f02044f
+			public const int PianoSheet_NewHymnal_ru_140 = 2130838607;
+			
+			// aapt resource value: 0x7f020450
+			public const int PianoSheet_NewHymnal_ru_141 = 2130838608;
+			
+			// aapt resource value: 0x7f020451
+			public const int PianoSheet_NewHymnal_ru_141_1 = 2130838609;
+			
+			// aapt resource value: 0x7f020452
+			public const int PianoSheet_NewHymnal_ru_142 = 2130838610;
+			
+			// aapt resource value: 0x7f020453
+			public const int PianoSheet_NewHymnal_ru_142_1 = 2130838611;
+			
+			// aapt resource value: 0x7f020454
+			public const int PianoSheet_NewHymnal_ru_143 = 2130838612;
+			
+			// aapt resource value: 0x7f020455
+			public const int PianoSheet_NewHymnal_ru_143_1 = 2130838613;
+			
+			// aapt resource value: 0x7f020456
+			public const int PianoSheet_NewHymnal_ru_144 = 2130838614;
+			
+			// aapt resource value: 0x7f020457
+			public const int PianoSheet_NewHymnal_ru_145 = 2130838615;
+			
+			// aapt resource value: 0x7f020458
+			public const int PianoSheet_NewHymnal_ru_146 = 2130838616;
+			
+			// aapt resource value: 0x7f020459
+			public const int PianoSheet_NewHymnal_ru_146_1 = 2130838617;
+			
+			// aapt resource value: 0x7f02045a
+			public const int PianoSheet_NewHymnal_ru_147 = 2130838618;
+			
+			// aapt resource value: 0x7f02045b
+			public const int PianoSheet_NewHymnal_ru_147_1 = 2130838619;
+			
+			// aapt resource value: 0x7f02045c
+			public const int PianoSheet_NewHymnal_ru_148 = 2130838620;
+			
+			// aapt resource value: 0x7f02045d
+			public const int PianoSheet_NewHymnal_ru_148_1 = 2130838621;
+			
+			// aapt resource value: 0x7f02045e
+			public const int PianoSheet_NewHymnal_ru_149 = 2130838622;
+			
+			// aapt resource value: 0x7f02045f
+			public const int PianoSheet_NewHymnal_ru_150 = 2130838623;
+			
+			// aapt resource value: 0x7f020460
+			public const int PianoSheet_NewHymnal_ru_151 = 2130838624;
+			
+			// aapt resource value: 0x7f020461
+			public const int PianoSheet_NewHymnal_ru_151_1 = 2130838625;
+			
+			// aapt resource value: 0x7f020462
+			public const int PianoSheet_NewHymnal_ru_152 = 2130838626;
+			
+			// aapt resource value: 0x7f020463
+			public const int PianoSheet_NewHymnal_ru_153 = 2130838627;
+			
+			// aapt resource value: 0x7f020464
+			public const int PianoSheet_NewHymnal_ru_154 = 2130838628;
+			
+			// aapt resource value: 0x7f020465
+			public const int PianoSheet_NewHymnal_ru_154_1 = 2130838629;
+			
+			// aapt resource value: 0x7f020466
+			public const int PianoSheet_NewHymnal_ru_155 = 2130838630;
+			
+			// aapt resource value: 0x7f020467
+			public const int PianoSheet_NewHymnal_ru_156 = 2130838631;
+			
+			// aapt resource value: 0x7f020468
+			public const int PianoSheet_NewHymnal_ru_157 = 2130838632;
+			
+			// aapt resource value: 0x7f020469
+			public const int PianoSheet_NewHymnal_ru_158 = 2130838633;
+			
+			// aapt resource value: 0x7f02046a
+			public const int PianoSheet_NewHymnal_ru_158_1 = 2130838634;
+			
+			// aapt resource value: 0x7f02046b
+			public const int PianoSheet_NewHymnal_ru_159 = 2130838635;
+			
+			// aapt resource value: 0x7f02046c
+			public const int PianoSheet_NewHymnal_ru_160 = 2130838636;
+			
+			// aapt resource value: 0x7f02046d
+			public const int PianoSheet_NewHymnal_ru_161 = 2130838637;
+			
+			// aapt resource value: 0x7f02046e
+			public const int PianoSheet_NewHymnal_ru_161_1 = 2130838638;
+			
+			// aapt resource value: 0x7f02046f
+			public const int PianoSheet_NewHymnal_ru_162 = 2130838639;
+			
+			// aapt resource value: 0x7f020470
+			public const int PianoSheet_NewHymnal_ru_162_1 = 2130838640;
+			
+			// aapt resource value: 0x7f020471
+			public const int PianoSheet_NewHymnal_ru_163 = 2130838641;
+			
+			// aapt resource value: 0x7f020472
+			public const int PianoSheet_NewHymnal_ru_163_1 = 2130838642;
+			
+			// aapt resource value: 0x7f020473
+			public const int PianoSheet_NewHymnal_ru_164 = 2130838643;
+			
+			// aapt resource value: 0x7f020474
+			public const int PianoSheet_NewHymnal_ru_164_1 = 2130838644;
+			
+			// aapt resource value: 0x7f020475
+			public const int PianoSheet_NewHymnal_ru_165 = 2130838645;
+			
+			// aapt resource value: 0x7f020476
+			public const int PianoSheet_NewHymnal_ru_165_1 = 2130838646;
+			
+			// aapt resource value: 0x7f020477
+			public const int PianoSheet_NewHymnal_ru_166 = 2130838647;
+			
+			// aapt resource value: 0x7f020478
+			public const int PianoSheet_NewHymnal_ru_166_1 = 2130838648;
+			
+			// aapt resource value: 0x7f020479
+			public const int PianoSheet_NewHymnal_ru_167 = 2130838649;
+			
+			// aapt resource value: 0x7f02047a
+			public const int PianoSheet_NewHymnal_ru_168 = 2130838650;
+			
+			// aapt resource value: 0x7f02047b
+			public const int PianoSheet_NewHymnal_ru_168_1 = 2130838651;
+			
+			// aapt resource value: 0x7f02047c
+			public const int PianoSheet_NewHymnal_ru_169 = 2130838652;
+			
+			// aapt resource value: 0x7f02047d
+			public const int PianoSheet_NewHymnal_ru_169_1 = 2130838653;
+			
+			// aapt resource value: 0x7f02047e
+			public const int PianoSheet_NewHymnal_ru_170 = 2130838654;
+			
+			// aapt resource value: 0x7f02047f
+			public const int PianoSheet_NewHymnal_ru_171 = 2130838655;
+			
+			// aapt resource value: 0x7f020480
+			public const int PianoSheet_NewHymnal_ru_172 = 2130838656;
+			
+			// aapt resource value: 0x7f020481
+			public const int PianoSheet_NewHymnal_ru_173 = 2130838657;
+			
+			// aapt resource value: 0x7f020482
+			public const int PianoSheet_NewHymnal_ru_174 = 2130838658;
+			
+			// aapt resource value: 0x7f020483
+			public const int PianoSheet_NewHymnal_ru_174_1 = 2130838659;
+			
+			// aapt resource value: 0x7f020484
+			public const int PianoSheet_NewHymnal_ru_175 = 2130838660;
+			
+			// aapt resource value: 0x7f020485
+			public const int PianoSheet_NewHymnal_ru_176 = 2130838661;
+			
+			// aapt resource value: 0x7f020486
+			public const int PianoSheet_NewHymnal_ru_177 = 2130838662;
+			
+			// aapt resource value: 0x7f020487
+			public const int PianoSheet_NewHymnal_ru_178 = 2130838663;
+			
+			// aapt resource value: 0x7f020488
+			public const int PianoSheet_NewHymnal_ru_179 = 2130838664;
+			
+			// aapt resource value: 0x7f020489
+			public const int PianoSheet_NewHymnal_ru_180 = 2130838665;
+			
+			// aapt resource value: 0x7f02048a
+			public const int PianoSheet_NewHymnal_ru_181 = 2130838666;
+			
+			// aapt resource value: 0x7f02048b
+			public const int PianoSheet_NewHymnal_ru_182 = 2130838667;
+			
+			// aapt resource value: 0x7f02048c
+			public const int PianoSheet_NewHymnal_ru_183 = 2130838668;
+			
+			// aapt resource value: 0x7f02048d
+			public const int PianoSheet_NewHymnal_ru_184 = 2130838669;
+			
+			// aapt resource value: 0x7f02048e
+			public const int PianoSheet_NewHymnal_ru_185 = 2130838670;
+			
+			// aapt resource value: 0x7f02048f
+			public const int PianoSheet_NewHymnal_ru_186 = 2130838671;
+			
+			// aapt resource value: 0x7f020490
+			public const int PianoSheet_NewHymnal_ru_187 = 2130838672;
+			
+			// aapt resource value: 0x7f020491
+			public const int PianoSheet_NewHymnal_ru_188 = 2130838673;
+			
+			// aapt resource value: 0x7f020492
+			public const int PianoSheet_NewHymnal_ru_189 = 2130838674;
+			
+			// aapt resource value: 0x7f020493
+			public const int PianoSheet_NewHymnal_ru_190 = 2130838675;
+			
+			// aapt resource value: 0x7f020494
+			public const int PianoSheet_NewHymnal_ru_191 = 2130838676;
+			
+			// aapt resource value: 0x7f020495
+			public const int PianoSheet_NewHymnal_ru_192 = 2130838677;
+			
+			// aapt resource value: 0x7f020496
+			public const int PianoSheet_NewHymnal_ru_193 = 2130838678;
+			
+			// aapt resource value: 0x7f020497
+			public const int PianoSheet_NewHymnal_ru_194 = 2130838679;
+			
+			// aapt resource value: 0x7f020498
+			public const int PianoSheet_NewHymnal_ru_194_1 = 2130838680;
+			
+			// aapt resource value: 0x7f020499
+			public const int PianoSheet_NewHymnal_ru_195 = 2130838681;
+			
+			// aapt resource value: 0x7f02049a
+			public const int PianoSheet_NewHymnal_ru_196 = 2130838682;
+			
+			// aapt resource value: 0x7f02049b
+			public const int PianoSheet_NewHymnal_ru_197 = 2130838683;
+			
+			// aapt resource value: 0x7f02049c
+			public const int PianoSheet_NewHymnal_ru_198 = 2130838684;
+			
+			// aapt resource value: 0x7f02049d
+			public const int PianoSheet_NewHymnal_ru_199 = 2130838685;
+			
+			// aapt resource value: 0x7f02049e
+			public const int PianoSheet_NewHymnal_ru_200 = 2130838686;
+			
+			// aapt resource value: 0x7f02049f
+			public const int PianoSheet_NewHymnal_ru_201 = 2130838687;
+			
+			// aapt resource value: 0x7f0204a0
+			public const int PianoSheet_NewHymnal_ru_202 = 2130838688;
+			
+			// aapt resource value: 0x7f0204a1
+			public const int PianoSheet_NewHymnal_ru_203 = 2130838689;
+			
+			// aapt resource value: 0x7f0204a2
+			public const int PianoSheet_NewHymnal_ru_204 = 2130838690;
+			
+			// aapt resource value: 0x7f0204a3
+			public const int PianoSheet_NewHymnal_ru_205 = 2130838691;
+			
+			// aapt resource value: 0x7f0204a4
+			public const int PianoSheet_NewHymnal_ru_206 = 2130838692;
+			
+			// aapt resource value: 0x7f0204a5
+			public const int PianoSheet_NewHymnal_ru_207 = 2130838693;
+			
+			// aapt resource value: 0x7f0204a6
+			public const int PianoSheet_NewHymnal_ru_208 = 2130838694;
+			
+			// aapt resource value: 0x7f0204a7
+			public const int PianoSheet_NewHymnal_ru_208_1 = 2130838695;
+			
+			// aapt resource value: 0x7f0204a8
+			public const int PianoSheet_NewHymnal_ru_209 = 2130838696;
+			
+			// aapt resource value: 0x7f0204a9
+			public const int PianoSheet_NewHymnal_ru_209_1 = 2130838697;
+			
+			// aapt resource value: 0x7f0204aa
+			public const int PianoSheet_NewHymnal_ru_210 = 2130838698;
+			
+			// aapt resource value: 0x7f0204ab
+			public const int PianoSheet_NewHymnal_ru_211 = 2130838699;
+			
+			// aapt resource value: 0x7f0204ac
+			public const int PianoSheet_NewHymnal_ru_212 = 2130838700;
+			
+			// aapt resource value: 0x7f0204ad
+			public const int PianoSheet_NewHymnal_ru_213 = 2130838701;
+			
+			// aapt resource value: 0x7f0204ae
+			public const int PianoSheet_NewHymnal_ru_213_1 = 2130838702;
+			
+			// aapt resource value: 0x7f0204af
+			public const int PianoSheet_NewHymnal_ru_214 = 2130838703;
+			
+			// aapt resource value: 0x7f0204b0
+			public const int PianoSheet_NewHymnal_ru_215 = 2130838704;
+			
+			// aapt resource value: 0x7f0204b1
+			public const int PianoSheet_NewHymnal_ru_216 = 2130838705;
+			
+			// aapt resource value: 0x7f0204b2
+			public const int PianoSheet_NewHymnal_ru_217 = 2130838706;
+			
+			// aapt resource value: 0x7f0204b3
+			public const int PianoSheet_NewHymnal_ru_218 = 2130838707;
+			
+			// aapt resource value: 0x7f0204b4
+			public const int PianoSheet_NewHymnal_ru_219 = 2130838708;
+			
+			// aapt resource value: 0x7f0204b5
+			public const int PianoSheet_NewHymnal_ru_220 = 2130838709;
+			
+			// aapt resource value: 0x7f0204b6
+			public const int PianoSheet_NewHymnal_ru_220_1 = 2130838710;
+			
+			// aapt resource value: 0x7f0204b7
+			public const int PianoSheet_NewHymnal_ru_221 = 2130838711;
+			
+			// aapt resource value: 0x7f0204b8
+			public const int PianoSheet_NewHymnal_ru_221_1 = 2130838712;
+			
+			// aapt resource value: 0x7f0204b9
+			public const int PianoSheet_NewHymnal_ru_222 = 2130838713;
+			
+			// aapt resource value: 0x7f0204ba
+			public const int PianoSheet_NewHymnal_ru_222_1 = 2130838714;
+			
+			// aapt resource value: 0x7f0204bb
+			public const int PianoSheet_NewHymnal_ru_223 = 2130838715;
+			
+			// aapt resource value: 0x7f0204bc
+			public const int PianoSheet_NewHymnal_ru_224 = 2130838716;
+			
+			// aapt resource value: 0x7f0204bd
+			public const int PianoSheet_NewHymnal_ru_225 = 2130838717;
+			
+			// aapt resource value: 0x7f0204be
+			public const int PianoSheet_NewHymnal_ru_226 = 2130838718;
+			
+			// aapt resource value: 0x7f0204bf
+			public const int PianoSheet_NewHymnal_ru_227 = 2130838719;
+			
+			// aapt resource value: 0x7f0204c0
+			public const int PianoSheet_NewHymnal_ru_227_1 = 2130838720;
+			
+			// aapt resource value: 0x7f0204c1
+			public const int PianoSheet_NewHymnal_ru_228 = 2130838721;
+			
+			// aapt resource value: 0x7f0204c2
+			public const int PianoSheet_NewHymnal_ru_228_1 = 2130838722;
+			
+			// aapt resource value: 0x7f0204c3
+			public const int PianoSheet_NewHymnal_ru_229 = 2130838723;
+			
+			// aapt resource value: 0x7f0204c4
+			public const int PianoSheet_NewHymnal_ru_229_1 = 2130838724;
+			
+			// aapt resource value: 0x7f0204c5
+			public const int PianoSheet_NewHymnal_ru_230 = 2130838725;
+			
+			// aapt resource value: 0x7f0204c6
+			public const int PianoSheet_NewHymnal_ru_230_1 = 2130838726;
+			
+			// aapt resource value: 0x7f0204c7
+			public const int PianoSheet_NewHymnal_ru_231 = 2130838727;
+			
+			// aapt resource value: 0x7f0204c8
+			public const int PianoSheet_NewHymnal_ru_232 = 2130838728;
+			
+			// aapt resource value: 0x7f0204c9
+			public const int PianoSheet_NewHymnal_ru_232_1 = 2130838729;
+			
+			// aapt resource value: 0x7f0204ca
+			public const int PianoSheet_NewHymnal_ru_233 = 2130838730;
+			
+			// aapt resource value: 0x7f0204cb
+			public const int PianoSheet_NewHymnal_ru_233_1 = 2130838731;
+			
+			// aapt resource value: 0x7f0204cc
+			public const int PianoSheet_NewHymnal_ru_234 = 2130838732;
+			
+			// aapt resource value: 0x7f0204cd
+			public const int PianoSheet_NewHymnal_ru_235 = 2130838733;
+			
+			// aapt resource value: 0x7f0204ce
+			public const int PianoSheet_NewHymnal_ru_235_1 = 2130838734;
+			
+			// aapt resource value: 0x7f0204cf
+			public const int PianoSheet_NewHymnal_ru_236 = 2130838735;
+			
+			// aapt resource value: 0x7f0204d0
+			public const int PianoSheet_NewHymnal_ru_237 = 2130838736;
+			
+			// aapt resource value: 0x7f0204d1
+			public const int PianoSheet_NewHymnal_ru_238 = 2130838737;
+			
+			// aapt resource value: 0x7f0204d2
+			public const int PianoSheet_NewHymnal_ru_239 = 2130838738;
+			
+			// aapt resource value: 0x7f0204d3
+			public const int PianoSheet_NewHymnal_ru_240 = 2130838739;
+			
+			// aapt resource value: 0x7f0204d4
+			public const int PianoSheet_NewHymnal_ru_240_1 = 2130838740;
+			
+			// aapt resource value: 0x7f0204d5
+			public const int PianoSheet_NewHymnal_ru_241 = 2130838741;
+			
+			// aapt resource value: 0x7f0204d6
+			public const int PianoSheet_NewHymnal_ru_241_1 = 2130838742;
+			
+			// aapt resource value: 0x7f0204d7
+			public const int PianoSheet_NewHymnal_ru_242 = 2130838743;
+			
+			// aapt resource value: 0x7f0204d8
+			public const int PianoSheet_NewHymnal_ru_242_1 = 2130838744;
+			
+			// aapt resource value: 0x7f0204d9
+			public const int PianoSheet_NewHymnal_ru_243 = 2130838745;
+			
+			// aapt resource value: 0x7f0204da
+			public const int PianoSheet_NewHymnal_ru_245 = 2130838746;
+			
+			// aapt resource value: 0x7f0204db
+			public const int PianoSheet_NewHymnal_ru_246 = 2130838747;
+			
+			// aapt resource value: 0x7f0204dc
+			public const int PianoSheet_NewHymnal_ru_247 = 2130838748;
+			
+			// aapt resource value: 0x7f0204dd
+			public const int PianoSheet_NewHymnal_ru_248 = 2130838749;
+			
+			// aapt resource value: 0x7f0204de
+			public const int PianoSheet_NewHymnal_ru_248_1 = 2130838750;
+			
+			// aapt resource value: 0x7f0204df
+			public const int PianoSheet_NewHymnal_ru_249 = 2130838751;
+			
+			// aapt resource value: 0x7f0204e0
+			public const int PianoSheet_NewHymnal_ru_250 = 2130838752;
+			
+			// aapt resource value: 0x7f0204e1
+			public const int PianoSheet_NewHymnal_ru_251 = 2130838753;
+			
+			// aapt resource value: 0x7f0204e2
+			public const int PianoSheet_NewHymnal_ru_252 = 2130838754;
+			
+			// aapt resource value: 0x7f0204e3
+			public const int PianoSheet_NewHymnal_ru_253 = 2130838755;
+			
+			// aapt resource value: 0x7f0204e4
+			public const int PianoSheet_NewHymnal_ru_253_1 = 2130838756;
+			
+			// aapt resource value: 0x7f0204e5
+			public const int PianoSheet_NewHymnal_ru_254 = 2130838757;
+			
+			// aapt resource value: 0x7f0204e6
+			public const int PianoSheet_NewHymnal_ru_255 = 2130838758;
+			
+			// aapt resource value: 0x7f0204e7
+			public const int PianoSheet_NewHymnal_ru_256 = 2130838759;
+			
+			// aapt resource value: 0x7f0204e8
+			public const int PianoSheet_NewHymnal_ru_256_1 = 2130838760;
+			
+			// aapt resource value: 0x7f0204e9
+			public const int PianoSheet_NewHymnal_ru_257 = 2130838761;
+			
+			// aapt resource value: 0x7f0204ea
+			public const int PianoSheet_NewHymnal_ru_258 = 2130838762;
+			
+			// aapt resource value: 0x7f0204eb
+			public const int PianoSheet_NewHymnal_ru_259 = 2130838763;
+			
+			// aapt resource value: 0x7f0204ec
+			public const int PianoSheet_NewHymnal_ru_259_1 = 2130838764;
+			
+			// aapt resource value: 0x7f0204ed
+			public const int PianoSheet_NewHymnal_ru_260 = 2130838765;
+			
+			// aapt resource value: 0x7f0204ee
+			public const int PianoSheet_NewHymnal_ru_260_1 = 2130838766;
+			
+			// aapt resource value: 0x7f0204ef
+			public const int PianoSheet_NewHymnal_ru_261 = 2130838767;
+			
+			// aapt resource value: 0x7f0204f0
+			public const int PianoSheet_NewHymnal_ru_262 = 2130838768;
+			
+			// aapt resource value: 0x7f0204f1
+			public const int PianoSheet_NewHymnal_ru_263 = 2130838769;
+			
+			// aapt resource value: 0x7f0204f2
+			public const int PianoSheet_NewHymnal_ru_263_1 = 2130838770;
+			
+			// aapt resource value: 0x7f0204f3
+			public const int PianoSheet_NewHymnal_ru_264 = 2130838771;
+			
+			// aapt resource value: 0x7f0204f4
+			public const int PianoSheet_NewHymnal_ru_265 = 2130838772;
+			
+			// aapt resource value: 0x7f0204f5
+			public const int PianoSheet_NewHymnal_ru_266 = 2130838773;
+			
+			// aapt resource value: 0x7f0204f6
+			public const int PianoSheet_NewHymnal_ru_266_1 = 2130838774;
+			
+			// aapt resource value: 0x7f0204f7
+			public const int PianoSheet_NewHymnal_ru_267 = 2130838775;
+			
+			// aapt resource value: 0x7f0204f8
+			public const int PianoSheet_NewHymnal_ru_267_1 = 2130838776;
+			
+			// aapt resource value: 0x7f0204f9
+			public const int PianoSheet_NewHymnal_ru_268 = 2130838777;
+			
+			// aapt resource value: 0x7f0204fa
+			public const int PianoSheet_NewHymnal_ru_268_1 = 2130838778;
+			
+			// aapt resource value: 0x7f0204fb
+			public const int PianoSheet_NewHymnal_ru_269 = 2130838779;
+			
+			// aapt resource value: 0x7f0204fc
+			public const int PianoSheet_NewHymnal_ru_270 = 2130838780;
+			
+			// aapt resource value: 0x7f0204fd
+			public const int PianoSheet_NewHymnal_ru_271 = 2130838781;
+			
+			// aapt resource value: 0x7f0204fe
+			public const int PianoSheet_NewHymnal_ru_272 = 2130838782;
+			
+			// aapt resource value: 0x7f0204ff
+			public const int PianoSheet_NewHymnal_ru_273 = 2130838783;
+			
+			// aapt resource value: 0x7f020500
+			public const int PianoSheet_NewHymnal_ru_273_1 = 2130838784;
+			
+			// aapt resource value: 0x7f020501
+			public const int PianoSheet_NewHymnal_ru_274 = 2130838785;
+			
+			// aapt resource value: 0x7f020502
+			public const int PianoSheet_NewHymnal_ru_275 = 2130838786;
+			
+			// aapt resource value: 0x7f020503
+			public const int PianoSheet_NewHymnal_ru_276 = 2130838787;
+			
+			// aapt resource value: 0x7f020504
+			public const int PianoSheet_NewHymnal_ru_277 = 2130838788;
+			
+			// aapt resource value: 0x7f020505
+			public const int PianoSheet_NewHymnal_ru_277_1 = 2130838789;
+			
+			// aapt resource value: 0x7f020506
+			public const int PianoSheet_NewHymnal_ru_278 = 2130838790;
+			
+			// aapt resource value: 0x7f020507
+			public const int PianoSheet_NewHymnal_ru_278_1 = 2130838791;
+			
+			// aapt resource value: 0x7f020508
+			public const int PianoSheet_NewHymnal_ru_279 = 2130838792;
+			
+			// aapt resource value: 0x7f020509
+			public const int PianoSheet_NewHymnal_ru_279_1 = 2130838793;
+			
+			// aapt resource value: 0x7f02050a
+			public const int PianoSheet_NewHymnal_ru_280 = 2130838794;
+			
+			// aapt resource value: 0x7f02050b
+			public const int PianoSheet_NewHymnal_ru_281 = 2130838795;
+			
+			// aapt resource value: 0x7f02050c
+			public const int PianoSheet_NewHymnal_ru_282 = 2130838796;
+			
+			// aapt resource value: 0x7f02050d
+			public const int PianoSheet_NewHymnal_ru_282_1 = 2130838797;
+			
+			// aapt resource value: 0x7f02050e
+			public const int PianoSheet_NewHymnal_ru_283 = 2130838798;
+			
+			// aapt resource value: 0x7f02050f
+			public const int PianoSheet_NewHymnal_ru_283_1 = 2130838799;
+			
+			// aapt resource value: 0x7f020510
+			public const int PianoSheet_NewHymnal_ru_284 = 2130838800;
+			
+			// aapt resource value: 0x7f020511
+			public const int PianoSheet_NewHymnal_ru_285 = 2130838801;
+			
+			// aapt resource value: 0x7f020512
+			public const int PianoSheet_NewHymnal_ru_286 = 2130838802;
+			
+			// aapt resource value: 0x7f020513
+			public const int PianoSheet_NewHymnal_ru_287 = 2130838803;
+			
+			// aapt resource value: 0x7f020514
+			public const int PianoSheet_NewHymnal_ru_288 = 2130838804;
+			
+			// aapt resource value: 0x7f020515
+			public const int PianoSheet_NewHymnal_ru_289 = 2130838805;
+			
+			// aapt resource value: 0x7f020516
+			public const int PianoSheet_NewHymnal_ru_290 = 2130838806;
+			
+			// aapt resource value: 0x7f020517
+			public const int PianoSheet_NewHymnal_ru_291 = 2130838807;
+			
+			// aapt resource value: 0x7f020518
+			public const int PianoSheet_NewHymnal_ru_291_1 = 2130838808;
+			
+			// aapt resource value: 0x7f020519
+			public const int PianoSheet_NewHymnal_ru_292 = 2130838809;
+			
+			// aapt resource value: 0x7f02051a
+			public const int PianoSheet_NewHymnal_ru_292_1 = 2130838810;
+			
+			// aapt resource value: 0x7f02051b
+			public const int PianoSheet_NewHymnal_ru_293 = 2130838811;
+			
+			// aapt resource value: 0x7f02051c
+			public const int PianoSheet_NewHymnal_ru_293_1 = 2130838812;
+			
+			// aapt resource value: 0x7f02051d
+			public const int PianoSheet_NewHymnal_ru_294 = 2130838813;
+			
+			// aapt resource value: 0x7f02051e
+			public const int PianoSheet_NewHymnal_ru_294_1 = 2130838814;
+			
+			// aapt resource value: 0x7f02051f
+			public const int PianoSheet_NewHymnal_ru_295 = 2130838815;
+			
+			// aapt resource value: 0x7f020520
+			public const int PianoSheet_NewHymnal_ru_296 = 2130838816;
+			
+			// aapt resource value: 0x7f020521
+			public const int PianoSheet_NewHymnal_ru_296_1 = 2130838817;
+			
+			// aapt resource value: 0x7f020522
+			public const int PianoSheet_NewHymnal_ru_297 = 2130838818;
+			
+			// aapt resource value: 0x7f020523
+			public const int PianoSheet_NewHymnal_ru_298 = 2130838819;
+			
+			// aapt resource value: 0x7f020524
+			public const int PianoSheet_NewHymnal_ru_299 = 2130838820;
+			
+			// aapt resource value: 0x7f020525
+			public const int PianoSheet_NewHymnal_ru_300 = 2130838821;
+			
+			// aapt resource value: 0x7f020526
+			public const int PianoSheet_NewHymnal_ru_301 = 2130838822;
+			
+			// aapt resource value: 0x7f020527
+			public const int PianoSheet_NewHymnal_ru_302 = 2130838823;
+			
+			// aapt resource value: 0x7f020528
+			public const int PianoSheet_NewHymnal_ru_303 = 2130838824;
+			
+			// aapt resource value: 0x7f020529
+			public const int PianoSheet_NewHymnal_ru_304 = 2130838825;
+			
+			// aapt resource value: 0x7f02052a
+			public const int PianoSheet_NewHymnal_ru_305 = 2130838826;
+			
+			// aapt resource value: 0x7f02052b
+			public const int PianoSheet_NewHymnal_ru_306 = 2130838827;
+			
+			// aapt resource value: 0x7f02052c
+			public const int PianoSheet_NewHymnal_ru_307 = 2130838828;
+			
+			// aapt resource value: 0x7f02052d
+			public const int PianoSheet_NewHymnal_ru_308 = 2130838829;
+			
+			// aapt resource value: 0x7f02052e
+			public const int PianoSheet_NewHymnal_ru_309 = 2130838830;
+			
+			// aapt resource value: 0x7f02052f
+			public const int PianoSheet_NewHymnal_ru_310 = 2130838831;
+			
+			// aapt resource value: 0x7f020530
+			public const int PianoSheet_NewHymnal_ru_311 = 2130838832;
+			
+			// aapt resource value: 0x7f020531
+			public const int PianoSheet_NewHymnal_ru_312 = 2130838833;
+			
+			// aapt resource value: 0x7f020532
+			public const int PianoSheet_NewHymnal_ru_313 = 2130838834;
+			
+			// aapt resource value: 0x7f020533
+			public const int PianoSheet_NewHymnal_ru_314 = 2130838835;
+			
+			// aapt resource value: 0x7f020534
+			public const int PianoSheet_NewHymnal_ru_315 = 2130838836;
+			
+			// aapt resource value: 0x7f020535
+			public const int PianoSheet_NewHymnal_ru_315_1 = 2130838837;
+			
+			// aapt resource value: 0x7f020536
+			public const int PianoSheet_NewHymnal_ru_316 = 2130838838;
+			
+			// aapt resource value: 0x7f020537
+			public const int PianoSheet_NewHymnal_ru_317 = 2130838839;
+			
+			// aapt resource value: 0x7f020538
+			public const int PianoSheet_NewHymnal_ru_318 = 2130838840;
+			
+			// aapt resource value: 0x7f020539
+			public const int PianoSheet_NewHymnal_ru_318_1 = 2130838841;
+			
+			// aapt resource value: 0x7f02053a
+			public const int PianoSheet_NewHymnal_ru_319 = 2130838842;
+			
+			// aapt resource value: 0x7f02053b
+			public const int PianoSheet_NewHymnal_ru_320 = 2130838843;
+			
+			// aapt resource value: 0x7f02053c
+			public const int PianoSheet_NewHymnal_ru_321 = 2130838844;
+			
+			// aapt resource value: 0x7f02053d
+			public const int PianoSheet_NewHymnal_ru_322 = 2130838845;
+			
+			// aapt resource value: 0x7f02053e
+			public const int PianoSheet_NewHymnal_ru_323 = 2130838846;
+			
+			// aapt resource value: 0x7f02053f
+			public const int PianoSheet_NewHymnal_ru_324 = 2130838847;
+			
+			// aapt resource value: 0x7f020540
+			public const int PianoSheet_NewHymnal_ru_325 = 2130838848;
+			
+			// aapt resource value: 0x7f020541
+			public const int PianoSheet_NewHymnal_ru_325_1 = 2130838849;
+			
+			// aapt resource value: 0x7f020542
+			public const int PianoSheet_NewHymnal_ru_326 = 2130838850;
+			
+			// aapt resource value: 0x7f020543
+			public const int PianoSheet_NewHymnal_ru_327 = 2130838851;
+			
+			// aapt resource value: 0x7f020544
+			public const int PianoSheet_NewHymnal_ru_328 = 2130838852;
+			
+			// aapt resource value: 0x7f020545
+			public const int PianoSheet_NewHymnal_ru_329 = 2130838853;
+			
+			// aapt resource value: 0x7f020546
+			public const int PianoSheet_NewHymnal_ru_330 = 2130838854;
+			
+			// aapt resource value: 0x7f020547
+			public const int PianoSheet_NewHymnal_ru_331 = 2130838855;
+			
+			// aapt resource value: 0x7f020548
+			public const int PianoSheet_NewHymnal_ru_331_1 = 2130838856;
+			
+			// aapt resource value: 0x7f020549
+			public const int PianoSheet_NewHymnal_ru_332 = 2130838857;
+			
+			// aapt resource value: 0x7f02054a
+			public const int PianoSheet_NewHymnal_ru_332_1 = 2130838858;
+			
+			// aapt resource value: 0x7f02054b
+			public const int PianoSheet_NewHymnal_ru_333 = 2130838859;
+			
+			// aapt resource value: 0x7f02054c
+			public const int PianoSheet_NewHymnal_ru_333_1 = 2130838860;
+			
+			// aapt resource value: 0x7f02054d
+			public const int PianoSheet_NewHymnal_ru_334 = 2130838861;
+			
+			// aapt resource value: 0x7f02054e
+			public const int PianoSheet_NewHymnal_ru_335 = 2130838862;
+			
+			// aapt resource value: 0x7f02054f
+			public const int PianoSheet_NewHymnal_ru_336 = 2130838863;
+			
+			// aapt resource value: 0x7f020550
+			public const int PianoSheet_NewHymnal_ru_337 = 2130838864;
+			
+			// aapt resource value: 0x7f020551
+			public const int PianoSheet_NewHymnal_ru_338 = 2130838865;
+			
+			// aapt resource value: 0x7f020552
+			public const int PianoSheet_NewHymnal_ru_339 = 2130838866;
+			
+			// aapt resource value: 0x7f020553
+			public const int PianoSheet_NewHymnal_ru_340 = 2130838867;
+			
+			// aapt resource value: 0x7f020554
+			public const int PianoSheet_NewHymnal_ru_341 = 2130838868;
+			
+			// aapt resource value: 0x7f020555
+			public const int PianoSheet_NewHymnal_ru_342 = 2130838869;
+			
+			// aapt resource value: 0x7f020556
+			public const int PianoSheet_NewHymnal_ru_343 = 2130838870;
+			
+			// aapt resource value: 0x7f020557
+			public const int PianoSheet_NewHymnal_ru_343_1 = 2130838871;
+			
+			// aapt resource value: 0x7f020558
+			public const int PianoSheet_NewHymnal_ru_344 = 2130838872;
+			
+			// aapt resource value: 0x7f020559
+			public const int PianoSheet_NewHymnal_ru_345 = 2130838873;
+			
+			// aapt resource value: 0x7f02055a
+			public const int PianoSheet_NewHymnal_ru_345_1 = 2130838874;
+			
+			// aapt resource value: 0x7f02055b
+			public const int PianoSheet_NewHymnal_ru_346 = 2130838875;
+			
+			// aapt resource value: 0x7f02055c
+			public const int PianoSheet_NewHymnal_ru_346_1 = 2130838876;
+			
+			// aapt resource value: 0x7f02055d
+			public const int PianoSheet_NewHymnal_ru_347 = 2130838877;
+			
+			// aapt resource value: 0x7f02055e
+			public const int PianoSheet_NewHymnal_ru_348 = 2130838878;
+			
+			// aapt resource value: 0x7f02055f
+			public const int PianoSheet_NewHymnal_ru_349 = 2130838879;
+			
+			// aapt resource value: 0x7f020560
+			public const int PianoSheet_NewHymnal_ru_350 = 2130838880;
+			
+			// aapt resource value: 0x7f020561
+			public const int PianoSheet_NewHymnal_ru_350_1 = 2130838881;
+			
+			// aapt resource value: 0x7f020562
+			public const int PianoSheet_NewHymnal_ru_351 = 2130838882;
+			
+			// aapt resource value: 0x7f020563
+			public const int PianoSheet_NewHymnal_ru_351_1 = 2130838883;
+			
+			// aapt resource value: 0x7f020564
+			public const int PianoSheet_NewHymnal_ru_352 = 2130838884;
+			
+			// aapt resource value: 0x7f020565
+			public const int PianoSheet_NewHymnal_ru_353 = 2130838885;
+			
+			// aapt resource value: 0x7f020566
+			public const int PianoSheet_NewHymnal_ru_353_1 = 2130838886;
+			
+			// aapt resource value: 0x7f020567
+			public const int PianoSheet_NewHymnal_ru_354 = 2130838887;
+			
+			// aapt resource value: 0x7f020568
+			public const int PianoSheet_NewHymnal_ru_354_1 = 2130838888;
+			
+			// aapt resource value: 0x7f020569
+			public const int PianoSheet_NewHymnal_ru_355 = 2130838889;
+			
+			// aapt resource value: 0x7f02056a
+			public const int PianoSheet_NewHymnal_ru_355_1 = 2130838890;
+			
+			// aapt resource value: 0x7f02056b
+			public const int PianoSheet_NewHymnal_ru_355_2 = 2130838891;
+			
+			// aapt resource value: 0x7f02056c
+			public const int PianoSheet_NewHymnal_ru_355_3 = 2130838892;
+			
+			// aapt resource value: 0x7f02056d
+			public const int PianoSheet_NewHymnal_ru_356 = 2130838893;
+			
+			// aapt resource value: 0x7f02056e
+			public const int PianoSheet_NewHymnal_ru_357 = 2130838894;
+			
+			// aapt resource value: 0x7f02056f
+			public const int PianoSheet_NewHymnal_ru_358 = 2130838895;
+			
+			// aapt resource value: 0x7f020570
+			public const int PianoSheet_NewHymnal_ru_358_1 = 2130838896;
+			
+			// aapt resource value: 0x7f020571
+			public const int PianoSheet_NewHymnal_ru_359 = 2130838897;
+			
+			// aapt resource value: 0x7f020572
+			public const int PianoSheet_NewHymnal_ru_360 = 2130838898;
+			
+			// aapt resource value: 0x7f020573
+			public const int PianoSheet_NewHymnal_ru_361 = 2130838899;
+			
+			// aapt resource value: 0x7f020574
+			public const int PianoSheet_NewHymnal_ru_362 = 2130838900;
+			
+			// aapt resource value: 0x7f020575
+			public const int PianoSheet_NewHymnal_ru_363 = 2130838901;
+			
+			// aapt resource value: 0x7f020576
+			public const int PianoSheet_NewHymnal_ru_364 = 2130838902;
+			
+			// aapt resource value: 0x7f020577
+			public const int PianoSheet_NewHymnal_ru_365 = 2130838903;
+			
+			// aapt resource value: 0x7f020578
+			public const int PianoSheet_NewHymnal_ru_366 = 2130838904;
+			
+			// aapt resource value: 0x7f020579
+			public const int PianoSheet_NewHymnal_ru_367 = 2130838905;
+			
+			// aapt resource value: 0x7f02057a
+			public const int PianoSheet_NewHymnal_ru_367_1 = 2130838906;
+			
+			// aapt resource value: 0x7f02057b
+			public const int PianoSheet_NewHymnal_ru_368 = 2130838907;
+			
+			// aapt resource value: 0x7f02057c
+			public const int PianoSheet_NewHymnal_ru_368_1 = 2130838908;
+			
+			// aapt resource value: 0x7f02057d
+			public const int PianoSheet_NewHymnal_ru_369 = 2130838909;
+			
+			// aapt resource value: 0x7f02057e
+			public const int PianoSheet_NewHymnal_ru_369_1 = 2130838910;
+			
+			// aapt resource value: 0x7f02057f
+			public const int PianoSheet_NewHymnal_ru_370 = 2130838911;
+			
+			// aapt resource value: 0x7f020580
+			public const int PianoSheet_NewHymnal_ru_370_1 = 2130838912;
+			
+			// aapt resource value: 0x7f020581
+			public const int PianoSheet_NewHymnal_ru_370_2 = 2130838913;
+			
+			// aapt resource value: 0x7f020582
+			public const int PianoSheet_NewHymnal_ru_370_3 = 2130838914;
+			
+			// aapt resource value: 0x7f020583
+			public const int PianoSheet_NewHymnal_ru_371 = 2130838915;
+			
+			// aapt resource value: 0x7f020584
+			public const int PianoSheet_NewHymnal_ru_372 = 2130838916;
+			
+			// aapt resource value: 0x7f020585
+			public const int PianoSheet_NewHymnal_ru_373 = 2130838917;
+			
+			// aapt resource value: 0x7f020586
+			public const int PianoSheet_NewHymnal_ru_373_1 = 2130838918;
+			
+			// aapt resource value: 0x7f020587
+			public const int PianoSheet_NewHymnal_ru_374 = 2130838919;
+			
+			// aapt resource value: 0x7f020588
+			public const int PianoSheet_NewHymnal_ru_374_1 = 2130838920;
+			
+			// aapt resource value: 0x7f020589
+			public const int PianoSheet_NewHymnal_ru_375 = 2130838921;
+			
+			// aapt resource value: 0x7f02058a
+			public const int PianoSheet_NewHymnal_ru_375_1 = 2130838922;
+			
+			// aapt resource value: 0x7f02058b
+			public const int PianoSheet_NewHymnal_ru_376 = 2130838923;
+			
+			// aapt resource value: 0x7f02058c
+			public const int PianoSheet_NewHymnal_ru_376_1 = 2130838924;
+			
+			// aapt resource value: 0x7f02058d
+			public const int PianoSheet_NewHymnal_ru_377 = 2130838925;
+			
+			// aapt resource value: 0x7f02058e
+			public const int PianoSheet_NewHymnal_ru_378 = 2130838926;
+			
+			// aapt resource value: 0x7f02058f
+			public const int PianoSheet_NewHymnal_ru_379 = 2130838927;
+			
+			// aapt resource value: 0x7f020590
+			public const int PianoSheet_NewHymnal_ru_380 = 2130838928;
+			
+			// aapt resource value: 0x7f020591
+			public const int PianoSheet_NewHymnal_ru_381 = 2130838929;
+			
+			// aapt resource value: 0x7f020592
+			public const int PianoSheet_NewHymnal_ru_382 = 2130838930;
+			
+			// aapt resource value: 0x7f020593
+			public const int PianoSheet_NewHymnal_ru_383 = 2130838931;
+			
+			// aapt resource value: 0x7f020594
+			public const int PianoSheet_NewHymnal_ru_384 = 2130838932;
+			
+			// aapt resource value: 0x7f020595
+			public const int PianoSheet_NewHymnal_ru_385 = 2130838933;
+			
+			// aapt resource value: 0x7f020596
+			public const int splash_screen = 2130838934;
+			
+			// aapt resource value: 0x7f020597
+			public const int TabFavorites = 2130838935;
+			
+			// aapt resource value: 0x7f020598
+			public const int TabIndex = 2130838936;
+			
+			// aapt resource value: 0x7f020599
+			public const int TabNumber = 2130838937;
+			
+			// aapt resource value: 0x7f02059a
+			public const int TabSettings = 2130838938;
+			
+			// aapt resource value: 0x7f02059b
+			public const int ToolbarFavoriteFalse = 2130838939;
+			
+			// aapt resource value: 0x7f02059c
+			public const int ToolbarFavoriteTrue = 2130838940;
+			
+			// aapt resource value: 0x7f02059d
+			public const int ToolbarPlayingFalse = 2130838941;
+			
+			// aapt resource value: 0x7f02059e
+			public const int ToolbarPlayingTrue = 2130838942;
+			
+			// aapt resource value: 0x7f02059f
+			public const int ToolbarRecords = 2130838943;
+			
+			// aapt resource value: 0x7f0205a0
+			public const int ToolbarSearch = 2130838944;
+			
+			// aapt resource value: 0x7f0205a1
+			public const int ToolbarSheet = 2130838945;
+			
+			// aapt resource value: 0x7f0205a2
+			public const int tooltip_frame_dark = 2130838946;
+			
+			// aapt resource value: 0x7f0205a3
+			public const int tooltip_frame_light = 2130838947;
 			
 			static Drawable()
 			{

@@ -26,6 +26,7 @@
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                         <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
                         <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
+                        <!--<Setter Property="iOS:NavigationPage.IsNavigationBarTranslucent" Value="True" />-->
                     </Style>
 
                     <Style

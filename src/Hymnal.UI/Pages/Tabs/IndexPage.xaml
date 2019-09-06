@@ -8,5 +8,6 @@
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Index}"
+    iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:IndexViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}" />
