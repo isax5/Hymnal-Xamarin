@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(WrapInNavigationPage = true, Icon = "TabSettings")]
+    [MvxTabbedPagePresentation(WrapInNavigationPage = true)]
     public partial class SettingsPage : MvxContentPage<SettingsViewModel>
     {
         public SettingsPage()

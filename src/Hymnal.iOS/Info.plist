@@ -53,5 +53,11 @@
 	</array>
 	<key>MinimumOSVersion</key>
 	<string>11.0</string>
+	<key>UIAppFonts</key>
+	<array>
+	<string>FontAwesome5BrandsRegular.otf</string>
+	<string>FontAwesome5Regular.otf</string>
+	<string>FontAwesome5Solid.otf</string>
+	</array>
 </dict>
 </plist>

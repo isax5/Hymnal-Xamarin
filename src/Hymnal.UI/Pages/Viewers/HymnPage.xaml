@@ -3,6 +3,7 @@
     x:Class="Hymnal.UI.Pages.HymnPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.UI.Constants"
     xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
@@ -31,8 +32,13 @@
         <ToolbarItem
             x:Name="SheetToolbar"
             Command="{Binding OpenSheetCommand}"
-            IconImageSource="ToolbarSheet"
-            Priority="3" />
+            Priority="3">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeBrands}"
+                    Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>

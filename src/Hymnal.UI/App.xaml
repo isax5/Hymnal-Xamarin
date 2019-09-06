@@ -37,6 +37,49 @@
                         <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                     </Style>
+
+                    <!--  Icons  -->
+                    <OnPlatform
+                        x:Key="FontAwesomeBrands"
+                        x:TypeArguments="x:String">
+                        <On
+                            Platform="Android"
+                            Value="FontAwesome5Brands.otf#Regular" />
+                        <On
+                            Platform="iOS"
+                            Value="FontAwesome5Brands-Regular" />
+                        <On
+                            Platform="UWP"
+                            Value="/Assets/FontAwesome5Brands.otf#Font Awesome 5 Brands" />
+                    </OnPlatform>
+
+                    <OnPlatform
+                        x:Key="FontAwesomeSolid"
+                        x:TypeArguments="x:String">
+                        <On
+                            Platform="Android"
+                            Value="FontAwesome5Solid.otf#Regular" />
+                        <On
+                            Platform="iOS"
+                            Value="FontAwesome5Free-Solid" />
+                        <On
+                            Platform="UWP"
+                            Value="/Assets/FontAwesome5Solid.otf#Font Awesome 5 Free" />
+                    </OnPlatform>
+
+                    <OnPlatform
+                        x:Key="FontAwesomeRegular"
+                        x:TypeArguments="x:String">
+                        <On
+                            Platform="Android"
+                            Value="FontAwesome5Regular.otf#Regular" />
+                        <On
+                            Platform="iOS"
+                            Value="FontAwesome5Free-Regular" />
+                        <On
+                            Platform="UWP"
+                            Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
+                    </OnPlatform>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

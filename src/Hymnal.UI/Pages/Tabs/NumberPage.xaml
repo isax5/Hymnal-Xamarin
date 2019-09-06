@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+    xmlns:constans="clr-namespace:Hymnal.UI.Constants"
     xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
@@ -13,16 +14,32 @@
     x:TypeArguments="viewModels:NumberViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
+    <mvxViews:MvxContentPage.IconImageSource>
+        <FontImageSource
+            FontFamily="{StaticResource FontAwesomeSolid}"
+            Glyph="{x:Static constans:FontAwesome.BookReader}" />
+    </mvxViews:MvxContentPage.IconImageSource>
+
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="RecordsToolbarItem"
             Command="{Binding OpenRecordsCommand}"
-            IconImageSource="ToolbarRecords"
-            Priority="-1" />
+            Priority="-1">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static constans:FontAwesome.History}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
         <ToolbarItem
             Command="{Binding OpenSearchCommand}"
-            IconImageSource="ToolbarSearch"
-            Priority="1" />
+            Priority="1">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static constans:FontAwesome.Search}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>
@@ -98,7 +115,13 @@
                     CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
                     Text="{i18n:Translate Open}"
-                    WidthRequest="200" />
+                    WidthRequest="200">
+                    <Button.ImageSource>
+                        <FontImageSource
+                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            Glyph="{x:Static constans:FontAwesome.BookOpen}" />
+                    </Button.ImageSource>
+                </Button>
 
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup x:Name="OrientationStates">

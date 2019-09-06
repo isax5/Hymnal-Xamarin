@@ -3,6 +3,7 @@
     x:Class="Hymnal.UI.Pages.SettingsPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.UI.Constants"
     xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
@@ -10,6 +11,12 @@
     Title="{i18n:Translate Settings}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:SettingsViewModel">
+
+    <mvxViews:MvxContentPage.IconImageSource>
+        <FontImageSource
+            FontFamily="{StaticResource FontAwesomeSolid}"
+            Glyph="{x:Static constans:FontAwesome.Cog}" />
+    </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.Resources>
         <ResourceDictionary>
@@ -43,18 +50,38 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
                         </Grid.GestureRecognizers>
+
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
                             <RowDefinition Height="auto" />
                         </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Image
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            VerticalOptions="CenterAndExpand">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    Glyph="{x:Static constans:FontAwesome.GlobeAmericas}"
+                                    Color="Gray" />
+                            </Image.Source>
+                        </Image>
 
                         <Label
                             Grid.Row="0"
+                            Grid.Column="1"
                             Text="{i18n:Translate ChooseYourHymnal}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
 
                         <Label
                             Grid.Row="1"
+                            Grid.Column="1"
                             FontSize="Micro"
                             TextColor="{DynamicResource SecondaryTextColor}">
                             <Label.FormattedText>
@@ -74,7 +101,6 @@
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="auto" />
                             <ColumnDefinition Width="auto" />
                         </Grid.ColumnDefinitions>
 

@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    [MvxTabbedPagePresentation(WrapInNavigationPage = false, Icon = "TabFavorites")]
+    [MvxTabbedPagePresentation(WrapInNavigationPage = false)]
     public partial class FavoritesPage : MvxContentPage<FavoritesViewModel>
     {
         public FavoritesPage()
