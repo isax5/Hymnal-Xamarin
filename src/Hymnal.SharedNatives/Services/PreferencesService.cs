@@ -1,3 +1,4 @@
+using System;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
 using Newtonsoft.Json;
@@ -25,7 +26,17 @@ namespace Hymnal.SharedNatives.Services
             {
                 var text = JsonConvert.SerializeObject(value);
                 Preferences.Set(nameof(ConfiguratedHymnalLanguage), text);
+
+                if (hymnalLanguageConfiguratedChanged != null)
+                    hymnalLanguageConfiguratedChanged.Invoke(this, value);
             }
+        }
+
+        private static EventHandler<HymnalLanguage> hymnalLanguageConfiguratedChanged;
+        public event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged
+        {
+            add => hymnalLanguageConfiguratedChanged += value;
+            remove => hymnalLanguageConfiguratedChanged -= value;
         }
 
         public string LastVersionOpened

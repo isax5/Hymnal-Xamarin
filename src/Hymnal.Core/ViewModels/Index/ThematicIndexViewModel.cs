@@ -42,20 +42,27 @@ namespace Hymnal.Core.ViewModels
 
         public override async Task Initialize()
         {
-            await CheckAsync();
+            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+
+            HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
+            await CheckAsync(language);
+
             await base.Initialize();
         }
 
-        public override void ViewAppearing()
+        ~ThematicIndexViewModel()
         {
-            base.ViewAppearing();
-            CheckAsync();
+            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        private async Task CheckAsync()
+        private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
-            HymnalLanguage newLanguage = preferencesService.ConfiguratedHymnalLanguage;
+            await CheckAsync(e);
+        }
 
+
+        private async Task CheckAsync(HymnalLanguage newLanguage)
+        {
             if (loadedLanguage == null)
             {
                 loadedLanguage = newLanguage;

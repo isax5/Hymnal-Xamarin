@@ -32,7 +32,12 @@ namespace Hymnal.Core.Services
             {
                 var file = await filesService.ReadFileAsync(language.Configuration().HymnsFileName);
                 List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
-                HymnsDictionary.Add(language.Id, hymns);
+
+                lock (HymnsDictionary)
+                {
+                    if (!HymnsDictionary.ContainsKey(language.Id))
+                        HymnsDictionary.Add(language.Id, hymns);
+                }
             }
 
             return HymnsDictionary[language.Id];
@@ -56,7 +61,12 @@ namespace Hymnal.Core.Services
             {
                 var file = await filesService.ReadFileAsync(language.Configuration().ThematicHymnsFileName);
                 List<Thematic> thematicList = JsonConvert.DeserializeObject<List<Thematic>>(file);
-                ThematicDictionary.Add(language.Id, thematicList);
+
+                lock (ThematicDictionary)
+                {
+                    if (!ThematicDictionary.ContainsKey(language.Id))
+                        ThematicDictionary.Add(language.Id, thematicList);
+                }
             }
 
             return ThematicDictionary[language.Id];

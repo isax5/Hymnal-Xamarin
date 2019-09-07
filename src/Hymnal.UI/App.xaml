@@ -17,9 +17,11 @@
 
                     <x:String x:Key="BackgroundImageFile">Background</x:String>
 
-                    <!--  White filter for lists and Hymns letters  -->
+                    <!--  White filter for lists  -->
                     <x:Double x:Key="BackgroundWhiteFilter">0.4</x:Double>
-                    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.5</x:Double>
+
+                    <!--  White filter for Hymns letters  -->
+                    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.6</x:Double>
 
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
@@ -37,8 +39,11 @@
                         <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                     </Style>
+                </ResourceDictionary>
 
-                    <!--  Icons  -->
+                <!--  Icons  -->
+                <ResourceDictionary>
+
                     <OnPlatform
                         x:Key="FontAwesomeBrands"
                         x:TypeArguments="x:String">
@@ -80,6 +85,7 @@
                             Platform="UWP"
                             Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
                     </OnPlatform>
+
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
