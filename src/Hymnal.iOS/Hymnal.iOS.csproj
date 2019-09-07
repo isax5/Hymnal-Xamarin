@@ -322,7 +322,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
-  <!-- piano sheet -->
+  <!-- PIANO SHEET -->
+  <!--
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_001.png" />
   </ItemGroup>
@@ -3683,7 +3684,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
-  <!--  piano sheet   -->
+  -->
+  <!--  PIANO SHEET   -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
