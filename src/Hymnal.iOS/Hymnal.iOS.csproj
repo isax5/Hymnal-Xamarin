@@ -60,7 +60,7 @@
     <OutputPath>bin\iPhone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <MtouchArch>ARMv7, ARM64</MtouchArch>
+    <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>iPhone Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
