@@ -16,6 +16,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IPreferencesService preferencesService;
         private readonly IDialogService dialogService;
         private readonly IAppInformationService appInformationService;
+        private readonly IBrowserService browserService;
 
         public int HymnFontSize
         {
@@ -50,13 +51,15 @@ namespace Hymnal.Core.ViewModels
             IMvxNavigationService navigationService,
             IPreferencesService preferencesService,
             IDialogService dialogService,
-            IAppInformationService appInformationService
+            IAppInformationService appInformationService,
+            IBrowserService browserService
             )
         {
             this.navigationService = navigationService;
             this.preferencesService = preferencesService;
             this.dialogService = dialogService;
             this.appInformationService = appInformationService;
+            this.browserService = browserService;
         }
 
         public override async Task Initialize()
@@ -105,7 +108,8 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand DeveloperCommand => new MvxCommand(DeveloperExecute);
         private void DeveloperExecute()
         {
-            navigationService.Navigate<DevelopersViewModel>();
+            browserService.OpenBrowserAsync(@"https://storage.googleapis.com/hymn-music/about/index.html");
+            //navigationService.Navigate<DevelopersViewModel>();
         }
     }
 }

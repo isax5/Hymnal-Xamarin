@@ -14,10 +14,6 @@
           <source>Close</source>
           <target state="final">Закрыть</target>
         </trans-unit>
-        <trans-unit id="Developer" translate="yes" xml:space="preserve">
-          <source>Developer</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Разработчик</target>
-        </trans-unit>
         <trans-unit id="Developing" translate="yes" xml:space="preserve">
           <source>Developing</source>
           <target state="needs-review-translation">Развивающийся</target>
@@ -99,6 +95,10 @@
         <trans-unit id="Ok" translate="yes" xml:space="preserve">
           <source>Ok</source>
           <target state="translated">Хорошо</target>
+        </trans-unit>
+        <trans-unit id="Developers" translate="yes" xml:space="preserve">
+          <source>Developers</source>
+          <target state="translated">Разработчики</target>
         </trans-unit>
       </group>
     </body>

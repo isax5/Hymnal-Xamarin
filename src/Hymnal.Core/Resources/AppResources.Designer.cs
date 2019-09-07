@@ -115,11 +115,11 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Developer.
+        ///   Busca una cadena traducida similar a Developers.
         /// </summary>
-        internal static string Developer {
+        internal static string Developers {
             get {
-                return ResourceManager.GetString("Developer", resourceCulture);
+                return ResourceManager.GetString("Developers", resourceCulture);
             }
         }
         

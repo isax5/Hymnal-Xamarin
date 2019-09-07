@@ -165,18 +165,16 @@
                 -->
 
                 <!--  Developer  -->
-                <!--
                 <ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
                         <Label
-                            Text="{i18n:Translate Developer}"
+                            Text="{i18n:Translate Developing}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
-                -->
 
                 <TextCell
                     Detail="{Binding AppVersionString}"

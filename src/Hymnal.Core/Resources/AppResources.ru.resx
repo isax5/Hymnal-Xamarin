@@ -18,9 +18,6 @@
   <data name="Close" xml:space="preserve">
     <value>Закрыть</value>
   </data>
-  <data name="Developer" xml:space="preserve">
-    <value>Разработчик</value>
-  </data>
   <data name="Developing" xml:space="preserve">
     <value>Развивающийся</value>
   </data>
@@ -82,5 +79,8 @@
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Хорошо</value>
+  </data>
+  <data name="Developers" xml:space="preserve">
+    <value>Разработчики</value>
   </data>
 </root>
