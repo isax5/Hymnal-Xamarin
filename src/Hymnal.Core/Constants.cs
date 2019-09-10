@@ -60,14 +60,16 @@ namespace Hymnal.Core
                 InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/spanish/1962%20version/instrumental/###.mp3"
             },
 
-
+            // PORTUGUESE
+            // default portuguese version
             new HymnalLanguage
             {
                 Id = "pt-newVersion",
                 Name = "Nova versão 2010",
                 Detail = "Português",
                 TwoLetterISOLanguageName = "pt",
-                HymnsFileName = "NewHymnal.pt.json"
+                HymnsFileName = "NewHymnal.pt.json",
+                ThematicHymnsFileName = "NewHymnalThematicList.pt.json"
             },
 
             // RUSSIAN

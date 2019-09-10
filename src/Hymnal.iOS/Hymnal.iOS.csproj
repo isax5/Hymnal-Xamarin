@@ -171,6 +171,7 @@
     <BundleResource Include="Resources\FontAwesome5Solid.otf" />
     <BundleResource Include="Resources\FontAwesome5BrandsRegular.otf" />
     <BundleResource Include="Resources\NewHymnal.pt.json" />
+    <BundleResource Include="Resources\NewHymnalThematicList.pt.json" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
