@@ -10,6 +10,8 @@ namespace Hymnal.SharedNatives.Services
         private static readonly LibVLC LibVLC = new LibVLC();
         private static readonly MediaPlayer MediaPlayer = new MediaPlayer(LibVLC);
 
+        public bool IsPlaying => MediaPlayer.IsPlaying;
+
         public event EventHandler<EventArgs> Playing
         {
             add => MediaPlayer.Playing += value;
@@ -50,7 +52,5 @@ namespace Hymnal.SharedNatives.Services
         }
 
         public void Stop() => MediaPlayer.Stop();
-
-        public bool IsPlaying => MediaPlayer.IsPlaying;
     }
 }

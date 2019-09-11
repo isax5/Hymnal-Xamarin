@@ -65,11 +65,12 @@ namespace Hymnal.Core
             new HymnalLanguage
             {
                 Id = "pt-newVersion",
-                Name = "Nova versão 2010",
+                Name = "Nova versão 1996",
                 Detail = "Português",
                 TwoLetterISOLanguageName = "pt",
                 HymnsFileName = "NewHymnal.pt.json",
-                ThematicHymnsFileName = "NewHymnalThematicList.pt.json"
+                ThematicHymnsFileName = "NewHymnalThematicList.pt.json",
+                SungMusic = @"https://storage.googleapis.com/hymn-music/portuguese/1996%20version/sung/###.mp3"
             },
 
             // RUSSIAN

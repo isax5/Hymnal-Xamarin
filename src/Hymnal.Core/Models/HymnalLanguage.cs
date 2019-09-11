@@ -16,7 +16,9 @@ namespace Hymnal.Core.Models
 
         public string SungMusic { get; set; }
         public string InstrumentalMusic { get; set; }
-        public bool SupportMusic => !string.IsNullOrWhiteSpace(SungMusic) || !string.IsNullOrWhiteSpace(InstrumentalMusic);
+        public bool SupportInstrumentalMusic => !string.IsNullOrWhiteSpace(InstrumentalMusic);
+        public bool SupportSungMusic => !string.IsNullOrWhiteSpace(SungMusic);
+        public bool SupportMusic => SupportInstrumentalMusic || SupportSungMusic;
 
         public string HymnsSheetsFileName { get; set; }
         public bool SupportSheets => !string.IsNullOrWhiteSpace(HymnsSheetsFileName);

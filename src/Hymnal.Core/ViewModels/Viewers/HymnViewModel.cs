@@ -189,8 +189,12 @@ namespace Hymnal.Core.ViewModels
             }
             else
             {
-                mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
-                // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
+                if (Language.SupportInstrumentalMusic)
+                    mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
+                else
+                    mediaService.Play(language.GetSungURL(Hymn.Number));
+
+                // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
                 IsPlaying = true;
             }
         }

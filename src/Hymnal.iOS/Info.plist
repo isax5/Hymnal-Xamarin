@@ -7,9 +7,9 @@
 	<key>CFBundleIdentifier</key>
 	<string>net.ddns.HimnarioAdventistaSPA</string>
 	<key>CFBundleShortVersionString</key>
-	<string>4.0.1</string>
+	<string>4.0.2</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.1</string>
+	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIDeviceFamily</key>

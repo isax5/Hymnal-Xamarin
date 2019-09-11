@@ -165,6 +165,20 @@ namespace Hymnal.Core.Extensions
                     case 79:
                         return "750";
 
+                    case 80:
+                    case 81:
+                    case 82:
+                    case 83:
+                    case 84:
+                        return "800";
+
+                    case 85:
+                    case 86:
+                    case 87:
+                    case 88:
+                    case 89:
+                        return "850";
+
                     default:
                         break;
                 }
@@ -178,16 +192,14 @@ namespace Hymnal.Core.Extensions
         {
             return hymns.GroupBy(h =>
             {
-                if (!char.IsLetter(h.Title[0]))
-                    return h.Title[1].ToString();
+                var letterToUse = 0;
 
-                if (h.Title[0].Equals('Á'))
-                    return "A";
+                while (!char.IsLetter(h.Title[letterToUse]))
+                {
+                    letterToUse++;
+                }
 
-                if (h.Title[0].Equals('É'))
-                    return "E";
-
-                return h.Title[0].ToString();
+                return h.Title[letterToUse].ToString().StringRender();
             })
             .Select(h => new ObservableGroupCollection<string, Hymn>(h));
 
@@ -208,38 +220,10 @@ namespace Hymnal.Core.Extensions
         {
             return hymns.Where(h =>
             {
-                var queryRendered = query.ToUpper().Trim();
+                var queryRendered = query.StringRender().Trim();
 
-                var titleRendered = h.Title.ToUpper()
-                .Replace('Á', 'A')
-                .Replace('É', 'E')
-                .Replace('Í', 'I')
-                .Replace('Ó', 'O')
-                .Replace('Ú', 'U')
-                .Replace('Ñ', 'N')
-                .Replace("¡", string.Empty)
-                .Replace("!", string.Empty)
-                .Replace("¿", string.Empty)
-                .Replace("?", string.Empty)
-                .Replace(",", string.Empty)
-                .Replace(".", string.Empty)
-                .Replace(":", string.Empty);
-
-                var contentRendered = h.Content.ToUpper()
-                .Replace('Á', 'A')
-                .Replace('É', 'E')
-                .Replace('Í', 'I')
-                .Replace('Ó', 'O')
-                .Replace('Ú', 'U')
-                .Replace('Ñ', 'N')
-                .Replace("¡", string.Empty)
-                .Replace("!", string.Empty)
-                .Replace("¿", string.Empty)
-                .Replace("?", string.Empty)
-                .Replace(",", string.Empty)
-                .Replace(".", string.Empty)
-                .Replace(":", string.Empty);
-
+                var titleRendered = h.Title.StringRender();
+                var contentRendered = h.Content.StringRender();
 
                 return
                 h.Number.ToString().ToUpper().Contains(queryRendered) ||
@@ -250,6 +234,46 @@ namespace Hymnal.Core.Extensions
                 h.Content.ToUpper().Contains(queryRendered) ||
                 contentRendered.Contains(queryRendered);
             });
+        }
+
+        public static string StringRender(this string query)
+        {
+            return query
+                .ToUpper()
+                .Replace('Á', 'A')
+                .Replace('À', 'A')
+                .Replace('Ã', 'A')
+                .Replace('Â', 'A')
+                .Replace('Ă', 'A')
+                .Replace('É', 'E')
+                .Replace('È', 'E')
+                .Replace('Ê', 'E')
+                .Replace('Í', 'I')
+                .Replace('Ì', 'I')
+                .Replace('Ó', 'O')
+                .Replace('Ò', 'O')
+                .Replace('Õ', 'O')
+                .Replace('Ô', 'O')
+                .Replace('Ú', 'U')
+                .Replace('Ù', 'U')
+                .Replace('Ü', 'U')
+                .Replace('Ñ', 'N')
+                .Replace('Ç', 'C')
+                .Replace("-", string.Empty)
+                .Replace("–", string.Empty)
+                .Replace("—", string.Empty)
+                .Replace("”", string.Empty)
+                .Replace("“", string.Empty)
+                .Replace("’", string.Empty)
+                .Replace("'", string.Empty)
+                .Replace("¡", string.Empty)
+                .Replace("!", string.Empty)
+                .Replace("¿", string.Empty)
+                .Replace("?", string.Empty)
+                .Replace(",", string.Empty)
+                .Replace(".", string.Empty)
+                .Replace(";", string.Empty)
+                .Replace(":", string.Empty);
         }
     }
 
@@ -267,14 +291,5 @@ namespace Hymnal.Core.Extensions
         {
             Key = group.Key;
         }
-    }
-
-    /// <summary>
-    /// Opciones de agrupar himnos
-    /// </summary>
-    public enum GroupHimnos
-    {
-        Numero,
-        Titulo
     }
 }
