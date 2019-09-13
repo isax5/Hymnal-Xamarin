@@ -52,7 +52,7 @@
 		<string>ru</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>11.0</string>
+	<string>10.0</string>
 	<key>UIAppFonts</key>
 	<array>
 	<string>FontAwesome5BrandsRegular.otf</string>

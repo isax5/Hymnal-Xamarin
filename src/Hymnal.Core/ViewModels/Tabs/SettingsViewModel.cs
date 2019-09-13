@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.Core.Extensions;
 using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
@@ -65,7 +66,7 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
             await base.Initialize();
-            HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage;
+            HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage.Configuration();
 
             AppVersionString = appInformationService.VersionString;
             AppBuildString = appInformationService.BuildString;
