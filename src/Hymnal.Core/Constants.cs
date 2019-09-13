@@ -78,11 +78,13 @@ namespace Hymnal.Core
             new HymnalLanguage
             {
                 Id = "ru-newVersion",
-                Name = "Гимны Надежды",
+                Name = "Гимны Надежды 1997",
                 Detail = "Русский",
                 TwoLetterISOLanguageName = "ru",
                 HymnsFileName = "NewHymnal.ru.json",
-                HymnsSheetsFileName = "PianoSheet_NewHymnal_ru_###"
+                ThematicHymnsFileName = "NewHymnalThematicList.ru.json",
+                HymnsSheetsFileName = "PianoSheet_NewHymnal_ru_###",
+                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/russian/1997%20version/instrumental/###.mp3"
             }
         };
 

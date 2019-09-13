@@ -91,6 +91,7 @@
     <AndroidAsset Include="Assets\FontAwesome5Solid.otf" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.pt.json" />
     <AndroidAsset Include="Assets\NewHymnal.pt.json" />
+    <AndroidAsset Include="Assets\NewHymnalThematicList.ru.json" />
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

@@ -115,8 +115,9 @@
     <Content Include="OldHymnalThematicList.es.json" />
     <Content Include="NewHymnalThematicList.en.json" />
     <Content Include="OldHymnalThematicList.en.json" />
-    <None Include="NewHymnal.pt.json" />
-    <None Include="NewHymnalThematicList.pt.json" />
+    <Content Include="NewHymnal.pt.json" />
+    <Content Include="NewHymnalThematicList.pt.json" />
+    <Content Include="NewHymnalThematicList.ru.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BadgeLogo.scale-100.png" />
