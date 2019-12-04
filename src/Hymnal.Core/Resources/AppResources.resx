@@ -129,10 +129,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
   </data>
-  <data name="ChooseYourHymnal" xml:space="preserve">
-    <value>Choose your hymnal</value>
-    <comment>Settings. Choose hymnal</comment>
-  </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
@@ -184,6 +180,10 @@
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="VersionsAndLanguages" xml:space="preserve">
+    <value>Versions and languages</value>
+    <comment>Settings. Choose hymnal</comment>
   </data>
   <data name="WeHadAProblem" xml:space="preserve">
     <value>We had a problem</value>

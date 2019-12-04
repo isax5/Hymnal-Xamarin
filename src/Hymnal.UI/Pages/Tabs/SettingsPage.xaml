@@ -13,9 +13,7 @@
     x:TypeArguments="viewModels:SettingsViewModel">
 
     <mvxViews:MvxContentPage.IconImageSource>
-        <FontImageSource
-            FontFamily="{StaticResource FontAwesomeSolid}"
-            Glyph="{x:Static constans:FontAwesome.Cog}" />
+        <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static constans:FontAwesome.Cog}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.Resources>
@@ -76,7 +74,7 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
-                            Text="{i18n:Translate ChooseYourHymnal}"
+                            Text="{i18n:Translate VersionsAndLanguages}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
 
                         <Label
@@ -170,9 +168,7 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label
-                            Text="{i18n:Translate Developing}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                        <Label Text="{i18n:Translate Developing}" TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
 

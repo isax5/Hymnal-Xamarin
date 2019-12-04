@@ -43,7 +43,7 @@ namespace Hymnal.Core.Helpers
     /// </summary>
     public static class Languages
     {
-        public static string ChooseYourHymnal => AppResources.ChooseYourHymnal;
+        public static string ChooseYourHymnal => AppResources.VersionsAndLanguages;
         public static string Cancel => AppResources.Cancel;
         public static string WeHadAProblem => AppResources.WeHadAProblem;
         public static string Ok => AppResources.Ok;

@@ -71,11 +71,6 @@
           <source>Cancel</source>
           <target state="final" state-qualifier="tm-suggestion">Cancelar</target>
         </trans-unit>
-        <trans-unit id="ChooseYourHymnal" translate="yes" xml:space="preserve">
-          <source>Choose your hymnal</source>
-          <target state="final">Elige tu himnario</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
-        </trans-unit>
         <trans-unit id="AppVersion" translate="yes" xml:space="preserve">
           <source>App Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versión de la aplicación</target>
@@ -99,6 +94,11 @@
         <trans-unit id="Developers" translate="yes" xml:space="preserve">
           <source>Developers</source>
           <target state="translated">Desarrolladores</target>
+        </trans-unit>
+        <trans-unit id="VersionsAndLanguages" translate="yes" xml:space="preserve">
+          <source>Versions and languages</source>
+          <target state="translated">Versiones e idiomas</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
         </trans-unit>
       </group>
     </body>

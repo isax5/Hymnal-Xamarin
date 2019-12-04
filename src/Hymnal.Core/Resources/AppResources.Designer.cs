@@ -97,15 +97,6 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Choose your hymnal.
-        /// </summary>
-        internal static string ChooseYourHymnal {
-            get {
-                return ResourceManager.GetString("ChooseYourHymnal", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Close.
         /// </summary>
         internal static string Close {
@@ -255,6 +246,15 @@ namespace Hymnal.Core.Resources {
         internal static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Versions and languages.
+        /// </summary>
+        internal static string VersionsAndLanguages {
+            get {
+                return ResourceManager.GetString("VersionsAndLanguages", resourceCulture);
             }
         }
         
