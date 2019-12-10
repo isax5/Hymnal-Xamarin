@@ -5,3 +5,4 @@ This version of the app has many languages:
 - English
 - Spanish
 - Russian
+- Portuguese
