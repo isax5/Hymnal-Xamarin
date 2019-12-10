@@ -51,7 +51,7 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            BackgroundColor="{DynamicResource BackgroundColorFilterHymnLetters}"
             Opacity="{DynamicResource BackgroundWhiteFilterHymnLetters}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"

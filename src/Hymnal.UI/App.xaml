@@ -11,17 +11,9 @@
         <!--  Application resource dictionary  -->
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
-                <resources:Colors />
-
                 <ResourceDictionary>
 
                     <x:String x:Key="BackgroundImageFile">Background</x:String>
-
-                    <!--  White filter for lists  -->
-                    <x:Double x:Key="BackgroundWhiteFilter">0.5</x:Double>
-
-                    <!--  White filter for Hymns letters  -->
-                    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.6</x:Double>
 
                     <Style TargetType="NavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />

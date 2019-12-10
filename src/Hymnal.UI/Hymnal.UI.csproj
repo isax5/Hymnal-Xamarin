@@ -24,9 +24,6 @@
     <Compile Update="Pages\Index\Thematic\ThematicHymnsListPage.xaml.cs">
       <DependentUpon>ThematicHymnsListPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Resources\Colors.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -77,6 +74,12 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Tabs\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DarkTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\WhiteTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

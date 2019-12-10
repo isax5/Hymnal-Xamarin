@@ -10,7 +10,8 @@
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Settings}"
     iOS:Page.UseSafeArea="True"
-    x:TypeArguments="viewModels:SettingsViewModel">
+    x:TypeArguments="viewModels:SettingsViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static constans:FontAwesome.Cog}" />

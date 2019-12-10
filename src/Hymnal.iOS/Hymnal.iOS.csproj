@@ -78,6 +78,7 @@
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Renderers\ContentPageNavbarButtonRenderer.cs" />
     <Compile Include="Renderers\ContentPageRenderer.cs" />
     <Compile Include="Renderers\CustomCarouselPageRenderer.cs" />
     <Compile Include="Renderers\CustomEntryRenderer.cs" />

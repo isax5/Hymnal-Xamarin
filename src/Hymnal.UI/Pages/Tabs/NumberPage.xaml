@@ -52,6 +52,14 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            Opacity="{DynamicResource BackgroundMainPageFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <StackLayout
             x:Name="MainStack"
             HorizontalOptions="CenterAndExpand"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -64,7 +72,7 @@
                 Padding="0,0,0,60">
                 <Grid Padding="0">
                     <Frame
-                        BackgroundColor="White"
+                        BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
                         CornerRadius="10"
                         HasShadow="True"
                         HorizontalOptions="CenterAndExpand"
@@ -82,6 +90,7 @@
                             FontAttributes="Bold"
                             FontSize="45"
                             Text="#"
+                            TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="FillAndExpand"
                             VerticalTextAlignment="Center" />
 
@@ -96,7 +105,8 @@
                             HorizontalTextAlignment="Center"
                             Keyboard="Numeric"
                             Placeholder="...."
-                            PlaceholderColor="Black"
+                            PlaceholderColor="{DynamicResource PrimaryLightColor}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="CenterAndExpand"
                             Visual="Default"
                             WidthRequest="150">
@@ -119,7 +129,8 @@
                     <Button.ImageSource>
                         <FontImageSource
                             FontFamily="{StaticResource FontAwesomeSolid}"
-                            Glyph="{x:Static constans:FontAwesome.BookOpen}" />
+                            Glyph="{x:Static constans:FontAwesome.BookOpen}"
+                            Color="{DynamicResource NavBarTextColor}" />
                     </Button.ImageSource>
                 </Button>
 
