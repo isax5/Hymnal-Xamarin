@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Hymnal.Core.ViewModels.Main;
+using MediaManager;
 using MvvmCross.Forms.Platforms.Android.Views;
 using Xamarin.Forms;
 
@@ -19,7 +20,9 @@ namespace Hymnal.Droid
 
             base.OnCreate(bundle);
 
+            // Initializacion
             FormsMaterial.Init(this, bundle);
+            CrossMediaManager.Current.Init(this);
             Xamarin.Essentials.Platform.Init(this, bundle);
         }
 

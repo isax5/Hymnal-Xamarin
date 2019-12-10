@@ -1,6 +1,7 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
 using Hymnal.UI.Services;
+using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Uap.Core;
 
@@ -22,6 +23,12 @@ namespace Hymnal.UWP
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
             Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
             Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
+        }
+
+        public override void InitializePrimary()
+        {
+            base.InitializePrimary();
+            CrossMediaManager.Current.Init();
         }
     }
 }
