@@ -36,8 +36,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchLink>None</MtouchLink>
-    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchArch>x86_64</MtouchArch>
     <ConsolePause>false</ConsolePause>
+    <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -62,11 +63,11 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>iPhone Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
+    <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI</MtouchExtraArgs>
     <MtouchLink>SdkOnly</MtouchLink>
-    <CodesignProvision>Himnario Adventista SPA -iOS Distr. March 21, 2019</CodesignProvision>
+    <CodesignProvision>Adventist Hymnal Distribution</CodesignProvision>
     <BuildIpa>true</BuildIpa>
     <IpaIncludeArtwork>false</IpaIncludeArtwork>
     <OptimizePNGs>true</OptimizePNGs>
@@ -321,7 +322,6 @@
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
   <!-- PIANO SHEET -->
-  <!--
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_001.png" />
   </ItemGroup>
@@ -3682,7 +3682,6 @@
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
-  -->
   <!--  PIANO SHEET   -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -6,8 +6,6 @@
 	<string>Hymnal</string>
 	<key>CFBundleIdentifier</key>
 	<string>net.ddns.HimnarioAdventistaSPA</string>
-	<key>CFBundleVersion</key>
-	<string>1.0.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIDeviceFamily</key>
@@ -87,5 +85,7 @@
 			<string>HISTORY_SHORTCUT_ITEM_SUBTITLE</string>
 		</dict>
 	</array>
+	<key>CFBundleVersion</key>
+	<string>1.0.1</string>
 </dict>
 </plist>
