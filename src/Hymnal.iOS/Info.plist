@@ -56,7 +56,7 @@
 		<string>FontAwesome5Solid.otf</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>10.0</string>
+	<string>11.0</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
@@ -64,5 +64,28 @@
 	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>4.1.0</string>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>SearchAction</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeSearch</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>SEARCH_SHORTCUT_ITEM_TITLE</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>SEARCH_SHORTCUT_ITEM_SUBTITLE</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemType</key>
+			<string>HistoryAction</string>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeTime</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>HISTORY_SHORTCUT_ITEM_TITLE</string>
+			<key>UIApplicationShortcutItemSubtitle</key>
+			<string>HISTORY_SHORTCUT_ITEM_SUBTITLE</string>
+		</dict>
+	</array>
 </dict>
 </plist>

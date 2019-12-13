@@ -29,7 +29,7 @@
 
     <!--  Background Color Pages and numeric searcher in main page  -->
     <Color x:Key="PrimaryBackgroudColor">#000000</Color>
-    <!--  Hymn list's pages background  -->
+    <!--  Hymn list's pages background and settings page  -->
     <Color x:Key="SecondaryBackgroudColor">#000000</Color>
     <!--  Hymn lyrics background  -->
     <Color x:Key="BackgroundColorFilterHymnLetters">#000000</Color>
