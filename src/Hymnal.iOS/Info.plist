@@ -54,7 +54,7 @@
 		<string>FontAwesome5Solid.otf</string>
 	</array>
 	<key>MinimumOSVersion</key>
-	<string>11.0</string>
+	<string>13.0</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>audio</string>
@@ -86,6 +86,8 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0.1</string>
+	<string>1.0.3</string>
+	<key>CFBundleName</key>
+	<string>Hymnal</string>
 </dict>
 </plist>

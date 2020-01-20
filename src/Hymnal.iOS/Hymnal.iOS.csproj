@@ -175,6 +175,512 @@
     <BundleResource Include="Resources\NewHymnal.pt.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.pt.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.ru.json" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_229_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_323.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_337.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_291_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_121.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_135.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_070_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_109.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_055.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_041.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_069.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_096.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_082.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_257.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_243.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_294.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_280.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_281.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_069_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_295.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_242.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_368_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_256.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_083.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_230_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_097.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_068.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_174_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_040.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_054.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_108.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_248_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_134.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_120.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_336.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_322.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_334.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_320.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_308.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355_3.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_136.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_056_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_122.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_042.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_056.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_081.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_095.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_240.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_254.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_268.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_277_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_283.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_232_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_297.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_296.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_282.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_269.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_255.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_241.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_253_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_094.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_080.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_057.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_117_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_043.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_293_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_123.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_137.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355_2.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_373_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_309.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_321.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_335.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_319.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_331.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_325.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_133.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_127.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_047.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_033_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_053.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_076_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_084.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_090.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_332_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_279.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_245.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_251.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_286.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_292.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_293.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_287.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_353_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_250.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_052_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_278.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_091.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_085.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_052.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_046.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_273_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_126.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_132.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_324.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_330.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_318.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_326.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_332.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_118.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_124.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_130.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_078.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_050.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_044.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_093.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_087.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_351_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_252.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_209_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_246.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_291.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_285.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_284.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_290.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_375_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_247.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_253.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_086.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_169_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_092.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_045.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_268_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_051.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_079.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_194_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_154_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_131.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_125.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_119.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_333.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_327.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_340.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_354.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_368.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_383.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_233_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_142.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_156.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_097_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_181.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_195.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_036.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_057_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_022.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370_2.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_234.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_220.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_208.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_209.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_221.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_235.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_292_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370_3.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_023.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_037.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_194.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_180.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_157.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_143.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_382.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_369.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_341.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_357.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_151_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_343.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_380.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_155.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_141.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_169.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_196.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_009_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_182.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_021.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_035.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_034_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_009.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_223.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_228_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_237.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_354_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_236.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_222.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_148_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_008.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_034.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_020.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_183.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_197.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_168.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_140.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_154.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_381.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_068_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_342.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_356.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_369_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_208_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_352.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_346.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_385.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_178.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_150.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_051_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_144.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_014_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_193.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_350_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_315_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_187.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_018.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_024.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_030.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_226.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_232.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_235_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_233.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_227.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_110_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_031.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_025.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_019.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_168_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_186.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_192.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_294_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_145.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_151.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_179.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_384.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_374_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_331_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_347.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_030_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_353.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_379.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_345.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_351.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_296_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_147.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_153.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_184.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_376_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_190.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_333_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_033.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_027.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_219.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_231.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_225.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_213_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_256_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_224.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_230.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_218.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_026.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_032.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_191.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_185.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_152.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_146.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_350.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_344.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_378.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_361.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_375.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_142_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_349.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_163.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_177.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_188.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_017.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_003.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_027_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_062_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_215.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_201.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_229.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_283_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_046_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_228.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_200.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_214.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_002.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_016.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_189.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_267_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_222_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_166_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_176.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_162.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_348.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_374.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_360.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_376.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_362.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_164_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_220_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_174.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_160.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_148.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_014.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_028.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_345_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_202.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_216.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_217.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_203.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_138_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_029.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_015.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_001.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_241_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_149.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_161.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_175.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_363.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_377.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_278_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_373.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_367.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_021_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_064_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_159.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_171.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_165.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_358_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_039.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_005.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_011.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_101_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_207.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_213.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_212.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_206.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_010.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_004.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_038.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_118_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_164.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_170.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_158.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_366.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_372.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_358.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_364.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_042_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_166.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_172.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_199.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_343_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_012.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_006.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_238.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_162_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_210.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_204.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_263_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_205.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_211.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_239.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_007.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_013.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_146_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_198.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_173.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_167.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_367_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_371.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_365.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_359.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_302.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_316.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_259_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_158_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_100.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_114.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_045_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_128.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_074.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_060.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_048.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_276.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_262.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_165_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_289.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_221_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_288.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_318_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_263.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_277.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_240_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_049.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_141_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_061.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_075.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_129.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_115.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_101.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_325_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_061_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_024_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_317.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_303.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_315.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_301.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_329.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_282_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_117.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_103.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_063_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_063.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_077.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_088.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_261.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_275.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_249.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_143_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_242_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_248.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_274.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_260.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_089.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_266_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_122_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_076.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_062.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_102.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_116.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_346_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_002_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_328.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_300.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_314.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_163_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_338.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_310.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_304.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_227_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_112.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_106.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_066.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_072.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_099.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_258.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_264.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_270.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_271.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_265.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_067_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_022_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_259.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_098.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_073.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_067.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_107.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_113.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_147_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_305.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_311.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_339.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_100_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_307.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_313.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_139.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_105.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_111.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_058_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_020_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_059.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_071.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_065.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_279_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_273.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_267.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_298.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_299.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_266.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_272.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_119_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_064.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_070.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_058.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_260_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_110.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_104.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_124_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_161_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_138.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_039_1.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_312.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_306.png" />
+    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_081_1.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
@@ -2164,1525 +2670,6 @@
   <ItemGroup>
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_614.png" />
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_001.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_002.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_002_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_003.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_004.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_005.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_006.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_007.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_008.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_009.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_009_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_010.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_011.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_012.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_013.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_014.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_014_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_015.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_016.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_017.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_018.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_019.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_020.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_020_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_021.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_021_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_022.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_022_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_023.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_024.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_024_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_025.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_026.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_027.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_027_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_028.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_029.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_030.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_030_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_031.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_032.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_033.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_033_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_034.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_034_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_035.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_036.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_037.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_038.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_039.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_039_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_040.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_041.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_042.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_042_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_043.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_044.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_045.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_045_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_046.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_046_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_047.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_048.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_049.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_050.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_051.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_051_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_052.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_052_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_053.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_054.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_055.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_056.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_056_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_057.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_057_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_058.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_058_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_059.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_060.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_061.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_061_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_062.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_062_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_063.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_063_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_064.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_064_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_065.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_066.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_067.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_067_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_068.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_068_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_069.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_069_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_070.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_070_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_071.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_072.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_073.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_074.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_075.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_076.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_076_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_077.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_078.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_079.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_080.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_081.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_081_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_082.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_083.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_084.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_085.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_086.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_087.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_088.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_089.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_090.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_091.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_092.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_093.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_094.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_095.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_096.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_097.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_097_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_098.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_099.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_100_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_101.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_101_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_102.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_103.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_104.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_105.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_106.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_107.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_108.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_109.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_110.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_110_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_111.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_112.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_113.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_114.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_115.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_116.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_116_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_117.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_117_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_118.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_118_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_119.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_120.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_121.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_121_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_122.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_123.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_123_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_124.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_125.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_126.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_127.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_128.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_129.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_130.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_131.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_132.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_133.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_134.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_135.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_136.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_137.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_138.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_138_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_139.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_140.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_141.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_141_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_142.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_142_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_143.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_143_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_144.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_145.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_146.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_146_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_147.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_147_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_148.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_148_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_149.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_150.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_151.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_151_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_152.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_153.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_154.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_154_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_155.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_156.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_157.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_158.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_158_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_159.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_160.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_161.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_161_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_162.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_162_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_163.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_163_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_164.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_164_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_165.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_165_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_166.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_166_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_167.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_168.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_168_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_169.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_169_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_170.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_171.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_172.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_173.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_174.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_174_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_175.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_176.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_177.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_178.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_179.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_180.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_181.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_182.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_183.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_184.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_185.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_186.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_187.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_188.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_189.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_190.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_191.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_192.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_193.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_194.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_194_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_195.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_196.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_197.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_198.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_199.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_200.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_201.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_202.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_203.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_204.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_205.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_206.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_207.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_208.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_208_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_209.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_209_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_210.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_211.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_212.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_213.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_213_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_214.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_215.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_216.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_217.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_218.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_219.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_220.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_220_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_221.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_221_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_222.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_222_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_223.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_224.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_225.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_226.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_227.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_227_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_228.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_228_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_229.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_229_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_230.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_230_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_231.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_232.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_232_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_233.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_233_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_234.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_235.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_235_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_236.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_237.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_238.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_239.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_240.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_240_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_241.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_241_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_242.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_242_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_243.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_245.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_246.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_247.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_248.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_248_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_249.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_250.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_251.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_252.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_253.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_253_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_254.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_255.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_256.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_256_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_257.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_258.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_259.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_259_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_260.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_260_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_261.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_262.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_263.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_263_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_264.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_265.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_266.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_266_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_267.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_267_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_268.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_268_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_269.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_270.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_271.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_272.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_273.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_273_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_274.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_275.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_276.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_277.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_277_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_278.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_278_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_279.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_279_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_280.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_281.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_282.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_282_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_283.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_283_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_284.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_285.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_286.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_287.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_288.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_289.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_290.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_291.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_291_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_292.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_292_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_293.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_293_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_294.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_294_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_295.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_296.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_296_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_297.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_298.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_299.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_300.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_301.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_302.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_303.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_304.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_305.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_306.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_307.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_308.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_309.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_310.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_311.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_312.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_313.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_314.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_315.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_315_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_316.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_317.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_318.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_318_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_319.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_320.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_321.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_322.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_323.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_324.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_325.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_325_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_326.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_327.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_328.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_329.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_330.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_331.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_331_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_332.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_332_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_333.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_333_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_334.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_335.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_336.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_337.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_338.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_339.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_340.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_341.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_342.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_343.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_343_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_344.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_345.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_345_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_346.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_346_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_347.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_348.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_349.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_350.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_350_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_351.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_351_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_352.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_353.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_353_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_354.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_354_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_355_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_356.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_357.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_358.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_358_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_359.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_360.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_361.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_362.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_363.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_364.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_365.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_366.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_367.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_367_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_368.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_368_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_369.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_369_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370_2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_370_3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_371.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_372.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_373.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_373_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_374.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_374_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_375.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_375_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_376.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_376_1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_377.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_378.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_379.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_380.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_381.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_382.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_383.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_384.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_385.png" />
-  </ItemGroup>
-  <!--  PIANO SHEET   -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
