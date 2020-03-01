@@ -25,8 +25,8 @@ namespace Hymnal.UI.Pages
 
         private void OpenButton_Clicked(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(HymnNumber.Text))
-                HymnNumber.Focus();
+            if (string.IsNullOrWhiteSpace(HymnNumberEntry.Text))
+                HymnNumberEntry.Focus();
         }
     }
 }

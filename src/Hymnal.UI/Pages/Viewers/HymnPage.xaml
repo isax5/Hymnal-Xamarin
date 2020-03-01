@@ -65,6 +65,7 @@
                                                                   Property=Width}">
             <StackLayout Spacing="20">
                 <Label
+                    AutomationId="HymnTitleLabel"
                     FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.IO;
 using System.Linq;
 using Xamarin.UITest;
@@ -14,6 +14,7 @@ namespace Hymnal.UI.Test
             {
                 return ConfigureApp
                     .Android
+                    .ApkFile(@"C:\GitProjects\Hymnal\src\Hymnal.Droid\bin\Release\net.ddns.HimnarioAdventistaSPA.apk")
                     .StartApp();
             }
 

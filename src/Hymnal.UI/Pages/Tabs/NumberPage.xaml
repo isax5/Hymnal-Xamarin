@@ -95,9 +95,10 @@
                             VerticalTextAlignment="Center" />
 
                         <Entry
-                            x:Name="HymnNumber"
+                            x:Name="HymnNumberEntry"
                             AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
+                            AutomationId="HymnNumberEntry"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"
@@ -120,9 +121,10 @@
                 </Grid>
 
                 <Button
+                    AutomationId="OpenHymnButton"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnCommand}"
-                    CommandParameter="{Binding Source={x:Reference HymnNumber}, Path=Text}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
                     Text="{i18n:Translate Open}"
                     WidthRequest="200">
