@@ -42,7 +42,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.SharedNatives", "src
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{aa973408-ba51-485f-b99b-9adf51b6d250}*SharedItemsImports = 13
+		src\Hymnal.XF.Droid.Shared\Hymnal.Droid.Shared.projitems*{aa973408-ba51-485f-b99b-9adf51b6d250}*SharedItemsImports = 13
 		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{c494b802-1607-44bd-87d3-f94a0e28cc6c}*SharedItemsImports = 4
 		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{ccd55e9b-85f0-498c-ac98-bcaf92bf70ca}*SharedItemsImports = 4
 	EndGlobalSection
