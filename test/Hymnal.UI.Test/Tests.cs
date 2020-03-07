@@ -1,14 +1,11 @@
-﻿using System;
-using System.IO;
 using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
-using Xamarin.UITest.Queries;
 
 namespace Hymnal.UI.Test
 {
     [TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
+    //[TestFixture(Platform.iOS)]
     public class Tests
     {
         IApp app;
@@ -23,6 +20,28 @@ namespace Hymnal.UI.Test
         public void BeforeEachTest()
         {
             app = AppInitializer.StartApp(platform);
+        }
+
+        [Test]
+        public void TestPro()
+        {
+            //app.Repl();
+
+            // Arrange
+            app.WaitForElement("OpenHymnButton");
+            app.Tap("HymnNumberEntry");
+            app.EnterText("133");
+            app.DismissKeyboard();
+
+            // Act
+            app.Tap("OpenHymnButton");
+            app.WaitForElement("HymnTitleLabel");
+            app.Back();
+            app.WaitForElement("OpenHymnButton");
+
+            // Asset
+            var restul = app.Query(e => e.Marked("#")).Any();
+            Assert.IsTrue(restul);
         }
 
         [Test]

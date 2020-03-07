@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Hymnal.UI.Resources.DarkTheme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Hymnal.UI.Resources">
+
+    <!--  Opacity Filter for Main Page  -->
+    <x:Double x:Key="BackgroundMainPageFilter">0.8</x:Double>
+    <!--  Opacity Filter for lists  -->
+    <x:Double x:Key="BackgroundWhiteFilter">0.8</x:Double>
+    <!--  Opacity Filter for Hymns letters  -->
+    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.9</x:Double>
+
+    <!--  Slider's maximum color and searcher's words and numbers  -->
+    <Color x:Key="PrimaryColor">#c1c5c7</Color>
+    <!--  Placeholders  -->
+    <Color x:Key="PrimaryLightColor">#454545</Color>
+
+    <!--  Slider's thumb and slider's minimum color  -->
+    <Color x:Key="AccentColor">#24b780</Color>
+
+    <!--  Hymn list, interface and lyrics text  -->
+    <Color x:Key="PrimaryTextColor">#c1c5c7</Color>
+    <!--  Hymn List's secondary text  -->
+    <Color x:Key="SecondaryTextColor">#c1c5c7</Color>
+    <!--  Navbar Title and Icons & Open (Hymnal number searcher)  -->
+    <Color x:Key="NavBarTextColor">#c1c5c7</Color>
+
+    <!--  Background Color Pages and numeric searcher in main page  -->
+    <Color x:Key="PrimaryBackgroudColor">#000000</Color>
+    <!--  Hymn list's pages background and settings page  -->
+    <Color x:Key="SecondaryBackgroudColor">#000000</Color>
+    <!--  Hymn lyrics background  -->
+    <Color x:Key="BackgroundColorFilterHymnLetters">#000000</Color>
+
+    <!--  Selected Tab  -->
+    <Color x:Key="SelectedTabColor">#c1c5c7</Color>
+    <!--  Unselected Tabs  -->
+    <Color x:Key="UnselectedTabColor">#4a4a4a</Color>
+
+</ResourceDictionary>

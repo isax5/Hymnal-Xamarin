@@ -61,10 +61,6 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
-  <data name="ChooseYourHymnal" xml:space="preserve">
-    <value>Escolha o seu hinário</value>
-    <comment>Settings. Choose hymnal</comment>
-  </data>
   <data name="AppVersion" xml:space="preserve">
     <value>Versão do Aplicativo</value>
   </data>
@@ -82,5 +78,9 @@
   </data>
   <data name="Developers" xml:space="preserve">
     <value>Desenvolvedores</value>
+  </data>
+  <data name="VersionsAndLanguages" xml:space="preserve">
+    <value>Versões e idiomas</value>
+    <comment>Settings. Choose hymnal</comment>
   </data>
 </root>

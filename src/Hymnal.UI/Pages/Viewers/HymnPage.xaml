@@ -51,7 +51,7 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            BackgroundColor="{DynamicResource BackgroundColorFilterHymnLetters}"
             Opacity="{DynamicResource BackgroundWhiteFilterHymnLetters}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -65,6 +65,7 @@
                                                                   Property=Width}">
             <StackLayout Spacing="20">
                 <Label
+                    AutomationId="HymnTitleLabel"
                     FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"

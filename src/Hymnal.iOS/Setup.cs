@@ -1,6 +1,7 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
 using Hymnal.UI.Services;
+using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using Xamarin.Forms;
@@ -29,6 +30,7 @@ namespace Hymnal.iOS
         {
             base.InitializePrimary();
             FormsMaterial.Init();
+            CrossMediaManager.Current.Init();
         }
     }
 }

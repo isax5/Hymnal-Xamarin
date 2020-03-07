@@ -6,10 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="6.4.1" />
-    <PackageReference Include="MvvmCross.Forms" Version="6.4.1" />
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991221" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.3.0.991221" />
+    <PackageReference Include="MvvmCross" Version="6.4.2" />
+    <PackageReference Include="MvvmCross.Forms" Version="6.4.2" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991640" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.4.0.991640" />
     <PackageReference Include="XamarinFastEntry.Behaviors" Version="1.1.1" />
   </ItemGroup>
   
@@ -23,9 +23,6 @@
     </Compile>
     <Compile Update="Pages\Index\Thematic\ThematicHymnsListPage.xaml.cs">
       <DependentUpon>ThematicHymnsListPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Resources\Colors.xaml.cs">
-      <DependentUpon>%(Filename)</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -77,6 +74,12 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Pages\Tabs\SettingsPage.xaml">
       <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\DarkTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Resources\WhiteTheme.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
 

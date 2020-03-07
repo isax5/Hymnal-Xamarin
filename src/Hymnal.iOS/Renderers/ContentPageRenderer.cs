@@ -1,63 +1,65 @@
-using System.Collections.Generic;
+using System;
 using Hymnal.iOS.Renderers;
-using Hymnal.UI.Pages;
+using Hymnal.UI;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
-[assembly: ExportRenderer(typeof(NumberPage), typeof(ContentPageRenderer))]
-[assembly: ExportRenderer(typeof(HymnPage), typeof(ContentPageRenderer))]
+[assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
 namespace Hymnal.iOS.Renderers
 {
-    /// <summary>
-    /// Custom renderer for ContentPage that allows for action buttons to be on the left
-    /// or the right hand side (ex: a modal with cancel and done buttons)
-    /// </summary>
     public class ContentPageRenderer : PageRenderer
     {
-        public new ContentPage Element => (ContentPage)base.Element;
-        private UINavigationItem navigationControllerItems => NavigationController.TopViewController.NavigationItem;
-
-        private readonly List<UIBarButtonItem> leftNavList = new List<UIBarButtonItem>();
-
-        public override void ViewDidLoad()
+        protected override void OnElementChanged(VisualElementChangedEventArgs e)
         {
-            base.ViewDidLoad();
+            base.OnElementChanged(e);
 
-            var toolbarItems = new List<ToolbarItem>();
-
-            foreach (ToolbarItem itm in Element.ToolbarItems)
-                toolbarItems.Add(itm);
-
-            Element.ToolbarItems.Clear();
-
-            // Sort the list
-            toolbarItems.Sort((ToolbarItem i1, ToolbarItem i2) =>
+            if (e.OldElement != null || Element == null)
             {
-                return i1.Priority > i2.Priority ? -1 : 1;
-            });
+                return;
+            }
 
-            foreach (ToolbarItem itm in toolbarItems)
+            try
             {
-                if (itm.Priority < 0)
-                    leftNavList.Add(itm.ToUIBarButtonItem());
-                else
-                    Element.ToolbarItems.Add(itm);
+                SetAppTheme();
+            }
+            catch (Exception ex)
+            {
+                System.Diagnostics.Debug.WriteLine($"\t\t\tERROR: {ex.Message}");
             }
         }
 
-        public override void ViewWillAppear(bool animated)
+        public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
         {
-            navigationControllerItems.SetLeftBarButtonItems(leftNavList.ToArray(), false);
+            base.TraitCollectionDidChange(previousTraitCollection);
+            Console.WriteLine($"TraitCollectionDidChange: {TraitCollection.UserInterfaceStyle} != {previousTraitCollection.UserInterfaceStyle}");
 
-            base.ViewWillAppear(animated);
+            if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+            {
+                SetAppTheme();
+            }
         }
 
-        public override void ViewWillDisappear(bool animated)
+        private void SetAppTheme()
         {
-            navigationControllerItems.SetLeftBarButtonItems(new UIBarButtonItem[0], false);
+            switch (TraitCollection.UserInterfaceStyle)
+            {
+                case UIUserInterfaceStyle.Dark:
+                    if (App.AppTheme != UI.Models.AppTheme.Dark)
+                        App.AppTheme = UI.Models.AppTheme.Dark;
+                    break;
 
-            base.ViewWillDisappear(animated);
+                case UIUserInterfaceStyle.Light:
+                    if (App.AppTheme != UI.Models.AppTheme.Light)
+                        App.AppTheme = UI.Models.AppTheme.Light;
+                    break;
+
+                case UIUserInterfaceStyle.Unspecified:
+                default:
+                    if (App.AppTheme != UI.Models.AppTheme.Unspecified)
+                        App.AppTheme = UI.Models.AppTheme.Unspecified;
+                    break;
+            }
         }
     }
 }

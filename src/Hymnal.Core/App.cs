@@ -6,12 +6,22 @@ using Hymnal.Core.Services;
 using Hymnal.Core.ViewModels;
 using MvvmCross;
 using MvvmCross.IoC;
+using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
 namespace Hymnal.Core
 {
     public class App : MvxApplication
     {
+        public static App Current;
+
+        public App()
+            : base()
+        {
+            Current = this;
+        }
+
+
         public override void Initialize()
         {
             SetUp();
@@ -54,9 +64,16 @@ namespace Hymnal.Core
             {
                 preferencesService.LastVersionOpened = appInformationService.VersionString;
 
-                // Do somethink
+                // Do somethink for new version
 
             }
+        }
+
+
+        public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel
+        {
+            IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
+            navigationService.Navigate<TViewModel>();
         }
     }
 }
