@@ -5,27 +5,27 @@ VisualStudioVersion = 16.0.29123.88
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.Core", "src\Hymnal.Core\Hymnal.Core.csproj", "{8651A503-045F-42AA-8EFD-1E20E5A73925}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.UI", "src\Hymnal.UI\Hymnal.UI.csproj", "{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.XF.UI", "src\Hymnal.XF.UI\Hymnal.XF.UI.csproj", "{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Droid", "src\Hymnal.Droid\Hymnal.Droid.csproj", "{C494B802-1607-44BD-87D3-F94A0E28CC6C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.Droid", "src\Hymnal.XF.Droid\Hymnal.XF.Droid.csproj", "{C494B802-1607-44BD-87D3-F94A0E28CC6C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.iOS", "src\Hymnal.iOS\Hymnal.iOS.csproj", "{A737FCED-1BDA-412A-BD1E-35275D961D30}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.iOS", "src\Hymnal.XF.iOS\Hymnal.XF.iOS.csproj", "{A737FCED-1BDA-412A-BD1E-35275D961D30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.UWP", "src\Hymnal.UWP\Hymnal.UWP.csproj", "{C12FA3A2-3A05-41D6-BCFE-08D07B8AD8A8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.UWP", "src\Hymnal.XF.UWP\Hymnal.XF.UWP.csproj", "{C12FA3A2-3A05-41D6-BCFE-08D07B8AD8A8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.Core.Test", "test\Hymnal.Core.Test\Hymnal.Core.Test.csproj", "{A589FC9B-E4AF-475F-B80D-15AD9237391F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Droid.Test", "test\Hymnal.Droid.Test\Hymnal.Droid.Test.csproj", "{CCD55E9B-85F0-498C-AC98-BCAF92BF70CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.Droid.Test", "test\Hymnal.XF.Droid.Test\Hymnal.XF.Droid.Test.csproj", "{CCD55E9B-85F0-498C-AC98-BCAF92BF70CA}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hymnal.Droid.Shared", "src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.shproj", "{AA973408-BA51-485F-B99B-9ADF51B6D250}"
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hymnal.XF.Droid.Shared", "src\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.shproj", "{AA973408-BA51-485F-B99B-9ADF51B6D250}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.iOS.Test", "test\Hymnal.iOS.Test\Hymnal.iOS.Test.csproj", "{2646D25A-213D-4C5E-8310-2CAC2DC1F43E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.iOS.Test", "test\Hymnal.XF.iOS.Test\Hymnal.XF.iOS.Test.csproj", "{2646D25A-213D-4C5E-8310-2CAC2DC1F43E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.UI.Test", "test\Hymnal.UI.Test\Hymnal.UI.Test.csproj", "{F8430B30-172A-4200-B87A-917CB61FB616}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.UI.Test", "test\Hymnal.XF.UI.Test\Hymnal.XF.UI.Test.csproj", "{F8430B30-172A-4200-B87A-917CB61FB616}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.UWP.Test", "test\Hymnal.UWP.Test\Hymnal.UWP.Test.csproj", "{66497608-CC84-415E-99BC-79B3B89529EF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.UWP.Test", "test\Hymnal.XF.UWP.Test\Hymnal.XF.UWP.Test.csproj", "{66497608-CC84-415E-99BC-79B3B89529EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.UWP.UI.Test", "test\Hymnal.UWP.UI.Test\Hymnal.UWP.UI.Test.csproj", "{D066E86B-1495-4CAB-8142-C623E7627BBE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.UWP.UI.Test", "test\Hymnal.XF.UWP.UI.Test\Hymnal.XF.UWP.UI.Test.csproj", "{D066E86B-1495-4CAB-8142-C623E7627BBE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solution Items", "{D86EA0D6-8581-45CA-8AF0-16AF124E4839}"
 	ProjectSection(SolutionItems) = preProject
@@ -34,7 +34,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Native", "Native", "{B5B24C14-6AE6-4F30-A089-F22876B55AA2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platform", "Platform", "{B5B24C14-6AE6-4F30-A089-F22876B55AA2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{740B4B75-7B30-458C-846D-5E14B54B51BC}"
 EndProject

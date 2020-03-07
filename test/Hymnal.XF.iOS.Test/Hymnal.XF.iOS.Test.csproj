@@ -83,9 +83,9 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Hymnal.iOS\Hymnal.iOS.csproj">
+    <ProjectReference Include="..\..\src\Hymnal.XF.iOS\Hymnal.XF.iOS.csproj">
       <Project>{A737FCED-1BDA-412A-BD1E-35275D961D30}</Project>
-      <Name>Hymnal.iOS</Name>
+      <Name>Hymnal.XF.iOS</Name>
       <IsAppExtension>false</IsAppExtension>
       <IsWatchApp>false</IsWatchApp>
     </ProjectReference>

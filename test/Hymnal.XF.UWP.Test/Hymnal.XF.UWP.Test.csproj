@@ -134,9 +134,9 @@
     <Service Include="{82A7F48D-3B50-4B1E-B82E-3ADA8210C358}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Hymnal.UWP\Hymnal.UWP.csproj">
+    <ProjectReference Include="..\..\src\Hymnal.XF.UWP\Hymnal.XF.UWP.csproj">
       <Project>{C12FA3A2-3A05-41D6-BCFE-08D07B8AD8A8}</Project>
-      <Name>Hymnal.UWP</Name>
+      <Name>Hymnal.XF.UWP</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -196,9 +196,9 @@
       <Project>{1ac8149a-b28f-4db6-a65e-31e379605528}</Project>
       <Name>Hymnal.SharedNatives</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Hymnal.UI\Hymnal.UI.csproj">
+    <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
       <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>
-      <Name>Hymnal.UI</Name>
+      <Name>Hymnal.XF.UI</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
