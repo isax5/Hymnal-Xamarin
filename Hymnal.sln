@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.Core.Test", "test\Hy
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.Droid.Test", "test\Hymnal.XF.Droid.Test\Hymnal.XF.Droid.Test.csproj", "{CCD55E9B-85F0-498C-AC98-BCAF92BF70CA}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hymnal.XF.Droid.Shared", "src\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.shproj", "{AA973408-BA51-485F-B99B-9ADF51B6D250}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.iOS.Test", "test\Hymnal.XF.iOS.Test\Hymnal.XF.iOS.Test.csproj", "{2646D25A-213D-4C5E-8310-2CAC2DC1F43E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.XF.UI.Test", "test\Hymnal.XF.UI.Test\Hymnal.XF.UI.Test.csproj", "{F8430B30-172A-4200-B87A-917CB61FB616}"
@@ -44,8 +42,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Native.Droid.Test", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Native.Droid", "src\Hymnal.Native.Droid\Hymnal.Native.Droid.csproj", "{B1A3F8A2-FB5A-4F4F-A131-2ACBE5B54334}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hymnal.Native.Droid.Shared", "src\Hymnal.Native.Droid.Shared\Hymnal.Native.Droid.Shared.shproj", "{588F0365-300A-40B8-8932-ADB3C03CB19C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Native.iOS", "src\Hymnal.Native.iOS\Hymnal.Native.iOS.csproj", "{B6191ECE-AAA9-4563-B1E4-2D3CEADE4376}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Native.UWP", "src\Hymnal.Native.UWP\Hymnal.Native.UWP.csproj", "{76E479E4-0A38-4E9F-A808-0D36F4E2EB98}"
@@ -60,14 +56,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Native.UWP.Test", "t
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.Native.UWP.UI.Test", "test\Hymnal.Native.UWP.UI.Test\Hymnal.Native.UWP.UI.Test.csproj", "{C869F8D8-720C-4D57-8BE5-53938874DC3F}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hymnal.XF.Droid.Shared", "src\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.shproj", "{125E8CF8-4663-4FC0-8AE9-1DE4D1FE9CB4}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Hymnal.Native.Droid.Shared", "src\Hymnal.Native.Droid.Shared\Hymnal.Native.Droid.Shared.shproj", "{9AF8D99E-7D20-4C51-85C9-B0E6C9B263C0}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		src\Hymnal.Native.Droid.Shared\Hymnal.Droid.Shared.projitems*{588f0365-300a-40b8-8932-adb3c03cb19c}*SharedItemsImports = 13
-		src\Hymnal.XF.Droid.Shared\Hymnal.Droid.Shared.projitems*{aa973408-ba51-485f-b99b-9adf51b6d250}*SharedItemsImports = 13
-		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{b1a3f8a2-fb5a-4f4f-a131-2acbe5b54334}*SharedItemsImports = 4
-		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{b7d138c7-543a-4776-a7c6-19fc8b87067e}*SharedItemsImports = 4
-		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{c494b802-1607-44bd-87d3-f94a0e28cc6c}*SharedItemsImports = 4
-		src\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems*{ccd55e9b-85f0-498c-ac98-bcaf92bf70ca}*SharedItemsImports = 4
+		src\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems*{125e8cf8-4663-4fc0-8ae9-1de4d1fe9cb4}*SharedItemsImports = 13
+		src\Hymnal.Native.Droid.Shared\Hymnal.Native.Droid.Shared.projitems*{9af8d99e-7d20-4c51-85c9-b0e6c9b263c0}*SharedItemsImports = 13
+		src\Hymnal.Native.Droid.Shared\Hymnal.Native.Droid.Shared.projitems*{b1a3f8a2-fb5a-4f4f-a131-2acbe5b54334}*SharedItemsImports = 4
+		src\Hymnal.Native.Droid.Shared\Hymnal.Native.Droid.Shared.projitems*{b7d138c7-543a-4776-a7c6-19fc8b87067e}*SharedItemsImports = 4
+		src\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems*{c494b802-1607-44bd-87d3-f94a0e28cc6c}*SharedItemsImports = 4
+		src\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems*{ccd55e9b-85f0-498c-ac98-bcaf92bf70ca}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -620,7 +620,6 @@ Global
 		{C12FA3A2-3A05-41D6-BCFE-08D07B8AD8A8} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 		{A589FC9B-E4AF-475F-B80D-15AD9237391F} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
 		{CCD55E9B-85F0-498C-AC98-BCAF92BF70CA} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
-		{AA973408-BA51-485F-B99B-9ADF51B6D250} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 		{2646D25A-213D-4C5E-8310-2CAC2DC1F43E} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
 		{F8430B30-172A-4200-B87A-917CB61FB616} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
 		{66497608-CC84-415E-99BC-79B3B89529EF} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
@@ -628,7 +627,6 @@ Global
 		{1AC8149A-B28F-4DB6-A65E-31E379605528} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 		{B7D138C7-543A-4776-A7C6-19FC8B87067E} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
 		{B1A3F8A2-FB5A-4F4F-A131-2ACBE5B54334} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
-		{588F0365-300A-40B8-8932-ADB3C03CB19C} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 		{B6191ECE-AAA9-4563-B1E4-2D3CEADE4376} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 		{76E479E4-0A38-4E9F-A808-0D36F4E2EB98} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 		{3A777BA7-4679-4BA8-8D13-1F288F871C61} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
@@ -636,6 +634,8 @@ Global
 		{7FD86D1F-F82F-4AE6-B8A6-0D5E29223EC1} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
 		{07CAAC0F-1447-4F4B-BE2C-24A55B8B8395} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
 		{C869F8D8-720C-4D57-8BE5-53938874DC3F} = {740B4B75-7B30-458C-846D-5E14B54B51BC}
+		{125E8CF8-4663-4FC0-8AE9-1DE4D1FE9CB4} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
+		{9AF8D99E-7D20-4C51-85C9-B0E6C9B263C0} = {B5B24C14-6AE6-4F30-A089-F22876B55AA2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {80DD99F3-7A4C-49E7-B942-07960D455516}

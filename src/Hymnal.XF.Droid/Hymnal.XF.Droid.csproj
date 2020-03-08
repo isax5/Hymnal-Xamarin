@@ -285,6 +285,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-xxxhdpi\ToolbarPlayingTrue.png" />
   </ItemGroup>
+  <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
   <!--
   <ItemGroup>
@@ -3649,7 +3650,6 @@
   </ItemGroup>
   -->
   <!-- PIANO SHEETS-->
-  <Import Project="..\Hymnal.Droid.Shared\Hymnal.Droid.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
