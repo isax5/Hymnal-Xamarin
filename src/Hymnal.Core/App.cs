@@ -24,6 +24,9 @@ namespace Hymnal.Core
 
         public override void Initialize()
         {
+            // Replece RegisterAppStart in SetUp
+            // RegisterCustomAppStart<AppStart>();
+            // with MvxAppStart
             SetUp();
 
             CreatableTypes()

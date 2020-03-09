@@ -14,6 +14,13 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
+        
+        private string hymnNumber;
+        public string HymnNumber
+        {
+            get => hymnNumber;
+            set => SetProperty(ref hymnNumber, value);
+        }
 
         public NumberViewModel(
             IMvxNavigationService navigationService,
@@ -29,10 +36,12 @@ namespace Hymnal.Core.ViewModels
 
         private async void OpenHymnAsync(string text)
         {
+            var num = text ?? HymnNumber;
+
             HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
             IEnumerable<Hymn> hymns = await hymnsService.GetHymnListAsync(language);
 
-            if (int.TryParse(text, out var number))
+            if (int.TryParse(num, out var number))
             {
                 if (number < 0 || number > hymns.Count())
                     return;
