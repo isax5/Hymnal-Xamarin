@@ -14,7 +14,8 @@ namespace Hymnal.UI.Test
             {
                 return ConfigureApp
                     .Android
-                    .ApkFile(@"C:\GitProjects\Hymnal\src\Hymnal.Droid\bin\Release\net.ddns.HimnarioAdventistaSPA.apk")
+                    //.ApkFile(@"C:\GitProjects\Hymnal\src\Hymnal.Droid\bin\Release\net.ddns.HimnarioAdventistaSPA.apk")
+                    .InstalledApp("net.ddns.HimnarioAdventistaSPA")
                     .StartApp();
             }
 
