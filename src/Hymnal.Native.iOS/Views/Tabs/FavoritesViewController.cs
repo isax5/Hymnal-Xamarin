@@ -9,7 +9,7 @@ namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "Favorites")]
-    public partial class FavoritesViewController : MvxViewController<FavoritesViewModel>
+    public partial class FavoritesViewController : BaseViewController<FavoritesViewModel>
     {
         public FavoritesViewController (IntPtr handle) : base (handle)
         {

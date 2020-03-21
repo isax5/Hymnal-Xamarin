@@ -3,50 +3,72 @@ using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.ViewModels;
 using Hymnal.iOS.Styles;
 using UIKit;
+using System;
 
 namespace Hymnal.iOS.Views
 {
     public abstract class BaseViewController<TViewModel> : MvxViewController<TViewModel>
         where TViewModel : class, IMvxViewModel
     {
+        public BaseViewController(IntPtr handle) : base(handle)
+        {
+        }
+
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
 
-            View.BackgroundColor = UIColor.White;
-
+            // NavBar configuration
+            NavigationController.NavigationBar.PrefersLargeTitles = true;
             NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
-            NavigationController.NavigationBar.Translucent = false;
-            NavigationController.NavigationBar.Hidden = false;
-            NavigationController.NavigationBar.BarTintColor = ColorPalette.Primary;
-            NavigationController.NavigationBar.TintColor = UIColor.White;
-
-            NavigationController.SetNeedsStatusBarAppearanceUpdate();
-
-            CreateView();
-
-            LayoutView();
-
-            BindView();
+            NavigationController.NavigationBar.LargeTitleTextAttributes = new UIStringAttributes
+            {
+                ForegroundColor = UIColor.White
+            };
+            NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes
+            {
+                ForegroundColor = UIColor.White
+            };
         }
 
-        public override void ViewWillAppear(bool animated)
-        {
-            base.ViewWillAppear(animated);
+        //public override void ViewDidLoad()
+        //{
+        //    base.ViewDidLoad();
 
-            View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
-        }
+        //    View.BackgroundColor = UIColor.White;
 
-        protected virtual void CreateView()
-        {
-        }
+        //    NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
+        //    NavigationController.NavigationBar.Translucent = false;
+        //    NavigationController.NavigationBar.Hidden = false;
+        //    NavigationController.NavigationBar.BarTintColor = ColorPalette.Primary;
+        //    NavigationController.NavigationBar.TintColor = UIColor.White;
 
-        protected virtual void LayoutView()
-        {
-        }
+        //    NavigationController.SetNeedsStatusBarAppearanceUpdate();
 
-        protected virtual void BindView()
-        {
-        }
+        //    CreateView();
+
+        //    LayoutView();
+
+        //    BindView();
+        //}
+
+        //public override void ViewWillAppear(bool animated)
+        //{
+        //    base.ViewWillAppear(animated);
+
+        //    View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
+        //}
+
+        //protected virtual void CreateView()
+        //{
+        //}
+
+        //protected virtual void LayoutView()
+        //{
+        //}
+
+        //protected virtual void BindView()
+        //{
+        //}
     }
 }

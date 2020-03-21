@@ -19,6 +19,7 @@ namespace Hymnal.iOS.Views
             base.ViewDidLoad();
 
             MvxFluentBindingDescriptionSet<HymnViewController, HymnViewModel> set = this.CreateBindingSet<HymnViewController, HymnViewModel>();
+            Title = ViewModel.Hymn.Title;
             set.Bind(hymnTitleLabel).To(vm => vm.Hymn.Title);
             set.Bind(hymnContentLabel).To(vm => vm.Hymn.Content);
             set.Apply();

@@ -9,7 +9,7 @@ namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "Settings")]
-    public partial class SettingsViewController : MvxViewController<SettingsViewModel>
+    public partial class SettingsViewController : BaseViewController<SettingsViewModel>
     {
         public SettingsViewController (IntPtr handle) : base (handle)
         {

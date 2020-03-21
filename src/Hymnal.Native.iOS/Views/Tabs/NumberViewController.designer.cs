@@ -24,7 +24,7 @@ namespace Hymnal.iOS.Views
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton recordsButton { get; set; }
+        UIKit.UIBarButtonItem recordsBarButtton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
@@ -38,9 +38,9 @@ namespace Hymnal.iOS.Views
                 openHymnButton = null;
             }
 
-            if (recordsButton != null) {
-                recordsButton.Dispose ();
-                recordsButton = null;
+            if (recordsBarButtton != null) {
+                recordsBarButtton.Dispose ();
+                recordsBarButtton = null;
             }
         }
     }

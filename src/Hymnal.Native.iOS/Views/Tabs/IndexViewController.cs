@@ -9,7 +9,7 @@ namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
     [MvxTabPresentation(WrapInNavigationController = true, TabName = "Index")]
-    public partial class IndexViewController : MvxViewController<IndexViewModel>
+    public partial class IndexViewController : BaseViewController<IndexViewModel>
     {
         public IndexViewController (IntPtr handle) : base (handle)
         {

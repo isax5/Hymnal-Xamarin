@@ -184,6 +184,12 @@
     <Compile Include="Views\Viewers\HymnViewController.designer.cs">
       <DependentUpon>HymnViewController.cs</DependentUpon>
     </Compile>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-121.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-59.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-42.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-81.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-41.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-83.5%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

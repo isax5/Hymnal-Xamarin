@@ -9,8 +9,8 @@ using UIKit;
 namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Numbers")]
-    public partial class NumberViewController : MvxViewController<NumberViewModel>
+    [MvxTabPresentation( TabName = "Numbers")]
+    public partial class NumberViewController : BaseViewController<NumberViewModel>
     {
         public NumberViewController (IntPtr handle) : base (handle)
         {
@@ -20,8 +20,9 @@ namespace Hymnal.iOS.Views
         {
             base.ViewDidLoad();
 
+            // Bindings
             MvxFluentBindingDescriptionSet<NumberViewController, NumberViewModel> set = this.CreateBindingSet<NumberViewController, NumberViewModel>();
-            set.Bind(recordsButton).To(vm => vm.OpenRecordsCommand);
+            set.Bind(recordsBarButtton).To(vm => vm.OpenRecordsCommand);
             set.Bind(hymnNumberTextField).To(vm => vm.HymnNumber);
             set.Bind(openHymnButton).To(vm => vm.OpenHymnCommand);
             set.Apply();

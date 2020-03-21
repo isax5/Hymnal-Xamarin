@@ -35,7 +35,7 @@
 	<key>XSLaunchImageAssets</key>
 	<string>Resources/Media.xcassets/LaunchImages.launchimage</string>
 	<key>UIStatusBarStyle</key>
-	<string>White</string>
+	<string>UIStatusBarStyleLightContent</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 	<key>CFBundleDevelopmentRegion</key>
@@ -56,5 +56,7 @@
 	<string>4.1.0</string>
 	<key>CFBundleVersion</key>
 	<string>1.0.3</string>
+	<key>CFBundleName</key>
+	<string>Hymnal</string>
 </dict>
 </plist>
