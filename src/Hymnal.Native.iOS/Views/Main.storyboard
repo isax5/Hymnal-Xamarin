@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="226">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -33,7 +33,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#255" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1800">
-                                <rect key="frame" x="87.5" y="333" width="200" height="34"/>
+                                <rect key="frame" x="87.5" y="332.5" width="200" height="34"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="2679"/>
                                 </constraints>
@@ -41,7 +41,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1801">
-                                <rect key="frame" x="87.5" y="411" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="410.5" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="2682"/>
                                 </constraints>
@@ -53,11 +53,11 @@
                             <constraint firstItem="1800" firstAttribute="centerX" secondItem="685" secondAttribute="centerX" id="2677"/>
                             <constraint firstItem="1801" firstAttribute="top" secondItem="1800" secondAttribute="bottom" constant="44" id="2680"/>
                             <constraint firstItem="1801" firstAttribute="centerX" secondItem="685" secondAttribute="centerX" id="2681"/>
-                            <constraint id="13414" firstItem="1800" firstAttribute="centerY" secondItem="685" secondAttribute="centerY" constant="16"/>
+                            <constraint firstItem="1800" firstAttribute="centerY" secondItem="685" secondAttribute="centerY" constant="16" id="13414"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title NavBar" id="4946">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="5s5-Db-Txg"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="clock" catalog="system" id="5s5-Db-Txg"/>
                     </navigationItem>
                     <connections>
                         <outlet property="hymnNumberTextField" destination="1800" id="name-outlet-1800"/>
@@ -244,14 +244,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cz-as-khj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114.4" y="-1177.961"/>
+            <point key="canvasLocation" x="1114.4000000000001" y="-1177.961"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4884">
             <objects>
                 <navigationController id="4885" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="4887">
-                        <rect key="frame" x="0.0" y="20" width="375" height="102"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -263,4 +263,7 @@
             <point key="canvasLocation" x="-1767" y="279"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="64" height="60"/>
+    </resources>
 </document>
