@@ -4,6 +4,7 @@ using MvvmCross.ViewModels;
 using Hymnal.iOS.Styles;
 using UIKit;
 using System;
+using Foundation;
 
 namespace Hymnal.iOS.Views
 {
@@ -21,6 +22,7 @@ namespace Hymnal.iOS.Views
             // NavBar configuration
             NavigationController.NavigationBar.PrefersLargeTitles = true;
             NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
+            NavigationController.NavigationBar.TintColor = UIColor.White;
             NavigationController.NavigationBar.LargeTitleTextAttributes = new UIStringAttributes
             {
                 ForegroundColor = UIColor.White
@@ -29,6 +31,12 @@ namespace Hymnal.iOS.Views
             {
                 ForegroundColor = UIColor.White
             };
+        }
+
+        public override void TouchesBegan(NSSet touches, UIEvent evt)
+        {
+            base.TouchesBegan(touches, evt);
+            View.EndEditing(true);
         }
 
         //public override void ViewDidLoad()

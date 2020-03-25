@@ -16,5 +16,11 @@ namespace Hymnal.iOS.Views
         public RootViewController (IntPtr handle) : base (handle)
         {
         }
+
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
+
+        }
     }
 }

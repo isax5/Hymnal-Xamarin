@@ -26,6 +26,14 @@ namespace Hymnal.iOS.Views
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIBarButtonItem recordsBarButtton { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIBarButtonItem searchBarButtton { get; set; }
+
+        [Action ("OpenHymnButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void OpenHymnButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (hymnNumberTextField != null) {
@@ -41,6 +49,11 @@ namespace Hymnal.iOS.Views
             if (recordsBarButtton != null) {
                 recordsBarButtton.Dispose ();
                 recordsBarButtton = null;
+            }
+
+            if (searchBarButtton != null) {
+                searchBarButtton.Dispose ();
+                searchBarButtton = null;
             }
         }
     }

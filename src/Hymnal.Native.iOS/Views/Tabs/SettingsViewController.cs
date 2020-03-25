@@ -8,7 +8,7 @@ using UIKit;
 namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Settings")]
+    [MvxTabPresentation(TabName = "Settings", TabIconName = "settings tab")]
     public partial class SettingsViewController : BaseViewController<SettingsViewModel>
     {
         public SettingsViewController (IntPtr handle) : base (handle)

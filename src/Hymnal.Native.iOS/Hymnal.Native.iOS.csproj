@@ -1534,6 +1534,36 @@
     <ImageAsset Include="Resources\FontAwesome.xcassets\Spinners\spinner.imageset\spinner.pdf" />
     <ImageAsset Include="Resources\FontAwesome.xcassets\info.imageset\info.pdf" />
     <ImageAsset Include="Resources\FontAwesome.xcassets\info.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\time icon.imageset\timeIcon.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\time icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\search icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\search icon.imageset\icons8-search_filled.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\search icon.imageset\search.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\time icon.imageset\time.pdf" />
+    <Compile Include="Views\Search\SearchViewController.cs" />
+    <Compile Include="Views\Search\SearchViewController.designer.cs">
+      <DependentUpon>SearchViewController.cs</DependentUpon>
+    </Compile>
+    <ImageAsset Include="Resources\Media.xcassets\SecondaryColor.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\PrimaryColor.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Navigation bar\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Navigation bar\search icon.imageset\search.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Navigation bar\search icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Navigation bar\time icon.imageset\time.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Navigation bar\time icon.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\number tab.imageset\number.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\number tab.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\settings tab.imageset\settings.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\settings tab.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\favorites tab.imageset\heart.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\favorites tab.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\list tab.imageset\list.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabbar\list tab.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Colors\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Colors\SecondaryColor.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Colors\PrimaryColor.colorset\Contents.json" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -1620,6 +1650,7 @@
     <Folder Include="Views\Tabs\" />
     <Folder Include="Views\Viewers\" />
     <Folder Include="Views\Records\" />
+    <Folder Include="Views\Search\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

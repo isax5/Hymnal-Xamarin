@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="226">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="226">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -10,15 +11,15 @@
         <scene sceneID="225">
             <objects>
                 <tabBarController storyboardIdentifier="RootViewController" id="226" customClass="RootViewController" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="229">
-                        <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="229">
+                        <rect key="frame" x="0.0" y="617" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" name="PrimaryColor"/>
                     </tabBar>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="230" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-366" y="-552"/>
+            <point key="canvasLocation" x="-334" y="-551"/>
         </scene>
         <!--Adventist Hymnal-->
         <scene sceneID="683">
@@ -32,42 +33,67 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="#255" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1800">
-                                <rect key="frame" x="87.5" y="332.5" width="200" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="2679"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-aa-Vz6">
+                                <rect key="frame" x="92" y="196" width="191" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDq-VN-KCa">
+                                        <rect key="frame" x="0.0" y="0.0" width="31" height="60"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="...." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1800">
+                                        <rect key="frame" x="41" y="0.0" width="150" height="60"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="6pE-qs-a37"/>
+                                        </constraints>
+                                        <color key="textColor" name="PrimaryColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1801">
-                                <rect key="frame" x="87.5" y="410.5" width="200" height="30"/>
+                                <rect key="frame" x="112.5" y="286" width="150" height="30"/>
+                                <color key="backgroundColor" red="0.12941455839999999" green="0.1294075549" blue="0.12941050530000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="2682"/>
+                                    <constraint firstAttribute="width" constant="150" id="AxK-Ta-9Hc"/>
                                 </constraints>
-                                <state key="normal" title="Open"/>
+                                <state key="normal" title="OPEN">
+                                    <color key="titleColor" name="PrimaryColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="OpenHymnButton_TouchUpInside:" destination="684" eventType="touchUpInside" id="13718"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="1800" firstAttribute="centerX" secondItem="685" secondAttribute="centerX" id="2677"/>
-                            <constraint firstItem="1801" firstAttribute="top" secondItem="1800" secondAttribute="bottom" constant="44" id="2680"/>
-                            <constraint firstItem="1801" firstAttribute="centerX" secondItem="685" secondAttribute="centerX" id="2681"/>
-                            <constraint firstItem="1800" firstAttribute="centerY" secondItem="685" secondAttribute="centerY" constant="16" id="13414"/>
+                            <constraint firstItem="1801" firstAttribute="centerX" secondItem="685" secondAttribute="centerX" id="7XF-HC-L4f"/>
+                            <constraint firstItem="Je0-aa-Vz6" firstAttribute="centerX" secondItem="685" secondAttribute="centerX" id="CmE-Zk-f4Y"/>
+                            <constraint firstItem="Je0-aa-Vz6" firstAttribute="top" secondItem="681" secondAttribute="bottom" constant="100" id="fIS-41-41n"/>
+                            <constraint firstItem="1801" firstAttribute="top" secondItem="Je0-aa-Vz6" secondAttribute="bottom" constant="30" id="ufC-4B-uCT"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Title NavBar" id="4946">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="clock" catalog="system" id="5s5-Db-Txg"/>
+                        <barButtonItem key="leftBarButtonItem" title="records" image="time icon" id="5s5-Db-Txg">
+                            <color key="tintColor" name="PrimaryColor"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="search" image="search icon" id="HKC-xH-7Ti">
+                            <color key="tintColor" name="PrimaryColor"/>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="hymnNumberTextField" destination="1800" id="name-outlet-1800"/>
                         <outlet property="openHymnButton" destination="1801" id="name-outlet-1801"/>
                         <outlet property="recordsBarButtton" destination="5s5-Db-Txg" id="name-outlet-5s5-Db-Txg"/>
+                        <outlet property="searchBarButtton" destination="HKC-xH-7Ti" id="name-outlet-HKC-xH-7Ti"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="686" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1021" y="280"/>
+            <point key="canvasLocation" x="-1021.6" y="279.31034482758622"/>
         </scene>
         <!--Index-->
         <scene sceneID="907">
@@ -136,19 +162,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Records" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1147">
-                                <rect key="frame" x="146" y="358" width="121" height="21"/>
+                                <rect key="frame" x="127" y="323" width="121" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1145" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1023" y="1116"/>
+            <point key="canvasLocation" x="-1022" y="1116"/>
         </scene>
         <!--Music Sheet View Controller-->
         <scene sceneID="1157">
@@ -249,6 +275,7 @@
         <!--Navigation Controller-->
         <scene sceneID="4884">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4888" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="4885" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="4887">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
@@ -258,12 +285,42 @@
                         <segue destination="684" kind="relationship" relationship="rootViewController" id="4947"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4888" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1767" y="279"/>
         </scene>
+        <!--Search-->
+        <scene sceneID="13994">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" title="Search" id="13995" customClass="SearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="13992"/>
+                        <viewControllerLayoutGuide type="bottom" id="13993"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="13996">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13999">
+                                <rect key="frame" x="119" y="318" width="137" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="13997" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-399" y="1116"/>
+        </scene>
     </scenes>
+    <color key="tintColor" name="PrimaryColor"/>
     <resources>
-        <image name="clock" catalog="system" width="64" height="60"/>
+        <image name="search icon" width="50" height="50"/>
+        <image name="time icon" width="50" height="50"/>
+        <namedColor name="PrimaryColor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

@@ -8,7 +8,7 @@ using UIKit;
 namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(WrapInNavigationController = true, TabName = "Index")]
+    [MvxTabPresentation(TabName = "Index", TabIconName = "list tab")]
     public partial class IndexViewController : BaseViewController<IndexViewModel>
     {
         public IndexViewController (IntPtr handle) : base (handle)
