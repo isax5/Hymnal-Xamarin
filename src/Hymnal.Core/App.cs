@@ -35,6 +35,7 @@ namespace Hymnal.Core
                 .RegisterAsLazySingleton();
 
             RegisterAppStart<RootViewModel>();
+
         }
 
         private void SetUp()

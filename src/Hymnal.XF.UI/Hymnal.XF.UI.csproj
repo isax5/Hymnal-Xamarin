@@ -45,6 +45,9 @@
     <EmbeddedResource Update="Pages\Index\Thematic\ThematicSubGroupPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Pages\SimplePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Pages\Viewers\MusicSheetPage.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

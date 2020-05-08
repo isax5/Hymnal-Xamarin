@@ -25,6 +25,8 @@ namespace Hymnal.Core.ViewModels
             await navigationService.Navigate<IndexViewModel>();
             await navigationService.Navigate<FavoritesViewModel>();
             await navigationService.Navigate<SettingsViewModel>();
+
+            //await navigationService.Navigate<SimpleViewModel>();
         }
     }
 }
