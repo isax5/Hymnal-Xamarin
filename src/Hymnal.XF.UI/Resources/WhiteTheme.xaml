@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary
-    x:Class="Hymnal.UI.Resources.WhiteTheme"
+    x:Class="Hymnal.XF.UI.Resources.WhiteTheme"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Hymnal.UI.Resources">
+    xmlns:local="clr-namespace:Hymnal.XF.UI.Resources">
 
     <x:Double x:Key="BackgroundMainPageFilter">0</x:Double>
     <!--  White filter for lists  -->

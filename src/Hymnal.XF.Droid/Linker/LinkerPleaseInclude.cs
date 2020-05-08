@@ -11,7 +11,7 @@ using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
-namespace Hymnal.Droid.Linker
+namespace Hymnal.XF.Droid.Linker
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does how to ensure types and properties
     // are preserved in the deployed app

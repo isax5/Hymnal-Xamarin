@@ -10,7 +10,7 @@ using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.ViewModels;
 using UIKit;
 
-namespace Hymnal.iOS.Linker
+namespace Hymnal.XF.iOS.Linker
 {
     // This class is never actually executed, but when Xamarin linking is enabled it does ensure types and properties
     // are preserved in the deployed app

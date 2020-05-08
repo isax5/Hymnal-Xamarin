@@ -1,12 +1,12 @@
 using System;
-using Hymnal.iOS.Renderers;
-using Hymnal.UI;
+using Hymnal.XF.iOS.Renderers;
+using Hymnal.XF.UI;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
-namespace Hymnal.iOS.Renderers
+namespace Hymnal.XF.iOS.Renderers
 {
     public class ContentPageRenderer : PageRenderer
     {
@@ -45,19 +45,19 @@ namespace Hymnal.iOS.Renderers
             switch (TraitCollection.UserInterfaceStyle)
             {
                 case UIUserInterfaceStyle.Dark:
-                    if (App.AppTheme != UI.Models.AppTheme.Dark)
-                        App.AppTheme = UI.Models.AppTheme.Dark;
+                    if (App.AppTheme != XF.UI.Models.AppTheme.Dark)
+                        App.AppTheme = XF.UI.Models.AppTheme.Dark;
                     break;
 
                 case UIUserInterfaceStyle.Light:
-                    if (App.AppTheme != UI.Models.AppTheme.Light)
-                        App.AppTheme = UI.Models.AppTheme.Light;
+                    if (App.AppTheme != XF.UI.Models.AppTheme.Light)
+                        App.AppTheme = XF.UI.Models.AppTheme.Light;
                     break;
 
                 case UIUserInterfaceStyle.Unspecified:
                 default:
-                    if (App.AppTheme != UI.Models.AppTheme.Unspecified)
-                        App.AppTheme = UI.Models.AppTheme.Unspecified;
+                    if (App.AppTheme != XF.UI.Models.AppTheme.Unspecified)
+                        App.AppTheme = XF.UI.Models.AppTheme.Unspecified;
                     break;
             }
         }

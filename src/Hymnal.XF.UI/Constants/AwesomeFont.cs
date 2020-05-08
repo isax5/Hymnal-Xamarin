@@ -1,6 +1,6 @@
 using System;
 
-namespace Hymnal.UI.Constants
+namespace Hymnal.XF.UI.Constants
 {
     /// <summary>
     /// The unicode values for all FontAwesome icons.

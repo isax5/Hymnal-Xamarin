@@ -1,13 +1,13 @@
 using System.Collections.Generic;
-using Hymnal.iOS.Renderers;
-using Hymnal.UI.Pages;
+using Hymnal.XF.iOS.Renderers;
+using Hymnal.XF.UI.Pages;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(NumberPage), typeof(ContentPageNavbarButtonRenderer))]
 [assembly: ExportRenderer(typeof(HymnPage), typeof(ContentPageNavbarButtonRenderer))]
-namespace Hymnal.iOS.Renderers
+namespace Hymnal.XF.iOS.Renderers
 {
     /// <summary>
     /// Custom renderer for ContentPage that allows for action buttons to be on the left

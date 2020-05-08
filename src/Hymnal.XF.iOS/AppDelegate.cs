@@ -3,10 +3,10 @@ using Foundation;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.XF.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, Core.App, UI.App>
+    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, Core.App, XF.UI.App>
     {
         public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
         {

@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 using Hymnal.Core.Services;
 using Xamarin.Forms;
 
-namespace Hymnal.UI.Services
+namespace Hymnal.XF.UI.Services
 {
     public class DialogService : IDialogService
     {

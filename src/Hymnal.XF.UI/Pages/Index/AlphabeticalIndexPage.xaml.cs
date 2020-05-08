@@ -5,7 +5,7 @@ using MvvmCross.Forms.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Hymnal.UI.Pages
+namespace Hymnal.XF.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [MvxCarouselPagePresentation(CarouselPosition.Carousel, NoHistory = true)]

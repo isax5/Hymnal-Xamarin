@@ -1,12 +1,12 @@
 using System.Collections.Generic;
-using Hymnal.iOS.Renderers;
-using Hymnal.UI.Pages;
+using Hymnal.XF.iOS.Renderers;
+using Hymnal.XF.UI.Pages;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(IndexPage), typeof(CustomCarouselPageRenderer))]
-namespace Hymnal.iOS.Renderers
+namespace Hymnal.XF.iOS.Renderers
 {
     public class CustomCarouselPageRenderer : CarouselPageRenderer
     {

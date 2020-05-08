@@ -7,7 +7,7 @@ using MediaManager;
 using MvvmCross.Forms.Platforms.Android.Views;
 using Xamarin.Forms;
 
-namespace Hymnal.Droid
+namespace Hymnal.XF.Droid
 {
     [Activity(
         Theme = "@style/AppTheme")]

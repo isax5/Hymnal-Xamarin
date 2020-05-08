@@ -5,7 +5,7 @@ using MvvmCross.Forms.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Hymnal.UI.Pages
+namespace Hymnal.XF.UI.Pages
 {
     /// <summary>
     /// Continues in <see cref="ThematicSubGroupPage"/>

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ResourceDictionary
-    x:Class="Hymnal.UI.Resources.DarkTheme"
+    x:Class="Hymnal.XF.UI.Resources.DarkTheme"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:Hymnal.UI.Resources">
+    xmlns:local="clr-namespace:Hymnal.XF.UI.Resources">
 
     <!--  Opacity Filter for Main Page  -->
     <x:Double x:Key="BackgroundMainPageFilter">0.8</x:Double>

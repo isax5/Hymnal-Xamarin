@@ -1,7 +1,7 @@
 ﻿using System;
 using UIKit;
 
-namespace Hymnal.iOS.Styles
+namespace Hymnal.XF.iOS.Styles
 {
     public static class ColorPalette
     {

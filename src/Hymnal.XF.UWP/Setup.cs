@@ -1,13 +1,13 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
-using Hymnal.UI.Services;
+using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Uap.Core;
 
 namespace Hymnal.UWP
 {
-    public class Setup : MvxFormsWindowsSetup<Core.App, UI.App>
+    public class Setup : MvxFormsWindowsSetup<Core.App, XF.UI.App>
     {
         protected override void InitializeFirstChance()
         {

@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <mvxViews:MvxTabbedPage
-    x:Class="Hymnal.UI.Pages.RootPage"
+    x:Class="Hymnal.XF.UI.Pages.RootPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
-    xmlns:i18n="clr-namespace:Hymnal.UI.Helpers"
+    xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
-    xmlns:views="clr-namespace:Hymnal.UI.Pages"
+    xmlns:views="clr-namespace:Hymnal.XF.UI.Pages"
     Title="{i18n:Translate AdventistHymnal}"
     android:TabbedPage.ToolbarPlacement="Bottom"
     x:TypeArguments="viewModels:RootViewModel"

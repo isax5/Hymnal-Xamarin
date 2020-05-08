@@ -1,4 +1,4 @@
-namespace Hymnal.UI.Models
+namespace Hymnal.XF.UI.Models
 {
     public enum AppTheme
     {

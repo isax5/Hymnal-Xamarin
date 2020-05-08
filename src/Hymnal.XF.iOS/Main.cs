@@ -1,6 +1,6 @@
 ﻿using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.XF.iOS
 {
     public static class Application
     {

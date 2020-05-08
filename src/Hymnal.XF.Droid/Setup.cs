@@ -1,7 +1,7 @@
 using Android.App;
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
-using Hymnal.UI.Services;
+using Hymnal.XF.UI.Services;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Android.Core;
 using Xamarin.Forms;
@@ -12,9 +12,9 @@ using Xamarin.Forms;
 [assembly: Application(Debuggable = false)]
 #endif
 
-namespace Hymnal.Droid
+namespace Hymnal.XF.Droid
 {
-    public class Setup : MvxFormsAndroidSetup<Core.App, UI.App>
+    public class Setup : MvxFormsAndroidSetup<Core.App, XF.UI.App>
     {
         protected override void InitializeFirstChance()
         {

@@ -3,7 +3,7 @@ using Android.App;
 using Android.OS;
 using MvvmCross.Forms.Platforms.Android.Views;
 
-namespace Hymnal.Droid.Views
+namespace Hymnal.XF.Droid.Views
 {
     [Activity(
        NoHistory = true,
@@ -12,7 +12,7 @@ namespace Hymnal.Droid.Views
        Theme = "@style/AppTheme.Splash",
        Icon = "@mipmap/ic_launcher",
        RoundIcon = "@mipmap/ic_launcher_round")]
-    public class SplashActivity : MvxFormsSplashScreenAppCompatActivity<Setup, Core.App, UI.App>
+    public class SplashActivity : MvxFormsSplashScreenAppCompatActivity<Setup, Core.App, XF.UI.App>
     {
         protected override Task RunAppStartAsync(Bundle bundle)
         {

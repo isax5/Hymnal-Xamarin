@@ -1,14 +1,14 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
-using Hymnal.UI.Services;
+using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using Xamarin.Forms;
 
-namespace Hymnal.iOS
+namespace Hymnal.XF.iOS
 {
-    public class Setup : MvxFormsIosSetup<Core.App, UI.App>
+    public class Setup : MvxFormsIosSetup<Core.App, XF.UI.App>
     {
         protected override void InitializeFirstChance()
         {

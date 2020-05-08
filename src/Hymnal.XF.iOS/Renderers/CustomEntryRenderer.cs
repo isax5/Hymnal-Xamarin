@@ -1,10 +1,10 @@
-using Hymnal.iOS.Renderers;
+using Hymnal.XF.iOS.Renderers;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(Entry), typeof(CustomEntryRenderer))]
-namespace Hymnal.iOS.Renderers
+namespace Hymnal.XF.iOS.Renderers
 {
     public class CustomEntryRenderer : EntryRenderer
     {

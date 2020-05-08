@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,7 +26,7 @@ namespace Hymnal.UWP
         }
     }
 
-    public abstract class MvxFormsApp : MvxWindowsApplication<Setup, Core.App, UI.App, MainPage>
+    public abstract class MvxFormsApp : MvxWindowsApplication<Setup, Core.App, XF.UI.App, MainPage>
     {
     }
 }
