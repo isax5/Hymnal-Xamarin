@@ -287,7 +287,7 @@
   </ItemGroup>
   <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
-  <!-- -->
+  <!--
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_001.png" />
   </ItemGroup>
@@ -3648,7 +3648,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
-  <!-- -->
+  -->
   <!-- PIANO SHEETS-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
