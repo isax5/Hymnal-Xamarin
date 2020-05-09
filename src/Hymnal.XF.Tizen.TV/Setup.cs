@@ -1,4 +1,3 @@
-using System;
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
 using Hymnal.XF.UI.Services;
@@ -6,9 +5,9 @@ using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Tizen.Core;
 
-namespace Hymnal.Tizen.TV
+namespace Hymnal.XF.Tizen.TV
 {
-    public class Setup : MvxFormsTizenSetup<Core.App, XF.UI.App>
+    public class Setup : MvxFormsTizenSetup<Core.App, UI.App>
     {
         protected override void InitializeFirstChance()
         {

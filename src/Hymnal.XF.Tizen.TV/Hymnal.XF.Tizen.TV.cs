@@ -1,8 +1,9 @@
 using MvvmCross.Forms.Platforms.Tizen.Views;
 
-namespace Hymnal.Tizen.TV
+namespace Hymnal.XF.Tizen.TV
 {
-    public class Program : MvxFormsTizenApplication<Setup, Core.App, XF.UI.App>
+    //class Program : global::Xamarin.Forms.Platform.Tizen.FormsApplication
+    public class Program : MvxFormsTizenApplication<Setup, Core.App, UI.App>
     {
         //protected override void OnCreate()
         //{

@@ -1,9 +1,7 @@
-using System;
 using System.Globalization;
-using System.Transactions;
 using Hymnal.Core.Services;
 
-namespace Hymnal.Tizen.Tv.Services
+namespace Hymnal.XF.Tizen.Tv.Services
 {
     public class MultilingualService : IMultilingualService
     {
