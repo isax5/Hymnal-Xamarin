@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvxViews:MvxContentPage
+    x:Class="Hymnal.XF.UI.Pages.HymnPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.XF.UI.Constants"
+    xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    Title="{Binding Hymn.Number, StringFormat='# {0}'}"
+    iOS:Page.UseSafeArea="True"
+    x:TypeArguments="viewModels:HymnViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
+
+
+    <mvxViews:MvxContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="CloseToolbar"
+            Command="{Binding CloseCommand}"
+            Priority="-1"
+            Text="{i18n:Translate Close}" />
+        <ToolbarItem
+            x:Name="MusicToolbar"
+            Command="{Binding PlayCommand}"
+            IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
+            Priority="1" />
+        <ToolbarItem
+            Command="{Binding FavoriteCommand}"
+            IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
+            Priority="2" />
+        <ToolbarItem
+            x:Name="SheetToolbar"
+            Command="{Binding OpenSheetCommand}"
+            Priority="3">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeBrands}"
+                    Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </mvxViews:MvxContentPage.ToolbarItems>
+
+    <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout
+            BackgroundColor="{DynamicResource BackgroundColorFilterHymnLetters}"
+            Opacity="{DynamicResource BackgroundWhiteFilterHymnLetters}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+        <ScrollView
+            Padding="10,20"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}">
+            <StackLayout Spacing="20">
+                <Label
+                    AutomationId="HymnTitleLabel"
+                    FontSize="{Binding HymnTitleFontSize}"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    Text="{Binding Hymn.Title}"
+                    TextColor="{DynamicResource PrimaryTextColor}" />
+
+                <Label
+                    Margin="10"
+                    FontSize="{Binding HymnFontSize}"
+                    HorizontalTextAlignment="Center"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding Hymn.Content}"
+                    TextColor="{DynamicResource PrimaryTextColor}" />
+            </StackLayout>
+        </ScrollView>
+
+    </RelativeLayout>
+
+</mvxViews:MvxContentPage>

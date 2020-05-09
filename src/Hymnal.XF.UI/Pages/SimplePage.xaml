@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvxViews:MvxContentPage
+    x:Class="Hymnal.XF.UI.Pages.SimplePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    Title="Simple Page"
+    x:TypeArguments="viewModels:SimpleViewModel">
+
+    <mvxViews:MvxContentPage.Content>
+        <!--<ScrollView>-->
+        <StackLayout>
+            <Label Text="Hello World!! - Adventist Hymnal" />
+            <Button
+                Clicked="Button_Clicked"
+                Text="Click me!" />
+
+            <Entry
+                x:Name="exampleEntry"
+                BackgroundColor="Black"
+                HorizontalOptions="EndAndExpand"
+                Placeholder="enter somthing"
+                PlaceholderColor="Gray"
+                TextColor="White" />
+            <Button
+                Clicked="Button_Clicked_1"
+                Text="Show!!" />
+        </StackLayout>
+        <!--</ScrollView>-->
+    </mvxViews:MvxContentPage.Content>
+
+</mvxViews:MvxContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvxViews:MvxCarouselPage
+    x:Class="Hymnal.XF.UI.Pages.IndexPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.XF.UI.Constants"
+    xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    Title="{i18n:Translate Index}"
+    iOS:Page.UseSafeArea="True"
+    x:TypeArguments="viewModels:IndexViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
+
+    <mvxViews:MvxCarouselPage.IconImageSource>
+        <FontImageSource
+            FontFamily="{StaticResource FontAwesomeSolid}"
+            Glyph="{x:Static constans:FontAwesome.ListUl}" />
+    </mvxViews:MvxCarouselPage.IconImageSource>
+
+    <mvxViews:MvxCarouselPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="AlphabeticalListToolbar"
+            Clicked="AlphabeticalListToolbar_Clicked"
+            Priority="1">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static constans:FontAwesome.SortAlphaDown}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem
+            x:Name="NumericalListToolbar"
+            Clicked="NumericalListToolbar_Clicked"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static constans:FontAwesome.ListOl}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem
+            x:Name="ThematicListToolbar"
+            Clicked="ThematicListToolbar_Clicked"
+            Priority="3">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static constans:FontAwesome.Book}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </mvxViews:MvxCarouselPage.ToolbarItems>
+
+</mvxViews:MvxCarouselPage>

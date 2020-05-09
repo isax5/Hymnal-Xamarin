@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest package="org.tizen.example.Hymnal.XF.Tizen.TV" version="1.0.0" api-version="5" xmlns="http://tizen.org/ns/packages">
+    <profile name="tv" />
+    <ui-application appid="org.tizen.example.Hymnal.XF.Tizen.TV" exec="Hymnal.XF.Tizen.TV.dll" multiple="false" nodisplay="false" taskmanage="true" type="dotnet" launch_mode="single">
+        <label>Hymnal.XF.Tizen.TV</label>
+        <icon>Hymnal.XF.Tizen.TV.png</icon>
+        <splash-screens />
+    </ui-application>
+    <shortcut-list />
+    <privileges>
+        <privilege>http://tizen.org/privilege/internet</privilege>
+        <privilege>http://tizen.org/privilege/mediastorage</privilege>
+        <privilege>http://tizen.org/privilege/externalstorage</privilege>
+    </privileges>
+    <dependencies />
+    <provides-appdefined-privileges />
+    <feature name="http://tizen.org/feature/screen.size.normal.1080.1920">true</feature>
+</manifest>

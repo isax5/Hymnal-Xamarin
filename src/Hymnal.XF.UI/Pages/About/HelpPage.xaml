@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<mvxViews:MvxContentPage
+    x:Class="Hymnal.XF.UI.Pages.HelpPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    Title="{i18n:Translate Help}"
+    iOS:Page.UseSafeArea="True"
+    x:TypeArguments="viewModels:HelpViewModel">
+
+    <ScrollView Padding="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.1*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+
+            <!--  Title  -->
+            <Label
+                Grid.Row="0"
+                FontSize="Title"
+                Text="{i18n:Translate Help}" />
+
+            <Label Grid.Row="1">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span
+                            Text="Himarios"
+                            TextDecorations="Underline" />
+                        <Span Text=", " />
+                        <Span
+                            Text="Idiomas"
+                            TextDecorations="Underline" />
+                        <Span Text=" y " />
+                        <Span Text="música." />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+        </Grid>
+    </ScrollView>
+
+</mvxViews:MvxContentPage>

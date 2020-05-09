@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application
+    x:Class="Hymnal.XF.UI.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:resources="clr-namespace:Hymnal.XF.UI.Resources">
+    <Application.Resources>
+
+        <!--  Application resource dictionary  -->
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary>
+
+                    <x:String x:Key="BackgroundImageFile">Background</x:String>
+
+                    <Style TargetType="NavigationPage">
+                        <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
+                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
+                        <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
+                        <!--<Setter Property="iOS:NavigationPage.IsNavigationBarTranslucent" Value="True" />-->
+                    </Style>
+
+                    <Style
+                        x:Key="TabbedPageStyle"
+                        TargetType="mvxViews:MvxTabbedPage">
+                        <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
+                        <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
+                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
+                    </Style>
+                </ResourceDictionary>
+
+                <!--  Icons  -->
+                <ResourceDictionary>
+
+                    <OnPlatform
+                        x:Key="FontAwesomeBrands"
+                        x:TypeArguments="x:String">
+                        <On
+                            Platform="Android"
+                            Value="FontAwesome5BrandsRegular.otf#Regular" />
+                        <On
+                            Platform="iOS"
+                            Value="FontAwesome5Brands-Regular" />
+                        <On
+                            Platform="UWP"
+                            Value="/Assets/FontAwesome5Brands.otf#Font Awesome 5 Brands" />
+                    </OnPlatform>
+
+                    <OnPlatform
+                        x:Key="FontAwesomeSolid"
+                        x:TypeArguments="x:String">
+                        <On
+                            Platform="Android"
+                            Value="FontAwesome5Solid.otf#Regular" />
+                        <On
+                            Platform="iOS"
+                            Value="FontAwesome5Free-Solid" />
+                        <On
+                            Platform="UWP"
+                            Value="/Assets/FontAwesome5Solid.otf#Font Awesome 5 Free" />
+                    </OnPlatform>
+
+                    <OnPlatform
+                        x:Key="FontAwesomeRegular"
+                        x:TypeArguments="x:String">
+                        <On
+                            Platform="Android"
+                            Value="FontAwesome5Regular.otf#Regular" />
+                        <On
+                            Platform="iOS"
+                            Value="FontAwesome5Free-Regular" />
+                        <On
+                            Platform="UWP"
+                            Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
+                    </OnPlatform>
+
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ResourceDictionary
+    x:Class="Hymnal.XF.UI.Resources.WhiteTheme"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Hymnal.XF.UI.Resources">
+
+    <x:Double x:Key="BackgroundMainPageFilter">0</x:Double>
+    <!--  White filter for lists  -->
+    <x:Double x:Key="BackgroundWhiteFilter">0.5</x:Double>
+
+    <!--  White filter for Hymns letters  -->
+    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.6</x:Double>
+
+    <Color x:Key="PrimaryColor">#4c555a</Color>
+    <!--  Placeholder  -->
+    <Color x:Key="PrimaryLightColor">#788187</Color>
+
+    <Color x:Key="AccentColor">#24b780</Color>
+
+    <Color x:Key="PrimaryTextColor">#000000</Color>
+    <Color x:Key="SecondaryTextColor">#666666</Color>
+    <Color x:Key="NavBarTextColor">#ffffff</Color>
+
+    <Color x:Key="PrimaryBackgroudColor">#000000</Color>
+    <Color x:Key="SecondaryBackgroudColor">#ffffff</Color>
+    <Color x:Key="BackgroundColorFilterHymnLetters">#ffffff</Color>
+
+    <Color x:Key="SelectedTabColor">#ffffff</Color>
+    <Color x:Key="UnselectedTabColor">#4F5252</Color>
+
+</ResourceDictionary>
