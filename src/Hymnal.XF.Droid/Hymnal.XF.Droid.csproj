@@ -97,9 +97,6 @@
     <AndroidAsset Include="Assets\OldHymnalThematicList.es.json" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.en.json" />
     <AndroidAsset Include="Assets\OldHymnalThematicList.en.json" />
-    <AndroidAsset Include="Assets\FontAwesome5BrandsRegular.otf" />
-    <AndroidAsset Include="Assets\FontAwesome5Regular.otf" />
-    <AndroidAsset Include="Assets\FontAwesome5Solid.otf" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.pt.json" />
     <AndroidAsset Include="Assets\NewHymnal.pt.json" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.ru.json" />

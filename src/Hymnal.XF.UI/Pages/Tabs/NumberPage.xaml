@@ -16,7 +16,7 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{StaticResource FontAwesomeSolid}"
+            FontFamily="{x:Static constans:FontAwesome.Solid}"
             Glyph="{x:Static constans:FontAwesome.BookReader}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
@@ -27,7 +27,7 @@
             Priority="-1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.History}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -36,7 +36,7 @@
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.Search}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -130,7 +130,7 @@
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontFamily="{x:Static constans:FontAwesome.Solid}"
                             Glyph="{x:Static constans:FontAwesome.BookOpen}"
                             Color="{DynamicResource NavBarTextColor}" />
                     </Button.ImageSource>

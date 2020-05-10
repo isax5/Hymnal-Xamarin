@@ -15,7 +15,7 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{StaticResource FontAwesomeSolid}"
+            FontFamily="{x:Static constans:FontAwesome.Solid}"
             Glyph="{x:Static constans:FontAwesome.Heart}" />
     </mvxViews:MvxContentPage.IconImageSource>
 

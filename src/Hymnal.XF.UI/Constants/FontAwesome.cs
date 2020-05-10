@@ -1,5 +1,3 @@
-using System;
-
 namespace Hymnal.XF.UI.Constants
 {
     /// <summary>
@@ -11,6 +9,22 @@ namespace Hymnal.XF.UI.Constants
     /// </summary>
     public static class FontAwesome
     {
+        /// <summary>
+        /// Brand Icons (AssemblyInfo)
+        /// </summary>
+        public const string Brands = "FontAwesomeBrands";
+
+        /// <summary>
+        /// Regular Icons (AssemblyInfo)
+        /// </summary>
+        public const string Regular = "FontAwesomeRegular";
+
+        /// <summary>
+        /// Solid Icons (AssemblyInfo)
+        /// </summary>
+        public const string Solid = "FontAwesomeSolid";
+
+        #region Icons
         /// <summary>
         /// fa-500px unicode value.
         /// <para/>
@@ -16048,5 +16062,6 @@ namespace Hymnal.XF.UI.Constants
         /// See https://fontawesome.com/icons/zhihu
         /// </summary>
         public const string Zhihu = "\uf63f";
+        #endregion
     }
 }

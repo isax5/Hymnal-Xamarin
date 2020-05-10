@@ -14,7 +14,9 @@
     BackgroundColor="{DynamicResource SecondaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
-        <FontImageSource FontFamily="{StaticResource FontAwesomeSolid}" Glyph="{x:Static constans:FontAwesome.Cog}" />
+        <FontImageSource
+            FontFamily="{x:Static constans:FontAwesome.Solid}"
+            Glyph="{x:Static constans:FontAwesome.Cog}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.Resources>
@@ -66,7 +68,7 @@
                             VerticalOptions="CenterAndExpand">
                             <Image.Source>
                                 <FontImageSource
-                                    FontFamily="{StaticResource FontAwesomeSolid}"
+                                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                                     Glyph="{x:Static constans:FontAwesome.GlobeAmericas}"
                                     Color="Gray" />
                             </Image.Source>
@@ -169,7 +171,9 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label Text="{i18n:Translate Developing}" TextColor="{DynamicResource PrimaryTextColor}" />
+                        <Label
+                            Text="{i18n:Translate Developing}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
 

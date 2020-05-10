@@ -35,7 +35,7 @@
             Priority="3">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeBrands}"
+                    FontFamily="{x:Static constans:FontAwesome.Brands}"
                     Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -44,7 +44,7 @@
             Priority="4">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>

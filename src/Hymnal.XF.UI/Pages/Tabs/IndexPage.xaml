@@ -15,7 +15,7 @@
 
     <mvxViews:MvxCarouselPage.IconImageSource>
         <FontImageSource
-            FontFamily="{StaticResource FontAwesomeSolid}"
+            FontFamily="{x:Static constans:FontAwesome.Solid}"
             Glyph="{x:Static constans:FontAwesome.ListUl}" />
     </mvxViews:MvxCarouselPage.IconImageSource>
 
@@ -26,7 +26,7 @@
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.SortAlphaDown}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -36,7 +36,7 @@
             Priority="2">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.ListOl}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -46,7 +46,7 @@
             Priority="3">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.Book}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
