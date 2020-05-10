@@ -22,6 +22,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMediaService mediaService;
         private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
+        private readonly IShareService shareService;
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
@@ -69,7 +70,8 @@ namespace Hymnal.Core.ViewModels
             IPreferencesService preferencesService,
             IMediaService mediaService,
             IConnectivityService connectivityService,
-            IDialogService dialogService
+            IDialogService dialogService,
+            IShareService shareService
             )
         {
             this.navigationService = navigationService;
@@ -79,7 +81,7 @@ namespace Hymnal.Core.ViewModels
             this.mediaService = mediaService;
             this.connectivityService = connectivityService;
             this.dialogService = dialogService;
-
+            this.shareService = shareService;
             this.mediaService.Playing += MediaService_Playing;
             this.mediaService.Stopped += MediaService_Stopped;
             this.mediaService.EndReached += MediaService_EndReached;
@@ -168,6 +170,14 @@ namespace Hymnal.Core.ViewModels
             dataStorageService.ReplaceItems(favorites);
 
             IsFavorite = !IsFavorite;
+        }
+
+        public MvxCommand ShareCommand => new MvxCommand(ShareExecute);
+        private void ShareExecute()
+        {
+            shareService.Share(
+                title: hymn.Title,
+                text: $"{hymn.Title}\n\n{hymn.Content}\n\n{Constants.WebLinks.DeveloperWebSite}");
         }
 
         public MvxCommand PlayCommand => new MvxCommand(PlayExecute);

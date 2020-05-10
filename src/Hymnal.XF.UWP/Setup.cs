@@ -21,8 +21,10 @@ namespace Hymnal.UWP
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
             Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
+            Mvx.IoCProvider.RegisterType<IDeviceInformation, DeviceInformation>();
             Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
             Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
+            Mvx.IoCProvider.RegisterType<IShareService, ShareService>();
         }
 
         public override void InitializePrimary()

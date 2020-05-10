@@ -4,6 +4,7 @@ using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.iOS
@@ -22,8 +23,10 @@ namespace Hymnal.XF.iOS
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
             Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
+            Mvx.IoCProvider.RegisterType<IDeviceInformation, DeviceInformation>();
             Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
             Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
+            Mvx.IoCProvider.RegisterType<IShareService, ShareService>();
         }
 
         public override void InitializePrimary()

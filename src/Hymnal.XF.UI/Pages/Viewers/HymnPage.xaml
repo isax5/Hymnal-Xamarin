@@ -39,6 +39,15 @@
                     Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
+        <ToolbarItem
+            Command="{Binding ShareCommand}"
+            Priority="4">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    Glyph="{x:Static constans:FontAwesome.Share}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>

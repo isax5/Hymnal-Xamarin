@@ -1,6 +1,8 @@
 using System.Collections.Generic;
 using System.Globalization;
 using Hymnal.Core.Models;
+using Hymnal.Core.Services;
+using MvvmCross;
 
 namespace Hymnal.Core
 {
@@ -88,6 +90,20 @@ namespace Hymnal.Core
             }
         };
 
+        public struct WebLinks
+        {
+            public static string DeveloperWebSite = @"https://storage.googleapis.com/hymn-music/about/index.html";
+
+            /// <summary>
+            /// AppStore download Link
+            /// </summary>
+            public static string AppDownloadLinkIOS = @"https://apps.apple.com/cl/app/adventist-hymnal/id1153114394";
+
+            /// <summary>
+            /// PlayStore Download Link
+            /// </summary>
+            public static string AppDownloadLinkAndroid = @"https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA";
+        }
 
         public const int MAXIMUM_RECORDS = 100;
 
