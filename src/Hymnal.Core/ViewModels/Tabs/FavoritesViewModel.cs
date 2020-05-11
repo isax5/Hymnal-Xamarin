@@ -1,9 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -13,6 +15,7 @@ namespace Hymnal.Core.ViewModels
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IDataStorageService dataStorageService;
+        private readonly IDialogService dialogService;
 
         // TODO: Add inteaction for cells: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/interactivity#context-actions
         public MvxObservableCollection<FavoriteHymn> Hymns { get; set; } = new MvxObservableCollection<FavoriteHymn>();
@@ -31,10 +34,15 @@ namespace Hymnal.Core.ViewModels
         }
 
 
-        public FavoritesViewModel(IMvxNavigationService navigationService, IDataStorageService dataStorageService)
+        public FavoritesViewModel(
+            IMvxNavigationService navigationService,
+            IDataStorageService dataStorageService,
+            IDialogService dialogService
+            )
         {
             this.navigationService = navigationService;
             this.dataStorageService = dataStorageService;
+            this.dialogService = dialogService;
         }
 
         public override Task Initialize()
@@ -84,6 +92,17 @@ namespace Hymnal.Core.ViewModels
                 Number = hymn.Number,
                 HymnalLanguage = hymn.HymnalLanguage
             });
+        }
+
+        public MvxCommand<FavoriteHymn> DeleteHymnCommand => new MvxCommand<FavoriteHymn>(DeleteHymnExecute);
+        private void DeleteHymnExecute(FavoriteHymn favoriteHymn)
+        {
+            //dialogService.Alert("Cat", $"bla bla\n{favoriteHymn.Title}", "Ok");
+            Hymns.Remove(favoriteHymn);
+
+            List<FavoriteHymn> favorites = dataStorageService.GetItems<FavoriteHymn>();
+            favorites.RemoveAll(h => h.Number == favoriteHymn.Number && h.HymnalLanguage.Equals(favoriteHymn.HymnalLanguage));
+            dataStorageService.ReplaceItems(favorites);
         }
     }
 }
