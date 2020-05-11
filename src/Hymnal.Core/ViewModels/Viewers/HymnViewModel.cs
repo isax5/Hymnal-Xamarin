@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Xml.XPath;
 using Hymnal.Core.Extensions;
 using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
@@ -97,7 +98,7 @@ namespace Hymnal.Core.ViewModels
         public override void Prepare(HymnIdParameter parameter)
         {
             HymnParameter = parameter;
-            Language = HymnParameter.HymnalLanguage.Configuration();
+            Language = HymnParameter.HymnalLanguage;
         }
 
         public override async Task Initialize()

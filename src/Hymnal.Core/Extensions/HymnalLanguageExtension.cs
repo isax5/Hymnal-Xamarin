@@ -6,8 +6,8 @@ namespace Hymnal.Core.Extensions
     public static class HymnalLanguageExtension
     {
         /// <summary>
-        /// Get information updated about this Language
-        /// Useful for Favorites and History Hymnals
+        /// Get updated information about this Language
+        /// Useful for Favorites and History Hymnals becouse the name of the files (hymals) can change
         /// </summary>
         public static HymnalLanguage Configuration(this HymnalLanguage hymnalLanguage)
         {
@@ -24,7 +24,7 @@ namespace Hymnal.Core.Extensions
         {
             // Number in 3 digits number when it's less than 3 digits. In an other situation
             // the number will not change
-            return hymnalLanguage.InstrumentalMusic.Replace("###", hymnNumber.ToString("D3"));
+            return hymnalLanguage.Configuration().InstrumentalMusic.Replace("###", hymnNumber.ToString("D3"));
         }
 
         /// <summary>
@@ -37,12 +37,12 @@ namespace Hymnal.Core.Extensions
         {
             // Number in 3 digits number when it's less than 3 digits. In an other situation
             // the number will not change
-            return hymnalLanguage.SungMusic.Replace("###", hymnNumber.ToString("D3"));
+            return hymnalLanguage.Configuration().SungMusic.Replace("###", hymnNumber.ToString("D3"));
         }
 
         public static string GetMusicSheetSource(this HymnalLanguage hymnalLanguage, int hymnNymber)
         {
-            return hymnalLanguage.HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
+            return hymnalLanguage.Configuration().HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
         }
     }
 }
