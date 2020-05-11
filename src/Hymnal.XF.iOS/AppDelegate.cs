@@ -23,11 +23,13 @@ namespace Hymnal.XF.iOS
             switch (shortcutItem.Type)
             {
                 case "SearchAction":
-                    Hymnal.Core.App.Current?.LaunchPage<Hymnal.Core.ViewModels.SearchViewModel>();
+                    Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Search);
+                    //Hymnal.Core.App.Current?.LaunchPage<Hymnal.Core.ViewModels.SearchViewModel>();
                     break;
 
                 case "HistoryAction":
-                    Hymnal.Core.App.Current?.LaunchPage<Hymnal.Core.ViewModels.RecordsViewModel>();
+                    Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Records);
+                    //Hymnal.Core.App.Current?.LaunchPage<Hymnal.Core.ViewModels.RecordsViewModel>();
                     break;
 
                 default:

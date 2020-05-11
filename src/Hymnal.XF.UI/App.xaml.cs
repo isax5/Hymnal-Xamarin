@@ -1,3 +1,4 @@
+using System;
 using Hymnal.XF.UI.Resources;
 using Xamarin.Forms;
 
@@ -11,7 +12,6 @@ namespace Hymnal.XF.UI
         {
             Current = this;
             InitializeComponent();
-            //AppTheme = AppTheme.Unspecified;
         }
 
         #region System events
@@ -25,6 +25,11 @@ namespace Hymnal.XF.UI
         {
             base.OnResume();
             ThemeHelper.CheckTheme();
+        }
+
+        protected override void OnAppLinkRequestReceived(Uri uri)
+        {
+            base.OnAppLinkRequestReceived(uri);
         }
         #endregion
     }

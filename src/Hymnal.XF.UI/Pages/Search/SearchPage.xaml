@@ -47,6 +47,7 @@
             <SearchBar
                 x:Name="HymnSearchBar"
                 Grid.Row="0"
+                iOS:SearchBar.SearchBarStyle="Minimal"
                 CancelButtonColor="{DynamicResource PrimaryColor}"
                 Placeholder="{i18n:Translate Searcher}"
                 PlaceholderColor="{DynamicResource PrimaryLightColor}"
