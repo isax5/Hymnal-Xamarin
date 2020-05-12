@@ -1,9 +1,11 @@
 using Android.App;
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
+using Hymnal.XF.Droid.Custom;
 using Hymnal.XF.UI.Services;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Android.Core;
+using MvvmCross.Forms.Presenters;
 using Xamarin.Forms;
 
 #if DEBUG
@@ -14,7 +16,7 @@ using Xamarin.Forms;
 
 namespace Hymnal.XF.Droid
 {
-    public class Setup : MvxFormsAndroidSetup<Core.App, XF.UI.App>
+    public class Setup : MvxFormsAndroidSetup<Core.App, UI.App>
     {
         protected override void InitializeFirstChance()
         {
@@ -32,6 +34,14 @@ namespace Hymnal.XF.Droid
             Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
             Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
             Mvx.IoCProvider.RegisterType<IShareService, ShareService>();
+        }
+
+        protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
+        {
+            //var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
+            var formsPagePresenter = new CustomFormsPagePresenter(viewPresenter);
+            Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(formsPagePresenter);
+            return formsPagePresenter;
         }
     }
 }

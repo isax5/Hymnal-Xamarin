@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hymnal.Core.Models;
@@ -52,6 +53,13 @@ namespace Hymnal.Core.ViewModels
                     HymnalLanguage = language
                 });
             }
+        }
+
+        public MvxCommand OpenSimplePageCommand => new MvxCommand(OpenSimplePageExecute);
+
+        private void OpenSimplePageExecute()
+        {
+            navigationService.Navigate<SimpleViewModel>();
         }
 
         public MvxCommand OpenRecordsCommand => new MvxCommand(() => navigationService.Navigate<RecordsViewModel>());

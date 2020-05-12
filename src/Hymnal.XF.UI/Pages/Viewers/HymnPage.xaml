@@ -7,6 +7,7 @@
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="True"
@@ -73,6 +74,7 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}">
             <StackLayout Spacing="20">
+                <!--  sharedTransitions:Transition.Name="TitleTransition"  -->
                 <Label
                     AutomationId="HymnTitleLabel"
                     FontSize="{Binding HymnTitleFontSize}"

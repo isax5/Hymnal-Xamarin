@@ -77,6 +77,7 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Custom\CustomFormsPagePresenter.cs" />
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
@@ -206,6 +207,9 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.6.0.726</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Plugin.SharedTransitions">
+      <Version>2.0.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
@@ -318,6 +322,7 @@
   <ItemGroup>
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
+  <ItemGroup />
   <!-- PIANO SHEET -->
   <!--
   <ItemGroup>

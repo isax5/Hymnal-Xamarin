@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Resources;
@@ -11,6 +10,7 @@ using Hymnal.Core.ViewModels;
 using MvvmCross;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
+using MvvmCross.Presenters.Hints;
 using MvvmCross.ViewModels;
 
 namespace Hymnal.Core

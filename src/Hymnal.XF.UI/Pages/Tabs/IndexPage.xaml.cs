@@ -21,6 +21,8 @@ namespace Hymnal.XF.UI.Pages
         {
             base.OnCurrentPageChanged();
 
+            // TODO: Use VisualStates for toolbars
+
             var index = Children.IndexOf(CurrentPage);
 
             switch (index)

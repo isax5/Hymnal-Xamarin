@@ -10232,6 +10232,19 @@ namespace Hymnal.XF.Droid
 			global::MvvmCross.Forms.Resource.Styleable.View_paddingStart = global::Hymnal.XF.Droid.Resource.Styleable.View_paddingStart;
 			global::MvvmCross.Forms.Resource.Styleable.View_theme = global::Hymnal.XF.Droid.Resource.Styleable.View_theme;
 			global::MvvmCross.Forms.Resource.Xml.Empty = global::Hymnal.XF.Droid.Resource.Xml.Empty;
+			global::Plugin.SharedTransitions.Resource.Animation.enter_bottom = global::Hymnal.XF.Droid.Resource.Animation.enter_bottom;
+			global::Plugin.SharedTransitions.Resource.Animation.enter_left = global::Hymnal.XF.Droid.Resource.Animation.enter_left;
+			global::Plugin.SharedTransitions.Resource.Animation.enter_right = global::Hymnal.XF.Droid.Resource.Animation.enter_right;
+			global::Plugin.SharedTransitions.Resource.Animation.enter_top = global::Hymnal.XF.Droid.Resource.Animation.enter_top;
+			global::Plugin.SharedTransitions.Resource.Animation.exit_bottom = global::Hymnal.XF.Droid.Resource.Animation.exit_bottom;
+			global::Plugin.SharedTransitions.Resource.Animation.exit_left = global::Hymnal.XF.Droid.Resource.Animation.exit_left;
+			global::Plugin.SharedTransitions.Resource.Animation.exit_right = global::Hymnal.XF.Droid.Resource.Animation.exit_right;
+			global::Plugin.SharedTransitions.Resource.Animation.exit_top = global::Hymnal.XF.Droid.Resource.Animation.exit_top;
+			global::Plugin.SharedTransitions.Resource.Animation.fade_in = global::Hymnal.XF.Droid.Resource.Animation.fade_in;
+			global::Plugin.SharedTransitions.Resource.Animation.fade_out = global::Hymnal.XF.Droid.Resource.Animation.fade_out;
+			global::Plugin.SharedTransitions.Resource.Animation.flip_in = global::Hymnal.XF.Droid.Resource.Animation.flip_in;
+			global::Plugin.SharedTransitions.Resource.Animation.flip_out = global::Hymnal.XF.Droid.Resource.Animation.flip_out;
+			global::Plugin.SharedTransitions.Resource.Transition.navigation_transition = global::Hymnal.XF.Droid.Resource.Transition.navigation_transition;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::Hymnal.XF.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::Hymnal.XF.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::Hymnal.XF.Droid.Resource.Attribute.font;
@@ -18182,17 +18195,53 @@ namespace Hymnal.XF.Droid
 			// aapt resource value: 0x7F01000F
 			public const int design_snackbar_out = 2130771983;
 			
+			// aapt resource value: 0x7F010014
+			public const int EnterFromLeft = 2130771988;
+			
+			// aapt resource value: 0x7F010015
+			public const int EnterFromRight = 2130771989;
+			
 			// aapt resource value: 0x7F010010
-			public const int EnterFromLeft = 2130771984;
+			public const int enter_bottom = 2130771984;
 			
 			// aapt resource value: 0x7F010011
-			public const int EnterFromRight = 2130771985;
+			public const int enter_left = 2130771985;
 			
 			// aapt resource value: 0x7F010012
-			public const int ExitToLeft = 2130771986;
+			public const int enter_right = 2130771986;
 			
 			// aapt resource value: 0x7F010013
-			public const int ExitToRight = 2130771987;
+			public const int enter_top = 2130771987;
+			
+			// aapt resource value: 0x7F01001A
+			public const int ExitToLeft = 2130771994;
+			
+			// aapt resource value: 0x7F01001B
+			public const int ExitToRight = 2130771995;
+			
+			// aapt resource value: 0x7F010016
+			public const int exit_bottom = 2130771990;
+			
+			// aapt resource value: 0x7F010017
+			public const int exit_left = 2130771991;
+			
+			// aapt resource value: 0x7F010018
+			public const int exit_right = 2130771992;
+			
+			// aapt resource value: 0x7F010019
+			public const int exit_top = 2130771993;
+			
+			// aapt resource value: 0x7F01001C
+			public const int fade_in = 2130771996;
+			
+			// aapt resource value: 0x7F01001D
+			public const int fade_out = 2130771997;
+			
+			// aapt resource value: 0x7F01001E
+			public const int flip_in = 2130771998;
+			
+			// aapt resource value: 0x7F01001F
+			public const int flip_out = 2130771999;
 			
 			static Animation()
 			{
@@ -28542,14 +28591,30 @@ namespace Hymnal.XF.Droid
 			}
 		}
 		
-		public partial class Xml
+		public partial class Transition
 		{
 			
 			// aapt resource value: 0x7F100000
-			public const int Empty = 2131755008;
+			public const int navigation_transition = 2131755008;
 			
-			// aapt resource value: 0x7F100001
-			public const int xamarin_essentials_fileprovider_file_paths = 2131755009;
+			static Transition()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Transition()
+			{
+			}
+		}
+		
+		public partial class Xml
+		{
+			
+			// aapt resource value: 0x7F110000
+			public const int Empty = 2131820544;
+			
+			// aapt resource value: 0x7F110001
+			public const int xamarin_essentials_fileprovider_file_paths = 2131820545;
 			
 			static Xml()
 			{

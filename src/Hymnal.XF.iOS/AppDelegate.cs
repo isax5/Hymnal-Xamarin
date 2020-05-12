@@ -6,7 +6,7 @@ using UIKit;
 namespace Hymnal.XF.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, Core.App, XF.UI.App>
+    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, Core.App, UI.App>
     {
         public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
         {
@@ -24,12 +24,10 @@ namespace Hymnal.XF.iOS
             {
                 case "SearchAction":
                     Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Search);
-                    //Hymnal.Core.App.Current?.LaunchPage<Hymnal.Core.ViewModels.SearchViewModel>();
                     break;
 
                 case "HistoryAction":
                     Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Records);
-                    //Hymnal.Core.App.Current?.LaunchPage<Hymnal.Core.ViewModels.RecordsViewModel>();
                     break;
 
                 default:

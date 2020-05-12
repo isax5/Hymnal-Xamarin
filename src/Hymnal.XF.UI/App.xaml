@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:custom="clr-namespace:Hymnal.XF.UI.Pages.Custom"
     xmlns:resources="clr-namespace:Hymnal.XF.UI.Resources">
     <Application.Resources>
 
@@ -15,7 +16,7 @@
 
                     <x:String x:Key="BackgroundImageFile">Background</x:String>
 
-                    <Style TargetType="NavigationPage">
+                    <Style TargetType="custom:CustomNavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                         <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
