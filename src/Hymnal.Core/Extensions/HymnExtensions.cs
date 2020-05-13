@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hymnal.Core.Models;
@@ -7,28 +8,27 @@ namespace Hymnal.Core.Extensions
 {
     public static class HymnExtensions
     {
-        public static FavoriteHymn ToFavoriteHymn(this Hymn hymn, HymnalLanguage hymnalLanguage)
+        public static FavoriteHymn ToFavoriteHymn(this Hymn hymn)
         {
             return new FavoriteHymn
             {
                 Number = hymn.Number,
-                Title = hymn.Title,
-                Content = hymn.Content,
-                HymnalLanguage = hymnalLanguage
+                SavedAt = DateTimeOffset.Now,
+                HymnalLanguageId = hymn.HymnalLanguageId
             };
         }
 
-        public static HistoryHymn ToHistoryHymn(this Hymn hymn, HymnalLanguage hymnalLanguage)
+        public static RecordHymn ToRecordHymn(this Hymn hymn)
         {
-            return new HistoryHymn
+            return new RecordHymn
             {
                 Number = hymn.Number,
-                Title = hymn.Title,
-                Content = hymn.Content,
-                HymnalLanguage = hymnalLanguage
+                SavedAt = DateTimeOffset.Now,
+                HymnalLanguageId = hymn.HymnalLanguageId
             };
         }
 
+        #region Order
         public static IEnumerable<Hymn> OrderByNumber(this IEnumerable<Hymn> hymns)
         {
             return hymns.OrderBy(h => h.Number);
@@ -235,7 +235,13 @@ namespace Hymnal.Core.Extensions
                 contentRendered.Contains(queryRendered);
             });
         }
+        #endregion
 
+        /// <summary>
+        /// Render string for search, lists, order, etc.
+        /// </summary>
+        /// <param name="query"></param>
+        /// <returns></returns>
         public static string StringRender(this string query)
         {
             return query

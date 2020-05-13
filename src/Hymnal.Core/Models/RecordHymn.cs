@@ -3,7 +3,7 @@ using Realms;
 
 namespace Hymnal.Core.Models
 {
-    public class FavoriteHymn : RealmObject, IHymnReference
+    public class RecordHymn : RealmObject, IHymnReference
     {
         /// <summary>
         /// Hymn Number

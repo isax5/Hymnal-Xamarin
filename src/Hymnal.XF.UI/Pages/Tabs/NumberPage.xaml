@@ -72,6 +72,7 @@
                 Margin="0,30"
                 Padding="0,0,0,60">
                 <Grid Padding="0">
+
                     <Frame
                         BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
                         CornerRadius="10"

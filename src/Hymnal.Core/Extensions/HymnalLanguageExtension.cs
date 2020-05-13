@@ -7,7 +7,7 @@ namespace Hymnal.Core.Extensions
     {
         /// <summary>
         /// Get updated information about this Language
-        /// Useful for Favorites and History Hymnals becouse the name of the files (hymals) can change
+        /// Useful for Favorites and Records Hymnals becouse the name of the files of the hymals can change
         /// </summary>
         public static HymnalLanguage Configuration(this HymnalLanguage hymnalLanguage)
         {
@@ -40,6 +40,12 @@ namespace Hymnal.Core.Extensions
             return hymnalLanguage.Configuration().SungMusic.Replace("###", hymnNumber.ToString("D3"));
         }
 
+        /// <summary>
+        /// Get Music Sheet
+        /// </summary>
+        /// <param name="hymnalLanguage"></param>
+        /// <param name="hymnNymber"></param>
+        /// <returns></returns>
         public static string GetMusicSheetSource(this HymnalLanguage hymnalLanguage, int hymnNymber)
         {
             return hymnalLanguage.Configuration().HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
