@@ -13,6 +13,11 @@ namespace Hymnal.Core.Models
         [JsonProperty("content")]
         public string Content { get; set; }
 
+        /// <summary>
+        /// Language Id <see cref="HymnalLanguage.Id"/>
+        /// </summary>
+        public string HymnalLanguageId { get; set; }
+
         public string PlainContent => Content.Replace("\n", " ");
     }
 }

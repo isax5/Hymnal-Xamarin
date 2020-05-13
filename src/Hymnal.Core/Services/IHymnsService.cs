@@ -10,6 +10,8 @@ namespace Hymnal.Core.Services
 
         Task<Hymn> GetHymnAsync(int number, HymnalLanguage language);
 
+        Task<Hymn> GetHymnAsync(IHymnReference hymnReference);
+
         Task<IEnumerable<Thematic>> GetThematicListAsync(HymnalLanguage language);
     }
 }

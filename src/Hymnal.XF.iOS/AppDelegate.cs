@@ -12,7 +12,7 @@ namespace Hymnal.XF.iOS
         {
             //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
 
-            if (shortcutItem == null || Hymnal.Core.App.Current == null)
+            if (shortcutItem == null || Core.App.Current == null)
             {
                 Debug.WriteLine("No shortcut or app not deployed");
                 return;

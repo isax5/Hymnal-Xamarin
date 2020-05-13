@@ -6,7 +6,7 @@ namespace Hymnal.Core.Models.Parameter
     public class HymnIdParameter
     {
         public int Number { get; set; }
-        public bool SaveInHistory { get; set; } = true;
+        public bool SaveInRecords { get; set; } = true;
         public HymnalLanguage HymnalLanguage { get; set; }
     }
 }

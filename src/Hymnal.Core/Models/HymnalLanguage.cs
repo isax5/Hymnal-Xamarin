@@ -1,3 +1,5 @@
+using System.Linq;
+
 namespace Hymnal.Core.Models
 {
     public class HymnalLanguage
@@ -34,6 +36,11 @@ namespace Hymnal.Core.Models
             var hl = obj as HymnalLanguage;
 
             return Id == hl.Id;
+        }
+
+        public static HymnalLanguage GetHymnalLanguageWithId(string id)
+        {
+            return Constants.HymnsLanguages.FirstOrDefault(l => l.Id.Equals(id));
         }
     }
 }
