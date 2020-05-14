@@ -13,6 +13,7 @@
     Title="{i18n:Translate Number}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:NumberViewModel"
+    AutomationId="NumberPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
@@ -33,6 +34,7 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
+            AutomationId="OpenSearchPageToolbarItem"
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>

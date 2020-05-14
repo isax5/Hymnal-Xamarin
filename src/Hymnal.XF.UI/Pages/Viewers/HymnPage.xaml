@@ -12,6 +12,7 @@
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:HymnViewModel"
+    AutomationId="HymnPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
 

@@ -21,6 +21,7 @@ namespace Hymnal.UI.Test
 
             return ConfigureApp
                 .iOS
+                .InstalledApp("net.ddns.HimnarioAdventistaSPA")
                 .StartApp();
         }
     }

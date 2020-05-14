@@ -14,6 +14,7 @@
     iOS:Page.UseSafeArea="True"
     sharedTransitions:SharedTransitionNavigationPage.TransitionSelectedGroup="{Binding HymnId}"
     x:TypeArguments="viewModels:SearchViewModel"
+    AutomationId="SearchPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
     Visual="Material"
     mc:Ignorable="d">
@@ -50,6 +51,7 @@
                 x:Name="HymnSearchBar"
                 Grid.Row="0"
                 iOS:SearchBar.SearchBarStyle="Minimal"
+                AutomationId="HymnSearchBar"
                 CancelButtonColor="{DynamicResource PrimaryColor}"
                 Placeholder="{i18n:Translate Searcher}"
                 PlaceholderColor="{DynamicResource PrimaryLightColor}"
@@ -69,6 +71,7 @@
                         <ViewCell>
                             <Grid
                                 Padding="20,5"
+                                AutomationId="{Binding Number, StringFormat='{0}_ViewCell_Grid'}"
                                 ColumnSpacing="0"
                                 RowSpacing="0">
                                 <Grid.ColumnDefinitions>

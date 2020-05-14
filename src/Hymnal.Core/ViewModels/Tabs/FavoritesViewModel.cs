@@ -14,12 +14,10 @@ namespace Hymnal.Core.ViewModels
     public class FavoritesViewModel : MvxViewModel
     {
         private readonly IMvxNavigationService navigationService;
-        private readonly IDataStorageService dataStorageService;
         private readonly IDialogService dialogService;
         private readonly IHymnsService hymnsService;
         private readonly Realm realm;
 
-        // TODO: Add inteaction for cells: https://docs.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/listview/interactivity#context-actions
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
         private List<FavoriteHymn> favoriteHymns = new List<FavoriteHymn>();
 
@@ -39,13 +37,11 @@ namespace Hymnal.Core.ViewModels
 
         public FavoritesViewModel(
             IMvxNavigationService navigationService,
-            IDataStorageService dataStorageService,
             IDialogService dialogService,
             IHymnsService hymnsService
             )
         {
             this.navigationService = navigationService;
-            this.dataStorageService = dataStorageService;
             this.dialogService = dialogService;
             this.hymnsService = hymnsService;
             realm = Realm.GetInstance();

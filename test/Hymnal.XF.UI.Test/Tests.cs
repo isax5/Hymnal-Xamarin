@@ -23,25 +23,55 @@ namespace Hymnal.UI.Test
         }
 
         [Test]
-        public void TestPro()
+        public void OpenHymnUsingNumber()
         {
             //app.Repl();
 
-            // Arrange
-            app.WaitForElement("OpenHymnButton");
+            // Arranque
+            app.WaitForElement("NumberPage");
+
+            // Act
             app.Tap("HymnNumberEntry");
             app.EnterText("133");
             app.DismissKeyboard();
+            app.Tap("OpenHymnButton");
+            app.WaitForElement("HymnPage");
+            app.Back();
+            app.WaitForElement("NumberPage");
+
+            // Assert
+            var result = app.Query(e => e.Marked("NumberPage")).Any();
+            Assert.IsTrue(result);
+        }
+
+        [Test]
+        public void OpenHymnUsingSearch()
+        {
+
+            // Arranque
+            app.WaitForElement("NumberPage");
 
             // Act
-            app.Tap("OpenHymnButton");
-            app.WaitForElement("HymnTitleLabel");
-            app.Back();
-            app.WaitForElement("OpenHymnButton");
+            app.Tap("OpenSearchPageToolbarItem");
 
-            // Asset
-            var restul = app.Query(e => e.Marked("#")).Any();
-            Assert.IsTrue(restul);
+            app.WaitForElement("SearchPage");
+            app.Tap("HymnSearchBar");
+            app.EnterText("13");
+            app.DismissKeyboard();
+            app.Tap("2_ViewCell_Grid");
+
+            app.WaitForElement("HymnPage");
+            app.Back();
+
+            app.WaitForElement("SearchPage");
+            app.DismissKeyboard();
+            app.Back();
+
+            app.WaitForElement("NumberPage");
+
+            // Assert
+            var result = app.Query(e => e.Marked("NumberPage")).Any();
+            Assert.IsTrue(result);
         }
 
         [Test]
