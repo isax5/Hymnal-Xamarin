@@ -139,21 +139,6 @@
                             Color="{DynamicResource NavBarTextColor}" />
                     </Button.ImageSource>
                 </Button>
-
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroup x:Name="OrientationStates">
-                        <VisualState x:Name="Portrait">
-                            <VisualState.Setters>
-                                <Setter Property="Orientation" Value="Vertical" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Landscape">
-                            <VisualState.Setters>
-                                <Setter Property="Orientation" Value="Horizontal" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateManager.VisualStateGroups>
             </StackLayout>
 
             <VisualStateManager.VisualStateGroups>
@@ -161,11 +146,13 @@
                     <VisualState x:Name="Portrait">
                         <VisualState.Setters>
                             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Vertical" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Landscape">
                         <VisualState.Setters>
                             <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Horizontal" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>

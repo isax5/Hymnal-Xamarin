@@ -19,7 +19,6 @@ namespace Hymnal.XF.UI.Pages
             {
                 var visualState = Width > Height ? "Landscape" : "Portrait";
                 VisualStateManager.GoToState(MainStack, visualState);
-                VisualStateManager.GoToState(ContainerStack, visualState);
             };
         }
 
