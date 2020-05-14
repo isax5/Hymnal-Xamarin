@@ -8,10 +8,13 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Search}"
     iOS:Page.UseSafeArea="True"
+    sharedTransitions:SharedTransitionNavigationPage.TransitionSelectedGroup="{Binding HymnId}"
     x:TypeArguments="viewModels:SearchViewModel"
+    AutomationId="SearchPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
     Visual="Material"
     mc:Ignorable="d">
@@ -47,6 +50,8 @@
             <SearchBar
                 x:Name="HymnSearchBar"
                 Grid.Row="0"
+                iOS:SearchBar.SearchBarStyle="Minimal"
+                AutomationId="HymnSearchBar"
                 CancelButtonColor="{DynamicResource PrimaryColor}"
                 Placeholder="{i18n:Translate Searcher}"
                 PlaceholderColor="{DynamicResource PrimaryLightColor}"
@@ -59,13 +64,14 @@
                 CachingStrategy="RecycleElement"
                 Footer=""
                 ItemsSource="{Binding Hymns}"
-                RowHeight="45"
+                RowHeight="50"
                 SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <Grid
-                                Padding="20,0"
+                                Padding="20,5"
+                                AutomationId="{Binding Number, StringFormat='{0}_ViewCell_Grid'}"
                                 ColumnSpacing="0"
                                 RowSpacing="0">
                                 <Grid.ColumnDefinitions>
@@ -88,6 +94,10 @@
                                     VerticalOptions="CenterAndExpand" />
 
                                 <!--  Title  -->
+                                <!--
+                                    sharedTransitions:Transition.Group="{Binding Number}"
+                                    sharedTransitions:Transition.Name="TitleTransition"
+                                -->
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"

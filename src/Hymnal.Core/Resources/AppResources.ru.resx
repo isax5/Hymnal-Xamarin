@@ -83,4 +83,8 @@
     <value>Версии и языки</value>
     <comment>Settings. Choose hymnal</comment>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Удалять</value>
+    <comment>Delete</comment>
+  </data>
 </root>

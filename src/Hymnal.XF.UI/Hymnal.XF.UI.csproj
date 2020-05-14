@@ -6,10 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="FontAwesome5Brands.otf" />
+    <None Remove="Fonts\FontAwesome5Regular.otf" />
+    <None Remove="Fonts\FontAwesome5Solid.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\FontAwesome5BrandsRegular.otf" />
+    <EmbeddedResource Include="Fonts\FontAwesome5Regular.otf" />
+    <EmbeddedResource Include="Fonts\FontAwesome5Solid.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="MvvmCross" Version="6.4.2" />
     <PackageReference Include="MvvmCross.Forms" Version="6.4.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.0.2" />
     <PackageReference Include="XamarinFastEntry.Behaviors" Version="1.1.1" />
   </ItemGroup>
   
@@ -23,6 +36,9 @@
     </Compile>
     <Compile Update="Pages\Index\Thematic\ThematicHymnsListPage.xaml.cs">
       <DependentUpon>ThematicHymnsListPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Resources\LightTheme.xaml.cs">
+      <DependentUpon>LightTheme.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -81,7 +97,7 @@
     <EmbeddedResource Update="Resources\DarkTheme.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Resources\WhiteTheme.xaml">
+    <EmbeddedResource Update="Resources\LightTheme.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -1,6 +1,6 @@
 using System;
 using Hymnal.XF.iOS.Renderers;
-using Hymnal.XF.UI;
+using Hymnal.XF.UI.Resources;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -8,27 +8,9 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
 namespace Hymnal.XF.iOS.Renderers
 {
+    // Making theme transition for iOS more fluid
     public class ContentPageRenderer : PageRenderer
     {
-        protected override void OnElementChanged(VisualElementChangedEventArgs e)
-        {
-            base.OnElementChanged(e);
-
-            if (e.OldElement != null || Element == null)
-            {
-                return;
-            }
-
-            try
-            {
-                SetAppTheme();
-            }
-            catch (Exception ex)
-            {
-                System.Diagnostics.Debug.WriteLine($"\t\t\tERROR: {ex.Message}");
-            }
-        }
-
         public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
         {
             base.TraitCollectionDidChange(previousTraitCollection);
@@ -36,29 +18,7 @@ namespace Hymnal.XF.iOS.Renderers
 
             if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
             {
-                SetAppTheme();
-            }
-        }
-
-        private void SetAppTheme()
-        {
-            switch (TraitCollection.UserInterfaceStyle)
-            {
-                case UIUserInterfaceStyle.Dark:
-                    if (App.AppTheme != XF.UI.Models.AppTheme.Dark)
-                        App.AppTheme = XF.UI.Models.AppTheme.Dark;
-                    break;
-
-                case UIUserInterfaceStyle.Light:
-                    if (App.AppTheme != XF.UI.Models.AppTheme.Light)
-                        App.AppTheme = XF.UI.Models.AppTheme.Light;
-                    break;
-
-                case UIUserInterfaceStyle.Unspecified:
-                default:
-                    if (App.AppTheme != XF.UI.Models.AppTheme.Unspecified)
-                        App.AppTheme = XF.UI.Models.AppTheme.Unspecified;
-                    break;
+                ThemeHelper.CheckTheme();
             }
         }
     }

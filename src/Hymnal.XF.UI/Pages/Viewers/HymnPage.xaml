@@ -7,10 +7,12 @@
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:HymnViewModel"
+    AutomationId="HymnPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
 
@@ -35,8 +37,17 @@
             Priority="3">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeBrands}"
+                    FontFamily="{x:Static constans:FontAwesome.Brands}"
                     Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem
+            Command="{Binding ShareCommand}"
+            Priority="4">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
+                    Glyph="{x:Static constans:FontAwesome.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </mvxViews:MvxContentPage.ToolbarItems>
@@ -64,6 +75,7 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}">
             <StackLayout Spacing="20">
+                <!--  sharedTransitions:Transition.Name="TitleTransition"  -->
                 <Label
                     AutomationId="HymnTitleLabel"
                     FontSize="{Binding HymnTitleFontSize}"

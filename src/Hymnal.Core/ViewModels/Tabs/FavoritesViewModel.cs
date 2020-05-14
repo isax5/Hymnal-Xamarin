@@ -1,22 +1,27 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Realms;
 
 namespace Hymnal.Core.ViewModels
 {
     public class FavoritesViewModel : MvxViewModel
     {
         private readonly IMvxNavigationService navigationService;
-        private readonly IDataStorageService dataStorageService;
+        private readonly IDialogService dialogService;
+        private readonly IHymnsService hymnsService;
+        private readonly Realm realm;
 
-        public MvxObservableCollection<FavoriteHymn> Hymns { get; set; } = new MvxObservableCollection<FavoriteHymn>();
+        public MvxObservableCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<FavoriteHymn, Hymn>>();
 
-        public FavoriteHymn SelectedHymn
+        public Tuple<FavoriteHymn, Hymn> SelectedHymn
         {
             get => null;
             set
@@ -30,24 +35,28 @@ namespace Hymnal.Core.ViewModels
         }
 
 
-        public FavoritesViewModel(IMvxNavigationService navigationService, IDataStorageService dataStorageService)
+        public FavoritesViewModel(
+            IMvxNavigationService navigationService,
+            IDialogService dialogService,
+            IHymnsService hymnsService
+            )
         {
             this.navigationService = navigationService;
-            this.dataStorageService = dataStorageService;
+            this.dialogService = dialogService;
+            this.hymnsService = hymnsService;
+            realm = Realm.GetInstance();
         }
 
-        public override Task Initialize()
-        {
-            Hymns.AddRange(dataStorageService.GetItems<FavoriteHymn>().OrderByDescending(h => h.SavedAt));
-            return base.Initialize();
-        }
-
-        public override void ViewAppearing()
+        public override async void ViewAppearing()
         {
             base.ViewAppearing();
 
             // Update list
-            IOrderedEnumerable<FavoriteHymn> favorites = dataStorageService.GetItems<FavoriteHymn>().OrderByDescending(h => h.SavedAt);
+            //IOrderedEnumerable<Hymn> favorites = dataStorageService.GetItems<FavoriteHymn>().OrderByDescending(h => h.SavedAt);
+
+            var favorites = await Task.WhenAll(
+                realm.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
+                .Select(async f => new Tuple<FavoriteHymn, Hymn>(f, await hymnsService.GetHymnAsync(f))));
 
             // If there weren't hymns in the list before
             if (Hymns.Count() == 0)
@@ -57,32 +66,43 @@ namespace Hymnal.Core.ViewModels
             }
 
             // Add new Hymns
-            foreach (FavoriteHymn item in favorites.Where(
-                h1 => Hymns.Where(h2 => h2.Number == h1.Number && h2.HymnalLanguage.Equals(h1.HymnalLanguage)).Count() == 0))
+            foreach (Tuple<FavoriteHymn, Hymn> hymn in favorites.Where(t1 => Hymns.Where(t2 => t2.Item2.Number == t1.Item2.Number && t2.Item2.HymnalLanguageId.Equals(t1.Item2.HymnalLanguageId)).Count() == 0))
             {
-                var position = Hymns.Where(h => h.SavedAt > item.SavedAt).Count();
-                Hymns.Insert(position, item);
+                // if hymn doesn't exist in Hymns
+
+                var position = Hymns.Where(t => t.Item1.SavedAt > hymn.Item1.SavedAt).Count();
+                Hymns.Insert(position, hymn);
             }
 
             // Remove no favorites hymns
-            var removeList = new List<FavoriteHymn>();
-            foreach (FavoriteHymn item in Hymns.Where(
-                h1 => favorites.Where(h2 => h2.Number == h1.Number && h2.HymnalLanguage.Equals(h1.HymnalLanguage)).Count() == 0))
+            var toRemoveList = new List<Tuple<FavoriteHymn, Hymn>>();
+            foreach (var hymn in Hymns.Where(t1 => favorites.Where(t2 => t2.Item2.Number == t1.Item2.Number && t2.Item2.HymnalLanguageId.Equals(t1.Item2.HymnalLanguageId)).Count() == 0))
             {
-                removeList.Add(item);
+                toRemoveList.Add(hymn);
             }
 
-            foreach (FavoriteHymn item in removeList)
+            foreach (var item in toRemoveList)
                 Hymns.Remove(item);
         }
 
-        private void SelectedHymnExecute(FavoriteHymn hymn)
+        private void SelectedHymnExecute(Tuple<FavoriteHymn, Hymn> hymn)
         {
             navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
             {
-                Number = hymn.Number,
-                HymnalLanguage = hymn.HymnalLanguage
+                Number = hymn.Item2.Number,
+                HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId)
             });
+        }
+
+        public MvxCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand => new MvxCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute);
+        private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
+        {
+            Hymns.Remove(favoriteHymn);
+            using (var trans = realm.BeginWrite())
+            {
+                realm.Remove(favoriteHymn.Item1);
+                trans.Commit();
+            }
         }
     }
 }

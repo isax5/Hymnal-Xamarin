@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
@@ -10,6 +9,7 @@ using Hymnal.Core.Services;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Realms;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -17,11 +17,12 @@ namespace Hymnal.Core.ViewModels
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
-        private readonly IDataStorageService dataStorageService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaService mediaService;
         private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
+        private readonly IShareService shareService;
+        private readonly Realm realm;
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
@@ -65,21 +66,21 @@ namespace Hymnal.Core.ViewModels
         public HymnViewModel(
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
-            IDataStorageService dataStorageService,
             IPreferencesService preferencesService,
             IMediaService mediaService,
             IConnectivityService connectivityService,
-            IDialogService dialogService
+            IDialogService dialogService,
+            IShareService shareService
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
-            this.dataStorageService = dataStorageService;
             this.preferencesService = preferencesService;
             this.mediaService = mediaService;
             this.connectivityService = connectivityService;
             this.dialogService = dialogService;
-
+            this.shareService = shareService;
+            realm = Realm.GetInstance();
             this.mediaService.Playing += MediaService_Playing;
             this.mediaService.Stopped += MediaService_Stopped;
             this.mediaService.EndReached += MediaService_EndReached;
@@ -95,7 +96,7 @@ namespace Hymnal.Core.ViewModels
         public override void Prepare(HymnIdParameter parameter)
         {
             HymnParameter = parameter;
-            Language = HymnParameter.HymnalLanguage.Configuration();
+            Language = HymnParameter.HymnalLanguage;
         }
 
         public override async Task Initialize()
@@ -105,27 +106,20 @@ namespace Hymnal.Core.ViewModels
             IsPlaying = mediaService.IsPlaying;
 
             // Is Favorite
-            IsFavorite = dataStorageService.GetItems<FavoriteHymn>().Exists(h => h.Number == Hymn.Number && h.HymnalLanguage.Equals(Language));
+            IsFavorite = realm.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
-            // History
-            if (HymnParameter.SaveInHistory)
+            // Record
+            if (HymnParameter.SaveInRecords)
             {
-                List<HistoryHymn> history = dataStorageService.GetItems<HistoryHymn>();
+                IQueryable<RecordHymn> records = realm.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
 
-                // was this hymn in the history?
-                history.RemoveAll(h => h.Number == Hymn.Number && h.HymnalLanguage.Equals(Language));
+                using (Transaction trans = realm.BeginWrite())
+                {
+                    realm.RemoveRange(records);
+                    trans.Commit();
+                }
 
-                // add new in History
-                history.Add(Hymn.ToHistoryHymn(HymnParameter.HymnalLanguage));
-
-                history = history.OrderByDescending(h => h.SavedAt).ToList();
-
-                // remove over history
-                if (history.Count > Constants.MAXIMUM_RECORDS)
-                    history = history.GetRange(0, Constants.MAXIMUM_RECORDS);
-
-                // save history
-                dataStorageService.ReplaceItems(history);
+                realm.Write(() => realm.Add(Hymn.ToRecordHymn()));
             }
 
             await base.Initialize();
@@ -158,16 +152,31 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand FavoriteCommand => new MvxCommand(FavoriteExecute);
         private void FavoriteExecute()
         {
-            List<FavoriteHymn> favorites = dataStorageService.GetItems<FavoriteHymn>();
+            var favorites = realm.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
-            if (IsFavorite)
-                favorites.RemoveAll(h => h.Number == HymnParameter.Number && h.HymnalLanguage.Equals(Language));
+            if (IsFavorite || favorites.Count() > 0)
+            {
+                using (Transaction trans = realm.BeginWrite())
+                {
+                    realm.RemoveRange(favorites);
+                    trans.Commit();
+                }
+            }
             else
-                favorites.Add(Hymn.ToFavoriteHymn(Language));
+            {
+                realm.Write(() => realm.Add(Hymn.ToFavoriteHymn()));
+            }
 
-            dataStorageService.ReplaceItems(favorites);
 
             IsFavorite = !IsFavorite;
+        }
+
+        public MvxCommand ShareCommand => new MvxCommand(ShareExecute);
+        private void ShareExecute()
+        {
+            shareService.Share(
+                title: hymn.Title,
+                text: $"{hymn.Title}\n\n{hymn.Content}\n\n{Constants.WebLinks.DeveloperWebSite}");
         }
 
         public MvxCommand PlayCommand => new MvxCommand(PlayExecute);
@@ -205,7 +214,5 @@ namespace Hymnal.Core.ViewModels
             navigationService.Close(this);
         }
         #endregion
-
-
     }
 }

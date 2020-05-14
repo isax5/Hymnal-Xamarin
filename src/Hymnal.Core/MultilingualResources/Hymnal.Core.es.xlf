@@ -100,6 +100,11 @@
           <target state="translated">Versiones e idiomas</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
         </trans-unit>
+        <trans-unit id="Delete" translate="yes" xml:space="preserve">
+          <source>Delete</source>
+          <target state="translated">Eliminar</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Delete</note>
+        </trans-unit>
       </group>
     </body>
   </file>

@@ -8,15 +8,17 @@
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Number}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:NumberViewModel"
+    AutomationId="NumberPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{StaticResource FontAwesomeSolid}"
+            FontFamily="{x:Static constans:FontAwesome.Solid}"
             Glyph="{x:Static constans:FontAwesome.BookReader}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
@@ -27,16 +29,17 @@
             Priority="-1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.History}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
+            AutomationId="OpenSearchPageToolbarItem"
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontFamily="{x:Static constans:FontAwesome.Solid}"
                     Glyph="{x:Static constans:FontAwesome.Search}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
@@ -71,6 +74,7 @@
                 Margin="0,30"
                 Padding="0,0,0,60">
                 <Grid Padding="0">
+
                     <Frame
                         BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
                         CornerRadius="10"
@@ -130,26 +134,11 @@
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{StaticResource FontAwesomeSolid}"
+                            FontFamily="{x:Static constans:FontAwesome.Solid}"
                             Glyph="{x:Static constans:FontAwesome.BookOpen}"
                             Color="{DynamicResource NavBarTextColor}" />
                     </Button.ImageSource>
                 </Button>
-
-                <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroup x:Name="OrientationStates">
-                        <VisualState x:Name="Portrait">
-                            <VisualState.Setters>
-                                <Setter Property="Orientation" Value="Vertical" />
-                            </VisualState.Setters>
-                        </VisualState>
-                        <VisualState x:Name="Landscape">
-                            <VisualState.Setters>
-                                <Setter Property="Orientation" Value="Horizontal" />
-                            </VisualState.Setters>
-                        </VisualState>
-                    </VisualStateGroup>
-                </VisualStateManager.VisualStateGroups>
             </StackLayout>
 
             <VisualStateManager.VisualStateGroups>
@@ -157,11 +146,13 @@
                     <VisualState x:Name="Portrait">
                         <VisualState.Setters>
                             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Vertical" />
                         </VisualState.Setters>
                     </VisualState>
                     <VisualState x:Name="Landscape">
                         <VisualState.Setters>
                             <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Horizontal" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>

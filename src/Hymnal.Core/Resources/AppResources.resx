@@ -132,6 +132,10 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Delete</value>
+    <comment>Delete</comment>
+  </data>
   <data name="Developers" xml:space="preserve">
     <value>Developers</value>
   </data>

@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:custom="clr-namespace:Hymnal.XF.UI.Pages.Custom"
     xmlns:resources="clr-namespace:Hymnal.XF.UI.Resources">
     <Application.Resources>
 
@@ -15,7 +16,7 @@
 
                     <x:String x:Key="BackgroundImageFile">Background</x:String>
 
-                    <Style TargetType="NavigationPage">
+                    <Style TargetType="custom:CustomNavigationPage">
                         <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                         <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
@@ -31,53 +32,6 @@
                         <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
                         <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                     </Style>
-                </ResourceDictionary>
-
-                <!--  Icons  -->
-                <ResourceDictionary>
-
-                    <OnPlatform
-                        x:Key="FontAwesomeBrands"
-                        x:TypeArguments="x:String">
-                        <On
-                            Platform="Android"
-                            Value="FontAwesome5BrandsRegular.otf#Regular" />
-                        <On
-                            Platform="iOS"
-                            Value="FontAwesome5Brands-Regular" />
-                        <On
-                            Platform="UWP"
-                            Value="/Assets/FontAwesome5Brands.otf#Font Awesome 5 Brands" />
-                    </OnPlatform>
-
-                    <OnPlatform
-                        x:Key="FontAwesomeSolid"
-                        x:TypeArguments="x:String">
-                        <On
-                            Platform="Android"
-                            Value="FontAwesome5Solid.otf#Regular" />
-                        <On
-                            Platform="iOS"
-                            Value="FontAwesome5Free-Solid" />
-                        <On
-                            Platform="UWP"
-                            Value="/Assets/FontAwesome5Solid.otf#Font Awesome 5 Free" />
-                    </OnPlatform>
-
-                    <OnPlatform
-                        x:Key="FontAwesomeRegular"
-                        x:TypeArguments="x:String">
-                        <On
-                            Platform="Android"
-                            Value="FontAwesome5Regular.otf#Regular" />
-                        <On
-                            Platform="iOS"
-                            Value="FontAwesome5Free-Regular" />
-                        <On
-                            Platform="UWP"
-                            Value="/Assets/FontAwesome5Regular.otf#Font Awesome 5 Free" />
-                    </OnPlatform>
-
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>

@@ -26,12 +26,21 @@ namespace Hymnal.Core.Services
             this.filesService = filesService;
         }
 
+        /// <summary>
+        /// Get list of hymns
+        /// Here is where you read all the hymns
+        /// </summary>
+        /// <param name="language"></param>
+        /// <returns></returns>
         public async Task<IEnumerable<Hymn>> GetHymnListAsync(HymnalLanguage language)
         {
             if (!HymnsDictionary.ContainsKey(language.Id))
             {
                 var file = await filesService.ReadFileAsync(language.Configuration().HymnsFileName);
                 List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
+
+                // Set Id of the language to know allways where it is from
+                hymns.ForEach(h => h.HymnalLanguageId = language.Id);
 
                 lock (HymnsDictionary)
                 {
@@ -48,6 +57,16 @@ namespace Hymnal.Core.Services
             IEnumerable<Hymn> hymns = await GetHymnListAsync(language);
 
             return hymns.First(h => h.Number == number);
+        }
+
+        /// <summary>
+        /// Get Hymn from a storage reference of a hymn
+        /// </summary>
+        /// <param name="hymnReference"></param>
+        /// <returns></returns>
+        public Task<Hymn> GetHymnAsync(IHymnReference hymnReference)
+        {
+            return GetHymnAsync(hymnReference.Number, HymnalLanguage.GetHymnalLanguageWithId(hymnReference.HymnalLanguageId));
         }
 
         public async Task<IEnumerable<Thematic>> GetThematicListAsync(HymnalLanguage language)

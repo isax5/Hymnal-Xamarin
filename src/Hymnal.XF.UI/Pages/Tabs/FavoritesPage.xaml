@@ -8,6 +8,7 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
+    x:Name="page"
     Title="{i18n:Translate Favorites}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:FavoritesViewModel"
@@ -15,87 +16,101 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{StaticResource FontAwesomeSolid}"
+            FontFamily="{x:Static constans:FontAwesome.Solid}"
             Glyph="{x:Static constans:FontAwesome.Heart}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
-    <RelativeLayout>
-        <Image
-            Aspect="AspectFill"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}"
-            Source="{DynamicResource BackgroundImageFile}" />
+    <mvxViews:MvxContentPage.Content>
+        <RelativeLayout>
+            <Image
+                Aspect="AspectFill"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                       Property=Height}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width}"
+                Source="{DynamicResource BackgroundImageFile}" />
 
-        <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundWhiteFilter}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}" />
+            <StackLayout
+                BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+                Opacity="{DynamicResource BackgroundWhiteFilter}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                       Property=Height}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width}" />
 
-        <ListView
-            BackgroundColor="Transparent"
-            CachingStrategy="RecycleElement"
-            Footer=""
-            ItemsSource="{Binding Hymns}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}"
-            RowHeight="45"
-            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid
-                            Padding="20,0"
-                            ColumnSpacing="0"
-                            RowSpacing="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.7*" />
-                                <RowDefinition Height="0.3*" />
-                            </Grid.RowDefinitions>
+            <ListView
+                x:Name="list"
+                BackgroundColor="Transparent"
+                CachingStrategy="RecycleElement"
+                Footer=""
+                ItemsSource="{Binding Hymns}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                       Property=Height}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width}"
+                RowHeight="50"
+                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--  Working for cells: Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:FavoritesViewModel}}, Path=DeleteHymnCommand}"  -->
+                            <!--  Recomended by Microsoft: Command="{Binding Source={x:Reference page}, Path=BindingContext.DeleteHymnCommand}"  -->
+                            <!--  Working in for this case: Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"  -->
+                            <ViewCell.ContextActions>
+                                <MenuItem
+                                    Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"
+                                    CommandParameter="{Binding .}"
+                                    IsDestructive="True"
+                                    Text="{i18n:Translate Delete}" />
+                            </ViewCell.ContextActions>
+                            <Grid
+                                Padding="20,5"
+                                ColumnSpacing="0"
+                                RowSpacing="0">
 
-                            <!--  Number  -->
-                            <Label
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="0"
-                                FontSize="Large"
-                                Text="{Binding Number}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
-                                VerticalOptions="CenterAndExpand" />
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.2*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="0.7*" />
+                                    <RowDefinition Height="0.3*" />
+                                </Grid.RowDefinitions>
 
-                            <!--  Title  -->
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                FontSize="Large"
-                                Text="{Binding Title}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
-                                VerticalOptions="CenterAndExpand" />
+                                <!--  Number  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    FontSize="Large"
+                                    Text="{Binding Item2.Number}"
+                                    TextColor="{DynamicResource PrimaryTextColor}"
+                                    VerticalOptions="CenterAndExpand" />
 
-                            <!--  Preview  -->
-                            <Label
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                FontSize="Micro"
-                                Text="{Binding PlainContent}"
-                                TextColor="{DynamicResource SecondaryTextColor}"
-                                VerticalOptions="CenterAndExpand" />
+                                <!--  Title  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    FontSize="Large"
+                                    Text="{Binding Item2.Title}"
+                                    TextColor="{DynamicResource PrimaryTextColor}"
+                                    VerticalOptions="CenterAndExpand" />
 
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </RelativeLayout>
+                                <!--  Preview  -->
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    FontSize="Micro"
+                                    Text="{Binding Item2.PlainContent}"
+                                    TextColor="{DynamicResource SecondaryTextColor}"
+                                    VerticalOptions="CenterAndExpand" />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </mvxViews:MvxContentPage.Content>
 
 </mvxViews:MvxContentPage>

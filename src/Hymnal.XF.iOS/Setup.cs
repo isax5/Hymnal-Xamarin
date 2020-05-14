@@ -1,14 +1,16 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
+using Hymnal.XF.iOS.Custom;
 using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
+using MvvmCross.Forms.Presenters;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.iOS
 {
-    public class Setup : MvxFormsIosSetup<Core.App, XF.UI.App>
+    public class Setup : MvxFormsIosSetup<Core.App, UI.App>
     {
         protected override void InitializeFirstChance()
         {
@@ -22,8 +24,10 @@ namespace Hymnal.XF.iOS
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
             Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
+            Mvx.IoCProvider.RegisterType<IDeviceInformation, DeviceInformation>();
             Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
             Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
+            Mvx.IoCProvider.RegisterType<IShareService, ShareService>();
         }
 
         public override void InitializePrimary()
@@ -31,6 +35,14 @@ namespace Hymnal.XF.iOS
             base.InitializePrimary();
             FormsMaterial.Init();
             CrossMediaManager.Current.Init();
+        }
+
+        protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
+        {
+            //var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
+            var formsPagePresenter = new CustomFormsPagePresenter(viewPresenter);
+            Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(formsPagePresenter);
+            return formsPagePresenter;
         }
     }
 }
