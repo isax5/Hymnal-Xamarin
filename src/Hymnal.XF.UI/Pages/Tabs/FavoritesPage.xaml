@@ -83,7 +83,7 @@
                                     Grid.RowSpan="2"
                                     Grid.Column="0"
                                     FontSize="Large"
-                                    Text="{Binding Number}"
+                                    Text="{Binding Item2.Number}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />
 
@@ -92,7 +92,7 @@
                                     Grid.Row="0"
                                     Grid.Column="1"
                                     FontSize="Large"
-                                    Text="{Binding Title}"
+                                    Text="{Binding Item2.Title}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />
 
@@ -101,7 +101,7 @@
                                     Grid.Row="1"
                                     Grid.Column="1"
                                     FontSize="Micro"
-                                    Text="{Binding PlainContent}"
+                                    Text="{Binding Item2.PlainContent}"
                                     TextColor="{DynamicResource SecondaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />
 
