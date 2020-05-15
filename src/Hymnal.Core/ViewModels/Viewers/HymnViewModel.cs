@@ -101,6 +101,7 @@ namespace Hymnal.Core.ViewModels
 
         public override async Task Initialize()
         {
+            // TODO: Check for any crash
             Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
 
             IsPlaying = mediaService.IsPlaying;

@@ -7,7 +7,14 @@ namespace Hymnal.Core.Services
     {
         int HymnalsFontSize { get; set; }
 
+        /// <summary>
+        /// Language configurated in the app
+        /// </summary>
         HymnalLanguage ConfiguratedHymnalLanguage { get; set; }
+
+        /// <summary>
+        /// The language configurated in the app has changed
+        /// </summary>
         event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged;
 
         string LastVersionOpened { get; set; }
