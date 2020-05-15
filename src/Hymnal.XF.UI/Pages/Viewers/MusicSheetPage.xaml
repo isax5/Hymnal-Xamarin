@@ -16,6 +16,8 @@
             <Image Source="{Binding ImageSource, StringFormat='{0}_1'}" />
             <Image Source="{Binding ImageSource, StringFormat='{0}_2'}" />
             <Image Source="{Binding ImageSource, StringFormat='{0}_3'}" />
+            <Image Source="{Binding ImageSource, StringFormat='{0}_4'}" />
+            <Image Source="{Binding ImageSource, StringFormat='{0}_5'}" />
         </StackLayout>
     </ScrollView>
 
