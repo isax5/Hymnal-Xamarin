@@ -118,6 +118,14 @@ namespace Hymnal.Core.ViewModels
                 realm.Remove(favoriteHymn.Item1);
                 trans.Commit();
             }
+
+            Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
+                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
+                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
         }
     }
 }
