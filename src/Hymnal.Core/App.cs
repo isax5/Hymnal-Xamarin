@@ -7,10 +7,12 @@ using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Resources;
 using Hymnal.Core.Services;
 using Hymnal.Core.ViewModels;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MvvmCross;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
-using MvvmCross.Presenters.Hints;
 using MvvmCross.ViewModels;
 
 namespace Hymnal.Core
@@ -40,6 +42,11 @@ namespace Hymnal.Core
 
         private void SetUp()
         {
+            // XF configuration
+            // Doc: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/xamarin#423-xamarinforms
+            AppCenter.Start("ios=d636d723-86a7-4d3a-8f02-cfdd454df9af;android=2ded5d95-4218-4a32-893f-1db17c0004a6;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
+
+
             IMultilingualService multilingualService = Mvx.IoCProvider.Resolve<IMultilingualService>();
             IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
             IAppInformationService appInformationService = Mvx.IoCProvider.Resolve<IAppInformationService>();
@@ -73,7 +80,7 @@ namespace Hymnal.Core
             }
         }
 
-
+        #region Open Page as
         public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel
         {
             IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
@@ -129,6 +136,6 @@ namespace Hymnal.Core
                     break;
             }
         }
-
+        #endregion
     }
 }

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Realms;
@@ -14,6 +15,7 @@ namespace Hymnal.Core.ViewModels
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
+        private readonly IPreferencesService preferencesService;
         private readonly Realm realm;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
@@ -33,11 +35,13 @@ namespace Hymnal.Core.ViewModels
 
         public RecordsViewModel(
             IMvxNavigationService navigationService,
-            IHymnsService hymnsService
+            IHymnsService hymnsService,
+            IPreferencesService preferencesService
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
+            this.preferencesService = preferencesService;
             realm = Realm.GetInstance();
         }
 
@@ -52,6 +56,17 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
         }
 
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
+                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         private void SelectedHymnExecute(Hymn hymn)
         {

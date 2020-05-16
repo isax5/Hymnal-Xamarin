@@ -1,4 +1,6 @@
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
@@ -6,6 +8,7 @@ using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -126,6 +129,22 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
         }
 
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            Debug.WriteLine($"Opening Hymn: {Hymn.Number} of {Language.Id}");
+
+            Analytics.TrackEvent(Constants.TrackEvents.HymnOpened, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() },
+                { "Font Size Hymnal", preferencesService.HymnalsFontSize.ToString() }
+            });
+        }
+
         #region Events
         private void MediaService_Playing(object sender, EventArgs e)
         {
@@ -162,10 +181,26 @@ namespace Hymnal.Core.ViewModels
                     realm.RemoveRange(favorites);
                     trans.Commit();
                 }
+
+                Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
+                {
+                    { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                    { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                });
             }
             else
             {
                 realm.Write(() => realm.Add(Hymn.ToFavoriteHymn()));
+
+                Analytics.TrackEvent(Constants.TrackEvents.HymnAddedToFavorites, new Dictionary<string, string>
+                {
+                    { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                    { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                });
             }
 
 
@@ -178,6 +213,14 @@ namespace Hymnal.Core.ViewModels
             shareService.Share(
                 title: hymn.Title,
                 text: $"{hymn.Title}\n\n{hymn.Content}\n\n{Constants.WebLinks.DeveloperWebSite}");
+
+            Analytics.TrackEvent(Constants.TrackEvents.HymnShared, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
         }
 
         public MvxCommand PlayCommand => new MvxCommand(PlayExecute);
@@ -206,6 +249,14 @@ namespace Hymnal.Core.ViewModels
 
                 // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
                 IsPlaying = true;
+
+                Analytics.TrackEvent(Constants.TrackEvents.HymnMusicPlayed, new Dictionary<string, string>
+                {
+                    { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                    { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                });
             }
         }
 
