@@ -112,13 +112,6 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand => new MvxCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute);
         private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
         {
-            Hymns.Remove(favoriteHymn);
-            using (var trans = realm.BeginWrite())
-            {
-                realm.Remove(favoriteHymn.Item1);
-                trans.Commit();
-            }
-
             Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
             {
                 { Constants.TrackEvents.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
@@ -126,6 +119,13 @@ namespace Hymnal.Core.ViewModels
                 { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
             });
+
+            Hymns.Remove(favoriteHymn);
+            using (var trans = realm.BeginWrite())
+            {
+                realm.Remove(favoriteHymn.Item1);
+                trans.Commit();
+            }
         }
     }
 }
