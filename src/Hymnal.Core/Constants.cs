@@ -152,7 +152,7 @@ namespace Hymnal.Core
                 /// <summary>
                 /// Use <see cref="nameof(Page)"/>
                 /// </summary>
-                public const string PageName = "Page name";
+                public const string PageName = "Page Name";
 
                 /// <summary>
                 /// Use <see cref="CultureInfo.Name"/>
