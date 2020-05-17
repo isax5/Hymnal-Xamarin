@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -17,6 +18,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IDialogService dialogService;
         private readonly IHymnsService hymnsService;
+        private readonly IPreferencesService preferencesService;
         private readonly Realm realm;
 
         public MvxObservableCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<FavoriteHymn, Hymn>>();
@@ -38,12 +40,14 @@ namespace Hymnal.Core.ViewModels
         public FavoritesViewModel(
             IMvxNavigationService navigationService,
             IDialogService dialogService,
-            IHymnsService hymnsService
+            IHymnsService hymnsService,
+            IPreferencesService preferencesService
             )
         {
             this.navigationService = navigationService;
             this.dialogService = dialogService;
             this.hymnsService = hymnsService;
+            this.preferencesService = preferencesService;
             realm = Realm.GetInstance();
         }
 
@@ -84,6 +88,17 @@ namespace Hymnal.Core.ViewModels
             foreach (var item in toRemoveList)
                 Hymns.Remove(item);
         }
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
+                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         private void SelectedHymnExecute(Tuple<FavoriteHymn, Hymn> hymn)
         {
@@ -97,6 +112,14 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand => new MvxCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute);
         private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
         {
+            Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
+                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
+                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
+
             Hymns.Remove(favoriteHymn);
             using (var trans = realm.BeginWrite())
             {

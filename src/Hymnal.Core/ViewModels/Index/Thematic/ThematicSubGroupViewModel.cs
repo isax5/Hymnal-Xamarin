@@ -1,5 +1,8 @@
 using System;
+using System.Collections.Generic;
 using Hymnal.Core.Models;
+using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -11,6 +14,7 @@ namespace Hymnal.Core.ViewModels
     public class ThematicSubGroupViewModel : MvxViewModel<Thematic>
     {
         private readonly IMvxNavigationService navigationService;
+        private readonly IPreferencesService preferencesService;
 
         private Thematic thematic;
         public Thematic Thematic
@@ -33,9 +37,13 @@ namespace Hymnal.Core.ViewModels
         }
 
 
-        public ThematicSubGroupViewModel(IMvxNavigationService navigationService)
+        public ThematicSubGroupViewModel(
+            IMvxNavigationService navigationService,
+            IPreferencesService preferencesService
+            )
         {
             this.navigationService = navigationService;
+            this.preferencesService = preferencesService;
         }
 
         public override void Prepare(Thematic parameter)
@@ -43,6 +51,17 @@ namespace Hymnal.Core.ViewModels
             Thematic = parameter;
         }
 
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(ThematicSubGroupViewModel) },
+                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         private void SelectedAmbitExecute(Ambit ambit)
         {

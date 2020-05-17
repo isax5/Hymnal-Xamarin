@@ -110,6 +110,12 @@
     <AndroidResource Include="Resources\layout\Toolbar.axml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.2.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>3.2.1</Version>
+    </PackageReference>
     <PackageReference Include="MvvmCross">
       <Version>6.4.2</Version>
     </PackageReference>

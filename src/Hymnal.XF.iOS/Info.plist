@@ -61,7 +61,7 @@
 		<string>fetch</string>
 	</array>
 	<key>CFBundleShortVersionString</key>
-	<string>4.1.0</string>
+	<string>4.1.1</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>

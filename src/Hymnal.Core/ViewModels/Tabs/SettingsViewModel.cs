@@ -5,6 +5,7 @@ using Hymnal.Core.Extensions;
 using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -72,6 +73,17 @@ namespace Hymnal.Core.ViewModels
             AppBuildString = appInformationService.BuildString;
         }
 
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(SettingsViewModel) },
+                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         public MvxCommand ChooseLanguageCommand => new MvxCommand(ChooseLanguageExecuteAsync);
         private async void ChooseLanguageExecuteAsync()

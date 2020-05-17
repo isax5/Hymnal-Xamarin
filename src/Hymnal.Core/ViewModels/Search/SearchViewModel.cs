@@ -4,6 +4,7 @@ using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -74,6 +75,17 @@ namespace Hymnal.Core.ViewModels
             TextSearchExecuteAsync(string.Empty);
         }
 
+        public override void ViewAppeared()
+        {
+            base.ViewAppeared();
+
+            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
+                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         private async void TextSearchExecuteAsync(string text)
         {

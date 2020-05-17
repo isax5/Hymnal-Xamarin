@@ -1,8 +1,10 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -42,6 +44,11 @@ namespace Hymnal.Core.ViewModels
             this.preferencesService = preferencesService;
         }
 
+        ~AlphabeticalIndexViewModel()
+        {
+            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+        }
+
         public override async Task Initialize()
         {
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
@@ -52,9 +59,16 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
         }
 
-        ~AlphabeticalIndexViewModel()
+        public override void ViewAppeared()
         {
-            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            base.ViewAppeared();
+
+            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(AlphabeticalIndexViewModel) },
+                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
         }
 
         private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
