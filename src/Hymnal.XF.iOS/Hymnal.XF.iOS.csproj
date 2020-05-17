@@ -68,11 +68,11 @@
     <WarningLevel>4</WarningLevel>
     <MtouchArch>ARM64</MtouchArch>
     <ConsolePause>false</ConsolePause>
-    <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
+    <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
     <MtouchLink>SdkOnly</MtouchLink>
-    <CodesignProvision>iOS Team Provisioning Profile: net.ddns.HimnarioAdventistaSPA</CodesignProvision>
+    <CodesignProvision>Hymnal XF Distribution</CodesignProvision>
     <BuildIpa>true</BuildIpa>
     <OptimizePNGs>true</OptimizePNGs>
     <MtouchUseLlvm>true</MtouchUseLlvm>
