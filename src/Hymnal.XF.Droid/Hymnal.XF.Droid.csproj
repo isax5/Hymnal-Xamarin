@@ -57,7 +57,6 @@
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
-    <EnableProguard>true</EnableProguard>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
@@ -66,7 +65,10 @@
     <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
     <DebugSymbols>true</DebugSymbols>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
     <AndroidDexTool>d8</AndroidDexTool>
+    <MandroidI18n />
+    <AndroidLinkTool>proguard</AndroidLinkTool>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
