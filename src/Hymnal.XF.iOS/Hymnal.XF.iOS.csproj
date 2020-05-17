@@ -336,10 +336,8 @@
   <ItemGroup>
     <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
   </ItemGroup>
-  <ItemGroup />
   <!-- PIANO SHEET -->
-  <!--
-  <ItemGroup>
+  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_001.png" />
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_002.png" />
     <BundleResource Include="Resources\PianoSheet_NewHymnal_es_003.png" />
@@ -1461,7 +1459,6 @@
     <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_306.png" />
     <BundleResource Include="Resources\PianoSheet_NewHymnal_ru_081_1.png" />
   </ItemGroup>
-  -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
