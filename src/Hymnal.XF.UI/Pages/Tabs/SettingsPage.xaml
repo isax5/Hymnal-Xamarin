@@ -179,11 +179,13 @@
 
                 <TextCell
                     Detail="{Binding AppVersionString}"
+                    DetailColor="{DynamicResource SecondaryTextColor}"
                     Text="{i18n:Translate AppVersion}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
                 <TextCell
                     Detail="{Binding AppBuildString}"
+                    DetailColor="{DynamicResource SecondaryTextColor}"
                     Text="{i18n:Translate AppBuild}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 

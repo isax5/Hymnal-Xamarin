@@ -70,7 +70,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid
-                                Padding="20,5"
+                                Padding="20,0"
                                 AutomationId="{Binding Number, StringFormat='{0}_ViewCell_Grid'}"
                                 ColumnSpacing="0"
                                 RowSpacing="0">

@@ -10,8 +10,11 @@
     x:TypeArguments="viewModels:MusicSheetViewModel"
     Visual="Material">
 
-    <ScrollView Padding="5">
-        <StackLayout>
+    <ScrollView>
+        <ScrollView.GestureRecognizers>
+            <TapGestureRecognizer Tapped="ScrollViewTapped" />
+        </ScrollView.GestureRecognizers>
+        <StackLayout Margin="5">
             <Image Source="{Binding ImageSource}" />
             <Image Source="{Binding ImageSource, StringFormat='{0}_1'}" />
             <Image Source="{Binding ImageSource, StringFormat='{0}_2'}" />

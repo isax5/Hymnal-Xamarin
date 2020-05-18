@@ -59,6 +59,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.UI --linkskip=Hymnal.XF.UI</MtouchExtraArgs>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchLink>None</MtouchLink>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>

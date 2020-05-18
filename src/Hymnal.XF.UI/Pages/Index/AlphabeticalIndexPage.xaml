@@ -45,7 +45,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid
-                            Padding="20,5"
+                            Padding="20,0"
                             BackgroundColor="Transparent"
                             ColumnSpacing="0"
                             RowSpacing="0">

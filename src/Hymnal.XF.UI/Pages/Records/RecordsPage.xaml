@@ -46,7 +46,7 @@
 
                     <ViewCell>
                         <Grid
-                            Padding="20,5,10,5"
+                            Padding="20,0,10,0"
                             ColumnSpacing="0"
                             RowSpacing="0">
                             <Grid.ColumnDefinitions>

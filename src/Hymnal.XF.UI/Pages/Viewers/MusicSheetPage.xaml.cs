@@ -1,7 +1,8 @@
-using MvvmCross.Forms.Views;
-using MvvmCross.Forms.Presenters.Attributes;
-using Xamarin.Forms.Xaml;
 using Hymnal.Core.ViewModels;
+using MvvmCross.Forms.Presenters.Attributes;
+using MvvmCross.Forms.Views;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.UI.Pages
 {
@@ -12,6 +13,17 @@ namespace Hymnal.XF.UI.Pages
         public MusicSheetPage()
         {
             InitializeComponent();
+        }
+
+        private bool showingNavigationBar = true;
+        private void ScrollViewTapped(object sender, System.EventArgs e)
+        {
+            if (showingNavigationBar)
+                NavigationPage.SetHasNavigationBar(this, false);
+            else
+                NavigationPage.SetHasNavigationBar(this, true);
+
+            showingNavigationBar = !showingNavigationBar;
         }
     }
 }
