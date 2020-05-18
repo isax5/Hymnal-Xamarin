@@ -85,9 +85,9 @@
 			<string>HISTORY_SHORTCUT_ITEM_SUBTITLE</string>
 		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1.0.3</string>
 	<key>CFBundleName</key>
 	<string>Hymnal</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.4</string>
 </dict>
 </plist>

@@ -25,7 +25,8 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "en",
                 HymnsFileName = "NewHymnal.en.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.en.json",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/english/1985%20version/instrumental/###.mp3"
+                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/english/1985%20version/instrumental/###.mp3",
+                HymnsSheetsFileName = "PianoSheet_NewHymnal_en_###"
             },
             new HymnalLanguage
             {
