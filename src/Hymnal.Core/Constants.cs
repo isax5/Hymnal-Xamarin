@@ -118,6 +118,8 @@ namespace Hymnal.Core
 
         /// <summary>
         /// Event key & scheme for AppCenter
+        /// Time, Time Zone, iOS Version, App Version, App Build, Account Id (not using yet), AppNamespace, Device model, Country code, etc.
+        /// https://docs.microsoft.com/en-us/appcenter/analytics/export#azure-blob-storage
         /// </summary>
         public struct TrackEvents
         {

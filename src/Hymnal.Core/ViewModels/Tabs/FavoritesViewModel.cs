@@ -88,6 +88,7 @@ namespace Hymnal.Core.ViewModels
             foreach (var item in toRemoveList)
                 Hymns.Remove(item);
         }
+
         public override void ViewAppeared()
         {
             base.ViewAppeared();
