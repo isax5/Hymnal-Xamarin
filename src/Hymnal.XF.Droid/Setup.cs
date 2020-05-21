@@ -28,7 +28,6 @@ namespace Hymnal.XF.Droid
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
             Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
-            Mvx.IoCProvider.RegisterType<IMediaService, MediaService>();
             Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
             Mvx.IoCProvider.RegisterType<IDeviceInformation, DeviceInformation>();
             Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();

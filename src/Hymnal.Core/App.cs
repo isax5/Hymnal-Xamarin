@@ -7,6 +7,7 @@ using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Resources;
 using Hymnal.Core.Services;
 using Hymnal.Core.ViewModels;
+using MediaManager;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -36,6 +37,8 @@ namespace Hymnal.Core
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
+
+            Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
 
             RegisterAppStart<RootViewModel>();
         }
@@ -83,7 +86,7 @@ namespace Hymnal.Core
             }
         }
 
-#region Open Page as
+        #region Open Page as
         public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel
         {
             IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
@@ -139,6 +142,6 @@ namespace Hymnal.Core
                     break;
             }
         }
-#endregion
+        #endregion
     }
 }
