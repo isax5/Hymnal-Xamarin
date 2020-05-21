@@ -226,6 +226,33 @@ namespace Hymnal.Core
             /// Use <see cref="HymnReferenceScheme"/>
             /// </summary>
             public const string HymnShared = "Hymn Shared";
+
+            /// <summary>
+            /// Hymn founded through <see cref="ViewModels.SearchViewModel"/>
+            /// </summary>
+            public const string HymnFounded = "Hymn Founded";
+
+            /// <summary>
+            /// Hymn founded through <see cref="ViewModels.SearchViewModel"/>
+            /// </summary>
+            public struct HymnFoundedScheme
+            {
+                /// <summary>
+                /// Query in the search field
+                /// </summary>
+                public const string Query = "Query";
+
+                /// <summary>
+                /// Number of the hymn founded
+                /// </summary>
+                public const string HymnFounded = "Hymn Founded";
+
+                /// <summary>
+                /// Use <see cref="HymnalLanguage.Id"/>
+                /// </summary>
+                public const string HymnalVersion = "Hymnal Version";
+
+            }
         }
 
         public const int MAXIMUM_RECORDS = 100;
