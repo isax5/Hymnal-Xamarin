@@ -84,6 +84,7 @@
                                 Grid.Row="1"
                                 Grid.Column="1"
                                 FontSize="Micro"
+                                LineBreakMode="TailTruncation"
                                 Text="{Binding PlainContent}"
                                 TextColor="{DynamicResource SecondaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />

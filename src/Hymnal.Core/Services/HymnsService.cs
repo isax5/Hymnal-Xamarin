@@ -1,8 +1,11 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
+using Microsoft.AppCenter.Crashes;
+using MvvmCross.Logging;
 using Newtonsoft.Json;
 
 namespace Hymnal.Core.Services
@@ -10,6 +13,7 @@ namespace Hymnal.Core.Services
     public class HymnsService : IHymnsService
     {
         private readonly IFilesService filesService;
+        private readonly IMvxLog log;
 
         /// <summary>
         /// <see cref="Hymn"/> cache
@@ -21,9 +25,13 @@ namespace Hymnal.Core.Services
         /// </summary>
         private static readonly Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new Dictionary<string, IEnumerable<Thematic>>();
 
-        public HymnsService(IFilesService filesService)
+        public HymnsService(
+            IFilesService filesService,
+            IMvxLog log
+            )
         {
             this.filesService = filesService;
+            this.log = log;
         }
 
         /// <summary>
@@ -36,16 +44,30 @@ namespace Hymnal.Core.Services
         {
             if (!HymnsDictionary.ContainsKey(language.Id))
             {
-                var file = await filesService.ReadFileAsync(language.Configuration().HymnsFileName);
-                List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
-
-                // Set Id of the language to know allways where it is from
-                hymns.ForEach(h => h.HymnalLanguageId = language.Id);
-
-                lock (HymnsDictionary)
+                try
                 {
-                    if (!HymnsDictionary.ContainsKey(language.Id))
-                        HymnsDictionary.Add(language.Id, hymns);
+                    var file = await filesService.ReadFileAsync(language.Configuration().HymnsFileName);
+                    List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
+
+                    // Set Id of the language to know allways where it is from
+                    hymns.ForEach(h => h.HymnalLanguageId = language.Id);
+
+                    lock (HymnsDictionary)
+                    {
+                        if (!HymnsDictionary.ContainsKey(language.Id))
+                            HymnsDictionary.Add(language.Id, hymns);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    var properties = new Dictionary<string, string>()
+                    {
+                        { "File", nameof(HymnsService) },
+                        { "Hymnal Version", language.Id }
+                    };
+
+                    log.TraceException("Exception reading hymnbook", ex, properties);
+                    Crashes.TrackError(ex, properties);
                 }
             }
 

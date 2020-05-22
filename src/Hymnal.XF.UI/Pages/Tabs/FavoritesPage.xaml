@@ -92,6 +92,7 @@
                                     Grid.Row="0"
                                     Grid.Column="1"
                                     FontSize="Large"
+                                    LineBreakMode="TailTruncation"
                                     Text="{Binding Item2.Title}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />
@@ -101,6 +102,7 @@
                                     Grid.Row="1"
                                     Grid.Column="1"
                                     FontSize="Micro"
+                                    LineBreakMode="TailTruncation"
                                     Text="{Binding Item2.PlainContent}"
                                     TextColor="{DynamicResource SecondaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />

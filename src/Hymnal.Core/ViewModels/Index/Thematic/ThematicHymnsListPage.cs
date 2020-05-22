@@ -71,6 +71,7 @@ namespace Hymnal.Core.ViewModels
             Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
             {
                 { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(ThematicHymnsListViewModel) },
+                { "Ambit", Ambit.AmbitName },
                 { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });

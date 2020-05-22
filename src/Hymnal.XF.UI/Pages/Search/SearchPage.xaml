@@ -101,6 +101,7 @@
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
+                                    LineBreakMode="TailTruncation"
                                     FontSize="Large"
                                     Text="{Binding Title}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
@@ -110,6 +111,7 @@
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
+                                    LineBreakMode="TailTruncation"
                                     FontSize="Micro"
                                     Text="{Binding PlainContent}"
                                     TextColor="{DynamicResource SecondaryTextColor}"

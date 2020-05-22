@@ -11,7 +11,9 @@ using Hymnal.Core.Services;
 using MediaManager;
 using MediaManager.Player;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MvvmCross.Commands;
+using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Realms;
@@ -21,6 +23,7 @@ namespace Hymnal.Core.ViewModels
     public class HymnViewModel : MvxViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
+        private readonly IMvxLog log;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaManager mediaManager;
@@ -70,6 +73,7 @@ namespace Hymnal.Core.ViewModels
 
         public HymnViewModel(
             IMvxNavigationService navigationService,
+            IMvxLog log,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
@@ -79,6 +83,7 @@ namespace Hymnal.Core.ViewModels
             )
         {
             this.navigationService = navigationService;
+            this.log = log;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.mediaManager = mediaManager;
@@ -102,8 +107,25 @@ namespace Hymnal.Core.ViewModels
 
         public override async Task Initialize()
         {
-            // TODO: Check for any crash
-            Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
+            try
+            {
+                Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string>()
+                {
+                    { "File", nameof(HymnViewModel) },
+                    { "Hymn Number", HymnParameter.Number.ToString() },
+                    { "Hymn Version", HymnParameter.HymnalLanguage.Id }
+                };
+
+                log.TraceException("Exception opening a hymnal", ex, properties);
+                Crashes.TrackError(ex, properties);
+
+                await navigationService.Close(this);
+                return;
+            }
 
             IsPlaying = mediaManager.IsPlaying();
 
