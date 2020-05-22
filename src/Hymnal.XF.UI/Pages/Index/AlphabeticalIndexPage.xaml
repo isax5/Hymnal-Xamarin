@@ -45,7 +45,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid
-                            Padding="20,5"
+                            Padding="20,0"
                             BackgroundColor="Transparent"
                             ColumnSpacing="0"
                             RowSpacing="0">
@@ -63,6 +63,7 @@
                                 Grid.Row="0"
                                 Grid.Column="0"
                                 FontSize="Large"
+                                LineBreakMode="TailTruncation"
                                 Text="{Binding Title}"
                                 TextColor="{DynamicResource PrimaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />
@@ -72,6 +73,7 @@
                                 Grid.Row="1"
                                 Grid.Column="0"
                                 FontSize="Micro"
+                                LineBreakMode="TailTruncation"
                                 Text="{Binding PlainContent}"
                                 TextColor="{DynamicResource SecondaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />

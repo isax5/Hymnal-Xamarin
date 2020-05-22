@@ -46,7 +46,7 @@
 
                     <ViewCell>
                         <Grid
-                            Padding="20,5,10,5"
+                            Padding="20,0,10,0"
                             ColumnSpacing="0"
                             RowSpacing="0">
                             <Grid.ColumnDefinitions>
@@ -84,6 +84,7 @@
                                 Grid.Row="1"
                                 Grid.Column="1"
                                 FontSize="Micro"
+                                LineBreakMode="TailTruncation"
                                 Text="{Binding PlainContent}"
                                 TextColor="{DynamicResource SecondaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />

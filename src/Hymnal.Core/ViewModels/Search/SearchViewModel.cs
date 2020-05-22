@@ -108,6 +108,17 @@ namespace Hymnal.Core.ViewModels
                 Number = hymn.Number,
                 HymnalLanguage = language
             });
+
+            if (!string.IsNullOrWhiteSpace(TextSearchBar))
+            {
+
+                Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
+                {
+                    { Constants.TrackEvents.HymnFoundedScheme.Query, TextSearchBar },
+                    { Constants.TrackEvents.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
+                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, language.Id }
+                });
+            }
         }
     }
 }

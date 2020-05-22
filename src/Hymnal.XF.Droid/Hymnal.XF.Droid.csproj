@@ -37,6 +37,7 @@
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>
     </AndroidSupportedAbis>
+    <AndroidUseAapt2>True</AndroidUseAapt2>
     <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
     <EnableProguard>false</EnableProguard>
@@ -68,7 +69,9 @@
     <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
     <AndroidDexTool>d8</AndroidDexTool>
     <MandroidI18n />
-    <AndroidLinkTool>proguard</AndroidLinkTool>
+    <AndroidPackageFormat>aab</AndroidPackageFormat>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
+    <BundleAssemblies>true</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />

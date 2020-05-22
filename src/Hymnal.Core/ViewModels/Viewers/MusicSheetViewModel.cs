@@ -57,7 +57,7 @@ namespace Hymnal.Core.ViewModels
 
             Analytics.TrackEvent(Constants.TrackEvents.HymnMusicSheetOpened, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.HymnReferenceScheme.Number, HymnId.ToString() },
+                { Constants.TrackEvents.HymnReferenceScheme.Number, HymnId.Number.ToString() },
                 { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
                 { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }

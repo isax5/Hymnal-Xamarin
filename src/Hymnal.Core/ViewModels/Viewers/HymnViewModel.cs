@@ -8,8 +8,12 @@ using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using MediaManager;
+using MediaManager.Player;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MvvmCross.Commands;
+using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Realms;
@@ -19,9 +23,10 @@ namespace Hymnal.Core.ViewModels
     public class HymnViewModel : MvxViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
+        private readonly IMvxLog log;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly IMediaService mediaService;
+        private readonly IMediaManager mediaManager;
         private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
         private readonly IShareService shareService;
@@ -68,32 +73,30 @@ namespace Hymnal.Core.ViewModels
 
         public HymnViewModel(
             IMvxNavigationService navigationService,
+            IMvxLog log,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
-            IMediaService mediaService,
+            IMediaManager mediaManager,
             IConnectivityService connectivityService,
             IDialogService dialogService,
             IShareService shareService
             )
         {
             this.navigationService = navigationService;
+            this.log = log;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-            this.mediaService = mediaService;
+            this.mediaManager = mediaManager;
             this.connectivityService = connectivityService;
             this.dialogService = dialogService;
             this.shareService = shareService;
             realm = Realm.GetInstance();
-            this.mediaService.Playing += MediaService_Playing;
-            this.mediaService.Stopped += MediaService_Stopped;
-            this.mediaService.EndReached += MediaService_EndReached;
+            mediaManager.StateChanged += MediaManager_StateChanged;
         }
 
         ~HymnViewModel()
         {
-            mediaService.Playing -= MediaService_Playing;
-            mediaService.Stopped -= MediaService_Stopped;
-            mediaService.EndReached -= MediaService_EndReached;
+            mediaManager.StateChanged -= MediaManager_StateChanged;
         }
 
         public override void Prepare(HymnIdParameter parameter)
@@ -104,10 +107,27 @@ namespace Hymnal.Core.ViewModels
 
         public override async Task Initialize()
         {
-            // TODO: Check for any crash
-            Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
+            try
+            {
+                Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string>()
+                {
+                    { "File", nameof(HymnViewModel) },
+                    { "Hymn Number", HymnParameter.Number.ToString() },
+                    { "Hymn Version", HymnParameter.HymnalLanguage.Id }
+                };
 
-            IsPlaying = mediaService.IsPlaying;
+                log.TraceException("Exception opening a hymnal", ex, properties);
+                Crashes.TrackError(ex, properties);
+
+                await navigationService.Close(this);
+                return;
+            }
+
+            IsPlaying = mediaManager.IsPlaying();
 
             // Is Favorite
             IsFavorite = realm.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
@@ -146,19 +166,25 @@ namespace Hymnal.Core.ViewModels
         }
 
         #region Events
-        private void MediaService_Playing(object sender, EventArgs e)
+        private void MediaManager_StateChanged(object sender, MediaManager.Playback.StateChangedEventArgs e)
         {
-            IsPlaying = true;
-        }
+            switch (e.State)
+            {
+                case MediaPlayerState.Playing:
+                case MediaPlayerState.Buffering:
+                case MediaPlayerState.Loading:
+                    IsPlaying = true;
+                    break;
 
-        private void MediaService_Stopped(object sender, EventArgs e)
-        {
-            IsPlaying = false;
-        }
+                case MediaPlayerState.Stopped:
+                case MediaPlayerState.Failed:
+                case MediaPlayerState.Paused:
+                    IsPlaying = false;
+                    break;
 
-        private void MediaService_EndReached(object sender, EventArgs e)
-        {
-            IsPlaying = false;
+                default:
+                    break;
+            }
         }
         #endregion
 
@@ -236,16 +262,21 @@ namespace Hymnal.Core.ViewModels
             // Stop/Start playing
             if (IsPlaying)
             {
-                mediaService.Stop();
+                mediaManager.Stop();
+
                 // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
                 IsPlaying = false;
             }
             else
             {
                 if (Language.SupportInstrumentalMusic)
-                    mediaService.Play(Language.GetInstrumentURL(Hymn.Number));
+                {
+                    mediaManager.Play(Language.GetInstrumentURL(Hymn.Number));
+                }
                 else
-                    mediaService.Play(language.GetSungURL(Hymn.Number));
+                {
+                    mediaManager.Play(Language.GetSungURL(Hymn.Number));
+                }
 
                 // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
                 IsPlaying = true;

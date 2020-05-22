@@ -70,7 +70,7 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid
-                                Padding="20,5"
+                                Padding="20,0"
                                 AutomationId="{Binding Number, StringFormat='{0}_ViewCell_Grid'}"
                                 ColumnSpacing="0"
                                 RowSpacing="0">
@@ -101,6 +101,7 @@
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
+                                    LineBreakMode="TailTruncation"
                                     FontSize="Large"
                                     Text="{Binding Title}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
@@ -110,6 +111,7 @@
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
+                                    LineBreakMode="TailTruncation"
                                     FontSize="Micro"
                                     Text="{Binding PlainContent}"
                                     TextColor="{DynamicResource SecondaryTextColor}"

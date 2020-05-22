@@ -1,8 +1,8 @@
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
-using System;
 
 namespace Hymnal.Core
 {
@@ -118,6 +118,8 @@ namespace Hymnal.Core
 
         /// <summary>
         /// Event key & scheme for AppCenter
+        /// Time, Time Zone, iOS Version, App Version, App Build, Account Id (not using yet), AppNamespace, Device model, Country code, etc.
+        /// https://docs.microsoft.com/en-us/appcenter/analytics/export#azure-blob-storage
         /// </summary>
         public struct TrackEvents
         {
@@ -224,6 +226,33 @@ namespace Hymnal.Core
             /// Use <see cref="HymnReferenceScheme"/>
             /// </summary>
             public const string HymnShared = "Hymn Shared";
+
+            /// <summary>
+            /// Hymn founded through <see cref="ViewModels.SearchViewModel"/>
+            /// </summary>
+            public const string HymnFounded = "Hymn Founded";
+
+            /// <summary>
+            /// Hymn founded through <see cref="ViewModels.SearchViewModel"/>
+            /// </summary>
+            public struct HymnFoundedScheme
+            {
+                /// <summary>
+                /// Query in the search field
+                /// </summary>
+                public const string Query = "Query";
+
+                /// <summary>
+                /// Number of the hymn founded
+                /// </summary>
+                public const string HymnFounded = "Hymn Founded";
+
+                /// <summary>
+                /// Use <see cref="HymnalLanguage.Id"/>
+                /// </summary>
+                public const string HymnalVersion = "Hymnal Version";
+
+            }
         }
 
         public const int MAXIMUM_RECORDS = 100;
