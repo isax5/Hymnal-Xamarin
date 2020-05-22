@@ -72,7 +72,6 @@
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchLink>SdkOnly</MtouchLink>
-    <MtouchLink>SdkOnly</MtouchLink>
     <CodesignProvision>Hymnal XF Distribution</CodesignProvision>
     <BuildIpa>true</BuildIpa>
     <OptimizePNGs>true</OptimizePNGs>
@@ -2180,6 +2179,7 @@
     <Content Include="Resources\PianoSheet_NewHymnal_ru_306.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_ru_081_1.png" />
   </ItemGroup>
+  <!-- PIANO SHEET -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
