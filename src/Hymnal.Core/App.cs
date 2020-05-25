@@ -31,16 +31,22 @@ namespace Hymnal.Core
 
         public override void Initialize()
         {
+#if __ANDROID__ || __IOS__
             SetUp();
+#endif
 
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
+#if __ANDROID__ || __IOS__
             Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
 
             RegisterAppStart<RootViewModel>();
+#else
+            RegisterAppStart<SimpleViewModel>();
+#endif
         }
 
         private void SetUp()
@@ -86,7 +92,7 @@ namespace Hymnal.Core
             }
         }
 
-        #region Open Page as
+#region Open Page as
         public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel
         {
             IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
@@ -142,6 +148,6 @@ namespace Hymnal.Core
                     break;
             }
         }
-        #endregion
+#endregion
     }
 }

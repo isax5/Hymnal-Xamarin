@@ -9,7 +9,9 @@ using Microsoft.AppCenter.Analytics;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+#if __IOS__ || __ANDROID__
 using Realms;
+#endif
 
 namespace Hymnal.Core.ViewModels
 {
@@ -19,7 +21,9 @@ namespace Hymnal.Core.ViewModels
         private readonly IDialogService dialogService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
+#if __IOS__ || __ANDROID__
         private readonly Realm realm;
+#endif
 
         public MvxObservableCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<FavoriteHymn, Hymn>>();
 
@@ -48,7 +52,9 @@ namespace Hymnal.Core.ViewModels
             this.dialogService = dialogService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
+#if __IOS__ || __ANDROID__
             realm = Realm.GetInstance();
+#endif
         }
 
         public override async void ViewAppearing()
@@ -58,6 +64,7 @@ namespace Hymnal.Core.ViewModels
             // Update list
             //IOrderedEnumerable<Hymn> favorites = dataStorageService.GetItems<FavoriteHymn>().OrderByDescending(h => h.SavedAt);
 
+#if __IOS__ || __ANDROID__
             var favorites = await Task.WhenAll(
                 realm.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
                 .Select(async f => new Tuple<FavoriteHymn, Hymn>(f, await hymnsService.GetHymnAsync(f))));
@@ -87,6 +94,7 @@ namespace Hymnal.Core.ViewModels
 
             foreach (var item in toRemoveList)
                 Hymns.Remove(item);
+#endif
         }
 
         public override void ViewAppeared()
@@ -122,11 +130,13 @@ namespace Hymnal.Core.ViewModels
             });
 
             Hymns.Remove(favoriteHymn);
+#if __IOS__ || __ANDROID__
             using (var trans = realm.BeginWrite())
             {
                 realm.Remove(favoriteHymn.Item1);
                 trans.Commit();
             }
+#endif
         }
     }
 }

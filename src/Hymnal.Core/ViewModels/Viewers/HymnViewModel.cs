@@ -16,7 +16,9 @@ using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+#if __IOS__ || __ANDROID__
 using Realms;
+#endif
 
 namespace Hymnal.Core.ViewModels
 {
@@ -30,7 +32,9 @@ namespace Hymnal.Core.ViewModels
         private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
         private readonly IShareService shareService;
+#if __IOS__ || __ANDROID__
         private readonly Realm realm;
+#endif
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
@@ -90,7 +94,9 @@ namespace Hymnal.Core.ViewModels
             this.connectivityService = connectivityService;
             this.dialogService = dialogService;
             this.shareService = shareService;
+#if __IOS__ || __ANDROID__
             realm = Realm.GetInstance();
+#endif
             mediaManager.StateChanged += MediaManager_StateChanged;
         }
 
@@ -130,11 +136,14 @@ namespace Hymnal.Core.ViewModels
             IsPlaying = mediaManager.IsPlaying();
 
             // Is Favorite
+#if __IOS__ || __ANDROID__
             IsFavorite = realm.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+#endif
 
             // Record
             if (HymnParameter.SaveInRecords)
             {
+#if __IOS__ || __ANDROID__
                 IQueryable<RecordHymn> records = realm.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
 
                 using (Transaction trans = realm.BeginWrite())
@@ -144,6 +153,7 @@ namespace Hymnal.Core.ViewModels
                 }
 
                 realm.Write(() => realm.Add(Hymn.ToRecordHymn()));
+#endif
             }
 
             await base.Initialize();
@@ -198,6 +208,7 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand FavoriteCommand => new MvxCommand(FavoriteExecute);
         private void FavoriteExecute()
         {
+#if __IOS__ || __ANDROID__
             var favorites = realm.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             if (IsFavorite || favorites.Count() > 0)
@@ -228,6 +239,7 @@ namespace Hymnal.Core.ViewModels
                     { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                 });
             }
+#endif
 
 
             IsFavorite = !IsFavorite;

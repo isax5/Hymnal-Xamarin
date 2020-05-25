@@ -1,9 +1,15 @@
 using System;
+#if __IOS__ || __ANDROID__
 using Realms;
+#endif
 
 namespace Hymnal.Core.Models
 {
+#if __IOS__ || __ANDROID__
     public class FavoriteHymn : RealmObject, IHymnReference
+#else
+    public class FavoriteHymn : IHymnReference
+#endif
     {
         /// <summary>
         /// Hymn Number
