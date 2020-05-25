@@ -155,6 +155,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -173,6 +174,10 @@
       <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Setup.cs" />
+    <Compile Include="SimpleViewController.cs" />
+    <Compile Include="SimpleViewController.designer.cs">
+      <DependentUpon>SimpleViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Main.storyboard" />
