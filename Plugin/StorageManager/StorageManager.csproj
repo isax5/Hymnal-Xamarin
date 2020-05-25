@@ -61,14 +61,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <!--<Compile Include="Shared\**\*.cs" />-->
     <Compile Include="Models\**\*.cs" />
-    <!--<Compile Include="**\*.shared.cs" />-->
     <Compile Include="Shared\**\*.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
+    <Compile Include="**\*.shared.cs" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
@@ -89,16 +84,19 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
     <Compile Include="**\TVOS\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Tizen')) ">
     <Compile Include="**\Tizen\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <Compile Include="**\UAP\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <!--
     If you need to add sdk references:
      <SDKReference Include="WindowsMobile, Version=10.0.16299.0">

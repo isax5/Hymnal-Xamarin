@@ -6,6 +6,9 @@ using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using MvvmCross.Forms.Presenters;
+using Plugin.StorageManager;
+using Plugin.StorageManager.Implementation;
+using Realms;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.iOS
@@ -34,6 +37,7 @@ namespace Hymnal.XF.iOS
             base.InitializePrimary();
             FormsMaterial.Init();
             CrossMediaManager.Current.Init();
+            CrossStorageManager.Current.Init(Realm.GetInstance());
         }
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
