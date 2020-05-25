@@ -215,6 +215,10 @@
     <AndroidResource Include="Resources\drawable-hdpi\Background.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
+      <Project>{4a4ac861-6dea-49e0-a330-5442b1f1f294}</Project>
+      <Name>StorageManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
