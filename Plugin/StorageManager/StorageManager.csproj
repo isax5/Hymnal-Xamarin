@@ -84,18 +84,21 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
     <Compile Include="**\TVOS\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Tizen')) ">
     <Compile Include="**\Tizen\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <Compile Include="**\UAP\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.3.2" />
     <!--
     If you need to add sdk references:

@@ -7,13 +7,6 @@ namespace Hymnal.SharedNatives.Services
 {
     public class DataStorageService : IDataStorageService
     {
-        private readonly IFilesService filesService;
-
-        public DataStorageService(IFilesService filesService)
-        {
-            this.filesService = filesService;
-        }
-
         private string identifier<T>() => nameof(T) + typeof(T);
 
         public List<T> GetItems<T>()
@@ -32,6 +25,5 @@ namespace Hymnal.SharedNatives.Services
         {
             Preferences.Remove(identifier<T>());
         }
-
     }
 }

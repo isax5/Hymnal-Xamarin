@@ -16,7 +16,7 @@ namespace Plugin.StorageManager
         void RemoveRange<T>(IQueryable<T> items) where T : RealmObject, IStorageModel;
 #else
         void Add<T>(T item) where T : IStorageModel;
-        IQueryable<T> All<T>() where T : IStorageModel, new();
+        IQueryable<T> All<T>() where T : IStorageModel;
         void Remove<T>(T item) where T : IStorageModel;
         void RemoveRange<T>(IQueryable<T> items) where T : IStorageModel;
 #endif
