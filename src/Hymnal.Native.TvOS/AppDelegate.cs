@@ -1,8 +1,14 @@
-﻿using Foundation;
-using UIKit;
+using Foundation;
+using Hymnal.Core;
+using MvvmCross.Platforms.Tvos.Core;
 
 namespace Hymnal.Native.TvOS
 {
+    [Register(nameof(AppDelegate))]
+    public class AppDelegate : MvxApplicationDelegate<Setup, App>
+    { }
+
+    /*
     // The UIApplicationDelegate for the application. This class is responsible for launching the
     // User Interface of the application, as well as listening (and optionally responding) to application events from iOS.
     [Register("AppDelegate")]
@@ -55,5 +61,6 @@ namespace Hymnal.Native.TvOS
             // Called when the application is about to terminate. Save data, if needed. See also DidEnterBackground.
         }
     }
+    */
 }
 
