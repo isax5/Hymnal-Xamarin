@@ -1,17 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
-  <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.TVOS10;MonoAndroid90;Tizen40;</TargetFrameworks>
-    <NeutralLanguage>en</NeutralLanguage>
-  </PropertyGroup>
-  
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup Label="MultilingualAppToolkit">
     <MultilingualAppToolkitVersion>4.0</MultilingualAppToolkitVersion>
     <MultilingualFallbackLanguage>en</MultilingualFallbackLanguage>
     <TranslationReport Condition="'$(Configuration)' == 'Release'">true</TranslationReport>
     <SuppressPseudoWarning Condition="'$(Configuration)' == 'Debug'">true</SuppressPseudoWarning>
   </PropertyGroup>
-  
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets" Label="MultilingualAppToolkit" Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\v$(MultilingualAppToolkitVersion)\Microsoft.Multilingual.ResxResources.targets')" />
   <Target Name="MATPrerequisite" BeforeTargets="PrepareForBuild" Condition="!Exists('$(MSBuildExtensionsPath)\Microsoft\Multilingual App Toolkit\Microsoft.Multilingual.ResxResources.targets')" Label="MultilingualAppToolkit">
     <Warning Text="$(MSBuildProjectFile) is Multilingual build enabled, but the Multilingual App Toolkit is unavailable during the build. If building with Visual Studio, please check to ensure that toolkit is properly installed." />
@@ -21,16 +19,6 @@
     <EmbeddedResource Remove="Behaviors\**" />
     <None Remove="Behaviors\**" />
   </ItemGroup>
-  
-  <ItemGroup>
-    <None Update="FodyWeavers.xml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="FodyWeavers.xsd">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-  </ItemGroup>
-  
   <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.1" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.1" />
@@ -38,29 +26,9 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Plugin.MediaManager" Version="0.9.6" />
   </ItemGroup>
-
-
-  <ItemGroup Condition="'$(TargetFramework)'=='netstandard2.0'">
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />
   </ItemGroup>
-  
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
-    <PackageReference Include="Realm" Version="4.3.0" />
-    <PackageReference Include="Fody" Version="6.1.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
-    <PackageReference Include="Realm" Version="4.3.0" />
-    <PackageReference Include="Fody" Version="6.1.1" />
-  </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Tizen')) ">
-    <!--<PackageReference Include="Realm" Version="4.3.0" />
-    <PackageReference Include="Fody" Version="6.1.1" />-->
-  </ItemGroup>
-
   <ItemGroup>
     <Compile Update="Resources\AppResources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -74,5 +42,4 @@
       <LastGenOutput>AppResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  
 </Project>

@@ -3,12 +3,12 @@ using System;
 using Realms;
 #endif
 
-namespace Hymnal.Core.Models
+namespace Plugin.StorageManager.Models
 {
 #if __IOS__ || __ANDROID__
-    public class FavoriteHymn : RealmObject, IHymnReference
+    public class FavoriteHymn : RealmObject, IHymnReference, IStorageModel
 #else
-    public class FavoriteHymn : IHymnReference
+    public class FavoriteHymn : IHymnReference, IStorageModel
 #endif
     {
         /// <summary>

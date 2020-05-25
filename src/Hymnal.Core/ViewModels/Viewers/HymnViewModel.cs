@@ -16,9 +16,8 @@ using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
-#if __IOS__ || __ANDROID__
-using Realms;
-#endif
+using Plugin.StorageManager;
+using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -32,9 +31,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
         private readonly IShareService shareService;
-#if __IOS__ || __ANDROID__
-        private readonly Realm realm;
-#endif
+        private readonly IStorageManager storageService;
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
@@ -83,7 +80,8 @@ namespace Hymnal.Core.ViewModels
             IMediaManager mediaManager,
             IConnectivityService connectivityService,
             IDialogService dialogService,
-            IShareService shareService
+            IShareService shareService,
+            IStorageManager storageService
             )
         {
             this.navigationService = navigationService;
@@ -94,9 +92,7 @@ namespace Hymnal.Core.ViewModels
             this.connectivityService = connectivityService;
             this.dialogService = dialogService;
             this.shareService = shareService;
-#if __IOS__ || __ANDROID__
-            realm = Realm.GetInstance();
-#endif
+            this.storageService = storageService;
             mediaManager.StateChanged += MediaManager_StateChanged;
         }
 
@@ -136,24 +132,16 @@ namespace Hymnal.Core.ViewModels
             IsPlaying = mediaManager.IsPlaying();
 
             // Is Favorite
-#if __IOS__ || __ANDROID__
-            IsFavorite = realm.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
-#endif
+            IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             // Record
             if (HymnParameter.SaveInRecords)
             {
-#if __IOS__ || __ANDROID__
-                IQueryable<RecordHymn> records = realm.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
 
-                using (Transaction trans = realm.BeginWrite())
-                {
-                    realm.RemoveRange(records);
-                    trans.Commit();
-                }
+                IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
+                storageService.RemoveRange(records);
 
-                realm.Write(() => realm.Add(Hymn.ToRecordHymn()));
-#endif
+                storageService.Add(Hymn.ToRecordHymn());
             }
 
             await base.Initialize();
@@ -208,16 +196,12 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand FavoriteCommand => new MvxCommand(FavoriteExecute);
         private void FavoriteExecute()
         {
-#if __IOS__ || __ANDROID__
-            var favorites = realm.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+
+            var favorites = storageService.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             if (IsFavorite || favorites.Count() > 0)
             {
-                using (Transaction trans = realm.BeginWrite())
-                {
-                    realm.RemoveRange(favorites);
-                    trans.Commit();
-                }
+                storageService.RemoveRange(favorites);
 
                 Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
                 {
@@ -229,7 +213,7 @@ namespace Hymnal.Core.ViewModels
             }
             else
             {
-                realm.Write(() => realm.Add(Hymn.ToFavoriteHymn()));
+                storageService.Add(Hymn.ToFavoriteHymn());
 
                 Analytics.TrackEvent(Constants.TrackEvents.HymnAddedToFavorites, new Dictionary<string, string>
                 {
@@ -239,8 +223,6 @@ namespace Hymnal.Core.ViewModels
                     { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                 });
             }
-#endif
-
 
             IsFavorite = !IsFavorite;
         }

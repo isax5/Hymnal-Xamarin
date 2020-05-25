@@ -7,6 +7,7 @@ using Hymnal.Core.Models;
 using Microsoft.AppCenter.Crashes;
 using MvvmCross.Logging;
 using Newtonsoft.Json;
+using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.Services
 {

@@ -6,12 +6,12 @@ using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
-#if __IOS__ || __ANDROID__
-using Realms;
-#endif
+using Plugin.StorageManager;
+using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -21,9 +21,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IDialogService dialogService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-#if __IOS__ || __ANDROID__
-        private readonly Realm realm;
-#endif
+        private readonly IStorageManager storageManager;
 
         public MvxObservableCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<FavoriteHymn, Hymn>>();
 
@@ -45,16 +43,15 @@ namespace Hymnal.Core.ViewModels
             IMvxNavigationService navigationService,
             IDialogService dialogService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService
+            IPreferencesService preferencesService,
+            IStorageManager storageManager
             )
         {
             this.navigationService = navigationService;
             this.dialogService = dialogService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-#if __IOS__ || __ANDROID__
-            realm = Realm.GetInstance();
-#endif
+            this.storageManager = storageManager;
         }
 
         public override async void ViewAppearing()
@@ -62,11 +59,8 @@ namespace Hymnal.Core.ViewModels
             base.ViewAppearing();
 
             // Update list
-            //IOrderedEnumerable<Hymn> favorites = dataStorageService.GetItems<FavoriteHymn>().OrderByDescending(h => h.SavedAt);
-
-#if __IOS__ || __ANDROID__
             var favorites = await Task.WhenAll(
-                realm.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
+                storageManager.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
                 .Select(async f => new Tuple<FavoriteHymn, Hymn>(f, await hymnsService.GetHymnAsync(f))));
 
             // If there weren't hymns in the list before
@@ -94,7 +88,6 @@ namespace Hymnal.Core.ViewModels
 
             foreach (var item in toRemoveList)
                 Hymns.Remove(item);
-#endif
         }
 
         public override void ViewAppeared()
@@ -129,14 +122,21 @@ namespace Hymnal.Core.ViewModels
                 { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
             });
 
-            Hymns.Remove(favoriteHymn);
-#if __IOS__ || __ANDROID__
-            using (var trans = realm.BeginWrite())
+            try
             {
-                realm.Remove(favoriteHymn.Item1);
-                trans.Commit();
+                Hymns.Remove(favoriteHymn);
+                storageManager.Remove(favoriteHymn.Item1);
             }
-#endif
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string>()
+                    {
+                        { "File", nameof(FavoritesViewModel) },
+                        { "Deleting Favorite", favoriteHymn.Item1.Number.ToString() }
+                    };
+
+                Crashes.TrackError(ex, properties);
+            }
         }
     }
 }

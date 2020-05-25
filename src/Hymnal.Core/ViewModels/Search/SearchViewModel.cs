@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
@@ -5,6 +6,7 @@ using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -103,21 +105,38 @@ namespace Hymnal.Core.ViewModels
 
         private void SelectedHymnExecute(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
-            {
-                Number = hymn.Number,
-                HymnalLanguage = language
-            });
+            // Some devices iOS that have had problems in this place
+            if (hymn == null)
+                return;
 
-            if (!string.IsNullOrWhiteSpace(TextSearchBar))
+            try
             {
+                navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+                {
+                    Number = hymn.Number,
+                    HymnalLanguage = language
+                });
 
-                Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
+                if (!string.IsNullOrWhiteSpace(TextSearchBar))
+                {
+
+                    Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
                 {
                     { Constants.TrackEvents.HymnFoundedScheme.Query, TextSearchBar },
                     { Constants.TrackEvents.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
                     { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, language.Id }
                 });
+                }
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string>()
+                    {
+                        { "File", nameof(SearchViewModel) },
+                        { "Opening Hymn", hymn.Number.ToString() }
+                    };
+
+                Crashes.TrackError(ex, properties);
             }
         }
     }

@@ -1,4 +1,4 @@
-namespace Hymnal.Core.Models
+namespace Plugin.StorageManager.Models
 {
     public interface IHymnReference
     {

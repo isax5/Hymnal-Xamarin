@@ -1,4 +1,5 @@
 using System;
+using Plugin.StorageManager;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -31,22 +32,24 @@ namespace Hymnal.Core
 
         public override void Initialize()
         {
-#if __ANDROID__ || __IOS__
+//#if __ANDROID__ || __IOS__
             SetUp();
-#endif
+//#endif
 
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-#if __ANDROID__ || __IOS__
+            Mvx.IoCProvider.RegisterSingleton<IStorageManager>(CrossStorageManager.Current);
+
+            //#if __ANDROID__ || __IOS__
             Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
 
             RegisterAppStart<RootViewModel>();
-#else
-            RegisterAppStart<SimpleViewModel>();
-#endif
+//#else
+            //RegisterAppStart<SimpleViewModel>();
+//#endif
         }
 
         private void SetUp()
