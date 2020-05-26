@@ -1,5 +1,4 @@
 using System;
-using Plugin.StorageManager;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
@@ -16,6 +15,7 @@ using MvvmCross;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Plugin.StorageManager;
 
 namespace Hymnal.Core
 {
@@ -32,9 +32,7 @@ namespace Hymnal.Core
 
         public override void Initialize()
         {
-//#if __ANDROID__ || __IOS__
             SetUp();
-//#endif
 
             CreatableTypes()
                 .EndingWith("Service")
@@ -43,14 +41,12 @@ namespace Hymnal.Core
 
             Mvx.IoCProvider.RegisterSingleton<IStorageManager>(CrossStorageManager.Current);
 
-            //#if __ANDROID__ || __IOS__
             Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
 
             RegisterAppStart<RootViewModel>();
-//#else
             //RegisterAppStart<SimpleViewModel>();
-//#endif
         }
+
 
         private void SetUp()
         {
@@ -95,7 +91,7 @@ namespace Hymnal.Core
             }
         }
 
-#region Open Page as
+        #region Open Page as
         public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel
         {
             IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
@@ -151,6 +147,6 @@ namespace Hymnal.Core
                     break;
             }
         }
-#endregion
+        #endregion
     }
 }
