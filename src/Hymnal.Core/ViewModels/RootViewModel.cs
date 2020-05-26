@@ -4,6 +4,7 @@ using Microsoft.AppCenter.Analytics;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -12,19 +13,16 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IMvxLog log;
         private readonly IPreferencesService preferencesService;
-        private readonly IAppInformationService appInformationService;
 
         public RootViewModel(
             IMvxNavigationService navigationService,
             IMvxLog log,
-            IPreferencesService preferencesService,
-            IAppInformationService appInformationService
+            IPreferencesService preferencesService
             )
         {
             this.navigationService = navigationService;
             this.log = log;
             this.preferencesService = preferencesService;
-            this.appInformationService = appInformationService;
         }
 
         private bool loaded = false;
@@ -55,7 +53,7 @@ namespace Hymnal.Core.ViewModels
             {
                 { Constants.TrackEvents.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
-                { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, appInformationService.RequestedTheme.ToString() }
+                { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
             });
 
             base.Start();

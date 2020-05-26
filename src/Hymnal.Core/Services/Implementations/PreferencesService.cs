@@ -1,17 +1,16 @@
 using System;
 using Hymnal.Core.Models;
-using Hymnal.Core.Services;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
-namespace Hymnal.SharedNatives.Services
+namespace Hymnal.Core.Services
 {
     public class PreferencesService : IPreferencesService
 
     {
         public int HymnalsFontSize
         {
-            get => Preferences.Get(nameof(HymnalsFontSize), Core.Constants.DEFAULT_HYMNALS_FONT_SIZE);
+            get => Preferences.Get(nameof(HymnalsFontSize), Constants.DEFAULT_HYMNALS_FONT_SIZE);
             set => Preferences.Set(nameof(HymnalsFontSize), value);
         }
 

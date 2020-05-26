@@ -4,6 +4,7 @@ using Plugin.Multilingual;
 
 namespace Hymnal.SharedNatives.Services
 {
+    // Create native implementation if it's necessary. The Plugin works in Core project perfectly on any platform
     public class MultilingualService : IMultilingualService
     {
         public CultureInfo CurrentCultureInfo

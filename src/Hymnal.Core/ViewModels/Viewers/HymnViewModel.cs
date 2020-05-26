@@ -18,6 +18,7 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.StorageManager;
 using Plugin.StorageManager.Models;
+using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -28,9 +29,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaManager mediaManager;
-        private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
-        private readonly IShareService shareService;
         private readonly IStorageManager storageService;
 
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
@@ -78,9 +77,7 @@ namespace Hymnal.Core.ViewModels
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
-            IConnectivityService connectivityService,
             IDialogService dialogService,
-            IShareService shareService,
             IStorageManager storageService
             )
         {
@@ -89,9 +86,7 @@ namespace Hymnal.Core.ViewModels
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.mediaManager = mediaManager;
-            this.connectivityService = connectivityService;
             this.dialogService = dialogService;
-            this.shareService = shareService;
             this.storageService = storageService;
             mediaManager.StateChanged += MediaManager_StateChanged;
         }
@@ -230,7 +225,7 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand ShareCommand => new MvxCommand(ShareExecute);
         private void ShareExecute()
         {
-            shareService.Share(
+            Share.RequestAsync(
                 title: hymn.Title,
                 text: $"{hymn.Title}\n\n{hymn.Content}\n\n{Constants.WebLinks.DeveloperWebSite}");
 
@@ -247,7 +242,7 @@ namespace Hymnal.Core.ViewModels
         private void PlayExecute()
         {
             // Check internet connection
-            if (!connectivityService.InternetAccess)
+            if (Connectivity.NetworkAccess == NetworkAccess.None)
             {
                 dialogService.Alert(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
                 return;

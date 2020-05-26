@@ -1,9 +1,8 @@
 using System.Collections.Generic;
-using Hymnal.Core.Services;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
 
-namespace Hymnal.SharedNatives.Services
+namespace Hymnal.Core.Services
 {
     public class DataStorageService : IDataStorageService
     {
