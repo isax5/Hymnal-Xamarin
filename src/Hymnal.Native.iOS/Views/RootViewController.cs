@@ -1,9 +1,6 @@
-using Foundation;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Platforms.Ios.Views;
 using System;
-using MvvmCross;
-using UIKit;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 
 namespace Hymnal.iOS.Views

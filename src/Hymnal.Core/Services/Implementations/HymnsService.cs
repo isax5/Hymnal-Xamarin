@@ -69,6 +69,8 @@ namespace Hymnal.Core.Services
 
                     log.TraceException("Exception reading hymnbook", ex, properties);
                     Crashes.TrackError(ex, properties);
+
+                    return new List<Hymn>();
                 }
             }
 

@@ -84,6 +84,18 @@
     </Reference>
     <Reference Include="OpenTK-1.0" />
     <Reference Include="System.Drawing.Common.dll" />
+    <Reference Include="MediaManager">
+      <HintPath>..\..\packages\Plugin.MediaManager.0.9.7\lib\xamarintvos10\MediaManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Essentials">
+      <HintPath>..\..\packages\Xamarin.Essentials.1.5.3.2\lib\xamarintvos10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Multilingual.Abstractions">
+      <HintPath>..\..\packages\Plugin.Multilingual.1.0.2\lib\XamarinTVOS\Plugin.Multilingual.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Multilingual">
+      <HintPath>..\..\packages\Plugin.Multilingual.1.0.2\lib\XamarinTVOS\Plugin.Multilingual.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\App Icon &amp; Top Shelf Image.brandassets\Contents.json">
@@ -161,31 +173,50 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
+    <None Include="Helpers\TranslateExtension.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="FirstViewController.cs" />
-    <Compile Include="FirstViewController.designer.cs">
-      <DependentUpon>FirstViewController.cs</DependentUpon>
+    <Compile Include="Setup.cs" />
+    <Compile Include="Services\MultilingualService.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Views\NumberViewController.cs" />
+    <Compile Include="Views\NumberViewController.designer.cs">
+      <DependentUpon>NumberViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="SecondViewController.cs" />
-    <Compile Include="SecondViewController.designer.cs">
+    <Compile Include="Views\SearchViewController.cs" />
+    <Compile Include="Views\SearchViewController.designer.cs">
+      <DependentUpon>SearchViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SecondViewController.cs" />
+    <Compile Include="Views\SecondViewController.designer.cs">
       <DependentUpon>SecondViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Setup.cs" />
-    <Compile Include="SimpleViewController.cs" />
-    <Compile Include="SimpleViewController.designer.cs">
+    <Compile Include="Views\SimpleViewController.cs" />
+    <Compile Include="Views\SimpleViewController.designer.cs">
       <DependentUpon>SimpleViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\FirstViewController.cs" />
+    <Compile Include="Views\FirstViewController.designer.cs">
+      <DependentUpon>FirstViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RootViewController.cs" />
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Views\Main.storyboard" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj">
+      <Project>{1AC8149A-B28F-4DB6-A65E-31E379605528}</Project>
+      <Name>Hymnal.SharedNatives</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
+      <Project>{4A4AC861-6DEA-49E0-A330-5442B1F1F294}</Project>
+      <Name>StorageManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\TVOS\Xamarin.TVOS.CSharp.targets" />

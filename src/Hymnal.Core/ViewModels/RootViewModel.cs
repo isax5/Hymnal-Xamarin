@@ -35,16 +35,21 @@ namespace Hymnal.Core.ViewModels
 
             loaded = true;
 
+#if __IOS__ || __ANDROID__
             await navigationService.Navigate<NumberViewModel>();
             await navigationService.Navigate<IndexViewModel>();
             await navigationService.Navigate<FavoritesViewModel>();
             await navigationService.Navigate<SettingsViewModel>();
-
-            //await navigationService.Navigate<SimpleViewModel>();
+#elif __TVOS__
+            // Native project, RootViewController
+#else
+            await navigationService.Navigate<SimpleViewModel>();
+#endif
         }
 
         // LifeCycle implemented in RootViewModel
         #region LifeCycle
+#if __IOS__ || __ANDROID__
         public override void Start()
         {
             log.Debug("App Started");
@@ -58,6 +63,7 @@ namespace Hymnal.Core.ViewModels
 
             base.Start();
         }
-        #endregion
+#endif
+#endregion
     }
 }

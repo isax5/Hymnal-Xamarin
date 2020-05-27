@@ -38,13 +38,12 @@ namespace Hymnal.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-#if !__TVOS__
-            SetUp();
-#endif
 
-#if __IOS__ || __ANDROID__
+#if __IOS__ || __ANDROID__ || __TVOS__
+            SetUp();
+
             RegisterAppStart<RootViewModel>();
-#elif __TVOS__ || TIZEN
+#else
             RegisterAppStart<SimpleViewModel>();
 #endif
         }
