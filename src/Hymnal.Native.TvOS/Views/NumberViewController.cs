@@ -6,7 +6,7 @@ using System;
 namespace Hymnal.Native.TvOS
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(TabName = "Numbers")]
+    //[MvxPagePresentation(WrapInNavigationController = true)]
     public partial class NumberViewController : MvxViewController<NumberViewModel>
     {
         public NumberViewController (IntPtr handle) : base (handle)

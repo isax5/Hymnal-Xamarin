@@ -1,6 +1,5 @@
 using Hymnal.Core.ViewModels;
 using MvvmCross;
-using MvvmCross.Platforms.Tvos.Presenters.Attributes;
 using MvvmCross.Platforms.Tvos.Views;
 using MvvmCross.ViewModels;
 using System;
@@ -8,54 +7,29 @@ using UIKit;
 
 namespace Hymnal.Native.TvOS
 {
-
-    //[MvxFromStoryboard("Main")]
-    //[MvxRootPresentation]
-    //[MvxTabPresentation]
-    //[MvxTabbedPagePresentation(TabbedPosition.Root, NoHistory = true, WrapInNavigationPage = true)]
+    [MvxFromStoryboard("Main")]
     public partial class RootViewController : MvxTabBarViewController<RootViewModel>
     {
-        private bool _constructed;
-
-        public RootViewController()
-        {
-            _constructed = true;
-
-            // need this additional call to ViewDidLoad because UIkit creates the view before the C# hierarchy has been constructed
-            ViewDidLoad();
-        }
+        public RootViewController(IntPtr handle) : base(handle)
+        { }
 
         public override void ViewDidLoad()
         {
-            if (!_constructed)
-                return;
-
             base.ViewDidLoad();
 
             var viewControllers = new UIViewController[]
             {
-            CreateTabFor(0, typeof(NumberViewModel)),
-            CreateTabFor(1, typeof(SimpleViewModel)),
-            //CreateTabFor(0, "First", "FirstImage", typeof(SimpleViewController)),
-            //CreateTabFor(1, "Second", "SecondImage", typeof(SecondViewModel)),
-            //CreateTabFor(2, "Third", "ThirdImage", typeof(ThirdViewModel))
+                CreateTabFor(typeof(NumberViewModel)),
+                CreateTabFor(typeof(SimpleViewModel))
             };
 
-            //var vm1 = Mvx.IoCProvider
-
             ViewControllers = viewControllers;
-            //CustomizableViewControllers = new UIViewController[] { };
-
-            //Sometimes I need to start with a specific tab selected
-            //SelectedViewController = ViewControllers[ViewModel.CurrentPage];
         }
 
-        private UIViewController CreateTabFor(int index, Type viewModelType, string title = null, string imageName = null)
+        private UIViewController CreateTabFor(Type viewModelType, bool useNavigationPage = false, string title = null, int index = 0, string imageName = null)
         {
-            var controller = new UINavigationController();
             var request = new MvxViewModelRequest(viewModelType);
 
-            //var viewModel = Mvx.Resolve<IMvxViewModelLoader>().LoadViewModel(request, null);
             var viewModel = Mvx.IoCProvider.Resolve<IMvxViewModelLoader>().LoadViewModel(request, null);
 
             var screen = this.CreateViewControllerFor(viewModel) as UIViewController;
@@ -66,14 +40,25 @@ namespace Hymnal.Native.TvOS
                 screen.Title = title;
             }
 
+            if (!string.IsNullOrEmpty(imageName))
+            {
+                // use preferences of the TabBarItem used in the StoryBoard
+                screen.TabBarItem = new UITabBarItem(title, UIImage.FromBundle(imageName), index);
+                //screen.TabBarItem = new UITabBarItem(UITabBarSystemItem.Search, index);
+                //screen.TabBarItem = new UITabBarItem();
+            }
 
-            // use preferences of the TabBarItem used in the StoryBoard
-            //screen.TabBarItem = new UITabBarItem(title, UIImage.FromBundle(imageName), index);
-            //screen.TabBarItem = new UITabBarItem(UITabBarSystemItem.Search, index);
-            //screen.TabBarItem = new UITabBarItem();
+            if (useNavigationPage)
+            {
+                var controller = new UINavigationController();
+                controller.PushViewController(screen, true);
+                return controller;
+            }
+            else
+            {
+                return screen;
+            }
 
-            controller.PushViewController(screen, true);
-            return controller;
         }
     }
 }

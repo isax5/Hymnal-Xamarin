@@ -201,6 +201,9 @@
       <DependentUpon>FirstViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RootViewController.cs" />
+    <Compile Include="Views\RootViewController.designer.cs">
+      <DependentUpon>RootViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />
