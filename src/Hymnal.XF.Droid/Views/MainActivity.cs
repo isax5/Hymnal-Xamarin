@@ -6,7 +6,6 @@ using Hymnal.Core.ViewModels.Main;
 using MediaManager;
 using MvvmCross.Forms.Platforms.Android.Views;
 using Plugin.StorageManager;
-using Plugin.StorageManager.Implementation;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.Droid
