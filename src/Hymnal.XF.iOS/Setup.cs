@@ -7,7 +7,6 @@ using MvvmCross;
 using MvvmCross.Forms.Platforms.Ios.Core;
 using MvvmCross.Forms.Presenters;
 using Plugin.StorageManager;
-using Plugin.StorageManager.Implementation;
 using Realms;
 using Xamarin.Forms;
 

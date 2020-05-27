@@ -19,11 +19,6 @@ namespace Hymnal.XF.Tizen.TV
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
             Mvx.IoCProvider.RegisterType<IMultilingualService, Tv.Services.MultilingualService>();
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
-            Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
-            Mvx.IoCProvider.RegisterType<IDeviceInformation, DeviceInformation>();
-            Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
-            Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
-            Mvx.IoCProvider.RegisterType<IShareService, ShareService>();
         }
 
         public override void InitializePrimary()

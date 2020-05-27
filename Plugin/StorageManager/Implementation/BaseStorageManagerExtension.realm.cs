@@ -1,6 +1,6 @@
 using Realms;
 
-namespace Plugin.StorageManager.Implementation
+namespace Plugin.StorageManager
 {
     public static class BaseStorageManagerImplementationExtension
     {

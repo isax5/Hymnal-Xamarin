@@ -38,7 +38,9 @@ namespace Hymnal.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
+#if !__TVOS__
             SetUp();
+#endif
 
 #if __IOS__ || __ANDROID__
             RegisterAppStart<RootViewModel>();
