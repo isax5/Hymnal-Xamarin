@@ -34,7 +34,8 @@ namespace Hymnal.Core.ViewModels
             this.preferencesService = preferencesService;
 
 #if DEBUG
-            HymnNumber = $"{11}";
+            // A long hymn
+            HymnNumber = $"{255}";
 #endif
         }
 

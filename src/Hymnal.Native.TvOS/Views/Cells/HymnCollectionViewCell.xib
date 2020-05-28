@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HymnCollectionViewCell" id="cZE-iV-UFb" customClass="HymnCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="780"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="780"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content Content Content Content Content Content Content " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DNy-DH-lMC" userLabel="Text">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="42.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="DNy-DH-lMC" secondAttribute="bottom" priority="250" id="Fs8-Pa-jM8"/>
+                <constraint firstItem="DNy-DH-lMC" firstAttribute="leading" secondItem="cZE-iV-UFb" secondAttribute="leading" id="FyZ-H6-MY1"/>
+                <constraint firstAttribute="trailing" secondItem="DNy-DH-lMC" secondAttribute="trailing" id="NEb-TS-6AQ"/>
+                <constraint firstItem="DNy-DH-lMC" firstAttribute="top" secondItem="cZE-iV-UFb" secondAttribute="top" id="YhB-mM-ALh"/>
+            </constraints>
+            <size key="customSize" width="490" height="678"/>
+            <connections>
+                <outlet property="textLabel" destination="DNy-DH-lMC" id="name-outlet-DNy-DH-lMC"/>
+            </connections>
+            <point key="canvasLocation" x="39.130434782608695" y="121.875"/>
+        </collectionViewCell>
+    </objects>
+</document>

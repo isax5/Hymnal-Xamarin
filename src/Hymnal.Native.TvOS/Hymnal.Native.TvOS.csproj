@@ -169,6 +169,7 @@
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
     <Folder Include="Custom Controls\" />
+    <Folder Include="Views\Cells\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -211,9 +212,14 @@
       <DependentUpon>HymnViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\FocusableLabel.cs" />
+    <Compile Include="Views\Cells\HymnCollectionViewCell.cs" />
+    <Compile Include="Views\Cells\HymnCollectionViewCell.designer.cs">
+      <DependentUpon>HymnCollectionViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />
+    <InterfaceDefinition Include="Views\Cells\HymnCollectionViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
