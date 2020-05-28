@@ -188,22 +188,23 @@
     <Compile Include="Views\SearchViewController.designer.cs">
       <DependentUpon>SearchViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SecondViewController.cs" />
-    <Compile Include="Views\SecondViewController.designer.cs">
-      <DependentUpon>SecondViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\SimpleViewController.cs" />
     <Compile Include="Views\SimpleViewController.designer.cs">
       <DependentUpon>SimpleViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\FirstViewController.cs" />
-    <Compile Include="Views\FirstViewController.designer.cs">
-      <DependentUpon>FirstViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\RootViewController.cs" />
     <Compile Include="Views\RootViewController.designer.cs">
       <DependentUpon>RootViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\NumericalIndexViewController.cs" />
+    <Compile Include="Views\NumericalIndexViewController.designer.cs">
+      <DependentUpon>NumericalIndexViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SettingsViewController.cs" />
+    <Compile Include="Views\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Services\DialogService.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />

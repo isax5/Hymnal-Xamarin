@@ -17,7 +17,7 @@ namespace Hymnal.Native.TvOS
             // Native services register
             Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
             Mvx.IoCProvider.RegisterType<IDataStorageService, DataStorageService>();
-            //Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
+            Mvx.IoCProvider.RegisterType<IDialogService, Services.DialogService>();
             Mvx.IoCProvider.RegisterType<IMultilingualService, Services.MultilingualService>();
         }
 

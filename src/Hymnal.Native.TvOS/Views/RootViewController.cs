@@ -20,7 +20,9 @@ namespace Hymnal.Native.TvOS
             var viewControllers = new UIViewController[]
             {
                 CreateTabFor(typeof(NumberViewModel)),
-                CreateTabFor(typeof(SimpleViewModel))
+                CreateTabFor(typeof(NumericalIndexViewModel)),
+                CreateTabFor(typeof(SearchViewModel)),
+                CreateTabFor(typeof(SettingsViewModel))
             };
 
             ViewControllers = viewControllers;

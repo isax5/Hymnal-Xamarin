@@ -5,9 +5,9 @@ using System;
 namespace Hymnal.Native.TvOS
 {
     [MvxFromStoryboard("Main")]
-    public partial class SearchViewController : MvxViewController<SearchViewModel>
+    public partial class SettingsViewController : MvxViewController<SettingsViewModel>
     {
-        public SearchViewController (IntPtr handle) : base (handle)
+        public SettingsViewController (IntPtr handle) : base (handle)
         {
         }
     }
