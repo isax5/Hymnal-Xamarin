@@ -168,6 +168,7 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Views\" />
+    <Folder Include="Custom Controls\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -205,6 +206,11 @@
       <DependentUpon>SettingsViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\DialogService.cs" />
+    <Compile Include="Views\HymnViewController.cs" />
+    <Compile Include="Views\HymnViewController.designer.cs">
+      <DependentUpon>HymnViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Custom Controls\FocusableLabel.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />
@@ -222,6 +228,20 @@
       <Project>{4A4AC861-6DEA-49E0-A330-5442B1F1F294}</Project>
       <Name>StorageManager</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\NewHymnal.en.json" />
+    <BundleResource Include="Resources\NewHymnal.es.json" />
+    <BundleResource Include="Resources\NewHymnal.pt.json" />
+    <BundleResource Include="Resources\NewHymnal.ru.json" />
+    <BundleResource Include="Resources\NewHymnalThematicList.en.json" />
+    <BundleResource Include="Resources\NewHymnalThematicList.es.json" />
+    <BundleResource Include="Resources\NewHymnalThematicList.pt.json" />
+    <BundleResource Include="Resources\NewHymnalThematicList.ru.json" />
+    <BundleResource Include="Resources\OldHymnal.en.json" />
+    <BundleResource Include="Resources\OldHymnal.es.json" />
+    <BundleResource Include="Resources\OldHymnalThematicList.en.json" />
+    <BundleResource Include="Resources\OldHymnalThematicList.es.json" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\TVOS\Xamarin.TVOS.CSharp.targets" />
 </Project>

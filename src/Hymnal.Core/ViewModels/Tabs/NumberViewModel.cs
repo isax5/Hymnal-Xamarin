@@ -32,6 +32,10 @@ namespace Hymnal.Core.ViewModels
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
+
+#if DEBUG
+            HymnNumber = $"{11}";
+#endif
         }
 
 

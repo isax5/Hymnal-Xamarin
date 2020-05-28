@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="226">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
@@ -12,7 +12,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="RootViewController" id="226" customClass="RootViewController" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="229">
-                        <rect key="frame" x="0.0" y="617" width="375" height="49"/>
+                        <rect key="frame" x="0.0" y="617" width="375" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="selectedImageTintColor" name="PrimaryColor"/>
                     </tabBar>
@@ -34,7 +34,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Je0-aa-Vz6">
-                                <rect key="frame" x="92" y="196" width="191" height="60"/>
+                                <rect key="frame" x="92" y="222" width="191" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDq-VN-KCa">
                                         <rect key="frame" x="0.0" y="0.0" width="31" height="60"/>
@@ -50,12 +50,12 @@
                                         </constraints>
                                         <color key="textColor" name="PrimaryColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="namePhonePad"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1801">
-                                <rect key="frame" x="112.5" y="286" width="150" height="30"/>
+                                <rect key="frame" x="112.5" y="312" width="150" height="30"/>
                                 <color key="backgroundColor" red="0.12941455839999999" green="0.1294075549" blue="0.12941050530000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="AxK-Ta-9Hc"/>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="686" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1021.6" y="279.31034482758622"/>
+            <point key="canvasLocation" x="-1021.6" y="279.3103"/>
         </scene>
         <!--Index-->
         <scene sceneID="907">
@@ -270,7 +270,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cz-as-khj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1114.4000000000001" y="-1177.961"/>
+            <point key="canvasLocation" x="1114.4" y="-1177.961"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4884">
@@ -278,7 +278,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4888" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="4885" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" largeTitles="YES" id="4887">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="102"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -320,7 +320,7 @@
         <image name="search icon" width="50" height="50"/>
         <image name="time icon" width="50" height="50"/>
         <namedColor name="PrimaryColor">
-            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color colorSpace="custom" customColorSpace="sRGB" red="1" green="1" blue="1" alpha="1"/>
         </namedColor>
     </resources>
 </document>

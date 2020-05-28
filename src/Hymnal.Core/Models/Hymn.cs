@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 
 namespace Hymnal.Core.Models
@@ -19,5 +21,7 @@ namespace Hymnal.Core.Models
         public string HymnalLanguageId { get; set; }
 
         public string PlainContent => Content.Replace("\n", " ");
+
+        public string[] ListContent => Content.Replace("\n\n","¶").Split('¶');
     }
 }

@@ -16,22 +16,22 @@ namespace Hymnal.Native.TvOS
     {
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton OpenButton { get; set; }
+        UIKit.UITextField hymnNumberTextField { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UITextField Text { get; set; }
+        UIKit.UIButton openHymnButton { get; set; }
 
         void ReleaseDesignerOutlets ()
         {
-            if (OpenButton != null) {
-                OpenButton.Dispose ();
-                OpenButton = null;
+            if (hymnNumberTextField != null) {
+                hymnNumberTextField.Dispose ();
+                hymnNumberTextField = null;
             }
 
-            if (Text != null) {
-                Text.Dispose ();
-                Text = null;
+            if (openHymnButton != null) {
+                openHymnButton.Dispose ();
+                openHymnButton = null;
             }
         }
     }
