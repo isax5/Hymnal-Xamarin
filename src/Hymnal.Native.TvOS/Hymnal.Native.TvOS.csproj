@@ -216,6 +216,10 @@
     <Compile Include="Views\Cells\HymnCollectionViewCell.designer.cs">
       <DependentUpon>HymnCollectionViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="LyricsCollectionViewCell.cs" />
+    <Compile Include="LyricsCollectionViewCell.designer.cs">
+      <DependentUpon>LyricsCollectionViewCell.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />
