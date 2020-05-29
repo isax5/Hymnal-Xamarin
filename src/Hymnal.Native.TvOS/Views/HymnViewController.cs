@@ -41,7 +41,7 @@ namespace Hymnal.Native.TvOS.Views
                 var layout = listCollectionView.CollectionViewLayout as UICollectionViewFlowLayout;
                 //layout.EstimatedItemSize = UICollectionViewFlowLayout.AutomaticSize;
                 layout.ItemSize = UICollectionViewFlowLayout.AutomaticSize;
-                layout.EstimatedItemSize = new CGSize(300, 600);
+                //layout.EstimatedItemSize = new CGSize(600, 400); // I doesn't affect if I'm using <GetSizeForItem>
 
             }
 
@@ -50,7 +50,7 @@ namespace Hymnal.Native.TvOS.Views
         }
 
         #region Flow layout delegate
-        /*
+        /**/
         [Export("collectionView:layout:sizeForItemAtIndexPath:")]
         public CGSize GetSizeForItem(UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
         {
@@ -82,12 +82,13 @@ namespace Hymnal.Native.TvOS.Views
             
 
             nfloat width = (frameWidth / numberOfColumns) - (xInsets + cellSpacing);
-            nfloat height = frameHeight - (xInsets * 2) - 20;
+            //nfloat height = frameHeight - (xInsets * 2) - 20;
+            nfloat height = 200; // The cell grows by it's self if it's necessary
 
             return new CGSize(width: width, height: height);
             //return new CGSize(width: cellWidth, height: cellHeight);
         }
-        */
+        /**/
 
 
         #endregion

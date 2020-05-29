@@ -234,14 +234,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="LyricsCollectionViewCell" id="VQG-wL-JrW" customClass="LyricsCollectionViewCell">
-                                        <rect key="frame" x="374.5" y="10" width="959" height="244"/>
+                                        <rect key="frame" x="424" y="10" width="860" height="244"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="EXy-zW-1UD">
-                                            <rect key="frame" x="0.0" y="0.0" width="959" height="244"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="860" height="244"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3323">
-                                                    <rect key="frame" x="0.0" y="0.0" width="959" height="230"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="860" height="230"/>
                                                     <color key="backgroundColor" red="0.60367292169999998" green="0.10978709909999999" blue="0.1214370951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <string key="text">Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content Content </string>
                                                     <nil key="textColor"/>
@@ -256,7 +256,6 @@
                                                 <constraint firstAttribute="trailing" secondItem="3323" secondAttribute="trailing" id="kAi-sT-GVP"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="959" height="244"/>
                                         <connections>
                                             <outlet property="textLabel" destination="3323" id="name-outlet-3323"/>
                                         </connections>
