@@ -212,18 +212,13 @@
       <DependentUpon>HymnViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Custom Controls\FocusableLabel.cs" />
-    <Compile Include="Views\Cells\HymnCollectionViewCell.cs" />
-    <Compile Include="Views\Cells\HymnCollectionViewCell.designer.cs">
-      <DependentUpon>HymnCollectionViewCell.cs</DependentUpon>
-    </Compile>
-    <Compile Include="LyricsCollectionViewCell.cs" />
-    <Compile Include="LyricsCollectionViewCell.designer.cs">
+    <Compile Include="Views\Cells\LyricsCollectionViewCell.cs" />
+    <Compile Include="Views\Cells\LyricsCollectionViewCell.designer.cs">
       <DependentUpon>LyricsCollectionViewCell.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />
-    <InterfaceDefinition Include="Views\Cells\HymnCollectionViewCell.xib" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">

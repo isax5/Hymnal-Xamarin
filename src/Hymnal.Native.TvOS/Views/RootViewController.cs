@@ -5,7 +5,7 @@ using MvvmCross.ViewModels;
 using System;
 using UIKit;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     public partial class RootViewController : MvxTabBarViewController<RootViewModel>

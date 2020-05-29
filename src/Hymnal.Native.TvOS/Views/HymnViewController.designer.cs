@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views
 {
 	[Register ("HymnViewController")]
 	partial class HymnViewController

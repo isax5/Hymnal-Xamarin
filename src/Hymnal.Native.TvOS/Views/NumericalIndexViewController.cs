@@ -2,7 +2,7 @@ using Hymnal.Core.ViewModels;
 using MvvmCross.Platforms.Tvos.Views;
 using System;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     public partial class NumericalIndexViewController : MvxTableViewController<NumericalIndexViewModel>

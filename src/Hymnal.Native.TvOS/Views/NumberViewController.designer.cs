@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views
 {
     [Register ("NumberViewController")]
     partial class NumberViewController

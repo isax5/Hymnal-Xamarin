@@ -7,7 +7,7 @@ using MvvmCross.Presenters.Hints;
 using MvvmCross.Platforms.Tvos.Presenters.Attributes;
 using MvvmCross.Binding.BindingContext;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     //[MvxModalPresentation(ModalTransitionStyle = UIKit.UIModalTransitionStyle.CoverVertical)]

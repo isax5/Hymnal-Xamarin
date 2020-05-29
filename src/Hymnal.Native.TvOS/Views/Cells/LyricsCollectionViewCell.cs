@@ -1,13 +1,12 @@
 using Foundation;
 using Hymnal.Core.ViewModels;
-using Hymnal.Native.TvOS.Views.Cells;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Tvos.Binding.Views;
 using MvvmCross.Platforms.Tvos.Presenters.Attributes;
 using MvvmCross.Platforms.Tvos.Views;
 using System;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views.Cells
 {
     [MvxFromStoryboard("Main")]
     public partial class LyricsCollectionViewCell : MvxCollectionViewCell

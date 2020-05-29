@@ -4,7 +4,7 @@ using MvvmCross.Platforms.Tvos.Presenters.Attributes;
 using MvvmCross.Platforms.Tvos.Views;
 using System;
 
-namespace Hymnal.Native.TvOS
+namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     //[MvxPagePresentation(WrapInNavigationController = true)]
