@@ -32,6 +32,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IDialogService dialogService;
         private readonly IStorageManager storageService;
 
+        #region Properties
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
 
@@ -69,6 +70,7 @@ namespace Hymnal.Core.ViewModels
             get => hymnId;
             set => SetProperty(ref hymnId, value);
         }
+        #endregion
 
 
         public HymnViewModel(

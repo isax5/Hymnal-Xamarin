@@ -1,4 +1,5 @@
 using Foundation;
+using System.Linq;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Tvos.Binding.Views;
@@ -12,8 +13,10 @@ using CoreGraphics;
 namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
-    public partial class HymnViewController : MvxViewController<HymnViewModel>
+    public partial class HymnViewController : MvxViewController<HymnViewModel>, IUICollectionViewDelegateFlowLayout
     {
+        private MvxCollectionViewSource _dataSource;
+
         public HymnViewController (IntPtr handle) : base (handle)
         { }
          
@@ -23,31 +26,71 @@ namespace Hymnal.Native.TvOS.Views
 
             // CollectionView
             //listCollectionView.RegisterNibForCell(HymnCollectionViewCell.Nib, HymnCollectionViewCell.Key); // personalized Cell
-            var dataSource = new MvxCollectionViewSource(listCollectionView, LyricsCollectionViewCell.Key);
-            listCollectionView.Source = dataSource;
-
+            _dataSource = new MvxCollectionViewSource(listCollectionView, LyricsCollectionViewCell.Key);
+            
             // Bindings
             MvxFluentBindingDescriptionSet<HymnViewController, HymnViewModel> set = this.CreateBindingSet<HymnViewController, HymnViewModel>();
             set.Bind(titleLabel).To(vm => vm.Hymn.Title);
             set.Bind(numberLabel).To(vm => vm.Hymn.Number);
-            set.Bind(dataSource).To(vm => vm.Hymn.ListContent);
+            set.Bind(_dataSource).To(vm => vm.Hymn.ListContent);
             set.Apply();
 
-            ////Dynamic CollectionView
-            //if (listCollectionView.CollectionViewLayout is UICollectionViewFlowLayout)
-            //{
-            //    var layout = listCollectionView.CollectionViewLayout as UICollectionViewFlowLayout;
-            //    layout.SectionInset = new UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16);
-            //    layout.MinimumInteritemSpacing = 20;
+            //Dynamic CollectionView
+            if (listCollectionView.CollectionViewLayout is UICollectionViewFlowLayout)
+            {
+                var layout = listCollectionView.CollectionViewLayout as UICollectionViewFlowLayout;
+                //layout.EstimatedItemSize = UICollectionViewFlowLayout.AutomaticSize;
+                layout.ItemSize = UICollectionViewFlowLayout.AutomaticSize;
+                layout.EstimatedItemSize = new CGSize(300, 600);
 
-            //    Calculated CollectionView Size
-            //    int width = 1708;
-            //    int height = 819;
+            }
 
-            //    layout.EstimatedItemSize = new CGSize(width: width / 4, height: height);
-            //    layout.EstimatedItemSize = new CGSize(width: 500, height: 1000);
-            //    layout.EstimatedItemSize = UICollectionViewFlowLayout.AutomaticSize;
-            //}
+            listCollectionView.Source = _dataSource;
+            listCollectionView.Delegate = this;
         }
+
+        #region Flow layout delegate
+        /*
+        [Export("collectionView:layout:sizeForItemAtIndexPath:")]
+        public CGSize GetSizeForItem(UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
+        {
+            // Modify number of columns here
+            nfloat numberOfColumns = 3;
+
+            nfloat frameWidth = collectionView.Frame.Size.Width;
+            nfloat frameHeight = collectionView.Frame.Size.Height;
+
+            // Insets configurated in collectionView as FlowLayout (StoryBoard)
+            nfloat xInsets = 10;
+
+            // Spacing configurated in collectionView (StoryBoard)
+            nfloat cellSpacing = 20;
+
+            //let image = images[indexPath.item]
+            //let height = image.size.height
+            //var cell = collectionView.CellForItem(indexPath) as LyricsCollectionViewCell;
+            //nfloat textWidth = cell.TextLabel.Frame.Width;
+            //nfloat textHeight = cell.TextLabel.Frame.Height;
+
+
+            // TODO: How to know the height of the label, if the label doesn't exist yet
+            // For now, I'm going to use the height of the line that is 46, multiplicated for the number of lines to use
+
+            //var cell = _dataSource.GetCell(collectionView, indexPath) as LyricsCollectionViewCell;
+            //nfloat cellWidth = cell.TextLabel.Frame.Width;
+            //nfloat cellHeight = cell.TextLabel.Frame.Height;
+            
+
+            nfloat width = (frameWidth / numberOfColumns) - (xInsets + cellSpacing);
+            nfloat height = frameHeight - (xInsets * 2) - 20;
+
+            return new CGSize(width: width, height: height);
+            //return new CGSize(width: cellWidth, height: cellHeight);
+        }
+        */
+
+
+        #endregion
+
     }
 }
