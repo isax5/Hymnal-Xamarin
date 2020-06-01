@@ -21,6 +21,9 @@ namespace Hymnal.Native.TvOS.Views
 		UIKit.UILabel numberLabel { get; set; }
 
 		[Outlet]
+		UIKit.UIButton playButton { get; set; }
+
+		[Outlet]
 		[GeneratedCode ("iOS Designer", "1.0")]
 		UIKit.UILabel titleLabel { get; set; }
 		
@@ -39,6 +42,11 @@ namespace Hymnal.Native.TvOS.Views
 			if (titleLabel != null) {
 				titleLabel.Dispose ();
 				titleLabel = null;
+			}
+
+			if (playButton != null) {
+				playButton.Dispose ();
+				playButton = null;
 			}
 		}
 	}

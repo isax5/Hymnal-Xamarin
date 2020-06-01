@@ -26,6 +26,19 @@ namespace Hymnal.Native.TvOS.Views.Cells
             });
         }
 
+        public override void DidUpdateFocus(UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
+        {
+            base.DidUpdateFocus(context, coordinator);
+
+            if (context.NextFocusedView == this)
+            {
+                BackgroundColor = UIColor.LightGray;
+            }
+            else if (context.PreviouslyFocusedView == this)
+            {
+                BackgroundColor = UIColor.Clear;
+            }
+        }
 
         public override UICollectionViewLayoutAttributes PreferredLayoutAttributesFittingAttributes(UICollectionViewLayoutAttributes layoutAttributes)
         {

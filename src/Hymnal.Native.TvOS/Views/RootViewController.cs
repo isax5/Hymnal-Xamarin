@@ -1,5 +1,6 @@
 using Hymnal.Core.ViewModels;
 using MvvmCross;
+using MvvmCross.Platforms.Tvos.Presenters.Attributes;
 using MvvmCross.Platforms.Tvos.Views;
 using MvvmCross.ViewModels;
 using System;
@@ -8,6 +9,7 @@ using UIKit;
 namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
+    //[MvxTabPresentation(WrapInNavigationController = true)]
     public partial class RootViewController : MvxTabBarViewController<RootViewModel>
     {
         public RootViewController(IntPtr handle) : base(handle)

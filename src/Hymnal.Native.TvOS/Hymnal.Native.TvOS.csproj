@@ -170,6 +170,9 @@
     <Folder Include="Views\" />
     <Folder Include="Custom Controls\" />
     <Folder Include="Views\Cells\" />
+    <Folder Include="Views\Tabs\" />
+    <Folder Include="Views\Viewers\" />
+    <Folder Include="Views\CollectionViewLayout\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -182,14 +185,6 @@
     <Compile Include="Setup.cs" />
     <Compile Include="Services\MultilingualService.cs" />
     <Compile Include="Main.cs" />
-    <Compile Include="Views\NumberViewController.cs" />
-    <Compile Include="Views\NumberViewController.designer.cs">
-      <DependentUpon>NumberViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SearchViewController.cs" />
-    <Compile Include="Views\SearchViewController.designer.cs">
-      <DependentUpon>SearchViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\SimpleViewController.cs" />
     <Compile Include="Views\SimpleViewController.designer.cs">
       <DependentUpon>SimpleViewController.cs</DependentUpon>
@@ -198,24 +193,33 @@
     <Compile Include="Views\RootViewController.designer.cs">
       <DependentUpon>RootViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\NumericalIndexViewController.cs" />
-    <Compile Include="Views\NumericalIndexViewController.designer.cs">
-      <DependentUpon>NumericalIndexViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\SettingsViewController.cs" />
-    <Compile Include="Views\SettingsViewController.designer.cs">
-      <DependentUpon>SettingsViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Services\DialogService.cs" />
-    <Compile Include="Views\HymnViewController.cs" />
-    <Compile Include="Views\HymnViewController.designer.cs">
-      <DependentUpon>HymnViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Custom Controls\FocusableLabel.cs" />
     <Compile Include="Views\Cells\LyricsCollectionViewCell.cs" />
     <Compile Include="Views\Cells\LyricsCollectionViewCell.designer.cs">
       <DependentUpon>LyricsCollectionViewCell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Tabs\NumberViewController.cs" />
+    <Compile Include="Views\Tabs\NumberViewController.designer.cs">
+      <DependentUpon>NumberViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\NumericalIndexViewController.cs" />
+    <Compile Include="Views\Tabs\NumericalIndexViewController.designer.cs">
+      <DependentUpon>NumericalIndexViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\SearchViewController.cs" />
+    <Compile Include="Views\Tabs\SearchViewController.designer.cs">
+      <DependentUpon>SearchViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Tabs\SettingsViewController.cs" />
+    <Compile Include="Views\Tabs\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Viewers\HymnViewController.cs" />
+    <Compile Include="Views\Viewers\HymnViewController.designer.cs">
+      <DependentUpon>HymnViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\CollectionViewLayout\TopAlignedCollectionViewFlowLayout.cs" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Views\Main.storyboard" />
