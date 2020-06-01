@@ -160,7 +160,7 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        #region Events
+#region Events
         private void MediaManager_StateChanged(object sender, MediaManager.Playback.StateChangedEventArgs e)
         {
             switch (e.State)
@@ -181,9 +181,9 @@ namespace Hymnal.Core.ViewModels
                     break;
             }
         }
-        #endregion
+#endregion
 
-        #region Commands
+#region Commands
         public MvxCommand OpenSheetCommand => new MvxCommand(OpenSheet);
         private void OpenSheet()
         {
@@ -287,6 +287,6 @@ namespace Hymnal.Core.ViewModels
         {
             navigationService.Close(this);
         }
-        #endregion
+#endregion
     }
 }

@@ -18,7 +18,7 @@ namespace Hymnal.Native.TvOS.Views
         public override void ViewDidLoad()
         {
             base.ViewDidLoad();
-
+            // TODO: Correction MVX
             var viewControllers = new UIViewController[]
             {
                 CreateTabFor(typeof(NumberViewModel)),
@@ -34,7 +34,7 @@ namespace Hymnal.Native.TvOS.Views
         {
             var request = new MvxViewModelRequest(viewModelType);
 
-            var viewModel = Mvx.IoCProvider.Resolve<IMvxViewModelLoader>().LoadViewModel(request, null);
+            IMvxViewModel viewModel = Mvx.IoCProvider.Resolve<IMvxViewModelLoader>().LoadViewModel(request, null);
 
             var screen = this.CreateViewControllerFor(viewModel) as UIViewController;
 

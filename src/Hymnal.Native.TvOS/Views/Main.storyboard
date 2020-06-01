@@ -37,6 +37,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
                                 <state key="normal" title="Open"/>
+                                <connections>
+                                    <action selector="openHymnActionButton:" destination="9pv-A4-QxB" eventType="primaryActionTriggered" id="Q0F-hM-3TU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
@@ -209,28 +212,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3080">
-                                <rect key="frame" x="914" y="230" width="92" height="58"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="1000" id="nyN-Ap-cXZ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#255" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3082">
-                                <rect key="frame" x="106" y="205" width="183" height="91"/>
-                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="asC-3p-LZY">
-                                <rect key="frame" x="1662" y="205" width="152" height="86"/>
-                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
-                                <state key="normal" title="Play"/>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="750" contentInsetAdjustmentBehavior="always" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fXQ-c9-oxV">
-                                <rect key="frame" x="106" y="346" width="1708" height="674"/>
+                                <rect key="frame" x="106" y="205" width="1708" height="815"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="20" minimumInteritemSpacing="20" id="8pR-Ty-QtH">
                                     <size key="itemSize" width="959" height="244"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -273,30 +256,23 @@
                             </collectionView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="fXQ-c9-oxV" firstAttribute="top" secondItem="3082" secondAttribute="bottom" constant="50" id="4Jh-kw-3pr"/>
-                            <constraint firstItem="asC-3p-LZY" firstAttribute="top" secondItem="3073" secondAttribute="bottom" id="6S1-gL-JYR"/>
                             <constraint firstItem="3074" firstAttribute="top" secondItem="fXQ-c9-oxV" secondAttribute="bottom" id="8IV-MM-ZGF"/>
-                            <constraint firstItem="3080" firstAttribute="top" secondItem="3073" secondAttribute="bottom" constant="25" id="CMn-mv-lw2"/>
-                            <constraint firstItem="3080" firstAttribute="centerX" secondItem="3077" secondAttribute="centerX" id="Ecr-bi-PAz"/>
                             <constraint firstItem="fXQ-c9-oxV" firstAttribute="trailing" secondItem="3077" secondAttribute="trailingMargin" id="Q9Q-b0-Ubw"/>
-                            <constraint firstItem="3082" firstAttribute="leading" secondItem="3077" secondAttribute="leadingMargin" id="Uc9-d3-TgZ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="asC-3p-LZY" secondAttribute="trailing" id="cC2-Bn-HMv"/>
-                            <constraint firstItem="3082" firstAttribute="top" secondItem="3073" secondAttribute="bottom" id="obF-8A-0Z9"/>
+                            <constraint firstItem="fXQ-c9-oxV" firstAttribute="top" secondItem="3073" secondAttribute="bottom" id="lbB-fe-3ae"/>
                             <constraint firstItem="fXQ-c9-oxV" firstAttribute="leading" secondItem="3077" secondAttribute="leadingMargin" id="udQ-fe-3Ru"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Title" id="yCW-39-3fz">
-                        <barButtonItem key="leftBarButtonItem" title="Item" id="HtW-ya-ims"/>
+                        <barButtonItem key="leftBarButtonItem" title="Play" id="HtW-ya-ims"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1920" height="1080"/>
                     <connections>
                         <outlet property="listCollectionView" destination="fXQ-c9-oxV" id="name-outlet-fXQ-c9-oxV"/>
-                        <outlet property="numberLabel" destination="3082" id="name-outlet-3082"/>
-                        <outlet property="playButton" destination="asC-3p-LZY" id="CCY-wA-iFY"/>
-                        <outlet property="titleLabel" destination="3080" id="name-outlet-3080"/>
+                        <outlet property="navigationItem" destination="yCW-39-3fz" id="F0L-ZY-hTM"/>
+                        <outlet property="playButton" destination="HtW-ya-ims" id="CZD-mS-vdg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3078" userLabel="First Responder" sceneMemberID="firstResponder"/>

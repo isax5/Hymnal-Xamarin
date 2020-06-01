@@ -11,6 +11,8 @@ namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     //[MvxModalPresentation(ModalTransitionStyle = UIKit.UIModalTransitionStyle.CoverVertical)]
+    //[MvxTabPresentation]
+    //[MvxPagePresentation(WrapInNavigationController = true)]
     public partial class SimpleViewController : MvxViewController<SimpleViewModel>
     {
         public SimpleViewController (IntPtr handle) : base (handle)

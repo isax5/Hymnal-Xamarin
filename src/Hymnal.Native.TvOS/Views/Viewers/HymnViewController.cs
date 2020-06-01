@@ -32,8 +32,7 @@ namespace Hymnal.Native.TvOS.Views
 
                 // Bindings
                 MvxFluentBindingDescriptionSet<HymnViewController, HymnViewModel> set = this.CreateBindingSet<HymnViewController, HymnViewModel>();
-                set.Bind(titleLabel).To(vm => vm.Hymn.Title);
-                set.Bind(numberLabel).To(vm => vm.Hymn.Number);
+                set.Bind(navigationItem).For(item => item.Title).To(vm => vm.Hymn.Title);
                 set.Bind(_dataSource).To(vm => vm.Hymn.ListContent);
                 set.Bind(playButton).To(vm => vm.PlayCommand);
                 set.Apply();
