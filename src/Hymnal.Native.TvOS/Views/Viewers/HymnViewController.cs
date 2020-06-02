@@ -11,12 +11,15 @@ using TVUIKit;
 using System;
 using CoreGraphics;
 using MvvmCross.Platforms.Tvos.Presenters.Attributes;
+using MvvmCross.Navigation;
+using MvvmCross;
 
 namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     //[MvxPagePresentation(WrapInNavigationController = true)]
-    //[MvxModalPresentation(WrapInNavigationController = true)]
+    [MvxModalPresentation(WrapInNavigationController = true)]
+    //[MvxModalPresentation(Animated = true, ModalPresentationStyle = UIModalPresentationStyle.PageSheet)]
     public partial class HymnViewController : MvxViewController<HymnViewModel>, IUICollectionViewDelegateFlowLayout
     {
         private MvxCollectionViewSource _dataSource;
@@ -58,6 +61,15 @@ namespace Hymnal.Native.TvOS.Views
             base.ViewDidLoad();
         }
 
+        public override void ViewDidDisappear(bool animated)
+        {
+            base.ViewDidDisappear(false);
+
+            // TODO: Correction MVX Modal Page
+            IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
+            navigationService.Close(ViewModel);
+        }
+
 
         #region Flow layout delegate
         /**/
@@ -76,21 +88,7 @@ namespace Hymnal.Native.TvOS.Views
             // Spacing configurated in collectionView (StoryBoard)
             nfloat cellSpacing = 20;
 
-            //let image = images[indexPath.item]
-            //let height = image.size.height
-
-
-            // TODO: How to know the height of the label, if the label doesn't exist yet
-
-            var cell = _dataSource.GetCell(collectionView, indexPath) as LyricsCollectionViewCell;
-            //nfloat cellWidth = cell.TextLabel.Frame.Width;
-            //nfloat cellHeight = cell.TextLabel.Frame.Height;
-            //var cellHeight = cell.ContentView.Frame.Size.Height;
-
-            var view = cell.ContentView;
-
             nfloat width = (frameWidth / numberOfColumns) - (xInsets + cellSpacing);
-            //nfloat height = frameHeight - (xInsets * 2) - 20;
             nfloat height = 200; // The cell grows by it's self if it's necessary
 
             return new CGSize(width: width, height: height);

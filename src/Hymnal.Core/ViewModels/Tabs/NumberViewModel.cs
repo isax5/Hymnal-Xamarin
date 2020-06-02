@@ -17,12 +17,6 @@ namespace Hymnal.Core.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
-        // TODO: Correction MVX
-#region Adapting for TvOS Mvx misatakes
-        public IPreferencesService PreferencesService => preferencesService;
-        public IHymnsService HymnService => hymnsService;
-#endregion
-
 
         private string hymnNumber;
         public string HymnNumber
