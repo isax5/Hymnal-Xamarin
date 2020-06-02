@@ -1,9 +1,11 @@
 using Hymnal.Core.Services;
 using Hymnal.SharedNatives.Services;
+using Hymnal.XF.Tizen.TV.Custom;
 using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Tizen.Core;
+using MvvmCross.Forms.Presenters;
 using Plugin.StorageManager;
 
 namespace Hymnal.XF.Tizen.TV
@@ -27,6 +29,14 @@ namespace Hymnal.XF.Tizen.TV
             base.InitializePrimary();
             CrossStorageManager.Current.Init();
             CrossMediaManager.Current.Init();
+        }
+
+        protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
+        {
+            //var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
+            var formsPagePresenter = new CustomFormsPagePresenter(viewPresenter);
+            Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(formsPagePresenter);
+            return formsPagePresenter;
         }
     }
 }

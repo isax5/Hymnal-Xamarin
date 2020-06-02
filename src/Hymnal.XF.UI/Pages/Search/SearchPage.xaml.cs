@@ -6,7 +6,11 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+#if TIZEN
+    [MvxTabbedPagePresentation(Title = "Search")]
+#else
     [MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
+#endif
     public partial class SearchPage : MvxContentPage<SearchViewModel>
     {
         public SearchPage()
