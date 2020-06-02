@@ -30,6 +30,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj" />
     <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj" />
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj" />

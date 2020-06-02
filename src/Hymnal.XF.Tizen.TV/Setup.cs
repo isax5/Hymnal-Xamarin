@@ -4,6 +4,7 @@ using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
 using MvvmCross.Forms.Platforms.Tizen.Core;
+using Plugin.StorageManager;
 
 namespace Hymnal.XF.Tizen.TV
 {
@@ -24,6 +25,7 @@ namespace Hymnal.XF.Tizen.TV
         public override void InitializePrimary()
         {
             base.InitializePrimary();
+            CrossStorageManager.Current.Init();
             CrossMediaManager.Current.Init();
         }
     }

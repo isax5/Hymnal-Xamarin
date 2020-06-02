@@ -46,6 +46,9 @@ namespace Hymnal.Core.ViewModels
             await navigationService.Navigate<SearchViewModel>();
             await navigationService.Navigate<NumericalIndexViewModel>();
             await navigationService.Navigate<SettingsViewModel>();
+#elif TIZEN
+            await navigationService.Navigate<NumberViewModel>();
+            //await navigationService.Navigate<SearchViewModel>();
 #else
             await navigationService.Navigate<SimpleViewModel>();
 #endif

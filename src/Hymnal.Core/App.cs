@@ -39,7 +39,7 @@ namespace Hymnal.Core
                 .RegisterAsLazySingleton();
 
 
-#if __IOS__ || __ANDROID__ || __TVOS__
+#if __IOS__ || __ANDROID__ || __TVOS__ || TIZEN
             SetUp();
 
             RegisterAppStart<RootViewModel>();
