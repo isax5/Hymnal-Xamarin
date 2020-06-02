@@ -21,16 +21,16 @@ namespace Hymnal.iOS.Views
 
             // NavBar configuration
             NavigationController.NavigationBar.PrefersLargeTitles = true;
-            NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
-            NavigationController.NavigationBar.TintColor = UIColor.White;
-            NavigationController.NavigationBar.LargeTitleTextAttributes = new UIStringAttributes
-            {
-                ForegroundColor = UIColor.White
-            };
-            NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes
-            {
-                ForegroundColor = UIColor.White
-            };
+            //NavigationController.NavigationBar.BarStyle = UIBarStyle.BlackTranslucent;
+            NavigationController.NavigationBar.TintColor = UIColor.FromName("bar title color");
+            //NavigationController.NavigationBar.LargeTitleTextAttributes = new UIStringAttributes
+            //{
+            //    ForegroundColor = UIColor.White
+            //};
+            //NavigationController.NavigationBar.TitleTextAttributes = new UIStringAttributes
+            //{
+            //    ForegroundColor = UIColor.White
+            //};
         }
 
         public override void TouchesBegan(NSSet touches, UIEvent evt)
@@ -38,45 +38,5 @@ namespace Hymnal.iOS.Views
             base.TouchesBegan(touches, evt);
             View.EndEditing(true);
         }
-
-        //public override void ViewDidLoad()
-        //{
-        //    base.ViewDidLoad();
-
-        //    View.BackgroundColor = UIColor.White;
-
-        //    NavigationController.NavigationBar.BarStyle = UIBarStyle.Black;
-        //    NavigationController.NavigationBar.Translucent = false;
-        //    NavigationController.NavigationBar.Hidden = false;
-        //    NavigationController.NavigationBar.BarTintColor = ColorPalette.Primary;
-        //    NavigationController.NavigationBar.TintColor = UIColor.White;
-
-        //    NavigationController.SetNeedsStatusBarAppearanceUpdate();
-
-        //    CreateView();
-
-        //    LayoutView();
-
-        //    BindView();
-        //}
-
-        //public override void ViewWillAppear(bool animated)
-        //{
-        //    base.ViewWillAppear(animated);
-
-        //    View.SubviewsDoNotTranslateAutoresizingMaskIntoConstraints();
-        //}
-
-        //protected virtual void CreateView()
-        //{
-        //}
-
-        //protected virtual void LayoutView()
-        //{
-        //}
-
-        //protected virtual void BindView()
-        //{
-        //}
     }
 }

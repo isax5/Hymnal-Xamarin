@@ -9,7 +9,9 @@ using UIKit;
 namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(TabName = "Numbers", TabIconName = "number tab")]
+    [MvxTabPresentation(TabName = "Number", TabIconName = "tab number")]
+    //[MvxTabPresentation()]
+    //[MvxPagePresentation(WrapInNavigationController = true)]
     public partial class NumberViewController : BaseViewController<NumberViewModel>
     {
         public NumberViewController (IntPtr handle) : base (handle)

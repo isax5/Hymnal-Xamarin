@@ -4316,6 +4316,41 @@
     <ImageAsset Include="Resources\Media.xcassets\Colors\PrimaryColor.colorset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab favorites.imageset\favorites-white.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab favorites.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab favorites.imageset\favorites-black.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab index.imageset\list-white.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab index.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab index.imageset\list-black.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab settings.imageset\settings-white.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab settings.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab settings.imageset\settings-black.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\colors\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\colors\tab color selected.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab number.imageset\number-white.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab number.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab number.imageset\number-black.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\view images\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\view images\filter background.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\view images\background.imageset\Background.pdf" />
+    <ImageAsset Include="Resources\Media.xcassets\view images\background.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Color\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Color\primary color.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Color\primary color oposite.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Color\Top Slider Modal Page Color.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\global tint.colorset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Bar\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Bar\colors\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Bar\colors\bar title color.colorset\Contents.json" />
+    <Compile Include="Views\IndexTableViewController.cs" />
+    <Compile Include="Views\IndexTableViewController.designer.cs">
+      <DependentUpon>IndexTableViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SearchTableViewController.cs" />
+    <Compile Include="Views\SearchTableViewController.designer.cs">
+      <DependentUpon>SearchTableViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

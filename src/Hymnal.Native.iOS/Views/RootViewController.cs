@@ -7,7 +7,6 @@ namespace Hymnal.iOS.Views
 {
     [MvxFromStoryboard("Main")]
     [MvxRootPresentation]
-    //[MvxTabPresentation(WrapInNavigationController = true)]
     public partial class RootViewController : MvxTabBarViewController<RootViewModel>
     {
         public RootViewController (IntPtr handle) : base (handle)
