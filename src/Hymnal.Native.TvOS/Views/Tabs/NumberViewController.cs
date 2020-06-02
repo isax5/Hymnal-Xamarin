@@ -16,6 +16,7 @@ namespace Hymnal.Native.TvOS.Views
 {
     [MvxFromStoryboard("Main")]
     //[MvxPagePresentation(WrapInNavigationController = true)]
+    [MvxTabPresentation(TabName = "Number")]
     public partial class NumberViewController : MvxViewController<NumberViewModel>
     {
         public NumberViewController (IntPtr handle) : base (handle)

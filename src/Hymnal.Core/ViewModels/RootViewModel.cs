@@ -42,6 +42,10 @@ namespace Hymnal.Core.ViewModels
             //await navigationService.Navigate<SettingsViewModel>();
 #elif __TVOS__
             // Native project, RootViewController
+            await navigationService.Navigate<NumberViewModel>();
+            await navigationService.Navigate<SearchViewModel>();
+            await navigationService.Navigate<NumericalIndexViewModel>();
+            await navigationService.Navigate<SettingsViewModel>();
 #else
             await navigationService.Navigate<SimpleViewModel>();
 #endif
