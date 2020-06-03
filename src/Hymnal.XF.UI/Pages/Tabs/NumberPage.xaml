@@ -13,8 +13,7 @@
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:NumberViewModel"
     AutomationId="NumberPage"
-    BackgroundColor="{OnPlatform Default={DynamicResource PrimaryBackgroudColor},
-                                 Tizen=White}">
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
@@ -55,8 +54,7 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{OnPlatform Default={DynamicResource SecondaryBackgroudColor},
-                                         Tizen=White}"
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
             Opacity="{DynamicResource BackgroundMainPageFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -77,8 +75,7 @@
                 <Grid Padding="0">
 
                     <Frame
-                        BackgroundColor="{OnPlatform Default={DynamicResource PrimaryBackgroudColor},
-                                                     Tizen=White}"
+                        BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
                         CornerRadius="10"
                         HasShadow="True"
                         HorizontalOptions="CenterAndExpand"

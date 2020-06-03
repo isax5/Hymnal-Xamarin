@@ -3,9 +3,9 @@
     x:Class="Hymnal.XF.UI.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:custom="clr-namespace:Hymnal.XF.UI.Pages.Custom"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    xmlns:custom="clr-namespace:Hymnal.XF.UI.Pages.Custom"
     xmlns:resources="clr-namespace:Hymnal.XF.UI.Resources">
     <Application.Resources>
 
@@ -17,10 +17,9 @@
                     <x:String x:Key="BackgroundImageFile">Background</x:String>
 
                     <Style TargetType="custom:CustomNavigationPage">
-                        <!--  It doesnt do somthing on Tizen  -->
-                        <Setter Property="BackgroundColor" Value="{OnPlatform Default={DynamicResource SecondaryBackgroudColor}, Tizen=Green}" />
-                        <Setter Property="BarBackgroundColor" Value="{OnPlatform Default={DynamicResource PrimaryBackgroudColor}, Tizen=White}" />
-                        <Setter Property="BarTextColor" Value="{OnPlatform Default={DynamicResource NavBarTextColor}, Tizen=Black}" />
+                        <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
+                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
                         <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
                         <!--<Setter Property="iOS:NavigationPage.IsNavigationBarTranslucent" Value="True" />-->
                     </Style>
@@ -28,11 +27,10 @@
                     <Style
                         x:Key="TabbedPageStyle"
                         TargetType="mvxViews:MvxTabbedPage">
-                        <Setter Property="UnselectedTabColor" Value="{OnPlatform Default={DynamicResource UnselectedTabColor}, Tizen=Gray}" />
-                        <Setter Property="SelectedTabColor" Value="{OnPlatform Default={DynamicResource SelectedTabColor}, Tizen=Black}" />
-                        <!--  It doesnt do somthing on Tizen  -->
-                        <Setter Property="BarTextColor" Value="{OnPlatform Default={DynamicResource SelectedTabColor}, Tizen=Red}" />
-                        <Setter Property="BarBackgroundColor" Value="{OnPlatform Default={DynamicResource PrimaryBackgroudColor}, Tizen=White}" />
+                        <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
+                        <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
+                        <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
+                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
                     </Style>
                 </ResourceDictionary>
             </ResourceDictionary.MergedDictionaries>
