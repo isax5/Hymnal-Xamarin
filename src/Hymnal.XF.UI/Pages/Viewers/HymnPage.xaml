@@ -53,6 +53,7 @@
 
     <RelativeLayout>
         <Image
+            x:Name="backgroundImage"
             Aspect="AspectFill"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -75,15 +76,20 @@
                                                                   Property=Width}">
             <StackLayout Spacing="20">
                 <Label
+                    x:Name="hymnTitleLabel"
                     AutomationId="HymnTitleLabel"
                     FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"
+                    IsVisible="{OnPlatform Default=True,
+                                           Tizen=False}"
                     Text="{Binding Hymn.Title}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
                 <Label
+                    x:Name="hymnContentLabel"
                     Margin="10"
+                    AutomationId="HymnContentLabel"
                     FontSize="{Binding HymnFontSize}"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"

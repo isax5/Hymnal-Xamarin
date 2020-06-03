@@ -14,9 +14,15 @@ namespace Hymnal.XF.UI.Pages
         public HymnPage()
         {
             InitializeComponent();
+#if TIZEN
+            this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
+            hymnContentLabel.FontSize = 80;
+            backgroundImage.Source = new FileImageSource { File = "Background.png" };
+#endif
 
-            if (Device.RuntimePlatform != Device.iOS)
-                ToolbarItems.Remove(CloseToolbar);
+#if !__IOS__
+            ToolbarItems.Remove(CloseToolbar);
+#endif
         }
 
         protected override void OnBindingContextChanged()

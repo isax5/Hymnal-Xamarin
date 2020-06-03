@@ -1,6 +1,7 @@
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.UI.Pages
@@ -16,6 +17,9 @@ namespace Hymnal.XF.UI.Pages
         public SearchPage()
         {
             InitializeComponent();
+#if TIZEN
+            backgroundImage.Source = new FileImageSource { File = "Background.png" };
+#endif
         }
 
         protected override void OnAppearing()

@@ -20,6 +20,7 @@
 
     <RelativeLayout>
         <Image
+            x:Name="backgroundImage"
             Aspect="AspectFill"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -70,6 +71,8 @@
                             <Grid
                                 Padding="20,0"
                                 AutomationId="{Binding Number, StringFormat='{0}_ViewCell_Grid'}"
+                                BackgroundColor="{OnPlatform Default=Transparent,
+                                                             Tizen=White}"
                                 ColumnSpacing="0"
                                 RowSpacing="0">
                                 <Grid.ColumnDefinitions>
@@ -95,8 +98,8 @@
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
-                                    LineBreakMode="TailTruncation"
                                     FontSize="Large"
+                                    LineBreakMode="TailTruncation"
                                     Text="{Binding Title}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />
@@ -105,8 +108,8 @@
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
-                                    LineBreakMode="TailTruncation"
                                     FontSize="Micro"
+                                    LineBreakMode="TailTruncation"
                                     Text="{Binding PlainContent}"
                                     TextColor="{DynamicResource SecondaryTextColor}"
                                     VerticalOptions="CenterAndExpand" />

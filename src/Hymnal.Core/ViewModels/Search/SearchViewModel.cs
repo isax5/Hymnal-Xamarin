@@ -56,7 +56,7 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
-        private readonly HymnalLanguage language;
+        private HymnalLanguage _language;
 
         public SearchViewModel(
             IMvxNavigationService navigationService,
@@ -68,12 +68,25 @@ namespace Hymnal.Core.ViewModels
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
 
-            language = this.preferencesService.ConfiguratedHymnalLanguage;
+            _language = this.preferencesService.ConfiguratedHymnalLanguage;
+        }
+
+        ~SearchViewModel()
+        {
+            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
         public override async Task Initialize()
         {
+            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            TextSearchExecuteAsync(string.Empty);
+
             await base.Initialize();
+        }
+
+        private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
+        {
+            _language = e;
             TextSearchExecuteAsync(string.Empty);
         }
 
@@ -92,7 +105,7 @@ namespace Hymnal.Core.ViewModels
         private async void TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
-            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(language)).OrderByNumber();
+            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 
             if (string.IsNullOrWhiteSpace(text))
             {
@@ -114,7 +127,7 @@ namespace Hymnal.Core.ViewModels
                 navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
                 {
                     Number = hymn.Number,
-                    HymnalLanguage = language
+                    HymnalLanguage = _language
                 });
 
                 if (!string.IsNullOrWhiteSpace(TextSearchBar))
@@ -124,7 +137,7 @@ namespace Hymnal.Core.ViewModels
                 {
                     { Constants.TrackEvents.HymnFoundedScheme.Query, TextSearchBar },
                     { Constants.TrackEvents.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
-                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, language.Id }
+                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, _language.Id }
                 });
                 }
             }

@@ -46,6 +46,7 @@
 
     <RelativeLayout>
         <Image
+            x:Name="backgroundImage"
             Aspect="AspectFill"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -104,6 +105,7 @@
                             AutomationId="HymnNumberEntry"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
+                            Text="{Binding HymnNumber}"
                             FontSize="40"
                             HorizontalOptions="CenterAndExpand"
                             HorizontalTextAlignment="Center"
