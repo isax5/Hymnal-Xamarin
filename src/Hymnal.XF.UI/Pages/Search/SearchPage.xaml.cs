@@ -7,7 +7,7 @@ namespace Hymnal.XF.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 #if TIZEN
-    [MvxTabbedPagePresentation(Title = "Search")]
+    [MvxTabbedPagePresentation(WrapInNavigationPage = false)]
 #else
     [MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
 #endif
