@@ -22,7 +22,7 @@
     <mvxViews:MvxContentPage.Resources>
         <ResourceDictionary>
             <Style TargetType="Label">
-                <Setter Property="FontSize" Value="{OnPlatform iOS=17, Android=15}" />
+                <Setter Property="FontSize" Value="{OnPlatform Default=16, iOS=17, Android=15}" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
             </Style>
 
@@ -43,11 +43,17 @@
         HeightRequest="50"
         Intent="Settings">
         <TableRoot>
-            <TableSection Title="{i18n:Translate DisplayAndTypography}">
+            <TableSection
+                x:Name="preferencesSection"
+                Title="{i18n:Translate DisplayAndTypography}">
 
                 <!--  Choose Language  -->
-                <ViewCell Height="{OnPlatform iOS=70, Android=70}">
-                    <Grid>
+                <ViewCell
+                    x:Name="hymnLanguageCell"
+                    Height="{OnPlatform Default=70,
+                                        iOS=70,
+                                        Android=70}">
+                    <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
                         </Grid.GestureRecognizers>
@@ -77,6 +83,8 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
+                            FontSize="{OnPlatform Default=Default,
+                                                  Tizen=Large}"
                             Text="{i18n:Translate VersionsAndLanguages}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
 
@@ -98,8 +106,14 @@
                 </ViewCell>
 
                 <!--  Font Size  -->
-                <ViewCell Height="{OnPlatform iOS=150, Android=150}">
-                    <Grid>
+                <ViewCell
+                    x:Name="fontSizeCell"
+                    Height="{OnPlatform Default=150,
+                                        iOS=150,
+                                        Android=150}"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}">
+                    <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="*" />
                             <ColumnDefinition Width="auto" />
@@ -149,7 +163,9 @@
                 </ViewCell>
             </TableSection>
 
-            <TableSection Title="{i18n:Translate Developing}">
+            <TableSection
+                x:Name="developerSection"
+                Title="{i18n:Translate Developing}">
 
                 <!--  Help  -->
                 <!--
@@ -166,26 +182,37 @@
                 -->
 
                 <!--  Developer  -->
-                <ViewCell>
-                    <Grid>
+                <ViewCell
+                    x:Name="developerCell"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}">
+                    <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
                         <Label
+                            FontSize="{OnPlatform Default=Default,
+                                                  Tizen=Large}"
                             Text="{i18n:Translate Developing}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
                     </Grid>
                 </ViewCell>
 
                 <TextCell
+                    x:Name="appVersionCell"
                     Detail="{Binding AppVersionString}"
                     DetailColor="{DynamicResource SecondaryTextColor}"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}"
                     Text="{i18n:Translate AppVersion}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
                 <TextCell
+                    x:Name="appBuildCell"
                     Detail="{Binding AppBuildString}"
                     DetailColor="{DynamicResource SecondaryTextColor}"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}"
                     Text="{i18n:Translate AppBuild}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
