@@ -1,9 +1,8 @@
-using Plugin.SharedTransitions;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.UI.Pages.Custom
 {
-    public class CustomNavigationPage : SharedTransitionNavigationPage
+    public class CustomNavigationPage : NavigationPage
     {
         public CustomNavigationPage(Page root) : base(root)
         { }

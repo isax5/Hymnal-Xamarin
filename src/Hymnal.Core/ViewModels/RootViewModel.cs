@@ -37,9 +37,9 @@ namespace Hymnal.Core.ViewModels
 
 #if __IOS__ || __ANDROID__
             await navigationService.Navigate<NumberViewModel>();
-            //await navigationService.Navigate<IndexViewModel>();
-            //await navigationService.Navigate<FavoritesViewModel>();
-            //await navigationService.Navigate<SettingsViewModel>();
+            await navigationService.Navigate<IndexViewModel>();
+            await navigationService.Navigate<FavoritesViewModel>();
+            await navigationService.Navigate<SettingsViewModel>();
 #elif __TVOS__
             // Native project, RootViewController
             await navigationService.Navigate<NumberViewModel>();
