@@ -16,7 +16,6 @@ using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.StorageManager;
-using Xamarin.Essentials;
 
 namespace Hymnal.Core
 {

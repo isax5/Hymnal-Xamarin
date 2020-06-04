@@ -1,0 +1,31 @@
+Adventist hymnbook App
+
+Screens:
+- Hymn Number
+- Search Hymn
+- Configuration of the Hymn
+
+The hymnal has the following versions:
+- New English hymnal
+- Old English hymnal
+- New Spanish hymnal
+- Old Spanish hymnal
+- New Russian hymnal
+
+Features:
+- Search by title, content, and number
+- Hymns in text
+- Hymn Configuration
+
+Future Features:
+- Language Configuration
+- Music of the hymns
+- Piano sheets
+- Configurable text size
+
+Policy:
+Check: https://storage.googleapis.com/hymn-music/about/PrivacyPolicy.html
+
+Remember  if you have ideas on what to add or change in the app, you can write to isaac.rebolledoleal@gmail.com
+
+This application is not for profit, so you will never see advertisements or similar things.
