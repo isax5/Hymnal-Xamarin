@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="226">
-    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -21,182 +21,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="230" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2122" y="3484"/>
-        </scene>
-        <!--Index-->
-        <scene sceneID="907">
-            <objects>
-                <viewController storyboardIdentifier="IndexViewController" title="Index" id="908" customClass="IndexViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="905"/>
-                        <viewControllerLayoutGuide type="bottom" id="906"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="909">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="910" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-398" y="279"/>
-        </scene>
-        <!--Favorites-->
-        <scene sceneID="914">
-            <objects>
-                <viewController storyboardIdentifier="FavoritesViewController" title="Favorites" id="915" customClass="FavoritesViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="912"/>
-                        <viewControllerLayoutGuide type="bottom" id="913"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="916">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="917" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="233" y="278"/>
-        </scene>
-        <!--Settings-->
-        <scene sceneID="921">
-            <objects>
-                <viewController storyboardIdentifier="SettingsViewController" title="Settings" id="922" customClass="SettingsViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="919"/>
-                        <viewControllerLayoutGuide type="bottom" id="920"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="923">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="924" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="862" y="278"/>
-        </scene>
-        <!--Music Sheet View Controller-->
-        <scene sceneID="1157">
-            <objects>
-                <viewController storyboardIdentifier="MusicSheetViewController" id="1158" customClass="MusicSheetViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1155"/>
-                        <viewControllerLayoutGuide type="bottom" id="1156"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1159">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1160" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1841" y="-1177"/>
-        </scene>
-        <!--Title-->
-        <scene sceneID="tuE-oj-3rS">
-            <objects>
-                <viewController storyboardIdentifier="HymnViewController" id="99f-yI-zGQ" customClass="HymnViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="1ji-Ln-O6V"/>
-                        <viewControllerLayoutGuide type="bottom" id="7Vk-wi-8HK"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Cd8-it-DiD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fCZ-Jo-5jh">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t5N-S5-ZKE" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="240"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2S-39-84U">
-                                                <rect key="frame" x="8" y="0.0" width="359" height="60"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="60" id="eIB-lg-Z0w"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Content" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk6-8U-Svq">
-                                                <rect key="frame" x="8" y="100" width="359" height="100"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="GGf-V6-rmT"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="kk6-8U-Svq" firstAttribute="leading" secondItem="t5N-S5-ZKE" secondAttribute="leading" constant="8" id="Qev-oM-k2R"/>
-                                            <constraint firstAttribute="trailing" secondItem="J2S-39-84U" secondAttribute="trailing" constant="8" id="SlT-wZ-MFK"/>
-                                            <constraint firstItem="J2S-39-84U" firstAttribute="leading" secondItem="t5N-S5-ZKE" secondAttribute="leading" constant="8" id="fLs-1T-DJm"/>
-                                            <constraint firstItem="J2S-39-84U" firstAttribute="top" secondItem="t5N-S5-ZKE" secondAttribute="top" id="hm0-nK-ho3"/>
-                                            <constraint firstAttribute="bottom" secondItem="kk6-8U-Svq" secondAttribute="bottom" constant="40" id="ieN-AE-vIH"/>
-                                            <constraint firstAttribute="trailing" secondItem="kk6-8U-Svq" secondAttribute="trailing" constant="8" id="u6r-5u-a9H"/>
-                                            <constraint firstItem="kk6-8U-Svq" firstAttribute="top" secondItem="J2S-39-84U" secondAttribute="bottom" constant="40" id="wNI-rt-gjV"/>
-                                        </constraints>
-                                    </view>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstItem="t5N-S5-ZKE" firstAttribute="leading" secondItem="fCZ-Jo-5jh" secondAttribute="leading" id="dDg-16-64o"/>
-                                    <constraint firstItem="t5N-S5-ZKE" firstAttribute="top" secondItem="fCZ-Jo-5jh" secondAttribute="top" id="f9J-hb-vFU"/>
-                                    <constraint firstAttribute="trailing" secondItem="t5N-S5-ZKE" secondAttribute="trailing" id="gIZ-Hf-3ca"/>
-                                    <constraint firstAttribute="bottom" secondItem="t5N-S5-ZKE" secondAttribute="bottom" id="xE2-Jb-W72"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.60367292169999998" green="0.10978709909999999" blue="0.1214370951" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <constraints>
-                            <constraint firstItem="7Vk-wi-8HK" firstAttribute="top" secondItem="fCZ-Jo-5jh" secondAttribute="bottom" id="JvH-QC-lx9"/>
-                            <constraint firstItem="fCZ-Jo-5jh" firstAttribute="top" secondItem="Cd8-it-DiD" secondAttribute="top" id="T0P-Q5-D8B"/>
-                            <constraint firstAttribute="trailing" secondItem="fCZ-Jo-5jh" secondAttribute="trailing" id="T9L-JL-aDm"/>
-                            <constraint firstItem="t5N-S5-ZKE" firstAttribute="height" secondItem="Cd8-it-DiD" secondAttribute="height" priority="250" id="ZFt-ru-kNd"/>
-                            <constraint firstItem="t5N-S5-ZKE" firstAttribute="width" secondItem="Cd8-it-DiD" secondAttribute="width" id="e7c-rl-pyT"/>
-                            <constraint firstItem="fCZ-Jo-5jh" firstAttribute="leading" secondItem="Cd8-it-DiD" secondAttribute="leading" id="zNJ-dg-MV2"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" title="Title" id="6976"/>
-                    <connections>
-                        <outlet property="hymnContentLabel" destination="kk6-8U-Svq" id="name-outlet-kk6-8U-Svq"/>
-                        <outlet property="hymnTitleLabel" destination="J2S-39-84U" id="name-outlet-J2S-39-84U"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6cz-as-khj" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1114.4000000000001" y="-1177.961"/>
-        </scene>
-        <!--Search-->
-        <scene sceneID="13994">
-            <objects>
-                <viewController storyboardIdentifier="SearchViewController" title="Search" id="13995" customClass="SearchViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="13992"/>
-                        <viewControllerLayoutGuide type="bottom" id="13993"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="13996">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="13999">
-                                <rect key="frame" x="119" y="318" width="137" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="13997" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-399" y="1116"/>
         </scene>
         <!--Adventist Hymnal-->
         <scene sceneID="Nr8-2Z-7gb">
@@ -299,7 +123,7 @@
         <!--Favorites-->
         <scene sceneID="9Ga-sC-vaH">
             <objects>
-                <viewController id="PhN-9c-c2k" customClass="FavoritesViewController" customModule="Hymnal_Native_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoritesViewController" id="PhN-9c-c2k" customClass="FavoritesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6j-hl-ZFR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -337,7 +161,7 @@
         <!--Settings-->
         <scene sceneID="ru1-dc-fsB">
             <objects>
-                <viewController id="l7y-qX-t1T" customClass="SettingsViewController" customModule="Hymnal_Native_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" id="l7y-qX-t1T" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mf7-Sz-UQh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -353,7 +177,6 @@
         <!--Number-->
         <scene sceneID="gLp-3I-wAw">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zid-mZ-v2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8jQ-ZJ-wnT" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Number" image="tab number" id="zUt-Bc-hfP"/>
                     <toolbarItems/>
@@ -366,6 +189,7 @@
                         <segue destination="tj4-kd-m4A" kind="relationship" relationship="rootViewController" id="vdV-UE-ktk"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zid-mZ-v2k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4817" y="2108"/>
         </scene>
@@ -391,15 +215,11 @@
         <!--Index-->
         <scene sceneID="F16-Ve-VNY">
             <objects>
-                <tableViewController id="q2X-Pw-wZz" customClass="IndexTableViewController" customModule="Hymnal_Native_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="IndexTableViewController" id="q2X-Pw-wZz" customClass="IndexTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6y-r3-FU5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="q2X-Pw-wZz" id="9PJ-Gz-eOv"/>
-                            <outlet property="delegate" destination="q2X-Pw-wZz" id="IX7-Xj-g3t"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Index" id="daY-H1-Adv">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" segmentControlStyle="bar" selectedSegmentIndex="1" springLoaded="YES" id="YeC-ic-O0g">
@@ -410,14 +230,10 @@
                                 <segment title="Numerical"/>
                                 <segment title="Thematic"/>
                             </segments>
-                            <connections>
-                                <action selector="indexStyleChanged:" destination="q2X-Pw-wZz" eventType="valueChanged" id="2sL-PT-1vb"/>
-                            </connections>
                         </segmentedControl>
                     </navigationItem>
                     <connections>
-                        <outlet property="indexStyle" destination="YeC-ic-O0g" id="WgM-l9-6fl"/>
-                        <segue destination="rJM-O4-ahr" kind="presentation" identifier="ShowHymn" modalPresentationStyle="fullScreen" id="fPG-Kc-Fmj"/>
+                        <segue destination="rJM-O4-ahr" kind="presentation" identifier="ShowHymn" modalPresentationStyle="fullScreen" id="nON-od-WiY"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ngR-tz-5IB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -467,7 +283,7 @@
             <objects>
                 <viewController storyboardIdentifier="RecordsViewController" title="Records" id="C4r-v3-Xed" customClass="RecordsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xFc-0x-O9S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBJ-lZ-eF3" userLabel="Top Slider">
@@ -512,15 +328,11 @@
         <!--Search-->
         <scene sceneID="Rnw-Bk-gZx">
             <objects>
-                <tableViewController title="Search" hidesBottomBarWhenPushed="YES" id="cU1-4L-WFm" customClass="SearchTableViewController" customModule="Hymnal_Native_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="SearchTableViewController" title="Search" hidesBottomBarWhenPushed="YES" id="cU1-4L-WFm" customClass="SearchTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VHS-xf-s3p">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <connections>
-                            <outlet property="dataSource" destination="cU1-4L-WFm" id="tDa-UJ-3qH"/>
-                            <outlet property="delegate" destination="cU1-4L-WFm" id="k4h-Yt-Q3T"/>
-                        </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="hyp-3K-0Xs"/>
                     <connections>
@@ -529,12 +341,12 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OiV-Fu-yMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7975" y="1318"/>
+            <point key="canvasLocation" x="7892" y="1317"/>
         </scene>
         <!--#255-->
         <scene sceneID="PCh-MN-gFB">
             <objects>
-                <viewController id="nUx-Sv-chC" customClass="HymnViewController" customModule="Hymnal_Native_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HymnViewController" id="nUx-Sv-chC" customClass="HymnViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Lv-EC-klo" userLabel="baseView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -596,21 +408,15 @@
                         <viewLayoutGuide key="safeArea" id="GUb-bU-Cpg"/>
                     </view>
                     <navigationItem key="navigationItem" title="#255" id="jto-MV-xWv">
-                        <barButtonItem key="leftBarButtonItem" title="close" image="xmark" catalog="system" id="7dv-kk-cu0">
-                            <connections>
-                                <action selector="closePressed:" destination="nUx-Sv-chC" id="AIB-ng-FM8"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="piano sheet" image="music.note.list" catalog="system" id="q7S-2B-aOQ">
-                            <connections>
-                                <action selector="musicSheetPressed:" destination="nUx-Sv-chC" id="DHR-XU-XPj"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" title="close" image="xmark" catalog="system" id="7dv-kk-cu0"/>
+                        <barButtonItem key="rightBarButtonItem" title="piano sheet" image="music.note.list" catalog="system" id="q7S-2B-aOQ"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="hymnContent" destination="2SU-V7-ajE" id="lMb-Mg-twd"/>
-                        <outlet property="hymnTitle" destination="WPF-kX-3rj" id="wBE-bi-Wfs"/>
-                        <segue destination="lVK-5U-KJg" kind="show" identifier="ShowMusicSheet" id="RL2-KE-3RS"/>
+                        <outlet property="closeBarButton" destination="7dv-kk-cu0" id="roI-t0-xo5"/>
+                        <outlet property="hymnContentLabel" destination="2SU-V7-ajE" id="WcN-Re-5XR"/>
+                        <outlet property="hymnTitleLabel" destination="WPF-kX-3rj" id="n6W-HV-DCG"/>
+                        <outlet property="openSheetBarButton" destination="q7S-2B-aOQ" id="urQ-Rn-1Mj"/>
+                        <segue destination="lVK-5U-KJg" kind="show" id="Tdx-Se-eO8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aqe-5W-Bas" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -629,32 +435,50 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="nUx-Sv-chC" kind="relationship" relationship="rootViewController" id="aWb-b6-90H"/>
+                        <segue destination="nUx-Sv-chC" kind="relationship" relationship="rootViewController" id="bPh-q7-kYi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lyD-SO-DeY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="9476" y="2657"/>
         </scene>
-        <!--Music Sheet View Controller-->
+        <!--Title-->
         <scene sceneID="jcp-Zs-ruU">
             <objects>
-                <viewController id="lVK-5U-KJg" customClass="MusicSheetViewController" customModule="Hymnal_Native_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MusicSheetViewController" id="lVK-5U-KJg" customClass="MusicSheetViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UQU-sf-kmI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dk6-pg-X4N"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZTr-hN-CPz"/>
+                    <navigationItem key="navigationItem" title="Title" id="ZTr-hN-CPz"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osu-3I-GdJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11313" y="2657"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7AQ-2p-Ey2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a4x-v6-RB4" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CmR-H7-TDK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="cU1-4L-WFm" kind="relationship" relationship="rootViewController" id="zb1-xD-lfb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uhU-50-Klx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7892" y="507"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MoW-2V-zFZ"/>
+        <segue reference="gIV-SI-unM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="PrimaryColor"/>
     <resources>

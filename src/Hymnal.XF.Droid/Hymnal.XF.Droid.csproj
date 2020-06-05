@@ -24,6 +24,9 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,18 +37,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>
     </AndroidSupportedAbis>
     <AndroidUseAapt2>True</AndroidUseAapt2>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
-    <EnableProguard>false</EnableProguard>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <AndroidDexTool>d8</AndroidDexTool>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -56,8 +55,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
@@ -65,12 +62,10 @@
     <EnableLLVM>true</EnableLLVM>
     <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
     <DebugSymbols>true</DebugSymbols>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
     <AndroidDexTool>d8</AndroidDexTool>
     <MandroidI18n />
     <AndroidPackageFormat>aab</AndroidPackageFormat>
-    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <BundleAssemblies>true</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>

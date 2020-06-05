@@ -145,10 +145,6 @@
     <Compile Include="Views\Tabs\NumberViewController.designer.cs">
       <DependentUpon>NumberViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Tabs\IndexViewController.cs" />
-    <Compile Include="Views\Tabs\IndexViewController.designer.cs">
-      <DependentUpon>IndexViewController.cs</DependentUpon>
-    </Compile>
     <Compile Include="Views\Tabs\FavoritesViewController.cs" />
     <Compile Include="Views\Tabs\FavoritesViewController.designer.cs">
       <DependentUpon>FavoritesViewController.cs</DependentUpon>
@@ -4256,10 +4252,6 @@
     <ImageAsset Include="Resources\Media.xcassets\time icon.imageset\time.pdf">
       <Visible>false</Visible>
     </ImageAsset>
-    <Compile Include="Views\Search\SearchViewController.cs" />
-    <Compile Include="Views\Search\SearchViewController.designer.cs">
-      <DependentUpon>SearchViewController.cs</DependentUpon>
-    </Compile>
     <ImageAsset Include="Resources\Media.xcassets\SecondaryColor.colorset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -4398,14 +4390,15 @@
     <ImageAsset Include="Resources\Media.xcassets\Bar\colors\bar title color.colorset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
-    <Compile Include="Views\IndexTableViewController.cs" />
-    <Compile Include="Views\IndexTableViewController.designer.cs">
+    <Compile Include="Views\Tabs\IndexTableViewController.cs" />
+    <Compile Include="Views\Tabs\IndexTableViewController.designer.cs">
       <DependentUpon>IndexTableViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\SearchTableViewController.cs" />
-    <Compile Include="Views\SearchTableViewController.designer.cs">
+    <Compile Include="Views\Search\SearchTableViewController.cs" />
+    <Compile Include="Views\Search\SearchTableViewController.designer.cs">
       <DependentUpon>SearchTableViewController.cs</DependentUpon>
     </Compile>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\.DS_Store" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

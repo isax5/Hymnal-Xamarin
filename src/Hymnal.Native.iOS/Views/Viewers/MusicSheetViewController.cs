@@ -8,7 +8,7 @@ using UIKit;
 namespace Hymnal.Native.iOS
 {
     [MvxFromStoryboard("Main")]
-    [MvxModalPresentation(WrapInNavigationController = true)]
+    //[MvxModalPresentation(WrapInNavigationController = true)]
     public partial class MusicSheetViewController : MvxViewController<MusicSheetViewModel>
     {
         public MusicSheetViewController (IntPtr handle) : base (handle)

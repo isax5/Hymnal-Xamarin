@@ -8,7 +8,7 @@ using UIKit;
 namespace Hymnal.Native.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(TabName = "Favorites", TabIconName = "favorites tab")]
+    [MvxTabPresentation(TabName = "Favorites", TabIconName = "tab favorites")]
     public partial class FavoritesViewController : BaseViewController<FavoritesViewModel>
     {
         public FavoritesViewController (IntPtr handle) : base (handle)
