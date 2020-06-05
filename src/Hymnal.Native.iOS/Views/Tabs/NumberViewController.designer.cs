@@ -7,7 +7,7 @@
 using Foundation;
 using System.CodeDom.Compiler;
 
-namespace Hymnal.iOS.Views
+namespace Hymnal.Native.iOS.Views
 {
 	[Register ("NumberViewController")]
 	partial class NumberViewController

@@ -4,7 +4,7 @@ using MvvmCross.Platforms.Ios.Views;
 using System;
 using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS
 {
     [MvxFromStoryboard("Main")]
     public partial class SearchViewController : MvxViewController<SearchViewModel>

@@ -5,7 +5,7 @@ using System;
 using Foundation;
 using UIKit;
 
-namespace Hymnal.iOS.Views
+namespace Hymnal.Native.iOS.Views
 {
 	public partial class SearchTableViewController : UITableViewController
 	{

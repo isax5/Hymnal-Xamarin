@@ -6,7 +6,7 @@ using MvvmCross.Platforms.Ios.Views;
 using System;
 using UIKit;
 
-namespace Hymnal.iOS.Views
+namespace Hymnal.Native.iOS.Views
 {
     [MvxFromStoryboard("Main")]
     [MvxTabPresentation(TabName = "Number", TabIconName = "tab number")]

@@ -3,7 +3,7 @@ using MvvmCross.Platforms.Ios.Views;
 using System;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 
-namespace Hymnal.iOS.Views
+namespace Hymnal.Native.iOS.Views
 {
     [MvxFromStoryboard("Main")]
     [MvxRootPresentation]

@@ -1,6 +1,6 @@
 using Hymnal.Core;
 using Hymnal.Core.Services;
-using Hymnal.iOS.Services;
+using Hymnal.Native.iOS.Services;
 using Hymnal.SharedNatives.Services;
 using MediaManager;
 using MvvmCross;
@@ -8,7 +8,7 @@ using MvvmCross.Platforms.Ios.Core;
 using Plugin.StorageManager;
 using Realms;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS
 {
     public class Setup : MvxIosSetup<App>
     {

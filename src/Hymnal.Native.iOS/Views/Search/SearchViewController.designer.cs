@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS
 {
     [Register ("SearchViewController")]
     partial class SearchViewController

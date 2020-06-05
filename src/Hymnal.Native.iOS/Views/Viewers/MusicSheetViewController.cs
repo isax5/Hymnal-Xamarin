@@ -5,7 +5,7 @@ using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using System;
 using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS
 {
     [MvxFromStoryboard("Main")]
     [MvxModalPresentation(WrapInNavigationController = true)]

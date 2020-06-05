@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Hymnal.iOS.Views
+namespace Hymnal.Native.iOS.Views
 {
     [Register ("IndexViewController")]
     partial class IndexViewController

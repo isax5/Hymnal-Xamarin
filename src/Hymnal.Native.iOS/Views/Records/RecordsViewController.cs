@@ -6,7 +6,7 @@ using UIKit;
 using MvvmCross;
 using MvvmCross.Navigation;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS
 {
     [MvxFromStoryboard("Main")]
     [MvxModalPresentation(Animated = true, ModalPresentationStyle = UIModalPresentationStyle.PageSheet)]

@@ -6,9 +6,10 @@
     <ProjectGuid>{B6191ECE-AAA9-4563-B1E4-2D3CEADE4376}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Hymnal.iOS</RootNamespace>
+    <RootNamespace>Hymnal.Native.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Hymnal.iOS</AssemblyName>
+    <AssemblyName>Hymnal.Native.iOS</AssemblyName>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
