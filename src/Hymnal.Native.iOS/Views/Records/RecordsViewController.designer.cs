@@ -9,7 +9,7 @@ using System;
 using System.CodeDom.Compiler;
 using UIKit;
 
-namespace Hymnal.Native.iOS
+namespace Hymnal.Native.iOS.Views
 {
     [Register ("RecordsViewController")]
     partial class RecordsViewController

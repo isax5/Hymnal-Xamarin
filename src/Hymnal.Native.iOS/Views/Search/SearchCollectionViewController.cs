@@ -9,9 +9,9 @@ using UIKit;
 namespace Hymnal.Native.iOS.Views
 {
 	[MvxFromStoryboard("Main")]
-	public partial class SearchTableViewController : MvxTableViewController<SearchViewModel>
+	public partial class SearchCollectionViewController : MvxCollectionViewController<SearchViewModel>
 	{
-		public SearchTableViewController (IntPtr handle) : base (handle)
+		public SearchCollectionViewController (IntPtr handle) : base (handle)
 		{
 		}
 	}

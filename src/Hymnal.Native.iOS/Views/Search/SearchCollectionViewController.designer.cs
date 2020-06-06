@@ -9,8 +9,8 @@ using System.CodeDom.Compiler;
 
 namespace Hymnal.Native.iOS.Views
 {
-	[Register ("SearchTableViewController")]
-	partial class SearchTableViewController
+	[Register ("SearchCollectionViewController")]
+	partial class SearchCollectionViewController
 	{
 		
 		void ReleaseDesignerOutlets ()

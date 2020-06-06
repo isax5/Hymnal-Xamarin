@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="226">
-    <device id="retina4_7" orientation="portrait" appearance="dark"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -27,18 +28,18 @@
             <objects>
                 <viewController storyboardIdentifier="NumberViewController" id="tj4-kd-m4A" customClass="NumberViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HgE-CQ-FtX">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="bcX-Wu-cdd">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xXi-dP-zA6" userLabel="FilterBackground">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                                 <color key="backgroundColor" name="filter background"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c7V-KR-6dE">
-                                <rect key="frame" x="127.5" y="305.5" width="120" height="56"/>
+                                <rect key="frame" x="127.66666666666669" y="378" width="120" height="56"/>
                                 <color key="backgroundColor" name="primary color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="AUV-B9-cU6"/>
@@ -52,7 +53,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="#255" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qw6-UI-uI5">
-                                <rect key="frame" x="114.5" y="203.5" width="146" height="72"/>
+                                <rect key="frame" x="114.66666666666669" y="276" width="146" height="72"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="146" id="2Yc-ql-Hdo"/>
                                     <constraint firstAttribute="height" constant="72" id="bID-MZ-cbN"/>
@@ -125,17 +126,17 @@
             <objects>
                 <viewController storyboardIdentifier="FavoritesViewController" id="PhN-9c-c2k" customClass="FavoritesViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y6j-hl-ZFR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Favorites View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="6iB-xT-EAw">
-                                <rect key="frame" x="76" y="312" width="223" height="43"/>
+                                <rect key="frame" x="76" y="384.66666666666669" width="223" height="43"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="36"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwt-oA-UxP">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
+                                <rect key="frame" x="80" y="435.66666666666669" width="215" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -163,7 +164,7 @@
             <objects>
                 <viewController storyboardIdentifier="SettingsViewController" id="l7y-qX-t1T" customClass="SettingsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mf7-Sz-UQh">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="gX7-nF-Di9"/>
@@ -181,7 +182,7 @@
                     <tabBarItem key="tabBarItem" title="Number" image="tab number" id="zUt-Bc-hfP"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="vlM-CL-d5E">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -200,7 +201,7 @@
                     <tabBarItem key="tabBarItem" title="Index" image="tab index" id="MZd-Yw-ByN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="r8e-yQ-X4X">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -217,13 +218,13 @@
             <objects>
                 <tableViewController storyboardIdentifier="IndexTableViewController" id="q2X-Pw-wZz" customClass="IndexTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6y-r3-FU5">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     </tableView>
                     <navigationItem key="navigationItem" title="Index" id="daY-H1-Adv">
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" segmentControlStyle="bar" selectedSegmentIndex="1" springLoaded="YES" id="YeC-ic-O0g">
-                            <rect key="frame" x="42.5" y="5.5" width="290" height="33"/>
+                            <rect key="frame" x="42.666666666666657" y="5.6666666666666679" width="290" height="33"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="Alphabetical"/>
@@ -247,7 +248,7 @@
                     <tabBarItem key="tabBarItem" title="Favorites" image="tab favorites" id="WKR-fo-mpY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Ex6-2P-1g0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -266,7 +267,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="tab settings" id="QZW-ne-64i"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8mb-Bb-MhM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -283,11 +284,11 @@
             <objects>
                 <viewController storyboardIdentifier="RecordsViewController" title="Records" id="C4r-v3-Xed" customClass="RecordsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xFc-0x-O9S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBJ-lZ-eF3" userLabel="Top Slider">
-                                <rect key="frame" x="137.5" y="15" width="100" height="6"/>
+                                <rect key="frame" x="137.66666666666666" y="15" width="100" height="6"/>
                                 <color key="backgroundColor" name="Top Slider Modal Page Color"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="20U-Xy-RtV"/>
@@ -301,7 +302,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9qM-6N-dBv">
-                                <rect key="frame" x="0.0" y="41" width="375" height="606"/>
+                                <rect key="frame" x="0.0" y="41" width="375" height="717"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -325,34 +326,50 @@
             </objects>
             <point key="canvasLocation" x="7060" y="1318"/>
         </scene>
-        <!--Search-->
-        <scene sceneID="Rnw-Bk-gZx">
+        <!--Search Collection View Controller-->
+        <scene sceneID="97p-Hu-czu">
             <objects>
-                <tableViewController storyboardIdentifier="SearchTableViewController" title="Search" hidesBottomBarWhenPushed="YES" id="cU1-4L-WFm" customClass="SearchTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VHS-xf-s3p">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <collectionViewController storyboardIdentifier="SearchCollectionViewController" id="wPn-Bd-yHH" customClass="SearchCollectionViewController" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="1m4-oz-T2u">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Search" largeTitleDisplayMode="always" id="hyp-3K-0Xs"/>
-                    <connections>
-                        <segue destination="rJM-O4-ahr" kind="presentation" identifier="ShowHymn" modalPresentationStyle="fullScreen" id="gIV-SI-unM"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="OiV-Fu-yMZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="w5x-Zg-evl">
+                            <size key="itemSize" width="128" height="128"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gMU-13-ie9">
+                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="AZY-zB-E8O">
+                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="wPn-Bd-yHH" id="EPm-G8-o1v"/>
+                            <outlet property="delegate" destination="wPn-Bd-yHH" id="ko9-9q-0xP"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7iL-Vx-AVd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7892" y="1317"/>
+            <point key="canvasLocation" x="8110" y="1317"/>
         </scene>
         <!--#255-->
         <scene sceneID="PCh-MN-gFB">
             <objects>
                 <viewController storyboardIdentifier="HymnViewController" id="nUx-Sv-chC" customClass="HymnViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3Lv-EC-klo" userLabel="baseView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uCG-y8-EMi">
-                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <rect key="frame" x="0.0" y="140" width="375" height="638"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0r0-hN-Yqx" userLabel="mainView">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="345"/>
@@ -430,7 +447,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="d9O-m5-yrH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cf8-ec-ugb">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <rect key="frame" x="0.0" y="44" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -447,7 +464,7 @@
             <objects>
                 <viewController storyboardIdentifier="MusicSheetViewController" id="lVK-5U-KJg" customClass="MusicSheetViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UQU-sf-kmI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dk6-pg-X4N"/>
@@ -458,27 +475,9 @@
             </objects>
             <point key="canvasLocation" x="11313" y="2657"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="7AQ-2p-Ey2">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="a4x-v6-RB4" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="CmR-H7-TDK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cU1-4L-WFm" kind="relationship" relationship="rootViewController" id="zb1-xD-lfb"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uhU-50-Klx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="7892" y="507"/>
-        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="gIV-SI-unM"/>
+        <segue reference="MoW-2V-zFZ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="PrimaryColor"/>
     <resources>

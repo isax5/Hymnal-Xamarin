@@ -26,7 +26,6 @@ namespace Hymnal.Native.TvOS.Views
 
         public HymnViewController (IntPtr handle) : base (handle)
         {
-
             this.DelayBind(() =>
             {
                 // CollectionView
@@ -34,7 +33,7 @@ namespace Hymnal.Native.TvOS.Views
                 _dataSource = new MvxCollectionViewSource(listCollectionView, LyricsCollectionViewCell.Key);
 
                 // Bindings
-                MvxFluentBindingDescriptionSet<HymnViewController, HymnViewModel> set = this.CreateBindingSet<HymnViewController, HymnViewModel>();
+                var set = this.CreateBindingSet<HymnViewController, HymnViewModel>();
                 set.Bind(navigationItem).For(item => item.Title).To(vm => vm.Hymn.Title);
                 set.Bind(_dataSource).To(vm => vm.Hymn.ListContent);
                 set.Bind(playButton).To(vm => vm.PlayCommand);

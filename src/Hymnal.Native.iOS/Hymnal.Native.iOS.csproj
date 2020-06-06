@@ -4394,11 +4394,12 @@
     <Compile Include="Views\Tabs\IndexTableViewController.designer.cs">
       <DependentUpon>IndexTableViewController.cs</DependentUpon>
     </Compile>
-    <Compile Include="Views\Search\SearchTableViewController.cs" />
-    <Compile Include="Views\Search\SearchTableViewController.designer.cs">
-      <DependentUpon>SearchTableViewController.cs</DependentUpon>
-    </Compile>
     <ImageAsset Include="Resources\Media.xcassets\Tabs\.DS_Store" />
+    <Compile Include="Sources\HymnsTableViewSource.cs" />
+    <Compile Include="Views\Search\SearchCollectionViewController.cs" />
+    <Compile Include="Views\Search\SearchCollectionViewController.designer.cs">
+      <DependentUpon>SearchCollectionViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -4488,6 +4489,10 @@
     </ImageAsset>
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Views\Cells\" />
+    <Folder Include="Sources\" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
