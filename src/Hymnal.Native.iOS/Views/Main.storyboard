@@ -93,6 +93,7 @@
                         <outlet property="recordsBarButtton" destination="tsA-dl-xcU" id="Kvh-nD-3Fq"/>
                         <outlet property="searchBarButtton" destination="zfb-ow-8Oj" id="mPy-Lk-0Zh"/>
                         <segue destination="C4r-v3-Xed" kind="presentation" id="ISt-lO-SxG"/>
+                        <segue destination="BJh-B8-QW4" kind="show" id="fJU-KS-q2c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zxl-3o-u8j" sceneMemberID="firstResponder"/>
@@ -283,7 +284,7 @@
             <objects>
                 <viewController storyboardIdentifier="RecordsViewController" title="Records" id="C4r-v3-Xed" customClass="RecordsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xFc-0x-O9S">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iBJ-lZ-eF3" userLabel="Top Slider">
@@ -505,6 +506,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="MoW-2V-zFZ"/>
+        <segue reference="fJU-KS-q2c"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" name="PrimaryColor"/>
     <resources>

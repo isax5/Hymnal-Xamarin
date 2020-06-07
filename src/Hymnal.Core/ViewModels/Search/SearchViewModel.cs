@@ -7,6 +7,7 @@ using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -17,6 +18,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
+        private readonly IMvxLog log;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
 
@@ -61,13 +63,14 @@ namespace Hymnal.Core.ViewModels
         public SearchViewModel(
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService
+            IPreferencesService preferencesService,
+            IMvxLog log
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-
+            this.log = log;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
         }
 
@@ -105,6 +108,9 @@ namespace Hymnal.Core.ViewModels
         private async void TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
+
+            log.Debug($"Search for: {text}");
+
             IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 
             if (string.IsNullOrWhiteSpace(text))
