@@ -213,7 +213,7 @@
       <Name>Hymnal.Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
-      <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>
+      <Project>{d9bcf416-9f88-4089-83a6-d9c9b9b1eb7d}</Project>
       <Name>Hymnal.XF.UI</Name>
     </ProjectReference>
   </ItemGroup>
