@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest package="com.github.isax5.Hymnal-Xamarin" version="1.0.0" api-version="5" xmlns="http://tizen.org/ns/packages">
+<manifest package="com.github.isax5.Hymnal-Xamarin" version="1.0.1" api-version="4" xmlns="http://tizen.org/ns/packages">
     <author email="isaac.rebolledoleal@gmail.com" href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698">Isaac Rebolledo</author>
     <profile name="tv" />
     <ui-application appid="com.github.isax5.Hymnal-Xamarin" exec="Hymnal.XF.Tizen.TV.dll" multiple="false" nodisplay="false" taskmanage="true" type="dotnet" launch_mode="single">
