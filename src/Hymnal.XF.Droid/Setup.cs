@@ -1,6 +1,5 @@
 using Android.App;
 using Hymnal.Core.Services;
-using Hymnal.SharedNatives.Services;
 using Hymnal.XF.Droid.Custom;
 using Hymnal.XF.UI.Services;
 using MvvmCross;
@@ -23,10 +22,7 @@ namespace Hymnal.XF.Droid
             base.InitializeFirstChance();
 
             // Native services register
-            Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
-            Mvx.IoCProvider.RegisterType<IDataStorageService, DataStorageService>();
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
-            Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
         }
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)

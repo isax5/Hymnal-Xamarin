@@ -10,14 +10,14 @@ using UIKit;
 
 namespace Hymnal.Native.iOS.Views
 {
-	[MvxFromStoryboard("Main")]
-	public partial class SearchTableViewController : MvxTableViewController<SearchViewModel>
+    [MvxFromStoryboard("Main")]
+    public partial class SearchTableViewController : MvxTableViewController<SearchViewModel>
     {
         private MvxTableViewSource _dataSource;
 
         private UISearchController _searchController = new UISearchController();
 
-        public SearchTableViewController (IntPtr handle) : base (handle)
+        public SearchTableViewController(IntPtr handle) : base(handle)
         {
             this.DelayBind(() =>
             {
@@ -53,7 +53,8 @@ namespace Hymnal.Native.iOS.Views
         {
             base.ViewDidAppear(animated);
 
-            if (!_loadedBefore) {
+            if (!_loadedBefore)
+            {
                 _loadedBefore = true;
 
                 DispatchQueue.MainQueue.DispatchAsync(() =>

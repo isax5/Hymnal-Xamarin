@@ -1,10 +1,8 @@
-﻿using Cirrious.FluentLayouts.Touch;
-using MvvmCross.Platforms.Ios.Views;
-using MvvmCross.ViewModels;
-using Hymnal.Native.iOS.Styles;
-using UIKit;
 using System;
 using Foundation;
+using MvvmCross.Platforms.Ios.Views;
+using MvvmCross.ViewModels;
+using UIKit;
 
 namespace Hymnal.Native.iOS.Views
 {

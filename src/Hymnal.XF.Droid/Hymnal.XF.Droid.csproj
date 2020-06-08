@@ -129,9 +129,6 @@
     <PackageReference Include="Plugin.MediaManager">
       <Version>0.9.6</Version>
     </PackageReference>
-    <PackageReference Include="Plugin.Multilingual">
-      <Version>1.0.2</Version>
-    </PackageReference>
     <PackageReference Include="Realm">
       <Version>4.3.0</Version>
     </PackageReference>
@@ -214,10 +211,6 @@
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj">
-      <Project>{1ac8149a-b28f-4db6-a65e-31e379605528}</Project>
-      <Name>Hymnal.SharedNatives</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
       <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>

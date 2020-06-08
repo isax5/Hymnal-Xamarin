@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
@@ -64,11 +65,11 @@ namespace Hymnal.Core
 #endif
 
             // Language Configuration
-            IMultilingualService multilingualService = Mvx.IoCProvider.Resolve<IMultilingualService>();
             IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
 
             // Configurating language of the device
-            Constants.CurrentCultureInfo = multilingualService.DeviceCultureInfo;
+            var culture = CultureInfo.InstalledUICulture;
+            Constants.CurrentCultureInfo = culture;
             AppResources.Culture = Constants.CurrentCultureInfo;
 
             // Configurating language of the hymnals

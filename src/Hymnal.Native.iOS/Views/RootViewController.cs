@@ -1,7 +1,7 @@
-using Hymnal.Core.ViewModels;
-using MvvmCross.Platforms.Ios.Views;
 using System;
+using Hymnal.Core.ViewModels;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
+using MvvmCross.Platforms.Ios.Views;
 
 namespace Hymnal.Native.iOS.Views
 {
@@ -9,7 +9,7 @@ namespace Hymnal.Native.iOS.Views
     [MvxRootPresentation]
     public partial class RootViewController : MvxTabBarViewController<RootViewModel>
     {
-        public RootViewController (IntPtr handle) : base (handle)
+        public RootViewController(IntPtr handle) : base(handle)
         {
         }
 

@@ -1,9 +1,8 @@
 using System.IO;
 using System.Threading.Tasks;
-using Hymnal.Core.Services;
 using Xamarin.Essentials;
 
-namespace Hymnal.SharedNatives.Services
+namespace Hymnal.Core.Services
 {
     public class FilesService : IFilesService
     {

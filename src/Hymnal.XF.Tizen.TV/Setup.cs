@@ -1,5 +1,4 @@
 using Hymnal.Core.Services;
-using Hymnal.SharedNatives.Services;
 using Hymnal.XF.Tizen.TV.Custom;
 using Hymnal.XF.UI.Services;
 using MediaManager;
@@ -17,11 +16,7 @@ namespace Hymnal.XF.Tizen.TV
             base.InitializeFirstChance();
 
             // Native services register
-            Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
-            Mvx.IoCProvider.RegisterType<IDataStorageService, DataStorageService>();
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
-            Mvx.IoCProvider.RegisterType<IMultilingualService, Tv.Services.MultilingualService>();
-            Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
         }
 
         public override void InitializePrimary()

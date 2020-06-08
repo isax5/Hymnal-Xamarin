@@ -1,5 +1,4 @@
 using Hymnal.Core.Services;
-using Hymnal.SharedNatives.Services;
 using Hymnal.XF.iOS.Custom;
 using Hymnal.XF.UI.Services;
 using MediaManager;
@@ -19,10 +18,7 @@ namespace Hymnal.XF.iOS
             base.InitializeFirstChance();
 
             // Native services register
-            Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
-            Mvx.IoCProvider.RegisterType<IDataStorageService, DataStorageService>();
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
-            Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
         }
 
         public override void InitializePrimary()

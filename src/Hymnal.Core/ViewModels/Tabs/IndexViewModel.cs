@@ -22,9 +22,9 @@ namespace Hymnal.Core.ViewModels
 
             loaded = true;
 
-            //await navigationService.Navigate<AlphabeticalIndexViewModel>();
-            //await navigationService.Navigate<NumericalIndexViewModel>();
-            //await navigationService.Navigate<ThematicIndexViewModel>();
+            await navigationService.Navigate<AlphabeticalIndexViewModel>();
+            await navigationService.Navigate<NumericalIndexViewModel>();
+            await navigationService.Navigate<ThematicIndexViewModel>();
         }
     }
 }

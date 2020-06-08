@@ -1,7 +1,7 @@
 using System.Windows.Input;
+using Foundation;
 using MvvmCross.Platforms.Ios.Binding.Views;
 using UIKit;
-using Foundation;
 
 namespace Hymnal.Native.iOS.Sources
 {

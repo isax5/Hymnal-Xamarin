@@ -1,12 +1,8 @@
-using Foundation;
+using System;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
-using MvvmCross.Platforms.Ios.Views;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
-using System;
-using UIKit;
-using MvvmCross.Navigation;
-using MvvmCross;
+using MvvmCross.Platforms.Ios.Views;
 
 namespace Hymnal.Native.iOS.Views
 {
@@ -15,7 +11,7 @@ namespace Hymnal.Native.iOS.Views
     [MvxModalPresentation(Animated = true, WrapInNavigationController = true)]
     public partial class HymnViewController : BaseViewController<HymnViewModel>
     {
-        public HymnViewController (IntPtr handle) : base (handle)
+        public HymnViewController(IntPtr handle) : base(handle)
         {
         }
 

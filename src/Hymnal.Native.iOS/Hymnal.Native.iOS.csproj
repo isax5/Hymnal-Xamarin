@@ -4394,7 +4394,9 @@
     <Compile Include="Views\Tabs\IndexTableViewController.designer.cs">
       <DependentUpon>IndexTableViewController.cs</DependentUpon>
     </Compile>
-    <ImageAsset Include="Resources\Media.xcassets\Tabs\.DS_Store" />
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\.DS_Store">
+      <Visible>false</Visible>
+    </ImageAsset>
     <Compile Include="Sources\HymnsTableViewSource.cs" />
     <Compile Include="Views\Cells\SearchTableViewCell.cs" />
     <Compile Include="Views\Cells\SearchTableViewCell.designer.cs">
@@ -4410,20 +4412,6 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
-      <Project>{4a4ac861-6dea-49e0-a330-5442b1f1f294}</Project>
-      <Name>StorageManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
-      <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
-      <Name>Hymnal.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj">
-      <Project>{1ac8149a-b28f-4db6-a65e-31e379605528}</Project>
-      <Name>Hymnal.SharedNatives</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cirrious.FluentLayout">
@@ -4492,12 +4480,17 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Views\Cells\" />
-    <Folder Include="Sources\" />
-    <Folder Include="Views\Search\" />
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
+      <Project>{4a4ac861-6dea-49e0-a330-5442b1f1f294}</Project>
+      <Name>StorageManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
+      <Project>{8651a503-045f-42aa-8efd-1e20e5a73925}</Project>
+      <Name>Hymnal.Core</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

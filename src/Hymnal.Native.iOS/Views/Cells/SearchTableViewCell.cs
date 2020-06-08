@@ -1,19 +1,17 @@
 using System;
 using Foundation;
 using Hymnal.Core.Models;
-using Hymnal.Native.iOS.Sources;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Binding.Views;
-using UIKit;
 
 namespace Hymnal.Native.iOS.Views.Cells
 {
-	public partial class SearchTableViewCell : MvxTableViewCell
-	{
-		public static readonly NSString Key = new NSString("SearchTableViewCell");
+    public partial class SearchTableViewCell : MvxTableViewCell
+    {
+        public static readonly NSString Key = new NSString("SearchTableViewCell");
 
-		public SearchTableViewCell (IntPtr handle) : base (handle)
-		{
+        public SearchTableViewCell(IntPtr handle) : base(handle)
+        {
             this.DelayBind(() =>
             {
                 // Bindings
