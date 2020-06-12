@@ -9,9 +9,9 @@ namespace Hymnal.XF.UI.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [MvxModalPresentation(WrapInNavigationPage = true)]
     //[MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
-    public partial class HymnPage : MvxContentPage<HymnViewModel>
+    public partial class HymnPage : BaseContentPage<HymnViewModel>
     {
-        public HymnPage()
+        public HymnPage() : base(true)
         {
             InitializeComponent();
 #if TIZEN
@@ -23,6 +23,8 @@ namespace Hymnal.XF.UI.Pages
 #if !__IOS__
             ToolbarItems.Remove(CloseToolbar);
 #endif
+
+            PlaySomething += HymnPage_PlaySomething;
         }
 
         protected override void OnBindingContextChanged()
@@ -34,6 +36,11 @@ namespace Hymnal.XF.UI.Pages
 
             if (!ViewModel.Language.SupportMusic)
                 ToolbarItems.Remove(MusicToolbar);
+        }
+
+        private void HymnPage_PlaySomething(object sender, System.EventArgs e)
+        {
+            ViewModel.PlayCommand.Execute();
         }
     }
 }

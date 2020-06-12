@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<mvxViews:MvxContentPage
+<pages:BaseContentPage
     x:Class="Hymnal.XF.UI.Pages.HymnPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constans="clr-namespace:Hymnal.XF.UI.Constants"
+    xmlns:pages="clr-namespace:Hymnal.XF.UI.Pages"
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
@@ -15,7 +16,7 @@
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
 
-    <mvxViews:MvxContentPage.ToolbarItems>
+    <pages:BaseContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="CloseToolbar"
             Command="{Binding CloseCommand}"
@@ -49,7 +50,7 @@
                     Glyph="{x:Static constans:FontAwesome.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
-    </mvxViews:MvxContentPage.ToolbarItems>
+    </pages:BaseContentPage.ToolbarItems>
 
     <RelativeLayout>
         <Image
@@ -100,4 +101,4 @@
 
     </RelativeLayout>
 
-</mvxViews:MvxContentPage>
+</pages:BaseContentPage>

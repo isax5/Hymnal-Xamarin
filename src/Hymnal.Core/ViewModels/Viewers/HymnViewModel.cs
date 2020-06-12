@@ -22,7 +22,7 @@ using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
-    public class HymnViewModel : MvxViewModel<HymnIdParameter>
+    public class HymnViewModel : BaseViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IMvxLog log;
