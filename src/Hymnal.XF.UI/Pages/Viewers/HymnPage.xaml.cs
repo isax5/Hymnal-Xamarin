@@ -1,6 +1,5 @@
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
-using MvvmCross.Forms.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +10,7 @@ namespace Hymnal.XF.UI.Pages
     //[MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
     public partial class HymnPage : BaseContentPage<HymnViewModel>
     {
-        public HymnPage() : base(true)
+        public HymnPage()
         {
             InitializeComponent();
 #if TIZEN
@@ -24,7 +23,13 @@ namespace Hymnal.XF.UI.Pages
             ToolbarItems.Remove(CloseToolbar);
 #endif
 
-            PlaySomething += HymnPage_PlaySomething;
+            // Toolbar player
+            PlaySomethingToolbarItem.Text = string.Empty;
+            PlaySomethingToolbarItem.Command = new Command(() => ViewModel.PlayCommand.Execute());
+            PlaySomethingToolbarItem.SetBinding(ToolbarItem.IconImageSourceProperty, "IsPlaying", BindingMode.Default, null, "ToolbarPlaying{0}");
+
+            OpenPlayerToolbarItem.SetBinding(ToolbarItem.TextProperty, "Hymn.Title");
+            OpenPlayerToolbarItem.Command = new Command(() => ViewModel.OpenPlayerCommand.Execute());
         }
 
         protected override void OnBindingContextChanged()
@@ -34,13 +39,7 @@ namespace Hymnal.XF.UI.Pages
             if (!ViewModel.Language.SupportSheets)
                 ToolbarItems.Remove(SheetToolbar);
 
-            if (!ViewModel.Language.SupportMusic)
-                ToolbarItems.Remove(MusicToolbar);
-        }
-
-        private void HymnPage_PlaySomething(object sender, System.EventArgs e)
-        {
-            ViewModel.PlayCommand.Execute();
+            PlayerVisible = ViewModel.Language.SupportMusic;
         }
     }
 }

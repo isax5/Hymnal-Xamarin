@@ -22,11 +22,11 @@
             Command="{Binding CloseCommand}"
             Priority="-1"
             Text="{i18n:Translate Close}" />
-        <ToolbarItem
+        <!--<ToolbarItem
             x:Name="MusicToolbar"
             Command="{Binding PlayCommand}"
             IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
-            Priority="1" />
+            Priority="1" />-->
         <ToolbarItem
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"

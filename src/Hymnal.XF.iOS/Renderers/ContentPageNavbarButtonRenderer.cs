@@ -7,6 +7,7 @@ using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(NumberPage), typeof(ContentPageNavbarButtonRenderer))]
 [assembly: ExportRenderer(typeof(HymnPage), typeof(ContentPageNavbarButtonRenderer))]
+[assembly: ExportRenderer(typeof(PlayerContent), typeof(ContentPageNavbarButtonRenderer))]
 namespace Hymnal.XF.iOS.Renderers
 {
     /// <summary>

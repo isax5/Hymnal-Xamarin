@@ -119,5 +119,6 @@
 
   <ItemGroup>
     <Folder Include="Pages\!Base\" />
+    <Folder Include="Pages\Player\" />
   </ItemGroup>
 </Project>

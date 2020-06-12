@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Globalization;
 using Hymnal.Core.Models;
-using Hymnal.Core.Services;
 
 namespace Hymnal.Core
 {

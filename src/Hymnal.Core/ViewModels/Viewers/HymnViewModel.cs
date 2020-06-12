@@ -282,6 +282,13 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
+        public MvxCommand OpenPlayerCommand => new MvxCommand(OpenPlayerExecute);
+        private void OpenPlayerExecute()
+        {
+            navigationService.Close(this);
+            navigationService.Navigate<PlayerViewModel, HymnIdParameter>(HymnParameter);
+        }
+
         public MvxCommand CloseCommand => new MvxCommand(Close);
         private void Close()
         {
