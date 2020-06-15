@@ -32,6 +32,7 @@
   </data>
   <data name="Help" xml:space="preserve">
     <value>Справка</value>
+    <comment>Search help</comment>
   </data>
   <data name="History" xml:space="preserve">
     <value>Журнал</value>

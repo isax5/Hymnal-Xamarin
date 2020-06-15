@@ -37,8 +37,8 @@
             Priority="3">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Brands}"
-                    Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -46,8 +46,8 @@
             Priority="4">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.Share}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </pages:BaseContentPage.ToolbarItems>

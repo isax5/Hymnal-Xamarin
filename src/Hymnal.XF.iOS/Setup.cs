@@ -24,6 +24,7 @@ namespace Hymnal.XF.iOS
         public override void InitializePrimary()
         {
             base.InitializePrimary();
+            Device.SetFlags(new string[] { "CarouselView_Experimental" });
             FormsMaterial.Init();
             CrossMediaManager.Current.Init();
             CrossStorageManager.Current.Init(Realm.GetInstance());
@@ -31,7 +32,6 @@ namespace Hymnal.XF.iOS
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
         {
-            //var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
             var formsPagePresenter = new CustomFormsPagePresenter(viewPresenter);
             Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(formsPagePresenter);
             return formsPagePresenter;

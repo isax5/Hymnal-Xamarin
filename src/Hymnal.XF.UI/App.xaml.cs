@@ -11,6 +11,7 @@ namespace Hymnal.XF.UI
         public App()
         {
             Current = this;
+
             InitializeComponent();
         }
 

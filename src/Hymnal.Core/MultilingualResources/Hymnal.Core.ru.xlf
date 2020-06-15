@@ -33,6 +33,7 @@
         <trans-unit id="Help" translate="yes" xml:space="preserve">
           <source>Help</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Справка</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Search help</note>
         </trans-unit>
         <trans-unit id="History" translate="yes" xml:space="preserve">
           <source>History</source>
@@ -104,6 +105,36 @@
           <source>Delete</source>
           <target state="translated">Удалять</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Delete</note>
+        </trans-unit>
+        <trans-unit id="CustomAmount" translate="yes" xml:space="preserve">
+          <source>Custom Amount</source>
+          <target state="new">Custom Amount</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Custom Amount</note>
+        </trans-unit>
+        <trans-unit id="Donations" translate="yes" xml:space="preserve">
+          <source>Donations</source>
+          <target state="new">Donations</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Donations</note>
+        </trans-unit>
+        <trans-unit id="GitHub" translate="yes" xml:space="preserve">
+          <source>GitHub</source>
+          <target state="new">GitHub</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">GitHub</note>
+        </trans-unit>
+        <trans-unit id="Support" translate="yes" xml:space="preserve">
+          <source>Support</source>
+          <target state="new">Support</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Support app</note>
+        </trans-unit>
+        <trans-unit id="Tip" translate="yes" xml:space="preserve">
+          <source>Tip</source>
+          <target state="new">Tip</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tip 1,2,3,4...</note>
+        </trans-unit>
+        <trans-unit id="Contribute" translate="yes" xml:space="preserve">
+          <source>Contribute</source>
+          <target state="new">Contribute</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Contribute app</note>
         </trans-unit>
       </group>
     </body>

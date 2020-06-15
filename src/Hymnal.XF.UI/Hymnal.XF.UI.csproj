@@ -2,8 +2,8 @@
 <Project Sdk="MSBuild.Sdk.Extras/2.0.54">
   <PropertyGroup>
     <!-- Android target remove for VS Problem on Windows version <<MonoAndroid90;>> . Android will execute as netstandard2.0 version-->
-    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.TVOS10;Tizen60</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">uap10.0.17763;net472;$(TargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Tizen60</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">uap10.0.17763;$(TargetFrameworks)</TargetFrameworks>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 

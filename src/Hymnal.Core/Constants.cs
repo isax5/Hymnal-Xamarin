@@ -92,7 +92,15 @@ namespace Hymnal.Core
 
         public struct WebLinks
         {
+            /// <summary>
+            /// Developer promotion Webiste
+            /// </summary>
             public const string DeveloperWebSite = @"https://storage.googleapis.com/hymn-music/about/index.html";
+
+            /// <summary>
+            /// GitHub developing website
+            /// </summary>
+            public const string GitHubDevelopingLink = @"https://github.com/isax5/Hymnal-Xamarin";
 
             /// <summary>
             /// AppStore download Link

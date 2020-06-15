@@ -17,8 +17,8 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{x:Static constans:FontAwesome.Solid}"
-            Glyph="{x:Static constans:FontAwesome.BookReader}" />
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.ToolbarItems>
@@ -28,8 +28,8 @@
             Priority="-1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.History}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.History}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -38,8 +38,8 @@
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.Search}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </mvxViews:MvxContentPage.ToolbarItems>
@@ -105,13 +105,13 @@
                             AutomationId="HymnNumberEntry"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
-                            Text="{Binding HymnNumber}"
                             FontSize="40"
                             HorizontalOptions="CenterAndExpand"
                             HorizontalTextAlignment="Center"
                             Keyboard="Numeric"
                             Placeholder="...."
                             PlaceholderColor="{DynamicResource PrimaryLightColor}"
+                            Text="{Binding HymnNumber}"
                             TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="CenterAndExpand"
                             Visual="Default"
@@ -135,8 +135,8 @@
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{x:Static constans:FontAwesome.Solid}"
-                            Glyph="{x:Static constans:FontAwesome.BookOpen}"
+                            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                            Glyph="{x:Static constans:FontAwesomeIcons.BookOpen}"
                             Color="{DynamicResource NavBarTextColor}" />
                     </Button.ImageSource>
                 </Button>

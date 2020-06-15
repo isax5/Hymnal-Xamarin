@@ -32,6 +32,7 @@
   </data>
   <data name="Help" xml:space="preserve">
     <value>Ajuda</value>
+    <comment>Search help</comment>
   </data>
   <data name="History" xml:space="preserve">
     <value>Histórico</value>
@@ -86,5 +87,29 @@
   <data name="Delete" xml:space="preserve">
     <value>Excluir</value>
     <comment>Delete</comment>
+  </data>
+  <data name="Contribute" xml:space="preserve">
+    <value>Contribute</value>
+    <comment>Contribute app</comment>
+  </data>
+  <data name="CustomAmount" xml:space="preserve">
+    <value>Valor personalizado</value>
+    <comment>Custom Amount</comment>
+  </data>
+  <data name="Donations" xml:space="preserve">
+    <value>Doações</value>
+    <comment>Donations</comment>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>GitHub</comment>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Suporte</value>
+    <comment>Support app</comment>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Dica</value>
+    <comment>Tip 1,2,3,4...</comment>
   </data>
 </root>

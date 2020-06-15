@@ -22,6 +22,7 @@ namespace Hymnal.XF.Droid
             base.OnCreate(bundle);
 
             // Initializacion
+            Device.SetFlags(new string[] { "CarouselView_Experimental" });
             FormsMaterial.Init(this, bundle);
             CrossMediaManager.Current.Init(this);
             CrossStorageManager.Current.Init(Realms.Realm.GetInstance());

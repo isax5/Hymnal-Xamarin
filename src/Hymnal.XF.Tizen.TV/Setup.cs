@@ -6,6 +6,7 @@ using MvvmCross;
 using MvvmCross.Forms.Platforms.Tizen.Core;
 using MvvmCross.Forms.Presenters;
 using Plugin.StorageManager;
+using Xamarin.Forms;
 
 namespace Hymnal.XF.Tizen.TV
 {
@@ -22,13 +23,13 @@ namespace Hymnal.XF.Tizen.TV
         public override void InitializePrimary()
         {
             base.InitializePrimary();
+            Forms.SetFlags(new string[] { "CarouselView_Experimental" });
             CrossStorageManager.Current.Init();
             CrossMediaManager.Current.Init();
         }
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
         {
-            //var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
             var formsPagePresenter = new CustomFormsPagePresenter(viewPresenter);
             Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(formsPagePresenter);
             return formsPagePresenter;

@@ -27,7 +27,6 @@ namespace Hymnal.XF.Droid
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
         {
-            //var formsPagePresenter = new MvxFormsPagePresenter(viewPresenter);
             var formsPagePresenter = new CustomFormsPagePresenter(viewPresenter);
             Mvx.IoCProvider.RegisterSingleton<IMvxFormsPagePresenter>(formsPagePresenter);
             return formsPagePresenter;

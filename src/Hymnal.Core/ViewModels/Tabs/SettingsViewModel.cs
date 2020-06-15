@@ -20,6 +20,14 @@ namespace Hymnal.Core.ViewModels
         private readonly IPreferencesService preferencesService;
         private readonly IDialogService dialogService;
 
+        private readonly BrowserLaunchOptions browserLaunchOptions = new BrowserLaunchOptions
+        {
+            LaunchMode = BrowserLaunchMode.SystemPreferred,
+            TitleMode = BrowserTitleMode.Show,
+            PreferredToolbarColor = Color.Black,
+            PreferredControlColor = Color.White
+        };
+
         public int HymnFontSize
         {
             get => preferencesService.HymnalsFontSize;
@@ -114,18 +122,16 @@ namespace Hymnal.Core.ViewModels
             navigationService.Navigate<HelpViewModel>();
         }
 
+        public MvxCommand OpenGitHubCommand => new MvxCommand(OpenGitHubExecuteAsync);
+        private async void OpenGitHubExecuteAsync()
+        {
+            await Browser.OpenAsync(Constants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
+        }
+
         public MvxCommand DeveloperCommand => new MvxCommand(DeveloperExecuteAsync);
         private async void DeveloperExecuteAsync()
         {
-            await Browser.OpenAsync(Constants.WebLinks.DeveloperWebSite, new BrowserLaunchOptions
-            {
-                LaunchMode = BrowserLaunchMode.SystemPreferred,
-                TitleMode = BrowserTitleMode.Show,
-                PreferredToolbarColor = Color.Black,
-                PreferredControlColor = Color.White
-            });
-
-            //navigationService.Navigate<DevelopersViewModel>();
+            await Browser.OpenAsync(Constants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
     }
 }

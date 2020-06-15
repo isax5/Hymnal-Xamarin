@@ -11,12 +11,13 @@
     Title="{i18n:Translate Settings}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:SettingsViewModel"
-    BackgroundColor="{DynamicResource SecondaryBackgroudColor}">
+    BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+    Visual="Material">
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{x:Static constans:FontAwesome.Solid}"
-            Glyph="{x:Static constans:FontAwesome.Cog}" />
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.Cog}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.Resources>
@@ -28,6 +29,7 @@
 
             <Style TargetType="Grid">
                 <Setter Property="Padding" Value="15, 12" />
+                <Setter Property="ColumnSpacing" Value="25" />
             </Style>
 
             <OnPlatform
@@ -43,6 +45,7 @@
         HeightRequest="50"
         Intent="Settings">
         <TableRoot>
+            <!--  Display and typography  -->
             <TableSection
                 x:Name="preferencesSection"
                 Title="{i18n:Translate DisplayAndTypography}">
@@ -71,11 +74,13 @@
                             Grid.Row="0"
                             Grid.RowSpan="2"
                             Grid.Column="0"
-                            VerticalOptions="CenterAndExpand">
+                            HeightRequest="50"
+                            VerticalOptions="CenterAndExpand"
+                            WidthRequest="50">
                             <Image.Source>
                                 <FontImageSource
-                                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                                    Glyph="{x:Static constans:FontAwesome.GlobeAmericas}"
+                                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                                    Glyph="{x:Static constans:FontAwesomeIcons.GlobeAmericas}"
                                     Color="Gray" />
                             </Image.Source>
                         </Image>
@@ -163,23 +168,115 @@
                 </ViewCell>
             </TableSection>
 
+            <!--  Support  -->
             <TableSection
-                x:Name="developerSection"
-                Title="{i18n:Translate Developing}">
+                x:Name="supportSection"
+                Title="{i18n:Translate Support}">
 
-                <!--  Help  -->
-                <!--
+                <!--  Donations  -->
                 <ViewCell>
                     <Grid>
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding HelpCommand}" />
-                        </Grid.GestureRecognizers>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
                         <Label
-                            Text="{i18n:Translate Help}"
+                            Grid.Row="0"
+                            Text="{i18n:Translate Donations}"
                             TextColor="{DynamicResource PrimaryTextColor}" />
+
+                        <CarouselView
+                            x:Name="carousel"
+                            Grid.Row="1"
+                            HeightRequest="120"
+                            HorizontalScrollBarVisibility="Never"
+                            PeekAreaInsets="50, 0, 180, 0"
+                            VerticalOptions="CenterAndExpand">
+                            <CarouselView.ItemsLayout>
+                                <LinearItemsLayout
+                                    ItemSpacing="20"
+                                    Orientation="Horizontal"
+                                    SnapPointsAlignment="End"
+                                    SnapPointsType="None" />
+                            </CarouselView.ItemsLayout>
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout
+                                        Margin="5,0"
+                                        Padding="5">
+
+                                        <Label
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Tip #6"
+                                            TextColor="{DynamicResource PrimaryTextColor}" />
+
+                                        <Frame
+                                            Padding="0"
+                                            BorderColor="Black"
+                                            CornerRadius="5"
+                                            HasShadow="False"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="CenterAndExpand">
+
+                                            <Button
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                Text="{Binding .}"
+                                                TextColor="{DynamicResource PrimaryTextColor}" />
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
                     </Grid>
                 </ViewCell>
-                -->
+
+                <!--  Contribute  -->
+                <ViewCell>
+                    <Grid RowSpacing="15">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding OpenGitHubCommand}" />
+                        </Grid.GestureRecognizers>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto" />
+                            <ColumnDefinition Width="auto" />
+                        </Grid.ColumnDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Text="{i18n:Translate Contribute}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
+
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            HeightRequest="50"
+                            WidthRequest="50">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
+                                    Glyph="{x:Static constans:FontAwesomeIcons.Github}"
+                                    Color="Gray" />
+                            </Image.Source>
+                        </Image>
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{i18n:Translate GitHub}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
+
+                    </Grid>
+                </ViewCell>
 
                 <!--  Developer  -->
                 <ViewCell
@@ -198,6 +295,26 @@
                     </Grid>
                 </ViewCell>
 
+                <!--  Help  -->
+                <ViewCell>
+                    <Grid>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding HelpCommand}" />
+                        </Grid.GestureRecognizers>
+                        <Label
+                            Text="{i18n:Translate Help}"
+                            TextColor="{DynamicResource PrimaryTextColor}" />
+                    </Grid>
+                </ViewCell>
+
+            </TableSection>
+
+            <!--  Developing  -->
+            <TableSection
+                x:Name="developerSection"
+                Title="{i18n:Translate Developing}">
+
+                <!--  App version  -->
                 <TextCell
                     x:Name="appVersionCell"
                     Detail="{Binding AppVersionString}"
@@ -207,6 +324,7 @@
                     Text="{i18n:Translate AppVersion}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
+                <!--  Build Version  -->
                 <TextCell
                     x:Name="appBuildCell"
                     Detail="{Binding AppBuildString}"
@@ -215,7 +333,6 @@
                                            Tizen=False}"
                     Text="{i18n:Translate AppBuild}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
-
             </TableSection>
 
         </TableRoot>
