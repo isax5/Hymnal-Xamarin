@@ -75,6 +75,9 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="MediaManager, Version=0.9.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Plugin.MediaManager.0.9.6\lib\xamarintvos10\MediaManager.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -84,9 +87,6 @@
     </Reference>
     <Reference Include="OpenTK-1.0" />
     <Reference Include="System.Drawing.Common.dll" />
-    <Reference Include="MediaManager">
-      <HintPath>..\..\packages\Plugin.MediaManager.0.9.7\lib\xamarintvos10\MediaManager.dll</HintPath>
-    </Reference>
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\..\packages\Xamarin.Essentials.1.5.3.2\lib\xamarintvos10\Xamarin.Essentials.dll</HintPath>
     </Reference>
