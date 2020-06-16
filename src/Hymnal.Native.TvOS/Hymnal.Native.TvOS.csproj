@@ -90,12 +90,6 @@
     <Reference Include="Xamarin.Essentials">
       <HintPath>..\..\packages\Xamarin.Essentials.1.5.3.2\lib\xamarintvos10\Xamarin.Essentials.dll</HintPath>
     </Reference>
-    <Reference Include="Plugin.Multilingual.Abstractions">
-      <HintPath>..\..\packages\Plugin.Multilingual.1.0.2\lib\XamarinTVOS\Plugin.Multilingual.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Plugin.Multilingual">
-      <HintPath>..\..\packages\Plugin.Multilingual.1.0.2\lib\XamarinTVOS\Plugin.Multilingual.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\App Icon &amp; Top Shelf Image.brandassets\Contents.json">
@@ -170,7 +164,6 @@
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="packages.config" />
-    <None Include="Helpers\TranslateExtension.txt" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
