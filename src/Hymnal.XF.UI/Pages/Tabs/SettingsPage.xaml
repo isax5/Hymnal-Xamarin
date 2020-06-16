@@ -25,18 +25,13 @@
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="{OnPlatform Default=16, iOS=17, Android=15}" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
             </Style>
 
             <Style TargetType="Grid">
-                <Setter Property="Padding" Value="15, 12" />
+                <Setter Property="Padding" Value="15, 15" />
                 <Setter Property="ColumnSpacing" Value="25" />
             </Style>
-
-            <OnPlatform
-                x:Key="HightViewCell"
-                x:TypeArguments="x:Double"
-                Android="70"
-                iOS="50" />
         </ResourceDictionary>
     </mvxViews:MvxContentPage.Resources>
 
@@ -52,10 +47,7 @@
 
                 <!--  Choose Language  -->
                 <ViewCell
-                    x:Name="hymnLanguageCell"
-                    Height="{OnPlatform Default=70,
-                                        iOS=70,
-                                        Android=70}">
+                    x:Name="hymnLanguageCell">
                     <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
@@ -75,7 +67,6 @@
                             Grid.RowSpan="2"
                             Grid.Column="0"
                             HeightRequest="50"
-                            VerticalOptions="CenterAndExpand"
                             WidthRequest="50">
                             <Image.Source>
                                 <FontImageSource
@@ -90,8 +81,7 @@
                             Grid.Column="1"
                             FontSize="{OnPlatform Default=Default,
                                                   Tizen=Large}"
-                            Text="{i18n:Translate VersionsAndLanguages}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate VersionsAndLanguages}" />
 
                         <Label
                             Grid.Row="1"
@@ -132,15 +122,13 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="0"
-                            Text="{i18n:Translate FontSize}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate FontSize}" />
 
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
                             Margin="15,0"
-                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
 
                         <Slider
                             x:Name="LetterSize"
@@ -161,7 +149,6 @@
                             Grid.ColumnSpan="2"
                             FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
                             Text="{i18n:Translate Example}"
-                            TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="FillAndExpand" />
 
                     </Grid>
@@ -183,8 +170,7 @@
 
                         <Label
                             Grid.Row="0"
-                            Text="{i18n:Translate Donations}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate Donations}" />
 
                         <CarouselView
                             x:Name="carousel"
@@ -208,8 +194,7 @@
 
                                         <Label
                                             HorizontalOptions="CenterAndExpand"
-                                            Text="Tip #6"
-                                            TextColor="{DynamicResource PrimaryTextColor}" />
+                                            Text="Tip #6" />
 
                                         <Frame
                                             Padding="0"
@@ -253,8 +238,7 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
-                            Text="{i18n:Translate Contribute}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate Contribute}" />
 
                         <Image
                             Grid.Row="1"
@@ -272,8 +256,7 @@
                         <Label
                             Grid.Row="1"
                             Grid.Column="1"
-                            Text="{i18n:Translate GitHub}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate GitHub}" />
 
                     </Grid>
                 </ViewCell>
@@ -290,8 +273,7 @@
                         <Label
                             FontSize="{OnPlatform Default=Default,
                                                   Tizen=Large}"
-                            Text="{i18n:Translate Developing}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate Developing}" />
                     </Grid>
                 </ViewCell>
 
@@ -302,8 +284,7 @@
                             <TapGestureRecognizer Command="{Binding HelpCommand}" />
                         </Grid.GestureRecognizers>
                         <Label
-                            Text="{i18n:Translate Help}"
-                            TextColor="{DynamicResource PrimaryTextColor}" />
+                            Text="{i18n:Translate Help}" />
                     </Grid>
                 </ViewCell>
 
