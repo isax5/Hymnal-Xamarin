@@ -39,7 +39,7 @@ namespace Hymnal.XF.UI.Pages
             if (!ViewModel.Language.SupportSheets)
                 ToolbarItems.Remove(SheetToolbar);
 
-            PlayerVisible = ViewModel.Language.SupportMusic;
+            //PlayerVisible = ViewModel.Language.SupportMusic;
         }
     }
 }
