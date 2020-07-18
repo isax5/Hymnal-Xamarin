@@ -46,8 +46,7 @@
                 Title="{i18n:Translate DisplayAndTypography}">
 
                 <!--  Choose Language  -->
-                <ViewCell
-                    x:Name="hymnLanguageCell">
+                <ViewCell x:Name="hymnLanguageCell">
                     <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
@@ -161,7 +160,7 @@
                 Title="{i18n:Translate Support}">
 
                 <!--  Donations  -->
-                <ViewCell>
+                <!--<ViewCell>
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto" />
@@ -215,7 +214,7 @@
                             </CarouselView.ItemTemplate>
                         </CarouselView>
                     </Grid>
-                </ViewCell>
+                </ViewCell>-->
 
                 <!--  Contribute  -->
                 <ViewCell>
@@ -283,8 +282,7 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding HelpCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label
-                            Text="{i18n:Translate Help}" />
+                        <Label Text="{i18n:Translate Help}" />
                     </Grid>
                 </ViewCell>
 

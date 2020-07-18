@@ -180,6 +180,14 @@
   <data name="Index" xml:space="preserve">
     <value>Index</value>
   </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Instrumental</value>
+    <comment>Instrumental</comment>
+  </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Instrumental or sung</value>
+    <comment>Select music: Instrumental or sung</comment>
+  </data>
   <data name="NoInternetConnection" xml:space="preserve">
     <value>There is no Internet connection</value>
   </data>
@@ -201,6 +209,10 @@
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Sung</value>
+    <comment>Sung (cantada)</comment>
   </data>
   <data name="Support" xml:space="preserve">
     <value>Support</value>

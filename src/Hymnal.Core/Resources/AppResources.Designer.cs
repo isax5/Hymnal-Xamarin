@@ -233,6 +233,24 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Instrumental.
+        /// </summary>
+        internal static string Instrumental {
+            get {
+                return ResourceManager.GetString("Instrumental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Instrumental or sung.
+        /// </summary>
+        internal static string InstrumentalOrSung {
+            get {
+                return ResourceManager.GetString("InstrumentalOrSung", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a There is no Internet connection.
         /// </summary>
         internal static string NoInternetConnection {
@@ -292,6 +310,15 @@ namespace Hymnal.Core.Resources {
         internal static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sung.
+        /// </summary>
+        internal static string Sung {
+            get {
+                return ResourceManager.GetString("Sung", resourceCulture);
             }
         }
         

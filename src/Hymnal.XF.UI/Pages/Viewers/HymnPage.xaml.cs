@@ -24,12 +24,12 @@ namespace Hymnal.XF.UI.Pages
 #endif
 
             // Toolbar player
-            PlaySomethingToolbarItem.Text = string.Empty;
-            PlaySomethingToolbarItem.Command = new Command(() => ViewModel.PlayCommand.Execute());
-            PlaySomethingToolbarItem.SetBinding(ToolbarItem.IconImageSourceProperty, "IsPlaying", BindingMode.Default, null, "ToolbarPlaying{0}");
+            //PlaySomethingToolbarItem.Text = string.Empty;
+            //PlaySomethingToolbarItem.Command = new Command(() => ViewModel.PlayCommand.Execute());
+            //PlaySomethingToolbarItem.SetBinding(ToolbarItem.IconImageSourceProperty, "IsPlaying", BindingMode.Default, null, "ToolbarPlaying{0}");
 
-            OpenPlayerToolbarItem.SetBinding(ToolbarItem.TextProperty, "Hymn.Title");
-            OpenPlayerToolbarItem.Command = new Command(() => ViewModel.OpenPlayerCommand.Execute());
+            //OpenPlayerToolbarItem.SetBinding(ToolbarItem.TextProperty, "Hymn.Title");
+            //OpenPlayerToolbarItem.Command = new Command(() => ViewModel.OpenPlayerCommand.Execute());
         }
 
         protected override void OnBindingContextChanged()

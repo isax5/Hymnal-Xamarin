@@ -136,6 +136,21 @@
           <target state="new">Contribute</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Contribute app</note>
         </trans-unit>
+        <trans-unit id="InstrumentalOrSung" translate="yes" xml:space="preserve">
+          <source>Instrumental or sung</source>
+          <target state="translated">Инструментальный или спетый</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Select music: Instrumental or sung</note>
+        </trans-unit>
+        <trans-unit id="Instrumental" translate="yes" xml:space="preserve">
+          <source>Instrumental</source>
+          <target state="translated">Инструментальный</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Instrumental</note>
+        </trans-unit>
+        <trans-unit id="Sung" translate="yes" xml:space="preserve">
+          <source>Sung</source>
+          <target state="translated">Спетый</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sung (cantada)</note>
+        </trans-unit>
       </group>
     </body>
   </file>

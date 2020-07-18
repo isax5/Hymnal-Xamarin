@@ -136,6 +136,21 @@
           <target state="translated">Dica</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Tip 1,2,3,4...</note>
         </trans-unit>
+        <trans-unit id="InstrumentalOrSung" translate="yes" xml:space="preserve">
+          <source>Instrumental or sung</source>
+          <target state="new">Instrumental or sung</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Select music: Instrumental or sung</note>
+        </trans-unit>
+        <trans-unit id="Instrumental" translate="yes" xml:space="preserve">
+          <source>Instrumental</source>
+          <target state="new">Instrumental</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Instrumental</note>
+        </trans-unit>
+        <trans-unit id="Sung" translate="yes" xml:space="preserve">
+          <source>Sung</source>
+          <target state="new">Sung</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Sung (cantada)</note>
+        </trans-unit>
       </group>
     </body>
   </file>

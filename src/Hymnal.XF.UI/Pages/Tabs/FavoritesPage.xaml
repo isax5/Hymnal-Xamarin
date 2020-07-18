@@ -64,7 +64,7 @@
                                     Text="{i18n:Translate Delete}" />
                             </ViewCell.ContextActions>
                             <Grid
-                                Padding="20,5"
+                                Padding="20,0"
                                 ColumnSpacing="0"
                                 RowSpacing="0">
 

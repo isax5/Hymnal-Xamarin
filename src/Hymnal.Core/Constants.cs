@@ -49,6 +49,7 @@ namespace Hymnal.Core
                 HymnsFileName = "NewHymnal.es.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.es.json",
                 InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/instrumental/###.mp3",
+                SungMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/sung/###.mp3",
                 HymnsSheetsFileName = "PianoSheet_NewHymnal_es_###"
             },
             new HymnalLanguage
@@ -196,6 +197,21 @@ namespace Hymnal.Core
                 /// Use <see cref="DateTime.Now.ToLocalTime()"/>
                 /// </summary>
                 public const string Time = "Time";
+
+                /// <summary>
+                /// Use <see cref="InstrumentalMusic"/> and <see cref="SungMusic"/>
+                /// </summary>
+                public const string TypeOfMusicPlaying = "Type of Music Playing";
+
+                /// <summary>
+                /// Instrumental for: <see cref="TypeOfMusicPlaying"/>
+                /// </summary>
+                public const string InstrumentalMusic = "Instrumental";
+
+                /// <summary>
+                /// Sung for: <see cref="TypeOfMusicPlaying"/>
+                /// </summary>
+                public const string SungMusic = "Sung";
             }
 
             /// <summary>

@@ -112,4 +112,16 @@
     <value>Tip</value>
     <comment>Tip 1,2,3,4...</comment>
   </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Instrumental o Cantado</value>
+    <comment>Select music: Instrumental or sung</comment>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Instrumental</value>
+    <comment>Instrumental</comment>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Cantado</value>
+    <comment>Sung (cantada)</comment>
+  </data>
 </root>

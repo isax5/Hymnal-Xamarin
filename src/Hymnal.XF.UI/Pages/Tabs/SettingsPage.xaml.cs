@@ -25,17 +25,17 @@ namespace Hymnal.XF.UI.Pages
 #endif
         }
 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
 
-            carousel.ItemsSource = new List<string>
-            {
-                "Hola",
-                "Mundo",
-                "Como estas"
-            };
-        }
+        //    carousel.ItemsSource = new List<string>
+        //    {
+        //        "Hola",
+        //        "Mundo",
+        //        "Como estas"
+        //    };
+        //}
 
         private void LetterSize_ValueChanged(object sender, ValueChangedEventArgs e) => LetterSize.Value = Math.Round(e.NewValue, 0);
     }

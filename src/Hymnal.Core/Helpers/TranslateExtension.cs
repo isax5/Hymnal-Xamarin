@@ -48,5 +48,8 @@ namespace Hymnal.Core.Helpers
         public static string WeHadAProblem => AppResources.WeHadAProblem;
         public static string Ok => AppResources.Ok;
         public static string NoInternetConnection => AppResources.NoInternetConnection;
+        public static string InstrumentalOrSung => AppResources.InstrumentalOrSung;
+        public static string Instrumental => AppResources.Instrumental;
+        public static string Sung => AppResources.Sung;
     }
 }
