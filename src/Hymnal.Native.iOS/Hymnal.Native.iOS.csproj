@@ -6,9 +6,10 @@
     <ProjectGuid>{B6191ECE-AAA9-4563-B1E4-2D3CEADE4376}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Hymnal.iOS</RootNamespace>
+    <RootNamespace>Hymnal.Native.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>Hymnal.iOS</AssemblyName>
+    <AssemblyName>Hymnal.Native.iOS</AssemblyName>
+    <ProvisioningType>manual</ProvisioningType>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -143,10 +144,6 @@
     <Compile Include="Views\Tabs\NumberViewController.cs" />
     <Compile Include="Views\Tabs\NumberViewController.designer.cs">
       <DependentUpon>NumberViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Views\Tabs\IndexViewController.cs" />
-    <Compile Include="Views\Tabs\IndexViewController.designer.cs">
-      <DependentUpon>IndexViewController.cs</DependentUpon>
     </Compile>
     <Compile Include="Views\Tabs\FavoritesViewController.cs" />
     <Compile Include="Views\Tabs\FavoritesViewController.designer.cs">
@@ -4255,10 +4252,6 @@
     <ImageAsset Include="Resources\Media.xcassets\time icon.imageset\time.pdf">
       <Visible>false</Visible>
     </ImageAsset>
-    <Compile Include="Views\Search\SearchViewController.cs" />
-    <Compile Include="Views\Search\SearchViewController.designer.cs">
-      <DependentUpon>SearchViewController.cs</DependentUpon>
-    </Compile>
     <ImageAsset Include="Resources\Media.xcassets\SecondaryColor.colorset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -4316,22 +4309,109 @@
     <ImageAsset Include="Resources\Media.xcassets\Colors\PrimaryColor.colorset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab favorites.imageset\favorites-white.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab favorites.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab favorites.imageset\favorites-black.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab index.imageset\list-white.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab index.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab index.imageset\list-black.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab settings.imageset\settings-white.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab settings.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab settings.imageset\settings-black.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\colors\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\colors\tab color selected.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab number.imageset\number-white.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab number.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\tab number.imageset\number-black.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\view images\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\view images\filter background.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\view images\background.imageset\Background.pdf">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\view images\background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Color\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Color\primary color.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Color\primary color oposite.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Color\Top Slider Modal Page Color.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\global tint.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Bar\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Bar\colors\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Bar\colors\bar title color.colorset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <Compile Include="Views\Tabs\IndexTableViewController.cs" />
+    <Compile Include="Views\Tabs\IndexTableViewController.designer.cs">
+      <DependentUpon>IndexTableViewController.cs</DependentUpon>
+    </Compile>
+    <ImageAsset Include="Resources\Media.xcassets\Tabs\.DS_Store">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <Compile Include="Sources\HymnsTableViewSource.cs" />
+    <Compile Include="Views\Cells\SearchTableViewCell.cs" />
+    <Compile Include="Views\Cells\SearchTableViewCell.designer.cs">
+      <DependentUpon>SearchTableViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Search\SearchTableViewController.cs" />
+    <Compile Include="Views\Search\SearchTableViewController.designer.cs">
+      <DependentUpon>SearchTableViewController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.iOS" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
-      <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
-      <Name>Hymnal.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj">
-      <Project>{1ac8149a-b28f-4db6-a65e-31e379605528}</Project>
-      <Name>Hymnal.SharedNatives</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Cirrious.FluentLayout">
@@ -4343,8 +4423,8 @@
     <PackageReference Include="Plugin.MediaManager">
       <Version>0.9.6</Version>
     </PackageReference>
-    <PackageReference Include="Plugin.Multilingual">
-      <Version>1.0.2</Version>
+    <PackageReference Include="Realm">
+      <Version>4.3.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Essentials">
       <Version>1.5.3.2</Version>
@@ -4396,6 +4476,16 @@
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
+      <Project>{4a4ac861-6dea-49e0-a330-5442b1f1f294}</Project>
+      <Name>StorageManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
+      <Project>{8651a503-045f-42aa-8efd-1e20e5a73925}</Project>
+      <Name>Hymnal.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

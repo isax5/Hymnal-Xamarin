@@ -7,7 +7,8 @@ using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
-using Realms;
+using Plugin.StorageManager;
+using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -16,7 +17,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly Realm realm;
+        private readonly IStorageManager storageManager;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
 
@@ -36,18 +37,20 @@ namespace Hymnal.Core.ViewModels
         public RecordsViewModel(
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService
+            IPreferencesService preferencesService,
+            IStorageManager storageManager
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-            realm = Realm.GetInstance();
+            this.storageManager = storageManager;
         }
 
         public override async Task Initialize()
         {
-            var recordHymns = realm.All<RecordHymn>().OrderByDescending(r => r.SavedAt).ToList();
+
+            var recordHymns = storageManager.All<RecordHymn>().OrderByDescending(r => r.SavedAt).ToList();
 
             Hymn[] hymns = await Task.WhenAll(recordHymns.Select(r => hymnsService.GetHymnAsync(r)));
 

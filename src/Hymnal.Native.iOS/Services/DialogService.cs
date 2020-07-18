@@ -7,7 +7,7 @@ using Foundation;
 using Hymnal.Core.Services;
 using UIKit;
 
-namespace Hymnal.iOS.Services
+namespace Hymnal.Native.iOS.Services
 {
     public class DialogService : IDialogService
     {

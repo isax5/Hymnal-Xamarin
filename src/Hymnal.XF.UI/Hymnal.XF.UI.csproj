@@ -1,7 +1,9 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <!-- Android target remove for VS Problem on Windows version <<MonoAndroid90;>> . Android will execute as netstandard2.0 version-->
+    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Tizen60</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">uap10.0.17763;$(TargetFrameworks)</TargetFrameworks>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
@@ -24,7 +26,6 @@
     <PackageReference Include="MvvmCross.Forms" Version="6.4.2" />
     <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.6.0.726" />
-    <PackageReference Include="Xamarin.Plugin.SharedTransitions" Version="2.0.2" />
     <PackageReference Include="XamarinFastEntry.Behaviors" Version="1.1.1" />
   </ItemGroup>
   
@@ -41,6 +42,9 @@
     </Compile>
     <Compile Update="Resources\LightTheme.xaml.cs">
       <DependentUpon>LightTheme.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Pages\!Base\BasePage.cs">
+      <SubType></SubType>
     </Compile>
   </ItemGroup>
 
@@ -113,4 +117,8 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Pages\!Base\" />
+    <Folder Include="Pages\Player\" />
+  </ItemGroup>
 </Project>

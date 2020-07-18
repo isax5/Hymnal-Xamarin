@@ -10,6 +10,7 @@
 
 namespace Hymnal.Core.Resources {
     using System;
+    using System.Reflection;
     
     
     /// <summary>
@@ -39,7 +40,7 @@ namespace Hymnal.Core.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Hymnal.Core.Resources.AppResources", typeof(AppResources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Hymnal.Core.Resources.AppResources", typeof(AppResources).GetTypeInfo().Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -106,6 +107,24 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Contribute.
+        /// </summary>
+        internal static string Contribute {
+            get {
+                return ResourceManager.GetString("Contribute", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Custom Amount.
+        /// </summary>
+        internal static string CustomAmount {
+            get {
+                return ResourceManager.GetString("CustomAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Delete.
         /// </summary>
         internal static string Delete {
@@ -142,6 +161,15 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Donations.
+        /// </summary>
+        internal static string Donations {
+            get {
+                return ResourceManager.GetString("Donations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Example.
         /// </summary>
         internal static string Example {
@@ -169,6 +197,15 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a GitHub.
+        /// </summary>
+        internal static string GitHub {
+            get {
+                return ResourceManager.GetString("GitHub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Help.
         /// </summary>
         internal static string Help {
@@ -192,6 +229,24 @@ namespace Hymnal.Core.Resources {
         internal static string Index {
             get {
                 return ResourceManager.GetString("Index", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Instrumental.
+        /// </summary>
+        internal static string Instrumental {
+            get {
+                return ResourceManager.GetString("Instrumental", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Instrumental or sung.
+        /// </summary>
+        internal static string InstrumentalOrSung {
+            get {
+                return ResourceManager.GetString("InstrumentalOrSung", resourceCulture);
             }
         }
         
@@ -255,6 +310,33 @@ namespace Hymnal.Core.Resources {
         internal static string Settings {
             get {
                 return ResourceManager.GetString("Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Sung.
+        /// </summary>
+        internal static string Sung {
+            get {
+                return ResourceManager.GetString("Sung", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Support.
+        /// </summary>
+        internal static string Support {
+            get {
+                return ResourceManager.GetString("Support", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Tip.
+        /// </summary>
+        internal static string Tip {
+            get {
+                return ResourceManager.GetString("Tip", resourceCulture);
             }
         }
         

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
@@ -5,6 +6,8 @@ using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
+using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -15,6 +18,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
+        private readonly IMvxLog log;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
 
@@ -54,24 +58,38 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
-        private readonly HymnalLanguage language;
+        private HymnalLanguage _language;
 
         public SearchViewModel(
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService
+            IPreferencesService preferencesService,
+            IMvxLog log
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
+            this.log = log;
+            _language = this.preferencesService.ConfiguratedHymnalLanguage;
+        }
 
-            language = this.preferencesService.ConfiguratedHymnalLanguage;
+        ~SearchViewModel()
+        {
+            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
         public override async Task Initialize()
         {
+            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            TextSearchExecuteAsync(string.Empty);
+
             await base.Initialize();
+        }
+
+        private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
+        {
+            _language = e;
             TextSearchExecuteAsync(string.Empty);
         }
 
@@ -90,7 +108,10 @@ namespace Hymnal.Core.ViewModels
         private async void TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
-            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(language)).OrderByNumber();
+
+            log.Debug($"Search for: {text}");
+
+            IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 
             if (string.IsNullOrWhiteSpace(text))
             {
@@ -103,21 +124,38 @@ namespace Hymnal.Core.ViewModels
 
         private void SelectedHymnExecute(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
-            {
-                Number = hymn.Number,
-                HymnalLanguage = language
-            });
+            // Some devices iOS that have had problems in this place
+            if (hymn == null)
+                return;
 
-            if (!string.IsNullOrWhiteSpace(TextSearchBar))
+            try
             {
+                navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+                {
+                    Number = hymn.Number,
+                    HymnalLanguage = _language
+                });
 
-                Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
+                if (!string.IsNullOrWhiteSpace(TextSearchBar))
+                {
+
+                    Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
                 {
                     { Constants.TrackEvents.HymnFoundedScheme.Query, TextSearchBar },
                     { Constants.TrackEvents.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
-                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, language.Id }
+                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, _language.Id }
                 });
+                }
+            }
+            catch (Exception ex)
+            {
+                var properties = new Dictionary<string, string>()
+                    {
+                        { "File", nameof(SearchViewModel) },
+                        { "Opening Hymn", hymn.Number.ToString() }
+                    };
+
+                Crashes.TrackError(ex, properties);
             }
         }
     }

@@ -4,6 +4,7 @@ using Microsoft.AppCenter.Analytics;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -12,19 +13,16 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IMvxLog log;
         private readonly IPreferencesService preferencesService;
-        private readonly IAppInformationService appInformationService;
 
         public RootViewModel(
             IMvxNavigationService navigationService,
             IMvxLog log,
-            IPreferencesService preferencesService,
-            IAppInformationService appInformationService
+            IPreferencesService preferencesService
             )
         {
             this.navigationService = navigationService;
             this.log = log;
             this.preferencesService = preferencesService;
-            this.appInformationService = appInformationService;
         }
 
         private bool loaded = false;
@@ -37,16 +35,29 @@ namespace Hymnal.Core.ViewModels
 
             loaded = true;
 
+#if __IOS__ || __ANDROID__
             await navigationService.Navigate<NumberViewModel>();
             await navigationService.Navigate<IndexViewModel>();
             await navigationService.Navigate<FavoritesViewModel>();
             await navigationService.Navigate<SettingsViewModel>();
-
-            //await navigationService.Navigate<SimpleViewModel>();
+#elif __TVOS__
+            // Native project, RootViewController
+            await navigationService.Navigate<NumberViewModel>();
+            await navigationService.Navigate<SearchViewModel>();
+            await navigationService.Navigate<NumericalIndexViewModel>();
+            await navigationService.Navigate<SettingsViewModel>();
+#elif TIZEN
+            await navigationService.Navigate<NumberViewModel>();
+            await navigationService.Navigate<SearchViewModel>();
+            await navigationService.Navigate<SettingsViewModel>();
+#else
+            await navigationService.Navigate<SimpleViewModel>();
+#endif
         }
 
         // LifeCycle implemented in RootViewModel
         #region LifeCycle
+#if __IOS__ || __ANDROID__
         public override void Start()
         {
             log.Debug("App Started");
@@ -55,11 +66,12 @@ namespace Hymnal.Core.ViewModels
             {
                 { Constants.TrackEvents.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
-                { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, appInformationService.RequestedTheme.ToString() }
+                { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
             });
 
             base.Start();
         }
-        #endregion
+#endif
+#endregion
     }
 }

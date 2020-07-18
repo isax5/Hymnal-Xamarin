@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
@@ -9,6 +10,7 @@ using Microsoft.AppCenter.Analytics;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
@@ -17,8 +19,14 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IPreferencesService preferencesService;
         private readonly IDialogService dialogService;
-        private readonly IAppInformationService appInformationService;
-        private readonly IBrowserService browserService;
+
+        private readonly BrowserLaunchOptions browserLaunchOptions = new BrowserLaunchOptions
+        {
+            LaunchMode = BrowserLaunchMode.SystemPreferred,
+            TitleMode = BrowserTitleMode.Show,
+            PreferredToolbarColor = Color.Black,
+            PreferredControlColor = Color.White
+        };
 
         public int HymnFontSize
         {
@@ -52,16 +60,12 @@ namespace Hymnal.Core.ViewModels
         public SettingsViewModel(
             IMvxNavigationService navigationService,
             IPreferencesService preferencesService,
-            IDialogService dialogService,
-            IAppInformationService appInformationService,
-            IBrowserService browserService
+            IDialogService dialogService
             )
         {
             this.navigationService = navigationService;
             this.preferencesService = preferencesService;
             this.dialogService = dialogService;
-            this.appInformationService = appInformationService;
-            this.browserService = browserService;
         }
 
         public override async Task Initialize()
@@ -69,8 +73,8 @@ namespace Hymnal.Core.ViewModels
             await base.Initialize();
             HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage.Configuration();
 
-            AppVersionString = appInformationService.VersionString;
-            AppBuildString = appInformationService.BuildString;
+            AppVersionString = AppInfo.VersionString;
+            AppBuildString = AppInfo.BuildString;
         }
 
         public override void ViewAppeared()
@@ -118,11 +122,16 @@ namespace Hymnal.Core.ViewModels
             navigationService.Navigate<HelpViewModel>();
         }
 
-        public MvxCommand DeveloperCommand => new MvxCommand(DeveloperExecute);
-        private void DeveloperExecute()
+        public MvxCommand OpenGitHubCommand => new MvxCommand(OpenGitHubExecuteAsync);
+        private async void OpenGitHubExecuteAsync()
         {
-            browserService.OpenBrowserAsync(@"https://storage.googleapis.com/hymn-music/about/index.html");
-            //navigationService.Navigate<DevelopersViewModel>();
+            await Browser.OpenAsync(Constants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
+        }
+
+        public MvxCommand DeveloperCommand => new MvxCommand(DeveloperExecuteAsync);
+        private async void DeveloperExecuteAsync()
+        {
+            await Browser.OpenAsync(Constants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
     }
 }

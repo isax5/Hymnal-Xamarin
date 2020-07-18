@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
@@ -15,6 +16,7 @@ using MvvmCross;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Plugin.StorageManager;
 
 namespace Hymnal.Core
 {
@@ -31,34 +33,43 @@ namespace Hymnal.Core
 
         public override void Initialize()
         {
-            SetUp();
-
             CreatableTypes()
                 .EndingWith("Service")
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
-            Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
+
+#if __IOS__ || __ANDROID__ || __TVOS__ || TIZEN
+            SetUp();
 
             RegisterAppStart<RootViewModel>();
+#else
+            RegisterAppStart<SimpleViewModel>();
+#endif
         }
+
 
         private void SetUp()
         {
-            // XF configuration
+            // Register Services new
+            Mvx.IoCProvider.RegisterSingleton<IStorageManager>(CrossStorageManager.Current);
+            Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
+
+
+            // AppCenter
             // Doc: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/xamarin#423-xamarinforms
-#if RELEASE
+#if RELEASE && (__IOS__ || __ANDROID__)
             AppCenter.Start("ios=d636d723-86a7-4d3a-8f02-cfdd454df9af;android=2ded5d95-4218-4a32-893f-1db17c0004a6;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
-#elif DEBUG
+#elif DEBUG && (__IOS__ || __ANDROID__)
             AppCenter.Start("ios=b3d6dce3-971c-40cf-aa5f-e40979e7fb7a;android=d3f0ef03-acc8-450b-b028-6fb74ddd98c5;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
 #endif
 
-            IMultilingualService multilingualService = Mvx.IoCProvider.Resolve<IMultilingualService>();
+            // Language Configuration
             IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
-            IAppInformationService appInformationService = Mvx.IoCProvider.Resolve<IAppInformationService>();
 
             // Configurating language of the device
-            Constants.CurrentCultureInfo = multilingualService.DeviceCultureInfo;
+            var culture = CultureInfo.InstalledUICulture;
+            Constants.CurrentCultureInfo = culture;
             AppResources.Culture = Constants.CurrentCultureInfo;
 
             // Configurating language of the hymnals
@@ -76,14 +87,6 @@ namespace Hymnal.Core
                 }
             }
 
-            // Configurate First Time opening this version
-            if (preferencesService.LastVersionOpened != appInformationService.VersionString)
-            {
-                preferencesService.LastVersionOpened = appInformationService.VersionString;
-
-                // Do somethink for new version
-
-            }
         }
 
         #region Open Page as

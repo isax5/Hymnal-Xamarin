@@ -32,6 +32,7 @@
   </data>
   <data name="Help" xml:space="preserve">
     <value>Ayuda</value>
+    <comment>Search help</comment>
   </data>
   <data name="History" xml:space="preserve">
     <value>Historial</value>
@@ -86,5 +87,41 @@
   <data name="Delete" xml:space="preserve">
     <value>Eliminar</value>
     <comment>Delete</comment>
+  </data>
+  <data name="Contribute" xml:space="preserve">
+    <value>Contribuir</value>
+    <comment>Contribute app</comment>
+  </data>
+  <data name="CustomAmount" xml:space="preserve">
+    <value>Cantidad Personalizada</value>
+    <comment>Custom Amount</comment>
+  </data>
+  <data name="Donations" xml:space="preserve">
+    <value>Donaciones</value>
+    <comment>Donations</comment>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>GitHub</comment>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Soporte</value>
+    <comment>Support app</comment>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Tip</value>
+    <comment>Tip 1,2,3,4...</comment>
+  </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Instrumental o Cantado</value>
+    <comment>Select music: Instrumental or sung</comment>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Instrumental</value>
+    <comment>Instrumental</comment>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Cantado</value>
+    <comment>Sung (cantada)</comment>
   </data>
 </root>

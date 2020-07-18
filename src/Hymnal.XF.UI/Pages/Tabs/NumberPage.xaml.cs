@@ -14,6 +14,9 @@ namespace Hymnal.XF.UI.Pages
         public NumberPage()
         {
             InitializeComponent();
+#if TIZEN
+            backgroundImage.Source = new FileImageSource { File = "Background.png" };
+#endif
 
             SizeChanged += (s, args) =>
             {

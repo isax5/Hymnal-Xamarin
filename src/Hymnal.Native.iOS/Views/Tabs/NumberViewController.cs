@@ -1,18 +1,20 @@
+using System;
 using Foundation;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvvmCross.Platforms.Ios.Views;
-using System;
 using UIKit;
 
-namespace Hymnal.iOS.Views
+namespace Hymnal.Native.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxTabPresentation(TabName = "Numbers", TabIconName = "number tab")]
+    [MvxTabPresentation(TabName = "Number", TabIconName = "tab number")]
+    //[MvxTabPresentation()]
+    //[MvxPagePresentation(WrapInNavigationController = true)]
     public partial class NumberViewController : BaseViewController<NumberViewModel>
     {
-        public NumberViewController (IntPtr handle) : base (handle)
+        public NumberViewController(IntPtr handle) : base(handle)
         {
         }
 

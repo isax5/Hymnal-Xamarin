@@ -32,6 +32,7 @@
   </data>
   <data name="Help" xml:space="preserve">
     <value>Справка</value>
+    <comment>Search help</comment>
   </data>
   <data name="History" xml:space="preserve">
     <value>Журнал</value>
@@ -86,5 +87,17 @@
   <data name="Delete" xml:space="preserve">
     <value>Удалять</value>
     <comment>Delete</comment>
+  </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Инструментальный или спетый</value>
+    <comment>Select music: Instrumental or sung</comment>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Инструментальный</value>
+    <comment>Instrumental</comment>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Спетый</value>
+    <comment>Sung (cantada)</comment>
   </data>
 </root>

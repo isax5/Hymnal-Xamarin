@@ -15,8 +15,8 @@
 
     <mvxViews:MvxCarouselPage.IconImageSource>
         <FontImageSource
-            FontFamily="{x:Static constans:FontAwesome.Solid}"
-            Glyph="{x:Static constans:FontAwesome.ListUl}" />
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.ListUl}" />
     </mvxViews:MvxCarouselPage.IconImageSource>
 
     <mvxViews:MvxCarouselPage.ToolbarItems>
@@ -26,8 +26,8 @@
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.SortAlphaDown}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.SortAlphaDown}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -36,8 +36,8 @@
             Priority="2">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.ListOl}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.ListOl}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -46,8 +46,8 @@
             Priority="3">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.Book}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Book}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </mvxViews:MvxCarouselPage.ToolbarItems>

@@ -8,7 +8,6 @@
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate Number}"
     iOS:Page.UseSafeArea="True"
@@ -18,8 +17,8 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{x:Static constans:FontAwesome.Solid}"
-            Glyph="{x:Static constans:FontAwesome.BookReader}" />
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.ToolbarItems>
@@ -29,8 +28,8 @@
             Priority="-1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.History}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.History}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -39,14 +38,15 @@
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.Search}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </mvxViews:MvxContentPage.ToolbarItems>
 
     <RelativeLayout>
         <Image
+            x:Name="backgroundImage"
             Aspect="AspectFill"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -111,6 +111,7 @@
                             Keyboard="Numeric"
                             Placeholder="...."
                             PlaceholderColor="{DynamicResource PrimaryLightColor}"
+                            Text="{Binding HymnNumber}"
                             TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="CenterAndExpand"
                             Visual="Default"
@@ -134,8 +135,8 @@
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{x:Static constans:FontAwesome.Solid}"
-                            Glyph="{x:Static constans:FontAwesome.BookOpen}"
+                            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                            Glyph="{x:Static constans:FontAwesomeIcons.BookOpen}"
                             Color="{DynamicResource NavBarTextColor}" />
                     </Button.ImageSource>
                 </Button>

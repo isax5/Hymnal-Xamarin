@@ -15,23 +15,23 @@ using Microsoft.AppCenter.Crashes;
 using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
-using Realms;
+using Plugin.StorageManager;
+using Plugin.StorageManager.Models;
+using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
-    public class HymnViewModel : MvxViewModel<HymnIdParameter>
+    public class HymnViewModel : BaseViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
         private readonly IMvxLog log;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaManager mediaManager;
-        private readonly IConnectivityService connectivityService;
         private readonly IDialogService dialogService;
-        private readonly IShareService shareService;
-        private readonly Realm realm;
+        private readonly IStorageManager storageService;
 
+        #region Properties
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
 
@@ -69,6 +69,7 @@ namespace Hymnal.Core.ViewModels
             get => hymnId;
             set => SetProperty(ref hymnId, value);
         }
+        #endregion
 
 
         public HymnViewModel(
@@ -77,9 +78,8 @@ namespace Hymnal.Core.ViewModels
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
-            IConnectivityService connectivityService,
             IDialogService dialogService,
-            IShareService shareService
+            IStorageManager storageService
             )
         {
             this.navigationService = navigationService;
@@ -87,10 +87,8 @@ namespace Hymnal.Core.ViewModels
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.mediaManager = mediaManager;
-            this.connectivityService = connectivityService;
             this.dialogService = dialogService;
-            this.shareService = shareService;
-            realm = Realm.GetInstance();
+            this.storageService = storageService;
             mediaManager.StateChanged += MediaManager_StateChanged;
         }
 
@@ -130,20 +128,16 @@ namespace Hymnal.Core.ViewModels
             IsPlaying = mediaManager.IsPlaying();
 
             // Is Favorite
-            IsFavorite = realm.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+            IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             // Record
             if (HymnParameter.SaveInRecords)
             {
-                IQueryable<RecordHymn> records = realm.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
 
-                using (Transaction trans = realm.BeginWrite())
-                {
-                    realm.RemoveRange(records);
-                    trans.Commit();
-                }
+                IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
+                storageService.RemoveRange(records);
 
-                realm.Write(() => realm.Add(Hymn.ToRecordHymn()));
+                storageService.Add(Hymn.ToRecordHymn());
             }
 
             await base.Initialize();
@@ -198,15 +192,12 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand FavoriteCommand => new MvxCommand(FavoriteExecute);
         private void FavoriteExecute()
         {
-            var favorites = realm.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+
+            var favorites = storageService.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             if (IsFavorite || favorites.Count() > 0)
             {
-                using (Transaction trans = realm.BeginWrite())
-                {
-                    realm.RemoveRange(favorites);
-                    trans.Commit();
-                }
+                storageService.RemoveRange(favorites);
 
                 Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
                 {
@@ -218,7 +209,7 @@ namespace Hymnal.Core.ViewModels
             }
             else
             {
-                realm.Write(() => realm.Add(Hymn.ToFavoriteHymn()));
+                storageService.Add(Hymn.ToFavoriteHymn());
 
                 Analytics.TrackEvent(Constants.TrackEvents.HymnAddedToFavorites, new Dictionary<string, string>
                 {
@@ -229,14 +220,13 @@ namespace Hymnal.Core.ViewModels
                 });
             }
 
-
             IsFavorite = !IsFavorite;
         }
 
         public MvxCommand ShareCommand => new MvxCommand(ShareExecute);
         private void ShareExecute()
         {
-            shareService.Share(
+            Share.RequestAsync(
                 title: hymn.Title,
                 text: $"{hymn.Title}\n\n{hymn.Content}\n\n{Constants.WebLinks.DeveloperWebSite}");
 
@@ -249,46 +239,91 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        public MvxCommand PlayCommand => new MvxCommand(PlayExecute);
-        private void PlayExecute()
+        public MvxCommand PlayCommand => new MvxCommand(PlayExecuteAsync);
+        private async void PlayExecuteAsync()
         {
             // Check internet connection
-            if (!connectivityService.InternetAccess)
+            if (Connectivity.NetworkAccess == NetworkAccess.None)
             {
-                dialogService.Alert(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
+                await dialogService.Alert(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
                 return;
             }
 
             // Stop/Start playing
             if (IsPlaying)
             {
-                mediaManager.Stop();
+                await mediaManager.Stop();
 
                 // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
                 IsPlaying = false;
             }
             else
             {
-                if (Language.SupportInstrumentalMusic)
+                var isPlayingInstrumentalMusic = false;
+
+                // Choose music
+                if (Language.SupportInstrumentalMusic && Language.SupportSungMusic)
                 {
-                    mediaManager.Play(Language.GetInstrumentURL(Hymn.Number));
+                    var instrumentalTitle = Languages.Instrumental;
+                    var sungTitle = Languages.Sung;
+
+                    var result = await dialogService.DisplayActionSheet(
+                        Languages.ChooseYourHymnal, Languages.Cancel,
+                        null, new[] { instrumentalTitle, sungTitle });
+
+                    if (result.Equals(instrumentalTitle))
+                    {
+                        IsPlaying = true;
+                        await mediaManager.Play(Language.GetInstrumentURL(Hymn.Number));
+                        isPlayingInstrumentalMusic = true;
+                    }
+                    else if (result.Equals(sungTitle))
+                    {
+                        IsPlaying = true;
+                        await mediaManager.Play(Language.GetSungURL(hymn.Number));
+                        isPlayingInstrumentalMusic = false;
+                    }
+                    // Tap on "Close"
+                    else
+                    {
+                        return;
+                    }
                 }
+                // Default music
                 else
                 {
-                    mediaManager.Play(Language.GetSungURL(Hymn.Number));
-                }
+                    // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
+                    IsPlaying = true;
 
-                // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
-                IsPlaying = true;
+                    if (Language.SupportInstrumentalMusic)
+                    {
+                        await mediaManager.Play(Language.GetInstrumentURL(Hymn.Number));
+                        isPlayingInstrumentalMusic = true;
+                    }
+                    else
+                    {
+                        await mediaManager.Play(Language.GetSungURL(Hymn.Number));
+                        isPlayingInstrumentalMusic = false;
+                    }
+                }
 
                 Analytics.TrackEvent(Constants.TrackEvents.HymnMusicPlayed, new Dictionary<string, string>
                 {
                     { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
                     { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    { Constants.TrackEvents.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
+                    Constants.TrackEvents.HymnReferenceScheme.InstrumentalMusic : Constants.TrackEvents.HymnReferenceScheme.SungMusic },
                     { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                     { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                 });
             }
+        }
+
+        public MvxCommand OpenPlayerCommand => new MvxCommand(OpenPlayerExecute);
+        private void OpenPlayerExecute()
+        {
+            navigationService.Close(this);
+            navigationService.Navigate<PlayerViewModel, HymnIdParameter>(HymnParameter);
         }
 
         public MvxCommand CloseCommand => new MvxCommand(Close);

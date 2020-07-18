@@ -16,8 +16,8 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            FontFamily="{x:Static constans:FontAwesome.Solid}"
-            Glyph="{x:Static constans:FontAwesome.Heart}" />
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.Heart}" />
     </mvxViews:MvxContentPage.IconImageSource>
 
     <mvxViews:MvxContentPage.Content>
@@ -64,7 +64,7 @@
                                     Text="{i18n:Translate Delete}" />
                             </ViewCell.ContextActions>
                             <Grid
-                                Padding="20,5"
+                                Padding="20,0"
                                 ColumnSpacing="0"
                                 RowSpacing="0">
 

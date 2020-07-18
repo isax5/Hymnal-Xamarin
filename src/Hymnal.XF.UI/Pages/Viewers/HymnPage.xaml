@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
-<mvxViews:MvxContentPage
+<pages:BaseContentPage
     x:Class="Hymnal.XF.UI.Pages.HymnPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -7,7 +7,7 @@
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
-    xmlns:sharedTransitions="clr-namespace:Plugin.SharedTransitions;assembly=Plugin.SharedTransitions"
+    xmlns:pages="clr-namespace:Hymnal.XF.UI.Pages"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{Binding Hymn.Number, StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="True"
@@ -16,7 +16,7 @@
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
 
-    <mvxViews:MvxContentPage.ToolbarItems>
+    <pages:BaseContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="CloseToolbar"
             Command="{Binding CloseCommand}"
@@ -37,8 +37,8 @@
             Priority="3">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Brands}"
-                    Glyph="{x:Static constans:FontAwesome.ItunesNote}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -46,14 +46,15 @@
             Priority="4">
             <ToolbarItem.IconImageSource>
                 <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesome.Solid}"
-                    Glyph="{x:Static constans:FontAwesome.Share}" />
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
-    </mvxViews:MvxContentPage.ToolbarItems>
+    </pages:BaseContentPage.ToolbarItems>
 
     <RelativeLayout>
         <Image
+            x:Name="backgroundImage"
             Aspect="AspectFill"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
@@ -75,17 +76,21 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}">
             <StackLayout Spacing="20">
-                <!--  sharedTransitions:Transition.Name="TitleTransition"  -->
                 <Label
+                    x:Name="hymnTitleLabel"
                     AutomationId="HymnTitleLabel"
                     FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"
+                    IsVisible="{OnPlatform Default=True,
+                                           Tizen=False}"
                     Text="{Binding Hymn.Title}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
                 <Label
+                    x:Name="hymnContentLabel"
                     Margin="10"
+                    AutomationId="HymnContentLabel"
                     FontSize="{Binding HymnFontSize}"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
@@ -96,4 +101,4 @@
 
     </RelativeLayout>
 
-</mvxViews:MvxContentPage>
+</pages:BaseContentPage>

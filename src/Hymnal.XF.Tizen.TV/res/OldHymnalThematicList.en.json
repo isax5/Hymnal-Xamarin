@@ -1,0 +1,575 @@
+[
+  {
+    "thematic": "Worship",
+    "ambits": [
+      {
+        "ambit": "Adoration and Praise",
+        "star": 1,
+        "end": 23,
+        "backimage": "Fondo1a21"
+      },
+      {
+        "ambit": "Opening of Worship",
+        "star": 24,
+        "end": 30,
+        "backimage": "Fondo22a34"
+      },
+      {
+        "ambit": "Closing of Worship",
+        "star": 31,
+        "end": 38,
+        "backimage": "Fondo35a45"
+      },
+      {
+        "ambit": "Morning Hymns",
+        "star": 39,
+        "end": 63,
+        "backimage": "Fondo46a52"
+      },
+      {
+        "ambit": "Evening Hymns",
+        "star": 48,
+        "end": 61,
+        "backimage": "Fondo46a52"
+      }
+    ]
+  },
+  {
+    "thematic": "God The Father",
+    "ambits": [
+      {
+        "ambit": "Love Of God",
+        "star": 62,
+        "end": 68,
+        "backimage": "Fondo78a92"
+      },
+      {
+        "ambit": "Majesty and Power",
+        "star": 69,
+        "end": 80,
+        "backimage": "Fondo93a102"
+      },
+      {
+        "ambit": "Abiding Presence",
+        "star": 81,
+        "end": 82,
+        "backimage": "Fondo103a106"
+      },
+      {
+        "ambit": "Providence of God",
+        "star": 83,
+        "end": 90,
+        "backimage": "Fondo103a106"
+      },
+      {
+        "ambit": "God's Power in Nature",
+        "star": 91,
+        "end": 98,
+        "backimage": "Fondo107a126"
+      }
+    ]
+  },
+  {
+    "thematic": "Jesus Christ",
+    "ambits": [
+      {
+        "ambit": "His Incarnation and Advent",
+        "star": 99,
+        "end": 113,
+        "backimage": "Fondo190a203"
+      },
+      {
+        "ambit": "Life and Ministry",
+        "star": 114,
+        "end": 117,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Sufferings and Death",
+        "star": 118,
+        "end": 130,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "His Resurrection and Ascension",
+        "star": 131,
+        "end": 136,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "His Priesthood",
+        "star": 137,
+        "end": 139,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "His Love and Sympathy",
+        "star": 140,
+        "end": 151,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "His Glory and Praise",
+        "star": 152,
+        "end": 172,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "His Second Coming",
+        "star": 173,
+        "end": 198,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "His Kingdom and Reign",
+        "star": 199,
+        "end": 203,
+        "backimage": "Fondo238a244"
+      }
+    ]
+  },
+  {
+    "thematic": "The Holy Spirit",
+    "ambits": [
+      {
+        "ambit": "The Holy Spirit",
+        "star": 204,
+        "end": 216,
+        "backimage": "Fondo204a208"
+      }
+    ]
+  },
+  {
+    "thematic": "The Holy Scriptures",
+    "ambits": [
+      {
+        "ambit": "The Holy Scriptures",
+        "star": 217,
+        "end": 220,
+        "backimage": "Fondo209a237"
+      }
+    ]
+  },
+  {
+    "thematic": "The Gospel",
+    "ambits": [
+      {
+        "ambit": "The Call",
+        "star": 221,
+        "end": 232,
+        "backimage": "Fondo345a364"
+      },
+      {
+        "ambit": "Repentance",
+        "star": 233,
+        "end": 240,
+        "backimage": "Fondo365a372"
+      },
+      {
+        "ambit": "Faith and Trust",
+        "star": 241,
+        "end": 265,
+        "backimage": "Fondo373a390"
+      },
+      {
+        "ambit": "Consecration",
+        "star": 266,
+        "end": 290,
+        "backimage": "Fondo391a438"
+      },
+      {
+        "ambit": "Salvation and Redemption",
+        "star": 291,
+        "end": 298,
+        "backimage": "Fondo466a473"
+      },
+      {
+        "ambit": "Reward of the Saints",
+        "star": 299,
+        "end": 306,
+        "backimage": "Fondo466a473"
+      },
+      {
+        "ambit": "Eternal Life",
+        "star": 307,
+        "end": 309,
+        "backimage": "Fondo466a473"
+      }
+    ]
+  },
+  {
+    "thematic": "The Christian Life",
+    "ambits": [
+      {
+        "ambit": "Joy and Peace",
+        "star": 310,
+        "end": 315,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Meditation and Prayer",
+        "star": 316,
+        "end": 336,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Discipleship",
+        "star": 337,
+        "end": 341,
+        "backimage": "Fondo535a550"
+      },
+      {
+        "ambit": "Work and Duty",
+        "star": 342,
+        "end": 348,
+        "backimage": "Fondo551a578"
+      },
+      {
+        "ambit": "Loyalty",
+        "star": 349,
+        "end": 350,
+        "backimage": "Fondo579a580"
+      },
+      {
+        "ambit": "Watchfulness",
+        "star": 351,
+        "end": 353,
+        "backimage": "Fondo579a580"
+      },
+      {
+        "ambit": "Warfare",
+        "star": 354,
+        "end": 367,
+        "backimage": "Fondo579a580"
+      },
+      {
+        "ambit": "Pilgrimage",
+        "star": 368,
+        "end": 378,
+        "backimage": "Fondo579a580"
+      },
+      {
+        "ambit": "Hope and Aspiration",
+        "star": 379,
+        "end": 390,
+        "backimage": "Fondo579a580"
+      },
+      {
+        "ambit": "Guidance",
+        "star": 391,
+        "end": 409,
+        "backimage": "Fondo579a580"
+      }
+    ]
+  },
+  {
+    "thematic": "The Christian Home",
+    "ambits": [
+      {
+        "ambit": "Home and Children",
+        "star": 410,
+        "end": 415,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Marriage",
+        "star": 416,
+        "end": 416,
+        "backimage": "Fondo590a596"
+      },
+      {
+        "ambit": "Hymns for Children",
+        "star": 417,
+        "end": 430,
+        "backimage": "Fondo597a607"
+      }
+    ]
+  },
+  {
+    "thematic": "The Church and Doctrines",
+    "ambits": [
+      {
+        "ambit": "The Church",
+        "star": 431,
+        "end": 437,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Baptism",
+        "star": 438,
+        "end": 439,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Ministry and Missions",
+        "star": 440,
+        "end": 454,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "The Sabbath",
+        "star": 455,
+        "end": 470,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "The Lord's Supper",
+        "star": 471,
+        "end": 476,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Tithes and Offerings",
+        "star": 477,
+        "end": 479,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Workers' Gatherings",
+        "star": 480,
+        "end": 480,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Judgment",
+        "star": 481,
+        "end": 482,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "Special Occasions",
+    "ambits": [
+      {
+        "ambit": "Dedication",
+        "star": 483,
+        "end": 487,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Funeral",
+        "star": 488,
+        "end": 495,
+        "backimage": "Fondo590a596"
+      },
+      {
+        "ambit": "Thanksgiving",
+        "star": 496,
+        "end": 496,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Temperance",
+        "star": 497,
+        "end": 502,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Patriotic",
+        "star": 503,
+        "end": 513,
+        "backimage": "Fondo608a613"
+      },
+      {
+        "ambit": "New Year",
+        "star": 514,
+        "end": 514,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "Hymns for Social",
+    "ambits": [
+      {
+        "ambit": "Worship",
+        "star": 515,
+        "end": 524,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  },
+  {
+    "thematic": "Sabbath School",
+    "ambits": [
+      {
+        "ambit": "Holy Spirit",
+        "star": 525,
+        "end": 526,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Jesus' Love and Sympathy",
+        "star": 527,
+        "end": 532,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Sufferings and Death",
+        "star": 533,
+        "end": 535,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Second Coming",
+        "star": 536,
+        "end": 549,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "His Kingdom and Reign",
+        "star": 550,
+        "end": 558,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Repentance",
+        "star": 559,
+        "end": 560,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "The Call",
+        "star": 561,
+        "end": 575,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Warfare",
+        "star": 576,
+        "end": 576,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Faith and Trust",
+        "star": 577,
+        "end": 591,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Consecration",
+        "star": 592,
+        "end": 600,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Meditation and Prayer",
+        "star": 601,
+        "end": 606,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Joy or Peace",
+        "star": 607,
+        "end": 615,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Discipleship",
+        "star": 616,
+        "end": 618,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Work and Duty",
+        "star": 619,
+        "end": 629,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Watchfulness",
+        "star": 630,
+        "end": 630,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Hope and Aspiration",
+        "star": 631,
+        "end": 634,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Salvation and Redemption",
+        "star": 635,
+        "end": 638,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Eternal Life",
+        "star": 639,
+        "end": 642,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Adoration and Praise",
+        "star": 643,
+        "end": 651,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Christian Fellowship",
+        "star": 652,
+        "end": 652,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Sabbath",
+        "star": 653,
+        "end": 654,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Study of the Word",
+        "star": 655,
+        "end": 656,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Missions",
+        "star": 657,
+        "end": 657,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Offerings",
+        "star": 658,
+        "end": 658,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  },
+  {
+    "thematic": "Early Advent Hymns",
+    "ambits": [
+      {
+        "ambit": "Early Advent Hymns",
+        "star": 659,
+        "end": 670,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  },
+  {
+    "thematic": "Choir and Special",
+    "ambits": [
+      {
+        "ambit": "Choir and Special",
+        "star": 671,
+        "end": 682,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  },
+  {
+    "thematic": "Sentences and Responses",
+    "ambits": [
+      {
+        "ambit": "Sentences and Responses",
+        "star": 683,
+        "end": 703,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  }
+]

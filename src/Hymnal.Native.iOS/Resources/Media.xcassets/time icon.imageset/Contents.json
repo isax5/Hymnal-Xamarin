@@ -3,6 +3,16 @@
     {
       "filename" : "time.pdf",
       "idiom" : "universal"
+    },
+    {
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ],
+      "filename" : "timeIcon.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

@@ -2,7 +2,7 @@ using Foundation;
 using System;
 using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS
 {
     public partial class Music : UIViewController
     {

@@ -21,9 +21,17 @@ namespace Hymnal.UI.Test
 
             return ConfigureApp
                 .iOS
+                // Simulator
+                //.DeviceIdentifier("0556224C-A776-4646-AF5D-31CD6825AC23")
+                //.AppBundle("net.ddns.HimnarioAdventistaSPA")
+
+                // Real device
                 .InstalledApp("net.ddns.HimnarioAdventistaSPA")
+
+                .PreferIdeSettings()
+                .EnableLocalScreenshots()
                 .StartApp();
         }
     }
 }
-
+    

@@ -24,6 +24,9 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidLinkMode>None</AndroidLinkMode>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,18 +37,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidSupportedAbis>
     </AndroidSupportedAbis>
     <AndroidUseAapt2>True</AndroidUseAapt2>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
     <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
-    <EnableProguard>false</EnableProguard>
     <AotAssemblies>false</AotAssemblies>
     <EnableLLVM>false</EnableLLVM>
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <AndroidDexTool>d8</AndroidDexTool>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -56,8 +55,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
-    <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
@@ -65,12 +62,10 @@
     <EnableLLVM>true</EnableLLVM>
     <AndroidEnableProfiledAot>true</AndroidEnableProfiledAot>
     <DebugSymbols>true</DebugSymbols>
-    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
     <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
     <AndroidDexTool>d8</AndroidDexTool>
     <MandroidI18n />
     <AndroidPackageFormat>aab</AndroidPackageFormat>
-    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <BundleAssemblies>true</BundleAssemblies>
   </PropertyGroup>
   <ItemGroup>
@@ -106,6 +101,9 @@
     <AndroidAsset Include="Assets\NewHymnalThematicList.pt.json" />
     <AndroidAsset Include="Assets\NewHymnal.pt.json" />
     <AndroidAsset Include="Assets\NewHymnalThematicList.ru.json" />
+    <None Include="FodyWeavers.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -133,9 +131,6 @@
     </PackageReference>
     <PackageReference Include="Plugin.MediaManager">
       <Version>0.9.6</Version>
-    </PackageReference>
-    <PackageReference Include="Plugin.Multilingual">
-      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Realm">
       <Version>4.3.0</Version>
@@ -179,9 +174,6 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material">
       <Version>4.6.0.726</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Plugin.SharedTransitions">
-      <Version>2.1.0</Version>
-    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
@@ -215,16 +207,16 @@
     <AndroidResource Include="Resources\drawable-hdpi\Background.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
+      <Project>{4a4ac861-6dea-49e0-a330-5442b1f1f294}</Project>
+      <Name>StorageManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj">
-      <Project>{1ac8149a-b28f-4db6-a65e-31e379605528}</Project>
-      <Name>Hymnal.SharedNatives</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
-      <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>
+      <Project>{d9bcf416-9f88-4089-83a6-d9c9b9b1eb7d}</Project>
       <Name>Hymnal.XF.UI</Name>
     </ProjectReference>
   </ItemGroup>
@@ -2170,6 +2162,9 @@
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_383.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_384.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_385.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FodyWeavers.xml" />
   </ItemGroup>
   <!-- PIANO SHEETS-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

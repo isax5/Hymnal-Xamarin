@@ -1,17 +1,14 @@
-using Foundation;
+using System;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Platforms.Ios.Views;
-using MvvmCross.Platforms.Ios.Presenters.Attributes;
-using System;
-using UIKit;
 
-namespace Hymnal.iOS
+namespace Hymnal.Native.iOS.Views
 {
     [MvxFromStoryboard("Main")]
-    [MvxModalPresentation(WrapInNavigationController = true)]
+    //[MvxModalPresentation(WrapInNavigationController = true)]
     public partial class MusicSheetViewController : MvxViewController<MusicSheetViewModel>
     {
-        public MusicSheetViewController (IntPtr handle) : base (handle)
+        public MusicSheetViewController(IntPtr handle) : base(handle)
         {
         }
     }

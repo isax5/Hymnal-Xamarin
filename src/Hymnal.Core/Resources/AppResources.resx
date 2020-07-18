@@ -132,6 +132,14 @@
   <data name="Close" xml:space="preserve">
     <value>Close</value>
   </data>
+  <data name="Contribute" xml:space="preserve">
+    <value>Contribute</value>
+    <comment>Contribute app</comment>
+  </data>
+  <data name="CustomAmount" xml:space="preserve">
+    <value>Custom Amount</value>
+    <comment>Custom Amount</comment>
+  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
     <comment>Delete</comment>
@@ -145,6 +153,10 @@
   <data name="DisplayAndTypography" xml:space="preserve">
     <value>Display and typography</value>
   </data>
+  <data name="Donations" xml:space="preserve">
+    <value>Donations</value>
+    <comment>Donations</comment>
+  </data>
   <data name="Example" xml:space="preserve">
     <value>Example</value>
   </data>
@@ -154,14 +166,27 @@
   <data name="FontSize" xml:space="preserve">
     <value>Font Size</value>
   </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>GitHub</comment>
+  </data>
   <data name="Help" xml:space="preserve">
     <value>Help</value>
+    <comment>Search help</comment>
   </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
   </data>
   <data name="Index" xml:space="preserve">
     <value>Index</value>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Instrumental</value>
+    <comment>Instrumental</comment>
+  </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Instrumental or sung</value>
+    <comment>Select music: Instrumental or sung</comment>
   </data>
   <data name="NoInternetConnection" xml:space="preserve">
     <value>There is no Internet connection</value>
@@ -184,6 +209,18 @@
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Sung</value>
+    <comment>Sung (cantada)</comment>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Support</value>
+    <comment>Support app</comment>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Tip</value>
+    <comment>Tip 1,2,3,4...</comment>
   </data>
   <data name="VersionsAndLanguages" xml:space="preserve">
     <value>Versions and languages</value>
