@@ -60,8 +60,6 @@
 		<string>audio</string>
 		<string>fetch</string>
 	</array>
-	<key>CFBundleShortVersionString</key>
-	<string>4.1.1</string>
 	<key>UIApplicationShortcutItems</key>
 	<array>
 		<dict>
@@ -87,7 +85,9 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>Hymnal</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.1.2</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.4</string>
+	<string>1.0.1</string>
 </dict>
 </plist>
