@@ -277,14 +277,14 @@
                 </ViewCell>
 
                 <!--  Help  -->
-                <ViewCell>
+                <!--<ViewCell>
                     <Grid>
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding HelpCommand}" />
                         </Grid.GestureRecognizers>
                         <Label Text="{i18n:Translate Help}" />
                     </Grid>
-                </ViewCell>
+                </ViewCell>-->
 
             </TableSection>
 
