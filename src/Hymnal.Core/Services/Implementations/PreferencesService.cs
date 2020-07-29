@@ -1,4 +1,5 @@
 using System;
+using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Newtonsoft.Json;
 using Xamarin.Essentials;
@@ -19,7 +20,7 @@ namespace Hymnal.Core.Services
             get
             {
                 var text = Preferences.Get(nameof(ConfiguratedHymnalLanguage), string.Empty);
-                return string.IsNullOrWhiteSpace(text) ? null : JsonConvert.DeserializeObject<HymnalLanguage>(text);
+                return string.IsNullOrWhiteSpace(text) ? null : JsonConvert.DeserializeObject<HymnalLanguage>(text).Configuration();
             }
             set
             {

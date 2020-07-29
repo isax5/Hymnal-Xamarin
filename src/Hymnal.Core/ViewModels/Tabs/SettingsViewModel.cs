@@ -71,7 +71,7 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
             await base.Initialize();
-            HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage.Configuration();
+            HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage;
 
             AppVersionString = AppInfo.VersionString;
             AppBuildString = AppInfo.BuildString;

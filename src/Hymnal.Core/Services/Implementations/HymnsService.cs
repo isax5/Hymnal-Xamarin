@@ -47,7 +47,7 @@ namespace Hymnal.Core.Services
             {
                 try
                 {
-                    var file = await filesService.ReadFileAsync(language.Configuration().HymnsFileName);
+                    var file = await filesService.ReadFileAsync(language.HymnsFileName);
                     List<Hymn> hymns = JsonConvert.DeserializeObject<List<Hymn>>(file);
 
                     // Set Id of the language to know allways where it is from
@@ -103,7 +103,7 @@ namespace Hymnal.Core.Services
 
             if (!ThematicDictionary.ContainsKey(language.Id))
             {
-                var file = await filesService.ReadFileAsync(language.Configuration().ThematicHymnsFileName);
+                var file = await filesService.ReadFileAsync(language.ThematicHymnsFileName);
                 List<Thematic> thematicList = JsonConvert.DeserializeObject<List<Thematic>>(file);
 
                 lock (ThematicDictionary)
