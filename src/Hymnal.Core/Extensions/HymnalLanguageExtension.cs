@@ -24,7 +24,7 @@ namespace Hymnal.Core.Extensions
         {
             // Number in 3 digits number when it's less than 3 digits. In an other situation
             // the number will not change
-            return hymnalLanguage.Configuration().InstrumentalMusic.Replace("###", hymnNumber.ToString("D3"));
+            return hymnalLanguage.InstrumentalMusic.Replace("###", hymnNumber.ToString("D3"));
         }
 
         /// <summary>
@@ -37,7 +37,7 @@ namespace Hymnal.Core.Extensions
         {
             // Number in 3 digits number when it's less than 3 digits. In an other situation
             // the number will not change
-            return hymnalLanguage.Configuration().SungMusic.Replace("###", hymnNumber.ToString("D3"));
+            return hymnalLanguage.SungMusic.Replace("###", hymnNumber.ToString("D3"));
         }
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace Hymnal.Core.Extensions
         /// <returns></returns>
         public static string GetMusicSheetSource(this HymnalLanguage hymnalLanguage, int hymnNymber)
         {
-            return hymnalLanguage.Configuration().HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
+            return hymnalLanguage.HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
         }
     }
 }
