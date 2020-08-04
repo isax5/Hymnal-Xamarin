@@ -19,7 +19,7 @@ PlayStore:
 ![Recordit GIF](https://recordit.co/vUNDwdnUFa.gif)
 
 
-<img src="https://recordit.co/vUNDwdnUFa.gif"/>
+<img width="200" alt="portfolio_view" src="https://recordit.co/vUNDwdnUFa.gif"/>
 
 ## Languages supported:
 - English
@@ -235,5 +235,6 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA4NjUwMjIyNywxNjg1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2OD
+UwNTY5MDddfQ==
 -->
