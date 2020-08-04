@@ -24,7 +24,11 @@ Table of contents
       * [Languages supported](#languages-supported)
       * [Hymnal versions](#hymnal-versions)
    * [Tests](#tests)
-   * [Dependency](#dependency)
+   * [Clone](#clone)
+   * [Contributing](#contributing)
+   * [Team](#team)
+   * [FAQ](#faq)
+   * [Support](#support)
 <!--te-->
 
 ### Main Packages in version 4.1.2
@@ -123,7 +127,7 @@ Reach out to me at one of the following places!
 ## Donations (Soon)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc4NDkzNTk4NiwtMjQ1NTE2NjQzLDE5MD
+eyJoaXN0b3J5IjpbLTg5MjI5NzIxMCwtMjQ1NTE2NjQzLDE5MD
 c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
 MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
 g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
