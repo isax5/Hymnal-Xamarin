@@ -73,11 +73,6 @@ Table of contents
 |Android     |Beta testing program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA&hl=en)|
 |iOS         |Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program |
 
-## Installation
-
-- All the `code` required to get started
-- Images of what it should look like
-
 ### Clone
 
 - Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
@@ -105,35 +100,22 @@ $ bower install
 ---
 
 ## Features
+- Music
+- Piano sheets
+- 
+
+
 ## Usage (Optional)
 ## Documentation (Optional)
 ## Tests (Optional)
 
 - Going into more detail on code and technologies used
 - I utilized this nifty <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a> for this sample `README`.
-
 ---
 
 ## Contributing
 
 > To get started...
-
-### Step 1
-
-- **Option 1**
-    - 🍴 Fork this repo!
-
-- **Option 2**
-    - 👯 Clone this repo to your local machine using `https://github.com/joanaz/HireDot2.git`
-
-### Step 2
-
-- **HACK AWAY!** 🔨🔨🔨
-
-### Step 3
-
-- 🔃 Create a new pull request using <a href="https://github.com/joanaz/HireDot2/compare/" target="_blank">`https://github.com/joanaz/HireDot2/compare/`</a>.
-
 ---
 
 ## Team
@@ -178,8 +160,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTEzMTA4ODksMTkwNzY0MTcwMywtMj
-M0MTU4MTAyLC00NzUyMzMzNDIsMjE0Njc3MDcxNCw2MzEzNjYx
-MDIsLTcyMDEzNTcwNiwtNDY3MjcxMjMyLC00ODkyMTg4MjAsMT
-A4NjUwMjIyNywxNjg1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTM4NTkwODU4NiwxOTA3NjQxNzAzLC0yMz
+QxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2NzcwNzE0LDYzMTM2NjEw
+MiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLTQ4OTIxODgyMCwxMD
+g2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
