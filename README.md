@@ -1,5 +1,5 @@
 
-# Hymnal
+# Adventist Hymnal Xamarin
 New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
 > Version 4.1.2
@@ -32,13 +32,6 @@ PlayStore:
 - Español 1962
 - Português 1996
 - Русский 1997
-
-
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
-
-<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
-
-***INSERT GRAPHIC HERE (include hyperlink in image)***
 
 # Repository Title Goes Here
 
@@ -233,6 +226,6 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4NzUyMzY1LC00ODkyMTg4MjAsMTA4Nj
-UwMjIyNywxNjg1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTE1OTk2MDA1NTQsLTQ4OTIxODgyMCwxMD
+g2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
