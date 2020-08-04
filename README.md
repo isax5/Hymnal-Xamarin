@@ -29,6 +29,7 @@ Table of contents
    * [Team](#team)
    * [FAQ](#faq)
    * [Support](#support)
+   * [Donations](#donations-soon)
 <!--te-->
 
 ### Main Packages in version 4.1.2
@@ -127,8 +128,8 @@ Reach out to me at one of the following places!
 ## Donations (Soon)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg5MjI5NzIxMCwtMjQ1NTE2NjQzLDE5MD
-c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
-MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
-g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
+eyJoaXN0b3J5IjpbLTE2ODIxNjgxODAsLTI0NTUxNjY0MywxOT
+A3NjQxNzAzLC0yMzQxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2Nzcw
+NzE0LDYzMTM2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLT
+Q4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
