@@ -75,28 +75,8 @@ Table of contents
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`'sadf'àsdf`ásdf´
-
-### Setup
-
-- If you want more syntax highlighting, format your code like this:
-
-> update and install this package first
-
-```shell
-$ brew update
-$ brew install fvcproductions
-```
-
-> now install npm and bower packages
-
-```shell
-$ npm install
-$ bower install
-```
-
-- For all the possible languages that support syntax highlithing on GitHub (which is basically all of them), refer <a href="https://github.com/github/linguist/blob/master/lib/linguist/languages.yml" target="_blank">here</a>.
-
+- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- 
 ---
 
 ## Features
@@ -153,8 +133,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3ODg5ODA4OTIsLTI0NTUxNjY0MywxOT
-A3NjQxNzAzLC0yMzQxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2Nzcw
-NzE0LDYzMTM2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLT
-Q4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
+eyJoaXN0b3J5IjpbMTY5MzUyNTE3MCwtMjQ1NTE2NjQzLDE5MD
+c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
+MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
+g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
 -->
