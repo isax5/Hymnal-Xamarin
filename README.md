@@ -25,7 +25,11 @@ PlayStore:
 - Portuguese
 
 ## Hymnal versions
-- Engish 
+- English 1985
+- English 1941
+- Spanish 2009
+- Spanish 1962
+- Portu
 
 
 
@@ -228,5 +232,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTY4MzE3MDk1MiwtODYwNDY0OTY4XX0=
+eyJoaXN0b3J5IjpbMTAxOTE1NDg1OSwtODYwNDY0OTY4XX0=
 -->
