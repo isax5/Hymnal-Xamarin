@@ -80,7 +80,9 @@ let generateProject = project => {
 };
 ```
 
----
+
+## Test
+
 
 ## Installation
 
@@ -149,11 +151,6 @@ $ bower install
 
 > Or Contributors/People
 
-| <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> | <a href="http://fvcproductions.com" target="_blank">**FVCproductions**</a> |
-| :---: |:---:| :---:|
-| [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)    | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) | [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)  |
-| <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> | <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
-
 - You can just grab their GitHub profile image URL
 - You should probably resize their picture using `?s=200` at the end of the image URL.
 
@@ -192,7 +189,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxND
-Y3NzA3MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIz
-MiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
+eyJoaXN0b3J5IjpbMjA3MjM0NDYwNSwtMjM0MTU4MTAyLC00Nz
+UyMzMzNDIsMjE0Njc3MDcxNCw2MzEzNjYxMDIsLTcyMDEzNTcw
+NiwtNDY3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNj
+g1MDU2OTA3XX0=
 -->
