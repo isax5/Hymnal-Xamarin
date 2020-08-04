@@ -25,21 +25,21 @@
 |Android       |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 |iOS           |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
 
-## Presence in stores
+### Presence in stores
 - [AppStore](https://apps.apple.com/us/app/adventist-hymnal/id1153114394)
 - [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA)
 
-## Demo
+### Demo
 ![Recordit GIF](https://recordit.co/IoYOhRUrmB.gif)
 
 
-## Languages supported:
+### Languages supported:
 - English
 - Spanish
 - Russian
 - Portuguese
 
-## Hymnal versions
+### Hymnal versions
 - English 1985
 - English 1941
 - Español 2009
@@ -47,49 +47,6 @@
 - Português 1996
 - Русский 1997
 
-> Subtitle or Short Description Goes Here
-
-> ideally one sentence
-
-> include terms/tags that can be searched
-
-**Badges will go here**
-
-- build status
-- issues (waffle.io maybe)
-- devDependencies
-- npm package
-- coverage
-- slack
-- downloads
-- gitter chat
-- license
-
-- For more on these wonderful ~~badgers~~ badges, refer to <a href="http://badges.github.io/badgerbadgerbadger/" target="_blank">`badgerbadgerbadger`</a>.
-
-- Most people will glance at your `README`, *maybe* star it, and leave
-- Ergo, people should understand instantly what your project is about based on your repo
-
-> Tips
-
-- HAVE WHITE SPACE
-- MAKE IT PRETTY
-- GIFS ARE REALLY COOL
-
-> GIF Tools
-
-- Use <a href="http://recordit.co/" target="_blank">**Recordit**</a> to create quicks screencasts of your desktop and export them as `GIF`s.
-- For terminal sessions, there's <a href="https://github.com/chjj/ttystudio" target="_blank">**ttystudio**</a> which also supports exporting `GIF`s.
-
-**Recordit**
-
-![Recordit GIF](http://g.recordit.co/iLN6A0vSD8.gif)
-
-**ttystudio**
-
-![ttystudio GIF](https://raw.githubusercontent.com/chjj/ttystudio/master/img/example.gif)
-
----
 
 ## Table of Contents (Optional)
 
@@ -231,7 +188,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg1OTEzODE3MywtNzIwMTM1NzA2LC00Nj
-cyNzEyMzIsLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5
-MDddfQ==
+eyJoaXN0b3J5IjpbNDE5OTcwMzcxLC03MjAxMzU3MDYsLTQ2Nz
+I3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1Njkw
+N119
 -->
