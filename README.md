@@ -11,8 +11,6 @@ iOS Status: [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-
 
 
 ## Languages supported:
-
-This version of the app has many languages:
 - English
 - Spanish
 - Russian
@@ -54,7 +52,7 @@ This version of the app has many languages:
 ***INSERT ANOTHER GRAPHIC HERE***
 
 [![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)
-
+]()
 - Most people will glance at your `README`, *maybe* star it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
 
@@ -219,5 +217,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzAzMjIwODQzXX0=
+eyJoaXN0b3J5IjpbMzc2MzM5OTBdfQ==
 -->
