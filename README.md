@@ -4,9 +4,9 @@
 
 
 ### Main Packages in version 4.1.2
-|Project         |Package                        |Version                      |
-|----------------|-------------------------------|-----------------------------|
-|Hymnal.Core     |(Plugin.MediaManager](https://www.nuget.org/packages/Plugin.MediaManager/]            |'Isn't this fun?'            |
+|Project         |Package                                  |Version                                    |
+|----------------|-----------------------------------------|-------------------------------------------|
+|Hymnal.Core     |[Plugin.MediaManager](https://www.nuget.org/packages/Plugin.MediaManager/) |         |
 |Hymanl.XF.UI    | [asdf](https://www.nuget.org/packages/Plugin.MediaManager/)                      |                             |
 |Hymnal.XF.Droid |`"Isn't this fun?"`            |"Isn't this fun?"            |
 |Hymnal.XF.iOS   |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
@@ -230,7 +230,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc5NTIxMzQ3MCwtNzIwMTM1NzA2LC00Nj
+eyJoaXN0b3J5IjpbLTI4MTY3NDU4NiwtNzIwMTM1NzA2LC00Nj
 cyNzEyMzIsLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5
 MDddfQ==
 -->
