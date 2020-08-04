@@ -15,7 +15,7 @@ PlayStore:
 [https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA)
 
 
-![Recordit GIF](https://recordit.co/6uWDUSn3gm.gif)
+![Recordit GIF](https://recordit.co/G5VnE8waPM.gif)
 
 
 ## Languages supported:
@@ -23,6 +23,9 @@ PlayStore:
 - Spanish
 - Russian
 - Portuguese
+
+## Hymnal versions
+- Engish 
 
 
 
@@ -225,5 +228,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MDQ2NDk2OF19
+eyJoaXN0b3J5IjpbLTY4MzE3MDk1MiwtODYwNDY0OTY4XX0=
 -->
