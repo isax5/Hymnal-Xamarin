@@ -16,7 +16,7 @@ Table of contents
 <!--ts-->
    * [Features](#features)
    * [Table of contents](#table-of-contents)
-   * [Packages](#main-packages-in-version-412)
+   * [Packages](#main-packages-in-version-4)
    * [Build status](#build-status)
    * [Usage](#usage)
       * [Presence in stores](#presence-in-stores)
@@ -32,7 +32,7 @@ Table of contents
    * [Donations](#donations-soon)
 <!--te-->
 
-### Main Packages in version 4.1.2
+### Main Packages in version 4
 |Package                       |NuGet Link                                                       |
 |------------------------------|-----------------------------------------------------------------|
 |Xamarin.Forms                 |https://www.nuget.org/packages/Xamarin.Forms/                    |
@@ -49,10 +49,10 @@ Table of contents
 
 
 ### Build status
-|Platform       |Package Name    |Version        |AppCenter build  |
-|---------------|----------------|---------------|-----------------|
-|Android        |Hymnal.XF.Droid |4.1.2 (40121)  |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
-|iOS            |Hymnal.XF.iOS   |4.1.2 (1.0.2)  |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
+|Platform       |Package Name    |Version           |AppCenter build  |
+|---------------|--------------------|-----------------|--------------------|
+|Android        |Hymnal.XF.Droid  |4                     |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
+|iOS               |Hymnal.XF.iOS     |4                     |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
 
 # Usage
 
@@ -124,10 +124,3 @@ Reach out to me at one of the following places!
 ---
 
 ## Donations (Soon)
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbLTczNTE3NTgwNSwtMjQ1NTE2NjQzLDE5MD
-c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
-MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
-g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
--->
