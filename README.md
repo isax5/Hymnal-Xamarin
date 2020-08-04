@@ -20,7 +20,7 @@
 
 
 ### Build status
-|Android       |AppCenter       |
+|Platform       |AppCenter build       |
 |--------------|----------------|
 |Android       |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 |iOS           |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
@@ -188,7 +188,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTU4MjAyNDcsLTcyMDEzNTcwNiwtNDY3Mj
-cxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2OTA3
-XX0=
+eyJoaXN0b3J5IjpbMTc4NjA0OTAxMywtNzIwMTM1NzA2LC00Nj
+cyNzEyMzIsLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5
+MDddfQ==
 -->
