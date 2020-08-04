@@ -104,11 +104,9 @@ Table of contents
 ## Team
 
 > Or Contributors/People
-- Isaac Rebolledo `[](https://github.com/isax5/)
-- You can just grab their GitHub profile image URL
-- You should probably resize their picture using `?s=200` at the end of the image URL.
+- [Isaac Rebolledo](https://github.com/isax5/)
 
-
+---
 
 ## FAQ
 
@@ -128,7 +126,7 @@ Reach out to me at one of the following places!
 ## Donations (Soon)
 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAwMjA5MTQyNCwtMjQ1NTE2NjQzLDE5MD
+eyJoaXN0b3J5IjpbLTczNTE3NTgwNSwtMjQ1NTE2NjQzLDE5MD
 c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
 MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
 g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
