@@ -102,8 +102,7 @@ $ bower install
 ## Features
 - Music
 - Piano sheets
-- 
-
+- Multiple languages
 
 ## Usage (Optional)
 ## Documentation (Optional)
@@ -160,7 +159,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM4NTkwODU4NiwxOTA3NjQxNzAzLC0yMz
+eyJoaXN0b3J5IjpbLTI0NTUxNjY0MywxOTA3NjQxNzAzLC0yMz
 QxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2NzcwNzE0LDYzMTM2NjEw
 MiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLTQ4OTIxODgyMCwxMD
 g2NTAyMjI3LDE2ODUwNTY5MDddfQ==
