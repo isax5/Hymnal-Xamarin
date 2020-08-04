@@ -4,11 +4,12 @@
 
 
 ### Main Packages in version 4.1.2
-|Package.             |NuGet Link                                               |
-|---------------------|---------------------------------------------------------|
-|Xamarin.Essentials   |https://www.nuget.org/packages/Xamarin.Essentials/       |
-|Hymanl.XF.UI    |https://www.nuget.org/packages/Plugin.MediaManager/        |
-|Hymnal.XF.Droid |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Package                       |NuGet Link                                                       |
+|------------------------------|-----------------------------------------------------------------|
+|Xamarin.Essentials            |https://www.nuget.org/packages/Xamarin.Essentials/               |
+|Plugin.MediaManager           |https://www.nuget.org/packages/Plugin.MediaManager/              |
+|Microsoft.AppCenter.Analytics |https://www.nuget.org/packages/Microsoft.AppCenter.Analytics/    |
+||https://www.nuget.org/packages/Microsoft.AppCenter.Crashes/|
 |Hymnal.XF.iOS   |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 
 ### Build status
@@ -230,7 +231,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk2OTU1ODM2OCwtNzIwMTM1NzA2LC00Nj
+eyJoaXN0b3J5IjpbLTc5NjUwMDU0MiwtNzIwMTM1NzA2LC00Nj
 cyNzEyMzIsLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5
 MDddfQ==
 -->
