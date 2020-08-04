@@ -3,19 +3,8 @@
 > New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
 
-Table of Contents
-=
-
-- [Main Packages in version 4.1.2](#build)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
-- [License](#license)
-
 Table of contents
-=================
+============
 
 <!--ts-->
    * [gh-md-toc](#gh-md-toc)
@@ -24,8 +13,8 @@ Table of contents
    * [Usage](#usage)
       * [Presence in stores](#presence-in-stores)
       * [Demo](#demo)
-      * [](#remote-files)
-      * [](#multiple-files)
+      * [Languages supported](#languages-supported)
+      * [Hymnal versions](#hymnal-versions)
       * [](#combo)
       * [Auto insert and update TOC](#auto-insert-and-update-toc)
       * [GitHub token](#github-token)
@@ -206,7 +195,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MDc5NzYyMywyMTQ2NzcwNzE0LDYzMT
+eyJoaXN0b3J5IjpbMTY2ODIxNzg3MSwyMTQ2NzcwNzE0LDYzMT
 M2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLTQ4OTIxODgy
 MCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
