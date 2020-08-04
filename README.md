@@ -84,7 +84,7 @@ let generateProject = project => {
 ## Test
 |Platoform   |Public Link                                           |
 |------------|------------------------------------------------------|
-|Android     |[]()|
+|Android     |Beta program [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA&hl=en)|
 |iOS         |[TestFlight](https://testflight.apple.com/join/0zTExNbR)
 
 ## Installation
@@ -192,7 +192,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2NTQxNTI2MDUsLTIzNDE1ODEwMiwtND
+eyJoaXN0b3J5IjpbLTIwMjAyNjAxMTAsLTIzNDE1ODEwMiwtND
 c1MjMzMzQyLDIxNDY3NzA3MTQsNjMxMzY2MTAyLC03MjAxMzU3
 MDYsLTQ2NzI3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMT
 Y4NTA1NjkwN119
