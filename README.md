@@ -112,7 +112,7 @@ Reach out to me at one of the following places!
 
 - Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
 - Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- LinkedIn at <a
+- LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
 
 ---
 
@@ -126,8 +126,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzg1MDMwMDI5LC0yNDU1MTY2NDMsMTkwNz
-Y0MTcwMywtMjM0MTU4MTAyLC00NzUyMzMzNDIsMjE0Njc3MDcx
-NCw2MzEzNjYxMDIsLTcyMDEzNTcwNiwtNDY3MjcxMjMyLC00OD
-kyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTEwNzY4OTI1NzIsLTI0NTUxNjY0MywxOT
+A3NjQxNzAzLC0yMzQxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2Nzcw
+NzE0LDYzMTM2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLT
+Q4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
