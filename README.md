@@ -6,7 +6,7 @@
 Table of Contents
 =
 
-- [Installation](#installation)
+- [Main Packages in version 4.1.2](#Main)
 - [Features](#features)
 - [Contributing](#contributing)
 - [Team](#team)
@@ -204,7 +204,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2Nz
-I3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1Njkw
-N119
+eyJoaXN0b3J5IjpbLTEzOTMxNDExNDEsNjMxMzY2MTAyLC03Mj
+AxMzU3MDYsLTQ2NzI3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIy
+MjcsMTY4NTA1NjkwN119
 -->
