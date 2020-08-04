@@ -15,9 +15,6 @@ Table of contents
       * [Demo](#demo)
       * [Languages supported](#languages-supported)
       * [Hymnal versions](#hymnal-versions)
-      * [](#combo)
-      * [Auto insert and update TOC](#auto-insert-and-update-toc)
-      * [GitHub token](#github-token)
    * [Tests](#tests)
    * [Dependency](#dependency)
 <!--te-->
@@ -195,7 +192,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY2ODIxNzg3MSwyMTQ2NzcwNzE0LDYzMT
+eyJoaXN0b3J5IjpbLTQ3NTIzMzM0MiwyMTQ2NzcwNzE0LDYzMT
 M2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLTQ4OTIxODgy
 MCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
