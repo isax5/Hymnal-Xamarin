@@ -145,12 +145,6 @@ Reach out to me at one of the following places!
 
 ## Donations (Soon)
 
-- You could include a <a href="https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png" target="_blank">Gratipay</a> link as well.
-
-[![Support via Gratipay](https://cdn.rawgit.com/gratipay/gratipay-badge/2.3.0/dist/gratipay.png)](https://gratipay.com/fvcproductions/)
-
-
----
 
 ## License
 
@@ -159,7 +153,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1MjQ1MDEyMCwtMjQ1NTE2NjQzLDE5MD
+eyJoaXN0b3J5IjpbMjA1ODMxMjgxMSwtMjQ1NTE2NjQzLDE5MD
 c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
 MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
 g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
