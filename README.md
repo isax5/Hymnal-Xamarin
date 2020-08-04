@@ -65,27 +65,13 @@ Table of contents
 - Português 1996
 - Русский 1997
 
----
-
-## Example (Optional)
-
-```javascript
-// code away!
-
-let generateProject = project => {
-  let code = [];
-  for (let js = 0; js < project.length; js++) {
-    code.push(js);
-  }
-};
-```
-
-
 ## Test
+> Beta testing programs:
+
 |Platoform   |Link                                           |
 |------------|------------------------------------------------------|
-|Android     |Beta program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA&hl=en)|
-|iOS         |Public link [TestFlight](https://testflight.apple.com/join/0zTExNbR)|
+|Android     |Beta testing program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA&hl=en)|
+|iOS         |Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program |
 
 ## Installation
 
@@ -192,8 +178,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkwNzY0MTcwMywtMjM0MTU4MTAyLC00Nz
-UyMzMzNDIsMjE0Njc3MDcxNCw2MzEzNjYxMDIsLTcyMDEzNTcw
-NiwtNDY3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNj
-g1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTEyNTEzMTA4ODksMTkwNzY0MTcwMywtMj
+M0MTU4MTAyLC00NzUyMzMzNDIsMjE0Njc3MDcxNCw2MzEzNjYx
+MDIsLTcyMDEzNTcwNiwtNDY3MjcxMjMyLC00ODkyMTg4MjAsMT
+A4NjUwMjIyNywxNjg1MDU2OTA3XX0=
 -->
