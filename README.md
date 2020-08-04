@@ -9,9 +9,10 @@ iOS Status: [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-
 
 ## Presence in stores
 AppStore:
-https://apps.apple.com/us/app/adventist-hymnal/id1153114394
+[https://apps.apple.com/us/app/adventist-hymnal/id1153114394](https://apps.apple.com/us/app/adventist-hymnal/id1153114394)
 
-PlayStore
+PlayStore:
+[https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA)
 
 
 ![Recordit GIF](https://recordit.co/6uWDUSn3gm.gif)
@@ -224,5 +225,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIzMDI4MDQxMl19
+eyJoaXN0b3J5IjpbLTg2MDQ2NDk2OF19
 -->
