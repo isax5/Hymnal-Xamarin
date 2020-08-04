@@ -8,7 +8,7 @@
 - Music
 - Piano sheets
 - Multiple languages
----
+
 
 Table of contents
 ============
@@ -118,20 +118,20 @@ Reach out to me at one of the following places!
 
 - Twitter at <a href="https://twitter.com/IsaacRebolledo" target="_blank">`@IsaacRebolledo`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
-- 
 ---
 
 ## Donations (Soon)
 
 
 ## License
-
+<!--
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
 
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
-- Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
+
+ - Copyright 2020 © Isaac Rebolledo -->
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkzMTM1NTUzMywtMjQ1NTE2NjQzLDE5MD
+eyJoaXN0b3J5IjpbMTAxOTQ2NjIxMCwtMjQ1NTE2NjQzLDE5MD
 c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
 MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
 g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
