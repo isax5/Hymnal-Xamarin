@@ -3,6 +3,12 @@
 > New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
 
+
+## Features
+- Music
+- Piano sheets
+- Multiple languages
+---
 Table of contents
 ============
 
@@ -79,12 +85,6 @@ Table of contents
 - 
 ---
 
-## Features
-- Music
-- Piano sheets
-- Multiple languages
----
-
 ## Contributing
 
 > Just fork	
@@ -111,7 +111,7 @@ Table of contents
 Reach out to me at one of the following places!
 
 - Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
-- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
+- Twitter at <a href="https://twitter.com/IsaacRebolledo" target="_blank">`@IsaacRebolledo`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
 
 ---
@@ -126,8 +126,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNzY4OTI1NzIsLTI0NTUxNjY0MywxOT
-A3NjQxNzAzLC0yMzQxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2Nzcw
-NzE0LDYzMTM2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLT
-Q4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
+eyJoaXN0b3J5IjpbMTczMDgxNTgzMywtMjQ1NTE2NjQzLDE5MD
+c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
+MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
+g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
 -->
