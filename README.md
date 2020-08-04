@@ -83,18 +83,11 @@ Table of contents
 - Music
 - Piano sheets
 - Multiple languages
-
-## Usage (Optional)
-## Documentation (Optional)
-## Tests (Optional)
-
-- Going into more detail on code and technologies used
-- I utilized this nifty <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet" target="_blank">Markdown Cheatsheet</a> for this sample `README`.
 ---
 
 ## Contributing
 
-> To get started...
+> Just fork	
 ---
 
 ## Team
@@ -119,7 +112,7 @@ Reach out to me at one of the following places!
 
 - Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
 - Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- Insert more social links here.
+- LinkedIn at <a
 
 ---
 
@@ -133,8 +126,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY5MzUyNTE3MCwtMjQ1NTE2NjQzLDE5MD
-c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
-MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
-g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
+eyJoaXN0b3J5IjpbNzg1MDMwMDI5LC0yNDU1MTY2NDMsMTkwNz
+Y0MTcwMywtMjM0MTU4MTAyLC00NzUyMzMzNDIsMjE0Njc3MDcx
+NCw2MzEzNjYxMDIsLTcyMDEzNTcwNiwtNDY3MjcxMjMyLC00OD
+kyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2OTA3XX0=
 -->
