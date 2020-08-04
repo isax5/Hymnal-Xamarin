@@ -7,7 +7,10 @@ Android Status: [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5
 
 iOS Status: [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms)
 
-![Recordit GIF](https://recordit.co/6uWDUSn3gm)
+![Recordit GIF](https://recordit.co/6uWDUSn3gm.gif)
+
+
+
 
 This version of the app has many languages:
 - English
@@ -50,7 +53,7 @@ This version of the app has many languages:
 
 ***INSERT ANOTHER GRAPHIC HERE***
 
-[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
+[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)
 
 - Most people will glance at your `README`, *maybe* star it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
@@ -216,5 +219,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTMzMTc0ODQzOF19
+eyJoaXN0b3J5IjpbODE2MzM3MTU0XX0=
 -->
