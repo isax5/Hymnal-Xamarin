@@ -6,7 +6,7 @@
 ### Main Packages in version 4.1.2
 |Project         |Package                        |Version                      |
 |----------------|-------------------------------|-----------------------------|
-|Hymnal.Core     |`'Isn't this fun?'`            |'Isn't this fun?'            |
+|Hymnal.Core     |(Plugin.MediaManager)            |'Isn't this fun?'            |
 |Hymanl.XF.UI    | asdfasdf                      |                             |
 |Hymnal.XF.Droid |`"Isn't this fun?"`            |"Isn't this fun?"            |
 |Hymnal.XF.iOS   |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
@@ -230,7 +230,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1OTg0NjA4MzIsLTcyMDEzNTcwNiwtND
+eyJoaXN0b3J5IjpbLTEyMzkyODY1NjgsLTcyMDEzNTcwNiwtND
 Y3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2
 OTA3XX0=
 -->
