@@ -10,7 +10,7 @@ iOS Status: [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-
 ![Recordit GIF](https://recordit.co/6uWDUSn3gm.gif)
 
 
-
+## Languages supported:
 
 This version of the app has many languages:
 - English
@@ -219,5 +219,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODE2MzM3MTU0XX0=
+eyJoaXN0b3J5IjpbMzAzMjIwODQzXX0=
 -->
