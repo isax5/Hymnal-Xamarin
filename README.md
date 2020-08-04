@@ -3,10 +3,10 @@
 >New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
 
-### Main configuration in version 4.1.2
-|Project         |Package                                  |Version                                    |
-|----------------|-----------------------------------------|-------------------------------------------|
-|Hymnal.Core     |[Plugin.MediaManager](https://www.nuget.org/packages/Plugin.MediaManager/) |0.9.6    |
+### Main projects in version 4.1.2
+|Project         |Package                           |Version                                    |
+|----------------|----------------------------------|-------------------------------------------|
+|Hymnal.Core     |                                  |0.9.6    |
 |Hymanl.XF.UI    | [asdf](https://www.nuget.org/packages/Plugin.MediaManager/)                      |                             |
 |Hymnal.XF.Droid |`"Isn't this fun?"`            |"Isn't this fun?"            |
 |Hymnal.XF.iOS   |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
@@ -230,7 +230,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzI1MzAwNTUyLC03MjAxMzU3MDYsLTQ2Nz
+eyJoaXN0b3J5IjpbMjEzOTg0OTU5LC03MjAxMzU3MDYsLTQ2Nz
 I3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1Njkw
 N119
 -->
