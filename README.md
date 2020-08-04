@@ -3,9 +3,8 @@
 > New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
 
-## Table of Contents
-
-> If your `README` has a lot of info, section headers might be nice.
+Table of Contents
+=
 
 - [Installation](#installation)
 - [Features](#features)
@@ -15,6 +14,24 @@
 - [Support](#support)
 - [License](#license)
 
+Table of contents
+=================
+
+<!--ts-->
+   * [gh-md-toc](#gh-md-toc)
+   * [Table of contents](#table-of-contents)
+   * [Installation](#installation)
+   * [Usage](#usage)
+      * [STDIN](#stdin)
+      * [Local files](#local-files)
+      * [Remote files](#remote-files)
+      * [Multiple files](#multiple-files)
+      * [Combo](#combo)
+      * [Auto insert and update TOC](#auto-insert-and-update-toc)
+      * [GitHub token](#github-token)
+   * [Tests](#tests)
+   * [Dependency](#dependency)
+<!--te-->
 
 ### Main Packages in version 4.1.2
 |Package                       |NuGet Link                                                       |
@@ -187,7 +204,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwODA4MTg2NiwtNzIwMTM1NzA2LC00Nj
-cyNzEyMzIsLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5
-MDddfQ==
+eyJoaXN0b3J5IjpbNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2Nz
+I3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1Njkw
+N119
 -->
