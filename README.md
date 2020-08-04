@@ -22,11 +22,11 @@ Table of contents
    * [Table of contents](#table-of-contents)
    * [Installation](#installation)
    * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
-      * [Remote files](#remote-files)
-      * [Multiple files](#multiple-files)
-      * [Combo](#combo)
+      * [Presence in stores](#presence-in-stores)
+      * [Demo](#demo)
+      * [](#remote-files)
+      * [](#multiple-files)
+      * [](#combo)
       * [Auto insert and update TOC](#auto-insert-and-update-toc)
       * [GitHub token](#github-token)
    * [Tests](#tests)
@@ -54,6 +54,8 @@ Table of contents
 |---------------|----------------|---------------|-----------------|
 |Android        |Hymnal.XF.Droid |4.1.2 (40121)  |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 |iOS            |Hymnal.XF.iOS   |4.1.2 (1.0.2)  |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
+
+# Usage
 
 ### Presence in stores
 - [AppStore](https://apps.apple.com/us/app/adventist-hymnal/id1153114394)
@@ -204,7 +206,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjE0Njc3MDcxNCw2MzEzNjYxMDIsLTcyMD
-EzNTcwNiwtNDY3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIy
-NywxNjg1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbMTQ2MDc5NzYyMywyMTQ2NzcwNzE0LDYzMT
+M2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLTQ4OTIxODgy
+MCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
