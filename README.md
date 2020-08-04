@@ -3,6 +3,19 @@
 > New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
 
+## Table of Contents
+
+> If your `README` has a lot of info, section headers might be nice.
+
+- [Installation](#installation)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Team](#team)
+- [FAQ](#faq)
+- [Support](#support)
+- [License](#license)
+
+
 ### Main Packages in version 4.1.2
 |Package                       |NuGet Link                                                       |
 |------------------------------|-----------------------------------------------------------------|
@@ -46,20 +59,6 @@
 - Español 1962
 - Português 1996
 - Русский 1997
-
-
-## Table of Contents (Optional)
-
-> If your `README` has a lot of info, section headers might be nice.
-
-- [Installation](#installation)
-- [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
-- [License](#license)
-
 
 ---
 
@@ -188,7 +187,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Mjg0MjQ4NzMsLTcyMDEzNTcwNiwtND
-Y3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2
-OTA3XX0=
+eyJoaXN0b3J5IjpbLTQwODA4MTg2NiwtNzIwMTM1NzA2LC00Nj
+cyNzEyMzIsLTQ4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5
+MDddfQ==
 -->
