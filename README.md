@@ -16,10 +16,10 @@ PlayStore:
 [https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA)
 
 
-![Recordit GIF](https://recordit.co/G5VnE8waPM.gif)
+![Recordit GIF](https://recordit.co/vUNDwdnUFa.gif)
 
 
-<img src="https://recordit.co/G5VnE8waPM.gif"/>
+<img src="https://recordit.co/vUNDwdnUFa.gif"/>
 
 ## Languages supported:
 - English
@@ -235,5 +235,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY4NTA1NjkwN119
+eyJoaXN0b3J5IjpbMTA4NjUwMjIyNywxNjg1MDU2OTA3XX0=
 -->
