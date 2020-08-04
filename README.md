@@ -7,11 +7,12 @@ Android Status: [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5
 
 iOS Status: [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms)
 
-## Stores
+## Presence in stores
 AppStore:
 https://apps.apple.com/us/app/adventist-hymnal/id1153114394
 
 PlayStore
+
 
 ![Recordit GIF](https://recordit.co/6uWDUSn3gm.gif)
 
@@ -223,5 +224,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMDI1MTYwOTZdfQ==
+eyJoaXN0b3J5IjpbLTIzMDI4MDQxMl19
 -->
