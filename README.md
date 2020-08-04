@@ -13,7 +13,9 @@
 |Newtonsoft.Json               |https://www.nuget.org/packages/Newtonsoft.Json/                  |
 |MvvmCross                     |https://www.nuget.org/packages/MvvmCross/                        |
 |Realm                         |https://www.nuget.org/packages/Realm/                            |
-||https://www.nuget.org/packages/XamarinFastEntry.Behaviors/  |
+|XamarinFastEntry.Behaviors    |https://www.nuget.org/packages/XamarinFastEntry.Behaviors/       |
+|Xamarin.Forms.Visual.Material |https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/    |
+|Xamarin.Forms                 |https://www.nuget.org/packages/Xamarin.Forms/                    |
 
 
 ### Build status
@@ -235,7 +237,7 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwMTc2NzM4MTgsLTcyMDEzNTcwNiwtND
+eyJoaXN0b3J5IjpbLTEzMjg2MjY0OTUsLTcyMDEzNTcwNiwtND
 Y3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2
 OTA3XX0=
 -->
