@@ -58,12 +58,15 @@ Table of contents
 ### Demo
 ![Recordit GIF](https://recordit.co/IoYOhRUrmB.gif)
 
+---
 
 ### Languages supported:
 - English
 - Spanish
 - Russian
 - Portuguese
+
+---
 
 ### Hymnal versions
 - English 1985
@@ -72,6 +75,7 @@ Table of contents
 - Español 1962
 - Português 1996
 - Русский 1997
+
 
 ## Tests
 > Beta testing programs:
@@ -84,13 +88,13 @@ Table of contents
 ### Clone
 
 - Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
-- 
+
 ---
 
 ## Contributing
 
 > Just fork	
----
+
 
 ## Team
 
@@ -99,7 +103,7 @@ Table of contents
 - You can just grab their GitHub profile image URL
 - You should probably resize their picture using `?s=200` at the end of the image URL.
 
----
+
 
 ## FAQ
 
@@ -112,10 +116,9 @@ Table of contents
 
 Reach out to me at one of the following places!
 
-- Website at <a href="https://storage.googleapis.com/hymn-music/about/index.html" target="_blank">`fvcproductions.com`</a>
 - Twitter at <a href="https://twitter.com/IsaacRebolledo" target="_blank">`@IsaacRebolledo`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
-
+- 
 ---
 
 ## Donations (Soon)
@@ -128,8 +131,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEwNjQ5Mjk2MTIsLTI0NTUxNjY0MywxOT
-A3NjQxNzAzLC0yMzQxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2Nzcw
-NzE0LDYzMTM2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLT
-Q4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
+eyJoaXN0b3J5IjpbMTkzMTM1NTUzMywtMjQ1NTE2NjQzLDE5MD
+c2NDE3MDMsLTIzNDE1ODEwMiwtNDc1MjMzMzQyLDIxNDY3NzA3
+MTQsNjMxMzY2MTAyLC03MjAxMzU3MDYsLTQ2NzI3MTIzMiwtND
+g5MjE4ODIwLDEwODY1MDIyMjcsMTY4NTA1NjkwN119
 -->
