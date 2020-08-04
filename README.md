@@ -1,7 +1,7 @@
 # Hymnal
 New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
-
+> Version 4.1.2
 
 Android Status: [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)
 
@@ -217,5 +217,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc2MzM5OTBdfQ==
+eyJoaXN0b3J5IjpbMTcxMTc0NzE2M119
 -->
