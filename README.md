@@ -2,12 +2,14 @@
 # Adventist Hymnal Xamarin
 >New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
 
+<hr>
 ### Version 4.1.2
 |Project         |Package                        |Version                      |
 |----------------|-------------------------------|-----------------------------|
 |Hymnal.Core     |`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Hymnal.XF.DroidQuotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
+|Hymanl.XF.UI.   | asdfasdf                      |                             |
+|Hymnal.XF.Droid |`"Isn't this fun?"`            |"Isn't this fun?"            |
+|Hymnal.XF.iOS   |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
 > Android Status: [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)
 
 > iOS Status: [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms)
@@ -228,6 +230,6 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY3ODE0MzkyNywtNDY3MjcxMjMyLC00OD
+eyJoaXN0b3J5IjpbMTA5NTcwNjc3OSwtNDY3MjcxMjMyLC00OD
 kyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2OTA3XX0=
 -->
