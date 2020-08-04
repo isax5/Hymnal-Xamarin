@@ -27,10 +27,10 @@ PlayStore:
 ## Hymnal versions
 - English 1985
 - English 1941
-- Spanish 2009
-- Spanish 1962
-- Portu
-
+- Español 2009
+- Español 1962
+- Português 1996
+- Русский 1997
 
 
 <a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
@@ -232,5 +232,5 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTAxOTE1NDg1OSwtODYwNDY0OTY4XX0=
+eyJoaXN0b3J5IjpbMTg5MDg3NDY1MCwtODYwNDY0OTY4XX0=
 -->
