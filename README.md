@@ -84,8 +84,8 @@ let generateProject = project => {
 ## Test
 |Platoform   |Public Link                                           |
 |------------|------------------------------------------------------|
-|Android      |[]()|
-|iOS             |[TestFlight](https://testflight.apple.com/join/0zTExNbR)
+|Android     |[]()|
+|iOS         |[TestFlight](https://testflight.apple.com/join/0zTExNbR)
 
 ## Installation
 
@@ -192,8 +192,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNzEwNDA5NSwtMjM0MTU4MTAyLC00Nz
-UyMzMzNDIsMjE0Njc3MDcxNCw2MzEzNjYxMDIsLTcyMDEzNTcw
-NiwtNDY3MjcxMjMyLC00ODkyMTg4MjAsMTA4NjUwMjIyNywxNj
-g1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTE2NTQxNTI2MDUsLTIzNDE1ODEwMiwtND
+c1MjMzMzQyLDIxNDY3NzA3MTQsNjMxMzY2MTAyLC03MjAxMzU3
+MDYsLTQ2NzI3MTIzMiwtNDg5MjE4ODIwLDEwODY1MDIyMjcsMT
+Y4NTA1NjkwN119
 -->
