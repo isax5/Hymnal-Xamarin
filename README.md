@@ -70,12 +70,12 @@ Table of contents
 
 |Platoform   |Link                                           |
 |------------|------------------------------------------------------|
-|Android     |Beta testing program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA&hl=en) |
+|Android     |Beta testers program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA) |
 |iOS         |Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program |
 
 ### Clone
 
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
+- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`'sadf'àsdf`ásdf´
 
 ### Setup
 
@@ -153,8 +153,8 @@ Reach out to me at one of the following places!
 - **[MIT license](http://opensource.org/licenses/mit-license.php)**
 - Copyright 2015 © <a href="http://fvcproductions.com" target="_blank">FVCproductions</a>.
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzc1MDE3Njg3LC0yNDU1MTY2NDMsMTkwNz
-Y0MTcwMywtMjM0MTU4MTAyLC00NzUyMzMzNDIsMjE0Njc3MDcx
-NCw2MzEzNjYxMDIsLTcyMDEzNTcwNiwtNDY3MjcxMjMyLC00OD
-kyMTg4MjAsMTA4NjUwMjIyNywxNjg1MDU2OTA3XX0=
+eyJoaXN0b3J5IjpbLTE3ODg5ODA4OTIsLTI0NTUxNjY0MywxOT
+A3NjQxNzAzLC0yMzQxNTgxMDIsLTQ3NTIzMzM0MiwyMTQ2Nzcw
+NzE0LDYzMTM2NjEwMiwtNzIwMTM1NzA2LC00NjcyNzEyMzIsLT
+Q4OTIxODgyMCwxMDg2NTAyMjI3LDE2ODUwNTY5MDddfQ==
 -->
