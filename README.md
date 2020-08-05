@@ -27,7 +27,7 @@ Table of contents
    * [Clone](#clone)
    * [Contributing](#contributing)
    * [Team](#team)
-   * 
+   * [WorkFlow](#workflow)
    * [FAQ](#faq)
    * [Support](#support)
    * [Donations](#donations-soon)
@@ -126,5 +126,5 @@ Reach out to me at one of the following places!
 
 ## Donations (Soon)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2NjM1MDc4NV19
+eyJoaXN0b3J5IjpbMjA1ODY5OTQ2OV19
 -->
