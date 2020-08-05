@@ -26,7 +26,7 @@ Table of contents
    * [Clone](#clone)
    * [Contributing](#contributing)
    * [Team](#team)
-   * [WorkFlow](#workflow)
+   * [Workflow](#workflow)
    * [FAQ](#faq)
    * [Support](#support)
    * [Donations](#donations-soon)
@@ -108,7 +108,7 @@ Table of contents
 
 ---
 
-## WorkFlow
+## Workflow
 <!-- 
 To modify graph, use: 
 https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZmxvd2NoYXJ0IFRCO1xuICAgTSAtLT4gQztcbiAgIFUgLS0-IFN0O1xuICAgVHIgLS0-IElucztcbiAgIFAgLS0-IFRyO1xuICAgVHIgLS0-fElzc3Vlc1xcblJlcG9ydHwgUlxuXG4gICBzdWJncmFwaCBBeltBenVyZV1cbiAgICAgIEluc1tmYTpmYS1kYXRhYmFzZSBJbnNpZ2h0XSAtLT4gUFdbZmE6ZmEtaW5mbyBQb3dlciBCSV1cbiAgIGVuZFxuICAgc3ViZ3JhcGggQUNbQXBwIENlbnRlcl1cbiAgICAgIENbZmE6ZmEtY29ncyBDb21waWxlcl0gLS0-IFRbZmE6ZmEtYWxpZ24tbGVmdCBUZXN0XTtcbiAgICAgIFQgLS0-IFVbZmE6ZmEtdXBsb2FkIFNlbmQgdG8gU3RvcmVzXTtcbiAgICAgIFRyW2ZhOmZhLWNoZWNrIEFwcENlbnRlciBUcmFraW5nXTtcbiAgIGVuZFxuICAgc3ViZ3JhcGggUFVbUHVibGlzaF1cbiAgICAgIFN0W2ZhOmZhLWFuZHJvaWQgZmE6ZmEtYXBwbGUgU3RvcmVdIC0tPiBQW2ZhOmZhLW1vYmlsZSBmYTpmYS10YWJsZXQgUHJvZHVjdGlvbl07XG4gICBlbmRcbiAgIHN1YmdyYXBoIFJbZmE6ZmEtZ2l0aHViIEdpdEh1Yl1cbiAgICAgIERbZmE6ZmEtY29kZSBEZXZlbG9wbWVudF0gLS0-IE1bZmE6ZmEtZ2l0IE1haW5dO1xuICAgICAgU1tmYTpmYS1jb21tZW50cyBTcHJpbnRzXSAtLT4gRDtcbiAgICAgIEZbZmE6ZmEtcGx1cyBGZWF0dXJlc10gLS0-IFM7XG4gICBlbmQiLCJtZXJtYWlkIjp7InRoZW1lIjoiZGVmYXVsdCJ9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ
