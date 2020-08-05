@@ -50,8 +50,8 @@ Table of contents
 
 
 ### Build status
-|Platform       |Package Name    |Version           |AppCenter build  |
-|---------------|----------------|------------------|-----------------|
+|Platform       |Package Name    |Version           |AppCenter build                                                                                                                          |
+|---------------|----------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
 |Android        |Hymnal.XF.Droid |4                 |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 |iOS            |Hymnal.XF.iOS   |4                 |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
 
@@ -86,10 +86,10 @@ Table of contents
 ## Tests
 > Beta testing programs:
 
-|Platoform   |Link                                           |
-|------------|------------------------------------------------------|
+|Platoform   |Link                                                                                                              |
+|------------|------------------------------------------------------------------------------------------------------------------|
 |Android     |Beta testers program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA) |
-|iOS         |Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program |
+|iOS         |Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program                                  |
 
 ### Clone
 
@@ -110,7 +110,33 @@ Table of contents
 ---
 
 ## WorkFlow
+<!-- Graph editor: https://mermaid-js.github.io/mermaid-live-editor/ -->
 
+```mermaid
+flowchart TB;
+   M --> C;
+   U --> St;
+   Tr --> Ins;
+   P --> Tr;
+   Tr -->|Issues| R
+
+   subgraph Az[Azure]
+      Ins[fa:fa-database Insight] --> PW[fa:fa-info Power BI]
+   end
+   subgraph AC[App Center]
+      C[fa:fa-cogs Compiler] --> T[fa:fa-align-left Test];
+      T --> U[fa:fa-upload Send to Stores];
+      Tr[fa:fa-check AppCenter Traking]
+   end
+   subgraph PU[Publish]
+      St[fa:fa-android fa:fa-apple Store] --> P[fa:fa-mobile fa:fa-tablet Production];
+   end
+   subgraph R[fa:fa-github GitHub]
+      D[fa:fa-code Development] --> M[fa:fa-git Main];
+      S[fa:fa-comments Sprints] --> D;
+      F[fa:fa-plus Features] --> S;
+   end
+```
 
 ---
 
@@ -130,6 +156,3 @@ Reach out to me at one of the following places!
 ---
 
 ## Donations (Soon)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQzNzk5NDAyNV19
--->
