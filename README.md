@@ -109,6 +109,11 @@ Table of contents
 
 ---
 
+## WorkFlow
+
+
+---
+
 ## FAQ
 
 - **How do I do *specifically* so and so?**
@@ -126,5 +131,5 @@ Reach out to me at one of the following places!
 
 ## Donations (Soon)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA1ODY5OTQ2OV19
+eyJoaXN0b3J5IjpbMTQzNzk5NDAyNV19
 -->
