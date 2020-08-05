@@ -27,6 +27,7 @@ Table of contents
    * [Clone](#clone)
    * [Contributing](#contributing)
    * [Team](#team)
+   * 
    * [FAQ](#faq)
    * [Support](#support)
    * [Donations](#donations-soon)
@@ -50,7 +51,7 @@ Table of contents
 
 ### Build status
 |Platform       |Package Name    |Version           |AppCenter build  |
-|---------------|--------------------|-----------------|--------------------|
+|---------------|----------------|-----------------|--------------------|
 |Android        |Hymnal.XF.Droid  |4                     |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 |iOS               |Hymnal.XF.iOS     |4                     |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |
 
@@ -124,3 +125,6 @@ Reach out to me at one of the following places!
 ---
 
 ## Donations (Soon)
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMzcxMjI0OTMzXX0=
+-->
