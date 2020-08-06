@@ -41,7 +41,7 @@
     <PackageReference Include="Tizen.NET.TV" Version="6.6.0.5599517">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.6.0.726" />
+    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1260" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />
