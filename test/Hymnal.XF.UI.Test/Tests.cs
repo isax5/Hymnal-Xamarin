@@ -1,15 +1,16 @@
-using System.Linq;
+﻿using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
+using Xamarin.UITest.Queries;
 
-namespace Hymnal.UI.Test
+namespace Hymnal.XF.UI.Test
 {
     [TestFixture(Platform.Android)]
-    //[TestFixture(Platform.iOS)]
+    [TestFixture(Platform.iOS)]
     public class Tests
     {
-        IApp app;
-        Platform platform;
+        private IApp app;
+        private readonly Platform platform;
 
         public Tests(Platform platform)
         {
