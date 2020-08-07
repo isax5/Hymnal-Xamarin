@@ -40,11 +40,8 @@
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="auto" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
+                                                                  Property=Width}"
+            RowDefinitions="auto, *">
 
             <SearchBar
                 x:Name="HymnSearchBar"
@@ -73,16 +70,10 @@
                                 AutomationId="{Binding Number, StringFormat='{0}_ViewCell_Grid'}"
                                 BackgroundColor="{OnPlatform Default=Transparent,
                                                              Tizen=White}"
+                                ColumnDefinitions="0.2*, *"
                                 ColumnSpacing="0"
+                                RowDefinitions="0.7*, 0.3*"
                                 RowSpacing="0">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.2*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.7*" />
-                                    <RowDefinition Height="0.3*" />
-                                </Grid.RowDefinitions>
 
                                 <!--  Number  -->
                                 <Label

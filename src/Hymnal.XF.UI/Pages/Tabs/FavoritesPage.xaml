@@ -65,17 +65,10 @@
                             </ViewCell.ContextActions>
                             <Grid
                                 Padding="20,0"
+                                ColumnDefinitions="0.2*, *"
                                 ColumnSpacing="0"
+                                RowDefinitions="0.7*, 0.3*"
                                 RowSpacing="0">
-
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="0.2*" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="0.7*" />
-                                    <RowDefinition Height="0.3*" />
-                                </Grid.RowDefinitions>
 
                                 <!--  Number  -->
                                 <Label

@@ -47,19 +47,14 @@
 
                 <!--  Choose Language  -->
                 <ViewCell x:Name="hymnLanguageCell">
-                    <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
+                    <Grid
+                        BackgroundColor="{OnPlatform Default=Transparent,
+                                                     Tizen=White}"
+                        ColumnDefinitions="auto, auto"
+                        RowDefinitions="auto, *">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
                         </Grid.GestureRecognizers>
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto" />
-                        </Grid.RowDefinitions>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto" />
-                            <ColumnDefinition Width="*" />
-                        </Grid.ColumnDefinitions>
 
                         <Image
                             Grid.Row="0"
@@ -107,16 +102,11 @@
                                         Android=150}"
                     IsEnabled="{OnPlatform Default=True,
                                            Tizen=False}">
-                    <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*" />
-                            <ColumnDefinition Width="auto" />
-                        </Grid.ColumnDefinitions>
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto" />
-                        </Grid.RowDefinitions>
+                    <Grid
+                        BackgroundColor="{OnPlatform Default=Transparent,
+                                                     Tizen=White}"
+                        ColumnDefinitions="*, auto"
+                        RowDefinitions="auto, auto">
 
                         <Label
                             Grid.Row="0"
@@ -218,20 +208,13 @@
 
                 <!--  Contribute  -->
                 <ViewCell>
-                    <Grid RowSpacing="15">
+                    <Grid
+                        ColumnDefinitions="auto, auto"
+                        RowDefinitions="auto, auto"
+                        RowSpacing="15">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding OpenGitHubCommand}" />
                         </Grid.GestureRecognizers>
-
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto" />
-                            <RowDefinition Height="auto" />
-                        </Grid.RowDefinitions>
-
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto" />
-                            <ColumnDefinition Width="auto" />
-                        </Grid.ColumnDefinitions>
 
                         <Label
                             Grid.Row="0"
