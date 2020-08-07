@@ -13,6 +13,11 @@ namespace Hymnal.XF.UI
             Current = this;
 
             InitializeComponent();
+
+            // Android only for now
+#if DEBUG && NETSTANDARD2_0
+            HotReloader.Current.Run(this);
+#endif
         }
 
         #region System events

@@ -29,68 +29,60 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}" />
 
-        <ListView
+        <CollectionView
             BackgroundColor="Transparent"
-            CachingStrategy="RecycleElement"
             Footer=""
+            ItemSizingStrategy="MeasureFirstItem"
             ItemsSource="{Binding Hymns}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
-            RowHeight="50"
-            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
-            <ListView.ItemTemplate>
+            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
+            SelectionMode="Single">
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <Grid
-                            Padding="20,0"
-                            ColumnSpacing="0"
-                            RowSpacing="0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.2*" />
-                                <ColumnDefinition Width="*" />
-                            </Grid.ColumnDefinitions>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="0.7*" />
-                                <RowDefinition Height="0.3*" />
-                            </Grid.RowDefinitions>
+                    <Grid
+                        Padding="20,0"
+                        ColumnDefinitions="0.2*, *"
+                        ColumnSpacing="0"
+                        RowDefinitions="0.7*, 0.3*"
+                        RowSpacing="0">
 
-                            <!--  Number  -->
-                            <Label
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="0"
-                                FontSize="Large"
-                                Text="{Binding Number}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
-                                VerticalOptions="CenterAndExpand" />
+                        <!--  Number  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            FontSize="Large"
+                            Text="{Binding Number}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="CenterAndExpand" />
 
-                            <!--  Title  -->
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                FontSize="Large"
-                                LineBreakMode="TailTruncation"
-                                Text="{Binding Title}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
-                                VerticalOptions="CenterAndExpand" />
+                        <!--  Title  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Large"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Title}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="CenterAndExpand" />
 
-                            <!--  Preview  -->
-                            <Label
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                FontSize="Micro"
-                                LineBreakMode="TailTruncation"
-                                Text="{Binding PlainContent}"
-                                TextColor="{DynamicResource SecondaryTextColor}"
-                                VerticalOptions="CenterAndExpand" />
+                        <!--  Preview  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Micro"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding PlainContent}"
+                            TextColor="{DynamicResource SecondaryTextColor}"
+                            VerticalOptions="CenterAndExpand" />
 
-                        </Grid>
-                    </ViewCell>
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </RelativeLayout>
 
 </mvxViews:MvxContentPage>
