@@ -38,12 +38,6 @@
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\src\Hymnal.Core\Hymnal.XF.Droid.csproj">
-      <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
-      <Name>Hymnal.Core</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\..\src\Hymnal.XF.Droid\Hymnal.XF.Droid.csproj">
       <Project>{C494B802-1607-44BD-87D3-F94A0E28CC6C}</Project>
       <Name>Hymnal.XF.Droid</Name>
