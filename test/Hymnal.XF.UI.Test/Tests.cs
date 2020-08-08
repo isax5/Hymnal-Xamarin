@@ -6,7 +6,7 @@ using Xamarin.UITest.Queries;
 namespace Hymnal.XF.UI.Test
 {
     [TestFixture(Platform.Android)]
-#if OSX
+#if !Windows
     [TestFixture(Platform.iOS)]
 #endif
     public class Tests

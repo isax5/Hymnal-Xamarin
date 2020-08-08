@@ -9,8 +9,6 @@
     <AssemblyName>Hymnal.XF.UITests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
-    <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
-    <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -34,12 +32,6 @@
   <PropertyGroup Condition="'$(IsWindows)'=='true'">
     <DefineConstants>Windows</DefineConstants>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(IsOSX)'=='true'">
-    <DefineConstants>OSX</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(IsLinux)'=='true'">
-    <DefineConstants>Linux</DefineConstants>
-  </PropertyGroup>
 
   <Choose>
     <When Condition="'$(IsWindows)'=='true'">
@@ -49,7 +41,7 @@
         <PackageReference Include="Xamarin.UITest" Version="2.2.7" />
       </ItemGroup>
     </When>
-    <When Condition="'$(IsOSX)'=='true'">
+    <When Condition="'$(IsWindows)'!='true'">
       <ItemGroup>
         <PackageReference Include="NUnit" Version="3.12.0" />
         <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
