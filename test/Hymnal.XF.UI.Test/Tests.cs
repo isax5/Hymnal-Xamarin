@@ -1,4 +1,4 @@
-﻿using System.Linq;
+using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
@@ -6,7 +6,9 @@ using Xamarin.UITest.Queries;
 namespace Hymnal.XF.UI.Test
 {
     [TestFixture(Platform.Android)]
+#if OSX
     [TestFixture(Platform.iOS)]
+#endif
     public class Tests
     {
         private IApp app;

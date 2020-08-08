@@ -8,6 +8,9 @@
     <RootNamespace>Hymnal.XF.UI.Test</RootNamespace>
     <AssemblyName>Hymnal.XF.UITests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <IsWindows Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Windows)))' == 'true'">true</IsWindows>
+    <IsOSX Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::OSX)))' == 'true'">true</IsOSX>
+    <IsLinux Condition="'$([System.Runtime.InteropServices.RuntimeInformation]::IsOSPlatform($([System.Runtime.InteropServices.OSPlatform]::Linux)))' == 'true'">true</IsLinux>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,25 +30,47 @@
   <ItemGroup>
     <Reference Include="System" />
   </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="NUnit" Version="2.6.4" />
-    <PackageReference Include="NUnitTestAdapter" Version="2.1.1" />
-    <PackageReference Include="Xamarin.UITest" Version="2.2.7" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\src\Hymnal.XF.iOS\Hymnal.XF.iOS.csproj">
-      <Project>{A737FCED-1BDA-412A-BD1E-35275D961D30}</Project>
-      <Name>Hymnal.XF.iOS</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-    <ProjectReference Include="..\..\src\Hymnal.XF.Droid\Hymnal.XF.Droid.csproj">
-      <Project>{C494B802-1607-44BD-87D3-F94A0E28CC6C}</Project>
-      <Name>Hymnal.XF.Droid</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
+    
+  <PropertyGroup Condition="'$(IsWindows)'=='true'">
+    <DefineConstants>Windows</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(IsOSX)'=='true'">
+    <DefineConstants>OSX</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(IsLinux)'=='true'">
+    <DefineConstants>Linux</DefineConstants>
+  </PropertyGroup>
+
+  <Choose>
+    <When Condition="'$(IsWindows)'=='true'">
+      <ItemGroup>
+        <PackageReference Include="NUnit" Version="2.6.4" />
+        <PackageReference Include="NUnitTestAdapter" Version="2.1.1" />
+        <PackageReference Include="Xamarin.UITest" Version="2.2.7" />
+      </ItemGroup>
+    </When>
+    <When Condition="'$(IsOSX)'=='true'">
+      <ItemGroup>
+        <PackageReference Include="NUnit" Version="3.12.0" />
+        <PackageReference Include="Xamarin.UITest" Version="3.0.7" />
+      </ItemGroup>
+      <ItemGroup>
+        <ProjectReference Include="..\..\src\Hymnal.XF.iOS\Hymnal.XF.iOS.csproj">
+          <Project>{A737FCED-1BDA-412A-BD1E-35275D961D30}</Project>
+          <Name>Hymnal.XF.iOS</Name>
+          <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+          <Private>False</Private>
+        </ProjectReference>
+        <ProjectReference Include="..\..\src\Hymnal.XF.Droid\Hymnal.XF.Droid.csproj">
+          <Project>{C494B802-1607-44BD-87D3-F94A0E28CC6C}</Project>
+          <Name>Hymnal.XF.Droid</Name>
+          <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+          <Private>False</Private>
+        </ProjectReference>
+      </ItemGroup>
+    </When>
+  </Choose>
+
   <ItemGroup>
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
