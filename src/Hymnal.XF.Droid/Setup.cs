@@ -12,7 +12,6 @@ using Xamarin.Forms;
 #else
 [assembly: Application(Debuggable = false)]
 #endif
-
 namespace Hymnal.XF.Droid
 {
     public class Setup : MvxFormsAndroidSetup<Core.App, UI.App>

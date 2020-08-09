@@ -6,12 +6,15 @@ using Android.App;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Hymnal.XF.Droid.Custom;
+using Hymnal.XF.Droid.Renderers;
 using MvvmCross.Binding.BindingContext;
 using MvvmCross.Commands;
 using MvvmCross.Core;
 using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
+using Plugin.StorageManager;
 
 namespace Hymnal.XF.Droid.Linker
 {
@@ -20,6 +23,7 @@ namespace Hymnal.XF.Droid.Linker
     [Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
+        #region Android
         public void Include(Button button)
         {
             button.Click += (s, e) => button.Text = $"{button.Text}";
@@ -75,7 +79,9 @@ namespace Hymnal.XF.Droid.Linker
         {
             changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
         }
+        #endregion
 
+        #region Mvx
         public void Include(MvxPropertyInjector injector)
         {
             _ = new MvxPropertyInjector();
@@ -146,5 +152,46 @@ namespace Hymnal.XF.Droid.Linker
         {
             _ = new MvxChildViewModelCache();
         }
+        #endregion
+
+        #region XF
+        #endregion
+
+        #region Plugin Storage
+        public void Include(IStorageManager storageManager)
+        {
+            _ = CrossStorageManager.Current;
+            _ = new StorageManagerImplementation();
+        }
+        #endregion
+
+        #region Hymnal XF.UI
+        public void Include(UI.App app)
+        {
+            _ = new UI.App();
+        }
+        #endregion
+
+        #region Custom & Renderers
+        public void Include(CustomFormsPagePresenter customFormsPage)
+        {
+            _ = new CustomFormsPagePresenter(null);
+            _ = customFormsPage.AttributeTypesToActionsDictionary;
+            _ = customFormsPage.ViewsContainer;
+            _ = customFormsPage.CurrentPageTree;
+        }
+
+        public void Include(CustomContentPageRenderer pageRenderer)
+        {
+            _ = new CustomContentPageRenderer(null);
+        }
+        #endregion
+
+        #region Hymnal Core
+        public void Include(Core.App app)
+        {
+            _ = new Core.App();
+        }
+        #endregion
     }
 }
