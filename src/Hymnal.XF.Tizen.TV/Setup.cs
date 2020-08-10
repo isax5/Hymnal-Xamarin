@@ -23,7 +23,6 @@ namespace Hymnal.XF.Tizen.TV
         public override void InitializePrimary()
         {
             base.InitializePrimary();
-            Forms.SetFlags(new string[] { "CarouselView_Experimental" });
             CrossStorageManager.Current.Init();
             CrossMediaManager.Current.Init();
         }
