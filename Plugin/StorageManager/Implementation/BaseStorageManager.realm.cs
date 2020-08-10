@@ -3,6 +3,9 @@ using Realms;
 
 namespace Plugin.StorageManager
 {
+    /// <summary>
+    /// DB implementation using Realm
+    /// </summary>
     public class BaseStorageManagerImplementation : IStorageManager
     {
         public Realm RealmInstance;

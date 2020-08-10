@@ -25,7 +25,7 @@
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;</AndroidLinkSkip>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -67,6 +67,10 @@
     <MandroidI18n />
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -327,7 +331,7 @@
   </ItemGroup>
   <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
-  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_001.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_002.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_003.png" />
@@ -2172,10 +2176,10 @@
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_384.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
+  <!-- PIANO SHEETS-->
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
-  <!-- PIANO SHEETS-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

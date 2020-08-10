@@ -259,7 +259,7 @@ namespace Hymnal.Core.ViewModels
             }
             else
             {
-                var isPlayingInstrumentalMusic = false;
+                bool isPlayingInstrumentalMusic;
 
                 // Choose music
                 if (Language.SupportInstrumentalMusic && Language.SupportSungMusic)

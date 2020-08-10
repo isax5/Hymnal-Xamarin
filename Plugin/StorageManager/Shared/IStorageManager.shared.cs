@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 #if __IOS__ || __ANDROID__
 using Realms;
