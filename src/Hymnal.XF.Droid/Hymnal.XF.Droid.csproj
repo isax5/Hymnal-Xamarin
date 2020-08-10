@@ -331,7 +331,6 @@
   </ItemGroup>
   <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
-  <!--
   <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_001.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_002.png" />
@@ -2177,7 +2176,6 @@
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_384.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
-  -->
   <!-- PIANO SHEETS-->
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
