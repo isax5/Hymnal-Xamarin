@@ -331,7 +331,7 @@
   </ItemGroup>
   <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
-  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_001.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_002.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_003.png" />
