@@ -25,7 +25,7 @@
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.UI;Hymnal.XF.UI;</AndroidLinkSkip>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;</AndroidLinkSkip>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -67,6 +67,10 @@
     <MandroidI18n />
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
+    <AndroidLinkMode>Full</AndroidLinkMode>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
+    <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -112,10 +116,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
-      <Version>3.2.1</Version>
+      <Version>3.4.0</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
-      <Version>3.2.1</Version>
+      <Version>3.4.0</Version>
     </PackageReference>
     <PackageReference Include="MvvmCross">
       <Version>6.4.2</Version>
@@ -169,12 +173,21 @@
       <Version>1.5.3.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms">
-      <Version>4.6.0.726</Version>
+      <Version>4.7.0.1260</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Visual.Material">
-      <Version>4.6.0.726</Version>
+      <Version>4.7.0.1260</Version>
     </PackageReference>
   </ItemGroup>
+  <Choose>
+    <When Condition="'$(Configuration)' == 'Debug'">
+      <ItemGroup>
+        <PackageReference Include="Xamarin.HotReload">
+          <Version>2.0.7</Version>
+        </PackageReference>
+      </ItemGroup>
+    </When>
+  </Choose>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
@@ -318,7 +331,7 @@
   </ItemGroup>
   <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
-  <ItemGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+  <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_001.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_002.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_003.png" />
@@ -1806,19 +1819,19 @@
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_114.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_115.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_116.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_116_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_117.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_117_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_118.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_118_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_119.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_119_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_120.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_121.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_121_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_122.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_122_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_123.png" />
-    <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_123_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_124.png" />
+    <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_124_1.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_125.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_126.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_127.png" />
@@ -2163,10 +2176,10 @@
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_384.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
+  <!-- PIANO SHEETS-->
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
   </ItemGroup>
-  <!-- PIANO SHEETS-->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

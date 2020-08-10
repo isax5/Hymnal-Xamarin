@@ -36,9 +36,6 @@
     <EnableProguard>false</EnableProguard>
     <AndroidSupportedAbis>
     </AndroidSupportedAbis>
-    <AotAssemblies>false</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
-    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -129,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
-      <Project>{D149978E-1EB6-4255-8EAF-BF60ECF71694}</Project>
+      <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
     </ProjectReference>
   </ItemGroup>

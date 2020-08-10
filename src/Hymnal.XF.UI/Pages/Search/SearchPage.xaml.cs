@@ -26,12 +26,16 @@ namespace Hymnal.XF.UI.Pages
         {
             base.OnAppearing();
 
-            HymnSearchBar.Focus();
-
-            HymnSearchBar.SearchButtonPressed += (s, e) =>
+            // Focuse HymnSearchBar
+            if (string.IsNullOrWhiteSpace(HymnSearchBar.Text))
             {
-                HymnSearchBar.Unfocus();
-            };
+                HymnSearchBar.Focus();
+            }
+        }
+
+        private void HymnSearchBar_SearchButtonPressed(object sender, System.EventArgs e)
+        {
+            HymnSearchBar.Unfocus();
         }
     }
 }

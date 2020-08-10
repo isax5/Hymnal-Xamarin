@@ -1,15 +1,18 @@
 using System.Linq;
 using NUnit.Framework;
 using Xamarin.UITest;
+using Xamarin.UITest.Queries;
 
-namespace Hymnal.UI.Test
+namespace Hymnal.XF.UI.Test
 {
     [TestFixture(Platform.Android)]
+#if !Windows
     [TestFixture(Platform.iOS)]
+#endif
     public class Tests
     {
-        IApp app;
-        Platform platform;
+        private IApp app;
+        private readonly Platform platform;
 
         public Tests(Platform platform)
         {
@@ -20,6 +23,12 @@ namespace Hymnal.UI.Test
         public void BeforeEachTest()
         {
             app = AppInitializer.StartApp(platform);
+        }
+
+        [Test]
+        public void AppLaunches()
+        {
+            app.Screenshot("First screen.");
         }
 
         [Test]
@@ -47,6 +56,7 @@ namespace Hymnal.UI.Test
         [Test]
         public void OpenHymnUsingSearch()
         {
+            //app.Repl();
 
             // Arranque
             app.WaitForElement("NumberPage");
@@ -58,7 +68,7 @@ namespace Hymnal.UI.Test
             app.Tap("HymnSearchBar");
             app.EnterText("13");
             app.DismissKeyboard();
-            app.Tap("2_ViewCell_Grid");
+            app.Tap(e => e.Class("ItemContentView").Index(0));
 
             app.WaitForElement("HymnPage");
             app.Back();
@@ -72,12 +82,6 @@ namespace Hymnal.UI.Test
             // Assert
             var result = app.Query(e => e.Marked("NumberPage")).Any();
             Assert.IsTrue(result);
-        }
-
-        [Test]
-        public void AppLaunches()
-        {
-            app.Screenshot("First screen.");
         }
     }
 }

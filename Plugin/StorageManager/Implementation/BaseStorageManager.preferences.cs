@@ -5,7 +5,9 @@ using Xamarin.Essentials;
 
 namespace Plugin.StorageManager
 {
-    // TODO: These methods need test
+    /// <summary>
+    /// DB implementation using native Preferences
+    /// </summary>
     public class BaseStorageManagerImplementation : IStorageManager
     {
         public void Add<T>(T item) where T : IStorageModel
