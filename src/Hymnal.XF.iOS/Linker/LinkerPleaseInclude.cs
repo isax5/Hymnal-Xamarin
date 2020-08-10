@@ -19,6 +19,7 @@ namespace Hymnal.XF.iOS.Linker
     [Preserve(AllMembers = true)]
     public class LinkerPleaseInclude
     {
+        #region XF
         public void Include(UIButton uiButton)
         {
             uiButton.TouchUpInside += (s, e) =>
@@ -105,7 +106,9 @@ namespace Hymnal.XF.iOS.Linker
         {
             changed.PropertyChanged += (sender, e) => { _ = e.PropertyName; };
         }
+        #endregion
 
+        #region Mvx
         public void Include(ICommand command)
         {
             command.CanExecuteChanged += (s, e) => { if (command.CanExecute(null)) command.Execute(null); };
@@ -181,5 +184,6 @@ namespace Hymnal.XF.iOS.Linker
         {
             _ = new MvxChildViewModelCache();
         }
+        #endregion
     }
 }
