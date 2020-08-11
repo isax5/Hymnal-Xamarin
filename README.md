@@ -127,5 +127,3 @@ Reach out to me at one of the following places!
 - Twitter at <a href="https://twitter.com/IsaacRebolledo" target="_blank">`@IsaacRebolledo`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
 ---
-
-## Donations (Soon)
