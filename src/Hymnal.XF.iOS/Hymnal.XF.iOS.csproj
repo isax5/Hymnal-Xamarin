@@ -42,9 +42,9 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
-<MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
-<MtouchUseLlvm>true</MtouchUseLlvm>
-<OptimizePNGs>false</OptimizePNGs>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Plugin.StorageManager --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
+    <OptimizePNGs>false</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -78,7 +78,7 @@
     <BuildIpa>true</BuildIpa>
     <OptimizePNGs>false</OptimizePNGs>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Plugin.StorageManager --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
