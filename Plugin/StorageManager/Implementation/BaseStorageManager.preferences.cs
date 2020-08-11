@@ -10,6 +10,11 @@ namespace Plugin.StorageManager
     /// </summary>
     public class BaseStorageManagerImplementation : IStorageManager
     {
+        /// <summary>
+        /// Add item
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="item"></param>
         public void Add<T>(T item) where T : IStorageModel
         {
             List<T> items = GetItems<T>();
@@ -17,22 +22,37 @@ namespace Plugin.StorageManager
             ReplaceItems(items);
         }
 
+        /// <summary>
+        /// Get all
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <returns></returns>
         public IQueryable<T> All<T>() where T : IStorageModel
         {
             return GetItems<T>().AsQueryable();
         }
 
+        /// <summary>
+        /// Remove item
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="item"></param>
         public void Remove<T>(T item) where T : IStorageModel
         {
-            var items = GetItems<T>();
+            List<T> items = GetItems<T>();
             items.Remove(item);
             ReplaceItems(items);
         }
 
+        /// <summary>
+        /// Remove items
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="items"></param>
         public void RemoveRange<T>(IQueryable<T> items) where T : IStorageModel
         {
-            var originalItems = GetItems<T>();
-            foreach (var item in items)
+            List<T> originalItems = GetItems<T>();
+            foreach (T item in items)
             {
                 originalItems.Remove(item);
             }
