@@ -9,132 +9,147 @@
         <trans-unit id="AdventistHymnal" translate="yes" xml:space="preserve">
           <source>Adventist Hymnal</source>
           <target state="final">Hinário Adventista</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab:Number: Title</note>
         </trans-unit>
         <trans-unit id="Close" translate="yes" xml:space="preserve">
           <source>Close</source>
           <target state="final" state-qualifier="tm-suggestion">Fechar</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">HymnPage: Close page</note>
         </trans-unit>
         <trans-unit id="Developing" translate="yes" xml:space="preserve">
           <source>Developing</source>
           <target state="final">Desenvolvimento</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Developing</note>
         </trans-unit>
         <trans-unit id="DisplayAndTypography" translate="yes" xml:space="preserve">
           <source>Display and typography</source>
           <target state="final">Exibição e Tipografia</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Display</note>
         </trans-unit>
         <trans-unit id="Example" translate="yes" xml:space="preserve">
           <source>Example</source>
           <target state="final">Exemplo</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: TextSize Example</note>
         </trans-unit>
         <trans-unit id="Favorites" translate="yes" xml:space="preserve">
           <source>Favorites</source>
           <target state="final" state-qualifier="tm-suggestion">Favoritos</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab: Favorites, Favorites: Title</note>
         </trans-unit>
         <trans-unit id="Help" translate="yes" xml:space="preserve">
           <source>Help</source>
           <target state="final" state-qualifier="tm-suggestion">Ajuda</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Search help</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Search help</note>
         </trans-unit>
         <trans-unit id="History" translate="yes" xml:space="preserve">
           <source>History</source>
           <target state="final" state-qualifier="tm-suggestion">Histórico</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Record:Title</note>
         </trans-unit>
         <trans-unit id="Index" translate="yes" xml:space="preserve">
           <source>Index</source>
           <target state="final" state-qualifier="tm-suggestion">Índice</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab: Index</note>
         </trans-unit>
         <trans-unit id="Number" translate="yes" xml:space="preserve">
           <source>Number</source>
           <target state="final" state-qualifier="tm-suggestion">Número</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab: Number</note>
         </trans-unit>
         <trans-unit id="Open" translate="yes" xml:space="preserve">
           <source>Open</source>
           <target state="translated" state-qualifier="tm-suggestion">Abrir</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Tab:Number: Open</note>
         </trans-unit>
         <trans-unit id="Search" translate="yes" xml:space="preserve">
           <source>Search</source>
           <target state="final" state-qualifier="tm-suggestion">Pesquisar</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Search:Title</note>
         </trans-unit>
         <trans-unit id="Settings" translate="yes" xml:space="preserve">
           <source>Settings</source>
           <target state="final" state-qualifier="tm-suggestion">Configurações</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Title</note>
         </trans-unit>
         <trans-unit id="Searcher" translate="yes" xml:space="preserve">
           <source>Search ....</source>
           <target state="translated">Pesquisar ....</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Placeholder of searcher</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Search: Placeholder of searcher</note>
         </trans-unit>
         <trans-unit id="FontSize" translate="yes" xml:space="preserve">
           <source>Font Size</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Tamanho da fonte</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: FontSize</note>
         </trans-unit>
         <trans-unit id="Cancel" translate="yes" xml:space="preserve">
           <source>Cancel</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Cancelar</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Alert: Cancel</note>
         </trans-unit>
         <trans-unit id="AppVersion" translate="yes" xml:space="preserve">
           <source>App Version</source>
           <target state="needs-review-translation" state-qualifier="tm-suggestion">Versão do Aplicativo</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: AppVersion</note>
         </trans-unit>
         <trans-unit id="AppBuild" translate="yes" xml:space="preserve">
           <source>App Build</source>
           <target state="translated">Versão de compilação</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: AppBuild</note>
         </trans-unit>
         <trans-unit id="NoInternetConnection" translate="yes" xml:space="preserve">
           <source>There is no Internet connection</source>
           <target state="translated">Não há conexão com a Internet</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Alert: No internet</note>
         </trans-unit>
         <trans-unit id="WeHadAProblem" translate="yes" xml:space="preserve">
           <source>We had a problem</source>
           <target state="translated">Tivemos um problema</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Alert: We had a problem</note>
         </trans-unit>
         <trans-unit id="Ok" translate="yes" xml:space="preserve">
           <source>Ok</source>
           <target state="translated">Está bem</target>
-        </trans-unit>
-        <trans-unit id="Developers" translate="yes" xml:space="preserve">
-          <source>Developers</source>
-          <target state="needs-review-translation" state-qualifier="tm-suggestion">Desenvolvedores</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Alert: Ok</note>
         </trans-unit>
         <trans-unit id="VersionsAndLanguages" translate="yes" xml:space="preserve">
           <source>Versions and languages</source>
           <target state="translated">Versões e idiomas</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Settings. Choose hymnal</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Choose hymnal</note>
         </trans-unit>
         <trans-unit id="Delete" translate="yes" xml:space="preserve">
           <source>Delete</source>
           <target state="translated">Excluir</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Delete</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Favorites: Delete</note>
         </trans-unit>
         <trans-unit id="Contribute" translate="yes" xml:space="preserve">
           <source>Contribute</source>
           <target state="translated">Contribute</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Contribute app</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Contribute app</note>
         </trans-unit>
         <trans-unit id="CustomAmount" translate="yes" xml:space="preserve">
           <source>Custom Amount</source>
           <target state="translated">Valor personalizado</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Custom Amount</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Custom Amount</note>
         </trans-unit>
         <trans-unit id="Donations" translate="yes" xml:space="preserve">
           <source>Donations</source>
           <target state="translated">Doações</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Donations</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Donations</note>
         </trans-unit>
         <trans-unit id="GitHub" translate="yes" xml:space="preserve">
           <source>GitHub</source>
           <target state="final">GitHub</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">GitHub</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: GitHub</note>
         </trans-unit>
         <trans-unit id="Support" translate="yes" xml:space="preserve">
           <source>Support</source>
           <target state="translated">Suporte</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Support app</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: Support app</note>
         </trans-unit>
         <trans-unit id="Tip" translate="yes" xml:space="preserve">
           <source>Tip</source>
           <target state="translated">Dica</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Tip 1,2,3,4...</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings:Support: Tip 1,2,3,4...</note>
         </trans-unit>
         <trans-unit id="InstrumentalOrSung" translate="yes" xml:space="preserve">
           <source>Instrumental or sung</source>
@@ -144,12 +159,17 @@
         <trans-unit id="Instrumental" translate="yes" xml:space="preserve">
           <source>Instrumental</source>
           <target state="new">Instrumental</target>
-          <note from="MultilingualBuild" annotates="source" priority="2">Instrumental</note>
+          <note from="MultilingualBuild" annotates="source" priority="2">Select Music: Instrumental</note>
         </trans-unit>
         <trans-unit id="Sung" translate="yes" xml:space="preserve">
           <source>Sung</source>
           <target state="new">Sung</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Sung (cantada)</note>
+        </trans-unit>
+        <trans-unit id="KeepScreenAlwaysOn" translate="yes" xml:space="preserve">
+          <source>Keep screen always on</source>
+          <target state="translated">Manter a tela sempre ligada</target>
+          <note from="MultilingualBuild" annotates="source" priority="2">Settings: KeepScreenAlwaysOn</note>
         </trans-unit>
       </group>
     </body>

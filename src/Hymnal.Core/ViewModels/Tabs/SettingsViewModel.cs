@@ -57,6 +57,17 @@ namespace Hymnal.Core.ViewModels
             set => SetProperty(ref hymnalLanguage, value);
         }
 
+        public bool KeepScreenOn
+        {
+            get => DeviceDisplay.KeepScreenOn;
+            set
+            {
+                DeviceDisplay.KeepScreenOn = value;
+                preferencesService.KeepScreenOn = value;
+                RaisePropertyChanged(nameof(KeepScreenOn));
+            }
+        }
+
         public SettingsViewModel(
             IMvxNavigationService navigationService,
             IPreferencesService preferencesService,

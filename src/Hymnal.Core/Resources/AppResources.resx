@@ -119,96 +119,115 @@
   </resheader>
   <data name="AdventistHymnal" xml:space="preserve">
     <value>Adventist Hymnal</value>
+    <comment>Tab:Number: Title</comment>
   </data>
   <data name="AppBuild" xml:space="preserve">
     <value>App Build</value>
+    <comment>Settings: AppBuild</comment>
   </data>
   <data name="AppVersion" xml:space="preserve">
     <value>App Version</value>
+    <comment>Settings: AppVersion</comment>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
+    <comment>Alert: Cancel</comment>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
+    <comment>HymnPage: Close page</comment>
   </data>
   <data name="Contribute" xml:space="preserve">
     <value>Contribute</value>
-    <comment>Contribute app</comment>
+    <comment>Settings: Contribute app</comment>
   </data>
   <data name="CustomAmount" xml:space="preserve">
     <value>Custom Amount</value>
-    <comment>Custom Amount</comment>
+    <comment>Settings: Custom Amount</comment>
   </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
-    <comment>Delete</comment>
-  </data>
-  <data name="Developers" xml:space="preserve">
-    <value>Developers</value>
+    <comment>Favorites: Delete</comment>
   </data>
   <data name="Developing" xml:space="preserve">
     <value>Developing</value>
+    <comment>Settings: Developing</comment>
   </data>
   <data name="DisplayAndTypography" xml:space="preserve">
     <value>Display and typography</value>
+    <comment>Settings: Display</comment>
   </data>
   <data name="Donations" xml:space="preserve">
     <value>Donations</value>
-    <comment>Donations</comment>
+    <comment>Settings: Donations</comment>
   </data>
   <data name="Example" xml:space="preserve">
     <value>Example</value>
+    <comment>Settings: TextSize Example</comment>
   </data>
   <data name="Favorites" xml:space="preserve">
     <value>Favorites</value>
+    <comment>Tab: Favorites, Favorites: Title</comment>
   </data>
   <data name="FontSize" xml:space="preserve">
     <value>Font Size</value>
+    <comment>Settings: FontSize</comment>
   </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
-    <comment>GitHub</comment>
+    <comment>Settings: GitHub</comment>
   </data>
   <data name="Help" xml:space="preserve">
     <value>Help</value>
-    <comment>Search help</comment>
+    <comment>Settings: Search help</comment>
   </data>
   <data name="History" xml:space="preserve">
     <value>History</value>
+    <comment>Record:Title</comment>
   </data>
   <data name="Index" xml:space="preserve">
     <value>Index</value>
+    <comment>Tab: Index</comment>
   </data>
   <data name="Instrumental" xml:space="preserve">
     <value>Instrumental</value>
-    <comment>Instrumental</comment>
+    <comment>Select Music: Instrumental</comment>
   </data>
   <data name="InstrumentalOrSung" xml:space="preserve">
     <value>Instrumental or sung</value>
     <comment>Select music: Instrumental or sung</comment>
   </data>
+  <data name="KeepScreenAlwaysOn" xml:space="preserve">
+    <value>Keep screen always on</value>
+    <comment>Settings: KeepScreenAlwaysOn</comment>
+  </data>
   <data name="NoInternetConnection" xml:space="preserve">
     <value>There is no Internet connection</value>
+    <comment>Alert: No internet</comment>
   </data>
   <data name="Number" xml:space="preserve">
     <value>Number</value>
+    <comment>Tab: Number</comment>
   </data>
   <data name="Ok" xml:space="preserve">
     <value>Ok</value>
+    <comment>Alert: Ok</comment>
   </data>
   <data name="Open" xml:space="preserve">
     <value>Open</value>
+    <comment>Tab:Number: Open</comment>
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
+    <comment>Search:Title</comment>
   </data>
   <data name="Searcher" xml:space="preserve">
     <value>Search ....</value>
-    <comment>Placeholder of searcher</comment>
+    <comment>Search: Placeholder of searcher</comment>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
+    <comment>Settings: Title</comment>
   </data>
   <data name="Sung" xml:space="preserve">
     <value>Sung</value>
@@ -216,17 +235,18 @@
   </data>
   <data name="Support" xml:space="preserve">
     <value>Support</value>
-    <comment>Support app</comment>
+    <comment>Settings: Support app</comment>
   </data>
   <data name="Tip" xml:space="preserve">
     <value>Tip</value>
-    <comment>Tip 1,2,3,4...</comment>
+    <comment>Settings:Support: Tip 1,2,3,4...</comment>
   </data>
   <data name="VersionsAndLanguages" xml:space="preserve">
     <value>Versions and languages</value>
-    <comment>Settings. Choose hymnal</comment>
+    <comment>Settings: Choose hymnal</comment>
   </data>
   <data name="WeHadAProblem" xml:space="preserve">
     <value>We had a problem</value>
+    <comment>Alert: We had a problem</comment>
   </data>
 </root>

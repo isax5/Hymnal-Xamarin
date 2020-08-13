@@ -68,7 +68,7 @@ namespace Hymnal.Core
             IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
 
             // Configurating language of the device
-            var culture = CultureInfo.InstalledUICulture;
+            CultureInfo culture = CultureInfo.InstalledUICulture;
             Constants.CurrentCultureInfo = culture;
             AppResources.Culture = Constants.CurrentCultureInfo;
 
@@ -77,17 +77,10 @@ namespace Hymnal.Core
             {
                 List<HymnalLanguage> lngs = Constants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == Constants.CurrentCultureInfo.TwoLetterISOLanguageName);
 
-                if (lngs.Count == 0)
-                {
-                    preferencesService.ConfiguratedHymnalLanguage = Constants.HymnsLanguages.First();
-                }
-                else
-                {
-                    preferencesService.ConfiguratedHymnalLanguage = lngs.First();
-                }
+                preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? Constants.HymnsLanguages.First() : lngs.First();
             }
-
         }
+
 
         #region Open Page as
         public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel

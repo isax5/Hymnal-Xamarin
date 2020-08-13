@@ -35,6 +35,9 @@ namespace Hymnal.Core.ViewModels
 
             loaded = true;
 
+            // KeepScreenOn
+            DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
+
 #if __IOS__ || __ANDROID__
             await navigationService.Navigate<NumberViewModel>();
             await navigationService.Navigate<IndexViewModel>();
@@ -57,21 +60,21 @@ namespace Hymnal.Core.ViewModels
 
         // LifeCycle implemented in RootViewModel
         #region LifeCycle
-#if __IOS__ || __ANDROID__
         public override void Start()
         {
             log.Debug("App Started");
 
+#if __IOS__ || __ANDROID__
             Analytics.TrackEvent(Constants.TrackEvents.AppOpened, new Dictionary<string, string>
             {
                 { Constants.TrackEvents.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
                 { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
             });
+#endif
 
             base.Start();
         }
-#endif
 #endregion
     }
 }
