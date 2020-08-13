@@ -48,7 +48,7 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "es",
                 HymnsFileName = "NewHymnal.es.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.es.json",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/instrumental/###.mp3",
+                InstrumentalMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/instrumental/###.mp3",
                 SungMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/sung/###.mp3",
                 HymnsSheetsFileName = "PianoSheet_NewHymnal_es_###"
             },
@@ -60,7 +60,7 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "es",
                 HymnsFileName = "OldHymnal.es.json",
                 ThematicHymnsFileName = "OldHymnalThematicList.es.json",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/spanish/1962%20version/instrumental/###.mp3"
+                InstrumentalMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/1962%20version/instrumental/###.mp3"
             },
 
             // PORTUGUESE
@@ -73,7 +73,7 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "pt",
                 HymnsFileName = "NewHymnal.pt.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.pt.json",
-                SungMusic = @"https://storage.googleapis.com/hymn-music/portuguese/1996%20version/sung/###.mp3"
+                SungMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/portuguese/1996%20version/sung/###.mp3"
             },
 
             // RUSSIAN
@@ -87,7 +87,7 @@ namespace Hymnal.Core
                 HymnsFileName = "NewHymnal.ru.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.ru.json",
                 HymnsSheetsFileName = "PianoSheet_NewHymnal_ru_###",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/russian/1997%20version/instrumental/###.mp3"
+                InstrumentalMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/russian/1997%20version/instrumental/###.mp3"
             }
         };
 
