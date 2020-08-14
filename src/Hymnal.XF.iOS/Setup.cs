@@ -1,4 +1,5 @@
 using Hymnal.Core.Services;
+using Hymnal.StorageModels;
 using Hymnal.XF.iOS.Custom;
 using Hymnal.XF.UI.Services;
 using MediaManager;
@@ -28,6 +29,7 @@ namespace Hymnal.XF.iOS
             FormsMaterial.Init();
             CrossMediaManager.Current.Init();
             CrossStorageManager.Current.Init(Realm.GetInstance());
+            Storage.Init();
         }
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)
