@@ -24,7 +24,7 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "en",
                 HymnsFileName = "NewHymnal.en.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.en.json",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/english/1985%20version/instrumental/###.mp3",
+                InstrumentalMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/english/1985%20version/instrumental/###.mp3",
                 HymnsSheetsFileName = "PianoSheet_NewHymnal_en_###"
             },
             new HymnalLanguage
@@ -35,7 +35,7 @@ namespace Hymnal.Core
                 TwoLetterISOLanguageName = "en",
                 HymnsFileName = "OldHymnal.en.json",
                 ThematicHymnsFileName = "OldHymnalThematicList.en.json",
-                InstrumentalMusic = @"https://storage.googleapis.com/hymn-music/english/1941%20version/instrumental/###.mp3"
+                InstrumentalMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/english/1941%20version/instrumental/###.mp3"
             },
 
             // SPANISH
@@ -49,7 +49,7 @@ namespace Hymnal.Core
                 HymnsFileName = "NewHymnal.es.json",
                 ThematicHymnsFileName = "NewHymnalThematicList.es.json",
                 InstrumentalMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/instrumental/###.mp3",
-                SungMusic = @"https://storage.googleapis.com/hymn-music/spanish/2009%20version/sung/###.mp3",
+                SungMusic = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/sung/###.mp3",
                 HymnsSheetsFileName = "PianoSheet_NewHymnal_es_###"
             },
             new HymnalLanguage
