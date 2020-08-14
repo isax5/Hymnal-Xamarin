@@ -228,6 +228,10 @@
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Hymnal.StorageModels\Hymnal.StorageModels.csproj">
+      <Project>{7b4177f3-d237-4e84-a92c-58c5c3917975}</Project>
+      <Name>Hymnal.StorageModels</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
       <Project>{d9bcf416-9f88-4089-83a6-d9c9b9b1eb7d}</Project>
       <Name>Hymnal.XF.UI</Name>

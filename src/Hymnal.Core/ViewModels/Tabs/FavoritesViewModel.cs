@@ -5,13 +5,13 @@ using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Hymnal.StorageModels.Models;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using MvvmCross.Commands;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.StorageManager;
-using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.ViewModels
 {

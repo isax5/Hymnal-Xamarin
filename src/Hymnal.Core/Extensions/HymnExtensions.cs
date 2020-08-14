@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hymnal.Core.Models;
+using Hymnal.StorageModels.Models;
 using MvvmCross.ViewModels;
-using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.Extensions
 {

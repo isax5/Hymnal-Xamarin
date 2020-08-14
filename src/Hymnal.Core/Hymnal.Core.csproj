@@ -33,6 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />
+    <ProjectReference Include="..\Hymnal.StorageModels\Hymnal.StorageModels.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="Resources\AppResources.Designer.cs">
