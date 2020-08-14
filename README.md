@@ -53,10 +53,10 @@ Table of contents
 [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)
 [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms)
  -->
-|Platform       |Package Name    |Version           |Minimum Compatible OS         |AppCenter build |
-|---------------|----------------|------------------|------------------------------|----------------|
-|iOS            |Hymnal.XF.iOS   |4                 |iOS 13.0                      |![](https://camo.githubusercontent.com/cb3502c1095d75fca8f166afae75c82d802d7a24/68747470733a2f2f6275696c642e61707063656e7465722e6d732f76302e312f617070732f33643765326632312d353630302d343062352d393166332d3664353766653132323761342f6272616e636865732f6d61737465722f6261646765) |
-|Android        |Hymnal.XF.Droid | 4                |Android 5.0 (API 21 Lollipop) |![](https://camo.githubusercontent.com/cb3502c1095d75fca8f166afae75c82d802d7a24/68747470733a2f2f6275696c642e61707063656e7465722e6d732f76302e312f617070732f33643765326632312d353630302d343062352d393166332d3664353766653132323761342f6272616e636865732f6d61737465722f6261646765) |
+|Platform       |Package Name    |Version           |Minimum Compatible OS         |AppCenter build                                                                                                                          |
+|---------------|----------------|------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|iOS            |Hymnal.XF.iOS   |4                 |iOS 13.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
+|Android        |Hymnal.XF.Droid | 4                |Android 5.0 (API 21 Lollipop) |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 
 ## Usage
 
