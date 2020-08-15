@@ -68,7 +68,7 @@
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
     <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
@@ -179,15 +179,6 @@
       <Version>4.7.0.1260</Version>
     </PackageReference>
   </ItemGroup>
-  <Choose>
-    <When Condition="'$(Configuration)' == 'Debug'">
-      <ItemGroup>
-        <PackageReference Include="Xamarin.HotReload">
-          <Version>2.0.7</Version>
-        </PackageReference>
-      </ItemGroup>
-    </When>
-  </Choose>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
@@ -227,6 +218,10 @@
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hymnal.StorageModels\Hymnal.StorageModels.csproj">
+      <Project>{7b4177f3-d237-4e84-a92c-58c5c3917975}</Project>
+      <Name>Hymnal.StorageModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
       <Project>{d9bcf416-9f88-4089-83a6-d9c9b9b1eb7d}</Project>

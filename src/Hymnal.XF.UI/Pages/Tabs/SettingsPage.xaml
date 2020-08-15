@@ -94,6 +94,18 @@
                     </Grid>
                 </ViewCell>
 
+                <!--  Always Screen On  -->
+                <ViewCell>
+                    <Grid ColumnDefinitions="*, auto">
+                        <Label
+                            Grid.Column="0"
+                            Text="{i18n:Translate KeepScreenAlwaysOn}" />
+                        <Switch
+                            Grid.Column="1"
+                            IsToggled="{Binding KeepScreenOn}" />
+                    </Grid>
+                </ViewCell>
+
                 <!--  Font Size  -->
                 <ViewCell
                     x:Name="fontSizeCell"

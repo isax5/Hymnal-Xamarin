@@ -3,6 +3,7 @@ using Android.Content.PM;
 using Android.OS;
 using Android.Runtime;
 using Hymnal.Core.ViewModels.Main;
+using Hymnal.StorageModels;
 using MediaManager;
 using MvvmCross.Forms.Platforms.Android.Views;
 using Plugin.StorageManager;
@@ -26,6 +27,7 @@ namespace Hymnal.XF.Droid
             FormsMaterial.Init(this, bundle);
             CrossMediaManager.Current.Init(this);
             CrossStorageManager.Current.Init(Realms.Realm.GetInstance());
+            Storage.Init();
             Xamarin.Essentials.Platform.Init(this, bundle);
         }
 

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.Core.Models;
-using Plugin.StorageManager.Models;
+using Hymnal.StorageModels.Models;
 
 namespace Hymnal.Core.Services
 {

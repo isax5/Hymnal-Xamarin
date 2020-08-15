@@ -48,21 +48,26 @@ Table of contents
 
 
 ### Build status
-|Platform       |Package Name    |Version           |AppCenter build                                                                                                                          | Minimum Compatible OS        |
-|---------------|----------------|------------------|-----------------------------------------------------------------------------------------------------------------------------------------|------------------------------|
-|Android        |Hymnal.XF.Droid |4                 |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |iOS 13.0                      |
-|iOS            |Hymnal.XF.iOS   |4                 |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms) |Android 5.0 (API 21 Lollipop) |
+<!-- Original Build links -->
+<!-- 
+[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)
+[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms)
+ -->
+|Platform       |Package Name    |Version           |Minimum Compatible OS         |AppCenter build                                                                                                                          |
+|---------------|----------------|------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+|iOS            |Hymnal.XF.iOS   |4                 |iOS 13.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
+|Android        |Hymnal.XF.Droid | 4                |Android 5.0 (API 21 Lollipop) |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 
-# Usage
+## Usage
 
 ### Presence in stores
-- [AppStore](https://apps.apple.com/us/app/adventist-hymnal/id1153114394)
-- [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA)
+<a title="AppStore" href="https://apps.apple.com/us/app/adventist-hymnal/id1153114394" target="_blank"><img width="150" alt="AppStore" src="http://devimages.apple.com.edgekey.net/app-store/marketing/guidelines/images/badge-download-on-the-app-store.svg"></a>
+<a title="Google Play" href="https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA" target="_blank"><img width="150" alt="Google Play" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/256px-Google_Play_Store_badge_EN.svg.png"></a>
+
 
 ### Demo
 ![Recordit GIF](https://recordit.co/IoYOhRUrmB.gif)
 
----
 
 ### Languages supported:
 - English
@@ -70,7 +75,6 @@ Table of contents
 - Russian
 - Portuguese
 
----
 
 ### Hymnal versions
 - English 1985
@@ -80,6 +84,7 @@ Table of contents
 - Português 1996
 - Русский 1997
 
+---
 
 ## Tests
 > Beta testing programs:
@@ -126,4 +131,3 @@ Reach out to me at one of the following places!
 
 - Twitter at <a href="https://twitter.com/IsaacRebolledo" target="_blank">`@IsaacRebolledo`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
----

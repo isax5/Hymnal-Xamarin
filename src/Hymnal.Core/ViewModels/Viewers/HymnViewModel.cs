@@ -8,6 +8,7 @@ using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
+using Hymnal.StorageModels.Models;
 using MediaManager;
 using MediaManager.Player;
 using Microsoft.AppCenter.Analytics;
@@ -16,7 +17,6 @@ using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using Plugin.StorageManager;
-using Plugin.StorageManager.Models;
 using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
