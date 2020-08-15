@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
@@ -16,10 +14,10 @@ namespace Hymnal.XF.UI.Pages
         {
             InitializeComponent();
 
-
-#if !__IOS__
-            ToolbarItems.Remove(CloseToolbar);
-#endif
+            if (Device.RuntimePlatform != Device.iOS)
+            {
+                ToolbarItems.Remove(CloseToolbar);
+            }
         }
     }
 }

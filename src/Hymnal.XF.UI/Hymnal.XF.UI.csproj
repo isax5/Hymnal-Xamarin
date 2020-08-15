@@ -1,16 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="MSBuild.Sdk.Extras/2.0.54">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <!-- Android target remove for VS Problem on Windows version <<MonoAndroid90;>> . Android will execute as netstandard2.0 version-->
-    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Tizen60</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">uap10.0.17763;$(TargetFrameworks)</TargetFrameworks>
+    <TargetFramework>netstandard2.0</TargetFramework>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="FontAwesome5Brands.otf" />
-    <None Remove="Fonts\FontAwesome5Regular.otf" />
-    <None Remove="Fonts\FontAwesome5Solid.otf" />
+    <None Remove="**/*.otf" />
   </ItemGroup>
 
   <ItemGroup>

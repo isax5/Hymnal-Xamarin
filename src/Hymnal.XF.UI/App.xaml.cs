@@ -14,9 +14,9 @@ namespace Hymnal.XF.UI
 
             InitializeComponent();
 
-            // Android only for now
-#if DEBUG && NETSTANDARD2_0
-            HotReloader.Current.Run(this);
+#if DEBUG
+            if (Device.RuntimePlatform == Device.Android)
+                HotReloader.Current.Run(this);
 #endif
         }
 
