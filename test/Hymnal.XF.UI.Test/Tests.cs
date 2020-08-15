@@ -45,7 +45,7 @@ namespace Hymnal.XF.UI.Test
             app.DismissKeyboard();
             app.Tap("OpenHymnButton");
             app.WaitForElement("HymnPage");
-            app.Back();
+            back();
             app.WaitForElement("NumberPage");
 
             // Assert
@@ -71,17 +71,25 @@ namespace Hymnal.XF.UI.Test
             app.Tap(e => e.Class("ItemContentView").Index(0));
 
             app.WaitForElement("HymnPage");
-            app.Back();
+            back();
 
             app.WaitForElement("SearchPage");
             app.DismissKeyboard();
-            app.Back();
+            back();
 
             app.WaitForElement("NumberPage");
 
             // Assert
             var result = app.Query(e => e.Marked("NumberPage")).Any();
             Assert.IsTrue(result);
+        }
+
+        private void back()
+        {
+            if (app.Query(e => e.Text("Close")).Any())
+                app.Tap("Close");
+            else
+                app.Back();
         }
     }
 }

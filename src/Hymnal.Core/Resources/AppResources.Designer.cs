@@ -134,15 +134,6 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Developers.
-        /// </summary>
-        internal static string Developers {
-            get {
-                return ResourceManager.GetString("Developers", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Developing.
         /// </summary>
         internal static string Developing {
@@ -247,6 +238,15 @@ namespace Hymnal.Core.Resources {
         internal static string InstrumentalOrSung {
             get {
                 return ResourceManager.GetString("InstrumentalOrSung", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Keep screen always on.
+        /// </summary>
+        internal static string KeepScreenAlwaysOn {
+            get {
+                return ResourceManager.GetString("KeepScreenAlwaysOn", resourceCulture);
             }
         }
         

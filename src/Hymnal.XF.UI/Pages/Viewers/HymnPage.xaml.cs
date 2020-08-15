@@ -13,15 +13,18 @@ namespace Hymnal.XF.UI.Pages
         public HymnPage()
         {
             InitializeComponent();
-#if TIZEN
-            this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
-            hymnContentLabel.FontSize = 80;
-            backgroundImage.Source = new FileImageSource { File = "Background.png" };
-#endif
 
-#if !__IOS__
-            ToolbarItems.Remove(CloseToolbar);
-#endif
+            if (Device.RuntimePlatform == Device.Tizen)
+            {
+                this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
+                hymnContentLabel.FontSize = 80;
+                backgroundImage.Source = new FileImageSource { File = "Background.png" };
+            }
+
+            if (Device.RuntimePlatform != Device.iOS)
+            {
+                ToolbarItems.Remove(CloseToolbar);
+            }
 
             // Toolbar player
             //PlaySomethingToolbarItem.Text = string.Empty;

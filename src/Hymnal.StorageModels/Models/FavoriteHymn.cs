@@ -1,9 +1,10 @@
 using System;
+using Plugin.StorageManager;
 #if __IOS__ || __ANDROID__
 using Realms;
 #endif
 
-namespace Plugin.StorageManager.Models
+namespace Hymnal.StorageModels.Models
 {
 #if __IOS__ || __ANDROID__
     public class FavoriteHymn : RealmObject, IHymnReference, IStorageModel

@@ -19,19 +19,23 @@
     <pages:BaseContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="CloseToolbar"
+            AutomationId="Close"
             Command="{Binding CloseCommand}"
             Priority="-1"
             Text="{i18n:Translate Close}" />
         <ToolbarItem
+            AutomationId="PlayPauseMusic"
             x:Name="MusicToolbar"
             Command="{Binding PlayCommand}"
             IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
+            AutomationId="AddRemoveFavorite"
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
+            AutomationId="OpenSheet"
             x:Name="SheetToolbar"
             Command="{Binding OpenSheetCommand}"
             Priority="3">
@@ -42,6 +46,7 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
+            AutomationId="Share"
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>

@@ -4,10 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
+using Hymnal.StorageModels.Models;
 using Microsoft.AppCenter.Crashes;
 using MvvmCross.Logging;
 using Newtonsoft.Json;
-using Plugin.StorageManager.Models;
 
 namespace Hymnal.Core.Services
 {

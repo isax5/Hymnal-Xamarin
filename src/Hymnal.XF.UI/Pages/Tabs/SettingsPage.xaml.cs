@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 using Hymnal.Core.ViewModels;
 using MvvmCross.Forms.Presenters.Attributes;
 using MvvmCross.Forms.Views;
@@ -16,27 +15,17 @@ namespace Hymnal.XF.UI.Pages
         {
             InitializeComponent();
 
-#if TIZEN
-            preferencesSection.Remove(fontSizeCell);
+            if (Device.RuntimePlatform == Device.Tizen)
+            {
+                preferencesSection.Remove(fontSizeCell);
 
-            developerSection.Remove(developerCell);
-            developerSection.Remove(appVersionCell);
-            developerSection.Remove(appBuildCell);
-#endif
+                developerSection.Remove(developerCell);
+                developerSection.Remove(appVersionCell);
+                developerSection.Remove(appBuildCell);
+            }
         }
 
-        //protected override void OnAppearing()
-        //{
-        //    base.OnAppearing();
-
-        //    carousel.ItemsSource = new List<string>
-        //    {
-        //        "Hola",
-        //        "Mundo",
-        //        "Como estas"
-        //    };
-        //}
-
+        // TODO: Se puede crear un converter o algo similar
         private void LetterSize_ValueChanged(object sender, ValueChangedEventArgs e) => LetterSize.Value = Math.Round(e.NewValue, 0);
     }
 }

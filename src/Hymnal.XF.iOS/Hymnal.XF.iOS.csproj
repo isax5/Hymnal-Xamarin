@@ -42,7 +42,7 @@
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
-    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Plugin.StorageManager --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Hymnal.StorageModels --linkskip=Plugin.StorageManager --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
     <MtouchUseLlvm>true</MtouchUseLlvm>
     <OptimizePNGs>false</OptimizePNGs>
   </PropertyGroup>
@@ -78,7 +78,7 @@
     <BuildIpa>true</BuildIpa>
     <OptimizePNGs>false</OptimizePNGs>
     <MtouchUseLlvm>true</MtouchUseLlvm>
-    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Plugin.StorageManager --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
+    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI --linkskip=Hymnal.StorageModels --linkskip=Plugin.StorageManager --linkskip=Plugin.MediaManager --linkskip=MvvmCross</MtouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
@@ -230,6 +230,10 @@
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hymnal.StorageModels\Hymnal.StorageModels.csproj">
+      <Project>{7b4177f3-d237-4e84-a92c-58c5c3917975}</Project>
+      <Name>Hymnal.StorageModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
       <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>

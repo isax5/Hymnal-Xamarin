@@ -18,5 +18,7 @@ namespace Hymnal.Core.Services
         event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged;
 
         string LastVersionOpened { get; set; }
+
+        bool KeepScreenOn { get; set; }
     }
 }
