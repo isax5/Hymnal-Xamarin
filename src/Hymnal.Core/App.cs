@@ -17,6 +17,7 @@ using MvvmCross.IoC;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.StorageManager;
+using Xamarin.Essentials;
 
 namespace Hymnal.Core
 {
@@ -38,14 +39,20 @@ namespace Hymnal.Core
                 .AsInterfaces()
                 .RegisterAsLazySingleton();
 
+            if (DeviceInfo.Platform == DevicePlatform.iOS ||
+                DeviceInfo.Platform == DevicePlatform.Android ||
+                DeviceInfo.Platform == DevicePlatform.tvOS ||
+                DeviceInfo.Platform == DevicePlatform.Tizen)
+            {
+                SetUp();
 
-#if __IOS__ || __ANDROID__ || __TVOS__ || TIZEN
-            SetUp();
+                RegisterAppStart<RootViewModel>();
+            }
+            else
+            {
+                RegisterAppStart<SimpleViewModel>();
+            }
 
-            RegisterAppStart<RootViewModel>();
-#else
-            RegisterAppStart<SimpleViewModel>();
-#endif
         }
 
 
@@ -58,11 +65,21 @@ namespace Hymnal.Core
 
             // AppCenter
             // Doc: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/xamarin#423-xamarinforms
-#if RELEASE && (__IOS__ || __ANDROID__)
-            AppCenter.Start("ios=d636d723-86a7-4d3a-8f02-cfdd454df9af;android=2ded5d95-4218-4a32-893f-1db17c0004a6;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
-#elif DEBUG && (__IOS__ || __ANDROID__)
-            AppCenter.Start("ios=b3d6dce3-971c-40cf-aa5f-e40979e7fb7a;android=d3f0ef03-acc8-450b-b028-6fb74ddd98c5;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
+
+            if (DeviceInfo.Platform == DevicePlatform.iOS ||
+                DeviceInfo.Platform == DevicePlatform.Android)
+            {
+#if RELEASE
+                AppCenter.Start("ios=d636d723-86a7-4d3a-8f02-cfdd454df9af;android=2ded5d95-4218-4a32-893f-1db17c0004a6;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
+#elif DEBUG
+
+                AppCenter.Start("ios=b3d6dce3-971c-40cf-aa5f-e40979e7fb7a;android=d3f0ef03-acc8-450b-b028-6fb74ddd98c5;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
 #endif
+            }
+            else
+            {
+                AppCenter.SetEnabledAsync(false);
+            }
 
             // Language Configuration
             IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();

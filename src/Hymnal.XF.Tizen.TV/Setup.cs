@@ -1,4 +1,5 @@
 using Hymnal.Core.Services;
+using Hymnal.StorageModels;
 using Hymnal.XF.Tizen.TV.Custom;
 using Hymnal.XF.UI.Services;
 using MediaManager;
@@ -6,7 +7,6 @@ using MvvmCross;
 using MvvmCross.Forms.Platforms.Tizen.Core;
 using MvvmCross.Forms.Presenters;
 using Plugin.StorageManager;
-using Xamarin.Forms;
 
 namespace Hymnal.XF.Tizen.TV
 {
@@ -25,6 +25,7 @@ namespace Hymnal.XF.Tizen.TV
             base.InitializePrimary();
             CrossStorageManager.Current.Init();
             CrossMediaManager.Current.Init();
+            Storage.Init();
         }
 
         protected override IMvxFormsPagePresenter CreateFormsPagePresenter(IMvxFormsViewPresenter viewPresenter)

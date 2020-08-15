@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hymnal.Core.Models;
@@ -36,7 +35,6 @@ namespace Hymnal.Core.ViewModels
 
 #if DEBUG
             // A long hymn
-            //HymnNumber = $"{255}";
             HymnNumber = $"{584}";
 #endif
         }
@@ -46,14 +44,12 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-#if __IOS__ || __ANDROID__
             Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
             {
                 { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(NumberViewModel) },
                 { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                 { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
-#endif
         }
 
         public MvxCommand<string> OpenHymnCommand => new MvxCommand<string>(OpenHymnAsync);

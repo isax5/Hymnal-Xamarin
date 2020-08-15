@@ -38,24 +38,33 @@ namespace Hymnal.Core.ViewModels
             // KeepScreenOn
             DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
 
-#if __IOS__ || __ANDROID__
-            await navigationService.Navigate<NumberViewModel>();
-            await navigationService.Navigate<IndexViewModel>();
-            await navigationService.Navigate<FavoritesViewModel>();
-            await navigationService.Navigate<SettingsViewModel>();
-#elif __TVOS__
-            // Native project, RootViewController
-            await navigationService.Navigate<NumberViewModel>();
-            await navigationService.Navigate<SearchViewModel>();
-            await navigationService.Navigate<NumericalIndexViewModel>();
-            await navigationService.Navigate<SettingsViewModel>();
-#elif TIZEN
-            await navigationService.Navigate<NumberViewModel>();
-            await navigationService.Navigate<SearchViewModel>();
-            await navigationService.Navigate<SettingsViewModel>();
-#else
-            await navigationService.Navigate<SimpleViewModel>();
-#endif
+
+            if (DeviceInfo.Platform == DevicePlatform.iOS ||
+                DeviceInfo.Platform == DevicePlatform.Android)
+            {
+                await navigationService.Navigate<NumberViewModel>();
+                await navigationService.Navigate<IndexViewModel>();
+                await navigationService.Navigate<FavoritesViewModel>();
+                await navigationService.Navigate<SettingsViewModel>();
+            }
+            else if (DeviceInfo.Platform == DevicePlatform.tvOS)
+            {
+                // Native project, RootViewController
+                await navigationService.Navigate<NumberViewModel>();
+                await navigationService.Navigate<SearchViewModel>();
+                await navigationService.Navigate<NumericalIndexViewModel>();
+                await navigationService.Navigate<SettingsViewModel>();
+            }
+            else if (DeviceInfo.Platform == DevicePlatform.Tizen)
+            {
+                await navigationService.Navigate<NumberViewModel>();
+                await navigationService.Navigate<SearchViewModel>();
+                await navigationService.Navigate<SettingsViewModel>();
+            }
+            else
+            {
+                await navigationService.Navigate<SimpleViewModel>();
+            }
         }
 
         // LifeCycle implemented in RootViewModel
@@ -64,17 +73,19 @@ namespace Hymnal.Core.ViewModels
         {
             log.Debug("App Started");
 
-#if __IOS__ || __ANDROID__
-            Analytics.TrackEvent(Constants.TrackEvents.AppOpened, new Dictionary<string, string>
+            if (DeviceInfo.Platform == DevicePlatform.iOS ||
+                DeviceInfo.Platform == DevicePlatform.Android)
             {
-                { Constants.TrackEvents.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
-                { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
-            });
-#endif
+                Analytics.TrackEvent(Constants.TrackEvents.AppOpened, new Dictionary<string, string>
+                {
+                    { Constants.TrackEvents.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                    { Constants.TrackEvents.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
+                    { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
+                });
+            }
 
             base.Start();
         }
-#endregion
+        #endregion
     }
 }
