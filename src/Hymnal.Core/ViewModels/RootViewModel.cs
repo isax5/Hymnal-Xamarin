@@ -35,6 +35,9 @@ namespace Hymnal.Core.ViewModels
 
             loaded = true;
 
+            // KeepScreenOn
+            DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
+
 
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
                 DeviceInfo.Platform == DevicePlatform.Android)

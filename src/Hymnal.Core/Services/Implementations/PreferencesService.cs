@@ -44,5 +44,11 @@ namespace Hymnal.Core.Services
             get => Preferences.Get(nameof(LastVersionOpened), string.Empty);
             set => Preferences.Set(nameof(LastVersionOpened), value);
         }
+
+        public bool KeepScreenOn
+        {
+            get => Preferences.Get(nameof(KeepScreenOn), false);
+            set => Preferences.Set(nameof(KeepScreenOn), value);
+        }
     }
 }
