@@ -23,14 +23,6 @@
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.7.0.1260" />
     <PackageReference Include="XamarinFastEntry.Behaviors" Version="1.1.1" />
   </ItemGroup>
-  <!-- Hot Reload for Debug -->
-  <Choose>
-    <When Condition="'$(Configuration)' == 'Debug'">
-      <ItemGroup>
-        <PackageReference Include="Xamarin.HotReload" Version="2.0.7" />
-      </ItemGroup>
-    </When>
-  </Choose>
   
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj" />

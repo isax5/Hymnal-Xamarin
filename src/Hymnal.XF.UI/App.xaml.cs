@@ -13,11 +13,6 @@ namespace Hymnal.XF.UI
             Current = this;
 
             InitializeComponent();
-
-#if DEBUG
-            if (Device.RuntimePlatform == Device.Android)
-                HotReloader.Current.Run(this);
-#endif
         }
 
         #region System events

@@ -179,15 +179,6 @@
       <Version>4.7.0.1260</Version>
     </PackageReference>
   </ItemGroup>
-  <Choose>
-    <When Condition="'$(Configuration)' == 'Debug'">
-      <ItemGroup>
-        <PackageReference Include="Xamarin.HotReload">
-          <Version>2.0.7</Version>
-        </PackageReference>
-      </ItemGroup>
-    </When>
-  </Choose>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher.xml" />
     <AndroidResource Include="Resources\mipmap-anydpi-v26\ic_launcher_round.xml" />
