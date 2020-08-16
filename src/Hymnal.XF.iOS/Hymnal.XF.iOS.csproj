@@ -98,66 +98,6 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <ImageAsset Include="Media.xcassets\Background.imageset\Background.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\Background.imageset\Background@2x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\Background.imageset\Background@3x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\Background.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse@2x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse@3x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue@2x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue@3x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse@2x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse@3x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue@2x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue@3x.png">
-      <Visible>false</Visible>
-    </ImageAsset>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
@@ -178,6 +118,31 @@
     <BundleResource Include="Resources\NewHymnal.pt.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.pt.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.ru.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\LogoSplash%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\LogoSplash%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\LogoSplash.png" />
+    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background.png" />
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
@@ -328,16 +293,6 @@
       <Visible>false</Visible>
     </ImageAsset>
   </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Hymn\LogoSplash.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Hymn\LogoSplash%402x.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <BundleResource Include="Resources\Hymn\LogoSplash%403x.png" />
-  </ItemGroup>
-  <!-- PIANO SHEET -->
   <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <Content Include="Resources\PianoSheet_NewHymnal_en_001.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_en_002.png" />
