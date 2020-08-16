@@ -98,9 +98,6 @@
       <SubType>Designer</SubType>
     </None>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
     <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
@@ -123,10 +120,6 @@
     <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse.png" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%403x.png" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\LogoSplash%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\LogoSplash%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\LogoSplash.png" />
-    <ImageAsset Include="Resources\Media.xcassets\LogoSplash.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%403x.png" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue.png" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%402x.png" />
@@ -143,6 +136,24 @@
     <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%403x.png" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\Contents.json" />
     <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png" />
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage%402x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage%403x.png" />
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\Contents.json" />
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage.png" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
@@ -188,10 +199,6 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
-      <Project>{4a4ac861-6dea-49e0-a330-5442b1f1f294}</Project>
-      <Name>StorageManager</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
@@ -204,95 +211,12 @@
       <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>
       <Name>Hymnal.XF.UI</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj">
+      <Project>{4A4AC861-6DEA-49E0-A330-5442B1F1F294}</Project>
+      <Name>StorageManager</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
-      <Visible>false</Visible>
-    </ImageAsset>
-  </ItemGroup>
-  <ItemGroup>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
-      <Visible>false</Visible>
-    </ImageAsset>
-  </ItemGroup>
+  <!-- PIANO SHEET -->
   <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <Content Include="Resources\PianoSheet_NewHymnal_en_001.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_en_002.png" />
