@@ -116,45 +116,123 @@
     <BundleResource Include="Resources\NewHymnal.pt.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.pt.json" />
     <BundleResource Include="Resources\NewHymnalThematicList.ru.json" />
-    <ImageAsset Include="Resources\Media.xcassets\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background.png" />
-    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png" />
-    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage%402x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage%403x.png" />
-    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\Contents.json" />
-    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage.png" />
+    <ImageAsset Include="Resources\Media.xcassets\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\ToolbarFavoriteFalse%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteFalse.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\ToolbarPlayingTrue%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingTrue.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\Background.imageset\Background%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\ToolbarFavoriteTrue%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarFavoriteTrue.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\ToolbarPlayingFalse.imageset\ToolbarPlayingFalse.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-29.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-120.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-76.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-60.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-1024.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-152.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-180.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-58.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-80.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-167.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-40.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-87.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Icon-20.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage%402x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage%403x.png">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Resources\Media.xcassets\SplashImage.imageset\SplashImage.png">
+      <Visible>false</Visible>
+    </ImageAsset>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="LaunchScreen.storyboard">
