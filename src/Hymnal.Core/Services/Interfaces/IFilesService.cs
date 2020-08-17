@@ -6,6 +6,6 @@ namespace Hymnal.Core.Services
     {
         Task<string> ReadFileAsync(string fileName);
 
-        string GetPathFile(string fileName);
+        //string GetPathFile(string fileName);
     }
 }

@@ -1,0 +1,412 @@
+[
+  {
+    "thematic": "ПРОСЛАВЛЕНИЕ БОГА",
+    "ambits": [
+      {
+        "ambit": "Поклонение и прославление Бога",
+        "star": 1,
+        "end": 10,
+        "backimage": "Fondo1a21"
+      },
+      {
+        "ambit": "Святая Троица",
+        "star": 11,
+        "end": 12,
+        "backimage": "Fondo22a34"
+      },
+      {
+        "ambit": "Бог - наш Творец",
+        "star": 13,
+        "end": 15,
+        "backimage": "Fondo35a45"
+      },
+      {
+        "ambit": "Божье величие и любовь",
+        "star": 16,
+        "end": 21,
+        "backimage": "Fondo46a52"
+      },
+      {
+        "ambit": "Святое Божье Слово",
+        "star": 22,
+        "end": 27,
+        "backimage": "Fondo46a52"
+      }
+    ]
+  },
+  {
+    "thematic": "ИИСУС ХРИСТОС",
+    "ambits": [
+      {
+        "ambit": "Рождение Иисуса Христа",
+        "star": 28,
+        "end": 37,
+        "fondo": "Fondo53a59"
+      },
+      {
+        "ambit": "Гефсимания",
+        "star": 38,
+        "end": 39,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Страдания и смерть Иисуса Христа",
+        "star": 40,
+        "end": 49,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Славное воскресение Иисуса Христа",
+        "star": 50,
+        "end": 57,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Прославление Иисуса Христа",
+        "star": 58,
+        "end": 62,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Нет другого имени под небом",
+        "star": 63,
+        "end": 66,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Безмерная любовь Иисуса Христа",
+        "star": 67,
+        "end": 70,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Благодать Божья",
+        "star": 71,
+        "end": 74,
+        "fondo": "Fondo60a77"
+      },
+      {
+        "ambit": "Иисус - наш лучший Друг",
+        "star": 75,
+        "end": 77,
+        "fondo": "Fondo60a77"
+      }
+    ]
+  },
+  {
+    "thematic": "ДУХ СВЯТОЙ",
+    "ambits": [
+      {
+        "ambit": "ДУХ СВЯТОЙ",
+        "star": 78,
+        "end": 89,
+        "backimage": "Fondo190a203"
+      }
+    ]
+  },
+  {
+    "thematic": "БЛАГОДАРЕНИЕ И ХВАЛА",
+    "ambits": [
+      {
+        "ambit": "БЛАГОДАРЕНИЕ И ХВАЛА",
+        "star": 90,
+        "end": 99,
+        "backimage": "Fondo190a203"
+      }
+    ]
+  },
+  {
+    "thematic": "БОГОСЛУЖЕНИЕ",
+    "ambits": [
+      {
+        "ambit": "К началу богослужения",
+        "star": 100,
+        "end": 109,
+        "backimage": "Fondo78a92"
+      },
+      {
+        "ambit": "Для окончания богослужения",
+        "star": 110,
+        "end": 114,
+        "backimage": "Fondo158a189"
+      }
+    ]
+  },
+  {
+    "thematic": "ПРОСЛАВЛЕНИЕ БОГА В ДЕНЬ СУББОТНИЙ",
+    "ambits": [
+      {
+        "ambit": "Встреча субботнего дня",
+        "star": 115,
+        "end": 119,
+        "backimage": "Fondo190a203"
+      },
+      {
+        "ambit": "К началу субботнего богослужения",
+        "star": 120,
+        "end": 130,
+        "backimage": "Fondo190a203"
+      },
+      {
+        "ambit": "Субботние гимны",
+        "star": 131,
+        "end": 134,
+        "backimage": "Fondo190a203"
+      },
+      {
+        "ambit": "Для окончания субботнего дня",
+        "star": 135,
+        "end": 136,
+        "backimage": "Fondo190a203"
+      }
+    ]
+  },
+  {
+    "thematic": "ВЕРА И УПОВАНИЕ",
+    "ambits": [
+      {
+        "ambit": "Уверенность в Боге",
+        "star": 137,
+        "end": 151,
+        "backimage": "Fondo204a208"
+      },
+      {
+        "ambit": "Господь - упование наше",
+        "star": 152,
+        "end": 159,
+        "backimage": "Fondo204a208"
+      },
+      {
+        "ambit": "Бог - твердыня наша",
+        "star": 160,
+        "end": 165,
+        "backimage": "Fondo204a208"
+      },
+      {
+        "ambit": "Христос - утешение наша",
+        "star": 166,
+        "end": 170,
+        "backimage": "Fondo204a208"
+      },
+      {
+        "ambit": "Ободрение изнемогшим",
+        "star": 171,
+        "end": 179,
+        "backimage": "Fondo204a208"
+      }
+    ]
+  },
+  {
+    "thematic": "МОЛИТВА",
+    "ambits": [
+      {
+        "ambit": "МОЛИТВА",
+        "star": 180,
+        "end": 204,
+        "backimage": "Fondo209a237"
+      }
+    ]
+  },
+  {
+    "thematic": "СТРЕМЛЕНИЕ ХРИСТИАНИНА",
+    "ambits": [
+      {
+        "ambit": "Стремление души к Богу",
+        "star": 205,
+        "end": 217,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Стремление к Отчизне",
+        "star": 218,
+        "end": 227,
+        "backimage": "Fondo316a344"
+      }
+    ]
+  },
+  {
+    "thematic": "ОБРАЩЕНИЕ, ПОКАЯНИЕ",
+    "ambits": [
+      {
+        "ambit": "Призыв к покаянию",
+        "star": 228,
+        "end": 236,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Обращение",
+        "star": 237,
+        "end": 243,
+        "backimage": "Fondo316a344"
+      }
+    ]
+  },
+  {
+    "thematic": "ПОСВЯЩЕНИЕ",
+    "ambits": [
+      {
+        "ambit": "Посвящение Богу",
+        "star": 244,
+        "end": 250,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Следование за Христом",
+        "star": 251,
+        "end": 261,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Призыв к труду",
+        "star": 262,
+        "end": 266,
+        "backimage": "Fondo316a344"
+      }
+    ]
+  },
+  {
+    "thematic": "ПОСЛЕДНЕЕ ВРЕМЯ",
+    "ambits": [
+      {
+        "ambit": "Христос - наш Первосвященник",
+        "star": 267,
+        "end": 270,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Трехангельская весть",
+        "star": 271,
+        "end": 274,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Признаки Второго Пришествия",
+        "star": 275,
+        "end": 280,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Второе Пришествие Христа",
+        "star": 281,
+        "end": 292,
+        "backimage": "Fondo316a344"
+      }
+    ]
+  },
+  {
+    "thematic": "ЦЕРКОВЬ БОЖЬЯ",
+    "ambits": [
+      {
+        "ambit": "Крещение",
+        "star": 293,
+        "end": 297,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Открытие служения Вечери Господней",
+        "star": 298,
+        "end": 298,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Обряд ногоомовения",
+        "star": 299,
+        "end": 301,
+        "backimage": "Fondo209a237"
+      },
+      {
+        "ambit": "Благословение хлеба и вина",
+        "star": 302,
+        "end": 305,
+        "backimage": "Fondo316a344"
+      },
+      {
+        "ambit": "Для окончания служения Вечери",
+        "star": 306,
+        "end": 308,
+        "backimage": "Fondo316a344"
+      },
+      {
+        "ambit": "Посвящение молитвенного дома",
+        "star": 309,
+        "end": 310,
+        "backimage": "Fondo316a344"
+      },
+      {
+        "ambit": "Рукоположение служителя",
+        "star": 311,
+        "end": 312,
+        "backimage": "Fondo316a344"
+      },
+      {
+        "ambit": "Благословение детей",
+        "star": 313,
+        "end": 314,
+        "backimage": "Fondo316a344"
+      },
+      {
+        "ambit": "Бракосочетание",
+        "star": 315,
+        "end": 318,
+        "backimage": "Fondo316a344"
+      }
+    ]
+  },
+  {
+    "thematic": "НА РАЗНЫЕ СЛУЧАИ",
+    "ambits": [
+      {
+        "ambit": "Hoвый Год",
+        "star": 319,
+        "end": 323,
+        "backimage": "Fondo345a364"
+      },
+      {
+        "ambit": "Встреча, разлука",
+        "star": 324,
+        "end": 326,
+        "backimage": "Fondo365a372"
+      },
+      {
+        "ambit": "Погребение",
+        "star": 327,
+        "end": 330,
+        "backimage": "Fondo373a390"
+      }
+    ]
+  },
+  {
+    "thematic": "В КРУГУ СЕМЬИ",
+    "ambits": [
+      {
+        "ambit": "Утренние гимны в кругу семьи",
+        "star": 331,
+        "end": 335,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Вечерние гимны в кругу семьи",
+        "star": 336,
+        "end": 340,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Семейное богослужение",
+        "star": 341,
+        "end": 363,
+        "backimage": "Fondo535a550"
+      }
+    ]
+  },
+  {
+    "thematic": "НАСЛЕДИЕ",
+    "ambits": [
+      {
+        "ambit": "НАСЛЕДИЕ",
+        "star": 364,
+        "end": 385,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  }
+]
