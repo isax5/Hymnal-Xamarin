@@ -10,6 +10,7 @@ using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Hymnal.StorageModels.Models;
 using MediaManager;
+using MediaManager.Library;
 using MediaManager.Media;
 using MediaManager.Player;
 using Microsoft.AppCenter.Analytics;
@@ -298,10 +299,17 @@ namespace Hymnal.Core.ViewModels
 
             // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
             IsPlaying = true;
-            MediaManager.Library.IMediaItem mediaItem = await mediaManager.Play(songUrl);
+            IMediaItem mediaItem = new MediaItem(songUrl) { IsMetadataExtracted = true };
+            mediaItem = await mediaManager.Extractor.UpdateMediaItem(mediaItem).ConfigureAwait(false);
             mediaItem.DisplayTitle = Hymn.Title;
             mediaItem.Album = Language.Name;
             mediaItem.Year = Language.Year;
+            mediaItem.MediaType = MediaType.Audio;
+
+            await mediaManager.Play(mediaItem);
+
+            //IMediaItem  = await mediaManager.Play(songUrl);
+
 
             Analytics.TrackEvent(Constants.TrackEvents.HymnMusicPlayed, new Dictionary<string, string>
             {
