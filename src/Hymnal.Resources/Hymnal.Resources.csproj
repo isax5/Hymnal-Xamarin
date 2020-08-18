@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <None Remove="Assets\new-hymnal-en.json" />
+    <None Remove="Assets\new-hymnal-es.json" />
+    <None Remove="Assets\new-hymnal-pt.json" />
+    <None Remove="Assets\new-hymnal-ru.json" />
+    <None Remove="Assets\new-hymnal-thematic-list-en.json" />
+    <None Remove="Assets\new-hymnal-thematic-list-es.json" />
+    <None Remove="Assets\new-hymnal-thematic-list-pt.json" />
+    <None Remove="Assets\new-hymnal-thematic-list-ru.json" />
+    <None Remove="Assets\old-hymnal-en.json" />
+    <None Remove="Assets\old-hymnal-es.json" />
+    <None Remove="Assets\old-hymnal-thematic-list-en.json" />
+    <None Remove="Assets\old-hymnal-thematic-list-es.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Assets\new-hymnal-en.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-es.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-pt.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-ru.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-thematic-list-en.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-thematic-list-es.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-thematic-list-pt.json" />
+    <EmbeddedResource Include="Assets\new-hymnal-thematic-list-ru.json" />
+    <EmbeddedResource Include="Assets\old-hymnal-en.json" />
+    <EmbeddedResource Include="Assets\old-hymnal-es.json" />
+    <EmbeddedResource Include="Assets\old-hymnal-thematic-list-en.json" />
+    <EmbeddedResource Include="Assets\old-hymnal-thematic-list-es.json" />
+  </ItemGroup>
+
+</Project>

@@ -104,18 +104,6 @@
     <BundleResource Include="Resources\es.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\pt.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\ru.lproj\InfoPlist.strings" />
-    <BundleResource Include="Resources\NewHymnalThematicList.es.json" />
-    <BundleResource Include="Resources\OldHymnal.es.json" />
-    <BundleResource Include="Resources\NewHymnal.en.json" />
-    <BundleResource Include="Resources\OldHymnal.en.json" />
-    <BundleResource Include="Resources\NewHymnal.ru.json" />
-    <BundleResource Include="Resources\NewHymnal.es.json" />
-    <BundleResource Include="Resources\OldHymnalThematicList.es.json" />
-    <BundleResource Include="Resources\NewHymnalThematicList.en.json" />
-    <BundleResource Include="Resources\OldHymnalThematicList.en.json" />
-    <BundleResource Include="Resources\NewHymnal.pt.json" />
-    <BundleResource Include="Resources\NewHymnalThematicList.pt.json" />
-    <BundleResource Include="Resources\NewHymnalThematicList.ru.json" />
     <ImageAsset Include="Resources\Media.xcassets\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>

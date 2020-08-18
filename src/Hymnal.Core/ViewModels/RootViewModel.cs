@@ -36,7 +36,12 @@ namespace Hymnal.Core.ViewModels
             loaded = true;
 
             // KeepScreenOn
-            DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
+            if (DeviceInfo.Platform == DevicePlatform.iOS ||
+                DeviceInfo.Platform == DevicePlatform.Android ||
+                DeviceInfo.Platform == DevicePlatform.UWP)
+            {
+                DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
+            }
 
 
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
@@ -49,7 +54,6 @@ namespace Hymnal.Core.ViewModels
             }
             else if (DeviceInfo.Platform == DevicePlatform.tvOS)
             {
-                // Native project, RootViewController
                 await navigationService.Navigate<NumberViewModel>();
                 await navigationService.Navigate<SearchViewModel>();
                 await navigationService.Navigate<NumericalIndexViewModel>();
@@ -60,6 +64,10 @@ namespace Hymnal.Core.ViewModels
                 await navigationService.Navigate<NumberViewModel>();
                 await navigationService.Navigate<SearchViewModel>();
                 await navigationService.Navigate<SettingsViewModel>();
+            }
+            else if (DeviceInfo.Platform == DevicePlatform.UWP)
+            {
+                await navigationService.Navigate<NumberViewModel>();
             }
             else
             {
