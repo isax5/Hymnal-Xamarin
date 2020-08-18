@@ -11,25 +11,7 @@ namespace Hymnal.Core.Services
         {
             this.assets = assets;
         }
-        //public async Task<string> ReadFileAsync(string fileName)
-        //{
-        //    using (Stream stream = await FileSystem.OpenAppPackageFileAsync(fileName))
-        //    {
-        //        using (var reader = new StreamReader(stream))
-        //        {
-        //            return await reader.ReadToEndAsync();
-        //        }
-        //    }
-        //}
 
-        //public string GetPathFile(string fileName)
-        //{
-        //    var libraryPath = FileSystem.AppDataDirectory;
-        //    return Path.Combine(libraryPath, fileName);
-        //}
-        public async Task<string> ReadFileAsync(string fileName)
-        {
-            return assets.GetResourceString(fileName);
-        }
+        public async Task<string> ReadFileAsync(string fileName) => await Task.FromResult(assets.GetResourceString(fileName));
     }
 }

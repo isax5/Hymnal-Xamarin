@@ -59,7 +59,16 @@ namespace Hymnal.Core.ViewModels
 
         public bool KeepScreenOn
         {
-            get => DeviceDisplay.KeepScreenOn;
+            get
+            {
+                if (DeviceInfo.Platform == DevicePlatform.iOS ||
+                    DeviceInfo.Platform == DevicePlatform.Android)
+                {
+                return DeviceDisplay.KeepScreenOn;
+
+                }
+                return false;
+            }
             set
             {
                 DeviceDisplay.KeepScreenOn = value;

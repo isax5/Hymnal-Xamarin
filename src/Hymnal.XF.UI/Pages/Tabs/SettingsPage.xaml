@@ -96,7 +96,10 @@
 
                 <!--  Always Screen On  -->
                 <ViewCell>
-                    <Grid ColumnDefinitions="*, auto">
+                    <Grid
+                        ColumnDefinitions="*, auto"
+                        IsVisible="{OnPlatform Default=True,
+                                               Tizen=False}">
                         <Label
                             Grid.Column="0"
                             Text="{i18n:Translate KeepScreenAlwaysOn}" />
