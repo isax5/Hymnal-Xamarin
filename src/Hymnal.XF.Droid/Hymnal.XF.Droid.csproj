@@ -68,7 +68,7 @@
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
     <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.Resources;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
@@ -2162,10 +2162,9 @@
   <!-- PIANO SHEETS-->
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Assets\example.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
