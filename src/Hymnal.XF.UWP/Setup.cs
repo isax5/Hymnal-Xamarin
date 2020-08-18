@@ -1,5 +1,4 @@
 using Hymnal.Core.Services;
-using Hymnal.SharedNatives.Services;
 using Hymnal.XF.UI.Services;
 using MediaManager;
 using MvvmCross;
@@ -17,13 +16,7 @@ namespace Hymnal.UWP
             Mvx.IoCProvider.RegisterType<IFilesService, FilesService>();
             Mvx.IoCProvider.RegisterType<IDataStorageService, DataStorageService>();
             Mvx.IoCProvider.RegisterType<IDialogService, DialogService>();
-            Mvx.IoCProvider.RegisterType<IMultilingualService, MultilingualService>();
             Mvx.IoCProvider.RegisterType<IPreferencesService, PreferencesService>();
-            Mvx.IoCProvider.RegisterType<IAppInformationService, AppInformationService>();
-            Mvx.IoCProvider.RegisterType<IDeviceInformation, DeviceInformation>();
-            Mvx.IoCProvider.RegisterType<IConnectivityService, ConnectivityService>();
-            Mvx.IoCProvider.RegisterType<IBrowserService, BrowserService>();
-            Mvx.IoCProvider.RegisterType<IShareService, ShareService>();
         }
 
         public override void InitializePrimary()

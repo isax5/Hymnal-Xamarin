@@ -10,6 +10,8 @@ using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Hymnal.StorageModels.Models;
 using MediaManager;
+using MediaManager.Library;
+using MediaManager.Media;
 using MediaManager.Player;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -256,67 +258,68 @@ namespace Hymnal.Core.ViewModels
 
                 // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
                 IsPlaying = false;
+                return;
             }
-            else
+
+            var songUrl = string.Empty;
+            var isPlayingInstrumentalMusic = false;
+
+            // Choose music
+            if (Language.SupportInstrumentalMusic && Language.SupportSungMusic)
             {
-                bool isPlayingInstrumentalMusic;
+                var instrumentalTitle = Languages.Instrumental;
+                var sungTitle = Languages.Sung;
 
-                // Choose music
-                if (Language.SupportInstrumentalMusic && Language.SupportSungMusic)
+                var result = await dialogService.DisplayActionSheet(
+                    Languages.ChooseYourHymnal, Languages.Cancel,
+                    null, new[] { instrumentalTitle, sungTitle });
+
+                if (result.Equals(instrumentalTitle))
                 {
-                    var instrumentalTitle = Languages.Instrumental;
-                    var sungTitle = Languages.Sung;
-
-                    var result = await dialogService.DisplayActionSheet(
-                        Languages.ChooseYourHymnal, Languages.Cancel,
-                        null, new[] { instrumentalTitle, sungTitle });
-
-                    if (result.Equals(instrumentalTitle))
-                    {
-                        IsPlaying = true;
-                        await mediaManager.Play(Language.GetInstrumentURL(Hymn.Number));
-                        isPlayingInstrumentalMusic = true;
-                    }
-                    else if (result.Equals(sungTitle))
-                    {
-                        IsPlaying = true;
-                        await mediaManager.Play(Language.GetSungURL(hymn.Number));
-                        isPlayingInstrumentalMusic = false;
-                    }
-                    // Tap on "Close"
-                    else
-                    {
-                        return;
-                    }
+                    songUrl = Language.GetInstrumentURL(Hymn.Number);
+                    isPlayingInstrumentalMusic = true;
                 }
-                // Default music
+                else if (result.Equals(sungTitle))
+                {
+                    songUrl = Language.GetSungURL(hymn.Number);
+                    isPlayingInstrumentalMusic = false;
+                }
+                // Tap on "Close"
                 else
                 {
-                    // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
-                    IsPlaying = true;
-
-                    if (Language.SupportInstrumentalMusic)
-                    {
-                        await mediaManager.Play(Language.GetInstrumentURL(Hymn.Number));
-                        isPlayingInstrumentalMusic = true;
-                    }
-                    else
-                    {
-                        await mediaManager.Play(Language.GetSungURL(Hymn.Number));
-                        isPlayingInstrumentalMusic = false;
-                    }
+                    return;
                 }
-
-                Analytics.TrackEvent(Constants.TrackEvents.HymnMusicPlayed, new Dictionary<string, string>
-                {
-                    { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                    { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
-                    { Constants.TrackEvents.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
-                    Constants.TrackEvents.HymnReferenceScheme.InstrumentalMusic : Constants.TrackEvents.HymnReferenceScheme.SungMusic },
-                    { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                    { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-                });
             }
+
+            if (string.IsNullOrWhiteSpace(songUrl))
+            {
+                isPlayingInstrumentalMusic = language.SupportInstrumentalMusic;
+                songUrl = language.SupportInstrumentalMusic ? Language.GetInstrumentURL(Hymn.Number) : Language.GetSungURL(Hymn.Number);
+            }
+
+            // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
+            IsPlaying = true;
+            IMediaItem mediaItem = new MediaItem(songUrl) { IsMetadataExtracted = true };
+            mediaItem = await mediaManager.Extractor.UpdateMediaItem(mediaItem).ConfigureAwait(false);
+            mediaItem.DisplayTitle = Hymn.Title;
+            mediaItem.Album = Language.Name;
+            mediaItem.Year = Language.Year;
+            mediaItem.MediaType = MediaType.Audio;
+
+            await mediaManager.Play(mediaItem);
+
+            //IMediaItem  = await mediaManager.Play(songUrl);
+
+
+            Analytics.TrackEvent(Constants.TrackEvents.HymnMusicPlayed, new Dictionary<string, string>
+            {
+                { Constants.TrackEvents.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
+                { Constants.TrackEvents.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
+                Constants.TrackEvents.HymnReferenceScheme.InstrumentalMusic : Constants.TrackEvents.HymnReferenceScheme.SungMusic },
+                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
         }
 
         public MvxCommand OpenPlayerCommand => new MvxCommand(OpenPlayerExecute);

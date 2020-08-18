@@ -11,6 +11,7 @@ namespace Hymnal.Core.Models
         public string TwoLetterISOLanguageName { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
+        public int Year { get; set; }
         public string HymnsFileName { get; set; }
 
         public string ThematicHymnsFileName { get; set; }

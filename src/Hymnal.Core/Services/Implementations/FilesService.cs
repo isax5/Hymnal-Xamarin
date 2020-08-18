@@ -1,26 +1,17 @@
-using System.IO;
 using System.Threading.Tasks;
-using Xamarin.Essentials;
+using Hymnal.Resources;
 
 namespace Hymnal.Core.Services
 {
     public class FilesService : IFilesService
     {
-        public async Task<string> ReadFileAsync(string fileName)
+        private readonly IAssets assets;
+
+        public FilesService(IAssets assets)
         {
-            using (Stream stream = await FileSystem.OpenAppPackageFileAsync(fileName))
-            {
-                using (var reader = new StreamReader(stream))
-                {
-                    return await reader.ReadToEndAsync();
-                }
-            }
+            this.assets = assets;
         }
 
-        public string GetPathFile(string fileName)
-        {
-            var libraryPath = FileSystem.AppDataDirectory;
-            return Path.Combine(libraryPath, fileName);
-        }
+        public async Task<string> ReadFileAsync(string fileName) => await Task.FromResult(assets.GetResourceString(fileName));
     }
 }

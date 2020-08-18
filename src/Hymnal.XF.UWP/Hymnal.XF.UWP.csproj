@@ -103,18 +103,6 @@
       <SubType>Designer</SubType>
     </AppxManifest>
     <None Include="Hymnal.UWP_TemporaryKey.pfx" />
-    <Content Include="NewHymnal.en.json" />
-    <Content Include="NewHymnal.es.json" />
-    <Content Include="NewHymnal.ru.json" />
-    <Content Include="NewHymnalThematicList.es.json" />
-    <Content Include="OldHymnal.en.json" />
-    <Content Include="OldHymnal.es.json" />
-    <Content Include="OldHymnalThematicList.es.json" />
-    <Content Include="NewHymnalThematicList.en.json" />
-    <Content Include="OldHymnalThematicList.en.json" />
-    <Content Include="NewHymnal.pt.json" />
-    <Content Include="NewHymnalThematicList.pt.json" />
-    <Content Include="NewHymnalThematicList.ru.json" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\BadgeLogo.scale-100.png" />
@@ -188,10 +176,6 @@
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj">
       <Project>{8651A503-045F-42AA-8EFD-1E20E5A73925}</Project>
       <Name>Hymnal.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Hymnal.SharedNatives\Hymnal.SharedNatives.csproj">
-      <Project>{1ac8149a-b28f-4db6-a65e-31e379605528}</Project>
-      <Name>Hymnal.SharedNatives</Name>
     </ProjectReference>
     <ProjectReference Include="..\Hymnal.XF.UI\Hymnal.XF.UI.csproj">
       <Project>{D9BCF416-9F88-4089-83A6-D9C9B9B1EB7D}</Project>

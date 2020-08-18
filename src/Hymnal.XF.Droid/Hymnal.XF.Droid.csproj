@@ -68,7 +68,7 @@
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
     <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.Resources;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
@@ -93,18 +93,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProguardConfiguration Include="proguard.cfg" />
-    <AndroidAsset Include="Assets\OldHymnal.es.json" />
-    <AndroidAsset Include="Assets\NewHymnal.en.json" />
-    <AndroidAsset Include="Assets\OldHymnal.en.json" />
-    <AndroidAsset Include="Assets\NewHymnal.ru.json" />
-    <AndroidAsset Include="Assets\NewHymnal.es.json" />
-    <AndroidAsset Include="Assets\NewHymnalThematicList.es.json" />
-    <AndroidAsset Include="Assets\OldHymnalThematicList.es.json" />
-    <AndroidAsset Include="Assets\NewHymnalThematicList.en.json" />
-    <AndroidAsset Include="Assets\OldHymnalThematicList.en.json" />
-    <AndroidAsset Include="Assets\NewHymnalThematicList.pt.json" />
-    <AndroidAsset Include="Assets\NewHymnal.pt.json" />
-    <AndroidAsset Include="Assets\NewHymnalThematicList.ru.json" />
     <None Include="FodyWeavers.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -2174,6 +2162,9 @@
   <!-- PIANO SHEETS-->
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
