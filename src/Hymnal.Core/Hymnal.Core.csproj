@@ -27,6 +27,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />
+    <ProjectReference Include="..\Hymnal.Resources\Hymnal.Resources.csproj" />
     <ProjectReference Include="..\Hymnal.StorageModels\Hymnal.StorageModels.csproj" />
   </ItemGroup>
   

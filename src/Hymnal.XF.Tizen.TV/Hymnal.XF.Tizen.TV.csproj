@@ -14,18 +14,6 @@
   </PropertyGroup>
   <ItemGroup>
     <EmbeddedResource Include="res\Background.png" />
-    <EmbeddedResource Include="res\NewHymnal.en.json" />
-    <EmbeddedResource Include="res\NewHymnal.es.json" />
-    <EmbeddedResource Include="res\NewHymnal.pt.json" />
-    <EmbeddedResource Include="res\NewHymnal.ru.json" />
-    <EmbeddedResource Include="res\NewHymnalThematicList.en.json" />
-    <EmbeddedResource Include="res\NewHymnalThematicList.es.json" />
-    <EmbeddedResource Include="res\NewHymnalThematicList.pt.json" />
-    <EmbeddedResource Include="res\NewHymnalThematicList.ru.json" />
-    <EmbeddedResource Include="res\OldHymnal.en.json" />
-    <EmbeddedResource Include="res\OldHymnal.es.json" />
-    <EmbeddedResource Include="res\OldHymnalThematicList.en.json" />
-    <EmbeddedResource Include="res\OldHymnalThematicList.es.json" />
   </ItemGroup>
 
   <ItemGroup>
