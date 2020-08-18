@@ -193,5 +193,22 @@ namespace Hymnal.XF.Droid.Linker
             _ = new Core.App();
         }
         #endregion
+
+        #region Hymnal Storage Models
+        public void Include(StorageModels.Models.FavoriteHymn favoriteHymn)
+        {
+            _ = new StorageModels.Models.FavoriteHymn();
+        }
+
+        public void Include(StorageModels.Models.IHymnReference hymnReference)
+        {
+            StorageModels.Models.IHymnReference _ = new StorageModels.Models.FavoriteHymn();
+        }
+
+        public void Include(StorageModels.Models.RecordHymn recordHymn)
+        {
+            _ = new StorageModels.Models.RecordHymn();
+        }
+        #endregion
     }
 }

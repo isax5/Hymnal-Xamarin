@@ -68,7 +68,7 @@
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
     <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.Resources;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
+    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;Hymnal.StorageModels;Plugin.StorageManager;Plugin.MediaManager;MvvmCross;</AndroidLinkSkip>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
@@ -314,6 +314,7 @@
   </ItemGroup>
   <Import Project="..\Hymnal.XF.Droid.Shared\Hymnal.XF.Droid.Shared.projitems" Label="Shared" />
   <!-- PIANO SHEETS-->
+  <!--
   <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_001.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_en_002.png" />
@@ -2159,13 +2160,13 @@
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_384.png" />
     <AndroidResource Include="Resources\drawable-nodpi\PianoSheet_NewHymnal_ru_385.png" />
   </ItemGroup>
+  -->
   <!-- PIANO SHEETS-->
   <ItemGroup>
     <Content Include="FodyWeavers.xml" />
+    <None Include="Assets\example.txt" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Assets\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

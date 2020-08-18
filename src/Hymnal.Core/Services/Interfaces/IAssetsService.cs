@@ -1,9 +1,9 @@
 using System.IO;
 using System.Reflection;
 
-namespace Hymnal.Resources
+namespace Hymnal.Core.Services
 {
-    public interface IAssets
+    public interface IAssetsService
     {
         Stream GetResourceStream(Assembly assembly, string resourceFileName);
         string GetResourceString(Assembly assembly, string resourceFileName);

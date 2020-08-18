@@ -1,5 +1,8 @@
 namespace Hymnal.StorageModels
 {
+    /// <summary>
+    /// Storage initializer
+    /// </summary>
     public static class Storage
     {
         /// <summary>

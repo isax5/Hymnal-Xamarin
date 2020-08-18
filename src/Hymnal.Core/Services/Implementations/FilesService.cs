@@ -1,17 +1,16 @@
 using System.Threading.Tasks;
-using Hymnal.Resources;
 
 namespace Hymnal.Core.Services
 {
     public class FilesService : IFilesService
     {
-        private readonly IAssets assets;
+        private readonly IAssetsService assetsService;
 
-        public FilesService(IAssets assets)
+        public FilesService(IAssetsService assetsService)
         {
-            this.assets = assets;
+            this.assetsService = assetsService;
         }
 
-        public async Task<string> ReadFileAsync(string fileName) => await Task.FromResult(assets.GetResourceString(fileName));
+        public async Task<string> ReadFileAsync(string fileName) => await Task.FromResult(assetsService.GetResourceString(fileName));
     }
 }

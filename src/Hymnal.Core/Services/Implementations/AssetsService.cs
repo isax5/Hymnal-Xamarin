@@ -3,25 +3,10 @@ using System.IO;
 using System.Linq;
 using System.Reflection;
 
-namespace Hymnal.Resources
+namespace Hymnal.Core.Services
 {
-    public class Assets : IAssets
+    public class AssetsService : IAssetsService
     {
-        private static IAssets current;
-        public static IAssets Current
-        {
-            get
-            {
-                if (current == null)
-                    current = new Assets();
-
-                return current;
-            }
-        }
-
-        private Assets()
-        { }
-
         public Stream GetResourceStream(Assembly assembly, string resourceFileName)
         {
             var resourceNames = assembly.GetManifestResourceNames();

@@ -18,7 +18,6 @@ using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 using Plugin.StorageManager;
 using Xamarin.Essentials;
-using Hymnal.Resources;
 
 namespace Hymnal.Core
 {
@@ -62,7 +61,7 @@ namespace Hymnal.Core
             // Register Services new
             Mvx.IoCProvider.RegisterSingleton<IStorageManager>(CrossStorageManager.Current);
             Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
-            Mvx.IoCProvider.RegisterSingleton<IAssets>(Assets.Current);
+
 
             // AppCenter
             // Doc: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/xamarin#423-xamarinforms
