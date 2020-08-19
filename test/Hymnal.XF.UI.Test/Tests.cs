@@ -84,6 +84,13 @@ namespace Hymnal.XF.UI.Test
             Assert.IsTrue(result);
         }
 
+        [Test]
+        public void ChangeLanguage()
+        {
+            app.Repl();
+            AppResult a = app.Query(x => x.Id("icon")).Last();
+        }
+
         private void back()
         {
             if (app.Query(e => e.Text("Close")).Any())
