@@ -17,6 +17,9 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
+            AutomationId="OpenNumberPageTab"
+            AutomationProperties.IsInAccessibleTree="True"
+            AutomationProperties.Name="Open Hymn by number tabbed page"
             FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
             Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
     </mvxViews:MvxContentPage.IconImageSource>
@@ -24,6 +27,9 @@
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="RecordsToolbarItem"
+            AutomationId="OpenRecordsPageToolbar"
+            AutomationProperties.IsInAccessibleTree="True"
+            AutomationProperties.Name="Open Records page"
             Command="{Binding OpenRecordsCommand}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
@@ -33,7 +39,8 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
-            AutomationId="OpenSearchPageToolbarItem"
+            AutomationId="OpenSearchPageToolbar"
+            AutomationProperties.Name="Open Records page"
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -48,6 +55,7 @@
         <Image
             x:Name="backgroundImage"
             Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -103,6 +111,8 @@
                             AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
                             AutomationId="HymnNumberEntry"
+                            AutomationProperties.HelpText="Entry hymn number"
+                            AutomationProperties.LabeledBy="Below this is a button where you can open the hymn"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"

@@ -22,16 +22,6 @@ namespace Hymnal.Core.ViewModels
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
 
-        /// <summary>
-        /// Hymn id for transition
-        /// </summary>
-        private int hymnId;
-        public int HymnId
-        {
-            get => hymnId;
-            set => SetProperty(ref hymnId, value);
-        }
-
         public Hymn SelectedHymn
         {
             get => null;
@@ -40,9 +30,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                HymnId = value.Number;
                 RaisePropertyChanged(nameof(SelectedHymn));
-
                 SelectedHymnExecute(value);
             }
         }
