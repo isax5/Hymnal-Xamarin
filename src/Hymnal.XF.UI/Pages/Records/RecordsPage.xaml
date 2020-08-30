@@ -16,6 +16,7 @@
     <RelativeLayout>
         <Image
             Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -31,6 +32,7 @@
                                                                   Property=Width}" />
 
         <CollectionView
+            AutomationProperties.IsInAccessibleTree="False"
             BackgroundColor="Transparent"
             Footer=""
             ItemSizingStrategy="MeasureFirstItem"
@@ -52,6 +54,7 @@
 
                         <!--  Number  -->
                         <Label
+                            AutomationProperties.HelpText="{Binding Title}"
                             Grid.Row="0"
                             Grid.RowSpan="2"
                             Grid.Column="0"
@@ -62,6 +65,7 @@
 
                         <!--  Title  -->
                         <Label
+                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.Column="1"
                             FontSize="Large"
@@ -72,6 +76,7 @@
 
                         <!--  Preview  -->
                         <Label
+                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="1"
                             Grid.Column="1"
                             FontSize="Micro"
@@ -82,6 +87,7 @@
 
                         <!--  Date  -->
                         <Label
+                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.RowSpan="2"
                             Grid.Column="2"

@@ -15,6 +15,7 @@
     <RelativeLayout>
         <Image
             Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -71,6 +72,7 @@
 
                         <!--  Preview  -->
                         <Label
+                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="1"
                             Grid.Column="1"
                             FontSize="Micro"

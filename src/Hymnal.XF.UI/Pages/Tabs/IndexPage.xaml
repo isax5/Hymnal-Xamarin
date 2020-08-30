@@ -22,6 +22,7 @@
     <mvxViews:MvxCarouselPage.ToolbarItems>
         <ToolbarItem
             x:Name="AlphabeticalListToolbar"
+            AutomationProperties.Name="Alphabetic order"
             Clicked="AlphabeticalListToolbar_Clicked"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -32,6 +33,7 @@
         </ToolbarItem>
         <ToolbarItem
             x:Name="NumericalListToolbar"
+            AutomationProperties.Name="Numeric order"
             Clicked="NumericalListToolbar_Clicked"
             Priority="2">
             <ToolbarItem.IconImageSource>
@@ -42,6 +44,7 @@
         </ToolbarItem>
         <ToolbarItem
             x:Name="ThematicListToolbar"
+            AutomationProperties.Name="Thematic index"
             Clicked="ThematicListToolbar_Clicked"
             Priority="3">
             <ToolbarItem.IconImageSource>

@@ -17,9 +17,6 @@
 
     <mvxViews:MvxContentPage.IconImageSource>
         <FontImageSource
-            AutomationId="OpenNumberPageTab"
-            AutomationProperties.IsInAccessibleTree="True"
-            AutomationProperties.Name="Open Hymn by number tabbed page"
             FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
             Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
     </mvxViews:MvxContentPage.IconImageSource>
@@ -28,7 +25,6 @@
         <ToolbarItem
             x:Name="RecordsToolbarItem"
             AutomationId="OpenRecordsPageToolbar"
-            AutomationProperties.IsInAccessibleTree="True"
             AutomationProperties.Name="Open Records page"
             Command="{Binding OpenRecordsCommand}"
             Priority="-1">
@@ -40,7 +36,7 @@
         </ToolbarItem>
         <ToolbarItem
             AutomationId="OpenSearchPageToolbar"
-            AutomationProperties.Name="Open Records page"
+            AutomationProperties.Name="Open Search page"
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -102,6 +98,7 @@
                             FontAttributes="Bold"
                             FontSize="45"
                             Text="#"
+                            AutomationProperties.IsInAccessibleTree="False"
                             TextColor="{DynamicResource PrimaryTextColor}"
                             VerticalOptions="FillAndExpand"
                             VerticalTextAlignment="Center" />
@@ -111,7 +108,8 @@
                             AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
                             AutomationId="HymnNumberEntry"
-                            AutomationProperties.HelpText="Entry hymn number"
+                            AutomationProperties.Name="Entry hymn number"
+                            AutomationProperties.HelpText="Below there is a button to open the hymn"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"
@@ -137,6 +135,7 @@
                 <Button
                     AutomationId="OpenHymnButton"
                     Clicked="OpenButton_Clicked"
+                    AutomationProperties.Name="Open hymn"
                     Command="{Binding OpenHymnCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
