@@ -112,7 +112,6 @@
                             AbsoluteLayout.LayoutFlags="All"
                             AutomationId="HymnNumberEntry"
                             AutomationProperties.HelpText="Entry hymn number"
-                            AutomationProperties.LabeledBy="Below this is a button where you can open the hymn"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"
