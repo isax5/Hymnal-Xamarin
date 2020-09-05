@@ -21,6 +21,7 @@ namespace Hymnal.XF.UI.Pages
         {
             switch (Device.RuntimePlatform)
             {
+                // TODO: Check iOS Version (more than iOS 13 can do this)
                 case Device.iOS:
                     return new MvxModalPresentationAttribute
                     {

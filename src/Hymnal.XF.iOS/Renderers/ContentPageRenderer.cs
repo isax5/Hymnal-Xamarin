@@ -14,6 +14,10 @@ namespace Hymnal.XF.iOS.Renderers
         public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
         {
             base.TraitCollectionDidChange(previousTraitCollection);
+
+            // TODO: Check iOS Version - More than iOS 13
+            return;
+
             Console.WriteLine($"TraitCollectionDidChange: {TraitCollection.UserInterfaceStyle} != {previousTraitCollection.UserInterfaceStyle}");
 
             if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
