@@ -59,8 +59,8 @@
     <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchExtraArgs>--linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI</MtouchExtraArgs>
-    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchExtraArgs>--interpreter --linkskip=Hymnal.Core --linkskip=Hymnal.XF.UI</MtouchExtraArgs>
+    <CodesignProvision>iOS Team Provisioning Profile: net.ddns.HimnarioAdventistaSPA</CodesignProvision>
     <MtouchLink>None</MtouchLink>
     <MtouchInterpreter>-all</MtouchInterpreter>
   </PropertyGroup>
