@@ -27,5 +27,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.Core\Hymnal.Core.csproj" />
   </ItemGroup>
+  
+  <ItemGroup>
+    <EmbeddedResource Update="Pages\Custom\CustomNavigationPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
 
 </Project>
