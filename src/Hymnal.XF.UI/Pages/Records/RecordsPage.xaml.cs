@@ -4,6 +4,7 @@ using MvvmCross.Forms.Views;
 using MvvmCross.Presenters;
 using MvvmCross.Presenters.Attributes;
 using MvvmCross.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,24 +16,30 @@ namespace Hymnal.XF.UI.Pages
         public RecordsPage()
         {
             InitializeComponent();
+
+            if ((Device.RuntimePlatform == Device.iOS && DeviceInfo.Version.Major < 13)
+                || Device.RuntimePlatform != Device.iOS)
+            {
+                SlideBar.IsVisible = false;
+            }
         }
 
         public MvxBasePresentationAttribute PresentationAttribute(MvxViewModelRequest request)
         {
-            switch (Device.RuntimePlatform)
+            if (Device.RuntimePlatform == Device.iOS && DeviceInfo.Version.Major >= 13)
             {
-                // TODO: Check iOS Version (more than iOS 13 can do this)
-                case Device.iOS:
-                    return new MvxModalPresentationAttribute
-                    {
-                        WrapInNavigationPage = false
-                    };
-                default:
-                    return new MvxContentPagePresentationAttribute
-                    {
-                        WrapInNavigationPage = true,
-                        NoHistory = false
-                    };
+                return new MvxModalPresentationAttribute
+                {
+                    WrapInNavigationPage = false
+                };
+
+            } else
+            {
+                return new MvxContentPagePresentationAttribute
+                {
+                    WrapInNavigationPage = true,
+                    NoHistory = false
+                };
             }
         }
     }

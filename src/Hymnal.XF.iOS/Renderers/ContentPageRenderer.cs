@@ -15,14 +15,14 @@ namespace Hymnal.XF.iOS.Renderers
         {
             base.TraitCollectionDidChange(previousTraitCollection);
 
-            // TODO: Check iOS Version - More than iOS 13
-            return;
-
-            Console.WriteLine($"TraitCollectionDidChange: {TraitCollection.UserInterfaceStyle} != {previousTraitCollection.UserInterfaceStyle}");
-
-            if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
             {
-                ThemeHelper.CheckTheme();
+                Console.WriteLine($"TraitCollectionDidChange: {TraitCollection.UserInterfaceStyle} != {previousTraitCollection.UserInterfaceStyle}");
+
+                if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+                {
+                    ThemeHelper.CheckTheme();
+                }
             }
         }
     }

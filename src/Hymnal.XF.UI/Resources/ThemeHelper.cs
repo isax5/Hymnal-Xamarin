@@ -1,7 +1,4 @@
 using System.Diagnostics;
-using Hymnal.Core.Models;
-using Hymnal.Core.Services;
-using MvvmCross;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -14,11 +11,6 @@ namespace Hymnal.XF.UI.Resources
 
         public static void CheckTheme()
         {
-            // TODO: Check iOS Version - More than iOS 13
-            App.Current.Resources.MergedDictionaries.Add(new LightTheme());
-            return;
-
-
             if (!themeConfigurated)
             {
                 Debug.WriteLine("==================================== CONFIGURATING THEME FOR FIRST TIME ====================================");
