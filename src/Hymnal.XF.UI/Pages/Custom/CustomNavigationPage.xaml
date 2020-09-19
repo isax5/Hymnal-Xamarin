@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-    iOS:NavigationPage.IsNavigationBarTranslucent="True"
+    iOS:NavigationPage.IsNavigationBarTranslucent="False"
     iOS:NavigationPage.PrefersLargeTitles="False"
     BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
     BarBackgroundColor="{DynamicResource PrimaryBackgroudColor}"
