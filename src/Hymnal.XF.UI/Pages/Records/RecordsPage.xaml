@@ -40,9 +40,9 @@
             RowSpacing="0">
 
             <StackLayout
+                x:Name="SlideBar"
                 Grid.Row="0"
-                Padding="12"
-                IsVisible="{OnPlatform Default=False, iOS=True}">
+                Padding="12">
                 <Frame
                     BackgroundColor="Gray"
                     HeightRequest="5"

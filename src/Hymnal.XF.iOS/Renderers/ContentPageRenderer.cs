@@ -14,11 +14,15 @@ namespace Hymnal.XF.iOS.Renderers
         public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
         {
             base.TraitCollectionDidChange(previousTraitCollection);
-            Console.WriteLine($"TraitCollectionDidChange: {TraitCollection.UserInterfaceStyle} != {previousTraitCollection.UserInterfaceStyle}");
 
-            if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0))
             {
-                ThemeHelper.CheckTheme();
+                Console.WriteLine($"TraitCollectionDidChange: {TraitCollection.UserInterfaceStyle} != {previousTraitCollection.UserInterfaceStyle}");
+
+                if (TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
+                {
+                    ThemeHelper.CheckTheme();
+                }
             }
         }
     }
