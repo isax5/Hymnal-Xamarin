@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
-using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Models;
 using Refit;
 
@@ -12,6 +11,8 @@ namespace Hymnal.AzureFunctions.Client
         private readonly HttpClient httpClient;
         private readonly IMusicAPI musicAPI;
 
+        private readonly ObservableValue<IEnumerable<MusicSettingsResponse>> musicSettingsObservable = new ObservableValue<IEnumerable<MusicSettingsResponse>>();
+
         public HymnService()
         {
             httpClient = new HttpClient(new HttpClientDiagnosticsHandler(new HttpClientHandler()))
@@ -21,9 +22,11 @@ namespace Hymnal.AzureFunctions.Client
             musicAPI = RestService.For<IMusicAPI>(httpClient);
         }
 
-        public async Task<IEnumerable<MusicSettingsResponse>> MusicSettingsAsync()
+
+        public IObservable<IEnumerable<MusicSettingsResponse>> ObserveSettings()
         {
-            return await musicAPI.GetMusicSettings().ConfigureAwait(false);
+            musicSettingsObservable.NextValue(musicAPI.ObserveSettings());
+            return musicSettingsObservable;
         }
     }
 }
