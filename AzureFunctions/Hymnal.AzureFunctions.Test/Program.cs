@@ -11,18 +11,23 @@ namespace Hymnal.AzureFunctions.Test
     {
         static async Task Main(string[] args)
         {
-            var service = new AzureHymnService();
+            var service = AzureHymnService.Current;
 
             var observable = service.ObserveSettings();
 
             var subs1 = observable
                 .Subscribe(
-                x => Console.WriteLine($"New Value: {x.Count()} items"),
+                x => Console.WriteLine($"New Value: {x.Id}"),
                 ex => Console.WriteLine($"Problem: {ex.Message}"),
                 () => Console.WriteLine("Completed"));
 
-            var subs2 = observable
-                .Subscribe(x => Console.WriteLine($"New value 2: {x.Count()}"));
+            Thread.Sleep(3500);
+
+            while (true)
+            {
+                observable
+                    .Subscribe(x => Console.WriteLine($"New value 2: {x.Id}"));
+            }
 
             await new TaskCompletionSource<object>().Task;
         }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.Core.Extensions;
@@ -264,6 +265,11 @@ namespace Hymnal.Core.ViewModels
                 IsPlaying = false;
                 return;
             }
+
+            azureHymnService.ObserveSettings()
+                .Subscribe(x =>
+                {
+                });
 
             var songUrl = string.Empty;
             var isPlayingInstrumentalMusic = false;

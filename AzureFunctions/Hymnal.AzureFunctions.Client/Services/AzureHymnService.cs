@@ -23,7 +23,7 @@ namespace Hymnal.AzureFunctions.Client
         private readonly HttpClient httpClient;
         private readonly IMusicAPI musicAPI;
 
-        private readonly ObservableValue<IEnumerable<MusicSettingsResponse>> musicSettingsObservable = new ObservableValue<IEnumerable<MusicSettingsResponse>>();
+        private readonly ObservableValues<MusicSettingsResponse> musicSettingsObservable = new ObservableValues<MusicSettingsResponse>();
 
         private AzureHymnService()
         {
@@ -35,9 +35,10 @@ namespace Hymnal.AzureFunctions.Client
         }
 
 
-        public IObservable<IEnumerable<MusicSettingsResponse>> ObserveSettings()
+        public IObservable<MusicSettingsResponse> ObserveSettings()
         {
-            musicSettingsObservable.NextValue(musicAPI.ObserveSettings());
+            musicSettingsObservable.NextValues(musicAPI.ObserveSettings());
+
             return musicSettingsObservable;
         }
     }

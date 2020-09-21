@@ -1,23 +1,25 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Reactive;
 using System.Reactive.Disposables;
+using System.Text;
 
 namespace Hymnal.AzureFunctions.Models
 {
-    public class ObservableValue<T> : ObservableBase<T>
+    public class ObservableValues<T> : ObservableBase<T>
     {
-        public T Current { get; internal set; }
+        public IEnumerable<T> Current { get; internal set; }
 
         protected readonly List<IObserver<T>> Observers = new List<IObserver<T>>();
         private readonly bool autoDispose;
 
-        public ObservableValue(bool autoDispose = true)
+        public ObservableValues(bool autoDispose = true)
         {
             this.autoDispose = autoDispose;
         }
 
-        public ObservableValue(T initialValue, bool autoDispose = true)
+        public ObservableValues(IEnumerable<T> initialValue, bool autoDispose = true)
             : this(autoDispose)
         {
             Current = initialValue;
@@ -27,7 +29,8 @@ namespace Hymnal.AzureFunctions.Models
         {
             if (Current != null)
             {
-                observer.OnNext(Current);
+                foreach (T value in Current.ToArray())
+                    observer.OnNext(value);
 
                 if (autoDispose)
                 {
@@ -50,14 +53,15 @@ namespace Hymnal.AzureFunctions.Models
             });
         }
 
-        public void NextValue(T value)
+        public void NextValues(IEnumerable<T> values)
         {
             lock (Observers)
             {
-                Current = value;
+                Current = values;
 
-                foreach (IObserver<T> obs in Observers.ToArray())
-                    obs.OnNext(value);
+                foreach (T value in values.ToArray())
+                    foreach (IObserver<T> obs in Observers.ToArray())
+                        obs.OnNext(value);
 
                 if (autoDispose)
                 {
@@ -70,9 +74,9 @@ namespace Hymnal.AzureFunctions.Models
             }
         }
 
-        public void NextValue(IObservable<T> value)
+        public void NextValues(IObservable<IEnumerable<T>> value)
         {
-            value.Subscribe(x => NextValue(x), ex => OnError(ex));
+            value.Subscribe(x => NextValues(x), ex => OnError(ex));
         }
 
         public void OnError(Exception ex)
