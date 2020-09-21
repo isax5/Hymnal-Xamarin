@@ -11,7 +11,7 @@ namespace Hymnal.AzureFunctions.Test
     {
         static async Task Main(string[] args)
         {
-            var service = new HymnService();
+            var service = new AzureHymnService();
 
             var observable = service.ObserveSettings();
 

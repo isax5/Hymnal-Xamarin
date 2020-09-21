@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.AzureFunctions.Client;
 using Hymnal.Core.Extensions;
 using Hymnal.Core.Helpers;
 using Hymnal.Core.Models;
@@ -32,6 +33,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMediaManager mediaManager;
         private readonly IDialogService dialogService;
         private readonly IStorageManager storageService;
+        private readonly IAzureHymnService azureHymnService;
 
         #region Properties
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
@@ -81,7 +83,8 @@ namespace Hymnal.Core.ViewModels
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
             IDialogService dialogService,
-            IStorageManager storageService
+            IStorageManager storageService,
+            IAzureHymnService azureHymnService
             )
         {
             this.navigationService = navigationService;
@@ -91,6 +94,7 @@ namespace Hymnal.Core.ViewModels
             this.mediaManager = mediaManager;
             this.dialogService = dialogService;
             this.storageService = storageService;
+            this.azureHymnService = azureHymnService;
             mediaManager.StateChanged += MediaManager_StateChanged;
         }
 

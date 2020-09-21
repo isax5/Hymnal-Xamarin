@@ -5,7 +5,7 @@ using System.Reactive.Disposables;
 
 namespace Hymnal.AzureFunctions.Models
 {
-    public class ObservableValue<T> : ObservableBase<T>, IObservableValue<T>
+    public class ObservableValue<T> : ObservableBase<T>
     {
         public T Current { get; internal set; }
 
