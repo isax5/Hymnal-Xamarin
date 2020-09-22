@@ -268,7 +268,7 @@ namespace Hymnal.Core.ViewModels
 
             azureHymnService.ObserveSettings()
                 .Where(x => x.Id == Language.Id)
-                .Subscribe(async hymnSettings =>
+                .Subscribe(hymnSettings => InvokeOnMainThreadAsync(async () =>
                 {
                     var songUrl = string.Empty;
                     var isPlayingInstrumentalMusic = false;
@@ -326,7 +326,7 @@ namespace Hymnal.Core.ViewModels
                         { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                         { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                     });
-                });
+                }));
 
         }
 
