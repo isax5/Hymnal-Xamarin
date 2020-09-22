@@ -2,7 +2,7 @@ using Newtonsoft.Json;
 
 namespace Hymnal.AzureFunctions.Models
 {
-    public class MusicSettingsResponse
+    public class HymnSettingsResponse
     {
         [JsonProperty(PropertyName = "Id")]
         public string Id { get; set; }

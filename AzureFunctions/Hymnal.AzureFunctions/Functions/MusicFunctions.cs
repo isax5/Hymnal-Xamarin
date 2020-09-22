@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using Hymnal.AzureFunctions.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs;
@@ -17,28 +15,7 @@ namespace Hymnal.AzureFunctions.Functions
         {
             log.LogInformation("[Music Settings Service] triggered");
 
-            return new OkObjectResult(new List<MusicSettingsResponse>()
-            {
-                new MusicSettingsResponse
-                {
-                    Id = "es-newVersion",
-                    TwoLetterISOLanguageName = "es",
-                    InstrumentalMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/instrumental/###.mp3",
-                    SungMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/sung/###.mp3",
-                },
-                new MusicSettingsResponse
-                {
-                    Id = "es-oldVersion",
-                    TwoLetterISOLanguageName = "es",
-                    InstrumentalMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/1962%20version/instrumental/###.mp3"
-                },
-                new MusicSettingsResponse
-                {
-                    Id = "en-newVersion",
-                    TwoLetterISOLanguageName = "en",
-                    InstrumentalMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/english/1985%20version/instrumental/###.mp3",
-                }
-            });
+            return new OkObjectResult(Constants.HYMN_SETTINGS);
         }
 
 
@@ -49,16 +26,7 @@ namespace Hymnal.AzureFunctions.Functions
         {
             log.LogInformation("[Music Settings Service] triggered");
 
-            return new OkObjectResult(new List<MusicSettingsResponse>()
-            {
-                new MusicSettingsResponse
-                {
-                    Id = "es-newVersion",
-                    TwoLetterISOLanguageName = "es",
-                    InstrumentalMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/instrumental/###.mp3",
-                    SungMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/spanish/2009%20version/sung/###.mp3",
-                }
-            });
+            return new OkObjectResult(Constants.HYMN_SETTINGS);
         }
 
         /*

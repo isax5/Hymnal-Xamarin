@@ -6,6 +6,6 @@ namespace Hymnal.AzureFunctions.Client
 {
     public interface IAzureHymnService
     {
-        IObservable<MusicSettingsResponse> ObserveSettings();
+        IObservable<HymnSettingsResponse> ObserveSettings();
     }
 }

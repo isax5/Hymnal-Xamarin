@@ -13,7 +13,7 @@ namespace Hymnal.AzureFunctions.Client
     public interface IMusicAPI
     {
         [Post("/v1/music/settings")]
-        IObservable<IEnumerable<MusicSettingsResponse>> ObserveSettings();
+        IObservable<IEnumerable<HymnSettingsResponse>> ObserveSettings();
 
         //[Post("/v1/music/settings")]
         //Task<IEnumerable<MusicSettingsResponse>> GetMusicSettings();
