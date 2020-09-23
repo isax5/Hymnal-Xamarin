@@ -11,6 +11,6 @@ namespace Hymnal.Core.Services
             this.assetsService = assetsService;
         }
 
-        public async Task<string> ReadFileAsync(string fileName) => await Task.FromResult(assetsService.GetResourceString(fileName));
+        public async Task<string> ReadFileAsync(string fileName) => await Task.FromResult(assetsService.GetResourceString(fileName)).ConfigureAwait(false);
     }
 }
