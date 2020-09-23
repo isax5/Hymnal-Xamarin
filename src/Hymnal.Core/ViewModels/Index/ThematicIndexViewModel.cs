@@ -24,7 +24,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedThematicExecute(value);
+                SelectedThematicExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedThematic));
             }
         }
@@ -97,9 +97,9 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
-        private void SelectedThematicExecute(Thematic thematic)
+        private async Task SelectedThematicExecuteAsync(Thematic thematic)
         {
-            navigationService.Navigate<ThematicSubGroupViewModel, Thematic>(thematic);
+            await navigationService.Navigate<ThematicSubGroupViewModel, Thematic>(thematic);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedHymnExecute(value);
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedHymn));
             }
         }
@@ -59,7 +59,7 @@ namespace Hymnal.Core.ViewModels
             base.ViewAppearing();
 
             // Update list
-            var favorites = await Task.WhenAll(
+            Tuple<FavoriteHymn, Hymn>[] favorites = await Task.WhenAll(
                 storageManager.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
                 .Select(async f => new Tuple<FavoriteHymn, Hymn>(f, await hymnsService.GetHymnAsync(f))));
 
@@ -102,9 +102,9 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        private void SelectedHymnExecute(Tuple<FavoriteHymn, Hymn> hymn)
+        private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
             {
                 Number = hymn.Item2.Number,
                 HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId)

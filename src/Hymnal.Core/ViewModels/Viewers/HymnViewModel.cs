@@ -190,10 +190,10 @@ namespace Hymnal.Core.ViewModels
         #endregion
 
         #region Commands
-        public MvxCommand OpenSheetCommand => new MvxCommand(OpenSheet);
-        private void OpenSheet()
+        public MvxAsyncCommand OpenSheetCommand => new MvxAsyncCommand(OpenSheetAsync);
+        private async Task OpenSheetAsync()
         {
-            navigationService.Navigate<MusicSheetViewModel, HymnIdParameter>(HymnParameter);
+            await navigationService.Navigate<MusicSheetViewModel, HymnIdParameter>(HymnParameter);
         }
 
         public MvxCommand FavoriteCommand => new MvxCommand(FavoriteExecute);
@@ -246,8 +246,8 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        public MvxCommand PlayCommand => new MvxCommand(PlayExecuteAsync);
-        private async void PlayExecuteAsync()
+        public MvxAsyncCommand PlayCommand => new MvxAsyncCommand(PlayExecuteAsync);
+        private async Task PlayExecuteAsync()
         {
             // Check internet connection
             if (Connectivity.NetworkAccess == NetworkAccess.None)
@@ -330,17 +330,17 @@ namespace Hymnal.Core.ViewModels
 
         }
 
-        public MvxCommand OpenPlayerCommand => new MvxCommand(OpenPlayerExecute);
-        private void OpenPlayerExecute()
+        public MvxAsyncCommand OpenPlayerCommand => new MvxAsyncCommand(OpenPlayerExecuteAsync);
+        private async Task OpenPlayerExecuteAsync()
         {
-            navigationService.Close(this);
-            navigationService.Navigate<PlayerViewModel, HymnIdParameter>(HymnParameter);
+            await navigationService.Close(this);
+            await navigationService.Navigate<PlayerViewModel, HymnIdParameter>(HymnParameter);
         }
 
-        public MvxCommand CloseCommand => new MvxCommand(Close);
-        private void Close()
+        public MvxAsyncCommand CloseCommand => new MvxAsyncCommand(CloseAsync);
+        private async Task CloseAsync()
         {
-            navigationService.Close(this);
+            await navigationService.Close(this);
         }
         #endregion
     }

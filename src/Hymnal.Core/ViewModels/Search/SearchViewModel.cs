@@ -43,7 +43,7 @@ namespace Hymnal.Core.ViewModels
                 HymnId = value.Number;
                 RaisePropertyChanged(nameof(SelectedHymn));
 
-                SelectedHymnExecute(value);
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
             }
         }
 
@@ -54,7 +54,7 @@ namespace Hymnal.Core.ViewModels
             set
             {
                 SetProperty(ref textSearchBar, value);
-                TextSearchExecuteAsync(value);
+                TextSearchExecuteAsync(value).ConfigureAwait(true);
             }
         }
 
@@ -82,7 +82,7 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
-            TextSearchExecuteAsync(string.Empty);
+            await TextSearchExecuteAsync(string.Empty);
 
             await base.Initialize();
         }
@@ -90,7 +90,7 @@ namespace Hymnal.Core.ViewModels
         private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
             _language = e;
-            TextSearchExecuteAsync(string.Empty);
+            TextSearchExecuteAsync(string.Empty).ConfigureAwait(true);
         }
 
         public override void ViewAppeared()
@@ -105,7 +105,7 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        private async void TextSearchExecuteAsync(string text)
+        private async Task TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
 
@@ -122,7 +122,7 @@ namespace Hymnal.Core.ViewModels
             Hymns.AddRange(hymns.SearchQuery(text));
         }
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
             // Some devices iOS that have had problems in this place
             if (hymn == null)
@@ -130,7 +130,7 @@ namespace Hymnal.Core.ViewModels
 
             try
             {
-                navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+                await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
                 {
                     Number = hymn.Number,
                     HymnalLanguage = _language

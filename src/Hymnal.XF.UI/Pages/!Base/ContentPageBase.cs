@@ -6,6 +6,7 @@ namespace Hymnal.XF.UI.Pages
 {
     public class BaseContentPage<TViewModel> : MvxContentPage<TViewModel> where TViewModel : BaseViewModel
     {
+        /*
         private bool playerAlwaysVisible;
         protected bool PlayerVisible
         {
@@ -38,13 +39,14 @@ namespace Hymnal.XF.UI.Pages
             Text = "Open player",
             Order = ToolbarItemOrder.Secondary
         };
-        
+
 
 
         public BaseContentPage(bool playerVisible = false)
         {
             PlayerVisible = playerVisible;
         }
+        */
 
     }
 }

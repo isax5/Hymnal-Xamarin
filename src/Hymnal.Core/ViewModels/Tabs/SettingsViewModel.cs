@@ -109,8 +109,8 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        public MvxCommand ChooseLanguageCommand => new MvxCommand(ChooseLanguageExecuteAsync);
-        private async void ChooseLanguageExecuteAsync()
+        public MvxAsyncCommand ChooseLanguageCommand => new MvxAsyncCommand(ChooseLanguageExecuteAsync);
+        private async Task ChooseLanguageExecuteAsync()
         {
             var languages = new Dictionary<string, HymnalLanguage>();
 
@@ -136,20 +136,20 @@ namespace Hymnal.Core.ViewModels
             preferencesService.ConfiguratedHymnalLanguage = HymnalLanguage;
         }
 
-        public MvxCommand HelpCommand => new MvxCommand(HelpExecute);
-        private void HelpExecute()
+        public MvxAsyncCommand HelpCommand => new MvxAsyncCommand(HelpExecuteAsync);
+        private async Task HelpExecuteAsync()
         {
-            navigationService.Navigate<HelpViewModel>();
+            await navigationService.Navigate<HelpViewModel>();
         }
 
-        public MvxCommand OpenGitHubCommand => new MvxCommand(OpenGitHubExecuteAsync);
-        private async void OpenGitHubExecuteAsync()
+        public MvxAsyncCommand OpenGitHubCommand => new MvxAsyncCommand(OpenGitHubExecuteAsync);
+        private async Task OpenGitHubExecuteAsync()
         {
             await Browser.OpenAsync(Constants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
         }
 
-        public MvxCommand DeveloperCommand => new MvxCommand(DeveloperExecuteAsync);
-        private async void DeveloperExecuteAsync()
+        public MvxAsyncCommand DeveloperCommand => new MvxAsyncCommand(DeveloperExecuteAsync);
+        private async Task DeveloperExecuteAsync()
         {
             await Browser.OpenAsync(Constants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
