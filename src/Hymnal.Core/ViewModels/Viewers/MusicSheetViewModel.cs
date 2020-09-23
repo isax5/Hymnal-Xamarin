@@ -61,12 +61,12 @@ namespace Hymnal.Core.ViewModels
 
             log.Info($"Opening Hymn Sheet: {HymnId} of {Language.Id}");
 
-            Analytics.TrackEvent(Constants.TrackEvents.HymnMusicSheetOpened, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.HymnMusicSheetOpened, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.HymnReferenceScheme.Number, HymnId.Number.ToString() },
-                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, Language.Id },
-                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                { Constants.TrackEv.HymnReferenceScheme.Number, HymnId.Number.ToString() },
+                { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
             });
         }
     }

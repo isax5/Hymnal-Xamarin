@@ -97,11 +97,11 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
@@ -139,11 +139,11 @@ namespace Hymnal.Core.ViewModels
                 if (!string.IsNullOrWhiteSpace(TextSearchBar))
                 {
 
-                    Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
+                    Analytics.TrackEvent(Constants.TrackEv.HymnFounded, new Dictionary<string, string>
                 {
-                    { Constants.TrackEvents.HymnFoundedScheme.Query, TextSearchBar },
-                    { Constants.TrackEvents.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
-                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, _language.Id }
+                    { Constants.TrackEv.HymnFoundedScheme.Query, TextSearchBar },
+                    { Constants.TrackEv.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
+                    { Constants.TrackEv.HymnFoundedScheme.HymnalVersion, _language.Id }
                 });
                 }
             }

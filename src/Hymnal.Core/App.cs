@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using Hymnal.AzureFunctions.Client;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Resources;
@@ -61,6 +62,7 @@ namespace Hymnal.Core
             // Register Services new
             Mvx.IoCProvider.RegisterSingleton<IStorageManager>(CrossStorageManager.Current);
             Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
+            Mvx.IoCProvider.RegisterSingleton<IAzureHymnService>(AzureHymnService.Current);
 
 
             // AppCenter
