@@ -29,7 +29,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedHymnExecute(value);
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedHymn));
             }
         }
@@ -71,9 +71,9 @@ namespace Hymnal.Core.ViewModels
             });
         }
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
             {
                 Number = hymn.Number,
                 HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.HymnalLanguageId),
