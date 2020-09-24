@@ -329,7 +329,8 @@ namespace Hymnal.Core.ViewModels
                         { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                         { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                     });
-                }));
+                }),
+                ex => InvokeOnMainThreadAsync(async () => await dialogService.Alert(Languages.WeHadAProblem, Languages.Ok)));
 
         }
 

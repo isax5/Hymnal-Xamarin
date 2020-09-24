@@ -8,6 +8,11 @@ namespace Hymnal.XF.UI.Services
     {
         public Page MainPage { get; set; } = App.Current.MainPage;
 
+        public Task Alert(string title, string cancel)
+        {
+            return MainPage.DisplayAlert(title, null, cancel);
+        }
+
         public Task Alert(string title, string message, string cancel)
         {
             return MainPage.DisplayAlert(title, message, cancel);
