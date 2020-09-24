@@ -34,10 +34,22 @@ namespace Hymnal.AzureFunctions.Client
             musicAPI = RestService.For<IMusicAPI>(httpClient);
         }
 
-
-        public IObservable<HymnSettingsResponse> ObserveSettings()
+        private bool loadingSettings = false;
+        public IObservable<HymnSettingsResponse> ObserveSettings(bool reload = false)
         {
-            musicSettingsObservable.NextValues(musicAPI.ObserveSettings());
+            if ((!loadingSettings && musicSettingsObservable.Current == null) || reload)
+            {
+                loadingSettings = true;
+                musicAPI.ObserveSettings().Subscribe(x =>
+                {
+                    musicSettingsObservable.NextValues(x);
+                    loadingSettings = false;
+                }, ex =>
+                {
+                    musicSettingsObservable.OnError(ex);
+                    loadingSettings = false;
+                });
+            }
 
             return musicSettingsObservable;
         }
