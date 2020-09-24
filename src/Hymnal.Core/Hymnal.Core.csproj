@@ -56,6 +56,7 @@
   
   <ItemGroup>
     <ProjectReference Include="..\..\AzureFunctions\Hymnal.AzureFunctions.Client\Hymnal.AzureFunctions.Client.csproj" />
+    <ProjectReference Include="..\..\Helpers\Helpers\Helpers.csproj" />
     <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />
     <ProjectReference Include="..\Hymnal.StorageModels\Hymnal.StorageModels.csproj" />
   </ItemGroup>

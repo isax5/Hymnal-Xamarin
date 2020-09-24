@@ -1,5 +1,6 @@
 using System;
 using System.Net.Http;
+using Helpers;
 using Hymnal.AzureFunctions.Models;
 using Refit;
 

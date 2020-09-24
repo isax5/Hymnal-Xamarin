@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Reactive.Linq;
+using System.Threading;
 using System.Threading.Tasks;
+using Helpers;
 using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
@@ -54,9 +57,11 @@ namespace Hymnal.Core.ViewModels
             set
             {
                 SetProperty(ref textSearchBar, value);
-                TextSearchExecuteAsync(value).ConfigureAwait(true);
+                ObservableTextSearchBar.NextValue(value);
+                //TextSearchExecuteAsync(value).ConfigureAwait(true);
             }
         }
+        private ObservableValue<string> ObservableTextSearchBar = new ObservableValue<string>(false);
 
         private HymnalLanguage _language;
 
@@ -72,6 +77,10 @@ namespace Hymnal.Core.ViewModels
             this.preferencesService = preferencesService;
             this.log = log;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
+
+            ObservableTextSearchBar
+                .Throttle(TimeSpan.FromSeconds(0.3))
+                .Subscribe(text => InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }
 
         ~SearchViewModel()
