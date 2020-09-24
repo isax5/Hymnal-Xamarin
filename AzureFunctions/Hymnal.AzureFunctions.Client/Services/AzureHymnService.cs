@@ -35,7 +35,7 @@ namespace Hymnal.AzureFunctions.Client
         }
 
         private bool loadingSettings = false;
-        public IObservable<HymnSettingsResponse> ObserveSettings(bool reload = false)
+        public IObservable<HymnSettingsResponse> ObserveSettings(bool reload)
         {
             if ((!loadingSettings && musicSettingsObservable.Current == null) || reload)
             {

@@ -154,6 +154,9 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
+            // Precarga de datos para reproduccion
+            azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
+
             Debug.WriteLine($"Opening Hymn: {Hymn.Number} of {Language.Id}");
 
             Analytics.TrackEvent(Constants.TrackEv.HymnOpened, new Dictionary<string, string>
