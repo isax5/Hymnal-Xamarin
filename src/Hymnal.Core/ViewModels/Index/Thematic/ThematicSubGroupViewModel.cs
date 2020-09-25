@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
@@ -31,7 +32,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedAmbitExecute(value);
+                SelectedAmbitExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedAmbit));
             }
         }
@@ -55,18 +56,18 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(ThematicSubGroupViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicSubGroupViewModel) },
                 { "Thematic Name", Thematic.ThematicName },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
-        private void SelectedAmbitExecute(Ambit ambit)
+        private async Task SelectedAmbitExecuteAsync(Ambit ambit)
         {
-            navigationService.Navigate<ThematicHymnsListViewModel, Ambit>(ambit);
+            await navigationService.Navigate<ThematicHymnsListViewModel, Ambit>(ambit);
         }
     }
 }

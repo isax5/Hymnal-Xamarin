@@ -55,8 +55,8 @@ Table of contents
  -->
 |Platform       |Package Name    |Version           |Minimum Compatible OS         |AppCenter build                                                                                                                          |
 |---------------|----------------|------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
-|iOS            |Hymnal.XF.iOS   |4                 |iOS 13.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
-|Android        |Hymnal.XF.Droid | 4                |Android 5.0 (API 21 Lollipop) |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
+|iOS            |Hymnal.XF.iOS   |4                 |iOS 10.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
+|Android        |Hymnal.XF.Droid |4                 |Android 5.0 (API 21 Lollipop) |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms) |
 
 ## Usage
 

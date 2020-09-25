@@ -8,6 +8,7 @@
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate History}"
+    iOS:Page.ModalPresentationStyle="PageSheet"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:RecordsViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
@@ -30,71 +31,91 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}" />
 
-        <CollectionView
-            BackgroundColor="Transparent"
-            Footer=""
-            ItemSizingStrategy="MeasureFirstItem"
-            ItemsSource="{Binding Hymns}"
+        <Grid
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
-            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
-            SelectionMode="Single">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid
-                        Padding="20,0,10,0"
-                        ColumnDefinitions="0.2*, *, 0.2*"
-                        ColumnSpacing="0"
-                        RowDefinitions="0.7*, 0.3*"
-                        RowSpacing="0">
+            RowDefinitions="auto, *"
+            RowSpacing="0">
 
-                        <!--  Number  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.RowSpan="2"
-                            Grid.Column="0"
-                            FontSize="Large"
-                            Text="{Binding Number}"
-                            TextColor="{DynamicResource PrimaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+            <StackLayout
+                x:Name="SlideBar"
+                Grid.Row="0"
+                Padding="12">
+                <Frame
+                    BackgroundColor="Gray"
+                    HeightRequest="5"
+                    Padding="0"
+                    CornerRadius="2.5"
+                    Opacity="0.7"
+                    HasShadow="False"
+                    HorizontalOptions="CenterAndExpand"
+                    WidthRequest="40"/>
+            </StackLayout>
 
-                        <!--  Title  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            FontSize="Large"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding Title}"
-                            TextColor="{DynamicResource PrimaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+            <CollectionView
+                Grid.Row="1"
+                BackgroundColor="Transparent"
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding Hymns}"
+                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Padding="20,0,10,0"
+                            ColumnDefinitions="0.2*, *, 0.2*"
+                            ColumnSpacing="0"
+                            RowDefinitions="0.7*, 0.3*"
+                            RowSpacing="0">
 
-                        <!--  Preview  -->
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            FontSize="Micro"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding PlainContent}"
-                            TextColor="{DynamicResource SecondaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                FontSize="Large"
+                                Text="{Binding Number}"
+                                TextColor="{DynamicResource PrimaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
 
-                        <!--  Date  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.RowSpan="2"
-                            Grid.Column="2"
-                            Margin="5,0,0,0"
-                            FontSize="Micro"
-                            Text="{Binding SavedAt, StringFormat='{0:dd/MM}'}"
-                            TextColor="{DynamicResource SecondaryTextColor}"
-                            VerticalOptions="CenterAndExpand" />
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                FontSize="Large"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Title}"
+                                TextColor="{DynamicResource PrimaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
 
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                            <!--  Preview  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                FontSize="Micro"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding PlainContent}"
+                                TextColor="{DynamicResource SecondaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Date  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                Margin="5,0,0,0"
+                                FontSize="Micro"
+                                Text="{Binding SavedAt, StringFormat='{0:dd/MM}'}"
+                                TextColor="{DynamicResource SecondaryTextColor}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
     </RelativeLayout>
 
 </mvxViews:MvxContentPage>
