@@ -12,6 +12,7 @@
     Title="{i18n:Translate Favorites}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:FavoritesViewModel"
+    AutomationId="FavoritesPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
