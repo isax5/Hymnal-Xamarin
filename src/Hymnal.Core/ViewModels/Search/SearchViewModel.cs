@@ -31,7 +31,8 @@ namespace Hymnal.Core.ViewModels
                     return;
 
                 RaisePropertyChanged(nameof(SelectedHymn));
-                SelectedHymnExecute(value);
+
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
             }
         }
 
@@ -42,7 +43,7 @@ namespace Hymnal.Core.ViewModels
             set
             {
                 SetProperty(ref textSearchBar, value);
-                TextSearchExecuteAsync(value);
+                TextSearchExecuteAsync(value).ConfigureAwait(true);
             }
         }
 
@@ -70,7 +71,7 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
-            TextSearchExecuteAsync(string.Empty);
+            await TextSearchExecuteAsync(string.Empty);
 
             await base.Initialize();
         }
@@ -78,22 +79,22 @@ namespace Hymnal.Core.ViewModels
         private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
             _language = e;
-            TextSearchExecuteAsync(string.Empty);
+            TextSearchExecuteAsync(string.Empty).ConfigureAwait(true);
         }
 
         public override void ViewAppeared()
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
-        private async void TextSearchExecuteAsync(string text)
+        private async Task TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
 
@@ -110,7 +111,7 @@ namespace Hymnal.Core.ViewModels
             Hymns.AddRange(hymns.SearchQuery(text));
         }
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
             // Some devices iOS that have had problems in this place
             if (hymn == null)
@@ -118,7 +119,7 @@ namespace Hymnal.Core.ViewModels
 
             try
             {
-                navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+                await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
                 {
                     Number = hymn.Number,
                     HymnalLanguage = _language
@@ -127,11 +128,11 @@ namespace Hymnal.Core.ViewModels
                 if (!string.IsNullOrWhiteSpace(TextSearchBar))
                 {
 
-                    Analytics.TrackEvent(Constants.TrackEvents.HymnFounded, new Dictionary<string, string>
+                    Analytics.TrackEvent(Constants.TrackEv.HymnFounded, new Dictionary<string, string>
                 {
-                    { Constants.TrackEvents.HymnFoundedScheme.Query, TextSearchBar },
-                    { Constants.TrackEvents.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
-                    { Constants.TrackEvents.HymnFoundedScheme.HymnalVersion, _language.Id }
+                    { Constants.TrackEv.HymnFoundedScheme.Query, TextSearchBar },
+                    { Constants.TrackEv.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
+                    { Constants.TrackEv.HymnFoundedScheme.HymnalVersion, _language.Id }
                 });
                 }
             }

@@ -11,6 +11,7 @@
     Title="{i18n:Translate Settings}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:SettingsViewModel"
+    AutomationId="SettingsPage"
     BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
     Visual="Material">
 

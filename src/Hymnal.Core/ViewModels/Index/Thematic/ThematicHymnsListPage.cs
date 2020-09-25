@@ -32,7 +32,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedHymnExecute(value);
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedHymn));
             }
         }
@@ -68,18 +68,18 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(ThematicHymnsListViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicHymnsListViewModel) },
                 { "Ambit", Ambit.AmbitName },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
             {
                 Number = hymn.Number,
                 HymnalLanguage = language

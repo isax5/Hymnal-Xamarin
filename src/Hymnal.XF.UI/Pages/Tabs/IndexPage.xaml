@@ -11,6 +11,7 @@
     Title="{i18n:Translate Index}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:IndexViewModel"
+    AutomationId="IndexPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxCarouselPage.IconImageSource>
