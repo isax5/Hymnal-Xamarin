@@ -10,7 +10,6 @@
 
 namespace Hymnal.Core.Resources {
     using System;
-    using System.Reflection;
     
     
     /// <summary>
@@ -40,7 +39,7 @@ namespace Hymnal.Core.Resources {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Hymnal.Core.Resources.AppResources", typeof(AppResources).GetTypeInfo().Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Hymnal.Core.Resources.AppResources", typeof(AppResources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -85,6 +84,159 @@ namespace Hymnal.Core.Resources {
         internal static string AppVersion {
             get {
                 return ResourceManager.GetString("AppVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Close Hymn Page.
+        /// </summary>
+        internal static string AutomationHymnPageClose {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageClose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hymn lyrics.
+        /// </summary>
+        internal static string AutomationHymnPageContent {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Add or remove from favorites.
+        /// </summary>
+        internal static string AutomationHymnPageFavorite {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageFavorite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Open piano sheet.
+        /// </summary>
+        internal static string AutomationHymnPagePianoSheet {
+            get {
+                return ResourceManager.GetString("AutomationHymnPagePianoSheet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Play or Pause music.
+        /// </summary>
+        internal static string AutomationHymnPagePlayer {
+            get {
+                return ResourceManager.GetString("AutomationHymnPagePlayer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Share hymn.
+        /// </summary>
+        internal static string AutomationHymnPageShare {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageShare", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hymn title.
+        /// </summary>
+        internal static string AutomationHymnPageTitle {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageTitle", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Alphabetic order.
+        /// </summary>
+        internal static string AutomationIndexPageAlphabeticOrder {
+            get {
+                return ResourceManager.GetString("AutomationIndexPageAlphabeticOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Numeric order.
+        /// </summary>
+        internal static string AutomationIndexPageNumericOrder {
+            get {
+                return ResourceManager.GetString("AutomationIndexPageNumericOrder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Thematic index.
+        /// </summary>
+        internal static string AutomationIndexPageThematicIndex {
+            get {
+                return ResourceManager.GetString("AutomationIndexPageThematicIndex", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Entry hymn number.
+        /// </summary>
+        internal static string AutomationNumberPageEntry {
+            get {
+                return ResourceManager.GetString("AutomationNumberPageEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Below there is a button to open the hymn.
+        /// </summary>
+        internal static string AutomationNumberPageHelpTextEntry {
+            get {
+                return ResourceManager.GetString("AutomationNumberPageHelpTextEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Open hymn.
+        /// </summary>
+        internal static string AutomationNumberPageOpenHymnButton {
+            get {
+                return ResourceManager.GetString("AutomationNumberPageOpenHymnButton", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Open Records page.
+        /// </summary>
+        internal static string AutomationNumberPageOpenRecords {
+            get {
+                return ResourceManager.GetString("AutomationNumberPageOpenRecords", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Open Search page.
+        /// </summary>
+        internal static string AutomationNumberPageOpenSearch {
+            get {
+                return ResourceManager.GetString("AutomationNumberPageOpenSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Change hymn language.
+        /// </summary>
+        internal static string AutomationSettingsPageChangeHymn {
+            get {
+                return ResourceManager.GetString("AutomationSettingsPageChangeHymn", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Below check current version.
+        /// </summary>
+        internal static string AutomationSettingsPageHelpTextChangeHymn {
+            get {
+                return ResourceManager.GetString("AutomationSettingsPageHelpTextChangeHymn", resourceCulture);
             }
         }
         

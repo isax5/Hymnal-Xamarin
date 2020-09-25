@@ -72,9 +72,9 @@
 
                         <!--  Preview  -->
                         <Label
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="1"
                             Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
                             FontSize="Micro"
                             LineBreakMode="TailTruncation"
                             Text="{Binding PlainContent}"

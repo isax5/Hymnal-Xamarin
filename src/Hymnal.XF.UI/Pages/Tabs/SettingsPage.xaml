@@ -44,8 +44,8 @@
             <!--  Display and typography  -->
             <TableSection
                 x:Name="preferencesSection"
-                AutomationProperties.IsInAccessibleTree="False"
-                Title="{i18n:Translate DisplayAndTypography}">
+                Title="{i18n:Translate DisplayAndTypography}"
+                AutomationProperties.IsInAccessibleTree="False">
 
                 <!--  Choose Language  -->
                 <ViewCell x:Name="hymnLanguageCell">
@@ -59,10 +59,10 @@
                         </Grid.GestureRecognizers>
 
                         <Image
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.RowSpan="2"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             HeightRequest="50"
                             WidthRequest="50">
                             <Image.Source>
@@ -74,10 +74,10 @@
                         </Image>
 
                         <Label
-                            AutomationProperties.Name="Change hymn language"
-                            AutomationProperties.HelpText="Below check current version"
                             Grid.Row="0"
                             Grid.Column="1"
+                            AutomationProperties.HelpText="{i18n:Translate AutomationSettingsPageHelpTextChangeHymn}"
+                            AutomationProperties.Name="{i18n:Translate AutomationSettingsPageChangeHymn}"
                             FontSize="{OnPlatform Default=Default,
                                                   Tizen=Large}"
                             Text="{i18n:Translate VersionsAndLanguages}" />
@@ -106,8 +106,8 @@
                         IsVisible="{OnPlatform Default=True,
                                                Tizen=False}">
                         <Label
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Text="{i18n:Translate KeepScreenAlwaysOn}" />
                         <Switch
                             Grid.Column="1"
@@ -131,24 +131,24 @@
                         RowDefinitions="auto, auto">
 
                         <Label
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Text="{i18n:Translate FontSize}" />
 
                         <Label
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="0"
                             Grid.Column="1"
                             Margin="15,0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
 
                         <Slider
                             x:Name="LetterSize"
-                            AutomationProperties.Name="{i18n:Translate FontSize}"
                             Grid.Row="1"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
+                            AutomationProperties.Name="{i18n:Translate FontSize}"
                             Maximum="{Binding MaximumHymnFontSize}"
                             MaximumTrackColor="{DynamicResource PrimaryColor}"
                             Minimum="{Binding MinimumHymnFontSize}"
@@ -158,10 +158,10 @@
                             Value="{Binding HymnFontSize}" />
 
                         <Label
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="2"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
+                            AutomationProperties.IsInAccessibleTree="False"
                             FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
                             Text="{i18n:Translate Example}"
                             VerticalOptions="FillAndExpand" />
@@ -249,9 +249,9 @@
                             Text="{i18n:Translate Contribute}" />
 
                         <Image
-                            AutomationProperties.IsInAccessibleTree="False"
                             Grid.Row="1"
                             Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
                             HeightRequest="50"
                             WidthRequest="50">
                             <Image.Source>

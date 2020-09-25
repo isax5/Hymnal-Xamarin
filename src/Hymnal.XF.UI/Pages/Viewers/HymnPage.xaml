@@ -20,29 +20,29 @@
         <ToolbarItem
             x:Name="CloseToolbar"
             AutomationId="ClosePageToolbar"
-            AutomationProperties.Name="Close Hymn Page"
+            AutomationProperties.Name="{i18n:Translate AutomationHymnPageClose}"
             Command="{Binding CloseCommand}"
             Priority="-1"
             Text="{i18n:Translate Close}" />
         <ToolbarItem
-            AutomationId="PlayPauseMusicToolbar"
-            AutomationProperties.Name="Play or Pause music"
-            AutomationProperties.HelpText="{Binding IsPlaying, StringFormat='Is it playing: {0}'}"
             x:Name="MusicToolbar"
+            AutomationId="PlayPauseMusicToolbar"
+            AutomationProperties.HelpText="{Binding IsPlaying, StringFormat='Is it playing: {0}'}"
+            AutomationProperties.Name="{i18n:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
             IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.Name="Add or remove from favorites"
             AutomationProperties.HelpText="{Binding IsFavorite, StringFormat='Is it in favorites: {0}'}"
+            AutomationProperties.Name="{i18n:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
-            AutomationId="OpenSheet"
-            AutomationProperties.Name="Open piano sheet"
             x:Name="SheetToolbar"
+            AutomationId="OpenSheet"
+            AutomationProperties.Name="{i18n:Translate AutomationHymnPagePianoSheet}"
             Command="{Binding OpenSheetCommand}"
             Priority="3">
             <ToolbarItem.IconImageSource>
@@ -53,7 +53,7 @@
         </ToolbarItem>
         <ToolbarItem
             AutomationId="Share"
-            AutomationProperties.Name="Share hymn"
+            AutomationProperties.Name="{i18n:Translate AutomationHymnPageShare}"
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>
@@ -92,8 +92,8 @@
                 <Label
                     x:Name="hymnTitleLabel"
                     AutomationId="HymnTitleLabel"
-                    AutomationProperties.Name="Hymn title"
                     AutomationProperties.HelpText="{Binding Hymn.Title}"
+                    AutomationProperties.Name="{i18n:Translate AutomationHymnPageTitle}"
                     FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"
@@ -106,8 +106,8 @@
                     x:Name="hymnContentLabel"
                     Margin="10"
                     AutomationId="HymnContentLabel"
-                    AutomationProperties.Name="Hymn lyrics"
                     AutomationProperties.HelpText="{Binding Hymn.Content}"
+                    AutomationProperties.Name="{i18n:Translate AutomationHymnPageContent}"
                     FontSize="{Binding HymnFontSize}"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"

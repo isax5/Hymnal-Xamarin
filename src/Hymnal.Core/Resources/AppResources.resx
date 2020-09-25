@@ -129,6 +129,57 @@
     <value>App Version</value>
     <comment>Settings: AppVersion</comment>
   </data>
+  <data name="AutomationHymnPageClose" xml:space="preserve">
+    <value>Close Hymn Page</value>
+  </data>
+  <data name="AutomationHymnPageContent" xml:space="preserve">
+    <value>Hymn lyrics</value>
+  </data>
+  <data name="AutomationHymnPageFavorite" xml:space="preserve">
+    <value>Add or remove from favorites</value>
+  </data>
+  <data name="AutomationHymnPagePianoSheet" xml:space="preserve">
+    <value>Open piano sheet</value>
+  </data>
+  <data name="AutomationHymnPagePlayer" xml:space="preserve">
+    <value>Play or Pause music</value>
+  </data>
+  <data name="AutomationHymnPageShare" xml:space="preserve">
+    <value>Share hymn</value>
+  </data>
+  <data name="AutomationHymnPageTitle" xml:space="preserve">
+    <value>Hymn title</value>
+  </data>
+  <data name="AutomationIndexPageAlphabeticOrder" xml:space="preserve">
+    <value>Alphabetic order</value>
+  </data>
+  <data name="AutomationIndexPageNumericOrder" xml:space="preserve">
+    <value>Numeric order</value>
+  </data>
+  <data name="AutomationIndexPageThematicIndex" xml:space="preserve">
+    <value>Thematic index</value>
+  </data>
+  <data name="AutomationNumberPageEntry" xml:space="preserve">
+    <value>Entry hymn number</value>
+  </data>
+  <data name="AutomationNumberPageHelpTextEntry" xml:space="preserve">
+    <value>Below there is a button to open the hymn</value>
+  </data>
+  <data name="AutomationNumberPageOpenHymnButton" xml:space="preserve">
+    <value>Open hymn</value>
+  </data>
+  <data name="AutomationNumberPageOpenRecords" xml:space="preserve">
+    <value>Open Records page</value>
+  </data>
+  <data name="AutomationNumberPageOpenSearch" xml:space="preserve">
+    <value>Open Search page</value>
+  </data>
+  <data name="AutomationSettingsPageChangeHymn" xml:space="preserve">
+    <value>Change hymn language</value>
+  </data>
+  <data name="AutomationSettingsPageHelpTextChangeHymn" xml:space="preserve">
+    <value>Below check current version</value>
+  </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
     <comment>Alert: Cancel</comment>
