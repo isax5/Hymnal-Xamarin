@@ -115,6 +115,24 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Hymn is not in favorites.
+        /// </summary>
+        internal static string AutomationHymnPageHelpTextIsInFavoritesFalse {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageHelpTextIsInFavoritesFalse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hymn is in favorites.
+        /// </summary>
+        internal static string AutomationHymnPageHelpTextIsInFavoritesTrue {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageHelpTextIsInFavoritesTrue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Open piano sheet.
         /// </summary>
         internal static string AutomationHymnPagePianoSheet {

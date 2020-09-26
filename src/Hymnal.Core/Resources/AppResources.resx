@@ -138,6 +138,12 @@
   <data name="AutomationHymnPageFavorite" xml:space="preserve">
     <value>Add or remove from favorites</value>
   </data>
+  <data name="AutomationHymnPageHelpTextIsInFavoritesFalse" xml:space="preserve">
+    <value>Hymn is not in favorites</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsInFavoritesTrue" xml:space="preserve">
+    <value>Hymn is in favorites</value>
+  </data>
   <data name="AutomationHymnPagePianoSheet" xml:space="preserve">
     <value>Open piano sheet</value>
   </data>

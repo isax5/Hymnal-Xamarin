@@ -34,7 +34,7 @@
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.HelpText="{Binding IsFavorite, StringFormat='Is it in favorites: {0}'}"
+            AutomationProperties.HelpText="{i18n:Translate Text={Binding IsFavorite, StringFormat='AutomationHymnPageHelpTextIsInFavorites{0}'}}"
             AutomationProperties.Name="{i18n:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"

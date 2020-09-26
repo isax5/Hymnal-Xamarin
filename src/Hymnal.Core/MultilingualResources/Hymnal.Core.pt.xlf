@@ -239,6 +239,14 @@
           <source>Below check current version</source>
           <target state="new">Below check current version</target>
         </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesFalse" translate="yes" xml:space="preserve">
+          <source>Hymn is not in favorites</source>
+          <target state="new">Hymn is not in favorites</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesTrue" translate="yes" xml:space="preserve">
+          <source>Hymn is in favorites</source>
+          <target state="new">Hymn is in favorites</target>
+        </trans-unit>
       </group>
     </body>
   </file>
