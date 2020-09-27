@@ -201,60 +201,62 @@
         </trans-unit>
         <trans-unit id="AutomationIndexPageThematicIndex" translate="yes" xml:space="preserve">
           <source>Change to Thematic index</source>
-          <target state="needs-review-translation">Thematic index</target>
-          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+          <target state="translated">Перейти на тематический указатель</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageEntry" translate="yes" xml:space="preserve">
-          <source>Entry hymn number</source>
-          <target state="new">Entry hymn number</target>
+          <source>Enter hymn number</source>
+          <target state="needs-review-translation">Введите номер гимна</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="AutomationNumberPageHelpTextEntry" translate="yes" xml:space="preserve">
           <source>Below there is a button to open the hymn</source>
-          <target state="new">Below there is a button to open the hymn</target>
+          <target state="translated">Внизу есть кнопка для открытия гимна</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageOpenHymnButton" translate="yes" xml:space="preserve">
           <source>Open hymn</source>
-          <target state="new">Open hymn</target>
+          <target state="translated">Открыть гимн</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageOpenRecords" translate="yes" xml:space="preserve">
           <source>Open Records page</source>
-          <target state="new">Open Records page</target>
+          <target state="needs-review-translation">Открыть страницу записей</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageOpenSearch" translate="yes" xml:space="preserve">
           <source>Open Search page</source>
-          <target state="new">Open Search page</target>
+          <target state="needs-review-translation">Открыть страницу поиска</target>
         </trans-unit>
         <trans-unit id="AutomationSettingsPageChangeHymn" translate="yes" xml:space="preserve">
           <source>Change hymnal</source>
-          <target state="new">Change hymnal</target>
+          <target state="needs-review-translation">Изменить гимн</target>
         </trans-unit>
         <trans-unit id="AutomationSettingsPageHelpTextChangeHymn" translate="yes" xml:space="preserve">
           <source>Below check current version</source>
-          <target state="new">Below check current version</target>
+          <target state="needs-review-translation">Ниже проверьте текущую версию</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesFalse" translate="yes" xml:space="preserve">
           <source>Hymn is not in favorites</source>
-          <target state="new">Hymn is not in favorites</target>
+          <target state="needs-review-translation">Гимна нет в избранном</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesTrue" translate="yes" xml:space="preserve">
           <source>Hymn is in favorites</source>
-          <target state="new">Hymn is in favorites</target>
+          <target state="needs-review-translation">Гимн в избранном</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageHelpTextIsPlayingFalse" translate="yes" xml:space="preserve">
           <source>Hymn is not playing</source>
-          <target state="new">Hymn is not playing</target>
+          <target state="needs-review-translation">Гимн не играет</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageHelpTextIsPlayingTrue" translate="yes" xml:space="preserve">
           <source>Hymn is playing</source>
-          <target state="new">Hymn is playing</target>
+          <target state="needs-review-translation">Гимн играет</target>
         </trans-unit>
         <trans-unit id="AutomationIndexPageAlphabeticalOrder" translate="yes" xml:space="preserve">
-          <source>Change to  Alphabetical order</source>
-          <target state="new">Change to  Alphabetical order</target>
+          <source>Change to Alphabetical order</source>
+          <target state="needs-review-translation">Изменить в алфавитном порядке</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="AutomationIndexPageNumericalOrder" translate="yes" xml:space="preserve">
-          <source>Change to  Numerical order</source>
-          <target state="new">Change to  Numerical order</target>
+          <source>Change to Numerical order</source>
+          <target state="needs-review-translation">Изменить на числовой порядок</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
       </group>
     </body>

@@ -173,43 +173,43 @@
         </trans-unit>
         <trans-unit id="AutomationHymnPageClose" translate="yes" xml:space="preserve">
           <source>Close Hymn Page</source>
-          <target state="new">Close Hymn Page</target>
+          <target state="needs-review-translation">Fechar página de hino</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageContent" translate="yes" xml:space="preserve">
           <source>Hymn lyrics</source>
-          <target state="new">Hymn lyrics</target>
+          <target state="needs-review-translation">Letras de hinos</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageFavorite" translate="yes" xml:space="preserve">
           <source>Add or remove from favorites</source>
-          <target state="new">Add or remove from favorites</target>
+          <target state="needs-review-translation">Adicionar ou remover dos favoritos</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPagePianoSheet" translate="yes" xml:space="preserve">
           <source>Open piano sheet</source>
-          <target state="new">Open piano sheet</target>
+          <target state="needs-review-translation">Folha de piano aberta</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPagePlayer" translate="yes" xml:space="preserve">
           <source>Play or Pause music</source>
-          <target state="new">Play or Pause music</target>
+          <target state="needs-review-translation">Tocar ou pausar música</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageShare" translate="yes" xml:space="preserve">
           <source>Share hymn</source>
-          <target state="new">Share hymn</target>
+          <target state="needs-review-translation">Compartilhe hino</target>
         </trans-unit>
         <trans-unit id="AutomationHymnPageTitle" translate="yes" xml:space="preserve">
           <source>Hymn title</source>
-          <target state="new">Hymn title</target>
+          <target state="needs-review-translation">Título de hino</target>
         </trans-unit>
         <trans-unit id="AutomationIndexPageThematicIndex" translate="yes" xml:space="preserve">
           <source>Change to Thematic index</source>
-          <target state="new">Change to Thematic index</target>
+          <target state="needs-review-translation">Mudança para índice temático</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageEntry" translate="yes" xml:space="preserve">
-          <source>Entry hymn number</source>
-          <target state="new">Entry hymn number</target>
+          <source>Enter hymn number</source>
+          <target state="translated">Digite o número do hino</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageHelpTextEntry" translate="yes" xml:space="preserve">
           <source>Below there is a button to open the hymn</source>
-          <target state="new">Below there is a button to open the hymn</target>
+          <target state="needs-review-translation">Abaixo há um botão para abrir o hino</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageOpenHymnButton" translate="yes" xml:space="preserve">
           <source>Open hymn</source>
@@ -248,12 +248,12 @@
           <target state="new">Hymn is playing</target>
         </trans-unit>
         <trans-unit id="AutomationIndexPageAlphabeticalOrder" translate="yes" xml:space="preserve">
-          <source>Change to  Alphabetical order</source>
-          <target state="new">Change to  Alphabetical order</target>
+          <source>Change to Alphabetical order</source>
+          <target state="new">Change to Alphabetical order</target>
         </trans-unit>
         <trans-unit id="AutomationIndexPageNumericalOrder" translate="yes" xml:space="preserve">
-          <source>Change to  Numerical order</source>
-          <target state="new">Change to  Numerical order</target>
+          <source>Change to Numerical order</source>
+          <target state="new">Change to Numerical order</target>
         </trans-unit>
       </group>
     </body>

@@ -197,15 +197,16 @@
         </trans-unit>
         <trans-unit id="AutomationHymnPageTitle" translate="yes" xml:space="preserve">
           <source>Hymn title</source>
-          <target state="translated">Título del himno</target>
+          <target state="final">Título del himno</target>
         </trans-unit>
         <trans-unit id="AutomationIndexPageThematicIndex" translate="yes" xml:space="preserve">
           <source>Change to Thematic index</source>
           <target state="translated">Cambiar a índice temático</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageEntry" translate="yes" xml:space="preserve">
-          <source>Entry hymn number</source>
-          <target state="translated">Ingresar número de himno</target>
+          <source>Enter hymn number</source>
+          <target state="needs-review-translation">Ingresar número de himno</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="AutomationNumberPageHelpTextEntry" translate="yes" xml:space="preserve">
           <source>Below there is a button to open the hymn</source>
@@ -248,12 +249,14 @@
           <target state="translated">El himno se está reproduciendo</target>
         </trans-unit>
         <trans-unit id="AutomationIndexPageAlphabeticalOrder" translate="yes" xml:space="preserve">
-          <source>Change to  Alphabetical order</source>
-          <target state="translated">Change to Alphabetical order</target>
+          <source>Change to Alphabetical order</source>
+          <target state="needs-review-translation">Change to Alphabetical order</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
         <trans-unit id="AutomationIndexPageNumericalOrder" translate="yes" xml:space="preserve">
-          <source>Change to  Numerical order</source>
-          <target state="translated">Change to Numerical order</target>
+          <source>Change to Numerical order</source>
+          <target state="needs-review-translation">Change to Numerical order</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
         </trans-unit>
       </group>
     </body>
