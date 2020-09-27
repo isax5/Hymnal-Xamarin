@@ -133,6 +133,24 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Hymn is not playing.
+        /// </summary>
+        internal static string AutomationHymnPageHelpTextIsPlayingFalse {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageHelpTextIsPlayingFalse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Hymn is playing.
+        /// </summary>
+        internal static string AutomationHymnPageHelpTextIsPlayingTrue {
+            get {
+                return ResourceManager.GetString("AutomationHymnPageHelpTextIsPlayingTrue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Open piano sheet.
         /// </summary>
         internal static string AutomationHymnPagePianoSheet {
@@ -169,25 +187,25 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Alphabetic order.
+        ///   Busca una cadena traducida similar a Change to  Alphabetical order.
         /// </summary>
-        internal static string AutomationIndexPageAlphabeticOrder {
+        internal static string AutomationIndexPageAlphabeticalOrder {
             get {
-                return ResourceManager.GetString("AutomationIndexPageAlphabeticOrder", resourceCulture);
+                return ResourceManager.GetString("AutomationIndexPageAlphabeticalOrder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Numeric order.
+        ///   Busca una cadena traducida similar a Change to  Numerical order.
         /// </summary>
-        internal static string AutomationIndexPageNumericOrder {
+        internal static string AutomationIndexPageNumericalOrder {
             get {
-                return ResourceManager.GetString("AutomationIndexPageNumericOrder", resourceCulture);
+                return ResourceManager.GetString("AutomationIndexPageNumericalOrder", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Thematic index.
+        ///   Busca una cadena traducida similar a Change to Thematic index.
         /// </summary>
         internal static string AutomationIndexPageThematicIndex {
             get {
@@ -241,7 +259,7 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Change hymn language.
+        ///   Busca una cadena traducida similar a Change hymnal.
         /// </summary>
         internal static string AutomationSettingsPageChangeHymn {
             get {

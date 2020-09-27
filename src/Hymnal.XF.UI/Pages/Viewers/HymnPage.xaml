@@ -33,7 +33,7 @@
         <ToolbarItem
             x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"
-            AutomationProperties.HelpText="{Binding IsPlaying, StringFormat='Is it playing: {0}'}"
+            AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
             AutomationProperties.Name="{i18n:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
             IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"

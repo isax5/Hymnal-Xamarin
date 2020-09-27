@@ -144,6 +144,12 @@
   <data name="AutomationHymnPageHelpTextIsInFavoritesTrue" xml:space="preserve">
     <value>Hymn is in favorites</value>
   </data>
+  <data name="AutomationHymnPageHelpTextIsPlayingFalse" xml:space="preserve">
+    <value>Hymn is not playing</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsPlayingTrue" xml:space="preserve">
+    <value>Hymn is playing</value>
+  </data>
   <data name="AutomationHymnPagePianoSheet" xml:space="preserve">
     <value>Open piano sheet</value>
   </data>
@@ -156,14 +162,14 @@
   <data name="AutomationHymnPageTitle" xml:space="preserve">
     <value>Hymn title</value>
   </data>
-  <data name="AutomationIndexPageAlphabeticOrder" xml:space="preserve">
-    <value>Alphabetic order</value>
+  <data name="AutomationIndexPageAlphabeticalOrder" xml:space="preserve">
+    <value>Change to  Alphabetical order</value>
   </data>
-  <data name="AutomationIndexPageNumericOrder" xml:space="preserve">
-    <value>Numeric order</value>
+  <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
+    <value>Change to  Numerical order</value>
   </data>
   <data name="AutomationIndexPageThematicIndex" xml:space="preserve">
-    <value>Thematic index</value>
+    <value>Change to Thematic index</value>
   </data>
   <data name="AutomationNumberPageEntry" xml:space="preserve">
     <value>Entry hymn number</value>
@@ -181,7 +187,7 @@
     <value>Open Search page</value>
   </data>
   <data name="AutomationSettingsPageChangeHymn" xml:space="preserve">
-    <value>Change hymn language</value>
+    <value>Change hymnal</value>
   </data>
   <data name="AutomationSettingsPageHelpTextChangeHymn" xml:space="preserve">
     <value>Below check current version</value>

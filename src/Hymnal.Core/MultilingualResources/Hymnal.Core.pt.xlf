@@ -199,17 +199,9 @@
           <source>Hymn title</source>
           <target state="new">Hymn title</target>
         </trans-unit>
-        <trans-unit id="AutomationIndexPageAlphabeticOrder" translate="yes" xml:space="preserve">
-          <source>Alphabetic order</source>
-          <target state="new">Alphabetic order</target>
-        </trans-unit>
-        <trans-unit id="AutomationIndexPageNumericOrder" translate="yes" xml:space="preserve">
-          <source>Numeric order</source>
-          <target state="new">Numeric order</target>
-        </trans-unit>
         <trans-unit id="AutomationIndexPageThematicIndex" translate="yes" xml:space="preserve">
-          <source>Thematic index</source>
-          <target state="new">Thematic index</target>
+          <source>Change to Thematic index</source>
+          <target state="new">Change to Thematic index</target>
         </trans-unit>
         <trans-unit id="AutomationNumberPageEntry" translate="yes" xml:space="preserve">
           <source>Entry hymn number</source>
@@ -232,8 +224,8 @@
           <target state="new">Open Search page</target>
         </trans-unit>
         <trans-unit id="AutomationSettingsPageChangeHymn" translate="yes" xml:space="preserve">
-          <source>Change hymn language</source>
-          <target state="new">Change hymn language</target>
+          <source>Change hymnal</source>
+          <target state="new">Change hymnal</target>
         </trans-unit>
         <trans-unit id="AutomationSettingsPageHelpTextChangeHymn" translate="yes" xml:space="preserve">
           <source>Below check current version</source>
@@ -246,6 +238,22 @@
         <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesTrue" translate="yes" xml:space="preserve">
           <source>Hymn is in favorites</source>
           <target state="new">Hymn is in favorites</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsPlayingFalse" translate="yes" xml:space="preserve">
+          <source>Hymn is not playing</source>
+          <target state="new">Hymn is not playing</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsPlayingTrue" translate="yes" xml:space="preserve">
+          <source>Hymn is playing</source>
+          <target state="new">Hymn is playing</target>
+        </trans-unit>
+        <trans-unit id="AutomationIndexPageAlphabeticalOrder" translate="yes" xml:space="preserve">
+          <source>Change to  Alphabetical order</source>
+          <target state="new">Change to  Alphabetical order</target>
+        </trans-unit>
+        <trans-unit id="AutomationIndexPageNumericalOrder" translate="yes" xml:space="preserve">
+          <source>Change to  Numerical order</source>
+          <target state="new">Change to  Numerical order</target>
         </trans-unit>
       </group>
     </body>
