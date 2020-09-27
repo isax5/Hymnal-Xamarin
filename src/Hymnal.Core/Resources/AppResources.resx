@@ -163,16 +163,16 @@
     <value>Hymn title</value>
   </data>
   <data name="AutomationIndexPageAlphabeticalOrder" xml:space="preserve">
-    <value>Change to  Alphabetical order</value>
+    <value>Change to Alphabetical order</value>
   </data>
   <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
-    <value>Change to  Numerical order</value>
+    <value>Change to Numerical order</value>
   </data>
   <data name="AutomationIndexPageThematicIndex" xml:space="preserve">
     <value>Change to Thematic index</value>
   </data>
   <data name="AutomationNumberPageEntry" xml:space="preserve">
-    <value>Entry hymn number</value>
+    <value>Enter hymn number</value>
   </data>
   <data name="AutomationNumberPageHelpTextEntry" xml:space="preserve">
     <value>Below there is a button to open the hymn</value>

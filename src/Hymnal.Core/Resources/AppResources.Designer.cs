@@ -187,7 +187,7 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Change to  Alphabetical order.
+        ///   Busca una cadena traducida similar a Change to Alphabetical order.
         /// </summary>
         internal static string AutomationIndexPageAlphabeticalOrder {
             get {
@@ -196,7 +196,7 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Change to  Numerical order.
+        ///   Busca una cadena traducida similar a Change to Numerical order.
         /// </summary>
         internal static string AutomationIndexPageNumericalOrder {
             get {
@@ -214,7 +214,7 @@ namespace Hymnal.Core.Resources {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Entry hymn number.
+        ///   Busca una cadena traducida similar a Enter hymn number.
         /// </summary>
         internal static string AutomationNumberPageEntry {
             get {
