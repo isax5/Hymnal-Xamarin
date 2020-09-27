@@ -11,6 +11,7 @@
     Title="{i18n:Translate Index}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:IndexViewModel"
+    AutomationId="IndexPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxCarouselPage.IconImageSource>
@@ -22,6 +23,7 @@
     <mvxViews:MvxCarouselPage.ToolbarItems>
         <ToolbarItem
             x:Name="AlphabeticalListToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationIndexPageAlphabeticalOrder}"
             Clicked="AlphabeticalListToolbar_Clicked"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -32,6 +34,7 @@
         </ToolbarItem>
         <ToolbarItem
             x:Name="NumericalListToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationIndexPageNumericalOrder}"
             Clicked="NumericalListToolbar_Clicked"
             Priority="2">
             <ToolbarItem.IconImageSource>
@@ -42,6 +45,7 @@
         </ToolbarItem>
         <ToolbarItem
             x:Name="ThematicListToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationIndexPageThematicIndex}"
             Clicked="ThematicListToolbar_Clicked"
             Priority="3">
             <ToolbarItem.IconImageSource>

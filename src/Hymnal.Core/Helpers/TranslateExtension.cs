@@ -13,27 +13,24 @@ namespace Hymnal.Core.Helpers
 
         public string Text { get; set; }
 
-        public object ProvideValue(IServiceProvider serviceProvider)
+        public static string GetTranslation(string text, CultureInfo ci = null)
         {
-            if (Text == null)
-                return "";
+            if (ci == null)
+                ci = Constants.CurrentCultureInfo;
 
-            CultureInfo ci = Constants.CurrentCultureInfo;
-
-            var translation = LanguajesResourcesManager.Value.GetString(Text, ci);
+            var translation = LanguajesResourcesManager.Value.GetString(text, ci);
 
             if (translation == null)
             {
-
-#if DEBUG
-                throw new ArgumentException(
-                    string.Format("Key '{0}' was not found in resources '{1}' for culture '{2}'.", Text, ResourceId, ci.Name),
-                    "Text");
-#else
-                translation = Text; // returns the key, which GETS DISPLAYED TO THE USER
-#endif
+                return $"Translation error: {text}";
             }
+
             return translation;
+        }
+
+        public object ProvideValue(IServiceProvider serviceProvider)
+        {
+            return GetTranslation(Text);
         }
     }
 
