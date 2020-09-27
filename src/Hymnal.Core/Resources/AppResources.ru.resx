@@ -120,4 +120,28 @@
     <value>Всегда держать экран включенным</value>
     <comment>Settings: KeepScreenAlwaysOn</comment>
   </data>
+  <data name="AutomationHymnPageClose" xml:space="preserve">
+    <value>Закрытая страница гимна</value>
+  </data>
+  <data name="AutomationHymnPageContent" xml:space="preserve">
+    <value>Текст гимна</value>
+  </data>
+  <data name="AutomationHymnPageFavorite" xml:space="preserve">
+    <value>Добавить или убрать из избранных</value>
+  </data>
+  <data name="AutomationHymnPagePianoSheet" xml:space="preserve">
+    <value>Открытый лист фортепиано</value>
+  </data>
+  <data name="AutomationHymnPagePlayer" xml:space="preserve">
+    <value>Воспроизвести или приостановить музыку</value>
+  </data>
+  <data name="AutomationHymnPageShare" xml:space="preserve">
+    <value>Поделиться гимном</value>
+  </data>
+  <data name="AutomationHymnPageTitle" xml:space="preserve">
+    <value>Название гимна</value>
+  </data>
+  <data name="AutomationIndexPageThematicIndex" xml:space="preserve">
+    <value>Thematic index</value>
+  </data>
 </root>

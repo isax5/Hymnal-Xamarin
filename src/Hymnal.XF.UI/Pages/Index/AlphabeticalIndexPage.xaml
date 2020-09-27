@@ -13,6 +13,7 @@
     <RelativeLayout>
         <Image
             Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -54,6 +55,7 @@
 
                             <!--  Title  -->
                             <Label
+                                AutomationProperties.IsInAccessibleTree="False"
                                 Grid.Row="0"
                                 Grid.Column="0"
                                 FontSize="Large"
@@ -64,6 +66,7 @@
 
                             <!--  Preview  -->
                             <Label
+                                AutomationProperties.IsInAccessibleTree="False"
                                 Grid.Row="1"
                                 Grid.Column="0"
                                 FontSize="Micro"
@@ -74,6 +77,7 @@
 
                             <!--  Number  -->
                             <Label
+                                AutomationProperties.HelpText="{Binding Title}"
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="1"

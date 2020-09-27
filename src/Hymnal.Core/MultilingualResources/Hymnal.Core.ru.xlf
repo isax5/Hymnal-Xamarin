@@ -171,6 +171,91 @@
           <target state="translated">Всегда держать экран включенным</target>
           <note from="MultilingualBuild" annotates="source" priority="2">Settings: KeepScreenAlwaysOn</note>
         </trans-unit>
+        <trans-unit id="AutomationHymnPageClose" translate="yes" xml:space="preserve">
+          <source>Close Hymn Page</source>
+          <target state="translated">Закрытая страница гимна</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageContent" translate="yes" xml:space="preserve">
+          <source>Hymn lyrics</source>
+          <target state="translated">Текст гимна</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageFavorite" translate="yes" xml:space="preserve">
+          <source>Add or remove from favorites</source>
+          <target state="translated">Добавить или убрать из избранных</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPagePianoSheet" translate="yes" xml:space="preserve">
+          <source>Open piano sheet</source>
+          <target state="translated">Открытый лист фортепиано</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPagePlayer" translate="yes" xml:space="preserve">
+          <source>Play or Pause music</source>
+          <target state="translated">Воспроизвести или приостановить музыку</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageShare" translate="yes" xml:space="preserve">
+          <source>Share hymn</source>
+          <target state="translated">Поделиться гимном</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageTitle" translate="yes" xml:space="preserve">
+          <source>Hymn title</source>
+          <target state="translated">Название гимна</target>
+        </trans-unit>
+        <trans-unit id="AutomationIndexPageThematicIndex" translate="yes" xml:space="preserve">
+          <source>Change to Thematic index</source>
+          <target state="needs-review-translation">Thematic index</target>
+          <note from="MultilingualUpdate" annotates="source" priority="2">Please verify the translation’s accuracy as the source string was updated after it was translated.</note>
+        </trans-unit>
+        <trans-unit id="AutomationNumberPageEntry" translate="yes" xml:space="preserve">
+          <source>Entry hymn number</source>
+          <target state="new">Entry hymn number</target>
+        </trans-unit>
+        <trans-unit id="AutomationNumberPageHelpTextEntry" translate="yes" xml:space="preserve">
+          <source>Below there is a button to open the hymn</source>
+          <target state="new">Below there is a button to open the hymn</target>
+        </trans-unit>
+        <trans-unit id="AutomationNumberPageOpenHymnButton" translate="yes" xml:space="preserve">
+          <source>Open hymn</source>
+          <target state="new">Open hymn</target>
+        </trans-unit>
+        <trans-unit id="AutomationNumberPageOpenRecords" translate="yes" xml:space="preserve">
+          <source>Open Records page</source>
+          <target state="new">Open Records page</target>
+        </trans-unit>
+        <trans-unit id="AutomationNumberPageOpenSearch" translate="yes" xml:space="preserve">
+          <source>Open Search page</source>
+          <target state="new">Open Search page</target>
+        </trans-unit>
+        <trans-unit id="AutomationSettingsPageChangeHymn" translate="yes" xml:space="preserve">
+          <source>Change hymnal</source>
+          <target state="new">Change hymnal</target>
+        </trans-unit>
+        <trans-unit id="AutomationSettingsPageHelpTextChangeHymn" translate="yes" xml:space="preserve">
+          <source>Below check current version</source>
+          <target state="new">Below check current version</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesFalse" translate="yes" xml:space="preserve">
+          <source>Hymn is not in favorites</source>
+          <target state="new">Hymn is not in favorites</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsInFavoritesTrue" translate="yes" xml:space="preserve">
+          <source>Hymn is in favorites</source>
+          <target state="new">Hymn is in favorites</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsPlayingFalse" translate="yes" xml:space="preserve">
+          <source>Hymn is not playing</source>
+          <target state="new">Hymn is not playing</target>
+        </trans-unit>
+        <trans-unit id="AutomationHymnPageHelpTextIsPlayingTrue" translate="yes" xml:space="preserve">
+          <source>Hymn is playing</source>
+          <target state="new">Hymn is playing</target>
+        </trans-unit>
+        <trans-unit id="AutomationIndexPageAlphabeticalOrder" translate="yes" xml:space="preserve">
+          <source>Change to  Alphabetical order</source>
+          <target state="new">Change to  Alphabetical order</target>
+        </trans-unit>
+        <trans-unit id="AutomationIndexPageNumericalOrder" translate="yes" xml:space="preserve">
+          <source>Change to  Numerical order</source>
+          <target state="new">Change to  Numerical order</target>
+        </trans-unit>
       </group>
     </body>
   </file>

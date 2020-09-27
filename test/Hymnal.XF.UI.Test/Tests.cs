@@ -93,8 +93,8 @@ namespace Hymnal.XF.UI.Test
 
         private void back()
         {
-            if (app.Query(e => e.Text("Close")).Any())
-                app.Tap("Close");
+            if (app.Query(e => e.Text("ClosePageToolbar")).Any())
+                app.Tap("ClosePageToolbar");
             else
                 app.Back();
         }
