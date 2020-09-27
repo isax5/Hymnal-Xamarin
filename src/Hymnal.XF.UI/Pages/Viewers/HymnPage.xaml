@@ -4,6 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constans="clr-namespace:Hymnal.XF.UI.Constants"
+    xmlns:converters="clr-namespace:Hymnal.XF.UI.Converters"
     xmlns:i18n="clr-namespace:Hymnal.XF.UI.Helpers"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
@@ -15,6 +16,11 @@
     AutomationId="HymnPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
+    <pages:BaseContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TranslateConverter x:Key="TranslateConverter" />
+        </ResourceDictionary>
+    </pages:BaseContentPage.Resources>
 
     <pages:BaseContentPage.ToolbarItems>
         <ToolbarItem
@@ -34,7 +40,7 @@
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.HelpText="{i18n:Translate Text={Binding IsFavorite, StringFormat='AutomationHymnPageHelpTextIsInFavorites{0}'}}"
+            AutomationProperties.HelpText="{Binding IsFavorite, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
             AutomationProperties.Name="{i18n:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
@@ -89,6 +95,7 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}">
             <StackLayout Spacing="20">
+
                 <Label
                     x:Name="hymnTitleLabel"
                     AutomationId="HymnTitleLabel"
