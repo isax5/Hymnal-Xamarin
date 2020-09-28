@@ -60,7 +60,10 @@ namespace Hymnal.Core.ViewModels
 
             // Update list
             Tuple<FavoriteHymn, Hymn>[] favorites = await Task.WhenAll(
-                storageManager.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
+                storageManager
+                .All<FavoriteHymn>()
+                .OrderByDescending(f => f.SavedAt)
+                .ToList()
                 .Select(async f => new Tuple<FavoriteHymn, Hymn>(f, await hymnsService.GetHymnAsync(f))));
 
             // If there weren't hymns in the list before

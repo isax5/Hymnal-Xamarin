@@ -77,9 +77,9 @@
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="0"
-                                AutomationProperties.HelpText="{Binding Title}"
+                                AutomationProperties.HelpText="{Binding Item2.Title}"
                                 FontSize="Large"
-                                Text="{Binding Number}"
+                                Text="{Binding Item2.Number}"
                                 TextColor="{DynamicResource PrimaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />
 
@@ -90,7 +90,7 @@
                                 AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Large"
                                 LineBreakMode="TailTruncation"
-                                Text="{Binding Title}"
+                                Text="{Binding Item2.Title}"
                                 TextColor="{DynamicResource PrimaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />
 
@@ -101,7 +101,7 @@
                                 AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Micro"
                                 LineBreakMode="TailTruncation"
-                                Text="{Binding PlainContent}"
+                                Text="{Binding Item2.PlainContent}"
                                 TextColor="{DynamicResource SecondaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />
 
@@ -113,7 +113,7 @@
                                 Margin="5,0,0,0"
                                 AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Micro"
-                                Text="{Binding SavedAt, StringFormat='{0:dd/MM}'}"
+                                Text="{Binding Item1.SavedAt, StringFormat='{0:dd/MM}'}"
                                 TextColor="{DynamicResource SecondaryTextColor}"
                                 VerticalOptions="CenterAndExpand" />
 
