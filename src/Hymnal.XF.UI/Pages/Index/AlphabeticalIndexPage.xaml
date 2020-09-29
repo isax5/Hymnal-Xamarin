@@ -55,9 +55,9 @@
 
                             <!--  Title  -->
                             <Label
-                                AutomationProperties.IsInAccessibleTree="False"
                                 Grid.Row="0"
                                 Grid.Column="0"
+                                AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Large"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding Title}"
@@ -66,9 +66,9 @@
 
                             <!--  Preview  -->
                             <Label
-                                AutomationProperties.IsInAccessibleTree="False"
                                 Grid.Row="1"
                                 Grid.Column="0"
+                                AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Micro"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding PlainContent}"
@@ -77,10 +77,10 @@
 
                             <!--  Number  -->
                             <Label
-                                AutomationProperties.HelpText="{Binding Title}"
                                 Grid.Row="0"
                                 Grid.RowSpan="2"
                                 Grid.Column="1"
+                                AutomationProperties.HelpText="{Binding Title}"
                                 FontSize="Large"
                                 Text="{Binding Number}"
                                 TextColor="{DynamicResource PrimaryTextColor}"
