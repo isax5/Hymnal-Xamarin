@@ -25,7 +25,7 @@
   <ItemGroup>
     <PackageReference Include="MvvmCross" Version="7.0.1" />
     <PackageReference Include="MvvmCross.Forms" Version="7.0.1" />
-    <PackageReference Include="Plugin.MediaManager" Version="0.9.6" />
+    <PackageReference Include="Plugin.MediaManager" Version="1.0.3" />
     <PackageReference Include="Tizen.NET.TV" Version="6.6.0.5599517">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
