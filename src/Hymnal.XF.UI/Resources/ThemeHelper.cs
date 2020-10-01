@@ -1,7 +1,4 @@
 using System.Diagnostics;
-using Hymnal.Core.Models;
-using Hymnal.Core.Services;
-using MvvmCross;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 

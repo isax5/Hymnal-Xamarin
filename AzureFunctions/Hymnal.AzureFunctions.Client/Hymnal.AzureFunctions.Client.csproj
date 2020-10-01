@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <NeutralLanguage>en</NeutralLanguage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Refit" Version="5.2.1" />
+    <PackageReference Include="System.Reactive" Version="4.4.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Helpers\Helpers\Helpers.csproj" />
+    <ProjectReference Include="..\Hymnal.AzureFunctions.Models\Hymnal.AzureFunctions.Models.csproj" />
+  </ItemGroup>
+
+</Project>

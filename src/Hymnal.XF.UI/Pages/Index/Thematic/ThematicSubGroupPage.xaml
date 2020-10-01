@@ -15,6 +15,7 @@
     <RelativeLayout>
         <Image
             Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,

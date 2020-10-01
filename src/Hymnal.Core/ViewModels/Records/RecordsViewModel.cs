@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,9 +20,9 @@ namespace Hymnal.Core.ViewModels
         private readonly IPreferencesService preferencesService;
         private readonly IStorageManager storageManager;
 
-        public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
+        public MvxObservableCollection<Tuple<RecordHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<RecordHymn, Hymn>>();
 
-        public Hymn SelectedHymn
+        public Tuple<RecordHymn, Hymn> SelectedHymn
         {
             get => null;
             set
@@ -29,7 +30,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedHymnExecute(value);
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedHymn));
             }
         }
@@ -50,9 +51,12 @@ namespace Hymnal.Core.ViewModels
         public override async Task Initialize()
         {
 
-            var recordHymns = storageManager.All<RecordHymn>().OrderByDescending(r => r.SavedAt).ToList();
-
-            Hymn[] hymns = await Task.WhenAll(recordHymns.Select(r => hymnsService.GetHymnAsync(r)));
+            Tuple<RecordHymn, Hymn>[] hymns = await Task.WhenAll(
+                storageManager
+                .All<RecordHymn>()
+                .OrderByDescending(r => r.SavedAt)
+                .ToList()
+                .Select(async r => new Tuple<RecordHymn, Hymn>(r, await hymnsService.GetHymnAsync(r))));
 
             Hymns.AddRange(hymns);
 
@@ -63,20 +67,20 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
-        private void SelectedHymnExecute(Hymn hymn)
+        private async Task SelectedHymnExecuteAsync(Tuple<RecordHymn, Hymn> hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
             {
-                Number = hymn.Number,
-                HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.HymnalLanguageId),
+                Number = hymn.Item2.Number,
+                HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId),
                 SaveInRecords = false
             });
         }

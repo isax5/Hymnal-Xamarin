@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
@@ -44,17 +45,17 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(NumberViewModel) },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(NumberViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
-        public MvxCommand<string> OpenHymnCommand => new MvxCommand<string>(OpenHymnAsync);
+        public MvxAsyncCommand<string> OpenHymnCommand => new MvxAsyncCommand<string>(OpenHymnAsync);
 
-        private async void OpenHymnAsync(string text)
+        private async Task OpenHymnAsync(string text)
         {
             var num = text ?? HymnNumber;
 
@@ -74,11 +75,11 @@ namespace Hymnal.Core.ViewModels
             }
         }
 
-        public MvxCommand OpenSimplePageCommand => new MvxCommand(OpenSimplePageExecute);
+        public MvxAsyncCommand OpenSimplePageCommand => new MvxAsyncCommand(OpenSimplePageExecuteAsync);
 
-        private void OpenSimplePageExecute()
+        private async Task OpenSimplePageExecuteAsync()
         {
-            navigationService.Navigate<SimpleViewModel>();
+            await navigationService.Navigate<SimpleViewModel>();
         }
 
         public MvxCommand OpenRecordsCommand => new MvxCommand(() => navigationService.Navigate<RecordsViewModel>());

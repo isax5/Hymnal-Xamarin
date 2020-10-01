@@ -24,6 +24,8 @@
     <mvxViews:MvxContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="RecordsToolbarItem"
+            AutomationId="OpenRecordsPageToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenRecords}"
             Command="{Binding OpenRecordsCommand}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
@@ -33,7 +35,8 @@
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
-            AutomationId="OpenSearchPageToolbarItem"
+            AutomationId="OpenSearchPageToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenSearch}"
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -48,6 +51,7 @@
         <Image
             x:Name="backgroundImage"
             Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -91,6 +95,7 @@
                         <Label
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
+                            AutomationProperties.IsInAccessibleTree="False"
                             FontAttributes="Bold"
                             FontSize="45"
                             Text="#"
@@ -103,6 +108,8 @@
                             AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
                             AutomationId="HymnNumberEntry"
+                            AutomationProperties.HelpText="{i18n:Translate AutomationNumberPageHelpTextEntry}"
+                            AutomationProperties.Name="{i18n:Translate AutomationNumberPageEntry}"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"
@@ -127,6 +134,7 @@
 
                 <Button
                     AutomationId="OpenHymnButton"
+                    AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenHymnButton}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"

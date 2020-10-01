@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
 using System.Linq;
+using System.Threading.Tasks;
+using Hymnal.AzureFunctions.Client;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Resources;
@@ -61,6 +63,7 @@ namespace Hymnal.Core
             // Register Services new
             Mvx.IoCProvider.RegisterSingleton<IStorageManager>(CrossStorageManager.Current);
             Mvx.IoCProvider.RegisterSingleton<IMediaManager>(CrossMediaManager.Current);
+            Mvx.IoCProvider.RegisterSingleton<IAzureHymnService>(AzureHymnService.Current);
 
 
             // AppCenter
@@ -100,16 +103,16 @@ namespace Hymnal.Core
 
 
         #region Open Page as
-        public void LaunchPage<TViewModel>() where TViewModel : IMvxViewModel
+        public async Task LaunchPageAsync<TViewModel>() where TViewModel : IMvxViewModel
         {
             IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
-            navigationService.Navigate<TViewModel>();
+            await navigationService.Navigate<TViewModel>();
         }
 
-        public void LaunchPage<TViewModel, TParameter>(TParameter parameter) where TViewModel : IMvxViewModel<TParameter>
+        public async Task LaunchPageAsync<TViewModel, TParameter>(TParameter parameter) where TViewModel : IMvxViewModel<TParameter>
         {
             IMvxNavigationService navigationService = Mvx.IoCProvider.Resolve<IMvxNavigationService>();
-            navigationService.Navigate<TViewModel, TParameter>(parameter);
+            await navigationService.Navigate<TViewModel, TParameter>(parameter);
         }
 
         public void PerformAppLinkRequest(Uri uri)
@@ -119,20 +122,20 @@ namespace Hymnal.Core
             if (!string.IsNullOrEmpty(request))
             {
                 if (request.Equals(PageRequest.Search.ToString()))
-                    LaunchPage<SearchViewModel>();
+                    LaunchPageAsync<SearchViewModel>().ConfigureAwait(true);
 
                 if (request.Equals(PageRequest.Records.ToString()))
-                    LaunchPage<RecordsViewModel>();
+                    LaunchPageAsync<RecordsViewModel>().ConfigureAwait(true);
 
                 if (request.Contains(PageRequest.Hymn.ToString()))
                 {
                     IPreferencesService preferencesService = Mvx.IoCProvider.Resolve<IPreferencesService>();
 
-                    LaunchPage<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+                    LaunchPageAsync<HymnViewModel, HymnIdParameter>(new HymnIdParameter
                     {
                         Number = 22,
                         HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage
-                    });
+                    }).ConfigureAwait(true);
 
                 }
             }
@@ -143,11 +146,11 @@ namespace Hymnal.Core
             switch (pageRequest)
             {
                 case PageRequest.Records:
-                    LaunchPage<RecordsViewModel>();
+                    LaunchPageAsync<RecordsViewModel>().ConfigureAwait(true);
                     break;
 
                 case PageRequest.Search:
-                    LaunchPage<SearchViewModel>();
+                    LaunchPageAsync<SearchViewModel>().ConfigureAwait(true);
                     break;
 
                 default:

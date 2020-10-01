@@ -132,4 +132,34 @@
     <value>Manter a tela sempre ligada</value>
     <comment>Settings: KeepScreenAlwaysOn</comment>
   </data>
+  <data name="AutomationHymnPageClose" xml:space="preserve">
+    <value>Fechar página de hino</value>
+  </data>
+  <data name="AutomationHymnPageContent" xml:space="preserve">
+    <value>Letras de hinos</value>
+  </data>
+  <data name="AutomationHymnPageFavorite" xml:space="preserve">
+    <value>Adicionar ou remover dos favoritos</value>
+  </data>
+  <data name="AutomationHymnPagePianoSheet" xml:space="preserve">
+    <value>Folha de piano aberta</value>
+  </data>
+  <data name="AutomationHymnPagePlayer" xml:space="preserve">
+    <value>Tocar ou pausar música</value>
+  </data>
+  <data name="AutomationHymnPageShare" xml:space="preserve">
+    <value>Compartilhe hino</value>
+  </data>
+  <data name="AutomationHymnPageTitle" xml:space="preserve">
+    <value>Título de hino</value>
+  </data>
+  <data name="AutomationIndexPageThematicIndex" xml:space="preserve">
+    <value>Mudança para índice temático</value>
+  </data>
+  <data name="AutomationNumberPageEntry" xml:space="preserve">
+    <value>Digite o número do hino</value>
+  </data>
+  <data name="AutomationNumberPageHelpTextEntry" xml:space="preserve">
+    <value>Abaixo há um botão para abrir o hino</value>
+  </data>
 </root>

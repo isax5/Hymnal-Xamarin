@@ -5,8 +5,8 @@ using Android.Runtime;
 using Hymnal.Core.ViewModels.Main;
 using Hymnal.StorageModels;
 using MediaManager;
-using MvvmCross.Forms.Platforms.Android.Views;
 using Plugin.StorageManager;
+using MvvmCross.Forms.Platforms.Android.Views;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.Droid
@@ -23,7 +23,6 @@ namespace Hymnal.XF.Droid
             base.OnCreate(bundle);
 
             // Initializacion
-            Device.SetFlags(new string[] { "CarouselView_Experimental" });
             FormsMaterial.Init(this, bundle);
             CrossMediaManager.Current.Init(this);
             CrossStorageManager.Current.Init(Realms.Realm.GetInstance());

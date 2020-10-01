@@ -135,7 +135,7 @@ namespace Hymnal.Core
         /// Time, Time Zone, iOS Version, App Version, App Build, Account Id (not using yet), AppNamespace, Device model, Country code, etc.
         /// https://docs.microsoft.com/en-us/appcenter/analytics/export#azure-blob-storage
         /// </summary>
-        public struct TrackEvents
+        public struct TrackEv
         {
             /// <summary>
             /// App started

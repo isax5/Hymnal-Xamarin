@@ -84,11 +84,11 @@ namespace Hymnal.Core.ViewModels
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
                 DeviceInfo.Platform == DevicePlatform.Android)
             {
-                Analytics.TrackEvent(Constants.TrackEvents.AppOpened, new Dictionary<string, string>
+                Analytics.TrackEvent(Constants.TrackEv.AppOpened, new Dictionary<string, string>
                 {
-                    { Constants.TrackEvents.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                    { Constants.TrackEvents.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
-                    { Constants.TrackEvents.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
+                    { Constants.TrackEv.AppOpenedScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                    { Constants.TrackEv.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
+                    { Constants.TrackEv.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
                 });
             }
 
