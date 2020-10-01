@@ -3,7 +3,6 @@
     x:Class="Hymnal.XF.UI.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:custom="clr-namespace:Hymnal.XF.UI.Pages.Custom"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:resources="clr-namespace:Hymnal.XF.UI.Resources">
@@ -15,14 +14,6 @@
                 <ResourceDictionary>
 
                     <x:String x:Key="BackgroundImageFile">Background</x:String>
-
-                    <Style TargetType="custom:CustomNavigationPage">
-                        <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryBackgroudColor}" />
-                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
-                        <Setter Property="BarTextColor" Value="{DynamicResource NavBarTextColor}" />
-                        <Setter Property="iOS:NavigationPage.PrefersLargeTitles" Value="False" />
-                        <!--<Setter Property="iOS:NavigationPage.IsNavigationBarTranslucent" Value="True" />-->
-                    </Style>
 
                     <Style
                         x:Key="TabbedPageStyle"

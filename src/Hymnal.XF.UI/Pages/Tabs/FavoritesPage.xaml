@@ -12,6 +12,7 @@
     Title="{i18n:Translate Favorites}"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:FavoritesViewModel"
+    AutomationId="FavoritesPage"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
 
     <mvxViews:MvxContentPage.IconImageSource>
@@ -24,6 +25,7 @@
         <RelativeLayout>
             <Image
                 Aspect="AspectFill"
+                AutomationProperties.IsInAccessibleTree="False"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                        Property=Height}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -75,6 +77,7 @@
                                     Grid.Row="0"
                                     Grid.RowSpan="2"
                                     Grid.Column="0"
+                                    AutomationProperties.HelpText="{Binding Item2.Title}"
                                     FontSize="Large"
                                     Text="{Binding Item2.Number}"
                                     TextColor="{DynamicResource PrimaryTextColor}"
@@ -84,6 +87,7 @@
                                 <Label
                                     Grid.Row="0"
                                     Grid.Column="1"
+                                    AutomationProperties.IsInAccessibleTree="False"
                                     FontSize="Large"
                                     LineBreakMode="TailTruncation"
                                     Text="{Binding Item2.Title}"
@@ -94,6 +98,7 @@
                                 <Label
                                     Grid.Row="1"
                                     Grid.Column="1"
+                                    AutomationProperties.IsInAccessibleTree="False"
                                     FontSize="Micro"
                                     LineBreakMode="TailTruncation"
                                     Text="{Binding Item2.PlainContent}"

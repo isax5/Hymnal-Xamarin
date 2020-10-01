@@ -33,7 +33,7 @@ namespace Hymnal.Core.ViewModels
                 if (value == null)
                     return;
 
-                SelectedHymnExecute(value);
+                SelectedHymnExecuteAsync(value).ConfigureAwait(true);
                 RaisePropertyChanged(nameof(SelectedHymn));
             }
         }
@@ -59,8 +59,11 @@ namespace Hymnal.Core.ViewModels
             base.ViewAppearing();
 
             // Update list
-            var favorites = await Task.WhenAll(
-                storageManager.All<FavoriteHymn>().OrderByDescending(f => f.SavedAt).ToList()
+            Tuple<FavoriteHymn, Hymn>[] favorites = await Task.WhenAll(
+                storageManager
+                .All<FavoriteHymn>()
+                .OrderByDescending(f => f.SavedAt)
+                .ToList()
                 .Select(async f => new Tuple<FavoriteHymn, Hymn>(f, await hymnsService.GetHymnAsync(f))));
 
             // If there weren't hymns in the list before
@@ -94,17 +97,17 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEvents.Navigation, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
-                { Constants.TrackEvents.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
+                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
             });
         }
 
-        private void SelectedHymnExecute(Tuple<FavoriteHymn, Hymn> hymn)
+        private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
         {
-            navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
             {
                 Number = hymn.Item2.Number,
                 HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId)
@@ -114,12 +117,12 @@ namespace Hymnal.Core.ViewModels
         public MvxCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand => new MvxCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute);
         private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
         {
-            Analytics.TrackEvent(Constants.TrackEvents.HymnRemoveFromFavorites, new Dictionary<string, string>
+            Analytics.TrackEvent(Constants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
             {
-                { Constants.TrackEvents.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
-                { Constants.TrackEvents.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
-                { Constants.TrackEvents.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEvents.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                { Constants.TrackEv.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
+                { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
+                { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+                { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
             });
 
             try

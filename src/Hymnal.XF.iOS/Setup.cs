@@ -25,7 +25,6 @@ namespace Hymnal.XF.iOS
         public override void InitializePrimary()
         {
             base.InitializePrimary();
-            Device.SetFlags(new string[] { "CarouselView_Experimental" });
             FormsMaterial.Init();
             CrossMediaManager.Current.Init();
             CrossStorageManager.Current.Init(Realm.GetInstance());

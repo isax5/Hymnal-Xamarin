@@ -23,13 +23,13 @@
 
   <!-- Include Nuget Package for Tizen Project building -->
   <ItemGroup>
-    <PackageReference Include="MvvmCross" Version="6.4.2" />
-    <PackageReference Include="MvvmCross.Forms" Version="6.4.2" />
-    <PackageReference Include="Plugin.MediaManager" Version="0.9.6" />
+    <PackageReference Include="MvvmCross" Version="7.0.1" />
+    <PackageReference Include="MvvmCross.Forms" Version="7.0.1" />
+    <PackageReference Include="Plugin.MediaManager" Version="1.0.3" />
     <PackageReference Include="Tizen.NET.TV" Version="6.6.0.5599517">
       <ExcludeAssets>Runtime</ExcludeAssets>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.7.0.1260" />
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1451" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Plugin\StorageManager\StorageManager.csproj" />

@@ -17,7 +17,7 @@ namespace Hymnal.XF.Droid.Views
        Theme = "@style/AppTheme.Splash",
        Icon = "@mipmap/ic_launcher",
        RoundIcon = "@mipmap/ic_launcher_round")]
-    public class SplashActivity : MvxFormsSplashScreenAppCompatActivity<Setup, Core.App, UI.App>
+    public class SplashActivity : MvxFormsSplashScreenActivity<Setup, Core.App, UI.App>
     {
         protected override Task RunAppStartAsync(Bundle bundle)
         {

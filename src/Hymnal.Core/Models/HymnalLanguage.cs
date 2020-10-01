@@ -2,7 +2,9 @@ using System.Linq;
 
 namespace Hymnal.Core.Models
 {
+#pragma warning disable CS0659 // El tipo reemplaza a Object.Equals(object o), pero no reemplaza a Object.GetHashCode()
     public class HymnalLanguage
+#pragma warning restore CS0659 // El tipo reemplaza a Object.Equals(object o), pero no reemplaza a Object.GetHashCode()
     {
         /// <summary>
         /// Identifier for comparative Equals

@@ -70,10 +70,10 @@ namespace Hymnal.Core.ViewModels
 
 
 #region Commands
-        public MvxCommand CloseCommand => new MvxCommand(Close);
-        private void Close()
+        public MvxAsyncCommand CloseCommand => new MvxAsyncCommand(CloseAsync);
+        private async Task CloseAsync()
         {
-            navigationService.Close(this);
+            await navigationService.Close(this);
         }
 #endregion
     }

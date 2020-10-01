@@ -70,13 +70,13 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Compile Include="**\Android\**\*.cs" />
     <Compile Include="**\*.realm.cs" />
-    <PackageReference Include="Realm" Version="4.3.0" />
+    <PackageReference Include="Realm" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="**\iOS\**\*.cs" />
     <Compile Include="**\*.realm.cs" />
-    <PackageReference Include="Realm" Version="4.3.0" />
+    <PackageReference Include="Realm" Version="5.1.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
