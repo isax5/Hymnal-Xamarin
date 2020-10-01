@@ -62,13 +62,12 @@
                             Grid.Row="0"
                             Grid.RowSpan="2"
                             Grid.Column="0"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            HeightRequest="50"
-                            WidthRequest="50">
+                            AutomationProperties.IsInAccessibleTree="False">
                             <Image.Source>
                                 <FontImageSource
                                     FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
                                     Glyph="{x:Static constans:FontAwesomeIcons.GlobeAmericas}"
+                                    Size="50"
                                     Color="Gray" />
                             </Image.Source>
                         </Image>
@@ -175,7 +174,7 @@
                 x:Name="supportSection"
                 Title="{i18n:Translate Support}">
 
-                <!--  Donations  -->
+                <!--  Donations  HAY QUE AGREGAR LAS FLAGS  -->
                 <!--<ViewCell>
                     <Grid>
                         <Grid.RowDefinitions>
@@ -251,13 +250,12 @@
                         <Image
                             Grid.Row="1"
                             Grid.Column="0"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            HeightRequest="50"
-                            WidthRequest="50">
+                            AutomationProperties.IsInAccessibleTree="False">
                             <Image.Source>
                                 <FontImageSource
                                     FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
                                     Glyph="{x:Static constans:FontAwesomeIcons.Github}"
+                                    Size="50"
                                     Color="Gray" />
                             </Image.Source>
                         </Image>

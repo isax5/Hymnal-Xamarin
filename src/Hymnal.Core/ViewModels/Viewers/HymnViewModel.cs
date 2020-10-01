@@ -154,6 +154,9 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
+            // Precarga de datos para reproduccion
+            azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
+
             Debug.WriteLine($"Opening Hymn: {Hymn.Number} of {Language.Id}");
 
             Analytics.TrackEvent(Constants.TrackEv.HymnOpened, new Dictionary<string, string>
@@ -326,7 +329,8 @@ namespace Hymnal.Core.ViewModels
                         { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
                         { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                     });
-                }));
+                }),
+                ex => InvokeOnMainThreadAsync(async () => await dialogService.Alert(Languages.WeHadAProblem, Languages.Ok)));
 
         }
 

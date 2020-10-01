@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reactive;
 using System.Reactive.Disposables;
 
-namespace Hymnal.AzureFunctions.Models
+namespace Helpers
 {
     public class ObservableValue<T> : ObservableBase<T>
     {

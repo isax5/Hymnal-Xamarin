@@ -4,6 +4,8 @@ namespace Hymnal.Core.Services
 {
     public interface IDialogService
     {
+        Task Alert(string title, string cancel);
+
         Task Alert(string title, string message, string cancel);
 
         Task Alert(string title, string message, string accept, string cancel);
