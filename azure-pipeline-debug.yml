@@ -1,0 +1,65 @@
+# Xamarin.Android and Xamarin.iOS
+# Build a Xamarin.Android and Xamarin.iOS app.
+# Add steps that test, sign, and distribute the app, save build artifacts, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin
+
+
+variables:
+  buildConfiguration: 'Debug'
+  outputDirectory: '$(build.binariesDirectory)/$(buildConfiguration)'
+  prefix: 'XF'
+
+jobs:
+
+- job: Android
+  pool:
+    vmImage: 'macos-latest'
+    # vmImage: 'windows-2019'
+
+  steps:
+  - task: NuGetToolInstaller@1
+
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: '**/*.sln'
+
+  - task: XamarinAndroid@1
+    inputs:
+      projectFile: '**/*$(prefix)*Droid*.csproj'
+      outputDirectory: '$(outputDirectory)'
+      configuration: '$(buildConfiguration)'
+  #     msbuildVersionOption: '16.0'
+
+  # - task: AndroidSigning@3
+  #   inputs:
+  #     apksign: false
+  #     zipalign: false
+  #     apkFiles: '$(outputDirectory)/*.apk'
+  # 
+  # - task: PublishBuildArtifacts@1
+  #   inputs:
+  #     pathtoPublish: '$(outputDirectory)'
+
+- job: iOS
+  pool:
+    vmImage: 'macos-latest'
+
+  steps:
+  # To manually select a Xamarin SDK version on the Hosted macOS agent, enable this script with the SDK version you want to target
+  # https://go.microsoft.com/fwlink/?linkid=871629
+  # - script: sudo $AGENT_HOMEDIRECTORY/scripts/select-xamarin-sdk.sh 5_4_1 
+  #  displayName: 'Select Xamarin SDK version'
+  #  enabled: false
+
+  - task: NuGetToolInstaller@1
+
+  - task: NuGetCommand@2
+    inputs:
+      restoreSolution: '**/*.sln'
+
+  - task: XamariniOS@2
+    inputs:
+      solutionFile: '**/*$(prefix)*iOS.csproj'
+      configuration: '$(buildConfiguration)'
+      buildForSimulator: true
+      packageApp: false

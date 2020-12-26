@@ -11,6 +11,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "!Solution Items", "!Solutio
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
 		.gitignore = .gitignore
+		azure-pipeline-debug-android.yml = azure-pipeline-debug-android.yml
+		azure-pipeline-debug-ios.yml = azure-pipeline-debug-ios.yml
+		azure-pipeline-debug.yml = azure-pipeline-debug.yml
 		README.md = README.md
 	EndProjectSection
 EndProject
@@ -78,9 +81,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.AzureFunctions.Model
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.AzureFunctions.Client", "AzureFunctions\Hymnal.AzureFunctions.Client\Hymnal.AzureFunctions.Client.csproj", "{46FF8276-6C1F-4DC4-B13D-67AA7E93BD91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hymnal.AzureFunctions.Test", "AzureFunctions\Hymnal.AzureFunctions.Test\Hymnal.AzureFunctions.Test.csproj", "{CCA6352B-6DF8-4A74-8BC3-E00B5FACA134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hymnal.AzureFunctions.Test", "AzureFunctions\Hymnal.AzureFunctions.Test\Hymnal.AzureFunctions.Test.csproj", "{CCA6352B-6DF8-4A74-8BC3-E00B5FACA134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helpers", "Helpers\Helpers\Helpers.csproj", "{DCB68EE1-1F43-42AB-9FD0-6BFE3BF228CE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helpers", "Helpers\Helpers\Helpers.csproj", "{DCB68EE1-1F43-42AB-9FD0-6BFE3BF228CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "X Helpers", "X Helpers", "{96628E4D-B80C-47B5-83E1-7A54D036BA40}"
 EndProject
