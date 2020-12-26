@@ -7,7 +7,7 @@ namespace Plugin.StorageManager
     /// </summary>
     public static class CrossStorageManager
     {
-        static Lazy<IStorageManager> implementation = new Lazy<IStorageManager>(() => CreateStorageManager(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
+        private static Lazy<IStorageManager> implementation = new Lazy<IStorageManager>(() => CreateStorageManager(), System.Threading.LazyThreadSafetyMode.PublicationOnly);
 
         /// <summary>
         /// Gets if the plugin is supported on the current platform.
@@ -21,7 +21,7 @@ namespace Plugin.StorageManager
         {
             get
             {
-                IStorageManager ret = implementation.Value;
+                var ret = implementation.Value;
                 if (ret == null)
                 {
                     throw NotImplementedInReferenceAssembly();
@@ -30,9 +30,9 @@ namespace Plugin.StorageManager
             }
         }
 
-        static IStorageManager CreateStorageManager()
+        private static IStorageManager CreateStorageManager()
         {
-#if NETSTANDARD1_0 || NETSTANDARD2_0
+#if NETSTANDARD
             return null;
 #else
 #pragma warning disable IDE0022 // Use expression body for methods

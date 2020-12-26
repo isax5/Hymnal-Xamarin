@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <!--Work around so the conditions work below-->
-    <TargetFrameworks>netstandard2.0;Xamarin.iOS10;Xamarin.TVOS10;MonoAndroid10.0;Tizen60</TargetFrameworks>
-    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">uap10.0.17763;net472;$(TargetFrameworks)</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;xamarin.ios10;xamarin.mac20;xamarin.tvos10;monoandroid10.0;tizen40</TargetFrameworks>
+    <TargetFrameworks Condition=" '$(OS)' == 'Windows_NT' ">uap10.0.17763;net472;netcoreapp3.1;$(TargetFrameworks)</TargetFrameworks>
     <NeutralLanguage>en</NeutralLanguage>
   </PropertyGroup>
 
@@ -24,25 +24,21 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('netstandard')) ">
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('monoandroid')) ">
     <PackageReference Include="Realm" Version="5.1.2" />
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('xamarin.ios')) ">
     <PackageReference Include="Realm" Version="5.1.2" />
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('xamarin.tvos')) ">
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('Tizen')) ">
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('tizen')) ">
   </ItemGroup>
 
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
+  <ItemGroup Condition=" $(TargetFramework.StartsWith('uap')) ">
   </ItemGroup>
-
-  <ItemGroup Condition=" $(TargetFramework.StartsWith('net472')) ">
-  </ItemGroup>
-
 
 </Project>
