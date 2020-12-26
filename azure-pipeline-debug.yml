@@ -23,6 +23,7 @@ jobs:
     inputs:
       restoreSolution: '**/*.sln'
 
+  # https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/xamarin-android?view=azure-devops
   - task: XamarinAndroid@1
     inputs:
       projectFile: '**/*$(prefix)*Droid*.csproj'
@@ -57,6 +58,7 @@ jobs:
     inputs:
       restoreSolution: '**/*.sln'
 
+  # https://docs.microsoft.com/en-us/azure/devops/pipelines/tasks/build/xamarin-ios?view=azure-devops
   - task: XamariniOS@2
     inputs:
       solutionFile: '**/*$(prefix)*iOS.csproj'
