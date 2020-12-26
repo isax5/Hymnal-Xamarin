@@ -13,7 +13,7 @@ jobs:
 
 - job: Android
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-latest'
     # vmImage: 'windows-2019'
 
   steps:
@@ -43,7 +43,7 @@ jobs:
 
 - job: iOS
   pool:
-    vmImage: 'macos-latest'
+    vmImage: 'macOS-latest'
 
   steps:
   # To manually select a Xamarin SDK version on the Hosted macOS agent, enable this script with the SDK version you want to target
