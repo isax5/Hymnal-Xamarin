@@ -161,7 +161,7 @@ namespace Hymnal.XF.Droid.Linker
         public void Include(IStorageManager storageManager)
         {
             _ = CrossStorageManager.Current;
-            _ = new StorageManagerImplementation(); // produce error en azure devops
+            //_ = new StorageManagerImplementation(); // produce error en azure devops
         }
         #endregion
 

@@ -3,6 +3,8 @@
 # Add steps that test, sign, and distribute the app, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/ecosystems/xamarin
 
+trigger:
+- main
 
 variables:
   buildConfiguration: 'Debug'
