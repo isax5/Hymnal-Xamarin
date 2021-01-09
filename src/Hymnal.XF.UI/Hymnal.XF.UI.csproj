@@ -15,12 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.0.0" />
-    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.0.0" />
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.1.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.1.0" />
     <PackageReference Include="MvvmCross" Version="7.1.2" />
     <PackageReference Include="MvvmCross.Forms" Version="7.1.2" />
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
-    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="4.8.0.1821" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.1874" />
     <PackageReference Include="XamarinFastEntry.Behaviors" Version="1.1.1" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
