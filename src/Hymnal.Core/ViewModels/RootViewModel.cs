@@ -63,7 +63,7 @@ namespace Hymnal.Core.ViewModels
             {
                 await navigationService.Navigate<NumberViewModel>();
                 await navigationService.Navigate<SearchViewModel>();
-                await navigationService.Navigate<SettingsViewModel>();
+                //await navigationService.Navigate<SettingsViewModel>();
             }
             else if (DeviceInfo.Platform == DevicePlatform.UWP)
             {
