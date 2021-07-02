@@ -70,34 +70,34 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('MonoAndroid')) ">
     <Compile Include="**\Android\**\*.cs" />
     <Compile Include="**\*.realm.cs" />
-    <PackageReference Include="Realm" Version="5.1.2" />
+    <PackageReference Include="Realm" Version="10.2.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.iOS')) ">
     <Compile Include="**\iOS\**\*.cs" />
     <Compile Include="**\*.realm.cs" />
-    <PackageReference Include="Realm" Version="5.1.2" />
+    <PackageReference Include="Realm" Version="10.2.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Xamarin.TVOS')) ">
     <Compile Include="**\TVOS\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Tizen')) ">
     <Compile Include="**\Tizen\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <Compile Include="**\UAP\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
     <!--
     If you need to add sdk references:
      <SDKReference Include="WindowsMobile, Version=10.0.16299.0">
@@ -109,8 +109,8 @@
   <ItemGroup Condition=" $(TargetFramework.StartsWith('net472')) ">
     <Compile Include="**\NetFramework\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
-    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
   </ItemGroup>
   
   
