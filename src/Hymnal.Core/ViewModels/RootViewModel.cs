@@ -8,28 +8,23 @@ using Xamarin.Essentials;
 
 namespace Hymnal.Core.ViewModels
 {
-    public class RootViewModel : MvxViewModel
+    public class RootViewModel : MvxNavigationViewModel
     {
-        private readonly IMvxNavigationService navigationService;
-        private readonly IMvxLog log;
         private readonly IPreferencesService preferencesService;
 
         public RootViewModel(
+            IMvxLogProvider logProvider,
             IMvxNavigationService navigationService,
             IMvxLog log,
             IPreferencesService preferencesService
-            )
+            ) : base(logProvider, navigationService)
         {
-            this.navigationService = navigationService;
-            this.log = log;
             this.preferencesService = preferencesService;
         }
 
         private bool loaded = false;
         public override async void ViewAppearing()
         {
-            base.ViewAppearing();
-
             if (loaded)
                 return;
 
@@ -47,39 +42,41 @@ namespace Hymnal.Core.ViewModels
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
                 DeviceInfo.Platform == DevicePlatform.Android)
             {
-                await navigationService.Navigate<NumberViewModel>();
-                await navigationService.Navigate<IndexViewModel>();
-                await navigationService.Navigate<FavoritesViewModel>();
-                await navigationService.Navigate<SettingsViewModel>();
+                await NavigationService.Navigate<NumberViewModel>();
+                await NavigationService.Navigate<IndexViewModel>();
+                await NavigationService.Navigate<FavoritesViewModel>();
+                await NavigationService.Navigate<SettingsViewModel>();
             }
             else if (DeviceInfo.Platform == DevicePlatform.tvOS)
             {
-                await navigationService.Navigate<NumberViewModel>();
-                await navigationService.Navigate<SearchViewModel>();
-                await navigationService.Navigate<NumericalIndexViewModel>();
-                await navigationService.Navigate<SettingsViewModel>();
+                await NavigationService.Navigate<NumberViewModel>();
+                await NavigationService.Navigate<SearchViewModel>();
+                await NavigationService.Navigate<NumericalIndexViewModel>();
+                await NavigationService.Navigate<SettingsViewModel>();
             }
             else if (DeviceInfo.Platform == DevicePlatform.Tizen)
             {
-                await navigationService.Navigate<NumberViewModel>();
-                await navigationService.Navigate<SearchViewModel>();
+                await NavigationService.Navigate<NumberViewModel>();
+                await NavigationService.Navigate<SearchViewModel>();
                 //await navigationService.Navigate<SettingsViewModel>();
             }
             else if (DeviceInfo.Platform == DevicePlatform.UWP)
             {
-                await navigationService.Navigate<NumberViewModel>();
+                await NavigationService.Navigate<NumberViewModel>();
             }
             else
             {
-                await navigationService.Navigate<SimpleViewModel>();
+                await NavigationService.Navigate<SimpleViewModel>();
             }
+
+            base.ViewAppearing();
         }
 
         // LifeCycle implemented in RootViewModel
         #region LifeCycle
         public override void Start()
         {
-            log.Debug("App Started");
+            Log.Debug("App Started");
 
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
                 DeviceInfo.Platform == DevicePlatform.Android)

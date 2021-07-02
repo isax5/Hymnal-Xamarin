@@ -9,12 +9,10 @@ namespace Hymnal.AzureFunctions.Client
     public class HttpClientDiagnosticsHandler : DelegatingHandler
     {
         public HttpClientDiagnosticsHandler(HttpMessageHandler innerHandler) : base(innerHandler)
-        {
-        }
+        { }
 
         public HttpClientDiagnosticsHandler()
-        {
-        }
+        { }
 
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
