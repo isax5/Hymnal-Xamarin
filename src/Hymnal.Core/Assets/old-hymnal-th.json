@@ -1,6 +1,6 @@
 [
   {
-    "number": "1",
+    "number": 1,
     "title": "ข้าฯรักและนับถือพระเยซูคริสต์พระเจ้า",
     "title_en": "My Jesus, I Love Thee",
     "key_signature": "1=F",
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "number": "2",
+    "number": 2,
     "title": "ความรักวิเศษเหนือรักอื่นใด",
     "title_en": "Love Divine",
     "key_signature": "1=Ab",
@@ -58,7 +58,7 @@
     ]
   },
   {
-    "number": "3",
+    "number": 3,
     "title": "จงน้อมถวายมงกุฏ",
     "title_en": "Crown Him with Many Crowns",
     "key_signature": "1=D",
@@ -87,7 +87,7 @@
     ]
   },
   {
-    "number": "4",
+    "number": 4,
     "title": "จงสรรเสริญองค์พระเจ้า",
     "title_en": "To God Be the Glory",
     "key_signature": "1=G",
@@ -116,7 +116,7 @@
     ]
   },
   {
-    "number": "5",
+    "number": 5,
     "title": "จำเริญเทอญพระนาม",
     "title_en": "Blessed Be the Name",
     "key_signature": "1=Ab",
@@ -145,7 +145,7 @@
     ]
   },
   {
-    "number": "6",
+    "number": 6,
     "title": "จะสรรเสริญรักของพระคริสต์",
     "title_en": "I Will Sing of Jesus' Love",
     "key_signature": "1=Bb",
@@ -178,7 +178,7 @@
     ]
   },
   {
-    "number": "7",
+    "number": 7,
     "title": "ใจเอ๋ยจงตื่นขึ้นเถิด",
     "title_en": "Awake, my Soul, in Joyful Lays My Soul",
     "key_signature": "1=G",
@@ -211,7 +211,7 @@
     ]
   },
   {
-    "number": "8",
+    "number": 8,
     "title": "ฉันร้องสรรเสริญเดชาพระเจ้า",
     "title_en": "I Sing the Mighty Power of God",
     "key_signature": "1=C",
@@ -236,7 +236,7 @@
     ]
   },
   {
-    "number": "9",
+    "number": 9,
     "title": "เชิญก้มกราบกษัตริย์",
     "title_en": "O Worship the King",
     "key_signature": "1=G",
@@ -261,7 +261,7 @@
     ]
   },
   {
-    "number": "10",
+    "number": 10,
     "title": "เชิญนมัสการพระเจ้า",
     "title_en": "O Worship the Lord",
     "key_signature": "1=C",
@@ -286,7 +286,7 @@
     ]
   },
   {
-    "number": "11",
+    "number": 11,
     "title": "เชิญมาสรรเสริญพระเจ้า",
     "title_en": "Praise to the Lord",
     "key_signature": "1=F",
@@ -311,7 +311,7 @@
     ]
   },
   {
-    "number": "12",
+    "number": 12,
     "title": "เชิญผู้มีใจผุดผ่อง",
     "title_en": "Rejoice, Ye Pure in Heart!",
     "key_signature": "1=F",
@@ -344,7 +344,7 @@
     ]
   },
   {
-    "number": "13",
+    "number": 13,
     "title": "เชิญองค์กษัตริย์เกรียงไกร",
     "title_en": "Come, Thou Almighty King",
     "key_signature": "1=F",
@@ -369,7 +369,7 @@
     ]
   },
   {
-    "number": "14",
+    "number": 14,
     "title": "นามพระเยซู",
     "title_en": "How Sweet the Name!",
     "key_signature": "1=D",
@@ -398,7 +398,7 @@
     ]
   },
   {
-    "number": "15",
+    "number": 15,
     "title": "เทอดพระองค",
     "title_en": "Lift Him Up",
     "key_signature": "1=Eb",
@@ -431,7 +431,7 @@
     ]
   },
   {
-    "number": "16",
+    "number": 16,
     "title": "ทรงฤทธิ์ ทรงฤทธิ์ ศักดิ์สิทธิ์",
     "title_en": "Holy, Holy, Holy",
     "key_signature": "1=D",
@@ -456,7 +456,7 @@
     ]
   },
   {
-    "number": "17",
+    "number": 17,
     "title": "พระคริสต์กุหลาบซาโรน",
     "title_en": "Jesus, Rose of Sharon",
     "key_signature": "1=E",
@@ -489,7 +489,7 @@
     ]
   },
   {
-    "number": "18",
+    "number": 18,
     "title": "พระเจ้าสถิตที่ไซโอน",
     "title_en": "The Lord in Zion Reigneth",
     "key_signature": "1=D",
@@ -514,7 +514,7 @@
     ]
   },
   {
-    "number": "19",
+    "number": 19,
     "title": "พระเจ้ายิ่งใหญ่",
     "title_en": "How Great Thou Art",
     "key_signature": "1=Bb",
@@ -543,7 +543,7 @@
     ]
   },
   {
-    "number": "20",
+    "number": 20,
     "title": "พระผู้สร้างและราชา",
     "title_en": "My Maker and My King",
     "key_signature": "1=C",
@@ -568,7 +568,7 @@
     ]
   },
   {
-    "number": "21",
+    "number": 21,
     "title": "พระบิดาข้าฯมาเฝ้า",
     "title_en": "Father, We Come to Thee",
     "key_signature": "1=F",
@@ -597,7 +597,7 @@
     ]
   },
   {
-    "number": "22",
+    "number": 22,
     "title": "พระผู้ช่วยที่ประเสริฐ",
     "title_en": "A Wonderful Savior Is Jesus My Lord",
     "key_signature": "1=C",
@@ -630,7 +630,7 @@
     ]
   },
   {
-    "number": "23",
+    "number": 23,
     "title": "พระยะโฮวาทรงครอบครอง",
     "title_en": "The Lord Jehovah Reigns",
     "key_signature": "1=G",
@@ -659,7 +659,7 @@
     ]
   },
   {
-    "number": "24",
+    "number": 24,
     "title": "พระยะโฮวาโปรดนำข้าฯเจ้า",
     "title_en": "Guide Me, O Thou Great Jehovah",
     "key_signature": "1=G",
@@ -684,7 +684,7 @@
     ]
   },
   {
-    "number": "25",
+    "number": 25,
     "title": "พระเยซูผู้งามเลิศ",
     "title_en": "Fairest Lord Jesus",
     "key_signature": "1=Eb",
@@ -709,7 +709,7 @@
     ]
   },
   {
-    "number": "26",
+    "number": 26,
     "title": "แพทย์ผู้ทรงฤทธิ์",
     "title_en": "The Great Physician Now Is Near",
     "key_signature": "1=Db",
@@ -742,7 +742,7 @@
     ]
   },
   {
-    "number": "27",
+    "number": 27,
     "title": "มีน้ำพุกอปรด้วยพระโลหิต",
     "title_en": "There is a Fountain",
     "key_signature": "1=Bb",
@@ -771,7 +771,7 @@
     ]
   },
   {
-    "number": "28",
+    "number": 28,
     "title": "เมื่อข้าฯนึกถึงพระเยซูท่าน",
     "title_en": "Jesus, the Very Thought of Thee",
     "key_signature": "1=G",
@@ -800,7 +800,7 @@
     ]
   },
   {
-    "number": "29",
+    "number": 29,
     "title": "พระคริสต์เป็นผู้ช่วยล้ำเลิศของฉัน",
     "title_en": "He's a Wonderful Saviour",
     "key_signature": "1=Eb",
@@ -817,7 +817,7 @@
     ]
   },
   {
-    "number": "30",
+    "number": 30,
     "title": "เราชุมนุมพร้อมกัน",
     "title_en": "We Gather Together",
     "key_signature": "1=C",
@@ -842,7 +842,7 @@
     ]
   },
   {
-    "number": "31",
+    "number": 31,
     "title": "โลกนี้ของพระบิดา",
     "title_en": "This is My Father's World",
     "key_signature": "1=D",
@@ -867,7 +867,7 @@
     ]
   },
   {
-    "number": "32",
+    "number": 32,
     "title": "สาธุนามฤทธิ์พระเยซูคริสต์",
     "title_en": "All Hail the Power of Jesus' Name",
     "key_signature": "1=F",
@@ -892,7 +892,7 @@
     ]
   },
   {
-    "number": "33",
+    "number": 33,
     "title": "สรรเสริญพระเยซู",
     "title_en": "Praise Him! Praise Him!",
     "key_signature": "1=G",
@@ -921,7 +921,7 @@
     ]
   },
   {
-    "number": "34",
+    "number": 34,
     "title": "สรรเสริญพระบิดา",
     "title_en": "Praise Ye the Father",
     "key_signature": "1=Ab",
@@ -946,7 +946,7 @@
     ]
   },
   {
-    "number": "35",
+    "number": 35,
     "title": "หน้าบัลลังก์พระยะโฮวา",
     "title_en": "Before Jehovah's Awful Throne",
     "key_signature": "1=D",
@@ -975,7 +975,7 @@
     ]
   },
   {
-    "number": "36",
+    "number": 36,
     "title": "อัศจรรย์ท่านเป็นผู้ช่วย",
     "title_en": "What a Wonderful Savior",
     "key_signature": "1=D",
@@ -1008,7 +1008,7 @@
     ]
   },
   {
-    "number": "37",
+    "number": 37,
     "title": "อัศจรรย์อันยิ่งใหญ่",
     "title_en": "It Took a Miracle",
     "key_signature": "1=G",
@@ -1037,7 +1037,7 @@
     ]
   },
   {
-    "number": "38",
+    "number": 38,
     "title": "โอ้ นำเถิดพระเจ้าชั่วนิรันดร์",
     "title_en": "Lead On, O King Eternal",
     "key_signature": "1=C",
@@ -1062,7 +1062,7 @@
     ]
   },
   {
-    "number": "39",
+    "number": 39,
     "title": "โอ้พระผู้เป็นความสุขแห่งจิต",
     "title_en": "Jesus, Thou Joy of Loving Hearts",
     "key_signature": "1=G",
@@ -1095,7 +1095,7 @@
     ]
   },
   {
-    "number": "40",
+    "number": 40,
     "title": "รัศมีภาพจงมีแด่พระบิดา",
     "title_en": "Glory Be to the Father",
     "key_signature": "1=Eb",
@@ -1112,7 +1112,7 @@
     ]
   },
   {
-    "number": "41",
+    "number": 41,
     "title": "ใคร่เห็นพระเยซู",
     "title_en": "We Would See Jesus",
     "key_signature": "1=Eb",
@@ -1141,7 +1141,7 @@
     ]
   },
   {
-    "number": "42",
+    "number": 42,
     "title": "โอ้พระเราเฝ้าต่อพักตร์ท่าน",
     "title_en": "Lord, We Come Before Thee Now",
     "key_signature": "1=G",
@@ -1166,7 +1166,7 @@
     ]
   },
   {
-    "number": "43",
+    "number": 43,
     "title": "ขอให้พระอยู่ด้วยจนพบกันอีก",
     "title_en": "God Be with You 'Til We Meet Again",
     "key_signature": "1=Bb",
@@ -1199,7 +1199,7 @@
     ]
   },
   {
-    "number": "44",
+    "number": 44,
     "title": "เมื่อข้าฯทูลลาขอพระอวยพร",
     "title_en": "Lord, Dismiss Us with Thy Blessing",
     "key_signature": "1=Db",
@@ -1224,7 +1224,7 @@
     ]
   },
   {
-    "number": "45",
+    "number": 45,
     "title": "ตื่นเถิดจิตเอ๋ย",
     "title_en": "Awake, My Soul",
     "key_signature": "1=F",
@@ -1253,7 +1253,7 @@
     ]
   },
   {
-    "number": "46",
+    "number": 46,
     "title": "ยามรุ่งอรุณโปรดฟังสำเนียง",
     "title_en": "Lord, in the Morning",
     "key_signature": "1=F",
@@ -1282,7 +1282,7 @@
     ]
   },
   {
-    "number": "47",
+    "number": 47,
     "title": "ขอพระเมตตาทรงสถิตอยู่ด้วยข้าฯ",
     "title_en": "Abide With Me",
     "key_signature": "1=Eb",
@@ -1311,7 +1311,7 @@
     ]
   },
   {
-    "number": "48",
+    "number": 48,
     "title": "ทิวาจะลาลับไป",
     "title_en": "Now the Day Is Over",
     "key_signature": "1=A",
@@ -1336,7 +1336,7 @@
     ]
   },
   {
-    "number": "49",
+    "number": 49,
     "title": "โอ้ผู้ช่วยเย็นนี้อวยพรศิษย์",
     "title_en": "Savior, Breathe an Evening Blessing",
     "key_signature": "1=Ab",
@@ -1365,7 +1365,7 @@
     ]
   },
   {
-    "number": "50",
+    "number": 50,
     "title": "อาทิตย์อัสดงค์",
     "title_en": "Day Is Dying in the West",
     "key_signature": "1=G",
@@ -1394,7 +1394,7 @@
     ]
   },
   {
-    "number": "51",
+    "number": 51,
     "title": "กุมารแห่งความหวังบังเกิดมา",
     "title_en": "To Us a Child of Hope Is Born",
     "key_signature": "1=C",
@@ -1419,7 +1419,7 @@
     ]
   },
   {
-    "number": "52",
+    "number": 52,
     "title": "ขอเชิญท่านผู้วางใจ",
     "title_en": "O Come, All Ye Faithful",
     "key_signature": "1=G",
@@ -1448,7 +1448,7 @@
     ]
   },
   {
-    "number": "53",
+    "number": 53,
     "title": "จงฟังเพลงเหล่าทูตสวรรค์",
     "title_en": "Hark! The Herald Angels Sing",
     "key_signature": "1=F",
@@ -1473,7 +1473,7 @@
     ]
   },
   {
-    "number": "54",
+    "number": 54,
     "title": "ทูตสวรรค์จากวิมานฟ้า",
     "title_en": "Angels From the Realms of Glory",
     "key_signature": "1=Bb",
@@ -1506,7 +1506,7 @@
     ]
   },
   {
-    "number": "55",
+    "number": 55,
     "title": "พระตามหาฉัน",
     "title_en": "Seeking For Me",
     "key_signature": "1=G",
@@ -1531,7 +1531,7 @@
     ]
   },
   {
-    "number": "56",
+    "number": 56,
     "title": "มีเสียงเพลงในอากาศ",
     "title_en": "There's a Song in the Air",
     "key_signature": "1=G",
@@ -1556,7 +1556,7 @@
     ]
   },
   {
-    "number": "57",
+    "number": 57,
     "title": "ร้องเพลงชื่นชมหรรษา",
     "title_en": "Joy to the World",
     "key_signature": "1=C",
@@ -1581,7 +1581,7 @@
     ]
   },
   {
-    "number": "58",
+    "number": 58,
     "title": "ราตรีวิสุทธิ์",
     "title_en": "O Holy Night",
     "key_signature": "1=C",
@@ -1610,7 +1610,7 @@
     ]
   },
   {
-    "number": "59",
+    "number": 59,
     "title": "ราตรีสงัดอันบริสุทธิ์",
     "title_en": "Silent Night, Holy Night",
     "key_signature": "1=Bb",
@@ -1639,7 +1639,7 @@
     ]
   },
   {
-    "number": "60",
+    "number": 60,
     "title": "เราทั้งสามคือจอมกษัตรา",
     "title_en": "We Three Kings",
     "key_signature": "1=G",
@@ -1676,7 +1676,7 @@
     ]
   },
   {
-    "number": "61",
+    "number": 61,
     "title": "โอ้หมู่บ้านน้อยแห่งเบ็ธเลเฮ็ม",
     "title_en": "O Little Town of Bethlehem",
     "key_signature": "1=F",
@@ -1705,7 +1705,7 @@
     ]
   },
   {
-    "number": "62",
+    "number": 62,
     "title": "แกะน้อยหลงหาย",
     "title_en": "That One Lost Sheep",
     "key_signature": "1=Ab",
@@ -1734,7 +1734,7 @@
     ]
   },
   {
-    "number": "63",
+    "number": 63,
     "title": "ข้าฯพึ่งพระทุกชั่วโมง",
     "title_en": "I Need Thee Every Hour",
     "key_signature": "1=F",
@@ -1767,7 +1767,7 @@
     ]
   },
   {
-    "number": "64",
+    "number": 64,
     "title": "ข้าฯไม่เคยเดินผู้เดียว",
     "title_en": "I Never Walk Alone",
     "key_signature": "1=Ab",
@@ -1792,7 +1792,7 @@
     ]
   },
   {
-    "number": "65",
+    "number": 65,
     "title": "ข้าฯแสนยินดี",
     "title_en": "I Am So Glad",
     "key_signature": "1=G",
@@ -1821,7 +1821,7 @@
     ]
   },
   {
-    "number": "66",
+    "number": 66,
     "title": "ฉันจะร้องเพลงเรื่องพระเยซู",
     "title_en": "The Wondrous Story",
     "key_signature": "1=G",
@@ -1850,7 +1850,7 @@
     ]
   },
   {
-    "number": "67",
+    "number": 67,
     "title": "ความรักของพระ",
     "title_en": "The Love of God",
     "key_signature": "1=Eb",
@@ -1879,7 +1879,7 @@
     ]
   },
   {
-    "number": "68",
+    "number": 68,
     "title": "พระเจ้าเป็นความรักประจักษ์ในพระเยซู",
     "title_en": "God Is Love Revealed In the Lord Jesus",
     "key_signature": "1=C",
@@ -1900,7 +1900,7 @@
     ]
   },
   {
-    "number": "69",
+    "number": 69,
     "title": "ฉันจึงรักพระมากมาย",
     "title_en": "That’s Why I Love Him",
     "key_signature": "1=C",
@@ -1929,7 +1929,7 @@
     ]
   },
   {
-    "number": "70",
+    "number": 70,
     "title": "ฉันต้องการพระคริสต์ผู้ล้ำเลิศ",
     "title_en": "I Need Thee, Precious Jesus",
     "key_signature": "1=F",
@@ -1954,7 +1954,7 @@
     ]
   },
   {
-    "number": "71",
+    "number": 71,
     "title": "ฉันพบสหาย",
     "title_en": "I've Found a Friend",
     "key_signature": "1=Ab",
@@ -1983,7 +1983,7 @@
     ]
   },
   {
-    "number": "72",
+    "number": 72,
     "title": "ฉันมาในสวนอันสวยสล้าง",
     "title_en": "In the Garden",
     "key_signature": "1=Ab",
@@ -2012,7 +2012,7 @@
     ]
   },
   {
-    "number": "73",
+    "number": 73,
     "title": "ฉันสรรเสริญเมื่อเดินทางไป",
     "title_en": "Singing I Go",
     "key_signature": "1=G",
@@ -2045,7 +2045,7 @@
     ]
   },
   {
-    "number": "74",
+    "number": 74,
     "title": "ตั้งแต่พระคริสต์มาในใจฉัน",
     "title_en": "Since Jesus Came into My Heart",
     "key_signature": "1=Ab",
@@ -2078,7 +2078,7 @@
     ]
   },
   {
-    "number": "75",
+    "number": 75,
     "title": "ถ้าท่านได้รู้",
     "title_en": "If You Could Know",
     "key_signature": "1=Eb",
@@ -2107,7 +2107,7 @@
     ]
   },
   {
-    "number": "76",
+    "number": 76,
     "title": "ในพระทัยพระเยซ",
     "title_en": "In the Heart of Jesus",
     "key_signature": "1=G",
@@ -2132,7 +2132,7 @@
     ]
   },
   {
-    "number": "77",
+    "number": 77,
     "title": "โปรดบอกฉันถึงเรื่องก่อนเก่า",
     "title_en": "Tell Me the Old, Old Story",
     "key_signature": "1=C",
@@ -2161,7 +2161,7 @@
     ]
   },
   {
-    "number": "78",
+    "number": 78,
     "title": "พระเข้าพระทัย",
     "title_en": "God Understands",
     "key_signature": "1=Eb",
@@ -2190,7 +2190,7 @@
     ]
   },
   {
-    "number": "79",
+    "number": 79,
     "title": "พระทรงพิทักษ์นกกระจอกน้อย",
     "title_en": "His Eye Is on the Sparrow",
     "key_signature": "1=C",
@@ -2219,7 +2219,7 @@
     ]
   },
   {
-    "number": "80",
+    "number": 80,
     "title": "พระคุณของพระประเสริฐ",
     "title_en": "Amazing Grace",
     "key_signature": "1=F",
@@ -2252,7 +2252,7 @@
     ]
   },
   {
-    "number": "81",
+    "number": 81,
     "title": "พระทรงเลี้ยงดูฉัน",
     "title_en": "The Lord's My Shepherd",
     "key_signature": "1=F",
@@ -2285,7 +2285,7 @@
     ]
   },
   {
-    "number": "82",
+    "number": 82,
     "title": "ผู้ช่วยทรงรักจนวายพระชนม์เพื่อข้า",
     "title_en": "Saviour! Thy Dying Love",
     "key_signature": "1=F",
@@ -2314,7 +2314,7 @@
     ]
   },
   {
-    "number": "83",
+    "number": 83,
     "title": "พระเยซูผู้เป็นสหายเรา",
     "title_en": "What a Friend We Have in Jesus",
     "key_signature": "1=F",
@@ -2339,7 +2339,7 @@
     ]
   },
   {
-    "number": "84",
+    "number": 84,
     "title": "พระเยซูพาไปสู่แห่งใดภัยไม่มี",
     "title_en": "Anywhere With Jesus",
     "key_signature": "1=D",
@@ -2368,7 +2368,7 @@
     ]
   },
   {
-    "number": "85",
+    "number": 85,
     "title": "พระองค์ทรงนำ",
     "title_en": "He Leadeth Me",
     "key_signature": "1=C",
@@ -2401,7 +2401,7 @@
     ]
   },
   {
-    "number": "86",
+    "number": 86,
     "title": "เพียงเมื่อข้าฯต้องการพระ",
     "title_en": "Just When I Need Him",
     "key_signature": "1=Db",
@@ -2430,7 +2430,7 @@
     ]
   },
   {
-    "number": "87",
+    "number": 87,
     "title": "พึ่งพิงอิงอยู่บนพระหัตถ์เดชา",
     "title_en": "Leaning on the Everlasting Arms",
     "key_signature": "1=Ab",
@@ -2459,7 +2459,7 @@
     ]
   },
   {
-    "number": "88",
+    "number": 88,
     "title": "พระทรงมีพระเมตตาใหญ่หลวง",
     "title_en": "There’s a Wideness",
     "key_signature": "1=Bb",
@@ -2488,7 +2488,7 @@
     ]
   },
   {
-    "number": "89",
+    "number": 89,
     "title": "มีแกะเก้าสิบเก้า",
     "title_en": "There Were Ninety and Nine",
     "key_signature": "1=G",
@@ -2521,7 +2521,7 @@
     ]
   },
   {
-    "number": "90",
+    "number": 90,
     "title": "ไม่มีใคร",
     "title_en": "No, Not One!",
     "key_signature": "1=F",
@@ -2554,7 +2554,7 @@
     ]
   },
   {
-    "number": "91",
+    "number": 91,
     "title": "รักอันยิ่งใหญ่ไพศาล",
     "title_en": "It’s Just Like His Great Love",
     "key_signature": "1=Bb",
@@ -2587,7 +2587,7 @@
     ]
   },
   {
-    "number": "92",
+    "number": 92,
     "title": "ไยพระรักข้าฯปานนั้น",
     "title_en": "Why Should He Love Me So?",
     "key_signature": "1=C",
@@ -2616,7 +2616,7 @@
     ]
   },
   {
-    "number": "93",
+    "number": 93,
     "title": "เราจะนำร่องท่าน",
     "title_en": "I Will Pilot Thee",
     "key_signature": "1=Ab",
@@ -2649,7 +2649,7 @@
     ]
   },
   {
-    "number": "94",
+    "number": 94,
     "title": "เรายอมถูกตรึงเพื่อท่าน",
     "title_en": "I Gave My Life for Thee",
     "key_signature": "1=Ab",
@@ -2674,7 +2674,7 @@
     ]
   },
   {
-    "number": "95",
+    "number": 95,
     "title": "รุ่งแห่งความรัก",
     "title_en": "Love’s Rainbow",
     "key_signature": "1=D",
@@ -2703,7 +2703,7 @@
     ]
   },
   {
-    "number": "96",
+    "number": 96,
     "title": "โอความรักที่ไม่ปล่อยข้าฯไป",
     "title_en": "O Love That Wilt Not Let Me Go",
     "key_signature": "1=G",
@@ -2732,7 +2732,7 @@
     ]
   },
   {
-    "number": "97",
+    "number": 97,
     "title": "โอ้ พระทรงห่วง",
     "title_en": "Does Jesus Care?",
     "key_signature": "1=C",
@@ -2761,7 +2761,7 @@
     ]
   },
   {
-    "number": "98",
+    "number": 98,
     "title": "โอ้สหายวิเศษคือพระเยซู",
     "title_en": "Oh, the Best Friend to Have Is Jesus",
     "key_signature": "1=G",
@@ -2794,7 +2794,7 @@
     ]
   },
   {
-    "number": "99",
+    "number": 99,
     "title": "พระเจ้าข้าฯขอตามไป",
     "title_en": "O Master, Let Me Walk with Thee",
     "key_signature": "1=Db",
@@ -2823,7 +2823,7 @@
     ]
   },
   {
-    "number": "100",
+    "number": 100,
     "title": "ข้าฯเดินทางกลับบ้าน",
     "title_en": "I'm on My Way Home",
     "key_signature": "1=G",
@@ -2840,7 +2840,7 @@
     ]
   },
   {
-    "number": "101",
+    "number": 101,
     "title": "ข้าฯชื่นใจอยู่ใต้กางเขน",
     "title_en": "In the Cross of Christ I Glory",
     "key_signature": "1=Bb",
@@ -2869,7 +2869,7 @@
     ]
   },
   {
-    "number": "102",
+    "number": 102,
     "title": "เมื่อข้าฯมองดูกางเขนประหลาด",
     "title_en": "When I Survey the Wondrous Cross",
     "key_signature": "1=D",
@@ -2898,7 +2898,7 @@
     ]
   },
   {
-    "number": "103",
+    "number": 103,
     "title": "จงแบกกางเขนเดินตามเรามา",
     "title_en": "Take Up Thy Cross",
     "key_signature": "1=F",
@@ -2931,7 +2931,7 @@
     ]
   },
   {
-    "number": "104",
+    "number": 104,
     "title": "จงมองไปจะได้ชีวิต",
     "title_en": "Life in a Look",
     "key_signature": "1=Eb",
@@ -2960,7 +2960,7 @@
     ]
   },
   {
-    "number": "105",
+    "number": 105,
     "title": "หันหาพระคริสต์",
     "title_en": "Turn Your Eyes Upon Jesus",
     "key_signature": "1=F",
@@ -2977,7 +2977,7 @@
     ]
   },
   {
-    "number": "106",
+    "number": 106,
     "title": "เดียวดาย",
     "title_en": "It Was Alone",
     "key_signature": "1=F",
@@ -3010,7 +3010,7 @@
     ]
   },
   {
-    "number": "107",
+    "number": 107,
     "title": "ทางกางเขนเป็นทางกลับบ้าน",
     "title_en": "The Way of the Cross Leads Home",
     "key_signature": "1=Ab",
@@ -3039,7 +3039,7 @@
     ]
   },
   {
-    "number": "108",
+    "number": 108,
     "title": "ที่กางเขน",
     "title_en": "At the Cross",
     "key_signature": "1=Eb",
@@ -3068,7 +3068,7 @@
     ]
   },
   {
-    "number": "109",
+    "number": 109,
     "title": "นำฉันไปคาล์วารี",
     "title_en": "Lead Me to Calvary",
     "key_signature": "1=Db",
@@ -3101,7 +3101,7 @@
     ]
   },
   {
-    "number": "110",
+    "number": 110,
     "title": "บนเนินเขาสุดแสนไกล",
     "title_en": "The Old Rugged Cross",
     "key_signature": "1=Ab",
@@ -3130,7 +3130,7 @@
     ]
   },
   {
-    "number": "111",
+    "number": 111,
     "title": "พระกายฟกช้ำ",
     "title_en": "Bread of the World",
     "key_signature": "1=Eb",
@@ -3151,7 +3151,7 @@
     ]
   },
   {
-    "number": "112",
+    "number": 112,
     "title": "ที่กางเขน",
     "title_en": "Near the Cross",
     "key_signature": "1=F",
@@ -3184,7 +3184,7 @@
     ]
   },
   {
-    "number": "113",
+    "number": 113,
     "title": "ภายใต้กางเขนพระเยซู",
     "title_en": "Beneath the Cross of Jesus",
     "key_signature": "1=Db",
@@ -3209,7 +3209,7 @@
     ]
   },
   {
-    "number": "114",
+    "number": 114,
     "title": "ฉันชอบร้องเพลงแสนรักสุดใจ",
     "title_en": "I Have a Song I Love to Sing",
     "key_signature": "1=G",
@@ -3242,7 +3242,7 @@
     ]
   },
   {
-    "number": "115",
+    "number": 115,
     "title": "ฉันรักที่จะประกาศถึงความรอด",
     "title_en": "Redeemed! How I Love to Proclaim It!",
     "key_signature": "1=A",
@@ -3271,7 +3271,7 @@
     ]
   },
   {
-    "number": "116",
+    "number": 116,
     "title": "มีแต่โลหิตของพระเยซู",
     "title_en": "Nothing But the Blood",
     "key_signature": "1=G",
@@ -3308,7 +3308,7 @@
     ]
   },
   {
-    "number": "117",
+    "number": 117,
     "title": "พระคริสต์เป็นของฉัน",
     "title_en": "Blessed Assurance, Jesus Is Mine!",
     "key_signature": "1=Db",
@@ -3337,7 +3337,7 @@
     ]
   },
   {
-    "number": "118",
+    "number": 118,
     "title": "พระเป็นมหาศิลา",
     "title_en": "Rock of Ages",
     "key_signature": "1=Bb",
@@ -3362,7 +3362,7 @@
     ]
   },
   {
-    "number": "119",
+    "number": 119,
     "title": "พระเป็นแสงสว่าง",
     "title_en": "The Lord is My Light",
     "key_signature": "1=G",
@@ -3391,7 +3391,7 @@
     ]
   },
   {
-    "number": "120",
+    "number": 120,
     "title": "พระเยซูเมตตา",
     "title_en": "Jesus Paid it All",
     "key_signature": "1=D",
@@ -3424,7 +3424,7 @@
     ]
   },
   {
-    "number": "121",
+    "number": 121,
     "title": "มีฤทธิ์ยิ่งใหญ่ในพระโลหิต",
     "title_en": "Power in the Blood",
     "key_signature": "1=Bb",
@@ -3453,7 +3453,7 @@
     ]
   },
   {
-    "number": "122",
+    "number": 122,
     "title": "แม้บาปของท่านจะแดงก่ำ",
     "title_en": "Though Your Sins Be As Scarlet",
     "key_signature": "1=Ab",
@@ -3478,7 +3478,7 @@
     ]
   },
   {
-    "number": "123",
+    "number": 123,
     "title": "เราสดับข่าวอันหรรษา",
     "title_en": "Jesus Saves",
     "key_signature": "1=F",
@@ -3507,7 +3507,7 @@
     ]
   },
   {
-    "number": "124",
+    "number": 124,
     "title": "ฟื้นพระชนม์",
     "title_en": "Christ Arose",
     "key_signature": "1=Bb",
@@ -3536,7 +3536,7 @@
     ]
   },
   {
-    "number": "125",
+    "number": 125,
     "title": "พระคริสต์ฟื้นพระชนม์วันนี้",
     "title_en": "Christ the Lord Is Risen Today",
     "key_signature": "1=C",
@@ -3565,7 +3565,7 @@
     ]
   },
   {
-    "number": "126",
+    "number": 126,
     "title": "ข้าฯจะเห็นราชา",
     "title_en": "I Shall See the King",
     "key_signature": "1=Ab",
@@ -3594,7 +3594,7 @@
     ]
   },
   {
-    "number": "127",
+    "number": 127,
     "title": "คนยามจงบอกฉัน",
     "title_en": "Watchman Tell Me",
     "key_signature": "1=G",
@@ -3619,7 +3619,7 @@
     ]
   },
   {
-    "number": "128",
+    "number": 128,
     "title": "จงบอกข่าวให้พี่น้องทั้งปวงรู้",
     "title_en": "Hail Him the King of Glory",
     "key_signature": "1=Ab",
@@ -3648,7 +3648,7 @@
     ]
   },
   {
-    "number": "129",
+    "number": 129,
     "title": "จงคอยเฝ้า",
     "title_en": "Watch, Ye Saints",
     "key_signature": "1=C",
@@ -3677,7 +3677,7 @@
     ]
   },
   {
-    "number": "130",
+    "number": 130,
     "title": "จวนเวลากลับบ้าน",
     "title_en": "In a Little While We're Going Home",
     "key_signature": "1=Eb",
@@ -3706,7 +3706,7 @@
     ]
   },
   {
-    "number": "131",
+    "number": 131,
     "title": "จวนเวลาพระเจ้าจะเสด็จมา",
     "title_en": "‘Tis Almost Time for the Lord to Come",
     "key_signature": "1=Db",
@@ -3735,7 +3735,7 @@
     ]
   },
   {
-    "number": "132",
+    "number": 132,
     "title": "ฉันใคร่อยู่กับพระเยซู",
     "title_en": "Longing",
     "key_signature": "1=F",
@@ -3768,7 +3768,7 @@
     ]
   },
   {
-    "number": "133",
+    "number": 133,
     "title": "ฉันรู้ว่าฉันจะเห็นพระองค์",
     "title_en": "I Know I’ll See Jesus Someday",
     "key_signature": "1=Db",
@@ -3797,7 +3797,7 @@
     ]
   },
   {
-    "number": "134",
+    "number": 134,
     "title": "ถึงยามเก็บเกี่ยวข้าวเราหรรษา",
     "title_en": "In the Glad Time of the Harvest",
     "key_signature": "1=A",
@@ -3822,7 +3822,7 @@
     ]
   },
   {
-    "number": "135",
+    "number": 135,
     "title": "พระเสด็จมาที่ประตู",
     "title_en": "The Coming King Is at the Door",
     "key_signature": "1=G",
@@ -3851,7 +3851,7 @@
     ]
   },
   {
-    "number": "136",
+    "number": 136,
     "title": "พี่น้องจงสัตย์ซื่อ",
     "title_en": "O Brother, Be Faithful",
     "key_signature": "1=G",
@@ -3880,7 +3880,7 @@
     ]
   },
   {
-    "number": "137",
+    "number": 137,
     "title": "พระเยซูเสด็จกลับมา",
     "title_en": "Jesus Is Coming Again",
     "key_signature": "1=A",
@@ -3913,7 +3913,7 @@
     ]
   },
   {
-    "number": "138",
+    "number": 138,
     "title": "เมื่อเฝ้าตรงพระพักตร์พระเยซู",
     "title_en": "Face to Face with Christ",
     "key_signature": "1=Bb",
@@ -3946,7 +3946,7 @@
     ]
   },
   {
-    "number": "139",
+    "number": 139,
     "title": "เมื่อพระเยซูทรงรวบรวมชนทั้งหลาย",
     "title_en": "When Jesus Shall Gather the Nations",
     "key_signature": "1=F",
@@ -3979,7 +3979,7 @@
     ]
   },
   {
-    "number": "140",
+    "number": 140,
     "title": "เมื่อพระเยซูเสด็จมาท่านพร้อมแล้วหรือ",
     "title_en": "Are You Ready for Jesus to Come?",
     "key_signature": "1=F",
@@ -4004,7 +4004,7 @@
     ]
   },
   {
-    "number": "141",
+    "number": 141,
     "title": "เมื่อพระองค์ทรงมารับเรา",
     "title_en": "In the Glad Time of the Harvest",
     "key_signature": "1=A",
@@ -4029,7 +4029,7 @@
     ]
   },
   {
-    "number": "142",
+    "number": 142,
     "title": "เมื่อพระองค์ทรงเรียกในสวรรค์",
     "title_en": "When the Roll Is Called Up Yonder",
     "key_signature": "1=G",
@@ -4058,7 +4058,7 @@
     ]
   },
   {
-    "number": "143",
+    "number": 143,
     "title": "ไม่มีหว่างเขามืดเมื่อพระเยซูมา",
     "title_en": "There'll Be No Dark Valley",
     "key_signature": "1=Eb",
@@ -4091,7 +4091,7 @@
     ]
   },
   {
-    "number": "144",
+    "number": 144,
     "title": "เราไม่ทราบเวลา",
     "title_en": "We Know Not the Hour",
     "key_signature": "1=Bb",
@@ -4120,7 +4120,7 @@
     ]
   },
   {
-    "number": "145",
+    "number": 145,
     "title": "พระเยซูกำลังเสด็จมา",
     "title_en": "Christ Is Coming",
     "key_signature": "1=Ab",
@@ -4149,7 +4149,7 @@
     ]
   },
   {
-    "number": "146",
+    "number": 146,
     "title": "รัศมีแห่งการเสด็จมา",
     "title_en": "Advent Glory",
     "key_signature": "1=Ab",
@@ -4178,7 +4178,7 @@
     ]
   },
   {
-    "number": "147",
+    "number": 147,
     "title": "สรรเสริญกษัตริย์แห่งราศี",
     "title_en": "Hail Him the King of Glory",
     "key_signature": "1=Ab",
@@ -4207,7 +4207,7 @@
     ]
   },
   {
-    "number": "148",
+    "number": 148,
     "title": "วันสำคัญกำลังมา",
     "title_en": "There’s a Great Day Coming",
     "key_signature": "1=G",
@@ -4236,7 +4236,7 @@
     ]
   },
   {
-    "number": "149",
+    "number": 149,
     "title": "อาจเป็นรุ่งอรุณ",
     "title_en": "It May Be at Morn",
     "key_signature": "1=C",
@@ -4265,7 +4265,7 @@
     ]
   },
   {
-    "number": "150",
+    "number": 150,
     "title": "จงอย่ายอมสิ่งทดลอง",
     "title_en": "Yield Not to Temptation",
     "key_signature": "1=Bb",
@@ -4294,7 +4294,7 @@
     ]
   },
   {
-    "number": "151",
+    "number": 151,
     "title": "จะได้พระพรดังสายฝนแน่",
     "title_en": "Showers of Blessing",
     "key_signature": "1=Ab",
@@ -4327,7 +4327,7 @@
     ]
   },
   {
-    "number": "152",
+    "number": 152,
     "title": "โปรดให้บัพติศมา",
     "title_en": "Baptize Us Anew",
     "key_signature": "1=G",
@@ -4364,7 +4364,7 @@
     ]
   },
   {
-    "number": "153",
+    "number": 153,
     "title": "โปรดฟื้นฟูใจเรา",
     "title_en": "Revive Us Again",
     "key_signature": "1=G",
@@ -4397,7 +4397,7 @@
     ]
   },
   {
-    "number": "154",
+    "number": 154,
     "title": "พระวิญญาณขอเติมให้เต็มดวงใจข้าฯ",
     "title_en": "Hover O’er Me, Holy Spirit",
     "key_signature": "1=F",
@@ -4430,7 +4430,7 @@
     ]
   },
   {
-    "number": "155",
+    "number": 155,
     "title": "พระวิญญาณบริสุทธิ์",
     "title_en": "Holy Spirit, Light Divine",
     "key_signature": "1=Ab",
@@ -4459,7 +4459,7 @@
     ]
   },
   {
-    "number": "156",
+    "number": 156,
     "title": "พระวิญญาณของพระทรงชนม์",
     "title_en": "Spirit of the Living God",
     "key_signature": "1=F",
@@ -4476,7 +4476,7 @@
     ]
   },
   {
-    "number": "157",
+    "number": 157,
     "title": "พระวิญญาณบริสุทธิ์ทรงนำ",
     "title_en": "Holy Spirit, Faithful Guide",
     "key_signature": "1=G",
@@ -4501,7 +4501,7 @@
     ]
   },
   {
-    "number": "158",
+    "number": 158,
     "title": "ธรรมประเสริฐแห่งชีวี",
     "title_en": "Wonderful Words of Life",
     "key_signature": "1=F",
@@ -4530,7 +4530,7 @@
     ]
   },
   {
-    "number": "159",
+    "number": 159,
     "title": "ข้าฯขอพระคัมภีร์",
     "title_en": "Give Me the Bible",
     "key_signature": "1=G",
@@ -4559,7 +4559,7 @@
     ]
   },
   {
-    "number": "160",
+    "number": 160,
     "title": "สง่าราศีแห่งพระคำ",
     "title_en": "A Glory in the Word We Find",
     "key_signature": "1=Ab",
@@ -4588,7 +4588,7 @@
     ]
   },
   {
-    "number": "161",
+    "number": 161,
     "title": "โปรดประทานทิพย์อาหาร",
     "title_en": "Break Thou the Bread of Life",
     "key_signature": "1=D",
@@ -4613,7 +4613,7 @@
     ]
   },
   {
-    "number": "162",
+    "number": 162,
     "title": "เทิดทูนพระนามพระเยซูไว้",
     "title_en": "Take the Name of Jesus with You",
     "key_signature": "1=Ab",
@@ -4646,7 +4646,7 @@
     ]
   },
   {
-    "number": "163",
+    "number": 163,
     "title": "ยืนกล้าหาญหึก",
     "title_en": "Stand Like the Brave",
     "key_signature": "1=G",
@@ -4679,7 +4679,7 @@
     ]
   },
   {
-    "number": "164",
+    "number": 164,
     "title": "ลุกขึ้นเพื่อพระเยซู",
     "title_en": "Stand Up! Stand Up for Jesus!",
     "key_signature": "1=Ab",
@@ -4704,7 +4704,7 @@
     ]
   },
   {
-    "number": "165",
+    "number": 165,
     "title": "ส่องแสงในมุมที่ท่านอาศัย",
     "title_en": "Brighten the Corner Where You Are",
     "key_signature": "1=Eb",
@@ -4733,7 +4733,7 @@
     ]
   },
   {
-    "number": "166",
+    "number": 166,
     "title": "ผู้เชื่อพระเยซูจะมั่นคงไม่เสื่อมคลาย",
     "title_en": "How Firm a Foundation",
     "key_signature": "1=G",
@@ -4762,7 +4762,7 @@
     ]
   },
   {
-    "number": "167",
+    "number": 167,
     "title": "พระเยซูนำทางแห่งชีวี",
     "title_en": "All the Way",
     "key_signature": "1=G",
@@ -4787,7 +4787,7 @@
     ]
   },
   {
-    "number": "168",
+    "number": 168,
     "title": "พระเยซูผู้นำชีวี",
     "title_en": "Jesus, Savior, Pilot Me",
     "key_signature": "1=Ab",
@@ -4812,7 +4812,7 @@
     ]
   },
   {
-    "number": "169",
+    "number": 169,
     "title": "พระเยซูรักวิญญาณข้าฯ",
     "title_en": "Jesus, Lover of My Soul",
     "key_signature": "1=Eb",
@@ -4841,7 +4841,7 @@
     ]
   },
   {
-    "number": "170",
+    "number": 170,
     "title": "อยู่ใกล้ดวงจิตพระเจ้า",
     "title_en": "Near to the Heart of God",
     "key_signature": "1=Db",
@@ -4870,7 +4870,7 @@
     ]
   },
   {
-    "number": "171",
+    "number": 171,
     "title": "ขอเป็นตามพระทัย",
     "title_en": "Have Thine Own Way, Lord",
     "key_signature": "1=Eb",
@@ -4899,7 +4899,7 @@
     ]
   },
   {
-    "number": "172",
+    "number": 172,
     "title": "ข้าฯขอตามพระผู้ช่วยชีวี",
     "title_en": "I Will Follow Thee",
     "key_signature": "1=Ab",
@@ -4928,7 +4928,7 @@
     ]
   },
   {
-    "number": "173",
+    "number": 173,
     "title": "ข้าฯขอถวายคำสัญญา",
     "title_en": "O Jesus, I Have Promised",
     "key_signature": "1=F",
@@ -4953,7 +4953,7 @@
     ]
   },
   {
-    "number": "174",
+    "number": 174,
     "title": "ข้าฯควรมอบสิ่งใดแด่พระ",
     "title_en": "What Shall I Give Thee, Master?",
     "key_signature": "1=Bb",
@@ -4982,7 +4982,7 @@
     ]
   },
   {
-    "number": "175",
+    "number": 175,
     "title": "ข้าฯใคร่จะดีรอบคอบ",
     "title_en": "Whiter Than Snow",
     "key_signature": "1=G",
@@ -5011,7 +5011,7 @@
     ]
   },
   {
-    "number": "176",
+    "number": 176,
     "title": "ข้าฯจะเป็นของพระองค์อย่างแน่นอน",
     "title_en": "Wholly Thine",
     "key_signature": "1=G",
@@ -5040,7 +5040,7 @@
     ]
   },
   {
-    "number": "177",
+    "number": 177,
     "title": "ข้าฯจะอยู่ใกล้พระองค์",
     "title_en": "Nearer My God to Thee",
     "key_signature": "1=F",
@@ -5069,7 +5069,7 @@
     ]
   },
   {
-    "number": "178",
+    "number": 178,
     "title": "ข้าฯเป็นสาวกของพระองค์",
     "title_en": "Draw Me Nearer",
     "key_signature": "1=G",
@@ -5102,7 +5102,7 @@
     ]
   },
   {
-    "number": "179",
+    "number": 179,
     "title": "ข้าฯเห็นลำธารแห่งพระโลหิต",
     "title_en": "The Cleaning Wave",
     "key_signature": "1=D",
@@ -5131,7 +5131,7 @@
     ]
   },
   {
-    "number": "180",
+    "number": 180,
     "title": "ควรหรือพระต้องทนแบกกางเขน?",
     "title_en": "Must Jesus Bear the Cross Alone",
     "key_signature": "1=G",
@@ -5156,7 +5156,7 @@
     ]
   },
   {
-    "number": "181",
+    "number": 181,
     "title": "ถวายรักแด่พระคริสต์",
     "title_en": "More Love to Thee",
     "key_signature": "1=G",
@@ -5181,7 +5181,7 @@
     ]
   },
   {
-    "number": "182",
+    "number": 182,
     "title": "ฉันรักพระเจ้าผู้ให้ความรอด",
     "title_en": "I Know I Love Thee Better, Lord",
     "key_signature": "1=C",
@@ -5214,7 +5214,7 @@
     ]
   },
   {
-    "number": "183",
+    "number": 183,
     "title": "ชีวิตข้าฯถวายแก่ท่าน",
     "title_en": "Take My Life and Let It Be",
     "key_signature": "1=G",
@@ -5247,7 +5247,7 @@
     ]
   },
   {
-    "number": "184",
+    "number": 184,
     "title": "เดี๋ยวนี้ฉันเป็นของพระองค์",
     "title_en": "Now I Belong to Jesus",
     "key_signature": "1=Ab",
@@ -5276,7 +5276,7 @@
     ]
   },
   {
-    "number": "185",
+    "number": 185,
     "title": "ถวายสิ่งดีที่สุดแก่พระ",
     "title_en": "Give of Your Best to the Master",
     "key_signature": "1=Eb",
@@ -5305,7 +5305,7 @@
     ]
   },
   {
-    "number": "186",
+    "number": 186,
     "title": "นั่งอยู่แทบเบื้องบาทพระเยซู",
     "title_en": "Sitting at the Feet of Jesus",
     "key_signature": "1=F",
@@ -5330,7 +5330,7 @@
     ]
   },
   {
-    "number": "187",
+    "number": 187,
     "title": "เป็นเช่นพระคริสต์",
     "title_en": "Like Jesus",
     "key_signature": "1=Eb",
@@ -5363,7 +5363,7 @@
     ]
   },
   {
-    "number": "188",
+    "number": 188,
     "title": "พระคริสต์ข้าฯยอมรับกางเขน",
     "title_en": "Jesus, I My Cross Have Taken",
     "key_signature": "1=A",
@@ -5388,7 +5388,7 @@
     ]
   },
   {
-    "number": "189",
+    "number": 189,
     "title": "พระคริสต์เท่านั้น",
     "title_en": "Not I, But Christ",
     "key_signature": "1=Eb",
@@ -5413,7 +5413,7 @@
     ]
   },
   {
-    "number": "190",
+    "number": 190,
     "title": "ยามพระอยู่ใกล้ชิด",
     "title_en": "When God is Near",
     "key_signature": "1=C",
@@ -5442,7 +5442,7 @@
     ]
   },
   {
-    "number": "191",
+    "number": 191,
     "title": "มีแสงเรืองรุ่งวันใหม่",
     "title_en": "There's A New Day Dawning",
     "key_signature": "1=Bb",
@@ -5459,7 +5459,7 @@
     ]
   },
   {
-    "number": "192",
+    "number": 192,
     "title": "ไม่มีสิ่งใด",
     "title_en": "Nothing Between",
     "key_signature": "1=F",
@@ -5488,7 +5488,7 @@
     ]
   },
   {
-    "number": "193",
+    "number": 193,
     "title": "อยากรู้เรื่องพระเยซู",
     "title_en": "More About Jesus",
     "key_signature": "1=G",
@@ -5517,7 +5517,7 @@
     ]
   },
   {
-    "number": "194",
+    "number": 194,
     "title": "เอาโลกไปแต่ให้พระคริสต์ฉัน",
     "title_en": "Take the World, But Give Me Jesus",
     "key_signature": "1=F",
@@ -5546,7 +5546,7 @@
     ]
   },
   {
-    "number": "195",
+    "number": 195,
     "title": "ข้าฯจะไปตามพระองค์ทรงต้องการ",
     "title_en": "I’ll Go Where You Want Me to Go",
     "key_signature": "1=Eb",
@@ -5575,7 +5575,7 @@
     ]
   },
   {
-    "number": "196",
+    "number": 196,
     "title": "ข้าฯมอบทุกสิ่งแด่พระเยซู",
     "title_en": "I Surrender All",
     "key_signature": "1=D",
@@ -5608,7 +5608,7 @@
     ]
   },
   {
-    "number": "197",
+    "number": 197,
     "title": "ชื่อของข้าฯจดหรือยัง",
     "title_en": "Lord, I Care Not for Riches",
     "key_signature": "1=Ab",
@@ -5637,7 +5637,7 @@
     ]
   },
   {
-    "number": "198",
+    "number": 198,
     "title": "ตามน้ำพระทัยพระคริสต์",
     "title_en": "My Jesus As Thou Wilt",
     "key_signature": "1=Eb",
@@ -5662,7 +5662,7 @@
     ]
   },
   {
-    "number": "199",
+    "number": 199,
     "title": "พร้อมจะทำตามพระทัย",
     "title_en": "Ready To Do His Will",
     "key_signature": "1=F",
@@ -5695,7 +5695,7 @@
     ]
   },
   {
-    "number": "200",
+    "number": 200,
     "title": "ขอแสงการุณย์นำข้าฯ",
     "title_en": "Lead, Kindly Light",
     "key_signature": "1=Ab",
@@ -5720,7 +5720,7 @@
     ]
   },
   {
-    "number": "201",
+    "number": 201,
     "title": "ผู้เลี้ยงแกะ",
     "title_en": "Savior, Like a Shepherd",
     "key_signature": "1=Db",
@@ -5749,7 +5749,7 @@
     ]
   },
   {
-    "number": "202",
+    "number": 202,
     "title": "โอ้ โปรดให้ข้าฯเดินตามพระองค์",
     "title_en": "O Let Me Walk with Thee",
     "key_signature": "1=G",
@@ -5774,7 +5774,7 @@
     ]
   },
   {
-    "number": "203",
+    "number": 203,
     "title": "กองทหารพระคริสต์",
     "title_en": "Onward, Christian Soldiers!",
     "key_signature": "1=D",
@@ -5807,7 +5807,7 @@
     ]
   },
   {
-    "number": "204",
+    "number": 204,
     "title": "จงยืนหยัดสู้เพื่อความจริง",
     "title_en": "Standing by a Purpose True",
     "key_signature": "1=Ab",
@@ -5836,7 +5836,7 @@
     ]
   },
   {
-    "number": "205",
+    "number": 205,
     "title": "ฉันเป็นทหารแห่งกางเขนหรือ?",
     "title_en": "Am I a Soldier of the Cross?",
     "key_signature": "1=F",
@@ -5873,7 +5873,7 @@
     ]
   },
   {
-    "number": "206",
+    "number": 206,
     "title": "ตรับเสียงสงครามไว้",
     "title_en": "Sound the Battle Cry",
     "key_signature": "1=Ab",
@@ -5902,7 +5902,7 @@
     ]
   },
   {
-    "number": "207",
+    "number": 207,
     "title": "มวลสาธุชนผู้ไร้กังวลจากงาน",
     "title_en": "For All the Saints",
     "key_signature": "1=G",
@@ -5931,7 +5931,7 @@
     ]
   },
   {
-    "number": "208",
+    "number": 208,
     "title": "แม่ทัพเรียกท่าน",
     "title_en": "The Captain Calls for You",
     "key_signature": "1=C",
@@ -5960,7 +5960,7 @@
     ]
   },
   {
-    "number": "209",
+    "number": 209,
     "title": "ข้าฯขอความสว่าง",
     "title_en": "At First I Prayed for Light",
     "key_signature": "1=G",
@@ -5993,7 +5993,7 @@
     ]
   },
   {
-    "number": "210",
+    "number": 210,
     "title": "แสงแห่งจิตข้าฯ",
     "title_en": "Sun of My Soul",
     "key_signature": "1=F",
@@ -6022,7 +6022,7 @@
     ]
   },
   {
-    "number": "211",
+    "number": 211,
     "title": "เงียบสงัด",
     "title_en": "Tread Softly",
     "key_signature": "1=Bb",
@@ -6055,7 +6055,7 @@
     ]
   },
   {
-    "number": "212",
+    "number": 212,
     "title": "จงเงียบและรู้",
     "title_en": "Be Still and Know",
     "key_signature": "1=Eb",
@@ -6084,7 +6084,7 @@
     ]
   },
   {
-    "number": "213",
+    "number": 213,
     "title": "ใช้เวลาให้ชอบธรรม",
     "title_en": "Take Time to Be Holy",
     "key_signature": "1=F",
@@ -6113,7 +6113,7 @@
     ]
   },
   {
-    "number": "214",
+    "number": 214,
     "title": "โปรดสอนข้าฯอธิษฐาน",
     "title_en": "Teach Me to Pray",
     "key_signature": "1=Db",
@@ -6142,7 +6142,7 @@
     ]
   },
   {
-    "number": "215",
+    "number": 215,
     "title": "มาหาพระเจ้าคราวอธิษฐาน",
     "title_en": "Sweet Hour of Prayer",
     "key_signature": "1=C",
@@ -6167,7 +6167,7 @@
     ]
   },
   {
-    "number": "216",
+    "number": 216,
     "title": "ยามไหว้วอนเต็มด้วยความสุข",
     "title_en": "‘Tis the Blessed Hour of Prayer",
     "key_signature": "1=Db",
@@ -6196,7 +6196,7 @@
     ]
   },
   {
-    "number": "217",
+    "number": 217,
     "title": "สันติสุขประเสริฐ",
     "title_en": "Blessed Quietness",
     "key_signature": "1=Bb",
@@ -6225,7 +6225,7 @@
     ]
   },
   {
-    "number": "218",
+    "number": 218,
     "title": "ข้าฯเชื่อจึงมองไป",
     "title_en": "My Faith Looks Up to Thee",
     "key_signature": "1=D",
@@ -6250,7 +6250,7 @@
     ]
   },
   {
-    "number": "219",
+    "number": 219,
     "title": "ข้าฯต้องการพระองค์",
     "title_en": "Blessed Lord, How Much I Need Thee!",
     "key_signature": "1=G",
@@ -6283,7 +6283,7 @@
     ]
   },
   {
-    "number": "220",
+    "number": 220,
     "title": "ข้าฯไม่สร้างความหวังบนสิ่งใด",
     "title_en": "My Hope is Built on Nothing Less",
     "key_signature": "1=F",
@@ -6312,7 +6312,7 @@
     ]
   },
   {
-    "number": "221",
+    "number": 221,
     "title": "คราเมื่อพระคริสต์มา",
     "title_en": "Then Jesus Came",
     "key_signature": "1=C",
@@ -6345,7 +6345,7 @@
     ]
   },
   {
-    "number": "222",
+    "number": 222,
     "title": "ความเชื่อของเหล่าบรรพบุรุษ",
     "title_en": "Faith of Our Fathers",
     "key_signature": "1=G",
@@ -6374,7 +6374,7 @@
     ]
   },
   {
-    "number": "223",
+    "number": 223,
     "title": "ความเชื่อมีชัยไพรี",
     "title_en": "Faith Is the Victory",
     "key_signature": "1=D",
@@ -6403,7 +6403,7 @@
     ]
   },
   {
-    "number": "224",
+    "number": 224,
     "title": "จงมองเบื้องบน",
     "title_en": "Keep Looking Up",
     "key_signature": "1=D",
@@ -6432,7 +6432,7 @@
     ]
   },
   {
-    "number": "225",
+    "number": 225,
     "title": "จิตใจหนาด้วยผิดบาปจงมา",
     "title_en": "Only Trust Him",
     "key_signature": "1=G",
@@ -6465,7 +6465,7 @@
     ]
   },
   {
-    "number": "226",
+    "number": 226,
     "title": "ฉันกำลังเดินสู่เมืองสวรรค์",
     "title_en": "Higher Ground",
     "key_signature": "1=A",
@@ -6494,7 +6494,7 @@
     ]
   },
   {
-    "number": "227",
+    "number": 227,
     "title": "ฉันต้องการพระเยซู",
     "title_en": "I'd Rather Have Jesus",
     "key_signature": "1=C",
@@ -6523,7 +6523,7 @@
     ]
   },
   {
-    "number": "228",
+    "number": 228,
     "title": "ที่พึ่งซึ่งประเสริฐ",
     "title_en": "Precious Hiding Place",
     "key_signature": "1=Eb",
@@ -6552,7 +6552,7 @@
     ]
   },
   {
-    "number": "229",
+    "number": 229,
     "title": "ทุกทุกวินาที",
     "title_en": "Moment by Moment",
     "key_signature": "1=F",
@@ -6581,7 +6581,7 @@
     ]
   },
   {
-    "number": "230",
+    "number": 230,
     "title": "ในยามนี้ท่านต้องการพระผู้ช่วย",
     "title_en": "In Times Like These",
     "key_signature": "1=Ab",
@@ -6610,7 +6610,7 @@
     ]
   },
   {
-    "number": "231",
+    "number": 231,
     "title": "พระคริสต์ยึดมือฉัน",
     "title_en": "Jesus, Take My Hand",
     "key_signature": "1=Db",
@@ -6639,7 +6639,7 @@
     ]
   },
   {
-    "number": "232",
+    "number": 232,
     "title": "พระเจ้าเป็นเช่นมหาศิลา",
     "title_en": "A Shelter in the Time of Storm",
     "key_signature": "1=F",
@@ -6672,7 +6672,7 @@
     ]
   },
   {
-    "number": "233",
+    "number": 233,
     "title": "พระยะโฮวาเป็นป้อมปราการ",
     "title_en": "A Mighty Fortress",
     "key_signature": "1=C",
@@ -6697,7 +6697,7 @@
     ]
   },
   {
-    "number": "234",
+    "number": 234,
     "title": "เราจะสร้างบนศิลา",
     "title_en": "We’ll Build on the Rock",
     "key_signature": "1=G",
@@ -6726,7 +6726,7 @@
     ]
   },
   {
-    "number": "235",
+    "number": 235,
     "title": "แสนสุขใจที่เชื่อพระเยซู",
     "title_en": "'Tis So Sweet to Trust in Jesus",
     "key_signature": "1=G",
@@ -6759,7 +6759,7 @@
     ]
   },
   {
-    "number": "236",
+    "number": 236,
     "title": "โอ้พระศิลาข้าฯอาศัย",
     "title_en": "Hiding in Thee",
     "key_signature": "1=Eb",
@@ -6788,7 +6788,7 @@
     ]
   },
   {
-    "number": "237",
+    "number": 237,
     "title": "โอ้พระองค์ทรงจูงข้าฯ",
     "title_en": "Precious Lord, Take My Hand",
     "key_signature": "1=Ab",
@@ -6809,7 +6809,7 @@
     ]
   },
   {
-    "number": "238",
+    "number": 238,
     "title": "เมื่อยามพายุจัดผ่านมา",
     "title_en": "From Every Stormy Wind",
     "key_signature": "1=Bb",
@@ -6838,7 +6838,7 @@
     ]
   },
   {
-    "number": "239",
+    "number": 239,
     "title": "เชื่อและฟังคำ",
     "title_en": "Trust and Obey",
     "key_signature": "1=F",
@@ -6867,7 +6867,7 @@
     ]
   },
   {
-    "number": "240",
+    "number": 240,
     "title": "ไม่มีใครห่วงฉันยิ่งไปกว่าพระคริสต์",
     "title_en": "No One Ever Cared for Me Like Jesus",
     "key_signature": "1=Db",
@@ -6896,7 +6896,7 @@
     ]
   },
   {
-    "number": "241",
+    "number": 241,
     "title": "ข้าฯชอบกล่าวเรื่องอันประเสริฐ",
     "title_en": "I Love to Tell the Story",
     "key_signature": "1=G",
@@ -6929,7 +6929,7 @@
     ]
   },
   {
-    "number": "242",
+    "number": 242,
     "title": "สุขสบายใจของฉัน",
     "title_en": "It is well with my soul",
     "key_signature": "1=C",
@@ -6958,7 +6958,7 @@
     ]
   },
   {
-    "number": "243",
+    "number": 243,
     "title": "ทรงชนม์",
     "title_en": "He Lives",
     "key_signature": "1=Ab",
@@ -6987,7 +6987,7 @@
     ]
   },
   {
-    "number": "244",
+    "number": 244,
     "title": "พระคริสต์เหมือนทุกสิ่ง",
     "title_en": "Christ Above All",
     "key_signature": "1=C",
@@ -7004,7 +7004,7 @@
     ]
   },
   {
-    "number": "245",
+    "number": 245,
     "title": "พระเยซูเป็นสรรพสิ่งแก่ฉัน",
     "title_en": "Jesus Is All the World to Me",
     "key_signature": "1=G",
@@ -7029,7 +7029,7 @@
     ]
   },
   {
-    "number": "246",
+    "number": 246,
     "title": "มีพระพรอันมากมาย",
     "title_en": "Come, Thou Fount of Every Blessing",
     "key_signature": "1=D",
@@ -7054,7 +7054,7 @@
     ]
   },
   {
-    "number": "247",
+    "number": 247,
     "title": "มีแสงสว่างในใจฉันวันนี้",
     "title_en": "There's Sunshine in My Soul Today",
     "key_signature": "1=G",
@@ -7083,7 +7083,7 @@
     ]
   },
   {
-    "number": "248",
+    "number": 248,
     "title": "รอดอยู่ในหัตถ์พระเยซู",
     "title_en": "Safe in the Arms of Jesus",
     "key_signature": "1=G",
@@ -7112,7 +7112,7 @@
     ]
   },
   {
-    "number": "249",
+    "number": 249,
     "title": "รื่นเริงเสมอ",
     "title_en": "Always Cheerful",
     "key_signature": "1=E",
@@ -7145,7 +7145,7 @@
     ]
   },
   {
-    "number": "250",
+    "number": 250,
     "title": "ปัด ปัด ความทุกข์ท่านทิ้งไป",
     "title_en": "Roll, Roll Your Burdens Away",
     "key_signature": "1=Eb",
@@ -7162,7 +7162,7 @@
     ]
   },
   {
-    "number": "251",
+    "number": 251,
     "title": "วันนี้มีแสงส่องในใจฉัน",
     "title_en": "There's Sunshine in My Soul Today",
     "key_signature": "1=G",
@@ -7191,7 +7191,7 @@
     ]
   },
   {
-    "number": "252",
+    "number": 252,
     "title": "สุขสันต์เกษมหรรษา",
     "title_en": "Wonderful Peace",
     "key_signature": "1=G",
@@ -7220,7 +7220,7 @@
     ]
   },
   {
-    "number": "253",
+    "number": 253,
     "title": "สุขสันติสุข",
     "title_en": "There Comes to My Heart One Sweet Strain",
     "key_signature": "1=G",
@@ -7253,7 +7253,7 @@
     ]
   },
   {
-    "number": "254",
+    "number": 254,
     "title": "โอ้พระบิดาฉันมั่งคั่ง",
     "title_en": "My Father Is Rich in Houses and Lands",
     "key_signature": "1=Eb",
@@ -7282,7 +7282,7 @@
     ]
   },
   {
-    "number": "255",
+    "number": 255,
     "title": "โอ้ วันชื่นบาน",
     "title_en": "O Happy Day! That Fixed My Choice",
     "key_signature": "1=G",
@@ -7311,7 +7311,7 @@
     ]
   },
   {
-    "number": "256",
+    "number": 256,
     "title": "ข้าฯยึดมั่นในคำสัญญา",
     "title_en": "Standing on the Promises",
     "key_signature": "1=Ab",
@@ -7340,7 +7340,7 @@
     ]
   },
   {
-    "number": "257",
+    "number": 257,
     "title": "คนยามจงป่าวข่าวดีก้องไป",
     "title_en": "Watchman, Blow the Gospel Trumpet",
     "key_signature": "1=Ab",
@@ -7369,7 +7369,7 @@
     ]
   },
   {
-    "number": "258",
+    "number": 258,
     "title": "จงกล้าทำดี",
     "title_en": "Dare to Do Right",
     "key_signature": "1=D",
@@ -7402,7 +7402,7 @@
     ]
   },
   {
-    "number": "259",
+    "number": 259,
     "title": "จงอย่าขอตัวผัดเพี้ยน",
     "title_en": "Ask Not to be Excused",
     "key_signature": "1=E",
@@ -7431,7 +7431,7 @@
     ]
   },
   {
-    "number": "260",
+    "number": 260,
     "title": "จงช่วยเหล่าผู้หลงใหล",
     "title_en": "Rescue the Perishing",
     "key_signature": "1=Bb",
@@ -7464,7 +7464,7 @@
     ]
   },
   {
-    "number": "261",
+    "number": 261,
     "title": "จากกรีนแลนด์ทะเลน้ำแข็ง",
     "title_en": "From Greenland's Icy Mountains",
     "key_signature": "1=D",
@@ -7489,7 +7489,7 @@
     ]
   },
   {
-    "number": "262",
+    "number": 262,
     "title": "ฉันจะซื่อสัตย์",
     "title_en": "I Would Be True",
     "key_signature": "1=F",
@@ -7514,7 +7514,7 @@
     ]
   },
   {
-    "number": "263",
+    "number": 263,
     "title": "ฉันได้รับใช้พระเยซูดีที่สุด",
     "title_en": "Have I Done My Best For Jesus",
     "key_signature": "1=G",
@@ -7543,7 +7543,7 @@
     ]
   },
   {
-    "number": "264",
+    "number": 264,
     "title": "ถนอมชีพเพื่อพระเยซู",
     "title_en": "Living for Jesus",
     "key_signature": "1=F",
@@ -7572,7 +7572,7 @@
     ]
   },
   {
-    "number": "265",
+    "number": 265,
     "title": "ทั้งใกล้ไกลในนาป่าเขาเขียว",
     "title_en": "Far and Near the Fields Are Teeming",
     "key_signature": "1=F",
@@ -7601,7 +7601,7 @@
     ]
   },
   {
-    "number": "266",
+    "number": 266,
     "title": "ทำงานเถิดค่ำคืนย่างมา",
     "title_en": "Work, for the Night is Coming",
     "key_signature": "1=Eb",
@@ -7626,7 +7626,7 @@
     ]
   },
   {
-    "number": "267",
+    "number": 267,
     "title": "ผู้เกี่ยวอยู่ที่ใด",
     "title_en": "O Where Are the Reapers?",
     "key_signature": "1=G",
@@ -7659,7 +7659,7 @@
     ]
   },
   {
-    "number": "268",
+    "number": 268,
     "title": "ผู้ประกาศราชกิจ",
     "title_en": "The King's Business",
     "key_signature": "1=E",
@@ -7688,7 +7688,7 @@
     ]
   },
   {
-    "number": "269",
+    "number": 269,
     "title": "มีดาราประดับมงกุฎฉันไหม",
     "title_en": "I Am Thinking Today of That Beautiful Land",
     "key_signature": "1=A",
@@ -7717,7 +7717,7 @@
     ]
   },
   {
-    "number": "270",
+    "number": 270,
     "title": "นำโลกเข้าเฝ้าพระองค์",
     "title_en": "Christ for the World",
     "key_signature": "1=F",
@@ -7742,7 +7742,7 @@
     ]
   },
   {
-    "number": "271",
+    "number": 271,
     "title": "ยามเช้านั้นเป็นยามหว่าน",
     "title_en": "Bringing in the Sheaves",
     "key_signature": "1=Bb",
@@ -7771,7 +7771,7 @@
     ]
   },
   {
-    "number": "272",
+    "number": 272,
     "title": "รับใช้พระเยซู",
     "title_en": "Toiling for Jesus",
     "key_signature": "1=A",
@@ -7800,7 +7800,7 @@
     ]
   },
   {
-    "number": "273",
+    "number": 273,
     "title": "นำเขามา",
     "title_en": "Hark! ’Tis the Shepherd’s Voice I Hear",
     "key_signature": "1=G",
@@ -7829,7 +7829,7 @@
     ]
   },
   {
-    "number": "274",
+    "number": 274,
     "title": "รีบโยนชูชีพช่วย",
     "title_en": "Throw Out the Life Line",
     "key_signature": "1=G",
@@ -7858,7 +7858,7 @@
     ]
   },
   {
-    "number": "275",
+    "number": 275,
     "title": "เราผู้รับใช้พระเจ้า",
     "title_en": "To the Work",
     "key_signature": "1=F",
@@ -7891,7 +7891,7 @@
     ]
   },
   {
-    "number": "276",
+    "number": 276,
     "title": "โลกเห็นพระสถิตในท่านไหม?",
     "title_en": "Can the World See Jesus in You?",
     "key_signature": "1=Ab",
@@ -7920,7 +7920,7 @@
     ]
   },
   {
-    "number": "277",
+    "number": 277,
     "title": "เรามีข่าวจะบอกกล่าวแก่ชาวโลกา",
     "title_en": "We've a Story to Tell to the Nations",
     "key_signature": "1=F",
@@ -7949,7 +7949,7 @@
     ]
   },
   {
-    "number": "278",
+    "number": 278,
     "title": "สร้างสรรนิรันดร",
     "title_en": "Building for Eternity",
     "key_signature": "1=E",
@@ -7982,7 +7982,7 @@
     ]
   },
   {
-    "number": "279",
+    "number": 279,
     "title": "แสงกรุณาแห่งพระบิดา",
     "title_en": "Brightly Beams Our Father’s Mercy",
     "key_signature": "1=Bb",
@@ -8011,7 +8011,7 @@
     ]
   },
   {
-    "number": "280",
+    "number": 280,
     "title": "หากฉันกล่าวถ้อยคำเพียงน้อยนิด",
     "title_en": "If Any Little Word of Mine",
     "key_signature": "1=G",
@@ -8040,7 +8040,7 @@
     ]
   },
   {
-    "number": "281",
+    "number": 281,
     "title": "ใครที่ได้ยินข่าว",
     "title_en": "Whosoever Heareth",
     "key_signature": "1=D",
@@ -8069,7 +8069,7 @@
     ]
   },
   {
-    "number": "282",
+    "number": 282,
     "title": "ตามเรามา",
     "title_en": "Follow Me",
     "key_signature": "1=G",
@@ -8094,7 +8094,7 @@
     ]
   },
   {
-    "number": "283",
+    "number": 283,
     "title": "ท่านใคร่ครวญแล้วละหรือ?",
     "title_en": "Have You Counted the Cost?",
     "key_signature": "1=G",
@@ -8123,7 +8123,7 @@
     ]
   },
   {
-    "number": "284",
+    "number": 284,
     "title": "ที่ประตูมีผู้แปลกหน้า",
     "title_en": "There's a Stranger at the Door",
     "key_signature": "1=Db",
@@ -8152,7 +8152,7 @@
     ]
   },
   {
-    "number": "285",
+    "number": 285,
     "title": "นั่นสำเนียงเสียงพระคริสต์ทรงเรียก",
     "title_en": "Hark! The Voice of Jesus Calling",
     "key_signature": "1=Db",
@@ -8181,7 +8181,7 @@
     ]
   },
   {
-    "number": "286",
+    "number": 286,
     "title": "พระเยซูทรงเรียกท่านกลับบ้าน",
     "title_en": "Jesus Is Tenderly Calling",
     "key_signature": "1=C",
@@ -8214,7 +8214,7 @@
     ]
   },
   {
-    "number": "287",
+    "number": 287,
     "title": "พระคริสต์ดังผู้เลี้ยงแกะที่ดี",
     "title_en": "Jesus the Loving Shepherd",
     "key_signature": "1=F",
@@ -8243,7 +8243,7 @@
     ]
   },
   {
-    "number": "288",
+    "number": 288,
     "title": "ข้าฯชั่วเพียงใดยังอาจกล่าวว่า",
     "title_en": "Just as I Am",
     "key_signature": "1=D",
@@ -8276,7 +8276,7 @@
     ]
   },
   {
-    "number": "289",
+    "number": 289,
     "title": "แว่วแห่งความหวัง",
     "title_en": "Whispering Hope",
     "key_signature": "1=Eb",
@@ -8305,7 +8305,7 @@
     ]
   },
   {
-    "number": "290",
+    "number": 290,
     "title": "จวนเชื่อพระเยซู",
     "title_en": "Almost Persuaded",
     "key_signature": "1=G",
@@ -8330,7 +8330,7 @@
     ]
   },
   {
-    "number": "291",
+    "number": 291,
     "title": "พระเยซูทรงเรียกร้องด้วยรัก",
     "title_en": "Softly and Tenderly",
     "key_signature": "1=G",
@@ -8359,7 +8359,7 @@
     ]
   },
   {
-    "number": "292",
+    "number": 292,
     "title": "ใกล้พระยิ่งใกล้พระผู้ช่วยชีวี",
     "title_en": "Nearer, Still Nearer",
     "key_signature": "1=Db",
@@ -8388,7 +8388,7 @@
     ]
   },
   {
-    "number": "293",
+    "number": 293,
     "title": "ข้าฯเดินมายังที่กางเขน",
     "title_en": "I Am Coming to the Cross",
     "key_signature": "1=F",
@@ -8421,7 +8421,7 @@
     ]
   },
   {
-    "number": "294",
+    "number": 294,
     "title": "ข้าฯได้ยินเสียงพระเยซูตรัส",
     "title_en": "I Heard the Voice of Jesus",
     "key_signature": "1=G",
@@ -8446,7 +8446,7 @@
     ]
   },
   {
-    "number": "295",
+    "number": 295,
     "title": "ข้าฯได้ยินเสียงพระองค์",
     "title_en": "I Hear Thy Welcome Voice",
     "key_signature": "1=Db",
@@ -8479,7 +8479,7 @@
     ]
   },
   {
-    "number": "296",
+    "number": 296,
     "title": "โปรดอย่าได้ลืมข้าฯ",
     "title_en": "Pass Me Not, O Gentle Savior",
     "key_signature": "1=G",
@@ -8512,7 +8512,7 @@
     ]
   },
   {
-    "number": "297",
+    "number": 297,
     "title": "บุตรผลาญทรัพย์",
     "title_en": "The Prodigal Son",
     "key_signature": "1=Bb",
@@ -8541,7 +8541,7 @@
     ]
   },
   {
-    "number": "298",
+    "number": 298,
     "title": "ติดตามข้าฯจะติดตามพระ",
     "title_en": "Follow, I Will Follow Thee",
     "key_signature": "1=G",
@@ -8570,7 +8570,7 @@
     ]
   },
   {
-    "number": "299",
+    "number": 299,
     "title": "พระเยซูเจ้าข้าฯมา",
     "title_en": "Jesus, I Come",
     "key_signature": "1=G",
@@ -8595,7 +8595,7 @@
     ]
   },
   {
-    "number": "300",
+    "number": 300,
     "title": "วันนี้ข้าฯ กลับบ้าน",
     "title_en": "Lord, I’m Coming Home",
     "key_signature": "1=Ab",
@@ -8628,7 +8628,7 @@
     ]
   },
   {
-    "number": "301",
+    "number": 301,
     "title": "คงเป็นวันร่วมสุขสันต์เปรมปรีดิ์",
     "title_en": "What a Gathering That Will Be",
     "key_signature": "1=D",
@@ -8657,7 +8657,7 @@
     ]
   },
   {
-    "number": "302",
+    "number": 302,
     "title": "ใกล้บ้านฉันฝันใฝ่",
     "title_en": "The Nearer, The Sweeter",
     "key_signature": "1=Ab",
@@ -8686,7 +8686,7 @@
     ]
   },
   {
-    "number": "303",
+    "number": 303,
     "title": "ใจข้าฯเปรมปรีดิ์",
     "title_en": "The Glory Song",
     "key_signature": "1=G",
@@ -8715,7 +8715,7 @@
     ]
   },
   {
-    "number": "304",
+    "number": 304,
     "title": "ฉันยืนอยู่ริมฝั่งยาระเด็น",
     "title_en": "On Jordan's Stormy Banks I Stand",
     "key_signature": "1=Eb",
@@ -8748,7 +8748,7 @@
     ]
   },
   {
-    "number": "305",
+    "number": 305,
     "title": "ฉันอยู่โลกนี้ไม่นาน",
     "title_en": "I’m But a Stranger Here",
     "key_signature": "1=F",
@@ -8773,7 +8773,7 @@
     ]
   },
   {
-    "number": "306",
+    "number": 306,
     "title": "ณ ปลายทางแห่งชีวิต",
     "title_en": "At the End of the Road",
     "key_signature": "1=Eb",
@@ -8802,7 +8802,7 @@
     ]
   },
   {
-    "number": "307",
+    "number": 307,
     "title": "ณ หุบเขาอันงามแห่งเอเด็น",
     "title_en": "Beautiful Valley of Eden",
     "key_signature": "1=Eb",
@@ -8831,7 +8831,7 @@
     ]
   },
   {
-    "number": "308",
+    "number": 308,
     "title": "ที่ซึ่งเราจะไม่แก่ชรา",
     "title_en": "Where We'll Never Grow Old",
     "key_signature": "1=Eb",
@@ -8860,7 +8860,7 @@
     ]
   },
   {
-    "number": "309",
+    "number": 309,
     "title": "ทูลว่ารอดได้เพราะพระการุณย์",
     "title_en": "Some Day the Silver Cord Will Break",
     "key_signature": "1=F",
@@ -8889,7 +8889,7 @@
     ]
   },
   {
-    "number": "310",
+    "number": 310,
     "title": "บทเพลงจากฟ้าและมาตุภูม",
     "title_en": "Song of Heaven & Homeland",
     "key_signature": "1=F",
@@ -8918,7 +8918,7 @@
     ]
   },
   {
-    "number": "311",
+    "number": 311,
     "title": "ในสวรรค์เมืองนิรันดร",
     "title_en": "No Night There",
     "key_signature": "1=Db",
@@ -8947,7 +8947,7 @@
     ]
   },
   {
-    "number": "312",
+    "number": 312,
     "title": "ในสวรรค์",
     "title_en": "Where the Gates Swing Outward Never",
     "key_signature": "1=Ab",
@@ -8976,7 +8976,7 @@
     ]
   },
   {
-    "number": "313",
+    "number": 313,
     "title": "พบกันริมชลธาร",
     "title_en": "Shall We Gather at the River",
     "key_signature": "1=Db",
@@ -9005,7 +9005,7 @@
     ]
   },
   {
-    "number": "314",
+    "number": 314,
     "title": "พรุ่งนี้ของพระ",
     "title_en": "God's Tomorrow",
     "key_signature": "1=Db",
@@ -9034,7 +9034,7 @@
     ]
   },
   {
-    "number": "315",
+    "number": 315,
     "title": "มีเมืองอันสุขสำราญ",
     "title_en": "There is a Happy Land",
     "key_signature": "1=Eb",
@@ -9063,7 +9063,7 @@
     ]
   },
   {
-    "number": "316",
+    "number": 316,
     "title": "ยังไซโอนเราเดินไป",
     "title_en": "Marching to Zion",
     "key_signature": "1=F",
@@ -9096,7 +9096,7 @@
     ]
   },
   {
-    "number": "317",
+    "number": 317,
     "title": "เมื่อมองดูพระพักตร์ท่าน",
     "title_en": "When I Look in His Face",
     "key_signature": "1=G",
@@ -9125,7 +9125,7 @@
     ]
   },
   {
-    "number": "318",
+    "number": 318,
     "title": "ไม่จากกันอีก",
     "title_en": "Never Part Again",
     "key_signature": "1=Eb",
@@ -9154,7 +9154,7 @@
     ]
   },
   {
-    "number": "319",
+    "number": 319,
     "title": "เมื่อตะวันลับไป",
     "title_en": "Beyond The Sunset",
     "key_signature": "1=Eb",
@@ -9183,7 +9183,7 @@
     ]
   },
   {
-    "number": "320",
+    "number": 320,
     "title": "วันหนึ่งพระองค์จะทรงให้ประจักษ์",
     "title_en": "Someday He'll Make It Plain",
     "key_signature": "1=Ab",
@@ -9212,7 +9212,7 @@
     ]
   },
   {
-    "number": "321",
+    "number": 321,
     "title": "รุ่งเช้าวันหรรษา",
     "title_en": "Wonderful Morning",
     "key_signature": "1=Eb",
@@ -9241,7 +9241,7 @@
     ]
   },
   {
-    "number": "322",
+    "number": 322,
     "title": "เราเข้ามาใกล้บ้าน",
     "title_en": "Just Over the Mountains",
     "key_signature": "1=Db",
@@ -9274,7 +9274,7 @@
     ]
   },
   {
-    "number": "323",
+    "number": 323,
     "title": "แสนเบิกบานอีกไม่นาน",
     "title_en": "Sweet By and By",
     "key_signature": "1=G",
@@ -9303,7 +9303,7 @@
     ]
   },
   {
-    "number": "324",
+    "number": 324,
     "title": "เหนือฟากฟ้าโน้น",
     "title_en": "Over Yonder",
     "key_signature": "1=Bb",
@@ -9332,7 +9332,7 @@
     ]
   },
   {
-    "number": "325",
+    "number": 325,
     "title": "อรุณวันใหม่",
     "title_en": "Some Bright Morning",
     "key_signature": "1=Bb",
@@ -9361,7 +9361,7 @@
     ]
   },
   {
-    "number": "326",
+    "number": 326,
     "title": "อาวรณ์หาสวรรค์",
     "title_en": "Homesick for Heaven",
     "key_signature": "1=Ab",
@@ -9390,7 +9390,7 @@
     ]
   },
   {
-    "number": "327",
+    "number": 327,
     "title": "รากฐานคริสตจักรแท้",
     "title_en": "The Church Has One Foundation",
     "key_signature": "1=D",
@@ -9415,7 +9415,7 @@
     ]
   },
   {
-    "number": "328",
+    "number": 328,
     "title": "ซะบาโตบริสุทธิ์",
     "title_en": "Holy Sabbath Day of Rest",
     "key_signature": "1=Eb",
@@ -9448,7 +9448,7 @@
     ]
   },
   {
-    "number": "329",
+    "number": 329,
     "title": "พระบิดาช่วยเราทั่วหน้า",
     "title_en": "Safely Through Another Week",
     "key_signature": "1=F",
@@ -9481,7 +9481,7 @@
     ]
   },
   {
-    "number": "330",
+    "number": 330,
     "title": "อย่าลืมวันสะบาโต",
     "title_en": "Don’t Forget the Sabbath",
     "key_signature": "1=Bb",
@@ -9510,7 +9510,7 @@
     ]
   },
   {
-    "number": "331",
+    "number": 331,
     "title": "โอ้วันเสาร์ซะบาโต",
     "title_en": "O Day of Rest and Gladness",
     "key_signature": "1=Eb",
@@ -9535,7 +9535,7 @@
     ]
   },
   {
-    "number": "332",
+    "number": 332,
     "title": "ความรักประเสริฐ",
     "title_en": "O Perfect Love",
     "key_signature": "1=Eb",
@@ -9560,7 +9560,7 @@
     ]
   },
   {
-    "number": "333",
+    "number": 333,
     "title": "จงนับพระพร",
     "title_en": "Count Your Many Blessings",
     "key_signature": "1=Eb",
@@ -9589,7 +9589,7 @@
     ]
   },
   {
-    "number": "334",
+    "number": 334,
     "title": "บ้านที่มีความสุข",
     "title_en": "Happy the Home",
     "key_signature": "1=G",
@@ -9618,7 +9618,7 @@
     ]
   },
   {
-    "number": "335",
+    "number": 335,
     "title": "เชิญประชามาโมทนา",
     "title_en": "Come, Ye Thankful People",
     "key_signature": "1=G",
@@ -9647,7 +9647,7 @@
     ]
   },
   {
-    "number": "336",
+    "number": 336,
     "title": "พระคริสต์เป็นรากฐานอันมั่นคง",
     "title_en": "Christ Is Made the Sure Foundation",
     "key_signature": "1=G",
@@ -9672,7 +9672,7 @@
     ]
   },
   {
-    "number": "337",
+    "number": 337,
     "title": "พาธไฟน์เดอร์",
     "title_en": "Pathfinders",
     "key_signature": "1=Ab",
@@ -9689,7 +9689,7 @@
     ]
   },
   {
-    "number": "338",
+    "number": 338,
     "title": "ยุวคริสต์อาสา",
     "title_en": "Missionary Volunteers",
     "key_signature": "1=G",
@@ -9722,7 +9722,7 @@
     ]
   },
   {
-    "number": "339",
+    "number": 339,
     "title": "หลับไหลในพระเยซู",
     "title_en": "Asleep in Jesus",
     "key_signature": "1=D",
@@ -9751,7 +9751,7 @@
     ]
   },
   {
-    "number": "340",
+    "number": 340,
     "title": "รุ่งอรุณใหม่",
     "title_en": "Some Golden Daybreak",
     "key_signature": "1=Ab",
@@ -9768,7 +9768,7 @@
     ]
   },
   {
-    "number": "341",
+    "number": 341,
     "title": "โอ ประเทศไทย",
     "title_en": "Land of Thai",
     "key_signature": "1=C",
@@ -9801,7 +9801,7 @@
     ]
   },
   {
-    "number": "342",
+    "number": 342,
     "title": "ในใจของฉัน",
     "title_en": "It's in My Heart",
     "key_signature": "1=Bb",
@@ -9830,7 +9830,7 @@
     ]
   },
   {
-    "number": "343",
+    "number": 343,
     "title": "เชิญพระเยซูมาในดวงจิต",
     "title_en": "Into My Heart",
     "key_signature": "1=F",
@@ -9847,7 +9847,7 @@
     ]
   },
   {
-    "number": "344",
+    "number": 344,
     "title": "ผู้แปลกหน้าแห่งฆาลิลาย",
     "title_en": "Stranger of Galilee",
     "key_signature": "1=F",
@@ -9876,7 +9876,7 @@
     ]
   },
   {
-    "number": "345",
+    "number": 345,
     "title": "พระเจ้าข้า พายุจัด",
     "title_en": "Master, the Tempest is Raging!",
     "key_signature": "1=C",
@@ -9905,7 +9905,7 @@
     ]
   },
   {
-    "number": "346",
+    "number": 346,
     "title": "โอ้ พระขอตรัสแก่จิตข้าฯ",
     "title_en": "Speak to My Soul",
     "key_signature": "1=Eb",
@@ -9934,7 +9934,7 @@
     ]
   },
   {
-    "number": "347",
+    "number": 347,
     "title": "อธิษฐาน",
     "title_en": "Whisper a Prayer",
     "key_signature": "1=G",
@@ -9959,7 +9959,7 @@
     ]
   },
   {
-    "number": "348",
+    "number": 348,
     "title": "เชิญให้พระคริสต์สถิตในใจ",
     "title_en": "Let Jesus Come into Your Heart",
     "key_signature": "1=Ab",
@@ -9988,7 +9988,7 @@
     ]
   },
   {
-    "number": "349",
+    "number": 349,
     "title": "ฉันอยากให้สหายอธิษฐาน",
     "title_en": "I Need the Prayers",
     "key_signature": "1=D",
@@ -10017,7 +10017,7 @@
     ]
   },
   {
-    "number": "350",
+    "number": 350,
     "title": "ทางพระ",
     "title_en": "God's Way",
     "key_signature": "1=Eb",
@@ -10046,7 +10046,7 @@
     ]
   },
   {
-    "number": "351",
+    "number": 351,
     "title": "พระเมษบาลของข้าฯ",
     "title_en": "O Shepherd Divine",
     "key_signature": "1=Eb",
@@ -10071,7 +10071,7 @@
     ]
   },
   {
-    "number": "352",
+    "number": 352,
     "title": "พระบิดาทรงเฝ้าดูฉัน",
     "title_en": "My Father Watches Over Me",
     "key_signature": "1=Db",
@@ -10100,7 +10100,7 @@
     ]
   },
   {
-    "number": "353",
+    "number": 353,
     "title": "ตามเรามา",
     "title_en": "Follow Me",
     "key_signature": "1=Eb",
@@ -10117,7 +10117,7 @@
     ]
   },
   {
-    "number": "354",
+    "number": 354,
     "title": "สามัคคีนั้นล้ำเลิศ",
     "title_en": "Blest Be the Tie That Binds",
     "key_signature": "1=F",
@@ -10146,7 +10146,7 @@
     ]
   },
   {
-    "number": "355",
+    "number": 355,
     "title": "พระเยซูเรียกเมื่อเราโศกเศร้า",
     "title_en": "Jesus Calls Us",
     "key_signature": "1=Bb",
@@ -10175,7 +10175,7 @@
     ]
   },
   {
-    "number": "356",
+    "number": 356,
     "title": "สรรเสริญพระเจ้าผู้ให้ความสุข",
     "title_en": "Praise God, from Whom All Blessings Flow",
     "key_signature": "1=G",
@@ -10192,7 +10192,7 @@
     ]
   },
   {
-    "number": "357",
+    "number": 357,
     "title": "พระเจ้าสถิตในวิหาร",
     "title_en": "The Lord Is in His Holy Temple",
     "key_signature": "1=Db",
@@ -10209,7 +10209,7 @@
     ]
   },
   {
-    "number": "358",
+    "number": 358,
     "title": "พระโปรดฟัง",
     "title_en": "Hear Our Prayer, O Lord",
     "key_signature": "1=D",
@@ -10226,7 +10226,7 @@
     ]
   },
   {
-    "number": "359",
+    "number": 359,
     "title": "พระวิญญาณของพระทรงชนม์",
     "title_en": "Spirit of the Living God",
     "key_signature": "1=F",
@@ -10243,7 +10243,7 @@
     ]
   },
   {
-    "number": "360",
+    "number": 360,
     "title": "พระเยซูทรงล้ำเลิศ",
     "title_en": "Wonderful, Wonderful Jesus",
     "key_signature": "1=Eb",
@@ -10260,7 +10260,7 @@
     ]
   },
   {
-    "number": "361",
+    "number": 361,
     "title": "เพียงเชื่อเท่านั้น",
     "title_en": "Only Believe",
     "key_signature": "1=C",
@@ -10277,7 +10277,7 @@
     ]
   },
   {
-    "number": "362",
+    "number": 362,
     "title": "โลกต้องการพระเยซู",
     "title_en": "What the World Needs Is Jesus",
     "key_signature": "1=A",
@@ -10294,7 +10294,7 @@
     ]
   },
   {
-    "number": "363",
+    "number": 363,
     "title": "พระคริสต์ทรงนำ",
     "title_en": "My Lord Knows the Way",
     "key_signature": "1=F",
@@ -10311,7 +10311,7 @@
     ]
   },
   {
-    "number": "364",
+    "number": 364,
     "title": "พระรู้ พระรัก พระห่วง",
     "title_en": "He Knows, He Loves, He Cares",
     "key_signature": "1=Bb",
@@ -10328,7 +10328,7 @@
     ]
   },
   {
-    "number": "365",
+    "number": 365,
     "title": "โอ้ รักอันล้ำลึก ของพระคริสต์",
     "title_en": "Once to Every Man and Nation",
     "key_signature": "1=Ab",
@@ -10345,7 +10345,7 @@
     ]
   },
   {
-    "number": "366",
+    "number": 366,
     "title": "ชาวไทยทุกคนควรจะรู้",
     "title_en": "Everybody Ought to Know",
     "key_signature": "1=F",
@@ -10366,7 +10366,7 @@
     ]
   },
   {
-    "number": "367",
+    "number": 367,
     "title": "เพราะพระเจ้าทรงรักโลก",
     "title_en": "For God So Loved the World",
     "key_signature": "1=F",
@@ -10383,7 +10383,7 @@
     ]
   },
   {
-    "number": "368",
+    "number": 368,
     "title": "ขอบคุณพระ",
     "title_en": "Thank You, Lord",
     "key_signature": "1=G",
@@ -10400,7 +10400,7 @@
     ]
   },
   {
-    "number": "369",
+    "number": 369,
     "title": "โปรดเถิด",
     "title_en": "Do Lord",
     "key_signature": "1=Ab",
@@ -10421,7 +10421,7 @@
     ]
   },
   {
-    "number": "370",
+    "number": 370,
     "title": "เดินไปกับพระคริสต์",
     "title_en": "Walking with Jesus",
     "key_signature": "1=Ab",
@@ -10442,7 +10442,7 @@
     ]
   },
   {
-    "number": "371",
+    "number": 371,
     "title": "โปรดให้วาจาของข้าฯเป็นที่พอพระทัย",
     "title_en": "Let The Words of My Mouth",
     "key_signature": "1=F",
@@ -10459,7 +10459,7 @@
     ]
   },
   {
-    "number": "372",
+    "number": 372,
     "title": "ข้าฯเห็นพระเยซู",
     "title_en": "I See Jesus",
     "key_signature": "1=G",
@@ -10476,7 +10476,7 @@
     ]
   },
   {
-    "number": "373",
+    "number": 373,
     "title": "เราให้ท่านเป็นผู้นำคนบาป",
     "title_en": "Fishers of Men",
     "key_signature": "1=F",
@@ -10497,7 +10497,7 @@
     ]
   },
   {
-    "number": "374",
+    "number": 374,
     "title": "ไยร้องสรรเสริญนามพระเยซู",
     "title_en": "Why Do I Sing About Jesus?",
     "key_signature": "1=Ab",
@@ -10514,7 +10514,7 @@
     ]
   },
   {
-    "number": "375",
+    "number": 375,
     "title": "จงยิ้มไว้",
     "title_en": "You Can Smile",
     "key_signature": "1=F",
@@ -10531,7 +10531,7 @@
     ]
   },
   {
-    "number": "376",
+    "number": 376,
     "title": "กว้างกว่ามหาสมุทร",
     "title_en": "Wide, Wide as the Ocean",
     "key_signature": "1=C",
@@ -10548,7 +10548,7 @@
     ]
   },
   {
-    "number": "377",
+    "number": 377,
     "title": "ท่านต้องเปิดประตูจิต",
     "title_en": "You Must Open the Door",
     "key_signature": "1=F",
@@ -10565,7 +10565,7 @@
     ]
   },
   {
-    "number": "378",
+    "number": 378,
     "title": "ดวงใจฉันเบิกบานสุขเกษม",
     "title_en": "Summertime in My Heart",
     "key_signature": "1=F",
@@ -10590,7 +10590,7 @@
     ]
   },
   {
-    "number": "379",
+    "number": 379,
     "title": "ฮาเลลูยา",
     "title_en": "Hallelujah",
     "key_signature": "1=Ab",
@@ -10611,7 +10611,7 @@
     ]
   },
   {
-    "number": "380",
+    "number": 380,
     "title": "ฉันมีความสุข",
     "title_en": "I Have the Joy",
     "key_signature": "1=C",
@@ -10636,7 +10636,7 @@
     ]
   },
   {
-    "number": "381",
+    "number": 381,
     "title": "สวรรค์อันวิไล",
     "title_en": "Heavenly Sunshine",
     "key_signature": "1=Db",
@@ -10653,7 +10653,7 @@
     ]
   },
   {
-    "number": "382",
+    "number": 382,
     "title": "อาเมน",
     "title_en": "Amens",
     "key_signature": null,
@@ -10670,7 +10670,7 @@
     ]
   },
   {
-    "number": "383",
+    "number": 383,
     "title": "ข้าฯต้องการให้พร้อม",
     "title_en": "I Want To Be Ready",
     "key_signature": "1=Ab",
@@ -10683,23 +10683,6 @@
       {
         "line": "1",
         "text": "ข้าฯต้องการให้พร้อมเมื่อวันพระองค์มา ข้าฯต้องการให้พร้อมเมื่อวันพระองค์มา ความสุขในโลกคล้ำยามข้าฯคอยพระทรงนำ โปรดคุ้มข้าฯไว้ตราบพระมา"
-      }
-    ]
-  },
-  {
-    "number": "384",
-    "title": "เรามีความหวัง",
-    "title_en": "We Have This Hope",
-    "key_signature": "1=Ab",
-    "time_signature": "4/4",
-    "tune": null,
-    "lyric_authors": "Wayne Hooper (1920-2007)",
-    "music_authors": null,
-    "scripture_references": "John.4.35",
-    "content": [
-      {
-        "line": "1",
-        "text": "เรามีความหวังประดั่งอยู่ในจิตใจ หวังในการกลับมาของพระเจ้า เรามีความเชื่อว่าพระคริสต์ทรงรักเรา เชื่อในคำสัญญาของพระเจ้า เราเชื่อว่าจวนถึงเวลา ที่ทุกชาติภาษาใกล้ไกล จะลุกขึ้นร้องเพลงอวยชัย ฮาเลลูยา จอมราชา เรามีความหวังประดั่งอยู่ในจิตใจ หวังในการกลับมาของพระเจ้า"
       }
     ]
   }
