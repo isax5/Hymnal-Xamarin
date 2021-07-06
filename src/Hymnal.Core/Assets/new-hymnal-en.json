@@ -557,7 +557,7 @@
       },
       {
         "line": "3",
-        "text": "To all life Thou givest to both great and small; In all life Thou livest, the true life of all; We blossom and flourish like leaves on the tree, And wither and perish - but naught changeth Thee."
+        "text": "To all life Thou givest to both great and small; In all life Thou livest, the true life of all; We blossom and flourish like leaves on the tree, Then wither and perish - but naught changeth Thee."
       },
       {
         "line": "4",
@@ -1204,7 +1204,7 @@
     "lyrics": [
       {
         "line": "1",
-        "text": "Morning has broken like the first morning, Blackbird has spoken like the first bird. Praise for the singing!Praise for the morning! Praise for the springing fresh from the Word!"
+        "text": "Morning has broken like the first morning, Blackbird has spoken like the first bird. Praise for the singing! Praise for the morning! Praise for the springing fresh from the Word!"
       },
       {
         "line": "2",
@@ -3376,15 +3376,19 @@
     "lyric_authors": null,
     "lyrics": [
       {
+        "line": "ref",
+        "text": "Go, tell it on the mountain, Over the hills and everywhere: Go, tell it on the mountain That Jesus Christ is born!"
+      },
+      {
         "line": "1",
         "text": "While shepherds kept their watching O\u2019er silent flocks by night, Behold throughout the heavens There shone a holy light."
       },
       {
-        "line": "ref",
-        "text": "Go, tell it on the mountain, Over the hills and everywhere: Go, tell it on the mountain That Jesus Christ is born! The shepherds feared and trembled When lo! Above the earth Rang out the angel chorus That hailed our Savior\u2019s birth."
+        "line": "2",
+        "text": "The shepherds feared and trembled When lo! Above the earth Rang out the angel chorus That hailed our Savior\u2019s birth."
       },
       {
-        "line": "2",
+        "line": "3",
         "text": "Down in a lowly manger The humble Christ was born, And brought us God\u2019s salvation That blessed Christmas morn."
       }
     ],
@@ -8733,11 +8737,11 @@
     "lyrics": [
       {
         "line": "1",
-        "text": "In the morning, when I rise In the morning, when I rise In the morning, when I rise"
+        "text": "In the morning, when I rise In the morning, when I rise In the morning, when I rise Give me Jesus."
       },
       {
         "line": "ref",
-        "text": "Give me Jesus. Give me Jesus, Give me Jesus. You can have all this world, Just give me Jesus."
+        "text": "Give me Jesus. Give me Jesus. You can have all this world, Just give me Jesus."
       },
       {
         "line": "2",
@@ -11362,7 +11366,7 @@
       },
       {
         "line": "3",
-        "text": "Lord of the Sabbath, Savior and Creator, Calm now the throbbings of each troubled breast. Speak to our hearts the peace of Thy commandments, Breathe on each soul fair Eden\u2019s hallowed ret."
+        "text": "Lord of the Sabbath, Savior and Creator, Calm now the throbbings of each troubled breast. Speak to our hearts the peace of Thy commandments, Breathe on each soul fair Eden\u2019s hallowed rest."
       },
       {
         "line": "4",
@@ -12688,18 +12692,14 @@
     "lyrics": [
       {
         "line": "1",
-        "text": "How cheering is the Christian\u2019s hope, While toiling here below! It bouys us up while this passing through This wilderness of woe,"
+        "text": "How cheering is the Christian\u2019s hope, While toiling here below! It bouys us up while passing through This wilderness of woe, It bouys us up while passing through This wilderness of woe."
       },
       {
         "line": "2",
-        "text": "It bouys us up while passing through This wilderness of woe, It bouys us up while passing through This wilderness of woe."
-      },
-      {
-        "line": "3",
         "text": "It points us to a land of rest, Where saints with Christ will reign; Where we shall meet the loved of earth, And never part again."
       },
       {
-        "line": "4",
+        "line": "3",
         "text": "Fly, lingering moments, fly, O, fly, Dear Savior, quickly come! We long to see Thee as Thou art, And reach that blissful home."
       }
     ],
