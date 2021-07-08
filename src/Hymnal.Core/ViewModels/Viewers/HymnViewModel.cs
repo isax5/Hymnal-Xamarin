@@ -17,8 +17,8 @@ using MediaManager.Library;
 using MediaManager.Player;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Commands;
-using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using Plugin.StorageManager;
 using Xamarin.Essentials;
@@ -28,7 +28,7 @@ namespace Hymnal.Core.ViewModels
     public class HymnViewModel : BaseViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
-        private readonly IMvxLog log;
+        private readonly ILogger<HymnViewModel> logger;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaManager mediaManager;
@@ -79,7 +79,7 @@ namespace Hymnal.Core.ViewModels
 
         public HymnViewModel(
             IMvxNavigationService navigationService,
-            IMvxLog log,
+            ILogger<HymnViewModel> logger,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
@@ -89,7 +89,7 @@ namespace Hymnal.Core.ViewModels
             )
         {
             this.navigationService = navigationService;
-            this.log = log;
+            this.logger = logger;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.mediaManager = mediaManager;
@@ -125,7 +125,7 @@ namespace Hymnal.Core.ViewModels
                     { "Hymn Version", HymnParameter.HymnalLanguage.Id }
                 };
 
-                log.TraceException("Exception opening a hymnal", ex, properties);
+                logger.LogError("Exception opening a hymnal", ex, properties);
                 Crashes.TrackError(ex, properties);
 
                 await navigationService.Close(this);

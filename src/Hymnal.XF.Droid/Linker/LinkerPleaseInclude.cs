@@ -101,7 +101,7 @@ namespace Hymnal.XF.Droid.Linker
 
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
-            _ = new MvxNavigationService(null, loader);
+            _ = new MvxNavigationService(loader, null, null);
             _ = new MvxAppStart<MvxNullViewModel>(null, null);
         }
 
@@ -155,13 +155,14 @@ namespace Hymnal.XF.Droid.Linker
         #endregion
 
         #region XF
-        #endregion
-
-        #region Plugin Storage
-        public void Include(IStorageManager storageManager)
+        public void Include(Xamarin.Forms.Button button)
         {
-            _ = CrossStorageManager.Current;
-            _ = new StorageManagerImplementation();
+            button.Clicked += (s, e) => button.Text = button.Text + "";
+        }
+
+        public void Include(Xamarin.Forms.View view)
+        {
+            view.BackgroundColor = Xamarin.Forms.Color.Red;
         }
         #endregion
 
@@ -191,6 +192,14 @@ namespace Hymnal.XF.Droid.Linker
         public void Include(Core.App app)
         {
             _ = new Core.App();
+        }
+        #endregion
+
+        #region Plugin Storage
+        public void Include(IStorageManager storageManager)
+        {
+            _ = CrossStorageManager.Current;
+            _ = new StorageManagerImplementation();
         }
         #endregion
 

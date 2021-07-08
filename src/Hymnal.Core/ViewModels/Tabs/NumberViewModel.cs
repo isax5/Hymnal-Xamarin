@@ -36,7 +36,7 @@ namespace Hymnal.Core.ViewModels
 
 #if DEBUG
             // A long hymn
-            HymnNumber = $"{584}";
+            HymnNumber = $"{1}";
 #endif
         }
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -13,11 +14,10 @@ namespace Hymnal.Core.ViewModels
         private readonly IPreferencesService preferencesService;
 
         public RootViewModel(
-            IMvxLogProvider logProvider,
             IMvxNavigationService navigationService,
-            IMvxLog log,
+            ILoggerFactory loggerFactory,
             IPreferencesService preferencesService
-            ) : base(logProvider, navigationService)
+            ) : base(loggerFactory, navigationService)
         {
             this.preferencesService = preferencesService;
         }
@@ -76,7 +76,7 @@ namespace Hymnal.Core.ViewModels
         #region LifeCycle
         public override void Start()
         {
-            Log.Debug("App Started");
+            Log.LogInformation("App Started");
 
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
                 DeviceInfo.Platform == DevicePlatform.Android)

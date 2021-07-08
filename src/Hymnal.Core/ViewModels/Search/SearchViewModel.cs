@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using System.Reactive.Linq;
-using System.Threading;
 using System.Threading.Tasks;
 using Helpers;
 using Hymnal.Core.Extensions;
@@ -10,7 +9,7 @@ using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using MvvmCross.Logging;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
 
@@ -21,7 +20,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly IMvxLog log;
+        private readonly ILogger<SearchViewModel> logger;
 
         public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
 
@@ -58,13 +57,13 @@ namespace Hymnal.Core.ViewModels
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
-            IMvxLog log
+            ILogger<SearchViewModel> logger
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-            this.log = log;
+            this.logger = logger;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
 
             ObservableTextSearchBar
@@ -107,7 +106,7 @@ namespace Hymnal.Core.ViewModels
         {
             Hymns.Clear();
 
-            log.Debug($"Search for: {text}");
+            logger.LogInformation($"Search for: {text}");
 
             IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 
