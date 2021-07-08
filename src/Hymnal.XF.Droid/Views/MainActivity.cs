@@ -5,14 +5,16 @@ using Android.Runtime;
 using Hymnal.Core.ViewModels.Main;
 using Hymnal.StorageModels;
 using MediaManager;
-using Plugin.StorageManager;
 using MvvmCross.Forms.Platforms.Android.Views;
+using Plugin.StorageManager;
 using Xamarin.Forms;
 
 namespace Hymnal.XF.Droid
 {
     [Activity(
-        Theme = "@style/AppTheme")]
+        Theme = "@style/AppTheme",
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+        LaunchMode = LaunchMode.SingleTask)]
     public class MainActivity : MvxFormsAppCompatActivity<MainViewModel>
     {
         protected override void OnCreate(Bundle bundle)
