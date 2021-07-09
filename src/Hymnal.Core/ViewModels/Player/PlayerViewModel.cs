@@ -4,6 +4,7 @@ using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Hymnal.Core.Services;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Commands;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
@@ -16,7 +17,7 @@ namespace Hymnal.Core.ViewModels
         private readonly IMvxNavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly IMvxLog log;
+        private readonly ILogger<PlayerViewModel> logger;
 
         private HymnIdParameter hymn;
         public HymnIdParameter HymnId
@@ -32,13 +33,13 @@ namespace Hymnal.Core.ViewModels
             IMvxNavigationService navigationService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
-            IMvxLog log
+            ILogger<PlayerViewModel> logger
             )
         {
             this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-            this.log = log;
+            this.logger = logger;
         }
 
         public override void Prepare(HymnIdParameter parameter)
@@ -56,7 +57,7 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            log.Info($"Player open: {HymnId} of {Language.Id}");
+            logger.Log(LogLevel.Information, $"Player open: {HymnId} of {Language.Id}");
 
             // TODO: Check Track event player (Try to no make differences in the sended data for this log related to the previous one)
             //Analytics.TrackEvent(Constants.TrackEvents.HymnMusicPlayed, new Dictionary<string, string>

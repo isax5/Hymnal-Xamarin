@@ -6,6 +6,7 @@ using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.Core.Models.Parameter;
 using Microsoft.AppCenter.Analytics;
+using Microsoft.Extensions.Logging;
 using MvvmCross.Logging;
 using MvvmCross.Navigation;
 using MvvmCross.ViewModels;
@@ -15,7 +16,7 @@ namespace Hymnal.Core.ViewModels
     public class MusicSheetViewModel : MvxViewModel<HymnIdParameter>
     {
         private readonly IMvxNavigationService navigationService;
-        private readonly IMvxLog log;
+        private readonly ILogger<MusicSheetViewModel> logger;
 
         private HymnIdParameter hymn;
         public HymnIdParameter HymnId
@@ -36,11 +37,11 @@ namespace Hymnal.Core.ViewModels
 
         public MusicSheetViewModel(
             IMvxNavigationService navigationService,
-            IMvxLog log
+            ILogger<MusicSheetViewModel> logger
             )
         {
             this.navigationService = navigationService;
-            this.log = log;
+            this.logger = logger;
         }
 
         public override void Prepare(HymnIdParameter parameter)
@@ -59,7 +60,7 @@ namespace Hymnal.Core.ViewModels
         {
             base.ViewAppeared();
 
-            log.Info($"Opening Hymn Sheet: {HymnId} of {Language.Id}");
+            logger.LogInformation($"Opening Hymn Sheet: {HymnId} of {Language.Id}");
 
             Analytics.TrackEvent(Constants.TrackEv.HymnMusicSheetOpened, new Dictionary<string, string>
             {

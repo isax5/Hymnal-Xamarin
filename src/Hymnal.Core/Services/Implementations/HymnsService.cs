@@ -2,11 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Hymnal.Core.Extensions;
 using Hymnal.Core.Models;
 using Hymnal.StorageModels.Models;
 using Microsoft.AppCenter.Crashes;
-using MvvmCross.Logging;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace Hymnal.Core.Services
@@ -14,7 +13,7 @@ namespace Hymnal.Core.Services
     public class HymnsService : IHymnsService
     {
         private readonly IFilesService filesService;
-        private readonly IMvxLog log;
+        private readonly ILogger<HymnsService> logger;
 
         /// <summary>
         /// <see cref="Hymn"/> cache
@@ -28,11 +27,11 @@ namespace Hymnal.Core.Services
 
         public HymnsService(
             IFilesService filesService,
-            IMvxLog log
+            ILogger<HymnsService> logger
             )
         {
             this.filesService = filesService;
-            this.log = log;
+            this.logger = logger;
         }
 
         /// <summary>
@@ -67,7 +66,7 @@ namespace Hymnal.Core.Services
                         { "Hymnal Version", language.Id }
                     };
 
-                    log.TraceException("Exception reading hymnbook", ex, properties);
+                    logger.LogError("Exception reading hymnbook", ex, properties);
                     Crashes.TrackError(ex, properties);
 
                     return new List<Hymn>();
