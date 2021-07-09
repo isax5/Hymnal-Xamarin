@@ -134,7 +134,8 @@ namespace Hymnal.XF.iOS.Linker
 
         public void Include(MvxNavigationService service, IMvxViewModelLoader loader)
         {
-            _ = new MvxNavigationService(null, loader);
+            _ = new MvxNavigationService(loader, null, null);
+            _ = new MvxAppStart<MvxNullViewModel>(null, null);
         }
 
         public void Include(ConsoleColor color)
