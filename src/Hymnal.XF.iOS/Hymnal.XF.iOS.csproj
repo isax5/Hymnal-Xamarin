@@ -290,6 +290,11 @@
     </ProjectReference>
   </ItemGroup>
   <!-- PIANO SHEET -->
+  <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <Content Include="Resources\PianoSheet_NewHymnal_en_001.png" />
+    <Content Include="Resources\PianoSheet_NewHymnal_es_001.png" />
+    <Content Include="Resources\PianoSheet_NewHymnal_ru_001.png" />
+  </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <Content Include="Resources\PianoSheet_NewHymnal_en_001.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_en_002.png" />
