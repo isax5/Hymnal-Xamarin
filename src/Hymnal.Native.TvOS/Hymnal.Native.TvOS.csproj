@@ -75,20 +75,23 @@
     <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="MediaManager, Version=0.9.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Plugin.MediaManager.0.9.6\lib\xamarintvos10\MediaManager.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="Xamarin.TVOS" />
     <Reference Include="MvvmCross">
-      <HintPath>..\..\packages\MvvmCross.6.4.2\lib\xamarintvos10\MvvmCross.dll</HintPath>
+      <HintPath>..\..\packages\MvvmCross.8.0.1\lib\xamarintvos10\MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="OpenTK-1.0" />
     <Reference Include="System.Drawing.Common.dll" />
     <Reference Include="Xamarin.Essentials">
-      <HintPath>..\..\packages\Xamarin.Essentials.1.5.3.2\lib\xamarintvos10\Xamarin.Essentials.dll</HintPath>
+      <HintPath>..\..\packages\Xamarin.Essentials.1.6.1\lib\xamarintvos10\Xamarin.Essentials.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions">
+      <HintPath>..\..\packages\Microsoft.Extensions.Logging.Abstractions.5.0.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="MediaManager">
+      <HintPath>..\..\packages\Plugin.MediaManager.1.0.9\lib\xamarintvos10\MediaManager.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
