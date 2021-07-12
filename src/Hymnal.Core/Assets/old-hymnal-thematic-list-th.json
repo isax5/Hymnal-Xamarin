@@ -1,0 +1,340 @@
+[
+  {
+    "thematic": "เพลนมัการ",
+    "thematic_en": "Worship",
+    "ambits": [
+      {
+        "ambit": "ความรักและสรรเสริญ",
+        "ambit_en": "Adoration and Praise",
+        "list": [22,32,7,35,5,36,13,3,25,21,24,16,19,14,8,6,37,17,28,39,38,15,2,1,20,9,10,33,11,34,12,26,18,23,27,31,4,30],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo1a21"
+      },
+      {
+        "ambit": "เพลงเริ่มกานัสการ",
+        "ambit_en": "Opening Worship",
+        "list": [42,41],
+        "star": 41,
+        "end": 42,
+        "backimage": "Fondo46a52"
+      },
+      {
+        "ambit": "เพลงบี่คกานมัสการ",
+        "ambit_en": "Closing of Worship",
+        "list": [43,44],
+        "star": 43,
+        "end": 44,
+        "backimage": "Fondo46a52"
+      },
+      {
+        "ambit": "เพลงสวดตอนเช้า",
+        "ambit_en": "Morning Hymns",
+        "list": [45,46],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo22a34"
+      },
+      {
+        "ambit": "เพลงสวดตอนเย็น",
+        "ambit_en": "Evening Hymns",
+        "list": [47,50,48,48],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo35a45"
+      }
+    ]
+  },
+  {
+    "thematic": "พระเยซูคริสต์",
+    "thematic_en": "Jesus Christ",
+    "ambits": [
+      {
+        "ambit": "การประสูติและการเสค็จมา",
+        "ambit_en": "Incarnation and Advent",
+        "list": [54,53,57,52,58,61,55,59,56,51,60],
+        "star": 51,
+        "end": 61,
+        "backimage": "Fondo190a203"
+      },
+      {
+        "ambit": "ความรักและมิตรภาพของพระเยซู",
+        "ambit_en": "Jesus' Love and Friendship",
+        "list": [32,80,84,97,78,85,79,65,72,94,63,70,64,93,6,71,75,76,91,86,2,95,351,90,240,96,99,332,98,82,55,74,73,77,62,69,26,81,67,66,89,88,87,83,92],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "พระคริสต์ทรงถูกตรีงพระบนม์",
+        "ambit_en": "Jesus' Crucifixion",
+        "list": [106,108,113,111,94,6,101,112,109,104,110,103,107,27,102],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "ความรอดของเรา",
+        "ambit_en": "Our Salvation",
+        "list": [80,117,114,120,101,71,116,115,118,62,119,121,122],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "การฟี้นพระชนม์",
+        "ambit_en": "Resurrection",
+        "list": [124,125],
+        "star": 124,
+        "end": 125,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "การเค็จมาครั้งที่สอง",
+        "ambit_en": "Second Coming",
+        "list": [146,140,145,138,147,133,126,134,130,149,137,132,136,128,135,143,148,131,129,127,144,139,141,142],
+        "star": 126,
+        "end": 149,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "ชัยชนะในพระเยซู",
+        "ambit_en": "Victory In Christ",
+        "list": [36,71,150],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo238a244"
+      }
+    ]
+  },
+  {
+    "thematic": "พระวิญญาณบริสุทธิ์",
+    "thematic_en": "Holy Spirit",
+    "ambits": [
+      {
+        "ambit": "พระวิญญาณบริสุทธิ์",
+        "ambit_en": "Holy Spirit",
+        "list": [152,157,155,154,46,151],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo204a208"
+      }
+    ]
+  },
+  {
+    "thematic": "พระคัมภีร์อันศักดิ์สิทธิ์",
+    "thematic_en": "Holy Scripture",
+    "ambits": [
+      {
+        "ambit": "พระคัมภีร์อันศักดิ์สิทธิ์",
+        "ambit_en": "Holy Scripture",
+        "list": [160,161,159,158],
+        "star": 158,
+        "end": 161,
+        "backimage": "Fondo209a237"
+      }
+    ]
+  },
+  {
+    "thematic": "พระคัมภีร์อันศักดิ์สิทธิ์",
+    "thematic_en": "Christian Life",
+    "ambits": [
+      {
+        "ambit": "การออกประกาศ",
+        "ambit_en": "Call To Action",
+        "list": [165,136,163,164,162,131],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "การเล้าโลใจ",
+        "ambit_en": "Comfort In Sorrow and Trial",
+        "list": [167,79,166,169,168,170],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "การอุทิศศตัว",
+        "ambit_en": "Consecration and Devotion",
+        "list": [108,113,183,21,185,171,178,182,172,176,188,112,187,175,181,180,1,177,189,192,182,173,179,82,186,194,130,69,174,190],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "ความกล้าหาญ",
+        "ambit_en": "Courage",
+        "list": [205,222],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "ความเชี่อและการไว้วางใจ",
+        "ambit_en": "Faith and Trust",
+        "list": [233,167,84,339,219,217,225,229,223,222,238,350,79,166,63,70,227,226,230,231,86,224,200,104,218,220,90,240,136,236,228,237,153,201,232,221,235,239,234],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo608a613"
+      },
+      {
+        "ambit": "คําแนะนํา",
+        "ambit_en": "Guidance",
+        "list": [24,85,169,168,200,109,350,202,201],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "ความสุขและความสงบสุข",
+        "ambit_en": "Joy and Peace",
+        "list": [249,167,117,217,246,252,243,65,241,245,28,39,193,254,255,248,247,253,170,251,87,190,242],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo590a596"
+      },
+      {
+        "ambit": "การธิษฐานและการรําพีง",
+        "ambit_en": "Meditation and Prayer",
+        "list": [209,211,212,217,72,70,181,210,215,213,214,216,83],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "การอุทิศและการอุทิศตน",
+        "ambit_en": "Obedience and Surrender",
+        "list": [196,117,171,195,197,198,96,10,199,239,102],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "การต่อสู้กับความชั่วรัาย",
+        "ambit_en": "Warfare",
+        "list": [205,45,207,38,163,203,164,204,206,208,150],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "งานกับหน้าที่",
+        "ambit_en": "Work and Duty",
+        "list": [259,45,165,279,273,278,276,270,258,265,261,263,269,241,262,280,76,16,264,267,199,115,259,153,271,256,268,274,275,272,257,277,266],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "เชิญชวนให้กลับใจ",
+    "thematic_en": "Call",
+    "ambits": [
+      {
+        "ambit": "เชิญชวนให้กลับใจ",
+        "ambit_en": "Call",
+        "list": [196,290,225,353,285,283,94,355,286,287,288,158,291,284,289,281],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo466a473"
+      }
+    ]
+  },
+  {
+    "thematic": "ตอบสนองการเชิญชวน",
+    "thematic_en": "Call Accepted",
+    "ambits": [
+      {
+        "ambit": "ตอบสนองการเชิญชวน",
+        "ambit_en": "Call Accepted",
+        "list": [196,298,293,295,294,300,172,299,288,1,292,255,296,297],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo579a580"
+      }
+    ]
+  },
+  {
+    "thematic": "คริสตจักรและหลักความเชี่อ",
+    "thematic_en": "Church and Doctrines",
+    "ambits": [
+      {
+        "ambit": "คริสตจักร",
+        "ambit_en": "Church",
+        "list": [354,327],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "บ้าน",
+        "ambit_en": "Home",
+        "list": [249,334],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo608a613"
+      },
+      {
+        "ambit": "ศีลมหาสนิท",
+        "ambit_en": "Lord's Supper",
+        "list": [111,118],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "วันสะบาโต",
+        "ambit_en": "Sabbath",
+        "list": [330,328,331,329],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  },
+  {
+    "thematic": "โอกาสพิเศษ",
+    "thematic_en": "Special Occasion",
+    "ambits": [
+      {
+        "ambit": "โอกาสพิเศษ",
+        "ambit_en": "Special Occasion",
+        "list": [339,336,335,333,341,338,332,204,160],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "เพลงร้องรับและการตอบสนอง",
+    "thematic_en": "Choruses and Responses",
+    "ambits": [
+      {
+        "ambit": "เพลงร้องรับและการตอบสนอง",
+        "ambit_en": "Choruses and Responses",
+        "list": [382,244,369,366,373,282,367,40,68,379,364,358,381,29,380,372,383,100,343,371,363,365,361,356,250,340,156,378,368,357,191,105,370,361,374,376,360,375,377],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  },
+  {
+    "thematic": "เพลงพิเศษและคณะนักร้อง",
+    "thematic_en": "Choir and Special",
+    "ambits": [
+      {
+        "ambit": "เพลงพิเศษและคณะนักร้อง",
+        "ambit_en": "Choir and Special",
+        "list": [106,80,140,306,319,298,282,78,314,350,260,283,79,326,19,349,227,75,230,37,342,17,231,224,187,95,345,352,351,240,192,184,228,237,199,73,320,310,103,62,69,208,268,67,302,297,344,170,89,122,174,316,289,92,321],
+        "star": null,
+        "end": null,
+        "backimage": "Fondo590a596"
+      }
+    ]
+  }
+]
