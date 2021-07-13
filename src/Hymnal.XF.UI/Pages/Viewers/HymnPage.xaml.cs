@@ -7,7 +7,6 @@ namespace Hymnal.XF.UI.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     [MvxModalPresentation(WrapInNavigationPage = true)]
-    //[MvxContentPagePresentation(WrapInNavigationPage = true, NoHistory = false)]
     public partial class HymnPage : BaseContentPage<HymnViewModel>
     {
         public HymnPage()

@@ -8,7 +8,6 @@
     xmlns:mvxViews="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
     xmlns:viewModels="clr-namespace:Hymnal.Core.ViewModels;assembly=Hymnal.Core"
     Title="{i18n:Translate History}"
-    iOS:Page.ModalPresentationStyle="PageSheet"
     iOS:Page.UseSafeArea="True"
     x:TypeArguments="viewModels:RecordsViewModel"
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}">
@@ -40,7 +39,7 @@
             RowDefinitions="auto, *"
             RowSpacing="0">
 
-            <StackLayout
+            <!--<StackLayout
                 x:Name="SlideBar"
                 Grid.Row="0"
                 Padding="12">
@@ -53,7 +52,7 @@
                     HorizontalOptions="CenterAndExpand"
                     Opacity="0.7"
                     WidthRequest="40" />
-            </StackLayout>
+            </StackLayout>-->
 
             <CollectionView
                 Grid.Row="1"
