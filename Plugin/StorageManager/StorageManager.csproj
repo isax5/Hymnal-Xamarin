@@ -83,21 +83,21 @@
     <Compile Include="**\TVOS\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('Tizen')) ">
     <Compile Include="**\Tizen\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
 
   <ItemGroup Condition=" $(TargetFramework.StartsWith('uap10.0')) ">
     <Compile Include="**\UAP\**\*.cs" />
     <Compile Include="**\*.preferences.cs" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-    <PackageReference Include="Xamarin.Essentials" Version="1.6.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
     <!--
     If you need to add sdk references:
      <SDKReference Include="WindowsMobile, Version=10.0.16299.0">

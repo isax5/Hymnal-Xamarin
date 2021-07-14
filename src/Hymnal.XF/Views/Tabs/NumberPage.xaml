@@ -1,0 +1,166 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.Views.NumberPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+    xmlns:constans="clr-namespace:Hymnal.XF.Constants"
+    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    Title="{i18n:Translate Number}"
+    iOS:Page.UseSafeArea="True"
+    x:DataType="viewModels:NumberViewModel"
+    x:TypeArguments="viewModels:NumberViewModel"
+    AutomationId="NumberPage"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    Visual="Material">
+
+    <ContentPage.IconImageSource>
+        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
+    </ContentPage.IconImageSource>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="RecordsToolbarItem"
+            AutomationId="OpenRecordsPageToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenRecords}"
+            Command="{Binding OpenRecordsCommand}"
+            Priority="-1">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.History}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem
+            AutomationId="OpenSearchPageToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenSearch}"
+            Command="{Binding OpenSearchCommand}"
+            Priority="1">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <RelativeLayout>
+        <Image
+            x:Name="backgroundImage"
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            Opacity="{DynamicResource BackgroundMainPageFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <StackLayout
+            x:Name="MainStack"
+            HorizontalOptions="CenterAndExpand"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}">
+            <StackLayout
+                x:Name="ContainerStack"
+                Margin="0,30"
+                Padding="0,0,0,60">
+                <Grid Padding="0">
+
+                    <Frame
+                        BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        HorizontalOptions="CenterAndExpand"
+                        Opacity="0.3"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />
+
+                    <StackLayout
+                        x:Name="EntryContainer"
+                        HorizontalOptions="CenterAndExpand"
+                        Orientation="Horizontal">
+                        <Label
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontAttributes="Bold"
+                            FontSize="45"
+                            Text="#"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center" />
+
+                        <Entry
+                            x:Name="HymnNumberEntry"
+                            AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AutomationId="HymnNumberEntry"
+                            AutomationProperties.HelpText="{i18n:Translate AutomationNumberPageHelpTextEntry}"
+                            AutomationProperties.Name="{i18n:Translate AutomationNumberPageEntry}"
+                            BackgroundColor="Transparent"
+                            FontAttributes="Bold"
+                            FontSize="40"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Numeric"
+                            Placeholder="...."
+                            PlaceholderColor="{DynamicResource PrimaryLightColor}"
+                            Text="{Binding HymnNumber}"
+                            TextColor="{DynamicResource PrimaryTextColor}"
+                            VerticalOptions="CenterAndExpand"
+                            Visual="Default"
+                            WidthRequest="150">
+                            <Entry.Behaviors>
+                                <behaviors:XamarinFastEntryBehaviour IsNumeric="True" Mask="###" />
+                            </Entry.Behaviors>
+                        </Entry>
+                    </StackLayout>
+                </Grid>
+
+                <Button
+                    AutomationId="OpenHymnButton"
+                    AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenHymnButton}"
+                    Clicked="OpenButton_Clicked"
+                    Command="{Binding OpenHymnCommand}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{i18n:Translate Open}"
+                    WidthRequest="200">
+                    <Button.ImageSource>
+                        <FontImageSource
+                            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                            Glyph="{x:Static constans:FontAwesomeIcons.BookOpen}"
+                            Color="{DynamicResource NavBarTextColor}" />
+                    </Button.ImageSource>
+                </Button>
+            </StackLayout>
+
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="OrientationStates">
+                    <VisualState x:Name="Portrait">
+                        <VisualState.Setters>
+                            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Vertical" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Landscape">
+                        <VisualState.Setters>
+                            <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Horizontal" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </StackLayout>
+    </RelativeLayout>
+
+</views:BaseContentPage>

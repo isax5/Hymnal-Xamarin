@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.UI.Pages.PlayerContent"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    iOS:Page.UseSafeArea="True"
+    x:DataType="viewModels:PlayerViewModel"
+    x:TypeArguments="viewModels:PlayerViewModel"
+    Visual="Material">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="CloseToolbar"
+            Command="{Binding CloseCommand}"
+            Priority="-1"
+            Text="{i18n:Translate Close}" />
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <Label Text="Hello world" />
+    </ContentPage.Content>
+
+</views:BaseContentPage>

@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.Views.FavoritesPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.XF.Constants"
+    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    x:Name="page"
+    Title="{i18n:Translate Favorites}"
+    iOS:Page.UseSafeArea="True"
+    x:DataType="viewModels:FavoritesViewModel"
+    x:TypeArguments="viewModels:FavoritesViewModel"
+    AutomationId="FavoritesPage"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    Visual="Material">
+
+    <ContentPage.IconImageSource>
+        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Heart}" />
+    </ContentPage.IconImageSource>
+
+    <ContentPage.Content>
+        <RelativeLayout>
+            <Image
+                Aspect="AspectFill"
+                AutomationProperties.IsInAccessibleTree="False"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                       Property=Height}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width}"
+                Source="{DynamicResource BackgroundImageFile}" />
+
+            <StackLayout
+                BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+                Opacity="{DynamicResource BackgroundWhiteFilter}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                       Property=Height}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width}" />
+
+            <ListView
+                x:Name="list"
+                BackgroundColor="Transparent"
+                CachingStrategy="RecycleElement"
+                Footer=""
+                ItemsSource="{Binding Hymns}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                       Property=Height}"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                      Property=Width}"
+                RowHeight="50"
+                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <!--  Working for cells: Command="{Binding Source={RelativeSource AncestorType={x:Type viewModels:FavoritesViewModel}}, Path=DeleteHymnCommand}"  -->
+                            <!--  Recomended by Microsoft: Command="{Binding Source={x:Reference page}, Path=BindingContext.DeleteHymnCommand}"  -->
+                            <!--  Working in for this case: Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"  -->
+                            <ViewCell.ContextActions>
+                                <MenuItem
+                                    Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"
+                                    CommandParameter="{Binding .}"
+                                    IsDestructive="True"
+                                    Text="{i18n:Translate Delete}" />
+                            </ViewCell.ContextActions>
+                            <Grid
+                                Padding="20,0"
+                                ColumnDefinitions="0.2*, *"
+                                ColumnSpacing="0"
+                                RowDefinitions="0.7*, 0.3*"
+                                RowSpacing="0">
+
+                                <!--  Number  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    Grid.Column="0"
+                                    AutomationProperties.HelpText="{Binding Item2.Title}"
+                                    FontSize="Large"
+                                    Text="{Binding Item2.Number}"
+                                    TextColor="{DynamicResource PrimaryTextColor}"
+                                    VerticalOptions="CenterAndExpand" />
+
+                                <!--  Title  -->
+                                <Label
+                                    Grid.Row="0"
+                                    Grid.Column="1"
+                                    AutomationProperties.IsInAccessibleTree="False"
+                                    FontSize="Large"
+                                    LineBreakMode="TailTruncation"
+                                    Text="{Binding Item2.Title}"
+                                    TextColor="{DynamicResource PrimaryTextColor}"
+                                    VerticalOptions="CenterAndExpand" />
+
+                                <!--  Preview  -->
+                                <Label
+                                    Grid.Row="1"
+                                    Grid.Column="1"
+                                    AutomationProperties.IsInAccessibleTree="False"
+                                    FontSize="Micro"
+                                    LineBreakMode="TailTruncation"
+                                    Text="{Binding Item2.PlainContent}"
+                                    TextColor="{DynamicResource SecondaryTextColor}"
+                                    VerticalOptions="CenterAndExpand" />
+
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </RelativeLayout>
+    </ContentPage.Content>
+
+</views:BaseContentPage>

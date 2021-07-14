@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.Views.ThematicIndexPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    x:DataType="viewModels:ThematicIndexViewModel"
+    x:TypeArguments="viewModels:ThematicIndexViewModel"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    Visual="Material">
+
+
+    <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout
+            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <ListView
+            BackgroundColor="Transparent"
+            Footer=""
+            ItemsSource="{Binding Thematics}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            SelectedItem="{Binding SelectedThematic, Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding ThematicName}" TextColor="{DynamicResource PrimaryTextColor}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </RelativeLayout>
+
+</views:BaseContentPage>

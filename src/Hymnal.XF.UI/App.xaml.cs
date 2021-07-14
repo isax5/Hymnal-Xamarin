@@ -1,8 +1,9 @@
 using System;
+using Hymnal.XF.Resources.Theme;
 using Hymnal.XF.UI.Resources;
 using Xamarin.Forms;
 
-namespace Hymnal.XF.UI
+namespace Hymnal.XF
 {
     public partial class App : Application
     {

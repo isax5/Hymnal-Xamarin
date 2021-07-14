@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<CarouselPage
+    x:Class="Hymnal.XF.Views.IndexPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.XF.Constants"
+    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    Title="{i18n:Translate Index}"
+    iOS:Page.UseSafeArea="True"
+    AutomationId="IndexPage"
+    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    Visual="Material">
+
+    <CarouselPage.IconImageSource>
+        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.ListUl}" />
+    </CarouselPage.IconImageSource>
+
+    <CarouselPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="AlphabeticalListToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationIndexPageAlphabeticalOrder}"
+            Clicked="AlphabeticalListToolbar_Clicked"
+            Priority="1">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.SortAlphaDown}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem
+            x:Name="NumericalListToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationIndexPageNumericalOrder}"
+            Clicked="NumericalListToolbar_Clicked"
+            Priority="2">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.ListOl}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+        <ToolbarItem
+            x:Name="ThematicListToolbar"
+            AutomationProperties.Name="{i18n:Translate AutomationIndexPageThematicIndex}"
+            Clicked="ThematicListToolbar_Clicked"
+            Priority="3">
+            <ToolbarItem.IconImageSource>
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Book}" />
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </CarouselPage.ToolbarItems>
+
+</CarouselPage>
