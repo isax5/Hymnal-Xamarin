@@ -1,4 +1,4 @@
-namespace Hymnal.StorageModels.Models
+namespace Hymnal.XF.Models.Realm
 {
     public interface IHymnReference
     {

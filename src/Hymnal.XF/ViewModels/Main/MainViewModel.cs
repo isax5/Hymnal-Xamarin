@@ -1,10 +1,10 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels.Main
 {
     public class MainViewModel : BaseViewModel
     {
+        public MainViewModel(INavigationService navigationService) : base(navigationService)
+        { }
     }
 }

@@ -4,13 +4,14 @@ using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
+using Hymnal.XF.Views;
 using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class ThematicHymnsListViewModel : BaseViewModel<GenericNavigationParameter<Ambit>>
+    public class ThematicHymnsListViewModel : BaseViewModelParameter<GenericNavigationParameter<Ambit>>
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
@@ -78,7 +79,7 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            await NavigationService.NavigateAsync<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
             {
                 Number = hymn.Number,
                 HymnalLanguage = language

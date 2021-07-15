@@ -1,22 +1,20 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
-using Hymnal.XF.Models.Parameter;
+using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Microsoft.AppCenter.Analytics;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
+using Hymnal.XF.Views;
+using MvvmHelpers;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class AlphabeticalIndexViewModel : MvxViewModel
+    public class AlphabeticalIndexViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
-        public MvxObservableCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; set; } = new MvxObservableCollection<ObservableGroupCollection<string, Hymn>>();
+        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<ObservableGroupCollection<string, Hymn>>();
 
         public Hymn SelectedHymn
         {
@@ -37,9 +35,8 @@ namespace Hymnal.XF.ViewModels
             INavigationService navigationService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService
-            )
+            ) : base(navigationService)
         {
-            this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
         }
@@ -49,27 +46,27 @@ namespace Hymnal.XF.ViewModels
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        public override async Task Initialize()
+        public override async void OnAppearing()
         {
+            base.OnAppearing();
+
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
 
             HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
             await CheckAsync(language);
-
-            await base.Initialize();
         }
 
-        public override void ViewAppeared()
-        {
-            base.ViewAppeared();
+        //public override void ViewAppeared()
+        //{
+        //    base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(AlphabeticalIndexViewModel) },
-                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
-        }
+        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
+        //    {
+        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(AlphabeticalIndexViewModel) },
+        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+        //    });
+        //}
 
         private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
@@ -107,7 +104,7 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
             {
                 Number = hymn.Number,
                 HymnalLanguage = loadedLanguage

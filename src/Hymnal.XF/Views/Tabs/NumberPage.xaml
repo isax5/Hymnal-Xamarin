@@ -127,6 +127,7 @@
                 </Grid>
 
                 <Button
+                    x:DataType="{x:Null}"
                     AutomationId="OpenHymnButton"
                     AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenHymnButton}"
                     Clicked="OpenButton_Clicked"

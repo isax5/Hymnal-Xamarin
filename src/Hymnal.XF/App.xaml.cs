@@ -1,7 +1,5 @@
-using System;
 using System.Globalization;
 using Hymnal.XF.Extensions.i18n;
-using Hymnal.XF.Resources.Theme;
 using Hymnal.XF.Services;
 using Hymnal.XF.ViewModels;
 using Hymnal.XF.Views;
@@ -44,15 +42,16 @@ namespace Hymnal.XF
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            containerRegistry.RegisterSingleton<IAppInfo, AppInfoImplementation>();
-            containerRegistry.RegisterSingleton<IConnectivity, ConnectivityImplementation>();
-            containerRegistry.RegisterSingleton<IPreferences, PreferencesImplementation>();
+            containerRegistry
+                .RegisterSingleton<IAppInfo, AppInfoImplementation>()
+                .RegisterSingleton<IConnectivity, ConnectivityImplementation>()
+                .RegisterSingleton<IPreferences, PreferencesImplementation>()
 
-            containerRegistry.RegisterSingleton<IAssetsService, AssetsService>();
-            containerRegistry.RegisterSingleton<IDataStorageService, DataStorageService>();
-            containerRegistry.RegisterSingleton<IFilesService, FilesService>();
-            containerRegistry.RegisterSingleton<IHymnsService, HymnsService>();
-            containerRegistry.RegisterSingleton<IPreferencesService, PreferencesService>();
+                .RegisterSingleton<IAssetsService, AssetsService>()
+                .RegisterSingleton<IDataStorageService, DataStorageService>()
+                .RegisterSingleton<IFilesService, FilesService>()
+                .RegisterSingleton<IHymnsService, HymnsService>()
+                .RegisterSingleton<IPreferencesService, PreferencesService>();
 
             containerRegistry.RegisterForNavigation<CustomNavigationPage>("NavigationPage");
             containerRegistry.RegisterForNavigation<SimplePage, SimpleViewModel>();
@@ -63,24 +62,24 @@ namespace Hymnal.XF
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsViewModel>();
         }
 
-        #region System events
+        //#region System events
 
-        protected override void OnStart()
-        {
-            base.OnStart();
-            ThemeHelper.CheckTheme();
-        }
+        //protected override void OnStart()
+        //{
+        //    base.OnStart();
+        //    ThemeHelper.CheckTheme();
+        //}
 
-        protected override void OnResume()
-        {
-            base.OnResume();
-            ThemeHelper.CheckTheme();
-        }
+        //protected override void OnResume()
+        //{
+        //    base.OnResume();
+        //    ThemeHelper.CheckTheme();
+        //}
 
-        protected override void OnAppLinkRequestReceived(Uri uri)
-        {
-            base.OnAppLinkRequestReceived(uri);
-        }
-        #endregion
+        //protected override void OnAppLinkRequestReceived(Uri uri)
+        //{
+        //    base.OnAppLinkRequestReceived(uri);
+        //}
+        //#endregion
     }
 }

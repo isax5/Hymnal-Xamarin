@@ -2,8 +2,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using Hymnal.XF.Models;
-using Hymnal.StorageModels.Models;
-using MvvmCross.ViewModels;
+using Hymnal.XF.Models.Realm;
+using MvvmHelpers;
 
 namespace Hymnal.XF.Extensions
 {
@@ -289,7 +289,7 @@ namespace Hymnal.XF.Extensions
     /// </summary>
     /// <typeparam name="S"></typeparam>
     /// <typeparam name="T"></typeparam>
-    public class ObservableGroupCollection<S, T> : MvxObservableCollection<T>
+    public class ObservableGroupCollection<S, T> : ObservableRangeCollection<T>
     {
         public S Key { get; private set; }
 

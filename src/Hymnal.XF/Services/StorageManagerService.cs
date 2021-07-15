@@ -1,12 +1,13 @@
 using System.Linq;
+using Hymnal.XF.Models.Realm;
 using Realms;
 
-namespace Plugin.StorageManager
+namespace Hymnal.XF.Services
 {
     /// <summary>
     /// DB implementation using Realm
     /// </summary>
-    public class BaseStorageManagerImplementation : IStorageManager
+    public class StorageManagerService : IStorageManagerService
     {
         public Realm RealmInstance;
 

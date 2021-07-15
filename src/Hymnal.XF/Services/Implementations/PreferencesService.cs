@@ -11,7 +11,7 @@ namespace Hymnal.XF.Services
     {
         public int HymnalsFontSize
         {
-            get => Preferences.Get(nameof(HymnalsFontSize), Constants.DEFAULT_HYMNALS_FONT_SIZE);
+            get => Preferences.Get(nameof(HymnalsFontSize), Constants.Constants.DEFAULT_HYMNALS_FONT_SIZE);
             set => Preferences.Set(nameof(HymnalsFontSize), value);
         }
 

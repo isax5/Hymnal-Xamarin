@@ -1,20 +1,22 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
+using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
+using Hymnal.XF.Views;
 using Microsoft.AppCenter.Analytics;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
+using MvvmHelpers;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class ThematicIndexViewModel : MvxViewModel
+    public class ThematicIndexViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
-        public MvxObservableCollection<Thematic> Thematics { get; set; } = new MvxObservableCollection<Thematic>();
+        public ObservableRangeCollection<Thematic> Thematics { get; set; } = new ObservableRangeCollection<Thematic>();
 
         public Thematic SelectedThematic
         {
@@ -35,9 +37,8 @@ namespace Hymnal.XF.ViewModels
             INavigationService navigationService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService
-            )
+            ) : base(navigationService)
         {
-            this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
         }
@@ -47,27 +48,27 @@ namespace Hymnal.XF.ViewModels
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        public override async Task Initialize()
+        public override async void OnAppearing()
         {
+            base.OnAppearing();
+
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
 
             HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
             await CheckAsync(language);
-
-            await base.Initialize();
         }
 
-        public override void ViewAppeared()
-        {
-            base.ViewAppeared();
+        //public override void ViewAppeared()
+        //{
+        //    base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicIndexViewModel) },
-                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
-        }
+        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
+        //    {
+        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicIndexViewModel) },
+        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+        //    });
+        //}
 
         private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
@@ -99,7 +100,7 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedThematicExecuteAsync(Thematic thematic)
         {
-            await navigationService.Navigate<ThematicSubGroupViewModel, Thematic>(thematic);
+            await NavigationService.NavigateAsync(nameof(ThematicSubGroupPage), new GenericNavigationParameter<Thematic>(thematic));
         }
     }
 }

@@ -54,7 +54,7 @@
                         ColumnDefinitions="auto, auto"
                         RowDefinitions="auto, *">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding ChooseLanguageCommand}" />
+                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding ChooseLanguageCommand}" />
                         </Grid.GestureRecognizers>
 
                         <Image
@@ -232,7 +232,7 @@
                         RowDefinitions="auto, auto"
                         RowSpacing="15">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding OpenGitHubCommand}" />
+                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding OpenGitHubCommand}" />
                         </Grid.GestureRecognizers>
 
                         <Label
@@ -266,7 +266,7 @@
                 <ViewCell x:Name="developerCell" IsEnabled="{OnPlatform Default=True, Tizen=False}">
                     <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding DeveloperCommand}" />
+                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
                         <Label FontSize="{OnPlatform Default=Default, Tizen=Large}" Text="{i18n:Translate Developing}" />
                     </Grid>

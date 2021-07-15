@@ -31,6 +31,7 @@
                                                                   Property=Width}" />
 
         <ListView
+            x:DataType="{x:Null}"
             BackgroundColor="Transparent"
             Footer=""
             ItemsSource="{Binding Thematics}"

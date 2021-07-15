@@ -59,6 +59,7 @@
 
             <CollectionView
                 Grid.Row="1"
+                x:DataType="{x:Null}"
                 AutomationProperties.IsInAccessibleTree="False"
                 BackgroundColor="Transparent"
                 ItemSizingStrategy="MeasureFirstItem"

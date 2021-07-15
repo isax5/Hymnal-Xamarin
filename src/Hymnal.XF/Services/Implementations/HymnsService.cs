@@ -1,11 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.XF.Models;
-using Hymnal.StorageModels.Models;
+using Hymnal.XF.Models.Realm;
 using Microsoft.AppCenter.Crashes;
-using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 
 namespace Hymnal.XF.Services
@@ -13,7 +13,6 @@ namespace Hymnal.XF.Services
     public class HymnsService : IHymnsService
     {
         private readonly IFilesService filesService;
-        private readonly ILogger<HymnsService> logger;
 
         /// <summary>
         /// <see cref="Hymn"/> cache
@@ -26,12 +25,10 @@ namespace Hymnal.XF.Services
         private static readonly Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new Dictionary<string, IEnumerable<Thematic>>();
 
         public HymnsService(
-            IFilesService filesService,
-            ILogger<HymnsService> logger
+            IFilesService filesService
             )
         {
             this.filesService = filesService;
-            this.logger = logger;
         }
 
         /// <summary>
@@ -66,7 +63,7 @@ namespace Hymnal.XF.Services
                         { "Hymnal Version", language.Id }
                     };
 
-                    logger.LogError("Exception reading hymnbook", ex, properties);
+                    Debug.WriteLine("Exception reading hymnbook", ex, properties);
                     Crashes.TrackError(ex, properties);
 
                     return new List<Hymn>();

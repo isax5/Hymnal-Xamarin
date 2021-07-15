@@ -34,6 +34,7 @@
                                                                   Property=Width}" />
 
         <CollectionView
+            x:DataType="{x:Null}"
             BackgroundColor="Transparent"
             Footer=""
             ItemSizingStrategy="MeasureFirstItem"

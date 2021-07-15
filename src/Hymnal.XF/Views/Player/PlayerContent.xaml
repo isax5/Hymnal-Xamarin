@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8" ?>
 <views:BaseContentPage
-    x:Class="Hymnal.XF.UI.Pages.PlayerContent"
+    x:Class="Hymnal.XF.Views.PlayerContent"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
@@ -15,6 +15,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="CloseToolbar"
+            x:DataType="{x:Null}"
             Command="{Binding CloseCommand}"
             Priority="-1"
             Text="{i18n:Translate Close}" />

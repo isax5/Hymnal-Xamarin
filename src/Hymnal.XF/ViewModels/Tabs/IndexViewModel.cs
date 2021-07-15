@@ -1,30 +1,28 @@
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class IndexViewModel : MvxViewModel
+    public class IndexViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
 
         public IndexViewModel(INavigationService navigationService)
+            : base(navigationService)
         {
-            this.navigationService = navigationService;
         }
 
         private bool loaded = false;
-        public override async void ViewAppearing()
-        {
-            base.ViewAppearing();
+        //public override async void ViewAppearing()
+        //{
+        //    base.ViewAppearing();
 
-            if (loaded)
-                return;
+        //    if (loaded)
+        //        return;
 
-            loaded = true;
+        //    loaded = true;
 
-            await navigationService.Navigate<AlphabeticalIndexViewModel>();
-            await navigationService.Navigate<NumericalIndexViewModel>();
-            await navigationService.Navigate<ThematicIndexViewModel>();
-        }
+        //    await navigationService.Navigate<AlphabeticalIndexViewModel>();
+        //    await navigationService.Navigate<NumericalIndexViewModel>();
+        //    await navigationService.Navigate<ThematicIndexViewModel>();
+        //}
     }
 }

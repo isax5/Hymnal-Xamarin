@@ -29,7 +29,7 @@
                         <Span Text=" y " />
                         <Span Text="Programación" TextDecorations="Underline">
                             <Span.GestureRecognizers>
-                                <TapGestureRecognizer Command="{Binding DevelperSelectedCommand}" />
+                                <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding DevelperSelectedCommand}" />
                             </Span.GestureRecognizers>
                         </Span>
                     </FormattedString>

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.XF.Models;
-using Hymnal.StorageModels.Models;
+using Hymnal.XF.Models.Realm;
 
 namespace Hymnal.XF.Services
 {

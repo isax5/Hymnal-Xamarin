@@ -1,20 +1,18 @@
-using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
+using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Microsoft.AppCenter.Analytics;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
+using Hymnal.XF.Views;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
     /// <summary>
     /// Navigable from <see cref="ThematicIndexViewModel"/>
     /// </summary>
-    public class ThematicSubGroupViewModel : MvxViewModel<Thematic>
+    public class ThematicSubGroupViewModel : BaseViewModelParameter<GenericNavigationParameter<Thematic>>
     {
-        private readonly INavigationService navigationService;
         private readonly IPreferencesService preferencesService;
 
         private Thematic thematic;
@@ -41,33 +39,33 @@ namespace Hymnal.XF.ViewModels
         public ThematicSubGroupViewModel(
             INavigationService navigationService,
             IPreferencesService preferencesService
-            )
+            ) : base(navigationService)
         {
-            this.navigationService = navigationService;
             this.preferencesService = preferencesService;
         }
 
-        public override void Prepare(Thematic parameter)
+        public override void OnNavigatedTo(INavigationParameters parameters, GenericNavigationParameter<Thematic> parameter)
         {
-            Thematic = parameter;
+            base.OnNavigatedTo(parameters, parameter);
+            Thematic = parameter.Value;
         }
 
-        public override void ViewAppeared()
-        {
-            base.ViewAppeared();
+        //public override void ViewAppeared()
+        //{
+        //    base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicSubGroupViewModel) },
-                { "Thematic Name", Thematic.ThematicName },
-                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
-        }
+        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
+        //    {
+        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicSubGroupViewModel) },
+        //        { "Thematic Name", Thematic.ThematicName },
+        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+        //    });
+        //}
 
         private async Task SelectedAmbitExecuteAsync(Ambit ambit)
         {
-            await navigationService.Navigate<ThematicHymnsListViewModel, Ambit>(ambit);
+            await NavigationService.NavigateAsync(nameof(ThematicHymnsListPage), new GenericNavigationParameter<Ambit>(ambit));
         }
     }
 }

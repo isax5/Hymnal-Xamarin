@@ -1,28 +1,27 @@
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Helpers;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
-using Hymnal.XF.Models.Parameter;
+using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Microsoft.AppCenter.Analytics;
+using Hymnal.XF.Views;
 using Microsoft.AppCenter.Crashes;
-using Microsoft.Extensions.Logging;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
+using MvvmHelpers;
+using Prism.Navigation;
+using Xamarin.Essentials;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class SearchViewModel : MvxViewModel
+    public class SearchViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly ILogger<SearchViewModel> logger;
 
-        public MvxObservableCollection<Hymn> Hymns { get; set; } = new MvxObservableCollection<Hymn>();
+        public ObservableRangeCollection<Hymn> Hymns { get; set; } = new ObservableRangeCollection<Hymn>();
 
         public Hymn SelectedHymn
         {
@@ -56,19 +55,16 @@ namespace Hymnal.XF.ViewModels
         public SearchViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService,
-            ILogger<SearchViewModel> logger
-            )
+            IPreferencesService preferencesService
+            ) : base(navigationService)
         {
-            this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-            this.logger = logger;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
 
             ObservableTextSearchBar
                 .Throttle(TimeSpan.FromSeconds(0.3))
-                .Subscribe(text => InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
+                .Subscribe(text => MainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }
 
         ~SearchViewModel()
@@ -76,12 +72,11 @@ namespace Hymnal.XF.ViewModels
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        public override async Task Initialize()
+        public override async void Initialize(INavigationParameters parameters)
         {
+            base.Initialize(parameters);
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
             await TextSearchExecuteAsync(string.Empty);
-
-            await base.Initialize();
         }
 
         private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
@@ -90,23 +85,23 @@ namespace Hymnal.XF.ViewModels
             TextSearchExecuteAsync(string.Empty).ConfigureAwait(true);
         }
 
-        public override void ViewAppeared()
-        {
-            base.ViewAppeared();
+        //public override void ViewAppeared()
+        //{
+        //    base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
-                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
-        }
+        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
+        //    {
+        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
+        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+        //    });
+        //}
 
         private async Task TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
 
-            logger.LogInformation($"Search for: {text}");
+            Debug.WriteLine($"Search for: {text}");
 
             IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 
@@ -127,7 +122,7 @@ namespace Hymnal.XF.ViewModels
 
             try
             {
-                await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+                await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
                 {
                     Number = hymn.Number,
                     HymnalLanguage = _language
@@ -136,12 +131,12 @@ namespace Hymnal.XF.ViewModels
                 if (!string.IsNullOrWhiteSpace(TextSearchBar))
                 {
 
-                    Analytics.TrackEvent(Constants.TrackEv.HymnFounded, new Dictionary<string, string>
-                {
-                    { Constants.TrackEv.HymnFoundedScheme.Query, TextSearchBar },
-                    { Constants.TrackEv.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
-                    { Constants.TrackEv.HymnFoundedScheme.HymnalVersion, _language.Id }
-                });
+                    //    Analytics.TrackEvent(Constants.TrackEv.HymnFounded, new Dictionary<string, string>
+                    //{
+                    //    { Constants.TrackEv.HymnFoundedScheme.Query, TextSearchBar },
+                    //    { Constants.TrackEv.HymnFoundedScheme.HymnFounded, hymn.Number.ToString() },
+                    //    { Constants.TrackEv.HymnFoundedScheme.HymnalVersion, _language.Id }
+                    //});
                 }
             }
             catch (Exception ex)

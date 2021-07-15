@@ -34,6 +34,7 @@
                                                                   Property=Width}" />
 
         <ListView
+            x:DataType="{x:Null}"
             BackgroundColor="Transparent"
             CachingStrategy="RecycleElement"
             Footer=""

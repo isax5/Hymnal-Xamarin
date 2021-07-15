@@ -7,6 +7,7 @@ using Hymnal.XF.Extensions;
 using Hymnal.XF.Extensions.i18n;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
+using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
 using Hymnal.XF.Views;
 using MediaManager;
@@ -24,7 +25,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IPreferencesService preferencesService;
         private readonly IMediaManager mediaManager;
         private readonly IDialogService dialogService;
-        private readonly IStorageManager storageService;
+        private readonly IStorageManagerService storageService;
         private readonly IAzureHymnService azureHymnService;
 
         #region Properties
@@ -74,7 +75,7 @@ namespace Hymnal.XF.ViewModels
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
             IDialogService dialogService,
-            IStorageManager storageService,
+            IStorageManagerService storageService,
             IAzureHymnService azureHymnService
             ) : base(navigationService)
         {

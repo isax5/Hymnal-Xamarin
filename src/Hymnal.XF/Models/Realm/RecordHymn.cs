@@ -1,16 +1,9 @@
 using System;
-using Plugin.StorageManager;
-#if __IOS__ || __ANDROID__
 using Realms;
-#endif
 
-namespace Hymnal.StorageModels.Models
+namespace Hymnal.XF.Models.Realm
 {
-#if __IOS__ || __ANDROID__
-    public class FavoriteHymn : RealmObject, IHymnReference, IStorageModel
-#else
-    public class FavoriteHymn : IHymnReference, IStorageModel
-#endif
+    public class RecordHymn : RealmObject, IHymnReference, IStorageModel
     {
         /// <summary>
         /// Hymn Number

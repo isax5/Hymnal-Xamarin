@@ -1,26 +1,24 @@
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
-using Hymnal.XF.Models.Parameter;
+using Hymnal.XF.Models.Parameters;
+using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
-using Hymnal.StorageModels.Models;
-using Microsoft.AppCenter.Analytics;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
-using Plugin.StorageManager;
+using Hymnal.XF.Views;
+using MvvmHelpers;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class RecordsViewModel : MvxViewModel
+    public class RecordsViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly IStorageManager storageManager;
+        private readonly IStorageManagerService storageManager;
 
-        public MvxObservableCollection<Tuple<RecordHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<RecordHymn, Hymn>>();
+        public ObservableRangeCollection<Tuple<RecordHymn, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<Tuple<RecordHymn, Hymn>>();
 
         public Tuple<RecordHymn, Hymn> SelectedHymn
         {
@@ -39,18 +37,17 @@ namespace Hymnal.XF.ViewModels
             INavigationService navigationService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
-            IStorageManager storageManager
-            )
+            IStorageManagerService storageManager
+            ) : base(navigationService)
         {
-            this.navigationService = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.storageManager = storageManager;
         }
 
-        public override async Task Initialize()
+        public override async void Initialize(INavigationParameters parameters)
         {
-
+            base.Initialize(parameters);
             Tuple<RecordHymn, Hymn>[] hymns = await Task.WhenAll(
                 storageManager
                 .All<RecordHymn>()
@@ -59,25 +56,23 @@ namespace Hymnal.XF.ViewModels
                 .Select(async r => new Tuple<RecordHymn, Hymn>(r, await hymnsService.GetHymnAsync(r))));
 
             Hymns.AddRange(hymns);
-
-            await base.Initialize();
         }
 
-        public override void ViewAppeared()
-        {
-            base.ViewAppeared();
+        //public override void ViewAppeared()
+        //{
+        //    base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
-                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
-        }
+        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
+        //    {
+        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
+        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+        //    });
+        //}
 
         private async Task SelectedHymnExecuteAsync(Tuple<RecordHymn, Hymn> hymn)
         {
-            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
             {
                 Number = hymn.Item2.Number,
                 HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId),

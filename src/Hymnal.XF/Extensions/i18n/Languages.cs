@@ -5,14 +5,14 @@ namespace Hymnal.XF.Extensions.i18n
     public static class Languages
     {
         #region Generic
-        public static string ChooseYourHymnal => AppResources.VersionsAndLanguages;
-        public static string Cancel => AppResources.Cancel;
-        public static string WeHadAProblem => AppResources.WeHadAProblem;
-        public static string Ok => AppResources.Ok;
-        public static string NoInternetConnection => AppResources.NoInternetConnection;
-        public static string InstrumentalOrSung => AppResources.InstrumentalOrSung;
-        public static string Instrumental => AppResources.Instrumental;
-        public static string Sung => AppResources.Sung;
+        public static string ChooseYourHymnal => LanguageResources.VersionsAndLanguages;
+        public static string Cancel => LanguageResources.Cancel;
+        public static string WeHadAProblem => LanguageResources.WeHadAProblem;
+        public static string Ok => LanguageResources.Ok;
+        public static string NoInternetConnection => LanguageResources.NoInternetConnection;
+        public static string InstrumentalOrSung => LanguageResources.InstrumentalOrSung;
+        public static string Instrumental => LanguageResources.Instrumental;
+        public static string Sung => LanguageResources.Sung;
         #endregion
     }
 }

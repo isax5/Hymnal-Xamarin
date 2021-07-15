@@ -2,6 +2,9 @@ using System;
 using System.Globalization;
 using System.Reflection;
 using System.Resources;
+using Hymnal.XF.Resources.Languages;
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Extensions.i18n
 {

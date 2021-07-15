@@ -2,28 +2,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
-using Hymnal.XF.Models.Parameter;
+using Hymnal.XF.Models.Parameters;
+using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
-using Hymnal.StorageModels.Models;
-using Microsoft.AppCenter.Analytics;
+using Hymnal.XF.Views;
 using Microsoft.AppCenter.Crashes;
-using MvvmCross.Commands;
-using MvvmCross.Navigation;
-using MvvmCross.ViewModels;
-using Plugin.StorageManager;
+using MvvmHelpers;
+using Prism.Commands;
+using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class FavoritesViewModel : MvxViewModel
+    public class FavoritesViewModel : BaseViewModel
     {
-        private readonly INavigationService navigationService;
         private readonly IDialogService dialogService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly IStorageManager storageManager;
+        private readonly IStorageManagerService storageManager;
 
-        public MvxObservableCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new MvxObservableCollection<Tuple<FavoriteHymn, Hymn>>();
+        public ObservableRangeCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<Tuple<FavoriteHymn, Hymn>>();
 
         public Tuple<FavoriteHymn, Hymn> SelectedHymn
         {
@@ -44,19 +43,20 @@ namespace Hymnal.XF.ViewModels
             IDialogService dialogService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
-            IStorageManager storageManager
-            )
+            IStorageManagerService storageManager
+            ) : base(navigationService)
         {
-            this.navigationService = navigationService;
             this.dialogService = dialogService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.storageManager = storageManager;
+
+            DeleteHymnCommand = new DelegateCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute).ObservesCanExecute(() => NotBusy);
         }
 
-        public override async void ViewAppearing()
+        public override async void OnAppearing()
         {
-            base.ViewAppearing();
+            base.OnAppearing();
 
             // Update list
             Tuple<FavoriteHymn, Hymn>[] favorites = await Task.WhenAll(
@@ -93,37 +93,37 @@ namespace Hymnal.XF.ViewModels
                 Hymns.Remove(item);
         }
 
-        public override void ViewAppeared()
-        {
-            base.ViewAppeared();
+        //public override void ViewAppeared()
+        //{
+        //    base.ViewAppeared();
 
-            Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
-                { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
-        }
+        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
+        //    {
+        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
+        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+        //    });
+        //}
 
         private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
         {
-            await navigationService.Navigate<HymnViewModel, HymnIdParameter>(new HymnIdParameter
+            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
             {
                 Number = hymn.Item2.Number,
                 HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId)
-            });
+            }, true, true);
         }
 
-        public MvxCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand => new MvxCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute);
+        public DelegateCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand;
         private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
         {
-            Analytics.TrackEvent(Constants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
-            {
-                { Constants.TrackEv.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
-                { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
-                { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-            });
+            //Analytics.TrackEvent(Constants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
+            //{
+            //    { Constants.TrackEv.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
+            //    { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
+            //    { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
+            //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            //});
 
             try
             {

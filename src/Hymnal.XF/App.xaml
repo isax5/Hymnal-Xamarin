@@ -8,19 +8,15 @@
 
         <!--  Application resource dictionary  -->
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary>
 
-                    <x:String x:Key="BackgroundImageFile">Background</x:String>
+            <x:String x:Key="BackgroundImageFile">Background</x:String>
 
-                    <Style x:Key="TabbedPageStyle" TargetType="mvxViews:MvxTabbedPage">
-                        <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
-                        <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
-                        <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
-                        <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
-                    </Style>
-                </ResourceDictionary>
-            </ResourceDictionary.MergedDictionaries>
+            <Style x:Key="TabbedPageStyle" TargetType="mvxViews:MvxTabbedPage">
+                <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
+                <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
+                <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
+                <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
+            </Style>
         </ResourceDictionary>
 
     </Application.Resources>
