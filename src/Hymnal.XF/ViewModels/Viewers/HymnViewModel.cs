@@ -15,6 +15,7 @@ using MediaManager.Library;
 using MediaManager.Player;
 using Prism.Commands;
 using Prism.Navigation;
+using Prism.Services;
 using Xamarin.Essentials;
 
 namespace Hymnal.XF.ViewModels
@@ -24,7 +25,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
         private readonly IMediaManager mediaManager;
-        private readonly IDialogService dialogService;
+        private readonly IPageDialogService dialogService;
         private readonly IStorageManagerService storageService;
         private readonly IAzureHymnService azureHymnService;
 
@@ -74,7 +75,7 @@ namespace Hymnal.XF.ViewModels
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
             IMediaManager mediaManager,
-            IDialogService dialogService,
+            IPageDialogService dialogService,
             IStorageManagerService storageService,
             IAzureHymnService azureHymnService
             ) : base(navigationService)
@@ -278,7 +279,7 @@ namespace Hymnal.XF.ViewModels
             // Check internet connection
             if (Connectivity.NetworkAccess == NetworkAccess.None)
             {
-                await dialogService.Alert(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
+                await dialogService.DisplayAlertAsync(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
                 return;
             }
 
@@ -305,7 +306,7 @@ namespace Hymnal.XF.ViewModels
                         var instrumentalTitle = Languages.Instrumental;
                         var sungTitle = Languages.Sung;
 
-                        var result = await dialogService.DisplayActionSheet(
+                        var result = await dialogService.DisplayActionSheetAsync(
                             Languages.ChooseYourHymnal, Languages.Cancel,
                             null, new[] { instrumentalTitle, sungTitle });
 
@@ -353,8 +354,7 @@ namespace Hymnal.XF.ViewModels
                     //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
                     //});
                 }),
-                ex => MainThread.InvokeOnMainThreadAsync(async () => await dialogService.Alert(Languages.WeHadAProblem, Languages.Ok)));
-
+                ex => ex.Report());
         }
 
         //public DelegateCommand OpenPlayerCommand;

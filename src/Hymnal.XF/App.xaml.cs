@@ -1,5 +1,6 @@
 using System.Globalization;
 using Hymnal.XF.Extensions.i18n;
+using Hymnal.XF.Helpers;
 using Hymnal.XF.Services;
 using Hymnal.XF.ViewModels;
 using Hymnal.XF.Views;
@@ -7,10 +8,8 @@ using Hymnal.XF.Views.Custom;
 using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
-using Prism.Navigation;
 using Xamarin.Essentials.Implementation;
 using Xamarin.Essentials.Interfaces;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF
@@ -18,17 +17,23 @@ namespace Hymnal.XF
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class App : PrismApplication
     {
+        public static new App Current;
+        public ThemeHelper ThemeHelper;
         // private AppThemeResources _appThemeResources;
 
         public App(IPlatformInitializer initializer)
             : base(initializer)
-        { }
+        {
+            Current = this;
+        }
 
         protected override async void OnInitialized()
         {
             TranslateExtension.CurrentCultureInfo = CultureInfo.InstalledUICulture;
 
             InitializeComponent();
+
+            ThemeHelper = new ThemeHelper(Current);
 
             // _appThemeResources = new AppThemeResources(this);
             await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
@@ -47,8 +52,9 @@ namespace Hymnal.XF
                 .RegisterSingleton<IConnectivity, ConnectivityImplementation>()
                 .RegisterSingleton<IPreferences, PreferencesImplementation>()
 
-                .RegisterSingleton<IAssetsService, AssetsService>()
                 .RegisterSingleton<IDataStorageService, DataStorageService>()
+                .RegisterSingleton<IStorageManagerService, StorageManagerService>()
+                .RegisterSingleton<IAssetsService, AssetsService>()
                 .RegisterSingleton<IFilesService, FilesService>()
                 .RegisterSingleton<IHymnsService, HymnsService>()
                 .RegisterSingleton<IPreferencesService, PreferencesService>();
@@ -62,8 +68,7 @@ namespace Hymnal.XF
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsViewModel>();
         }
 
-        //#region System events
-
+        #region System events
         //protected override void OnStart()
         //{
         //    base.OnStart();
@@ -80,6 +85,6 @@ namespace Hymnal.XF
         //{
         //    base.OnAppLinkRequestReceived(uri);
         //}
-        //#endregion
+        #endregion
     }
 }

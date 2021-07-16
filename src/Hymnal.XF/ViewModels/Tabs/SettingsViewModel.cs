@@ -7,6 +7,7 @@ using Hymnal.XF.Services;
 using Hymnal.XF.Views;
 using Prism.Commands;
 using Prism.Navigation;
+using Prism.Services;
 using Xamarin.Essentials;
 
 namespace Hymnal.XF.ViewModels
@@ -14,7 +15,7 @@ namespace Hymnal.XF.ViewModels
     public class SettingsViewModel : BaseViewModel
     {
         private readonly IPreferencesService preferencesService;
-        private readonly IDialogService dialogService;
+        private readonly IPageDialogService dialogService;
 
         private readonly BrowserLaunchOptions browserLaunchOptions = new BrowserLaunchOptions
         {
@@ -76,7 +77,7 @@ namespace Hymnal.XF.ViewModels
         public SettingsViewModel(
             INavigationService navigationService,
             IPreferencesService preferencesService,
-            IDialogService dialogService
+            IPageDialogService dialogService
             ) : base(navigationService)
         {
             this.preferencesService = preferencesService;
@@ -122,7 +123,7 @@ namespace Hymnal.XF.ViewModels
             var title = Languages.ChooseYourHymnal;
             var cancelButton = Languages.Cancel;
 
-            var languageKey = await dialogService.DisplayActionSheet(
+            var languageKey = await dialogService.DisplayActionSheetAsync(
                 title,
                 cancelButton,
                 null,

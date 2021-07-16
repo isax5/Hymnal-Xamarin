@@ -12,12 +12,13 @@ using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using Prism.Commands;
 using Prism.Navigation;
+using Prism.Services;
 
 namespace Hymnal.XF.ViewModels
 {
     public class FavoritesViewModel : BaseViewModel
     {
-        private readonly IDialogService dialogService;
+        private readonly IPageDialogService dialogService;
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
         private readonly IStorageManagerService storageManager;
@@ -40,7 +41,7 @@ namespace Hymnal.XF.ViewModels
 
         public FavoritesViewModel(
             INavigationService navigationService,
-            IDialogService dialogService,
+            IPageDialogService dialogService,
             IHymnsService hymnsService,
             IPreferencesService preferencesService,
             IStorageManagerService storageManager

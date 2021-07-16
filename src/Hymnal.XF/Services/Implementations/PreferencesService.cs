@@ -2,53 +2,53 @@ using System;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Newtonsoft.Json;
-using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.Services
 {
     public class PreferencesService : IPreferencesService
-
     {
+        private readonly IPreferences preferences;
+        public event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged;
+
         public int HymnalsFontSize
         {
-            get => Preferences.Get(nameof(HymnalsFontSize), Constants.Constants.DEFAULT_HYMNALS_FONT_SIZE);
-            set => Preferences.Set(nameof(HymnalsFontSize), value);
+            get => preferences.Get(nameof(HymnalsFontSize), Constants.Constants.DEFAULT_HYMNALS_FONT_SIZE);
+            set => preferences.Set(nameof(HymnalsFontSize), value);
         }
 
         public HymnalLanguage ConfiguratedHymnalLanguage
         {
             get
             {
-                var text = Preferences.Get(nameof(ConfiguratedHymnalLanguage), string.Empty);
+                var text = preferences.Get(nameof(ConfiguratedHymnalLanguage), string.Empty);
                 return string.IsNullOrWhiteSpace(text) ? null : JsonConvert.DeserializeObject<HymnalLanguage>(text).Configuration();
             }
             set
             {
                 var text = JsonConvert.SerializeObject(value);
-                Preferences.Set(nameof(ConfiguratedHymnalLanguage), text);
+                preferences.Set(nameof(ConfiguratedHymnalLanguage), text);
 
-                if (hymnalLanguageConfiguratedChanged != null)
-                    hymnalLanguageConfiguratedChanged.Invoke(this, value);
+                if (HymnalLanguageConfiguratedChanged != null)
+                    HymnalLanguageConfiguratedChanged.Invoke(this, value);
             }
-        }
-
-        private static EventHandler<HymnalLanguage> hymnalLanguageConfiguratedChanged;
-        public event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged
-        {
-            add => hymnalLanguageConfiguratedChanged += value;
-            remove => hymnalLanguageConfiguratedChanged -= value;
         }
 
         public string LastVersionOpened
         {
-            get => Preferences.Get(nameof(LastVersionOpened), string.Empty);
-            set => Preferences.Set(nameof(LastVersionOpened), value);
+            get => preferences.Get(nameof(LastVersionOpened), string.Empty);
+            set => preferences.Set(nameof(LastVersionOpened), value);
         }
 
         public bool KeepScreenOn
         {
-            get => Preferences.Get(nameof(KeepScreenOn), false);
-            set => Preferences.Set(nameof(KeepScreenOn), value);
+            get => preferences.Get(nameof(KeepScreenOn), false);
+            set => preferences.Set(nameof(KeepScreenOn), value);
+        }
+
+        public PreferencesService(IPreferences preferences)
+        {
+            this.preferences = preferences;
         }
     }
 }
