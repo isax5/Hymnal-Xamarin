@@ -11,12 +11,12 @@
 
             <x:String x:Key="BackgroundImageFile">Background</x:String>
 
-            <Style x:Key="TabbedPageStyle" TargetType="mvxViews:MvxTabbedPage">
+            <!--<Style x:Key="TabbedPageStyle" TargetType="mvxViews:MvxTabbedPage">
                 <Setter Property="UnselectedTabColor" Value="{DynamicResource UnselectedTabColor}" />
                 <Setter Property="SelectedTabColor" Value="{DynamicResource SelectedTabColor}" />
                 <Setter Property="BarTextColor" Value="{DynamicResource SelectedTabColor}" />
                 <Setter Property="BarBackgroundColor" Value="{DynamicResource PrimaryBackgroudColor}" />
-            </Style>
+            </Style>-->
         </ResourceDictionary>
 
     </Application.Resources>

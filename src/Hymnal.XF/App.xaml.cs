@@ -31,13 +31,13 @@ namespace Hymnal.XF
             InitializeComponent();
 
             // _appThemeResources = new AppThemeResources(this);
-            //await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(SimplePage)}");
+            await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
 
-            await NavigationService.NavigateAsync($"/{nameof(RootPage)}" +
-                $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(IndexPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(FavoritesPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SettingsPage)}");
+            //await NavigationService.NavigateAsync($"/{nameof(RootPage)}" +
+            //    $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
+            //    $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(IndexPage)}" +
+            //    $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(FavoritesPage)}" +
+            //    $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SettingsPage)}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
