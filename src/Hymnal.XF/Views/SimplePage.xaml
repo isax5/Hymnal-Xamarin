@@ -16,16 +16,18 @@
         <!--<ScrollView>-->
         <StackLayout>
             <Label Text="Hello World!! - Adventist Hymnal" />
-            <Button Clicked="Button_Clicked" Text="Click me!" />
+            <Button Clicked="Button_Clicked" Text="Alert" />
 
             <Entry
                 x:Name="exampleEntry"
                 BackgroundColor="Black"
-                HorizontalOptions="EndAndExpand"
                 Placeholder="enter somthing"
                 PlaceholderColor="Gray"
                 TextColor="White" />
-            <Button Clicked="Button_Clicked_1" Text="Show!!" />
+            <Button Clicked="Button_Clicked_1" Text="Focus on Entry" />
+            <Button Command="{Binding ClickmeCommand}" Text="Binding Alert" />
+            <Button Command="{prism:NavigateTo 'SimplePage'}" Text="Navigate PrismNavigateTo" />
+            <Button Command="{Binding SampleCommand}" Text="Binding SampleNavigate" />
         </StackLayout>
         <!--</ScrollView>-->
     </ContentPage.Content>

@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
@@ -24,6 +23,8 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref hymnNumber, value);
         }
 
+        public DelegateCommand<string> OpenHymnCommand { get; internal set; }
+
         public NumberViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
@@ -33,7 +34,7 @@ namespace Hymnal.XF.ViewModels
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
 
-            OpenHymnCommand = new DelegateCommand<string>(OpenHymnAsync);
+            OpenHymnCommand = new DelegateCommand<string>(OpenHymnAsync).ObservesCanExecute(() => NotBusy);
 #if DEBUG
             // A long hymn
             HymnNumber = $"{1}";
@@ -52,10 +53,9 @@ namespace Hymnal.XF.ViewModels
         //    });
         //}
 
-        public DelegateCommand<string> OpenHymnCommand;
-
         private async void OpenHymnAsync(string text)
         {
+            Busy = true;
             var num = text ?? HymnNumber;
 
             HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
@@ -75,6 +75,7 @@ namespace Hymnal.XF.ViewModels
                     },
                     true, true);
             }
+            Busy = false;
         }
     }
 }

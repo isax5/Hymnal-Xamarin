@@ -1,3 +1,4 @@
+using Hymnal.XF.Resources.Theme;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -14,23 +15,34 @@ namespace Hymnal.XF.Helpers
 
             // Configure theme
             CurrentTheme = AppInfo.RequestedTheme;
-            switch (AppInfo.RequestedTheme)
-            {
-                case AppTheme.Dark:
-                    break;
-
-                case AppTheme.Light:
-                case AppTheme.Unspecified:
-                default:
-                    break;
-            }
+            configureTheme(CurrentTheme);
 
             app.RequestedThemeChanged += App_RequestedThemeChanged;
         }
 
         private void App_RequestedThemeChanged(object sender, AppThemeChangedEventArgs e)
         {
-            app.MainPage.DisplayAlert("Tema cambiado", $"Tema cambiado a {e.RequestedTheme}", "Enterado");
+            if ((int)e.RequestedTheme == (int)CurrentTheme)
+                return;
+
+            CurrentTheme = (AppTheme)(int)e.RequestedTheme;
+            configureTheme(CurrentTheme);
+        }
+
+        private void configureTheme(AppTheme appTheme)
+        {
+            switch (appTheme)
+            {
+                case AppTheme.Dark:
+                    manuallyCopyThemesTo(app.Resources, new DarkTheme());
+                    break;
+
+                case AppTheme.Light:
+                case AppTheme.Unspecified:
+                default:
+                    manuallyCopyThemesTo(app.Resources, new LightTheme());
+                    break;
+            }
         }
 
         //public static void CheckTheme()
@@ -75,15 +87,15 @@ namespace Hymnal.XF.Helpers
         //    _currentTheme = AppInfo.RequestedTheme;
         //}
 
-        //public static void ManuallyCopyThemes(ResourceDictionary fromResource, ResourceDictionary toResource)
-        //{
-        //    lock (toResource)
-        //    {
-        //        foreach (var item in fromResource.Keys)
-        //        {
-        //            toResource[item] = fromResource[item];
-        //        }
-        //    }
-        //}
+        private void manuallyCopyThemesTo(ResourceDictionary toResource, ResourceDictionary fromResource)
+        {
+            lock (toResource)
+            {
+                foreach (var item in fromResource.Keys)
+                {
+                    toResource[item] = fromResource[item];
+                }
+            }
+        }
     }
 }

@@ -7,6 +7,7 @@
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
     xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
     Title="{i18n:Translate Number}"
@@ -26,7 +27,7 @@
             x:Name="RecordsToolbarItem"
             AutomationId="OpenRecordsPageToolbar"
             AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenRecords}"
-            Command="{Binding OpenRecordsCommand}"
+            Command="{prism:NavigateTo 'RecordsPage'}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.History}" />
@@ -35,7 +36,7 @@
         <ToolbarItem
             AutomationId="OpenSearchPageToolbar"
             AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenSearch}"
-            Command="{Binding OpenSearchCommand}"
+            Command="{prism:NavigateTo 'SearchPage'}"
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Search}" />

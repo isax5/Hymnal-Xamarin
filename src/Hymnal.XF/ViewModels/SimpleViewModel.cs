@@ -6,7 +6,7 @@ namespace Hymnal.XF.ViewModels
 {
     public class SimpleViewModel : BaseViewModel
     {
-        public DelegateCommand ClickmeCommand;
+        public DelegateCommand ClickmeCommand { get; private set; }
 
         public SimpleViewModel(
             INavigationService navigationService,
