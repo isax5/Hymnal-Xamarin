@@ -28,8 +28,9 @@ namespace Hymnal.XF
         {
             Setup.InitializeFirstChance(this);
             InitializeComponent();
-
             Setup.InitializeLastChance(this);
+
+            //await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
 
             await NavigationService.NavigateAsync($"{nameof(RootPage)}" +
                 $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +

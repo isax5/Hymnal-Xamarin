@@ -16,6 +16,7 @@ namespace Hymnal.XF
         public void InitializeFirstChance(App app)
         {
             TranslateExtension.CurrentCultureInfo = CultureInfo.InstalledUICulture;
+            Constants.Constants.CurrentCultureInfo = CultureInfo.InstalledUICulture;
         }
 
         public void InitializeLastChance(App app)
