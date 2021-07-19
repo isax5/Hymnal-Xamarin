@@ -3,6 +3,7 @@ using System.Linq;
 using System.Reactive.Linq;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.AzureFunctions.Extensions;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Extensions.i18n;
 using Hymnal.XF.Models;
@@ -262,7 +263,7 @@ namespace Hymnal.XF.ViewModels
         {
             Share.RequestAsync(
                 title: hymn.Title,
-                text: $"{hymn.Title}\n\n{hymn.Content}\n\n{Constants.Constants.WebLinks.DeveloperWebSite}");
+                text: $"{hymn.Title}\n\n{hymn.Content}\n\n{AppConstants.WebLinks.DeveloperWebSite}");
 
             //Analytics.TrackEvent(Constants.TrackEv.HymnShared, new Dictionary<string, string>
             //{

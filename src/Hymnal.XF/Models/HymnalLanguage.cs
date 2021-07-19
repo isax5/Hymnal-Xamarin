@@ -1,4 +1,5 @@
 using System.Linq;
+using Hymnal.XF.Constants;
 
 namespace Hymnal.XF.Models
 {
@@ -43,7 +44,7 @@ namespace Hymnal.XF.Models
 
         public static HymnalLanguage GetHymnalLanguageWithId(string id)
         {
-            return Constants.Constants.HymnsLanguages.FirstOrDefault(l => l.Id.Equals(id));
+            return InfoConstants.HymnsLanguages.FirstOrDefault(l => l.Id.Equals(id));
         }
     }
 }

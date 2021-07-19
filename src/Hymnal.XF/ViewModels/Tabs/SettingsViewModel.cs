@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions.i18n;
 using Hymnal.XF.Models;
 using Hymnal.XF.Services;
@@ -30,8 +31,8 @@ namespace Hymnal.XF.ViewModels
             get => preferencesService.HymnalsFontSize;
             set => preferencesService.HymnalsFontSize = value;
         }
-        public int MinimumHymnFontSize => Constants.Constants.MINIMUM_HYMNALS_FONT_SIZE;
-        public int MaximumHymnFontSize => Constants.Constants.MAXIMUM_HYMNALS_FONT_SIZE;
+        public int MinimumHymnFontSize => AppConstants.MINIMUM_HYMNALS_FONT_SIZE;
+        public int MaximumHymnFontSize => AppConstants.MAXIMUM_HYMNALS_FONT_SIZE;
 
         private string appVersionString;
         public string AppVersionString
@@ -115,7 +116,7 @@ namespace Hymnal.XF.ViewModels
         {
             var languages = new Dictionary<string, HymnalLanguage>();
 
-            foreach (HymnalLanguage hl in Constants.Constants.HymnsLanguages)
+            foreach (HymnalLanguage hl in InfoConstants.HymnsLanguages)
             {
                 languages.Add($"({hl.Detail}) {hl.Name}", hl);
             }
@@ -146,13 +147,13 @@ namespace Hymnal.XF.ViewModels
         public DelegateCommand OpenGitHubCommand;
         private async void OpenGitHubExecuteAsync()
         {
-            await Browser.OpenAsync(Constants.Constants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
+            await Browser.OpenAsync(AppConstants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
         }
 
         public DelegateCommand DeveloperCommand;
         private async void DeveloperExecuteAsync()
         {
-            await Browser.OpenAsync(Constants.Constants.WebLinks.DeveloperWebSite, browserLaunchOptions);
+            await Browser.OpenAsync(AppConstants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
     }
 }

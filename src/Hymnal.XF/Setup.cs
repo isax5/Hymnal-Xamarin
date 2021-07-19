@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions.i18n;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.Models;
@@ -16,7 +17,7 @@ namespace Hymnal.XF
         public void InitializeFirstChance(App app)
         {
             TranslateExtension.CurrentCultureInfo = CultureInfo.InstalledUICulture;
-            Constants.Constants.CurrentCultureInfo = CultureInfo.InstalledUICulture;
+            InfoConstants.CurrentCultureInfo = CultureInfo.InstalledUICulture;
         }
 
         public void InitializeLastChance(App app)
@@ -28,8 +29,8 @@ namespace Hymnal.XF
             var preferencesService = app.Container.Resolve(typeof(IPreferencesService)) as IPreferencesService;
             if (preferencesService.ConfiguratedHymnalLanguage == null)
             {
-                List<HymnalLanguage> lngs = Constants.Constants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == Constants.Constants.CurrentCultureInfo.TwoLetterISOLanguageName);
-                preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? Constants.Constants.HymnsLanguages.First() : lngs.First();
+                List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
+                preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
         }
 

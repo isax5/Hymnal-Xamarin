@@ -1,4 +1,5 @@
 using System;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Newtonsoft.Json;
@@ -13,7 +14,7 @@ namespace Hymnal.XF.Services
 
         public int HymnalsFontSize
         {
-            get => preferences.Get(nameof(HymnalsFontSize), Constants.Constants.DEFAULT_HYMNALS_FONT_SIZE);
+            get => preferences.Get(nameof(HymnalsFontSize), AppConstants.DEFAULT_HYMNALS_FONT_SIZE);
             set => preferences.Set(nameof(HymnalsFontSize), value);
         }
 

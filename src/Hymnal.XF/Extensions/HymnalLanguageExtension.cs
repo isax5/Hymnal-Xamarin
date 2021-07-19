@@ -1,5 +1,6 @@
-using Hymnal.XF.Models;
 using System.Linq;
+using Hymnal.XF.Constants;
+using Hymnal.XF.Models;
 
 namespace Hymnal.XF.Extensions
 {
@@ -11,7 +12,7 @@ namespace Hymnal.XF.Extensions
         /// </summary>
         public static HymnalLanguage Configuration(this HymnalLanguage hymnalLanguage)
         {
-            return Constants.Constants.HymnsLanguages.First(hl => hl.Id == hymnalLanguage.Id);
+            return InfoConstants.HymnsLanguages.First(hl => hl.Id == hymnalLanguage.Id);
         }
 
         /// <summary>
