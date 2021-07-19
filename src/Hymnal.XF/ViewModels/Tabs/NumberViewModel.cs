@@ -7,6 +7,7 @@ using Hymnal.XF.Services;
 using Hymnal.XF.Views;
 using Prism.Commands;
 using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -14,7 +15,6 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-
 
         private string hymnNumber;
         public string HymnNumber
@@ -67,7 +67,7 @@ namespace Hymnal.XF.ViewModels
                     return;
 
                 await NavigationService.NavigateAsync(
-                    nameof(HymnPage),
+                    $"{nameof(NavigationPage)}/{nameof(HymnPage)}",
                     new HymnIdParameter
                     {
                         Number = number,

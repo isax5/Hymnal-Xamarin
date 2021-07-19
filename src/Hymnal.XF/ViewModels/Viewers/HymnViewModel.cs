@@ -70,6 +70,13 @@ namespace Hymnal.XF.ViewModels
         }
         #endregion
 
+        #region Commands
+        public DelegateCommand FavoriteCommand { get; private set; }
+        public DelegateCommand ShareCommand { get; private set; }
+        public DelegateCommand PlayCommand { get; private set; }
+        public DelegateCommand CloseCommand { get; private set; }
+        public DelegateCommand OpenSheetCommand { get; private set; }
+        #endregion
 
         public HymnViewModel(
             INavigationService navigationService,
@@ -117,22 +124,23 @@ namespace Hymnal.XF.ViewModels
                 ex.Report();
             }
 
-            IsPlaying = mediaManager.IsPlaying();
+            // TODO: Cargar preferencias y gardar historial
+            //IsPlaying = mediaManager.IsPlaying();
 
-            // Is Favorite
-            IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+            //// Is Favorite
+            //IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
-            // Record
-            if (HymnParameter.SaveInRecords)
-            {
+            //// Record
+            //if (HymnParameter.SaveInRecords)
+            //{
 
-                IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
-                storageService.RemoveRange(records);
+            //    IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
+            //    storageService.RemoveRange(records);
 
-                storageService.Add(Hymn.ToRecordHymn());
-            }
+            //    storageService.Add(Hymn.ToRecordHymn());
+            //}
 
-            azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
+            //azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
         }
 
         //public override async Task Initialize()
@@ -217,14 +225,12 @@ namespace Hymnal.XF.ViewModels
         }
         #endregion
 
-        #region Commands
-        public DelegateCommand OpenSheetCommand;
+        #region Command Actions
         private async void OpenSheetAsync()
         {
             await NavigationService.NavigateAsync(nameof(MusicSheetPage), HymnParameter);
         }
 
-        public DelegateCommand FavoriteCommand;
         private void FavoriteExecute()
         {
 
@@ -258,7 +264,6 @@ namespace Hymnal.XF.ViewModels
             IsFavorite = !IsFavorite;
         }
 
-        public DelegateCommand ShareCommand;
         private void ShareExecute()
         {
             Share.RequestAsync(
@@ -274,7 +279,6 @@ namespace Hymnal.XF.ViewModels
             //});
         }
 
-        public DelegateCommand PlayCommand;
         private async void PlayExecuteAsync()
         {
             // Check internet connection
@@ -365,7 +369,6 @@ namespace Hymnal.XF.ViewModels
         //    await NavigationService.Navigate<PlayerViewModel, HymnIdParameter>(HymnParameter);
         //}
 
-        public DelegateCommand CloseCommand;
         private async void CloseAsync()
         {
             await NavigationService.GoBackAsync();

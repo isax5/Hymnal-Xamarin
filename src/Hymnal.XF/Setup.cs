@@ -1,11 +1,13 @@
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using Hymnal.AzureFunctions.Client;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions.i18n;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.Models;
 using Hymnal.XF.Services;
+using MediaManager;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -58,16 +60,20 @@ namespace Hymnal.XF
         {
             containerRegistry
                 .RegisterSingleton<IAppInfo, AppInfoImplementation>()
+                .RegisterSingleton<IDeviceInfo, DeviceInfoImplementation>()
                 .RegisterSingleton<IConnectivity, ConnectivityImplementation>()
                 .RegisterSingleton<IPreferences, PreferencesImplementation>()
-                .RegisterSingleton<IDeviceInfo, DeviceInfoImplementation>()
+
+                .RegisterInstance<IMediaManager>(CrossMediaManager.Current)
+                .RegisterInstance<IAzureHymnService>(AzureHymnService.Current)
 
                 .RegisterSingleton<IDataStorageService, DataStorageService>()
                 .RegisterSingleton<IStorageManagerService, StorageManagerService>()
                 .RegisterSingleton<IAssetsService, AssetsService>()
                 .RegisterSingleton<IFilesService, FilesService>()
                 .RegisterSingleton<IHymnsService, HymnsService>()
-                .RegisterSingleton<IPreferencesService, PreferencesService>();
+                .RegisterSingleton<IPreferencesService, PreferencesService>()
+                ;
         }
     }
 }

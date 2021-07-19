@@ -75,6 +75,13 @@ namespace Hymnal.XF.ViewModels
             }
         }
 
+        #region Commands
+        public DelegateCommand ChooseLanguageCommand { get; internal set; }
+        public DelegateCommand HelpCommand { get; internal set; }
+        public DelegateCommand OpenGitHubCommand { get; internal set; }
+        public DelegateCommand DeveloperCommand { get; internal set; }
+        #endregion
+
         public SettingsViewModel(
             INavigationService navigationService,
             IPreferencesService preferencesService,
@@ -111,7 +118,7 @@ namespace Hymnal.XF.ViewModels
         //    });
         //}
 
-        public DelegateCommand ChooseLanguageCommand;
+        #region Command Actions
         private async void ChooseLanguageExecuteAsync()
         {
             var languages = new Dictionary<string, HymnalLanguage>();
@@ -138,22 +145,20 @@ namespace Hymnal.XF.ViewModels
             preferencesService.ConfiguratedHymnalLanguage = HymnalLanguage;
         }
 
-        public DelegateCommand HelpCommand;
         private async void HelpExecuteAsync()
         {
             await NavigationService.NavigateAsync(nameof(HelpPage));
         }
 
-        public DelegateCommand OpenGitHubCommand;
         private async void OpenGitHubExecuteAsync()
         {
             await Browser.OpenAsync(AppConstants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
         }
 
-        public DelegateCommand DeveloperCommand;
         private async void DeveloperExecuteAsync()
         {
             await Browser.OpenAsync(AppConstants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
+        #endregion
     }
 }

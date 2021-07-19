@@ -28,6 +28,9 @@
             <Button Command="{Binding ClickmeCommand}" Text="Binding Alert" />
             <Button Command="{prism:NavigateTo 'SimplePage'}" Text="Navigate PrismNavigateTo" />
             <Button Command="{Binding SampleCommand}" Text="Binding SampleNavigate" />
+            <Button Command="{Binding SampleModalNavigationCommand}" Text="Binding SampleNavigate Modal" />
+            <Button Command="{Binding GoBackCommand}" Text="Binding GoBack" />
+
         </StackLayout>
         <!--</ScrollView>-->
     </ContentPage.Content>

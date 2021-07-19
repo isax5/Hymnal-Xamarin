@@ -12,17 +12,17 @@ namespace Hymnal.XF.Views
         {
             InitializeComponent();
 
-            if (Device.RuntimePlatform == Device.Tizen)
-            {
-                this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
-                hymnContentLabel.FontSize = 80;
-                backgroundImage.Source = new FileImageSource { File = "Background.png" };
-            }
+            //if (Device.RuntimePlatform == Device.Tizen)
+            //{
+            //    this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
+            //    hymnContentLabel.FontSize = 80;
+            //    backgroundImage.Source = new FileImageSource { File = "Background.png" };
+            //}
 
-            if (Device.RuntimePlatform != Device.iOS)
-            {
-                ToolbarItems.Remove(CloseToolbar);
-            }
+            //if (Device.RuntimePlatform != Device.iOS)
+            //{
+            //    ToolbarItems.Remove(CloseToolbar);
+            //}
 
             // Toolbar player
             //PlaySomethingToolbarItem.Text = string.Empty;
@@ -33,14 +33,14 @@ namespace Hymnal.XF.Views
             //OpenPlayerToolbarItem.Command = new Command(() => ViewModel.OpenPlayerCommand.Execute());
         }
 
-        protected override void OnBindingContextChanged()
-        {
-            base.OnBindingContextChanged();
+        //protected override void OnBindingContextChanged()
+        //{
+        //    base.OnBindingContextChanged();
 
-            if (!ViewModel.Language.SupportSheets)
-                ToolbarItems.Remove(SheetToolbar);
+        //    if (!ViewModel.Language.SupportSheets)
+        //        ToolbarItems.Remove(SheetToolbar);
 
-            //PlayerVisible = ViewModel.Language.SupportMusic;
-        }
+        //    //PlayerVisible = ViewModel.Language.SupportMusic;
+        //}
     }
 }
