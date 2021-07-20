@@ -124,83 +124,23 @@ namespace Hymnal.XF.ViewModels
                 ex.Report();
             }
 
-            // TODO: Cargar preferencias y gardar historial
-            //IsPlaying = mediaManager.IsPlaying();
+            IsPlaying = mediaManager.IsPlaying();
 
-            //// Is Favorite
-            //IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+            // Is Favorite
+            IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
-            //// Record
-            //if (HymnParameter.SaveInRecords)
-            //{
+            // Record
+            if (HymnParameter.SaveInRecords)
+            {
 
-            //    IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
-            //    storageService.RemoveRange(records);
+                IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
+                storageService.RemoveRange(records);
 
-            //    storageService.Add(Hymn.ToRecordHymn());
-            //}
+                storageService.Add(Hymn.ToRecordHymn());
+            }
 
-            //azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
+            azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
         }
-
-        //public override async Task Initialize()
-        //{
-        //    try
-        //    {
-        //        Hymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        var properties = new Dictionary<string, string>()
-        //        {
-        //            { "File", nameof(HymnViewModel) },
-        //            { "Hymn Number", HymnParameter.Number.ToString() },
-        //            { "Hymn Version", HymnParameter.HymnalLanguage.Id }
-        //        };
-
-        //        logger.LogError("Exception opening a hymnal", ex, properties);
-        //        Crashes.TrackError(ex, properties);
-
-        //        await navigationService.Close(this);
-        //        return;
-        //    }
-
-        //    IsPlaying = mediaManager.IsPlaying();
-
-        //    // Is Favorite
-        //    IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
-
-        //    // Record
-        //    if (HymnParameter.SaveInRecords)
-        //    {
-
-        //        IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
-        //        storageService.RemoveRange(records);
-
-        //        storageService.Add(Hymn.ToRecordHymn());
-        //    }
-
-        //    await base.Initialize();
-        //}
-
-        //public override void ViewAppeared()
-        //{
-        //    base.ViewAppeared();
-
-        //    // Precarga de datos para reproduccion
-        //    azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
-
-        //    Debug.WriteLine($"Opening Hymn: {Hymn.Number} of {Language.Id}");
-
-        //    Analytics.TrackEvent(Constants.TrackEv.HymnOpened, new Dictionary<string, string>
-        //    {
-        //        { Constants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-        //        { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-        //        { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-        //        { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() },
-        //        { "Font Size Hymnal", preferencesService.HymnalsFontSize.ToString() }
-        //    });
-        //}
 
         #region Events
         private void MediaManager_StateChanged(object sender, MediaManager.Playback.StateChangedEventArgs e)
