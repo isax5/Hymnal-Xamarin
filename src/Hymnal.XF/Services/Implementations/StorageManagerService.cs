@@ -9,7 +9,12 @@ namespace Hymnal.XF.Services
     /// </summary>
     public class StorageManagerService : IStorageManagerService
     {
-        public Realm RealmInstance;
+        private readonly Realm realmInstance;
+
+        public StorageManagerService()
+        {
+            realmInstance = Realm.GetInstance();
+        }
 
         /// <summary>
         /// Add item
@@ -18,7 +23,7 @@ namespace Hymnal.XF.Services
         /// <param name="item"></param>
         public void Add<T>(T item) where T : RealmObject, IStorageModel
         {
-            RealmInstance.Write(() => RealmInstance.Add(item));
+            realmInstance.Write(() => realmInstance.Add(item));
         }
 
         /// <summary>
@@ -28,7 +33,7 @@ namespace Hymnal.XF.Services
         /// <returns></returns>
         public IQueryable<T> All<T>() where T : RealmObject, IStorageModel
         {
-            return RealmInstance.All<T>();
+            return realmInstance.All<T>();
         }
 
         /// <summary>
@@ -38,9 +43,9 @@ namespace Hymnal.XF.Services
         /// <param name="item"></param>
         public void Remove<T>(T item) where T : RealmObject, IStorageModel
         {
-            using (Transaction trans = RealmInstance.BeginWrite())
+            using (Transaction trans = realmInstance.BeginWrite())
             {
-                RealmInstance.Remove(item);
+                realmInstance.Remove(item);
                 trans.Commit();
             }
         }
@@ -52,9 +57,9 @@ namespace Hymnal.XF.Services
         /// <param name="items"></param>
         public void RemoveRange<T>(IQueryable<T> items) where T : RealmObject, IStorageModel
         {
-            using (Transaction trans = RealmInstance.BeginWrite())
+            using (Transaction trans = realmInstance.BeginWrite())
             {
-                RealmInstance.RemoveRange(items);
+                realmInstance.RemoveRange(items);
                 trans.Commit();
             }
         }

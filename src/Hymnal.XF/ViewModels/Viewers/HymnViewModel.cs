@@ -362,13 +362,6 @@ namespace Hymnal.XF.ViewModels
                 ex => ex.Report());
         }
 
-        //public DelegateCommand OpenPlayerCommand;
-        //private async Task OpenPlayerExecuteAsync()
-        //{
-        //    await NavigationService.Close(this);
-        //    await NavigationService.Navigate<PlayerViewModel, HymnIdParameter>(HymnParameter);
-        //}
-
         private async void CloseAsync()
         {
             await NavigationService.GoBackAsync();

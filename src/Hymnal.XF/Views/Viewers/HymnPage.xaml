@@ -16,13 +16,13 @@
     BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
     Visual="Material">
 
-    <!--<ContentPage.Resources>
+    <ContentPage.Resources>
         <ResourceDictionary>
             <i18n:TranslateConverter x:Key="TranslateConverter" />
         </ResourceDictionary>
-    </ContentPage.Resources>-->
+    </ContentPage.Resources>
 
-    <!--<ContentPage.ToolbarItems>
+    <ContentPage.ToolbarItems>
         <ToolbarItem
             x:Name="CloseToolbar"
             AutomationId="ClosePageToolbar"
@@ -64,9 +64,9 @@
                 <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
 
-    <!--<RelativeLayout>
+    <RelativeLayout>
         <Image
             x:Name="backgroundImage"
             Aspect="AspectFill"
@@ -119,7 +119,6 @@
             </StackLayout>
         </ScrollView>
 
-    </RelativeLayout>-->
+    </RelativeLayout>
 
-    <Label Text="Hol mundo" />
 </views:BaseContentPage>
