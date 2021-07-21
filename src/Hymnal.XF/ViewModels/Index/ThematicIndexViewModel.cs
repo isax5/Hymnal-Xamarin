@@ -1,11 +1,9 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
 using Hymnal.XF.Views;
-using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using Prism.Navigation;
 

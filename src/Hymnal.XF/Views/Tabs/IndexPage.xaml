@@ -53,7 +53,7 @@
     <CarouselPage.Children>
         <views:AlphabeticalIndexPage />
         <views:NumericalIndexPage />
-        <views:ThematicHymnsListPage />
+        <views:ThematicIndexPage />
     </CarouselPage.Children>
 
 </CarouselPage>
