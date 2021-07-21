@@ -31,23 +31,36 @@ namespace Hymnal.XF
             // App Theme
             app.ThemeHelper = new ThemeHelper(app);
 
-            // Hymnals Language
             var preferencesService = app.Container.Resolve(typeof(IPreferencesService)) as IPreferencesService;
+
+            // Hymnals Language
             if (preferencesService.ConfiguratedHymnalLanguage == null)
             {
                 List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
                 preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
 
+            // Keep Screen On
+            if (DeviceInfo.Platform == DevicePlatform.Android
+                || DeviceInfo.Platform == DevicePlatform.iOS
+                || DeviceInfo.Platform == DevicePlatform.tvOS
+                || DeviceInfo.Platform == DevicePlatform.UWP
+                || DeviceInfo.Platform == DevicePlatform.watchOS)
+            {
+                DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
+            }
+
             // AppCenter Tracking
             // Doc: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/xamarin#423-xamarinforms
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
-                DeviceInfo.Platform == DevicePlatform.Android)
+            DeviceInfo.Platform == DevicePlatform.Android)
             {
 #if RELEASE
-                AppCenter.Start("ios=d636d723-86a7-4d3a-8f02-cfdd454df9af;android=2ded5d95-4218-4a32-893f-1db17c0004a6;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
+                AppCenter.Start("ios=d636d723-86a7-4d3a-8f02-cfdd454df9af;android=2ded5d95-4218-4a32-893f-1db17c0004a6;uwp={YourAppSecret}",
+                    typeof(Analytics), typeof(Crashes));
 #elif DEBUG
-                AppCenter.Start("ios=b3d6dce3-971c-40cf-aa5f-e40979e7fb7a;android=d3f0ef03-acc8-450b-b028-6fb74ddd98c5;uwp={YourAppSecret}", typeof(Analytics), typeof(Crashes));
+                AppCenter.Start("ios=b3d6dce3-971c-40cf-aa5f-e40979e7fb7a;android=d3f0ef03-acc8-450b-b028-6fb74ddd98c5;uwp={YourAppSecret}",
+                    typeof(Analytics), typeof(Crashes));
 #endif
             }
             else

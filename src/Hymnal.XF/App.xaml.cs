@@ -59,6 +59,7 @@ namespace Hymnal.XF
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesViewModel>();
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsViewModel>();
             containerRegistry.RegisterForNavigation<HymnPage, HymnViewModel>();
+            containerRegistry.RegisterForNavigation<MusicSheetPage, MusicSheetViewModel>();
             containerRegistry.RegisterForNavigation<SearchPage, SearchViewModel>();
             containerRegistry.RegisterForNavigation<RecordsPage, RecordsViewModel>();
             containerRegistry.RegisterForNavigation<AlphabeticalIndexPage, AlphabeticalIndexViewModel>();

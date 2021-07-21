@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
@@ -6,6 +7,7 @@ using Hymnal.XF.Services;
 using Hymnal.XF.Views;
 using MvvmHelpers;
 using Prism.Navigation;
+using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -97,11 +99,13 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
-            {
-                Number = hymn.Number,
-                HymnalLanguage = loadedLanguage
-            });
+            await NavigationService.NavigateAsync(
+                NavRoutes.HymnViewerAsModal,
+                new HymnIdParameter
+                {
+                    Number = hymn.Number,
+                    HymnalLanguage = loadedLanguage
+                }, true, true);
         }
     }
 }

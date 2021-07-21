@@ -24,6 +24,7 @@ namespace Hymnal.XF.Droid
             global::Xamarin.Forms.Forms.Init(this, bundle);
             global::Xamarin.Forms.FormsMaterial.Init(this, bundle);
             CrossMediaManager.Current.Init(this);
+            Xamarin.Essentials.Platform.Init(this, bundle);
             LoadApplication(new App(new AndroidInitializer()));
         }
 

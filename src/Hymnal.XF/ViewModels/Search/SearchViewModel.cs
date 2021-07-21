@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Helpers;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
@@ -123,7 +124,7 @@ namespace Hymnal.XF.ViewModels
             try
             {
                 await NavigationService.NavigateAsync(
-                    $"{nameof(NavigationPage)}/{nameof(HymnPage)}",
+                    NavRoutes.HymnViewerAsModal,
                     new HymnIdParameter
                     {
                         Number = hymn.Number,

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
@@ -110,7 +111,7 @@ namespace Hymnal.XF.ViewModels
         private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
         {
             await NavigationService.NavigateAsync(
-                $"{nameof(NavigationPage)}/{nameof(HymnPage)}",
+                NavRoutes.HymnViewerAsModal,
                 new HymnIdParameter
                 {
                     Number = hymn.Item2.Number,

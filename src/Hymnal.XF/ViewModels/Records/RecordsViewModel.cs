@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
-using Hymnal.XF.Views;
 using MvvmHelpers;
 using Prism.Navigation;
 
@@ -72,12 +72,14 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Tuple<RecordHymn, Hymn> hymn)
         {
-            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
-            {
-                Number = hymn.Item2.Number,
-                HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId),
-                SaveInRecords = false
-            });
+            await NavigationService.NavigateAsync(
+                NavRoutes.HymnViewerAsModal,
+                new HymnIdParameter
+                {
+                    Number = hymn.Item2.Number,
+                    HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId),
+                    SaveInRecords = false
+                }, true, true);
         }
     }
 }

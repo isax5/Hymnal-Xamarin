@@ -62,11 +62,11 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref isPlaying, value);
         }
 
-        private HymnIdParameter hymnId;
+        private HymnIdParameter hymnParameter;
         public HymnIdParameter HymnParameter
         {
-            get => hymnId;
-            set => SetProperty(ref hymnId, value);
+            get => hymnParameter;
+            set => SetProperty(ref hymnParameter, value);
         }
         #endregion
 

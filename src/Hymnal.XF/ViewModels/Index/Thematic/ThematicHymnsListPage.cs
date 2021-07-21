@@ -1,16 +1,17 @@
-using System.Collections.Generic;
 using System.Threading.Tasks;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Hymnal.XF.Views;
-using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
+    /// <summary>
+    /// Navigable from <see cref="ThematicSubGroupViewModel"/>
+    /// </summary>
     public class ThematicHymnsListViewModel : BaseViewModelParameter<GenericNavigationParameter<Ambit>>
     {
         private readonly IHymnsService hymnsService;
@@ -51,16 +52,10 @@ namespace Hymnal.XF.ViewModels
             language = this.preferencesService.ConfiguratedHymnalLanguage;
         }
 
-        public override void OnNavigatedTo(INavigationParameters parameters, GenericNavigationParameter<Ambit> parameter)
+        public override async void OnNavigatedTo(INavigationParameters parameters, GenericNavigationParameter<Ambit> parameter)
         {
             base.OnNavigatedTo(parameters, parameter);
             Ambit = parameter.Value;
-        }
-
-        public override async void OnAppearing()
-        {
-            base.OnAppearing();
-
             Hymns.AddRange((await hymnsService.GetHymnListAsync(language)).GetRange(Ambit.Star, Ambit.End));
         }
 
@@ -79,11 +74,13 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
-            {
-                Number = hymn.Number,
-                HymnalLanguage = language
-            });
+            await NavigationService.NavigateAsync(
+                NavRoutes.HymnViewerAsModal,
+                new HymnIdParameter
+                {
+                    Number = hymn.Number,
+                    HymnalLanguage = language
+                }, true, true);
         }
     }
 }
