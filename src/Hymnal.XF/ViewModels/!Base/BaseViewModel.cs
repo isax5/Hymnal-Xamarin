@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Hymnal.XF.Views;
 using Prism.AppModel;
 using Prism.Commands;
@@ -6,7 +7,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public abstract class BaseViewModel : BindableBase, IInitialize, INavigationAware, IDestructible, IPageLifecycleAware
+    public abstract class BaseViewModel : BindableBase, IInitialize, IInitializeAsync, INavigationAware, IDestructible, IPageLifecycleAware
     {
         protected INavigationService NavigationService { get; private set; }
 
@@ -61,6 +62,9 @@ namespace Hymnal.XF.ViewModels
 
 
         public virtual void Initialize(INavigationParameters parameters)
+        { }
+
+        public virtual async Task InitializeAsync(INavigationParameters parameters)
         { }
 
         /// <summary>

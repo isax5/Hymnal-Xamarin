@@ -35,6 +35,7 @@ namespace Hymnal.XF
             await NavigationService.NavigateAsync($"{nameof(RootPage)}" +
                 $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
                 $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SimplePage)}" +
+                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(IndexPage)}" +
                 $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(FavoritesPage)}" +
                 $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SettingsPage)}");
 
@@ -60,6 +61,11 @@ namespace Hymnal.XF
             containerRegistry.RegisterForNavigation<HymnPage, HymnViewModel>();
             containerRegistry.RegisterForNavigation<SearchPage, SearchViewModel>();
             containerRegistry.RegisterForNavigation<RecordsPage, RecordsViewModel>();
+            containerRegistry.RegisterForNavigation<AlphabeticalIndexPage, AlphabeticalIndexViewModel>();
+            containerRegistry.RegisterForNavigation<NumericalIndexPage, NumericalIndexViewModel>();
+            containerRegistry.RegisterForNavigation<ThematicIndexPage, ThematicIndexViewModel>();
+            containerRegistry.RegisterForNavigation<ThematicHymnsListPage, ThematicHymnsListViewModel>();
+            containerRegistry.RegisterForNavigation<ThematicSubGroupPage, ThematicSubGroupViewModel>();
         }
     }
 }

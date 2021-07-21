@@ -45,9 +45,9 @@ namespace Hymnal.XF.ViewModels
             this.storageManager = storageManager;
         }
 
-        public override async void Initialize(INavigationParameters parameters)
+        public override async Task InitializeAsync(INavigationParameters parameters)
         {
-            base.Initialize(parameters);
+            await base.InitializeAsync(parameters);
             Tuple<RecordHymn, Hymn>[] hymns = await Task.WhenAll(
                 storageManager
                 .All<RecordHymn>()

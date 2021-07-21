@@ -14,7 +14,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
-        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<ObservableGroupCollection<string, Hymn>>();
+        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; private set; } = new ObservableRangeCollection<ObservableGroupCollection<string, Hymn>>();
 
         public Hymn SelectedHymn
         {
@@ -46,10 +46,9 @@ namespace Hymnal.XF.ViewModels
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        public override async void OnAppearing()
+        public override async Task InitializeAsync(INavigationParameters parameters)
         {
-            base.OnAppearing();
-
+            await base.InitializeAsync(parameters);
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
 
             HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
@@ -72,12 +71,6 @@ namespace Hymnal.XF.ViewModels
         {
             await CheckAsync(e);
         }
-
-        //public override void ViewAppearing()
-        //{
-        //    base.ViewAppearing();
-        //    CheckAsync();
-        //}
 
         private async Task CheckAsync(HymnalLanguage newLanguage)
         {

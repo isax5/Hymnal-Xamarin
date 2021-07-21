@@ -48,9 +48,9 @@ namespace Hymnal.XF.ViewModels
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        public override async void OnAppearing()
+        public override async Task InitializeAsync(INavigationParameters parameters)
         {
-            base.OnAppearing();
+            await base.InitializeAsync(parameters);
 
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
 
