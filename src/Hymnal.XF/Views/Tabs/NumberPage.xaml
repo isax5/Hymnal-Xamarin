@@ -10,7 +10,7 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{i18n:Translate Number}"
+    Title="{i18n:Translate AdventistHymnal}"
     iOS:Page.UseSafeArea="True"
     x:DataType="viewModels:NumberViewModel"
     x:TypeArguments="viewModels:NumberViewModel"
@@ -74,8 +74,8 @@
                 x:Name="ContainerStack"
                 Margin="0,30"
                 Padding="0,0,0,60">
-                <Grid Padding="0">
 
+                <Grid Padding="0">
                     <Frame
                         BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
                         CornerRadius="10"

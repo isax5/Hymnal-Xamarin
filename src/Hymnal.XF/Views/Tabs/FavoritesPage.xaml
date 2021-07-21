@@ -9,7 +9,7 @@
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
     x:Name="page"
-    Title="{i18n:Translate Favorites}"
+    Title="{i18n:Translate AdventistHymnal}"
     iOS:Page.UseSafeArea="True"
     x:DataType="viewModels:FavoritesViewModel"
     x:TypeArguments="viewModels:FavoritesViewModel"

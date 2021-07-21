@@ -1,4 +1,5 @@
 using System;
+using Hymnal.XF.Extensions.i18n;
 using Hymnal.XF.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -6,8 +7,10 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : BaseContentPage<SettingsViewModel>
+    public partial class SettingsPage : BaseContentPage<SettingsViewModel>, ITabbedPage
     {
+        public string TabbedPageName => Languages.Settings;
+
         public SettingsPage()
         {
             InitializeComponent();

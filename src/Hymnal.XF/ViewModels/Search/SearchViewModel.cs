@@ -13,6 +13,7 @@ using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using Prism.Navigation;
 using Xamarin.Essentials;
+using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -45,7 +46,6 @@ namespace Hymnal.XF.ViewModels
             {
                 SetProperty(ref textSearchBar, value);
                 ObservableTextSearchBar.NextValue(value);
-                //TextSearchExecuteAsync(value).ConfigureAwait(true);
             }
         }
         private ObservableValue<string> ObservableTextSearchBar = new ObservableValue<string>(false);
@@ -116,17 +116,19 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {
-            // Some devices iOS that have had problems in this place
+            // Some iOS devices that have had problems in this place
             if (hymn == null)
                 return;
 
             try
             {
-                await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
-                {
-                    Number = hymn.Number,
-                    HymnalLanguage = _language
-                });
+                await NavigationService.NavigateAsync(
+                    $"{nameof(NavigationPage)}/{nameof(HymnPage)}",
+                    new HymnIdParameter
+                    {
+                        Number = hymn.Number,
+                        HymnalLanguage = _language
+                    }, true, true);
 
                 if (!string.IsNullOrWhiteSpace(TextSearchBar))
                 {

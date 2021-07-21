@@ -1,12 +1,15 @@
 using System;
+using Hymnal.XF.Extensions.i18n;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class IndexPage : CarouselPage
+    public partial class IndexPage : CarouselPage, ITabbedPage
     {
+        public string TabbedPageName => Languages.Index;
+
         public IndexPage()
         {
             InitializeComponent();

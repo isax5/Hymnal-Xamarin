@@ -13,6 +13,7 @@ using MvvmHelpers;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
+using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -108,11 +109,13 @@ namespace Hymnal.XF.ViewModels
 
         private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
         {
-            await NavigationService.NavigateAsync(nameof(HymnPage), new HymnIdParameter
-            {
-                Number = hymn.Item2.Number,
-                HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId)
-            }, true, true);
+            await NavigationService.NavigateAsync(
+                $"{nameof(NavigationPage)}/{nameof(HymnPage)}",
+                new HymnIdParameter
+                {
+                    Number = hymn.Item2.Number,
+                    HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item2.HymnalLanguageId)
+                }, true, true);
         }
 
         public DelegateCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand;

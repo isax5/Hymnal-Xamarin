@@ -34,7 +34,9 @@ namespace Hymnal.XF
 
             await NavigationService.NavigateAsync($"{nameof(RootPage)}" +
                 $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SimplePage)}");
+                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SimplePage)}" +
+                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(FavoritesPage)}" +
+                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SettingsPage)}");
 
             //await NavigationService.NavigateAsync($"/{nameof(RootPage)}" +
             //    $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +

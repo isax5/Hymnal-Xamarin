@@ -6,8 +6,8 @@ namespace Hymnal.XF.Views
     {
         public TViewModel ViewModel
         {
-            get => base.BindingContext as TViewModel;
-            set => base.BindingContext = value;
+            get => BindingContext as TViewModel;
+            set => BindingContext = value;
         }
 
         /*

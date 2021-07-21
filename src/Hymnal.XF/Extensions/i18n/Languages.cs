@@ -13,6 +13,10 @@ namespace Hymnal.XF.Extensions.i18n
         public static string InstrumentalOrSung => LanguageResources.InstrumentalOrSung;
         public static string Instrumental => LanguageResources.Instrumental;
         public static string Sung => LanguageResources.Sung;
+        public static string Number => LanguageResources.Number;
+        public static string Index => LanguageResources.Index;
+        public static string Favorites => LanguageResources.Favorites;
+        public static string Settings => LanguageResources.Settings;
         #endregion
     }
 }
