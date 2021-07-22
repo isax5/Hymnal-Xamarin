@@ -31,7 +31,10 @@
             Command="{prism:NavigateTo 'RecordsPage'}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.History}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.History}"
+                    Color="Red" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem

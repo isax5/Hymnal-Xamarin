@@ -1,3 +1,4 @@
+using Hymnal.XF.Constants;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.ViewModels;
 using Hymnal.XF.Views;
@@ -6,7 +7,6 @@ using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Navigation;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF
@@ -33,11 +33,10 @@ namespace Hymnal.XF
             //await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
 
             await NavigationService.NavigateAsync($"{nameof(RootPage)}" +
-                $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SimplePage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(IndexPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(FavoritesPage)}" +
-                $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SettingsPage)}");
+                $"?{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.NumberPage}" +
+                $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.IndexPage}" +
+                $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +
+                $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.SettingsPage}");
 
             //await NavigationService.NavigateAsync($"/{nameof(RootPage)}" +
             //    $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
@@ -51,7 +50,7 @@ namespace Hymnal.XF
             Setup.RegisterDependencies(containerRegistry);
 
             // Register Pages
-            containerRegistry.RegisterForNavigation<CustomNavigationPage>(nameof(NavigationPage));
+            containerRegistry.RegisterForNavigation<CustomNavigationPage>(NavRoutes.NavPage);
             containerRegistry.RegisterForNavigation<SimplePage, SimpleViewModel>();
             containerRegistry.RegisterForNavigation<RootPage, RootViewModel>();
             containerRegistry.RegisterForNavigation<NumberPage, NumberViewModel>();

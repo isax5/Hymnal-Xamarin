@@ -33,14 +33,15 @@ namespace Hymnal.XF
 
             var preferencesService = app.Container.Resolve(typeof(IPreferencesService)) as IPreferencesService;
 
-            // Hymnals Language
+            #region Hymnals Language
             if (preferencesService.ConfiguratedHymnalLanguage == null)
             {
                 List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
                 preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
+            #endregion
 
-            // Keep Screen On
+            #region Keep Screen On
             if (DeviceInfo.Platform == DevicePlatform.Android
                 || DeviceInfo.Platform == DevicePlatform.iOS
                 || DeviceInfo.Platform == DevicePlatform.tvOS
@@ -49,8 +50,9 @@ namespace Hymnal.XF
             {
                 DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
             }
+            #endregion
 
-            // AppCenter Tracking
+            #region AppCenter Tracking
             // Doc: https://docs.microsoft.com/en-us/appcenter/sdk/getting-started/xamarin#423-xamarinforms
             if (DeviceInfo.Platform == DevicePlatform.iOS ||
             DeviceInfo.Platform == DevicePlatform.Android)
@@ -65,8 +67,11 @@ namespace Hymnal.XF
             }
             else
             {
+                // Disable all AppCenter Services at runtime
+                // https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/xamarin#disable-all-services-at-runtime
                 AppCenter.SetEnabledAsync(false);
             }
+            #endregion
         }
 
         public void RegisterDependencies(IContainerRegistry containerRegistry)
