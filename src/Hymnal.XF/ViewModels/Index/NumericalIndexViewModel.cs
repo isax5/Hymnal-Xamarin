@@ -14,6 +14,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
+        #region Properties
         public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; private set; } = new ObservableRangeCollection<ObservableGroupCollection<string, Hymn>>();
 
         public Hymn SelectedHymn
@@ -30,6 +31,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private HymnalLanguage loadedLanguage;
+        #endregion
 
         public NumericalIndexViewModel(
             INavigationService navigationService,
@@ -67,7 +69,6 @@ namespace Hymnal.XF.ViewModels
         //    });
         //}
 
-
         private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
             await CheckAsync(e);
@@ -94,7 +95,6 @@ namespace Hymnal.XF.ViewModels
                 Hymns.AddRange((await hymnsService.GetHymnListAsync(loadedLanguage)).OrderByNumber().GroupByNumber());
             }
         }
-
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
         {

@@ -18,6 +18,7 @@ using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
 using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -29,6 +30,9 @@ namespace Hymnal.XF.ViewModels
         private readonly IPageDialogService dialogService;
         private readonly IStorageManagerService storageService;
         private readonly IAzureHymnService azureHymnService;
+        private readonly IMainThread mainThread;
+        private readonly IConnectivity connectivity;
+        private readonly IShare share;
 
         #region Properties
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
@@ -85,7 +89,10 @@ namespace Hymnal.XF.ViewModels
             IMediaManager mediaManager,
             IPageDialogService dialogService,
             IStorageManagerService storageService,
-            IAzureHymnService azureHymnService
+            IAzureHymnService azureHymnService,
+            IMainThread mainThread,
+            IConnectivity connectivity,
+            IShare share
             ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
@@ -94,6 +101,10 @@ namespace Hymnal.XF.ViewModels
             this.dialogService = dialogService;
             this.storageService = storageService;
             this.azureHymnService = azureHymnService;
+            this.mainThread = mainThread;
+            this.connectivity = connectivity;
+            this.share = share;
+
             mediaManager.StateChanged += MediaManager_StateChanged;
 
             OpenSheetCommand = new DelegateCommand(OpenSheetAsync).ObservesCanExecute(() => NotBusy);
@@ -206,7 +217,7 @@ namespace Hymnal.XF.ViewModels
 
         private void ShareExecute()
         {
-            Share.RequestAsync(
+            share.RequestAsync(
                 title: hymn.Title,
                 text: $"{hymn.Title}\n\n{hymn.Content}\n\n{AppConstants.WebLinks.DeveloperWebSite}");
 
@@ -222,7 +233,7 @@ namespace Hymnal.XF.ViewModels
         private async void PlayExecuteAsync()
         {
             // Check internet connection
-            if (Connectivity.NetworkAccess == NetworkAccess.None)
+            if (connectivity.NetworkAccess == NetworkAccess.None)
             {
                 await dialogService.DisplayAlertAsync(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
                 return;
@@ -240,7 +251,7 @@ namespace Hymnal.XF.ViewModels
 
             azureHymnService.ObserveSettings()
                 .Where(x => x.Id == Language.Id)
-                .Subscribe(hymnSettings => MainThread.InvokeOnMainThreadAsync(async () =>
+                .Subscribe(hymnSettings => mainThread.InvokeOnMainThreadAsync(async () =>
                 {
                     var songUrl = string.Empty;
                     var isPlayingInstrumentalMusic = false;

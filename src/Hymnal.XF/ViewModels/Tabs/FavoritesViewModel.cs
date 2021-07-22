@@ -8,13 +8,11 @@ using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
-using Hymnal.XF.Views;
 using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
-using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {

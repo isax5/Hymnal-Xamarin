@@ -72,10 +72,14 @@ namespace Hymnal.XF
         public void RegisterDependencies(IContainerRegistry containerRegistry)
         {
             containerRegistry
+                .RegisterSingleton<IMainThread, MainThreadImplementation>()
                 .RegisterSingleton<IAppInfo, AppInfoImplementation>()
                 .RegisterSingleton<IDeviceInfo, DeviceInfoImplementation>()
+                .RegisterSingleton<IDeviceDisplay, DeviceDisplayImplementation>()
                 .RegisterSingleton<IConnectivity, ConnectivityImplementation>()
                 .RegisterSingleton<IPreferences, PreferencesImplementation>()
+                .RegisterSingleton<IShare, ShareImplementation>()
+                .RegisterSingleton<IBrowser, BrowserImplementation>()
 
                 .RegisterInstance<IMediaManager>(CrossMediaManager.Current)
                 .RegisterInstance<IAzureHymnService>(AzureHymnService.Current)

@@ -15,6 +15,7 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IPreferencesService preferencesService;
 
+        #region Properties
         private Thematic thematic;
         public Thematic Thematic
         {
@@ -34,7 +35,7 @@ namespace Hymnal.XF.ViewModels
                 RaisePropertyChanged(nameof(SelectedAmbit));
             }
         }
-
+        #endregion
 
         public ThematicSubGroupViewModel(
             INavigationService navigationService,

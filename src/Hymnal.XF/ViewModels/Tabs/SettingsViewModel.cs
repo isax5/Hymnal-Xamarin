@@ -10,6 +10,7 @@ using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
 using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -17,7 +18,12 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IPreferencesService preferencesService;
         private readonly IPageDialogService dialogService;
+        private readonly IDeviceInfo deviceInfo;
+        private readonly IAppInfo appInfo;
+        private readonly IBrowser browser;
+        private readonly IDeviceDisplay deviceDisplay;
 
+        #region Properties
         private readonly BrowserLaunchOptions browserLaunchOptions = new BrowserLaunchOptions
         {
             LaunchMode = BrowserLaunchMode.SystemPreferred,
@@ -59,21 +65,22 @@ namespace Hymnal.XF.ViewModels
         {
             get
             {
-                if (DeviceInfo.Platform == DevicePlatform.iOS ||
-                    DeviceInfo.Platform == DevicePlatform.Android)
+                if (deviceInfo.Platform == DevicePlatform.iOS ||
+                    deviceInfo.Platform == DevicePlatform.Android)
                 {
-                    return DeviceDisplay.KeepScreenOn;
+                    return deviceDisplay.KeepScreenOn;
 
                 }
                 return false;
             }
             set
             {
-                DeviceDisplay.KeepScreenOn = value;
+                deviceDisplay.KeepScreenOn = value;
                 preferencesService.KeepScreenOn = value;
                 RaisePropertyChanged(nameof(KeepScreenOn));
             }
         }
+        #endregion
 
         #region Commands
         public DelegateCommand ChooseLanguageCommand { get; internal set; }
@@ -85,11 +92,19 @@ namespace Hymnal.XF.ViewModels
         public SettingsViewModel(
             INavigationService navigationService,
             IPreferencesService preferencesService,
-            IPageDialogService dialogService
+            IPageDialogService dialogService,
+            IDeviceInfo deviceInfo,
+            IAppInfo appInfo,
+            IBrowser browser,
+            IDeviceDisplay deviceDisplay
             ) : base(navigationService)
         {
             this.preferencesService = preferencesService;
             this.dialogService = dialogService;
+            this.deviceInfo = deviceInfo;
+            this.appInfo = appInfo;
+            this.browser = browser;
+            this.deviceDisplay = deviceDisplay;
 
             ChooseLanguageCommand = new DelegateCommand(ChooseLanguageExecuteAsync).ObservesCanExecute(() => NotBusy);
             HelpCommand = new DelegateCommand(HelpExecuteAsync).ObservesCanExecute(() => NotBusy);
@@ -102,8 +117,8 @@ namespace Hymnal.XF.ViewModels
             base.Initialize(parameters);
             HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage;
 
-            AppVersionString = AppInfo.VersionString;
-            AppBuildString = AppInfo.BuildString;
+            AppVersionString = appInfo.VersionString;
+            AppBuildString = appInfo.BuildString;
         }
 
         //public override void ViewAppeared()
@@ -152,12 +167,12 @@ namespace Hymnal.XF.ViewModels
 
         private async void OpenGitHubExecuteAsync()
         {
-            await Browser.OpenAsync(AppConstants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
+            await browser.OpenAsync(AppConstants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
         }
 
         private async void DeveloperExecuteAsync()
         {
-            await Browser.OpenAsync(AppConstants.WebLinks.DeveloperWebSite, browserLaunchOptions);
+            await browser.OpenAsync(AppConstants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
         #endregion
     }

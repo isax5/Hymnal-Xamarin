@@ -15,7 +15,6 @@ namespace Hymnal.XF.ViewModels
     public class RecordsViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
-        private readonly IPreferencesService preferencesService;
         private readonly IStorageManagerService storageManager;
 
         public ObservableRangeCollection<Tuple<RecordHymn, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<Tuple<RecordHymn, Hymn>>();
@@ -36,12 +35,10 @@ namespace Hymnal.XF.ViewModels
         public RecordsViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService,
             IStorageManagerService storageManager
             ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
-            this.preferencesService = preferencesService;
             this.storageManager = storageManager;
         }
 

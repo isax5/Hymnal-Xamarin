@@ -14,6 +14,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
+        #region Properties
         public ObservableRangeCollection<Thematic> Thematics { get; set; } = new ObservableRangeCollection<Thematic>();
 
         public Thematic SelectedThematic
@@ -30,6 +31,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private HymnalLanguage loadedLanguage;
+        #endregion
 
         public ThematicIndexViewModel(
             INavigationService navigationService,

@@ -16,6 +16,8 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
+
+        #region Properties
         private Ambit ambit;
         public Ambit Ambit
         {
@@ -39,6 +41,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private readonly HymnalLanguage language;
+        #endregion
 
         public ThematicHymnsListViewModel(
             INavigationService navigationService,

@@ -10,7 +10,7 @@ namespace Hymnal.XF.ViewModels
         {
         }
 
-        private bool loaded = false;
+        //private bool loaded = false;
         //public override async void ViewAppearing()
         //{
         //    base.ViewAppearing();

@@ -1,19 +1,11 @@
-using Hymnal.XF.Services;
 using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
     public class HelpViewModel : BaseViewModel
     {
-        private readonly IPreferencesService preferencesService;
-
-        public HelpViewModel(
-            INavigationService navigationService,
-            IPreferencesService preferencesService
-            ) : base(navigationService)
-        {
-            this.preferencesService = preferencesService;
-        }
+        public HelpViewModel(INavigationService navigationService) : base(navigationService)
+        { }
 
         public override void OnAppearing()
         {

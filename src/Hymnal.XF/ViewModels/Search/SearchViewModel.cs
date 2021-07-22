@@ -9,12 +9,10 @@ using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Hymnal.XF.Views;
 using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using Prism.Navigation;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {

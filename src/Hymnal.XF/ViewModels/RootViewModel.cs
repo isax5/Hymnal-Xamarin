@@ -15,7 +15,6 @@ namespace Hymnal.XF.ViewModels
         }
 
         // LifeCycle implemented in RootViewModel
-        #region LifeCycle
         //public override void Start()
         //{
         //    Log.LogInformation("App Started");
@@ -33,6 +32,5 @@ namespace Hymnal.XF.ViewModels
 
         //    base.Start();
         //}
-        #endregion
     }
 }
