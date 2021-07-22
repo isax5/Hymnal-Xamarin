@@ -19,14 +19,15 @@
 
     <Color x:Key="PrimaryTextColor">#000000</Color>
     <Color x:Key="SecondaryTextColor">#666666</Color>
-    <Color x:Key="NavBarTextColor">#000</Color>
+    <Color x:Key="NavBarTextColor">#ffffff</Color>
 
     <!--  Background in Navigation and Tab Bar  -->
-    <Color x:Key="PrimaryBackgroudColor">#ffff</Color>
+    <Color x:Key="PrimaryBackgroudColor">#000000</Color>
     <Color x:Key="SecondaryBackgroudColor">#ffffff</Color>
     <Color x:Key="BackgroundColorFilterHymnLetters">#ffffff</Color>
 
     <Color x:Key="SelectedTabColor">#000</Color>
-    <Color x:Key="UnselectedTabColor">#4F5252</Color>
+    <Color x:Key="UnselectedTabColor">#737373</Color>
+    <Color x:Key="BackgroundTabColor">#f5f5f5</Color>
 
 </ResourceDictionary>

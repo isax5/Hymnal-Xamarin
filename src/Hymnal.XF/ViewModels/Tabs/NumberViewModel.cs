@@ -63,7 +63,10 @@ namespace Hymnal.XF.ViewModels
             if (int.TryParse(num, out var number))
             {
                 if (number < 0 || number > hymns.Count())
+                {
+                    Busy = false;
                     return;
+                }
 
                 await NavigationService.NavigateAsync(
                     NavRoutes.HymnViewerAsModal,

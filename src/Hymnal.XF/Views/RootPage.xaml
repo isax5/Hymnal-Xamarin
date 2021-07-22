@@ -12,7 +12,7 @@
     android:TabbedPage.ToolbarPlacement="Bottom"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:RootViewModel"
-    BarBackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BarBackgroundColor="{DynamicResource BackgroundTabColor}"
     BarTextColor="{DynamicResource SelectedTabColor}"
     SelectedTabColor="{DynamicResource SelectedTabColor}"
     Style="{DynamicResource TabbedPageStyle}"
