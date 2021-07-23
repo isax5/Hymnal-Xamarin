@@ -11,6 +11,7 @@ namespace Hymnal.XF.ViewModels
     {
         protected INavigationService NavigationService { get; private set; }
 
+        #region Properties
 #if DEBUG
         public DelegateCommand SampleCommand { get; private set; }
 #endif
@@ -27,26 +28,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         public bool NotBusy => !busy;
-
-        private string title;
-        public string Title
-        {
-            get => title;
-            set => SetProperty(ref title, value);
-        }
-
-        private string tabName;
-        public string TabName
-        {
-            get
-            {
-                if (string.IsNullOrEmpty(tabName))
-                    return GetType().Name;
-
-                return tabName;
-            }
-            set => SetProperty(ref tabName, value);
-        }
+        #endregion
 
         public BaseViewModel(INavigationService navigationService)
         {
@@ -60,12 +42,14 @@ namespace Hymnal.XF.ViewModels
 #endif
         }
 
-
+        #region Life Cycle
         public virtual void Initialize(INavigationParameters parameters)
         { }
 
-        public virtual async Task InitializeAsync(INavigationParameters parameters)
-        { }
+        public virtual Task InitializeAsync(INavigationParameters parameters)
+        {
+            return Task.CompletedTask;
+        }
 
         /// <summary>
         /// When navigate from this VM
@@ -98,5 +82,6 @@ namespace Hymnal.XF.ViewModels
         /// </summary>
         public virtual void OnDisappearing()
         { }
+        #endregion
     }
 }

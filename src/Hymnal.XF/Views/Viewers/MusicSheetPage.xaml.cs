@@ -13,7 +13,7 @@ namespace Hymnal.XF.Views
         }
 
         private bool showingNavigationBar = true;
-        private void ScrollViewTapped(object sender, System.EventArgs e)
+        private void StackLayoutTapped(object sender, System.EventArgs e)
         {
             if (showingNavigationBar)
                 NavigationPage.SetHasNavigationBar(this, false);
