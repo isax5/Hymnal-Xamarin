@@ -38,6 +38,9 @@ namespace Hymnal.XF.ViewModels
             }
         }
 
+        #region Commands
+        public DelegateCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand { get; internal set; }
+        #endregion
 
         public FavoritesViewModel(
             INavigationService navigationService,
@@ -75,7 +78,9 @@ namespace Hymnal.XF.ViewModels
             }
 
             // Add new Hymns
-            foreach (Tuple<FavoriteHymn, Hymn> hymn in favorites.Where(t1 => Hymns.Where(t2 => t2.Item2.Number == t1.Item2.Number && t2.Item2.HymnalLanguageId.Equals(t1.Item2.HymnalLanguageId)).Count() == 0))
+            foreach (Tuple<FavoriteHymn, Hymn> hymn in
+                favorites.Where(t1 => Hymns
+                    .Where(t2 => t2.Item2.Number == t1.Item2.Number && t2.Item2.HymnalLanguageId.Equals(t1.Item2.HymnalLanguageId)).Count() == 0))
             {
                 // if hymn doesn't exist in Hymns
 
@@ -85,12 +90,14 @@ namespace Hymnal.XF.ViewModels
 
             // Remove no favorites hymns
             var toRemoveList = new List<Tuple<FavoriteHymn, Hymn>>();
-            foreach (var hymn in Hymns.Where(t1 => favorites.Where(t2 => t2.Item2.Number == t1.Item2.Number && t2.Item2.HymnalLanguageId.Equals(t1.Item2.HymnalLanguageId)).Count() == 0))
+            foreach (Tuple<FavoriteHymn, Hymn> hymn in
+                Hymns.Where(t1 => favorites
+                    .Where(t2 => t2.Item2.Number == t1.Item2.Number && t2.Item2.HymnalLanguageId.Equals(t1.Item2.HymnalLanguageId)).Count() == 0))
             {
                 toRemoveList.Add(hymn);
             }
 
-            foreach (var item in toRemoveList)
+            foreach (Tuple<FavoriteHymn, Hymn> item in toRemoveList)
                 Hymns.Remove(item);
         }
 
@@ -117,7 +124,6 @@ namespace Hymnal.XF.ViewModels
                 }, true, true);
         }
 
-        public DelegateCommand<Tuple<FavoriteHymn, Hymn>> DeleteHymnCommand;
         private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
         {
             //Analytics.TrackEvent(Constants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
@@ -128,6 +134,7 @@ namespace Hymnal.XF.ViewModels
             //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
             //});
 
+            Busy = true;
             try
             {
                 Hymns.Remove(favoriteHymn);
@@ -135,13 +142,18 @@ namespace Hymnal.XF.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string>()
-                    {
-                        { "File", nameof(FavoritesViewModel) },
-                        { "Deleting Favorite", favoriteHymn.Item1.Number.ToString() }
-                    };
+                ex.Report();
+                //var properties = new Dictionary<string, string>()
+                //    {
+                //        { "File", nameof(FavoritesViewModel) },
+                //        { "Deleting Favorite", favoriteHymn.Item1.Number.ToString() }
+                //    };
 
-                Crashes.TrackError(ex, properties);
+                //Crashes.TrackError(ex, properties);
+            }
+            finally
+            {
+                Busy = false;
             }
         }
     }

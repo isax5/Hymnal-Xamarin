@@ -142,13 +142,14 @@ namespace Hymnal.XF.ViewModels
             }
             catch (Exception ex)
             {
-                var properties = new Dictionary<string, string>()
-                    {
-                        { "File", nameof(SearchViewModel) },
-                        { "Opening Hymn", hymn.Number.ToString() }
-                    };
+                ex.Report();
+                //var properties = new Dictionary<string, string>()
+                //    {
+                //        { "File", nameof(SearchViewModel) },
+                //        { "Opening Hymn", hymn.Number.ToString() }
+                //    };
 
-                Crashes.TrackError(ex, properties);
+                //Crashes.TrackError(ex, properties);
             }
         }
     }
