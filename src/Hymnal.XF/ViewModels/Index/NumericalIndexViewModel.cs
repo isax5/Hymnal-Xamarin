@@ -15,7 +15,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IPreferencesService preferencesService;
 
         #region Properties
-        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; private set; } = new ObservableRangeCollection<ObservableGroupCollection<string, Hymn>>();
+        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; } = new();
 
         public Hymn SelectedHymn
         {

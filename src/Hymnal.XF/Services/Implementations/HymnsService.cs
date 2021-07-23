@@ -18,12 +18,12 @@ namespace Hymnal.XF.Services
         /// <summary>
         /// <see cref="Hymn"/> cache
         /// </summary>
-        private static readonly Dictionary<string, IEnumerable<Hymn>> HymnsDictionary = new Dictionary<string, IEnumerable<Hymn>>();
+        private static readonly Dictionary<string, IEnumerable<Hymn>> HymnsDictionary = new();
 
         /// <summary>
         /// <see cref="Thematic"/> cache
         /// </summary>
-        private static readonly Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new Dictionary<string, IEnumerable<Thematic>>();
+        private static readonly Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new();
 
         public HymnsService(
             IFilesService filesService

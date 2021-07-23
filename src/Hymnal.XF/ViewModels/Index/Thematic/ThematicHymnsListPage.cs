@@ -25,7 +25,7 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref ambit, value);
         }
 
-        public ObservableRangeCollection<Hymn> Hymns { get; set; } = new ObservableRangeCollection<Hymn>();
+        public ObservableRangeCollection<Hymn> Hymns { get; } = new();
 
         public Hymn SelectedHymn
         {

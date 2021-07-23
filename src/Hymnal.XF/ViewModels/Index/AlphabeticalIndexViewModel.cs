@@ -4,10 +4,8 @@ using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Hymnal.XF.Views;
 using MvvmHelpers;
 using Prism.Navigation;
-using Xamarin.Forms;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -17,7 +15,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IPreferencesService preferencesService;
 
         #region Properties
-        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; private set; } = new ObservableRangeCollection<ObservableGroupCollection<string, Hymn>>();
+        public ObservableRangeCollection<ObservableGroupCollection<string, Hymn>> Hymns { get; } = new();
 
         public Hymn SelectedHymn
         {

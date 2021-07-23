@@ -8,22 +8,18 @@ using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
-using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using Prism.Commands;
 using Prism.Navigation;
-using Prism.Services;
 
 namespace Hymnal.XF.ViewModels
 {
     public class FavoritesViewModel : BaseViewModel
     {
-        private readonly IPageDialogService dialogService;
         private readonly IHymnsService hymnsService;
-        private readonly IPreferencesService preferencesService;
         private readonly IStorageManagerService storageManager;
 
-        public ObservableRangeCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<Tuple<FavoriteHymn, Hymn>>();
+        public ObservableRangeCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; } = new();
 
         public Tuple<FavoriteHymn, Hymn> SelectedHymn
         {
@@ -44,15 +40,11 @@ namespace Hymnal.XF.ViewModels
 
         public FavoritesViewModel(
             INavigationService navigationService,
-            IPageDialogService dialogService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService,
             IStorageManagerService storageManager
             ) : base(navigationService)
         {
-            this.dialogService = dialogService;
             this.hymnsService = hymnsService;
-            this.preferencesService = preferencesService;
             this.storageManager = storageManager;
 
             DeleteHymnCommand = new DelegateCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute).ObservesCanExecute(() => NotBusy);

@@ -15,7 +15,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IPreferencesService preferencesService;
 
         #region Properties
-        public ObservableRangeCollection<Thematic> Thematics { get; set; } = new ObservableRangeCollection<Thematic>();
+        public ObservableRangeCollection<Thematic> Thematics { get; } = new();
 
         public Thematic SelectedThematic
         {

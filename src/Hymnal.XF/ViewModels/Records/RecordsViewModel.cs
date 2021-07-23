@@ -17,7 +17,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IHymnsService hymnsService;
         private readonly IStorageManagerService storageManager;
 
-        public ObservableRangeCollection<Tuple<RecordHymn, Hymn>> Hymns { get; set; } = new ObservableRangeCollection<Tuple<RecordHymn, Hymn>>();
+        public ObservableRangeCollection<Tuple<RecordHymn, Hymn>> Hymns { get; } = new();
 
         public Tuple<RecordHymn, Hymn> SelectedHymn
         {

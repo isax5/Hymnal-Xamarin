@@ -44,10 +44,10 @@ namespace Hymnal.XF.ViewModels
             set
             {
                 SetProperty(ref textSearchBar, value);
-                ObservableTextSearchBar.NextValue(value);
+                observableTextSearchBar.NextValue(value);
             }
         }
-        private ObservableValue<string> ObservableTextSearchBar = new ObservableValue<string>(false);
+        private readonly ObservableValue<string> observableTextSearchBar = new(false);
 
         private HymnalLanguage _language;
 
@@ -61,7 +61,7 @@ namespace Hymnal.XF.ViewModels
             this.preferencesService = preferencesService;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
 
-            ObservableTextSearchBar
+            observableTextSearchBar
                 .Throttle(TimeSpan.FromSeconds(0.3))
                 .Subscribe(text => MainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }
