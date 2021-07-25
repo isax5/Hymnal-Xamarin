@@ -1,47 +1,59 @@
-using System.Diagnostics;
 using Foundation;
-using MvvmCross.Forms.Platforms.Ios.Core;
+using Prism;
+using Prism.Ioc;
 using UIKit;
+
 
 namespace Hymnal.XF.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : MvxFormsApplicationDelegate<Setup, Core.App, UI.App>
+    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 #if ENABLE_TEST_CLOUD
             Xamarin.Calabash.Start();
 #endif
+            global::Xamarin.Forms.Forms.Init();
+            global::Xamarin.Forms.FormsMaterial.Init();
+            LoadApplication(new App(new IOSInitializer()));
 
             return base.FinishedLaunching(app, options);
         }
 
-        public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
+        //public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
+        //{
+        //    //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
+
+        //    if (shortcutItem == null || Core.App.Current == null)
+        //    {
+        //        Debug.WriteLine("No shortcut or app not deployed");
+        //        return;
+        //    }
+
+        //    Debug.WriteLine($"Shortcut ${shortcutItem.Type}");
+
+        //    switch (shortcutItem.Type)
+        //    {
+        //        case "SearchAction":
+        //            Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Search);
+        //            break;
+
+        //        case "HistoryAction":
+        //            Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Records);
+        //            break;
+
+        //        default:
+        //            break;
+        //    }
+        //}
+    }
+
+    public class IOSInitializer : IPlatformInitializer
+    {
+        public void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
-
-            if (shortcutItem == null || Core.App.Current == null)
-            {
-                Debug.WriteLine("No shortcut or app not deployed");
-                return;
-            }
-
-            Debug.WriteLine($"Shortcut ${shortcutItem.Type}");
-
-            switch (shortcutItem.Type)
-            {
-                case "SearchAction":
-                    Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Search);
-                    break;
-
-                case "HistoryAction":
-                    Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Records);
-                    break;
-
-                default:
-                    break;
-            }
+            // Register any platform specific implementations
         }
     }
 }
