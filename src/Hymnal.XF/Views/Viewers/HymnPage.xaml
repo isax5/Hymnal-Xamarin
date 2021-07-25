@@ -4,7 +4,8 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
-    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:converters="clr-namespace:Hymnal.XF.Converters"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
@@ -20,7 +21,7 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <i18n:TranslateConverter x:Key="TranslateConverter" />
+            <converters:TranslateConverter x:Key="TranslateConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -28,29 +29,29 @@
         <ToolbarItem
             x:Name="CloseToolbar"
             AutomationId="ClosePageToolbar"
-            AutomationProperties.Name="{i18n:Translate AutomationHymnPageClose}"
+            AutomationProperties.Name="{extensions:Translate AutomationHymnPageClose}"
             Command="{Binding CloseCommand}"
             Priority="-1"
-            Text="{i18n:Translate Close}" />
+            Text="{extensions:Translate Close}" />
         <ToolbarItem
             x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"
             AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
-            AutomationProperties.Name="{i18n:Translate AutomationHymnPagePlayer}"
+            AutomationProperties.Name="{extensions:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
             IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
             AutomationProperties.HelpText="{Binding IsFavorite, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
-            AutomationProperties.Name="{i18n:Translate AutomationHymnPageFavorite}"
+            AutomationProperties.Name="{extensions:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
             IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
             x:Name="SheetToolbar"
             AutomationId="OpenSheet"
-            AutomationProperties.Name="{i18n:Translate AutomationHymnPagePianoSheet}"
+            AutomationProperties.Name="{extensions:Translate AutomationHymnPagePianoSheet}"
             Command="{Binding OpenSheetCommand}"
             Priority="3">
             <ToolbarItem.IconImageSource>
@@ -59,7 +60,7 @@
         </ToolbarItem>
         <ToolbarItem
             AutomationId="Share"
-            AutomationProperties.Name="{i18n:Translate AutomationHymnPageShare}"
+            AutomationProperties.Name="{extensions:Translate AutomationHymnPageShare}"
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>
@@ -98,7 +99,7 @@
                     x:Name="hymnTitleLabel"
                     AutomationId="HymnTitleLabel"
                     AutomationProperties.HelpText="{Binding Hymn.Title}"
-                    AutomationProperties.Name="{i18n:Translate AutomationHymnPageTitle}"
+                    AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
                     FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"
@@ -112,7 +113,7 @@
                     Margin="10"
                     AutomationId="HymnContentLabel"
                     AutomationProperties.HelpText="{Binding Hymn.Content}"
-                    AutomationProperties.Name="{i18n:Translate AutomationHymnPageContent}"
+                    AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
                     FontSize="{Binding HymnFontSize}"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"

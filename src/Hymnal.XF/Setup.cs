@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.XF.Constants;
-using Hymnal.XF.Extensions.i18n;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.Models;
 using Hymnal.XF.Services;

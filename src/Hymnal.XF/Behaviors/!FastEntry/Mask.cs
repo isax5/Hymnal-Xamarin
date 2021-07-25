@@ -55,7 +55,7 @@ namespace Hymnal.XF.Behaviors.FastEntry
         private bool returnCheck(string oldValue, string mask)
         {
 
-            int i = 0;
+            var i = 0;
             if (mask.Length < oldValue.Length)
             {
                 return false;

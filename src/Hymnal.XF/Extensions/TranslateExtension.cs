@@ -6,7 +6,7 @@ using Hymnal.XF.Resources.Languages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace Hymnal.XF.Extensions.i18n
+namespace Hymnal.XF.Extensions
 {
     [ContentProperty("Text")]
     public class TranslateExtension : IMarkupExtension

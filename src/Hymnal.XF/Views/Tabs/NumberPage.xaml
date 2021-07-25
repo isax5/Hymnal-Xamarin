@@ -5,12 +5,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Hymnal.XF.Behaviors"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
-    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{i18n:Translate AdventistHymnal}"
+    Title="{extensions:Translate AdventistHymnal}"
     iOS:Page.UseSafeArea="True"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:NumberViewModel"
@@ -27,7 +27,7 @@
         <ToolbarItem
             x:Name="RecordsToolbarItem"
             AutomationId="OpenRecordsPageToolbar"
-            AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenRecords}"
+            AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenRecords}"
             Command="{prism:NavigateTo 'RecordsPage'}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
@@ -36,7 +36,7 @@
         </ToolbarItem>
         <ToolbarItem
             AutomationId="OpenSearchPageToolbar"
-            AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenSearch}"
+            AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenSearch}"
             Command="{prism:NavigateTo 'SearchPage'}"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -106,8 +106,8 @@
                             AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
                             AutomationId="HymnNumberEntry"
-                            AutomationProperties.HelpText="{i18n:Translate AutomationNumberPageHelpTextEntry}"
-                            AutomationProperties.Name="{i18n:Translate AutomationNumberPageEntry}"
+                            AutomationProperties.HelpText="{extensions:Translate AutomationNumberPageHelpTextEntry}"
+                            AutomationProperties.Name="{extensions:Translate AutomationNumberPageEntry}"
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"
@@ -131,12 +131,12 @@
                 <Button
                     x:DataType="{x:Null}"
                     AutomationId="OpenHymnButton"
-                    AutomationProperties.Name="{i18n:Translate AutomationNumberPageOpenHymnButton}"
+                    AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenHymnButton}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
-                    Text="{i18n:Translate Open}"
+                    Text="{extensions:Translate Open}"
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource

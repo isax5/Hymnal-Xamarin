@@ -1,8 +1,9 @@
 using System;
 using System.Globalization;
+using Hymnal.XF.Extensions;
 using Xamarin.Forms;
 
-namespace Hymnal.XF.Extensions.i18n
+namespace Hymnal.XF.Converters
 {
     public class TranslateConverter : IValueConverter
     {

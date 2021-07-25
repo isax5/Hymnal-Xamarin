@@ -1,6 +1,6 @@
 using System;
 using System.Threading.Tasks;
-using Hymnal.XF.Extensions.i18n;
+using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
 using Prism.Navigation;
 using Xamarin.Forms;

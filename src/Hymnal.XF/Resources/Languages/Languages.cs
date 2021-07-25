@@ -1,6 +1,4 @@
-using Hymnal.XF.Resources.Languages;
-
-namespace Hymnal.XF.Extensions.i18n
+namespace Hymnal.XF.Resources.Languages
 {
     public static class Languages
     {

@@ -70,8 +70,4 @@
       <DependentUpon>LanguageResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Converters\" />
-  </ItemGroup>
 </Project>

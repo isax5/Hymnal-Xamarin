@@ -1,4 +1,4 @@
-using Hymnal.XF.Extensions.i18n;
+using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
 using Xamarin.Forms.Xaml;
 

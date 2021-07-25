@@ -4,12 +4,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
-    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{i18n:Translate AdventistHymnal}"
+    Title="{extensions:Translate AdventistHymnal}"
     iOS:Page.UseSafeArea="True"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:SettingsViewModel"
@@ -45,7 +45,7 @@
             <!--  Display and typography  -->
             <TableSection
                 x:Name="preferencesSection"
-                Title="{i18n:Translate DisplayAndTypography}"
+                Title="{extensions:Translate DisplayAndTypography}"
                 AutomationProperties.IsInAccessibleTree="False">
 
                 <!--  Choose Language  -->
@@ -76,11 +76,11 @@
                         <Label
                             Grid.Row="0"
                             Grid.Column="1"
-                            AutomationProperties.HelpText="{i18n:Translate AutomationSettingsPageHelpTextChangeHymn}"
-                            AutomationProperties.Name="{i18n:Translate AutomationSettingsPageChangeHymn}"
+                            AutomationProperties.HelpText="{extensions:Translate AutomationSettingsPageHelpTextChangeHymn}"
+                            AutomationProperties.Name="{extensions:Translate AutomationSettingsPageChangeHymn}"
                             FontSize="{OnPlatform Default=Default,
                                                   Tizen=Large}"
-                            Text="{i18n:Translate VersionsAndLanguages}" />
+                            Text="{extensions:Translate VersionsAndLanguages}" />
 
                         <Label
                             Grid.Row="1"
@@ -105,10 +105,10 @@
                         <Label
                             Grid.Column="0"
                             AutomationProperties.IsInAccessibleTree="False"
-                            Text="{i18n:Translate KeepScreenAlwaysOn}" />
+                            Text="{extensions:Translate KeepScreenAlwaysOn}" />
                         <Switch
                             Grid.Column="1"
-                            AutomationProperties.Name="{i18n:Translate KeepScreenAlwaysOn}"
+                            AutomationProperties.Name="{extensions:Translate KeepScreenAlwaysOn}"
                             IsToggled="{Binding KeepScreenOn}" />
                     </Grid>
                 </ViewCell>
@@ -131,7 +131,7 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             AutomationProperties.IsInAccessibleTree="False"
-                            Text="{i18n:Translate FontSize}" />
+                            Text="{extensions:Translate FontSize}" />
 
                         <Label
                             Grid.Row="0"
@@ -145,7 +145,7 @@
                             Grid.Row="1"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
-                            AutomationProperties.Name="{i18n:Translate FontSize}"
+                            AutomationProperties.Name="{extensions:Translate FontSize}"
                             Maximum="{Binding MaximumHymnFontSize}"
                             MaximumTrackColor="{DynamicResource PrimaryColor}"
                             Minimum="{Binding MinimumHymnFontSize}"
@@ -160,7 +160,7 @@
                             Grid.ColumnSpan="2"
                             AutomationProperties.IsInAccessibleTree="False"
                             FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
-                            Text="{i18n:Translate Example}"
+                            Text="{extensions:Translate Example}"
                             VerticalOptions="FillAndExpand" />
 
                     </Grid>
@@ -168,7 +168,7 @@
             </TableSection>
 
             <!--  Support  -->
-            <TableSection x:Name="supportSection" Title="{i18n:Translate Support}">
+            <TableSection x:Name="supportSection" Title="{extensions:Translate Support}">
 
                 <!--  Donations  HAY QUE AGREGAR LAS FLAGS  -->
                 <!--<ViewCell>
@@ -180,7 +180,7 @@
 
                         <Label
                             Grid.Row="0"
-                            Text="{i18n:Translate Donations}" />
+                            Text="{extensions:Translate Donations}" />
 
                         <CarouselView
                             x:Name="carousel"
@@ -241,7 +241,7 @@
                             Grid.Row="0"
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
-                            Text="{i18n:Translate Contribute}" />
+                            Text="{extensions:Translate Contribute}" />
 
                         <Image
                             Grid.Row="1"
@@ -259,7 +259,7 @@
                         <Label
                             Grid.Row="1"
                             Grid.Column="1"
-                            Text="{i18n:Translate GitHub}" />
+                            Text="{extensions:Translate GitHub}" />
 
                     </Grid>
                 </ViewCell>
@@ -270,7 +270,7 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label FontSize="{OnPlatform Default=Default, Tizen=Large}" Text="{i18n:Translate Developing}" />
+                        <Label FontSize="{OnPlatform Default=Default, Tizen=Large}" Text="{extensions:Translate Developing}" />
                     </Grid>
                 </ViewCell>
 
@@ -280,14 +280,14 @@
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer Command="{Binding HelpCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label Text="{i18n:Translate Help}" />
+                        <Label Text="{extensions:Translate Help}" />
                     </Grid>
                 </ViewCell>-->
 
             </TableSection>
 
             <!--  Developing  -->
-            <TableSection x:Name="developerSection" Title="{i18n:Translate Developing}">
+            <TableSection x:Name="developerSection" Title="{extensions:Translate Developing}">
 
                 <!--  App version  -->
                 <TextCell
@@ -296,7 +296,7 @@
                     DetailColor="{DynamicResource SecondaryTextColor}"
                     IsEnabled="{OnPlatform Default=True,
                                            Tizen=False}"
-                    Text="{i18n:Translate AppVersion}"
+                    Text="{extensions:Translate AppVersion}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
 
                 <!--  Build Version  -->
@@ -306,7 +306,7 @@
                     DetailColor="{DynamicResource SecondaryTextColor}"
                     IsEnabled="{OnPlatform Default=True,
                                            Tizen=False}"
-                    Text="{i18n:Translate AppBuild}"
+                    Text="{extensions:Translate AppBuild}"
                     TextColor="{DynamicResource PrimaryTextColor}" />
             </TableSection>
 

@@ -4,12 +4,12 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
-    xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{i18n:Translate AdventistHymnal}"
+    Title="{extensions:Translate AdventistHymnal}"
     iOS:Page.UseSafeArea="True"
     prism:ViewModelLocator.AutowireViewModel="True"
     AutomationId="IndexPage"
@@ -23,7 +23,7 @@
     <CarouselPage.ToolbarItems>
         <ToolbarItem
             x:Name="AlphabeticalListToolbar"
-            AutomationProperties.Name="{i18n:Translate AutomationIndexPageAlphabeticalOrder}"
+            AutomationProperties.Name="{extensions:Translate AutomationIndexPageAlphabeticalOrder}"
             Clicked="AlphabeticalListToolbar_Clicked"
             Priority="1">
             <ToolbarItem.IconImageSource>
@@ -32,7 +32,7 @@
         </ToolbarItem>
         <ToolbarItem
             x:Name="NumericalListToolbar"
-            AutomationProperties.Name="{i18n:Translate AutomationIndexPageNumericalOrder}"
+            AutomationProperties.Name="{extensions:Translate AutomationIndexPageNumericalOrder}"
             Clicked="NumericalListToolbar_Clicked"
             Priority="2">
             <ToolbarItem.IconImageSource>
@@ -41,7 +41,7 @@
         </ToolbarItem>
         <ToolbarItem
             x:Name="ThematicListToolbar"
-            AutomationProperties.Name="{i18n:Translate AutomationIndexPageThematicIndex}"
+            AutomationProperties.Name="{extensions:Translate AutomationIndexPageThematicIndex}"
             Clicked="ThematicListToolbar_Clicked"
             Priority="3">
             <ToolbarItem.IconImageSource>
