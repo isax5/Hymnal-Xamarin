@@ -3,7 +3,7 @@
     x:Class="Hymnal.XF.Views.NumberPage"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:behaviors="clr-namespace:XamarinFastEntrySample.FastEntry;assembly=XamarinFastEntry.Behaviors"
+    xmlns:behaviors="clr-namespace:Hymnal.XF.Behaviors"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
     xmlns:i18n="clr-namespace:Hymnal.XF.Extensions.i18n"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
@@ -122,7 +122,7 @@
                             Visual="Default"
                             WidthRequest="150">
                             <Entry.Behaviors>
-                                <behaviors:XamarinFastEntryBehaviour IsNumeric="True" Mask="###" />
+                                <behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />
                             </Entry.Behaviors>
                         </Entry>
                     </StackLayout>
