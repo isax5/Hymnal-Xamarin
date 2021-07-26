@@ -3,6 +3,8 @@ namespace Hymnal.XF.Resources.Languages
     public static class Languages
     {
         #region Generic
+        public static string Generic_Close = "Cerrar";
+        #endregion
         public static string ChooseYourHymnal => LanguageResources.VersionsAndLanguages;
         public static string Cancel => LanguageResources.Cancel;
         public static string WeHadAProblem => LanguageResources.WeHadAProblem;
@@ -15,6 +17,5 @@ namespace Hymnal.XF.Resources.Languages
         public static string Index => LanguageResources.Index;
         public static string Favorites => LanguageResources.Favorites;
         public static string Settings => LanguageResources.Settings;
-        #endregion
     }
 }

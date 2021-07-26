@@ -21,8 +21,6 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref imageSource, value);
         }
 
-        private HymnalLanguage Language;
-
 
         public MusicSheetViewModel(
             INavigationService navigationService
@@ -33,12 +31,6 @@ namespace Hymnal.XF.ViewModels
         {
             base.OnNavigatedTo(parameters, parameter);
             HymnId = parameter;
-            Language = parameter.HymnalLanguage;
-        }
-
-        public override void OnAppearing()
-        {
-            base.OnAppearing();
             ImageSource = HymnId.HymnalLanguage.GetMusicSheetSource(HymnId.Number);
         }
 

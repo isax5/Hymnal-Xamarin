@@ -2,8 +2,13 @@ namespace Hymnal.XF.Constants
 {
     public static class NavRoutes
     {
-        public const string NavPage = "NavigationPage";
+#if DEBUG
         public const string SimplePage = "SimplePage";
+#endif
+
+        public const string NavPage = "NavigationPage";
+        public const string FormSheetNavPage = "FormSheetNavigationPage";
+
         public const string RootPage = "RootPage";
         public const string NumberPage = "NumberPage";
         public const string IndexPage = "IndexPage";
@@ -20,6 +25,7 @@ namespace Hymnal.XF.Constants
         public const string ThematicSubGroupPage = "ThematicSubGroupPage";
 
         public static string HymnViewerAsModal = $"{NavPage}/{HymnPage}";
-        public static string RecordsPageAsModal = $"{NavPage}/{RecordsPage}";
+        public static string HymnViewerAsFormSheetModal = $"{FormSheetNavPage}/{HymnPage}";
+        public static string RecordsPageAsFormSheetModal = $"{FormSheetNavPage}/{RecordsPage}";
     }
 }

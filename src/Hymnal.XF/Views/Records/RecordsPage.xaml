@@ -44,21 +44,6 @@
             RowDefinitions="auto, *"
             RowSpacing="0">
 
-            <StackLayout
-                x:Name="SlideBar"
-                Grid.Row="0"
-                Padding="12">
-                <Frame
-                    Padding="0"
-                    BackgroundColor="Gray"
-                    CornerRadius="2.5"
-                    HasShadow="False"
-                    HeightRequest="5"
-                    HorizontalOptions="CenterAndExpand"
-                    Opacity="0.7"
-                    WidthRequest="40" />
-            </StackLayout>
-
             <CollectionView
                 Grid.Row="1"
                 x:DataType="{x:Null}"

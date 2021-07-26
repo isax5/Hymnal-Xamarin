@@ -79,7 +79,7 @@ namespace Hymnal.XF.ViewModels
                 }
 
                 await NavigationService.NavigateAsync(
-                    NavRoutes.HymnViewerAsModal,
+                    NavRoutes.HymnViewerAsFormSheetModal,
                     new HymnIdParameter
                     {
                         Number = number,
@@ -94,7 +94,7 @@ namespace Hymnal.XF.ViewModels
         {
             if (deviceInfo.Platform == Xamarin.Essentials.DevicePlatform.iOS)
             {
-                await NavigationService.NavigateAsync(NavRoutes.RecordsPage, true, true);
+                await NavigationService.NavigateAsync(NavRoutes.RecordsPageAsFormSheetModal, true, true);
             }
             else
             {

@@ -1,4 +1,5 @@
 using System.Threading.Tasks;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Views;
 using Prism.AppModel;
 using Prism.Commands;
@@ -9,7 +10,7 @@ namespace Hymnal.XF.ViewModels
 {
     public abstract class BaseViewModel : BindableBase, IInitialize, IInitializeAsync, INavigationAware, IDestructible, IPageLifecycleAware
     {
-        protected INavigationService NavigationService { get; private set; }
+        public readonly INavigationService NavigationService;
 
         #region Properties
 #if DEBUG
@@ -37,7 +38,7 @@ namespace Hymnal.XF.ViewModels
 #if DEBUG
             SampleCommand = new DelegateCommand(() =>
             {
-                NavigationService.NavigateAsync(nameof(SimplePage));
+                NavigationService.NavigateAsync(NavRoutes.SimplePage);
             }).ObservesCanExecute(() => NotBusy);
 #endif
         }

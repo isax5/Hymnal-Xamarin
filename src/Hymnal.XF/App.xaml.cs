@@ -37,26 +37,26 @@ namespace Hymnal.XF
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.IndexPage}" +
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.SettingsPage}");
-
-            //await NavigationService.NavigateAsync($"/{nameof(RootPage)}" +
-            //    $"?{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(NumberPage)}" +
-            //    $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(IndexPage)}" +
-            //    $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(FavoritesPage)}" +
-            //    $"&{KnownNavigationParameters.CreateTab}={nameof(NavigationPage)}|{nameof(SettingsPage)}");
         }
-
+         
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             Setup.RegisterDependencies(containerRegistry);
 
+#if DEBUG
+            containerRegistry.RegisterForNavigation<SimplePage, SimpleViewModel>();
+#endif
+
             // Register Pages
             containerRegistry.RegisterForNavigation<CustomNavigationPage>(NavRoutes.NavPage);
-            containerRegistry.RegisterForNavigation<SimplePage, SimpleViewModel>();
+            containerRegistry.RegisterForNavigation<FormSheetNavigationPage>(NavRoutes.FormSheetNavPage);
+
             containerRegistry.RegisterForNavigation<RootPage, RootViewModel>();
             containerRegistry.RegisterForNavigation<NumberPage, NumberViewModel>();
             containerRegistry.RegisterForNavigation<IndexPage, IndexViewModel>();
             containerRegistry.RegisterForNavigation<FavoritesPage, FavoritesViewModel>();
             containerRegistry.RegisterForNavigation<SettingsPage, SettingsViewModel>();
+
             containerRegistry.RegisterForNavigation<HymnPage, HymnViewModel>();
             containerRegistry.RegisterForNavigation<MusicSheetPage, MusicSheetViewModel>();
             containerRegistry.RegisterForNavigation<SearchPage, SearchViewModel>();

@@ -6,18 +6,14 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RecordsPage : BaseContentPage<RecordsViewModel>
+    public partial class RecordsPage : BaseContentPage<RecordsViewModel>, IModalPage
     {
         public RecordsPage()
         {
             InitializeComponent();
-
-            if ((Device.RuntimePlatform == Device.iOS && DeviceInfo.Version.Major < 13)
-                || Device.RuntimePlatform != Device.iOS)
-            {
-                SlideBar.IsVisible = false;
-            }
         }
+
+        public void PopModal() => ViewModel.NavigationService.GoBackAsync(null, true, true);
 
         //public MvxBasePresentationAttribute PresentationAttribute(MvxViewModelRequest request)
         //{
