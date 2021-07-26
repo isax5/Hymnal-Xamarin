@@ -28,7 +28,7 @@
             x:Name="RecordsToolbarItem"
             AutomationId="OpenRecordsPageToolbar"
             AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenRecords}"
-            Command="{prism:NavigateTo 'RecordsPage'}"
+            Command="{Binding OpenRecordsCommand}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.History}" />

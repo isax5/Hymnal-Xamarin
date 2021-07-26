@@ -47,9 +47,15 @@ namespace Hymnal.XF.Extensions
         {
             return navigationService.NavigateAsync(name, parameter.AsParameter());
         }
+
         public static Task<INavigationResult> NavigateAsync(this INavigationService navigationService, string name, INavigationObject parameter, bool? useModalNavigation, bool animated)
         {
             return navigationService.NavigateAsync(name, parameter.AsParameter(), useModalNavigation, animated);
+        }
+
+        public static Task<INavigationResult> NavigateAsync(this INavigationService navigationService, string name, bool? useModalNavigation, bool animated)
+        {
+            return navigationService.NavigateAsync(name, null, useModalNavigation, animated);
         }
 
         public static NavigationParameters AsParameter(this INavigationObject navigationParameter)

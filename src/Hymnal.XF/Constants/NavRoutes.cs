@@ -19,6 +19,7 @@ namespace Hymnal.XF.Constants
         public const string ThematicHymnsListPage = "ThematicHymnsListPage";
         public const string ThematicSubGroupPage = "ThematicSubGroupPage";
 
-        public static string HymnViewerAsModal = $"{NavPage}/HymnPage";
+        public static string HymnViewerAsModal = $"{NavPage}/{HymnPage}";
+        public static string RecordsPageAsModal = $"{NavPage}/{RecordsPage}";
     }
 }

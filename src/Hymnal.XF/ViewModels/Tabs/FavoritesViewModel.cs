@@ -105,6 +105,7 @@ namespace Hymnal.XF.ViewModels
         //    });
         //}
 
+        #region Command Actions
         private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
         {
             await NavigationService.NavigateAsync(
@@ -148,5 +149,6 @@ namespace Hymnal.XF.ViewModels
                 Busy = false;
             }
         }
+        #endregion
     }
 }
