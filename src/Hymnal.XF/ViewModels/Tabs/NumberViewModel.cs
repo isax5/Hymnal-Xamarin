@@ -79,7 +79,7 @@ namespace Hymnal.XF.ViewModels
                 }
 
                 await NavigationService.NavigateAsync(
-                    NavRoutes.HymnViewerAsFormSheetModal,
+                    NavRoutes.HymnViewerAsModal,
                     new HymnIdParameter
                     {
                         Number = number,
