@@ -9,10 +9,9 @@ using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
-using Microsoft.AppCenter.Crashes;
 using MvvmHelpers;
 using Prism.Navigation;
-using Xamarin.Essentials;
+using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -20,6 +19,7 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
+        private readonly IMainThread mainThread;
 
         public ObservableRangeCollection<Hymn> Hymns { get; set; } = new ObservableRangeCollection<Hymn>();
 
@@ -54,16 +54,19 @@ namespace Hymnal.XF.ViewModels
         public SearchViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService
+            IPreferencesService preferencesService,
+            IMainThread mainThread
             ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
+            this.mainThread = mainThread;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
 
             observableTextSearchBar
+                .Distinct()
                 .Throttle(TimeSpan.FromSeconds(0.3))
-                .Subscribe(text => MainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
+                .Subscribe(text => this.mainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }
 
         ~SearchViewModel()

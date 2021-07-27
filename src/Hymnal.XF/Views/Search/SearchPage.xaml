@@ -20,6 +20,21 @@
     Visual="Material"
     mc:Ignorable="d">
 
+    <NavigationPage.TitleView>
+        <SearchBar
+            x:Name="HymnSearchBar"
+            Grid.Row="0"
+            iOS:SearchBar.SearchBarStyle="Minimal"
+            AutomationId="HymnSearchBar"
+            AutomationProperties.IsInAccessibleTree="False"
+            CancelButtonColor="{DynamicResource PrimaryColor}"
+            Placeholder="{extensions:Translate Searcher}"
+            PlaceholderColor="{DynamicResource PrimaryLightColor}"
+            SearchButtonPressed="HymnSearchBar_SearchButtonPressed"
+            Text="{Binding TextSearchBar}"
+            TextColor="{DynamicResource PrimaryColor}"
+            IsVisible="{OnPlatform Default=True, iOS=False}" />
+    </NavigationPage.TitleView>
 
     <RelativeLayout>
         <Image
@@ -46,19 +61,6 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
             RowDefinitions="auto, *">
-
-            <SearchBar
-                x:Name="HymnSearchBar"
-                Grid.Row="0"
-                iOS:SearchBar.SearchBarStyle="Minimal"
-                AutomationId="HymnSearchBar"
-                AutomationProperties.IsInAccessibleTree="False"
-                CancelButtonColor="{DynamicResource PrimaryColor}"
-                Placeholder="{extensions:Translate Searcher}"
-                PlaceholderColor="{DynamicResource PrimaryLightColor}"
-                SearchButtonPressed="HymnSearchBar_SearchButtonPressed"
-                Text="{Binding TextSearchBar}"
-                TextColor="{DynamicResource PrimaryColor}" />
 
             <CollectionView
                 Grid.Row="1"

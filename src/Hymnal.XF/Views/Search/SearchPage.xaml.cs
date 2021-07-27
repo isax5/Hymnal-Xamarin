@@ -5,34 +5,19 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SearchPage : BaseContentPage<SearchViewModel>
+    public partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage
     {
+        public ISearchPageSettings Settings { get; }
+
         public SearchPage()
         {
             InitializeComponent();
-            if (Device.RuntimePlatform == Device.Tizen)
-            {
-                backgroundImage.Source = new FileImageSource { File = "Background.png" };
-            }
-        }
 
-        //public MvxBasePresentationAttribute PresentationAttribute(MvxViewModelRequest request)
-        //{
-        //    switch (Device.RuntimePlatform)
-        //    {
-        //        case Device.Tizen:
-        //            return new MvxTabbedPagePresentationAttribute
-        //            {
-        //                WrapInNavigationPage = false
-        //            };
-        //        default:
-        //            return new MvxContentPagePresentationAttribute
-        //            {
-        //                WrapInNavigationPage = true,
-        //                NoHistory = false
-        //            };
-        //    }
-        //}
+            Settings = new SearchPageSettings
+            {
+                PlaceHolder = HymnSearchBar.Placeholder,
+            };
+        }
 
         protected override void OnAppearing()
         {
@@ -44,6 +29,8 @@ namespace Hymnal.XF.Views
                 HymnSearchBar.Focus();
             }
         }
+
+        public void OnSearchBarTextChanged(in string text) => ViewModel.TextSearchBar = text;
 
         private void HymnSearchBar_SearchButtonPressed(object sender, System.EventArgs e)
         {
