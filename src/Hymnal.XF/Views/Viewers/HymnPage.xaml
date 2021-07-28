@@ -32,7 +32,7 @@
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageClose}"
             Command="{Binding CloseCommand}"
             Priority="-1"
-            Text="{extensions:Translate Close}" />
+            Text="{extensions:Translate Generic_Close}" />
         <ToolbarItem
             x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"

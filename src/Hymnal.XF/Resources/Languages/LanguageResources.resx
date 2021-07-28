@@ -192,11 +192,11 @@
   <data name="AutomationSettingsPageHelpTextChangeHymn" xml:space="preserve">
     <value>Below check current version</value>
   </data>
-  <data name="Cancel" xml:space="preserve">
+  <data name="Generic_Cancel" xml:space="preserve">
     <value>Cancel</value>
     <comment>Alert: Cancel</comment>
   </data>
-  <data name="Close" xml:space="preserve">
+  <data name="Generic_Close" xml:space="preserve">
     <value>Close</value>
     <comment>HymnPage: Close page</comment>
   </data>
@@ -272,11 +272,11 @@
     <value>Number</value>
     <comment>Tab: Number</comment>
   </data>
-  <data name="Ok" xml:space="preserve">
+  <data name="Generic_Ok" xml:space="preserve">
     <value>Ok</value>
     <comment>Alert: Ok</comment>
   </data>
-  <data name="Open" xml:space="preserve">
+  <data name="Generic_Open" xml:space="preserve">
     <value>Open</value>
     <comment>Tab:Number: Open</comment>
   </data>
@@ -308,7 +308,7 @@
     <value>Versions and languages</value>
     <comment>Settings: Choose hymnal</comment>
   </data>
-  <data name="WeHadAProblem" xml:space="preserve">
+  <data name="Error_WeHadAProblem" xml:space="preserve">
     <value>We had a problem</value>
     <comment>Alert: We had a problem</comment>
   </data>

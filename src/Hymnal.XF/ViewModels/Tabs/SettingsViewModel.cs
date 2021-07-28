@@ -144,7 +144,7 @@ namespace Hymnal.XF.ViewModels
             }
 
             var title = Languages.ChooseYourHymnal;
-            var cancelButton = Languages.Cancel;
+            var cancelButton = Languages.Generic_Cancel;
 
             var languageKey = await dialogService.DisplayActionSheetAsync(
                 title,

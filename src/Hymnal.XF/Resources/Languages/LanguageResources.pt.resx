@@ -16,7 +16,7 @@
     <value>Hinário Adventista</value>
     <comment>Tab:Number: Title</comment>
   </data>
-  <data name="Close" xml:space="preserve">
+  <data name="Generic_Close" xml:space="preserve">
     <value>Fechar</value>
     <comment>HymnPage: Close page</comment>
   </data>
@@ -52,7 +52,7 @@
     <value>Número</value>
     <comment>Tab: Number</comment>
   </data>
-  <data name="Open" xml:space="preserve">
+  <data name="Generic_Open" xml:space="preserve">
     <value>Abrir</value>
     <comment>Tab:Number: Open</comment>
   </data>
@@ -72,7 +72,7 @@
     <value>Tamanho da fonte</value>
     <comment>Settings: FontSize</comment>
   </data>
-  <data name="Cancel" xml:space="preserve">
+  <data name="Generic_Cancel" xml:space="preserve">
     <value>Cancelar</value>
     <comment>Alert: Cancel</comment>
   </data>
@@ -88,11 +88,11 @@
     <value>Não há conexão com a Internet</value>
     <comment>Alert: No internet</comment>
   </data>
-  <data name="WeHadAProblem" xml:space="preserve">
+  <data name="Error_WeHadAProblem" xml:space="preserve">
     <value>Tivemos um problema</value>
     <comment>Alert: We had a problem</comment>
   </data>
-  <data name="Ok" xml:space="preserve">
+  <data name="Generic_Ok" xml:space="preserve">
     <value>Está bem</value>
     <comment>Alert: Ok</comment>
   </data>

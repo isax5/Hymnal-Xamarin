@@ -3,12 +3,16 @@ namespace Hymnal.XF.Resources.Languages
     public static class Languages
     {
         #region Generic
-        public static string Generic_Close = "Cerrar";
+        public static string Generic_Close => LanguageResources.Generic_Close;
+        public static string Generic_Ok => LanguageResources.Generic_Ok;
+        public static string Generic_Cancel => LanguageResources.Generic_Cancel;
         #endregion
+
+        #region Error
+        public static string Error_WeHadAProblem => LanguageResources.Error_WeHadAProblem;
+        #endregion
+
         public static string ChooseYourHymnal => LanguageResources.VersionsAndLanguages;
-        public static string Cancel => LanguageResources.Cancel;
-        public static string WeHadAProblem => LanguageResources.WeHadAProblem;
-        public static string Ok => LanguageResources.Ok;
         public static string NoInternetConnection => LanguageResources.NoInternetConnection;
         public static string InstrumentalOrSung => LanguageResources.InstrumentalOrSung;
         public static string Instrumental => LanguageResources.Instrumental;

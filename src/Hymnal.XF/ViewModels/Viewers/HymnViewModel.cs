@@ -236,7 +236,7 @@ namespace Hymnal.XF.ViewModels
             // Check internet connection
             if (connectivity.NetworkAccess == NetworkAccess.None)
             {
-                await dialogService.DisplayAlertAsync(Languages.WeHadAProblem, Languages.NoInternetConnection, Languages.Ok);
+                await dialogService.DisplayAlertAsync(Languages.Error_WeHadAProblem, Languages.NoInternetConnection, Languages.Generic_Ok);
                 return;
             }
 
@@ -264,7 +264,7 @@ namespace Hymnal.XF.ViewModels
                         var sungTitle = Languages.Sung;
 
                         var result = await dialogService.DisplayActionSheetAsync(
-                            Languages.ChooseYourHymnal, Languages.Cancel,
+                            Languages.ChooseYourHymnal, Languages.Generic_Cancel,
                             null, new[] { instrumentalTitle, sungTitle });
 
                         if (result.Equals(instrumentalTitle))

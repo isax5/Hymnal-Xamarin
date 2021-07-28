@@ -16,7 +16,7 @@
     <value>Адвентистская песнь</value>
     <comment>Tab:Number: Title</comment>
   </data>
-  <data name="Close" xml:space="preserve">
+  <data name="Generic_Close" xml:space="preserve">
     <value>Закрыть</value>
     <comment>HymnPage: Close page</comment>
   </data>
@@ -52,7 +52,7 @@
     <value>Номера</value>
     <comment>Tab: Number</comment>
   </data>
-  <data name="Open" xml:space="preserve">
+  <data name="Generic_Open" xml:space="preserve">
     <value>Открыть</value>
     <comment>Tab:Number: Open</comment>
   </data>
@@ -72,7 +72,7 @@
     <value>Размер Шрифта</value>
     <comment>Settings: FontSize</comment>
   </data>
-  <data name="Cancel" xml:space="preserve">
+  <data name="Generic_Cancel" xml:space="preserve">
     <value>Отмена</value>
     <comment>Alert: Cancel</comment>
   </data>
@@ -88,11 +88,11 @@
     <value>Нет подключения к интернету</value>
     <comment>Alert: No internet</comment>
   </data>
-  <data name="WeHadAProblem" xml:space="preserve">
+  <data name="Error_WeHadAProblem" xml:space="preserve">
     <value>У нас была проблема</value>
     <comment>Alert: We had a problem</comment>
   </data>
-  <data name="Ok" xml:space="preserve">
+  <data name="Generic_Ok" xml:space="preserve">
     <value>Хорошо</value>
     <comment>Alert: Ok</comment>
   </data>
@@ -182,5 +182,8 @@
   </data>
   <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
     <value>Изменить на числовой порядок</value>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
   </data>
 </root>

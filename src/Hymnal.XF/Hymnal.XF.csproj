@@ -70,4 +70,10 @@
       <DependentUpon>LanguageResources.resx</DependentUpon>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Languages\LanguageResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>
