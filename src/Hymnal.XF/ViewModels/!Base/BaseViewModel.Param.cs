@@ -6,6 +6,13 @@ namespace Hymnal.XF.ViewModels
 {
     public abstract class BaseViewModelParameter<TParameter> : BaseViewModel where TParameter : NavigationParameter
     {
+        private TParameter parameter;
+        public TParameter Parameter
+        {
+            get => parameter;
+            private set => SetProperty(ref parameter, value);
+        }
+
         protected BaseViewModelParameter(INavigationService navigationService) : base(navigationService)
         { }
 
@@ -50,8 +57,18 @@ namespace Hymnal.XF.ViewModels
 
         private bool resolveParam(INavigationParameters parameters, out TParameter value)
         {
-            return parameters.TryGetValue(NavigationParameter.Key, out value)
+            if (Parameter is not null)
+            {
+                value = Parameter;
+                return true;
+            }
+
+            var returnValue = parameters.TryGetValue(NavigationParameter.Key, out value)
                 || parameters.TryGetValue(KnownNavigationParameters.XamlParam, out value);
+
+            Parameter = value;
+
+            return returnValue;
         }
     }
 }

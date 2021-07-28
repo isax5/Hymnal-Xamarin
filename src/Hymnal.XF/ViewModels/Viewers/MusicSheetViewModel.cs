@@ -6,20 +6,12 @@ namespace Hymnal.XF.ViewModels
 {
     public class MusicSheetViewModel : BaseViewModelParameter<HymnIdParameter>
     {
-        private HymnIdParameter hymn;
-        public HymnIdParameter HymnId
-        {
-            get => hymn;
-            set => SetProperty(ref hymn, value);
-        }
-
         private string imageSource;
         public string ImageSource
         {
             get => imageSource;
             set => SetProperty(ref imageSource, value);
         }
-
 
         public MusicSheetViewModel(
             INavigationService navigationService
@@ -29,8 +21,7 @@ namespace Hymnal.XF.ViewModels
         public override void Initialize(INavigationParameters parameters, HymnIdParameter parameter)
         {
             base.Initialize(parameters, parameter);
-            HymnId = parameter;
-            ImageSource = HymnId.HymnalLanguage.GetMusicSheetSource(HymnId.Number);
+            ImageSource = parameter.HymnalLanguage.GetMusicSheetSource(parameter.Number);
         }
 
         //public override void ViewAppeared()
