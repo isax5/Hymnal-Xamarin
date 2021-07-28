@@ -136,7 +136,7 @@
                     Command="{Binding OpenHymnCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
-                    Text="{extensions:Translate Open}"
+                    Text="{extensions:Translate Generic_Open}"
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
