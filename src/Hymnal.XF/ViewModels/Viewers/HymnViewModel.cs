@@ -1,6 +1,7 @@
 using System;
 using System.Linq;
 using System.Reactive.Linq;
+using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.AzureFunctions.Extensions;
 using Hymnal.XF.Constants;
@@ -119,9 +120,9 @@ namespace Hymnal.XF.ViewModels
             mediaManager.StateChanged -= MediaManager_StateChanged;
         }
 
-        public override async void OnNavigatedTo(INavigationParameters parameters, HymnIdParameter parameter)
+        public override async Task InitializeAsync(INavigationParameters parameters, HymnIdParameter parameter)
         {
-            base.OnNavigatedTo(parameters, parameter);
+            await base.InitializeAsync(parameters, parameter);
 
             HymnParameter = parameter;
             Language = HymnParameter.HymnalLanguage;

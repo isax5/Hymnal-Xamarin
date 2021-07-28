@@ -45,9 +45,9 @@ namespace Hymnal.XF.ViewModels
             this.preferencesService = preferencesService;
         }
 
-        public override void OnNavigatedTo(INavigationParameters parameters, GenericNavigationParameter<Thematic> parameter)
+        public override void Initialize(INavigationParameters parameters, GenericNavigationParameter<Thematic> parameter)
         {
-            base.OnNavigatedTo(parameters, parameter);
+            base.Initialize(parameters, parameter);
             Thematic = parameter.Value;
         }
 

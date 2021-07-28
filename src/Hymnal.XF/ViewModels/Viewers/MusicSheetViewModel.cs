@@ -1,5 +1,4 @@
 using Hymnal.XF.Extensions;
-using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Prism.Navigation;
 
@@ -27,9 +26,9 @@ namespace Hymnal.XF.ViewModels
             ) : base(navigationService)
         { }
 
-        public override void OnNavigatedTo(INavigationParameters parameters, HymnIdParameter parameter)
+        public override void Initialize(INavigationParameters parameters, HymnIdParameter parameter)
         {
-            base.OnNavigatedTo(parameters, parameter);
+            base.Initialize(parameters, parameter);
             HymnId = parameter;
             ImageSource = HymnId.HymnalLanguage.GetMusicSheetSource(HymnId.Number);
         }

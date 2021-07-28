@@ -55,9 +55,9 @@ namespace Hymnal.XF.ViewModels
             language = this.preferencesService.ConfiguratedHymnalLanguage;
         }
 
-        public override async void OnNavigatedTo(INavigationParameters parameters, GenericNavigationParameter<Ambit> parameter)
+        public override async Task InitializeAsync(INavigationParameters parameters, GenericNavigationParameter<Ambit> parameter)
         {
-            base.OnNavigatedTo(parameters, parameter);
+            await base.InitializeAsync(parameters, parameter);
             Ambit = parameter.Value;
             Hymns.AddRange((await hymnsService.GetHymnListAsync(language)).GetRange(Ambit.Star, Ambit.End));
         }
