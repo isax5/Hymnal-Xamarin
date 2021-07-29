@@ -108,14 +108,6 @@
     <value>Contribute</value>
     <comment>Settings: Contribute app</comment>
   </data>
-  <data name="CustomAmount" xml:space="preserve">
-    <value>Valor personalizado</value>
-    <comment>Settings: Custom Amount</comment>
-  </data>
-  <data name="Donations" xml:space="preserve">
-    <value>Doações</value>
-    <comment>Settings: Donations</comment>
-  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
     <comment>Settings: GitHub</comment>
@@ -161,5 +153,47 @@
   </data>
   <data name="AutomationNumberPageHelpTextEntry" xml:space="preserve">
     <value>Abaixo há um botão para abrir o hino</value>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Instrumental</value>
+  </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Instrumental ou cantada</value>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Cantada</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsInFavoritesFalse" xml:space="preserve">
+    <value>O hino não está entre os favoritos</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsInFavoritesTrue" xml:space="preserve">
+    <value>O hino está entre os favoritos</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsPlayingFalse" xml:space="preserve">
+    <value>O hino não está tocando</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsPlayingTrue" xml:space="preserve">
+    <value>O hino está tocando</value>
+  </data>
+  <data name="AutomationIndexPageAlphabeticalOrder" xml:space="preserve">
+    <value>Mudar para a ordem alfabética</value>
+  </data>
+  <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
+    <value>Mudar para ordem numérica</value>
+  </data>
+  <data name="AutomationNumberPageOpenHymnButton" xml:space="preserve">
+    <value>Abrir hino</value>
+  </data>
+  <data name="AutomationNumberPageOpenRecords" xml:space="preserve">
+    <value>Abrir página de histórico</value>
+  </data>
+  <data name="AutomationNumberPageOpenSearch" xml:space="preserve">
+    <value>Abrir página de pesquisa</value>
+  </data>
+  <data name="AutomationSettingsPageChangeHymn" xml:space="preserve">
+    <value>Mudar hinário</value>
+  </data>
+  <data name="AutomationSettingsPageHelpTextChangeHymn" xml:space="preserve">
+    <value>Em seguida, verifique a versão atual</value>
   </data>
 </root>

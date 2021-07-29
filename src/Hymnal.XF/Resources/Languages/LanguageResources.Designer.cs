@@ -286,15 +286,6 @@ namespace Hymnal.XF.Resources.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Custom Amount.
-        /// </summary>
-        public static string CustomAmount {
-            get {
-                return ResourceManager.GetString("CustomAmount", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Busca una cadena traducida similar a Delete.
         /// </summary>
         public static string Delete {
@@ -318,15 +309,6 @@ namespace Hymnal.XF.Resources.Languages {
         public static string DisplayAndTypography {
             get {
                 return ResourceManager.GetString("DisplayAndTypography", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Busca una cadena traducida similar a Donations.
-        /// </summary>
-        public static string Donations {
-            get {
-                return ResourceManager.GetString("Donations", resourceCulture);
             }
         }
         

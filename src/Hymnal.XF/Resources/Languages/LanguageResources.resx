@@ -204,10 +204,6 @@
     <value>Contribute</value>
     <comment>Settings: Contribute app</comment>
   </data>
-  <data name="CustomAmount" xml:space="preserve">
-    <value>Custom Amount</value>
-    <comment>Settings: Custom Amount</comment>
-  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
     <comment>Favorites: Delete</comment>
@@ -219,10 +215,6 @@
   <data name="DisplayAndTypography" xml:space="preserve">
     <value>Display and typography</value>
     <comment>Settings: Display</comment>
-  </data>
-  <data name="Donations" xml:space="preserve">
-    <value>Donations</value>
-    <comment>Settings: Donations</comment>
   </data>
   <data name="Example" xml:space="preserve">
     <value>Example</value>

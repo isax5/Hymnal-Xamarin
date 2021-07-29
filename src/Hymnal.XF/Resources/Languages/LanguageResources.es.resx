@@ -108,14 +108,6 @@
     <value>Contribuir</value>
     <comment>Settings: Contribute app</comment>
   </data>
-  <data name="CustomAmount" xml:space="preserve">
-    <value>Cantidad Personalizada</value>
-    <comment>Settings: Custom Amount</comment>
-  </data>
-  <data name="Donations" xml:space="preserve">
-    <value>Donaciones</value>
-    <comment>Settings: Donations</comment>
-  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
     <comment>Settings: GitHub</comment>
@@ -172,7 +164,7 @@
     <value>Ingresar número de himno</value>
   </data>
   <data name="AutomationNumberPageHelpTextEntry" xml:space="preserve">
-    <value>Abajo hay un botón para abrir el himno.</value>
+    <value>Abajo hay un botón para abrir el himno</value>
   </data>
   <data name="AutomationNumberPageOpenHymnButton" xml:space="preserve">
     <value>Abrir himno</value>
@@ -181,7 +173,7 @@
     <value>Abrir página de historial</value>
   </data>
   <data name="AutomationNumberPageOpenSearch" xml:space="preserve">
-    <value>Abrir página de busqueda</value>
+    <value>Abrir página de búsqueda</value>
   </data>
   <data name="AutomationSettingsPageChangeHymn" xml:space="preserve">
     <value>Cambiar himnario</value>
@@ -202,9 +194,9 @@
     <value>El himno se está reproduciendo</value>
   </data>
   <data name="AutomationIndexPageAlphabeticalOrder" xml:space="preserve">
-    <value>Change to Alphabetical order</value>
+    <value>Cambiar a orden alfabético</value>
   </data>
   <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
-    <value>Change to Numerical order</value>
+    <value>Cambiar a orden numérico</value>
   </data>
 </root>

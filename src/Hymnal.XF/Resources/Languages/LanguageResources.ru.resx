@@ -61,7 +61,7 @@
     <comment>Search:Title</comment>
   </data>
   <data name="Searcher" xml:space="preserve">
-    <value>Поиск ...</value>
+    <value>Поиск ....</value>
     <comment>Search: Placeholder of searcher</comment>
   </data>
   <data name="Settings" xml:space="preserve">
@@ -185,5 +185,14 @@
   </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Служба поддержки</value>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Совет</value>
+  </data>
+  <data name="Contribute" xml:space="preserve">
+    <value>Способствовать</value>
   </data>
 </root>
