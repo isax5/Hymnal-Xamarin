@@ -86,6 +86,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Custom\CustomFormsPagePresenter.cs" />
+    <Compile Include="Effects\iOSNoBorderLineEffect.cs" />
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />

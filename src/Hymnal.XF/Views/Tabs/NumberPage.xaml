@@ -5,6 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:behaviors="clr-namespace:Hymnal.XF.Behaviors"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
+    xmlns:effects="clr-namespace:Hymnal.XF.Effects"
     xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -124,6 +125,9 @@
                             <Entry.Behaviors>
                                 <behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />
                             </Entry.Behaviors>
+                            <Entry.Effects>
+                                <effects:NoBorderLineEffect />
+                            </Entry.Effects>
                         </Entry>
                     </StackLayout>
                 </Grid>

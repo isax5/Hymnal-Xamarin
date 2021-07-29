@@ -1,6 +1,6 @@
-using Hymnal.XF.Views;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Resources.Languages;
+using Hymnal.XF.Views;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
