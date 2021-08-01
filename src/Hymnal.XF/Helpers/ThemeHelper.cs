@@ -1,3 +1,6 @@
+using System;
+using Helpers;
+using Hymnal.XF.Models.Events;
 using Hymnal.XF.Resources.Theme;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -7,7 +10,45 @@ namespace Hymnal.XF.Helpers
     public class ThemeHelper
     {
         private readonly App app;
+
         public AppTheme CurrentTheme;
+
+        public ResourceDictionary CurrentResourceDictionaryTheme => CurrentTheme switch
+        {
+            AppTheme.Dark => DarkTheme,
+            _ => LightTheme,
+        };
+
+        private DarkTheme darkTheme;
+        public DarkTheme DarkTheme
+        {
+            get
+            {
+                if (darkTheme is not null)
+                    return darkTheme;
+
+                darkTheme = new();
+                return darkTheme;
+            }
+        }
+
+        private LightTheme lightTheme;
+        public LightTheme LightTheme
+        {
+            get
+            {
+                if (lightTheme is not null)
+                    return lightTheme;
+
+                lightTheme = new();
+                return lightTheme;
+            }
+        }
+
+        #region Events
+        public event EventHandler<AppThemeRequestedEventArgs> RequestedThemeChanged;
+        public ObservableValue<AppThemeRequestedEventArgs> ObservableThemeChange = new(false);
+        #endregion
 
         public ThemeHelper(App app)
         {
@@ -15,7 +56,7 @@ namespace Hymnal.XF.Helpers
 
             // Configure theme
             CurrentTheme = AppInfo.RequestedTheme;
-            configureTheme(CurrentTheme);
+            performThemeActions(CurrentTheme);
 
             app.RequestedThemeChanged += App_RequestedThemeChanged;
         }
@@ -26,66 +67,30 @@ namespace Hymnal.XF.Helpers
                 return;
 
             CurrentTheme = (AppTheme)(int)e.RequestedTheme;
-            configureTheme(CurrentTheme);
+
+            performThemeActions(CurrentTheme);
+
+            var eventParam = new AppThemeRequestedEventArgs(e.RequestedTheme, CurrentResourceDictionaryTheme);
+            RequestedThemeChanged?.Invoke(this, eventParam);
+            ObservableThemeChange.NextValue(eventParam);
         }
 
-        private void configureTheme(AppTheme appTheme)
+        private void performThemeActions(AppTheme appTheme)
         {
             switch (appTheme)
             {
                 case AppTheme.Dark:
-                    manuallyCopyThemesTo(app.Resources, new DarkTheme());
+                    manuallyCopyThemesTo(app.Resources, DarkTheme);
+
                     break;
 
                 case AppTheme.Light:
                 case AppTheme.Unspecified:
                 default:
-                    manuallyCopyThemesTo(app.Resources, new LightTheme());
+                    manuallyCopyThemesTo(app.Resources, LightTheme);
                     break;
             }
         }
-
-        //public static void CheckTheme()
-        //{
-        //    if (!_themeConfigurated)
-        //    {
-        //        Debug.WriteLine("==================================== CONFIGURATING THEME FOR FIRST TIME ====================================");
-
-        //        switch (AppInfo.RequestedTheme)
-        //        {
-        //            case AppTheme.Dark:
-        //                App.Current.Resources.MergedDictionaries.Add(new DarkTheme());
-        //                break;
-
-        //            case AppTheme.Light:
-        //            case AppTheme.Unspecified:
-        //            default:
-        //                App.Current.Resources.MergedDictionaries.Add(new LightTheme());
-        //                break;
-        //        }
-
-        //        _themeConfigurated = true;
-        //    }
-        //    else if (_currentTheme != AppInfo.RequestedTheme)
-        //    {
-        //        Debug.WriteLine("==================================== CONFIGURATING THEME ====================================");
-
-        //        switch (AppInfo.RequestedTheme)
-        //        {
-        //            case AppTheme.Dark:
-        //                ManuallyCopyThemes(new DarkTheme(), App.Current.Resources);
-        //                break;
-
-        //            case AppTheme.Light:
-        //            case AppTheme.Unspecified:
-        //            default:
-        //                ManuallyCopyThemes(new LightTheme(), App.Current.Resources);
-        //                break;
-        //        }
-        //    }
-
-        //    _currentTheme = AppInfo.RequestedTheme;
-        //}
 
         private void manuallyCopyThemesTo(ResourceDictionary toResource, ResourceDictionary fromResource)
         {

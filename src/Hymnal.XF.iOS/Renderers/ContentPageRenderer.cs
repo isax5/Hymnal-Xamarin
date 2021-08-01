@@ -1,3 +1,4 @@
+using System;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.Views;
@@ -43,6 +44,17 @@ namespace Hymnal.XF.iOS.Renderers
             if (Element is ISearchPage)
                 ViewWillDisappearSearchImplementation();
         }
+
+        protected override void Dispose(bool disposing)
+        {
+            base.Dispose(disposing);
+
+            // At this point Element is already null
+            if (disposing)
+            {
+                ViewWillDisposeSearchImplementation();
+            }
+        }
     }
 
     // SearchPage
@@ -50,12 +62,13 @@ namespace Hymnal.XF.iOS.Renderers
     {
         private UISearchController searchController;
         private ISearchPage searchPage => Element as ISearchPage;
+        private IDisposable themeSubscription;
 
         private void ViewWillAppearSearchImplementation()
         {
             if (searchController is null)
             {
-                searchController = new UISearchController()
+                searchController = new()
                 {
                     SearchResultsUpdater = this,
                     DimsBackgroundDuringPresentation = false,
@@ -67,6 +80,30 @@ namespace Hymnal.XF.iOS.Renderers
                 };
 
                 searchController.SearchBar.Placeholder = searchPage.Settings.PlaceHolder;
+
+                // Configure Theme
+                themeSubscription = App.Current.ThemeHelper.ObservableThemeChange
+                    .Subscribe(ev => InvokeOnMainThread(() => { 
+                        {
+
+                            searchController.SearchBar.SearchTextField.TextColor = ((Color)ev.ThemeResources["NavBarTextColor"]).ToUIColor();
+
+                            //switch (ev.RequestedTheme)
+                            //{dsafasdf
+                            //    case OSAppTheme.Dark:
+                            //            searchController.SearchBar.SearchTextField.TextColor = UIColor.Red;
+                            //        break;
+
+                            //    case OSAppTheme.Light:
+                            //    case OSAppTheme.Unspecified:
+                            //            searchController.SearchBar.SearchTextField.TextColor = UIColor.Green;
+                            //            break;
+
+                            //    default:
+                            //        break;
+                            //}
+                        }
+                    }));
             }
 
             if (ParentViewController is not null && ParentViewController.NavigationItem.SearchController is null)
@@ -98,6 +135,11 @@ namespace Hymnal.XF.iOS.Renderers
         public void UpdateSearchResultsForSearchController(UISearchController searchController)
         {
             searchPage.OnSearchBarTextChanged(searchController.SearchBar.Text);
+        }
+
+        private void ViewWillDisposeSearchImplementation()
+        {
+            themeSubscription?.Dispose();
         }
     }
 }

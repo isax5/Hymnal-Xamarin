@@ -23,6 +23,7 @@
     <None Remove="Resources\Fonts\FontAwesome5BrandsRegular.otf" />
     <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
     <None Remove="Resources\Fonts\FontAwesome5Solid.otf" />
+    <None Remove="Models\Events\" />
   </ItemGroup>
 
   <ItemGroup>
@@ -75,5 +76,8 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>LanguageResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\Events\" />
   </ItemGroup>
 </Project>
