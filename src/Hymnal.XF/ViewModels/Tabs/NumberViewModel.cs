@@ -27,7 +27,7 @@ namespace Hymnal.XF.ViewModels
         #region Commands
         public DelegateCommand<string> OpenHymnCommand { get; internal set; }
         public DelegateCommand OpenRecordsCommand { get; internal set; }
-        public INavigationService Navigationservice { get; }
+        public DelegateCommand OpenSearchCommand { get; internal set; }
         #endregion
 
         public NumberViewModel(
@@ -37,12 +37,12 @@ namespace Hymnal.XF.ViewModels
             IDeviceInfo deviceInfo
             ) : base(navigationService)
         {
-            Navigationservice = navigationService;
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.deviceInfo = deviceInfo;
             OpenHymnCommand = new DelegateCommand<string>(OpenHymnAsync).ObservesCanExecute(() => NotBusy);
             OpenRecordsCommand = new DelegateCommand(OpenRecordsAsync).ObservesCanExecute(() => NotBusy);
+            OpenSearchCommand = new DelegateCommand(OpenSearchAsync).ObservesCanExecute(() => NotBusy);
 #if DEBUG
             // A long hymn
             HymnNumber = $"{1}";
@@ -99,6 +99,18 @@ namespace Hymnal.XF.ViewModels
             else
             {
                 await NavigationService.NavigateAsync(NavRoutes.RecordsPage);
+            }
+        }
+
+        private async void OpenSearchAsync()
+        {
+            if (deviceInfo.Platform == Xamarin.Essentials.DevicePlatform.iOS)
+            {
+                await NavigationService.NavigateAsync(NavRoutes.SearchPageAsFormSheetModal, true, true);
+            }
+            else
+            {
+                await NavigationService.NavigateAsync(NavRoutes.SearchPage);
             }
         }
         #endregion

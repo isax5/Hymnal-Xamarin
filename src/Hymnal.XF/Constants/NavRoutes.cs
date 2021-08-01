@@ -27,5 +27,6 @@ namespace Hymnal.XF.Constants
         public static string HymnViewerAsModal = $"{NavPage}/{HymnPage}";
         public static string HymnViewerAsFormSheetModal = $"{FormSheetNavPage}/{HymnPage}";
         public static string RecordsPageAsFormSheetModal = $"{FormSheetNavPage}/{RecordsPage}";
+        public static string SearchPageAsFormSheetModal = $"{FormSheetNavPage}/{SearchPage}";
     }
 }

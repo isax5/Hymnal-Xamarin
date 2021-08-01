@@ -1,6 +1,5 @@
 using Hymnal.XF.ViewModels;
-using Xamarin.Essentials;
-using Xamarin.Forms;
+using Prism.Navigation;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Views
@@ -8,12 +7,15 @@ namespace Hymnal.XF.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordsPage : BaseContentPage<RecordsViewModel>, IModalPage
     {
-        public RecordsPage()
+        private readonly INavigationService navigationService;
+
+        public RecordsPage(INavigationService navigationService)
         {
             InitializeComponent();
+            this.navigationService = navigationService;
         }
 
-        public void PopModal() => ViewModel.NavigationService.GoBackAsync(null, true, true);
+        public void PopModal() => navigationService.GoBackAsync(null, true, true);
 
         //public MvxBasePresentationAttribute PresentationAttribute(MvxViewModelRequest request)
         //{

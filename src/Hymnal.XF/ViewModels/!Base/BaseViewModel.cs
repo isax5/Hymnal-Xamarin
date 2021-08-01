@@ -10,7 +10,7 @@ namespace Hymnal.XF.ViewModels
 {
     public abstract class BaseViewModel : BindableBase, IInitialize, IInitializeAsync, INavigationAware, IDestructible, IPageLifecycleAware
     {
-        public readonly INavigationService NavigationService;
+        protected readonly INavigationService NavigationService;
 
         #region Properties
 #if DEBUG

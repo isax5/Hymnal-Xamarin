@@ -1,15 +1,21 @@
 using Hymnal.XF.ViewModels;
-using Xamarin.Forms;
+using Prism.Navigation;
+using Xamarin.Essentials.Interfaces;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage
+    public partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage, IModalPage
     {
+        private readonly IDeviceInfo deviceinfo;
+        private readonly INavigationService navigationService;
+
         public ISearchPageSettings Settings { get; }
 
-        public SearchPage()
+        public SearchPage(
+            IDeviceInfo deviceInfo,
+            INavigationService navigationService)
         {
             InitializeComponent();
 
@@ -17,6 +23,8 @@ namespace Hymnal.XF.Views
             {
                 PlaceHolder = HymnSearchBar.Placeholder,
             };
+            deviceinfo = deviceInfo;
+            this.navigationService = navigationService;
         }
 
         protected override void OnAppearing()
@@ -24,7 +32,7 @@ namespace Hymnal.XF.Views
             base.OnAppearing();
 
             // Focuse HymnSearchBar
-            if (string.IsNullOrWhiteSpace(HymnSearchBar.Text))
+            if (deviceinfo.Platform != Xamarin.Essentials.DevicePlatform.iOS && string.IsNullOrWhiteSpace(HymnSearchBar.Text))
             {
                 HymnSearchBar.Focus();
             }
@@ -36,5 +44,7 @@ namespace Hymnal.XF.Views
         {
             HymnSearchBar.Unfocus();
         }
+
+        public void PopModal() => navigationService.GoBackAsync(null, true, true);
     }
 }

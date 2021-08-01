@@ -38,7 +38,7 @@
         <ToolbarItem
             AutomationId="OpenSearchPageToolbar"
             AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenSearch}"
-            Command="{prism:NavigateTo 'SearchPage'}"
+            Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
                 <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
