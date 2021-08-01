@@ -15,7 +15,7 @@ namespace Hymnal.XF
     public partial class App : PrismApplication
     {
         public static new App Current;
-        public Setup Setup = new Setup();
+        public Setup Setup = new();
         public ThemeHelper ThemeHelper;
 
         public App(IPlatformInitializer initializer)
