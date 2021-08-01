@@ -64,8 +64,8 @@ namespace Hymnal.XF.ViewModels
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
 
             observableTextSearchBar
+                .DistinctUntilChanged()
                 .Throttle(TimeSpan.FromSeconds(0.3))
-                //.Distinct()
                 .Subscribe(text => this.mainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }
 
