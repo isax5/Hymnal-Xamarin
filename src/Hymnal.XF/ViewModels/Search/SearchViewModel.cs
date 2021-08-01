@@ -78,13 +78,13 @@ namespace Hymnal.XF.ViewModels
         {
             await base.InitializeAsync(parameters);
             preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
-            await TextSearchExecuteAsync(string.Empty);
+            observableTextSearchBar.NextValue(string.Empty);
         }
 
         private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {
             _language = e;
-            TextSearchExecuteAsync(string.Empty).ConfigureAwait(true);
+            observableTextSearchBar.NextValue(string.Empty);
         }
 
         //public override void ViewAppeared()
