@@ -47,7 +47,7 @@ namespace Hymnal.XF.Helpers
 
         #region Events
         public event EventHandler<AppThemeRequestedEventArgs> RequestedThemeChanged;
-        public ObservableValue<AppThemeRequestedEventArgs> ObservableThemeChange;
+        public ObservableValue<OSAppTheme> ObservableThemeChange;
         #endregion
 
         public ThemeHelper(App app)
@@ -57,7 +57,7 @@ namespace Hymnal.XF.Helpers
             // Configure theme
             CurrentTheme = AppInfo.RequestedTheme;
 
-            ObservableThemeChange = new(new AppThemeRequestedEventArgs((OSAppTheme)(int)AppInfo.RequestedTheme ,CurrentResourceDictionaryTheme), false);
+            ObservableThemeChange = new((OSAppTheme)(int)AppInfo.RequestedTheme, false);
             performThemeActions(CurrentTheme);
 
             app.RequestedThemeChanged += App_RequestedThemeChanged;
@@ -74,7 +74,7 @@ namespace Hymnal.XF.Helpers
 
             var eventParam = new AppThemeRequestedEventArgs(e.RequestedTheme, CurrentResourceDictionaryTheme);
             RequestedThemeChanged?.Invoke(this, eventParam);
-            ObservableThemeChange.NextValue(eventParam);
+            ObservableThemeChange.NextValue(e.RequestedTheme);
         }
 
         private void performThemeActions(AppTheme appTheme)

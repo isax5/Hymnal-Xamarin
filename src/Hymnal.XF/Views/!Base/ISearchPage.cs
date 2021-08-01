@@ -1,19 +1,27 @@
+using System;
+using Xamarin.Forms;
+
 namespace Hymnal.XF.Views
 {
     public interface ISearchPage
     {
-        void OnSearchBarTextChanged(in string text);
+        string PlaceholderText { get; }
+        Color PlaceHolderColor { get; }
+        Color TextColor { get; }
+        IObservable<OSAppTheme> ObservableThemeChange { get; }
         ISearchPageSettings Settings { get; }
+
+        void OnSearchBarTextChanged(in string text);
     }
 
     public interface ISearchPageSettings
     {
-        string PlaceHolder { get; }
         bool InitialDisplay { get; }
         bool InitiallyFocus { get; }
 
         bool HideWhenPageDisappear { get; }
 
+        /// <summary>
         /// <para>
         /// En caso de true: Oculta titue, toolbars, back, etc
         /// </para>
@@ -27,13 +35,15 @@ namespace Hymnal.XF.Views
         bool HideNavBarWhenSearch { get; }
     }
 
+
+
     public class SearchPageSettings : ISearchPageSettings
     {
-        public string PlaceHolder { get; set; }
         public bool InitialDisplay { get; set; } = true;
         public bool InitiallyFocus { get; set; } = false;
         public bool HideWhenPageDisappear { get; set; } = false;
 
+        /// <summary>
         /// <para>
         /// En caso de true: Oculta titue, toolbars, back, etc
         /// </para>
@@ -45,5 +55,7 @@ namespace Hymnal.XF.Views
         /// </para>
         /// </summary>
         public bool HideNavBarWhenSearch { get; set; } = true;
+
+        
     }
 }

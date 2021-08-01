@@ -1,6 +1,9 @@
+using System;
+using Hymnal.XF.Models.Events;
 using Hymnal.XF.ViewModels;
 using Prism.Navigation;
 using Xamarin.Essentials.Interfaces;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Views
@@ -8,9 +11,13 @@ namespace Hymnal.XF.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage, IModalPage
     {
-        private readonly IDeviceInfo deviceinfo;
+        private readonly IDeviceInfo deviceInfo;
         private readonly INavigationService navigationService;
 
+        public string PlaceholderText => HymnSearchBar.Placeholder;
+        public Color PlaceHolderColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["PrimaryLightColor"];
+        public Color TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["NavBarTextColor"];
+        public IObservable<OSAppTheme> ObservableThemeChange => App.Current.ThemeHelper.ObservableThemeChange;
         public ISearchPageSettings Settings { get; }
 
         public SearchPage(
@@ -19,12 +26,10 @@ namespace Hymnal.XF.Views
         {
             InitializeComponent();
 
-            Settings = new SearchPageSettings
-            {
-                PlaceHolder = HymnSearchBar.Placeholder,
-            };
-            deviceinfo = deviceInfo;
+            this.deviceInfo = deviceInfo;
             this.navigationService = navigationService;
+
+            Settings = new SearchPageSettings();
         }
 
         protected override void OnAppearing()
@@ -32,7 +37,7 @@ namespace Hymnal.XF.Views
             base.OnAppearing();
 
             // Focuse HymnSearchBar
-            if (deviceinfo.Platform != Xamarin.Essentials.DevicePlatform.iOS && string.IsNullOrWhiteSpace(HymnSearchBar.Text))
+            if (deviceInfo.Platform != Xamarin.Essentials.DevicePlatform.iOS && string.IsNullOrWhiteSpace(HymnSearchBar.Text))
             {
                 HymnSearchBar.Focus();
             }

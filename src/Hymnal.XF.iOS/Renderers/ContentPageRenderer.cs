@@ -83,10 +83,10 @@ namespace Hymnal.XF.iOS.Renderers
                 //searchController.SearchBar.Placeholder = searchPage.Settings.PlaceHolder;
 
 
-                searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.Settings.PlaceHolder,
+                searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.PlaceholderText,
                     attributes: new UIStringAttributes()
                     {
-                        ForegroundColor = ((Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["PrimaryLightColor"]).ToUIColor(),
+                        ForegroundColor = searchPage.PlaceHolderColor.ToUIColor(),
                     });
             }
 
@@ -102,15 +102,15 @@ namespace Hymnal.XF.iOS.Renderers
             //Configure Theme
             if (themeSubscription is null)
             {
-                themeSubscription = App.Current.ThemeHelper.ObservableThemeChange
+                themeSubscription = searchPage.ObservableThemeChange
                     .Subscribe(ev => InvokeOnMainThread(() =>
                     {
                         {
-                            searchController.SearchBar.SearchTextField.TextColor = ((Color)ev.ThemeResources["NavBarTextColor"]).ToUIColor();
-                            searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.Settings.PlaceHolder,
+                            searchController.SearchBar.SearchTextField.TextColor = searchPage.TextColor.ToUIColor();
+                            searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.PlaceholderText,
                                 attributes: new UIStringAttributes()
                                 {
-                                    ForegroundColor = ((Color)ev.ThemeResources["PrimaryLightColor"]).ToUIColor(),
+                                    ForegroundColor = searchPage.PlaceHolderColor.ToUIColor(),
                                 });
                         }
                     }));

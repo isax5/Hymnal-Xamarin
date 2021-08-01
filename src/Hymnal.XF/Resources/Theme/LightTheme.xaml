@@ -30,4 +30,6 @@
     <Color x:Key="UnselectedTabColor">#737373</Color>
     <Color x:Key="BackgroundTabColor">#f5f5f5</Color>
 
+    <Color x:Key="Experiment">#00ffff</Color>
+
 </ResourceDictionary>
