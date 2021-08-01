@@ -1,3 +1,4 @@
+using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
 using Prism.Navigation;
 using Xamarin.Forms.Xaml;
@@ -8,6 +9,8 @@ namespace Hymnal.XF.Views
     public partial class RecordsPage : BaseContentPage<RecordsViewModel>, IModalPage
     {
         private readonly INavigationService navigationService;
+
+        public string CloseButtonText => Languages.Generic_Close;
 
         public RecordsPage(INavigationService navigationService)
         {

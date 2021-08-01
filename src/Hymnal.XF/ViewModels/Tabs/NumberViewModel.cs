@@ -7,7 +7,6 @@ using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
 using Prism.Commands;
 using Prism.Navigation;
-using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
@@ -15,7 +14,6 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
-        private readonly IDeviceInfo deviceInfo;
 
         private string hymnNumber;
         public string HymnNumber
@@ -33,13 +31,11 @@ namespace Hymnal.XF.ViewModels
         public NumberViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
-            IPreferencesService preferencesService,
-            IDeviceInfo deviceInfo
+            IPreferencesService preferencesService
             ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
-            this.deviceInfo = deviceInfo;
             OpenHymnCommand = new DelegateCommand<string>(OpenHymnAsync).ObservesCanExecute(() => NotBusy);
             OpenRecordsCommand = new DelegateCommand(OpenRecordsAsync).ObservesCanExecute(() => NotBusy);
             OpenSearchCommand = new DelegateCommand(OpenSearchAsync).ObservesCanExecute(() => NotBusy);
@@ -92,26 +88,12 @@ namespace Hymnal.XF.ViewModels
 
         private async void OpenRecordsAsync()
         {
-            if (deviceInfo.Platform == Xamarin.Essentials.DevicePlatform.iOS)
-            {
-                await NavigationService.NavigateAsync(NavRoutes.RecordsPageAsFormSheetModal, true, true);
-            }
-            else
-            {
-                await NavigationService.NavigateAsync(NavRoutes.RecordsPage);
-            }
+            await NavigationService.NavigateAsync(NavRoutes.RecordsPageAsFormSheetModal, true, true);
         }
 
         private async void OpenSearchAsync()
         {
-            if (deviceInfo.Platform == Xamarin.Essentials.DevicePlatform.iOS)
-            {
-                await NavigationService.NavigateAsync(NavRoutes.SearchPageAsFormSheetModal, true, true);
-            }
-            else
-            {
-                await NavigationService.NavigateAsync(NavRoutes.SearchPage);
-            }
+            await NavigationService.NavigateAsync(NavRoutes.SearchPageAsFormSheetModal, true, true);
         }
         #endregion
     }

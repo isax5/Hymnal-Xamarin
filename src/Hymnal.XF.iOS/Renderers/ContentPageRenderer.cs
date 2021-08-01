@@ -1,7 +1,6 @@
 using System;
 using Foundation;
 using Hymnal.XF.iOS.Renderers;
-using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.Views;
 using UIKit;
 using Xamarin.Forms;
@@ -18,7 +17,7 @@ namespace Hymnal.XF.iOS.Renderers
 
             if (Element is IModalPage modalPage)
             {
-                var leftItem = new UIBarButtonItem(Languages.Generic_Close, UIBarButtonItemStyle.Plain, (sender, e) =>
+                var leftItem = new UIBarButtonItem(modalPage.CloseButtonText, UIBarButtonItemStyle.Plain, (sender, e) =>
                 {
                     modalPage.PopModal();
                 });

@@ -1,5 +1,5 @@
 using System;
-using Hymnal.XF.Models.Events;
+using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
 using Prism.Navigation;
 using Xamarin.Essentials.Interfaces;
@@ -19,6 +19,8 @@ namespace Hymnal.XF.Views
         public Color TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["NavBarTextColor"];
         public IObservable<OSAppTheme> ObservableThemeChange => App.Current.ThemeHelper.ObservableThemeChange;
         public ISearchPageSettings Settings { get; }
+
+        public string CloseButtonText => Languages.Generic_Close;
 
         public SearchPage(
             IDeviceInfo deviceInfo,

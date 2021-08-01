@@ -28,12 +28,13 @@
             AutomationId="HymnSearchBar"
             AutomationProperties.IsInAccessibleTree="False"
             CancelButtonColor="{DynamicResource PrimaryColor}"
+            IsVisible="{OnPlatform Default=True,
+                                   iOS=False}"
             Placeholder="{extensions:Translate Searcher}"
             PlaceholderColor="{DynamicResource PrimaryLightColor}"
             SearchButtonPressed="HymnSearchBar_SearchButtonPressed"
             Text="{Binding TextSearchBar}"
-            TextColor="{DynamicResource PrimaryColor}"
-            IsVisible="{OnPlatform Default=True, iOS=False}" />
+            TextColor="{DynamicResource NavBarTextColor}" />
     </NavigationPage.TitleView>
 
     <RelativeLayout>
