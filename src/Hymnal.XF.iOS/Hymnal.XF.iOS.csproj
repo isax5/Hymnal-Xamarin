@@ -85,7 +85,6 @@
     <AppExtensionDebugBundleId />
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Custom\CustomFormsPagePresenter.cs" />
     <Compile Include="Effects\IOSNoBorderLineEffect.cs" />
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="Main.cs" />

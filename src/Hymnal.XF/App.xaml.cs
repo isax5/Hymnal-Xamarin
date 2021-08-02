@@ -32,7 +32,7 @@ namespace Hymnal.XF
 
             //await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
 
-            await NavigationService.NavigateAsync($"{nameof(RootPage)}" +
+            await NavigationService.NavigateAsync($"{NavRoutes.RootPage}" +
                 $"?{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.NumberPage}" +
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.IndexPage}" +
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +
