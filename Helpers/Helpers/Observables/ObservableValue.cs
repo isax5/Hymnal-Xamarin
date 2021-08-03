@@ -56,7 +56,7 @@ namespace Helpers
             {
                 Current = value;
 
-                 foreach (IObserver<T> obs in Observers.ToArray())
+                foreach (IObserver<T> obs in Observers.ToArray())
                     obs.OnNext(value);
 
                 if (autoDispose)
