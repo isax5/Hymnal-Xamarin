@@ -21,6 +21,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IPreferencesService preferencesService;
         private readonly IMainThread mainThread;
 
+        #region Properties
         public ObservableRangeCollection<Hymn> Hymns { get; set; } = new ObservableRangeCollection<Hymn>();
 
         public Hymn SelectedHymn
@@ -37,7 +38,7 @@ namespace Hymnal.XF.ViewModels
             }
         }
 
-        private string textSearchBar;
+        private string textSearchBar = string.Empty;
         public string TextSearchBar
         {
             get => textSearchBar;
@@ -50,6 +51,7 @@ namespace Hymnal.XF.ViewModels
         private readonly ObservableValue<string> observableTextSearchBar = new(false);
 
         private HymnalLanguage _language;
+        #endregion
 
         public SearchViewModel(
             INavigationService navigationService,
@@ -63,6 +65,8 @@ namespace Hymnal.XF.ViewModels
             this.mainThread = mainThread;
             _language = this.preferencesService.ConfiguratedHymnalLanguage;
 
+            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+
             observableTextSearchBar
                 .DistinctUntilChanged()
                 .Throttle(TimeSpan.FromSeconds(0.3))
@@ -74,11 +78,10 @@ namespace Hymnal.XF.ViewModels
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
         }
 
-        public override async Task InitializeAsync(INavigationParameters parameters)
+        public override void Initialize(INavigationParameters parameters)
         {
-            await base.InitializeAsync(parameters);
-            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
-            observableTextSearchBar.NextValue(string.Empty);
+            base.Initialize(parameters);
+            Task.Run(() => mainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(string.Empty)));
         }
 
         private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
