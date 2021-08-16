@@ -10,7 +10,7 @@ namespace Helpers
     {
         public IEnumerable<T> Current { get; internal set; }
 
-        protected readonly List<IObserver<T>> Observers = new List<IObserver<T>>();
+        protected readonly List<IObserver<T>> Observers = new();
         private readonly bool autoDispose;
 
         public ObservableValues(bool autoDispose = true)
@@ -82,6 +82,14 @@ namespace Helpers
         {
             foreach (IObserver<T> obs in Observers.ToArray())
                 obs.OnError(ex);
+        }
+
+        public void DisposeAll()
+        {
+            foreach (IObserver<T> observer in Observers.ToArray())
+                observer.OnCompleted();
+
+            Observers.Clear();
         }
     }
 }

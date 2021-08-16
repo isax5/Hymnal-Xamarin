@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel;
 using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
 using Prism.Navigation;
@@ -14,14 +15,6 @@ namespace Hymnal.XF.Views
         private readonly IDeviceInfo deviceInfo;
         private readonly INavigationService navigationService;
 
-        public string PlaceholderText => HymnSearchBar.Placeholder;
-        public Color PlaceHolderColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["PrimaryLightColor"];
-        public Color TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["NavBarTextColor"];
-        public IObservable<OSAppTheme> ObservableThemeChange => App.Current.ThemeHelper.ObservableThemeChange;
-        public ISearchPageSettings Settings { get; }
-
-        public string CloseButtonText => Languages.Generic_Close;
-
         public SearchPage(
             IDeviceInfo deviceInfo,
             INavigationService navigationService)
@@ -30,8 +23,6 @@ namespace Hymnal.XF.Views
 
             this.deviceInfo = deviceInfo;
             this.navigationService = navigationService;
-
-            Settings = new SearchPageSettings();
         }
 
         protected override void OnAppearing()
@@ -45,13 +36,44 @@ namespace Hymnal.XF.Views
             }
         }
 
-        public void OnSearchBarTextChanged(in string text) => ViewModel.TextSearchBar = text;
+        #region IModalPage
+        string IModalPage.CloseButtonText => Languages.Generic_Close;
 
-        private void HymnSearchBar_SearchButtonPressed(object sender, System.EventArgs e)
+        void IModalPage.PopModal() => navigationService.GoBackAsync(null, true, true);
+        #endregion
+
+        #region ISearchPage
+        private ISearchDelegate _delegate;
+        ISearchDelegate ISearchPage.Delegate
         {
-            HymnSearchBar.Unfocus();
+            get => _delegate;
+            set
+            {
+                _delegate = value;
+
+                ViewModel.PropertyChanged += ViewModel_PropertyChanged;
+            }
         }
 
-        public void PopModal() => navigationService.GoBackAsync(null, true, true);
+        private void ViewModel_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals(nameof(ViewModel.TextSearchBar)) && _delegate is not null && !ViewModel.TextSearchBar.Equals(_delegate.SearchText))
+                _delegate.SearchText = ViewModel.TextSearchBar;
+        }
+
+        ISearchPageSettings ISearchPage.Settings { get; } = new SearchPageSettings { };
+
+        string ISearchPage.PlaceholderText => HymnSearchBar.Placeholder;
+
+        Color ISearchPage.PlaceHolderColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["PrimaryLightColor"];
+
+        Color ISearchPage.TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["NavBarTextColor"];
+
+        void ISearchPage.OnSearchBarTextChanged(in string text) => ViewModel.TextSearchBar = text;
+        void ISearchPage.SearchTapped(in string text) { }
+        void ISearchPage.Focused() { }
+        void ISearchPage.Unfocused() { }
+        void ISearchPage.Canceled() { }
+        #endregion
     }
 }

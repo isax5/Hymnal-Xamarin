@@ -32,7 +32,6 @@
                                    iOS=False}"
             Placeholder="{extensions:Translate Searcher}"
             PlaceholderColor="{DynamicResource PrimaryLightColor}"
-            SearchButtonPressed="HymnSearchBar_SearchButtonPressed"
             Text="{Binding TextSearchBar}"
             TextColor="{DynamicResource NavBarTextColor}" />
     </NavigationPage.TitleView>

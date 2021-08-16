@@ -38,7 +38,7 @@ namespace Hymnal.XF.ViewModels
             }
         }
 
-        private string textSearchBar = string.Empty;
+        private string textSearchBar;
         public string TextSearchBar
         {
             get => textSearchBar;
@@ -76,6 +76,7 @@ namespace Hymnal.XF.ViewModels
         ~SearchViewModel()
         {
             preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            observableTextSearchBar.DisposeAll();
         }
 
         public override void Initialize(INavigationParameters parameters)
@@ -105,8 +106,6 @@ namespace Hymnal.XF.ViewModels
         private async Task TextSearchExecuteAsync(string text)
         {
             Hymns.Clear();
-
-            Debug.WriteLine($"Search for: {text}");
 
             IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 

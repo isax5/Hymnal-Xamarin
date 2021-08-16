@@ -5,13 +5,23 @@ namespace Hymnal.XF.Views
 {
     public interface ISearchPage
     {
+        ISearchDelegate Delegate { get; set; }
+
         string PlaceholderText { get; }
         Color PlaceHolderColor { get; }
         Color TextColor { get; }
-        IObservable<OSAppTheme> ObservableThemeChange { get; }
         ISearchPageSettings Settings { get; }
 
         void OnSearchBarTextChanged(in string text);
+        void SearchTapped(in string text);
+        void Focused();
+        void Unfocused();
+        void Canceled();
+    }
+
+    public interface ISearchDelegate
+    {
+        string SearchText { get; set; }
     }
 
     public interface ISearchPageSettings
@@ -35,10 +45,9 @@ namespace Hymnal.XF.Views
         bool HideNavBarWhenSearch { get; }
     }
 
-
-
-    public class SearchPageSettings : ISearchPageSettings
+    public sealed class SearchPageSettings : ISearchPageSettings
     {
+        public ISearchDelegate Delegate { get; set; } = null;
         public bool InitialDisplay { get; set; } = true;
         public bool InitiallyFocus { get; set; } = false;
         public bool HideWhenPageDisappear { get; set; } = false;
@@ -56,6 +65,6 @@ namespace Hymnal.XF.Views
         /// </summary>
         public bool HideNavBarWhenSearch { get; set; } = true;
 
-        
+
     }
 }

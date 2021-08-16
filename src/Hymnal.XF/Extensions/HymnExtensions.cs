@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Realm;
@@ -219,6 +220,7 @@ namespace Hymnal.XF.Extensions
         /// <returns></returns>
         public static IEnumerable<Hymn> SearchQuery(this IEnumerable<Hymn> hymns, string query)
         {
+            // TODO: Se puede optimizar la busqueda por termino
             return hymns.Where(h =>
             {
                 var queryRendered = query.StringRender().Trim();
@@ -227,13 +229,11 @@ namespace Hymnal.XF.Extensions
                 var contentRendered = h.Content.StringRender();
 
                 return
-                h.Number.ToString().ToUpper().Contains(queryRendered) ||
-
-                h.Title.ToUpper().Contains(queryRendered) ||
-                titleRendered.Contains(queryRendered) ||
-
-                h.Content.ToUpper().Contains(queryRendered) ||
-                contentRendered.Contains(queryRendered);
+                h.Number.ToString().ToUpper(CultureInfo.InvariantCulture).Contains(queryRendered)
+                || h.Title.ToUpper(CultureInfo.InvariantCulture).Contains(queryRendered)
+                || titleRendered.Contains(queryRendered)
+                || h.Content.ToUpper(CultureInfo.InvariantCulture).Contains(queryRendered)
+                || contentRendered.Contains(queryRendered);
             });
         }
         #endregion

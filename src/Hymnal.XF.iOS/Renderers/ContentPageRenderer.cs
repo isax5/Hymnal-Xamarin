@@ -2,6 +2,7 @@ using System;
 using Foundation;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Views;
+using ObjCRuntime;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
@@ -26,7 +27,7 @@ namespace Hymnal.XF.iOS.Renderers
             }
 
             if (Element is ISearchPage)
-                ViewWillAppearSearchImplementation();
+                ViewWillAppear_SearchImplementation();
         }
 
         public override void ViewDidAppear(bool animated)
@@ -34,7 +35,7 @@ namespace Hymnal.XF.iOS.Renderers
             base.ViewDidAppear(animated);
 
             if (Element is ISearchPage)
-                ViewDidAppearSearchImplementation();
+                ViewDidAppear_SearchImplementation();
         }
 
         public override void ViewWillDisappear(bool animated)
@@ -42,7 +43,7 @@ namespace Hymnal.XF.iOS.Renderers
             base.ViewWillDisappear(animated);
 
             if (Element is ISearchPage)
-                ViewWillDisappearSearchImplementation();
+                ViewWillDisappear_SearchImplementation();
         }
 
         protected override void Dispose(bool disposing)
@@ -52,19 +53,30 @@ namespace Hymnal.XF.iOS.Renderers
             // At this point Element is already null
             if (disposing)
             {
-                ViewWillDisposeSearchImplementation();
+                ViewWillDispose_SearchImplementation();
             }
+        }
+        public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
+        {
+            base.TraitCollectionDidChange(previousTraitCollection);
+
+            if (Element is ISearchPage)
+                TraitCollectionDidChange_SearchImplementation(TraitCollection.UserInterfaceStyle, previousTraitCollection.UserInterfaceStyle);
         }
     }
 
     // SearchPage
-    public partial class ContentPageRenderer : IUISearchResultsUpdating, IUISearchBarDelegate
+    public partial class ContentPageRenderer : ISearchDelegate, IUISearchResultsUpdating, IUISearchBarDelegate, IUITextFieldDelegate
     {
-        private UISearchController searchController;
         private ISearchPage searchPage => Element as ISearchPage;
-        private IDisposable themeSubscription;
+        private UISearchController searchController;
+        string ISearchDelegate.SearchText
+        {
+            get => searchController.SearchBar.Text;
+            set => searchController.SearchBar.Text = value;
+        }
 
-        private void ViewWillAppearSearchImplementation()
+        private void ViewWillAppear_SearchImplementation()
         {
             if (searchController is null)
             {
@@ -79,8 +91,11 @@ namespace Hymnal.XF.iOS.Renderers
                     HidesNavigationBarDuringPresentation = searchPage.Settings.HideNavBarWhenSearch,
                 };
 
-                //searchController.SearchBar.Placeholder = searchPage.Settings.PlaceHolder;
+                searchController.SearchBar.Delegate = this;
+                searchController.SearchBar.SearchTextField.Delegate = this;
+                searchPage.Delegate = this;
 
+                //searchController.SearchBar.Placeholder = searchPage.Settings.PlaceHolder;
 
                 searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.PlaceholderText,
                     attributes: new UIStringAttributes()
@@ -96,25 +111,8 @@ namespace Hymnal.XF.iOS.Renderers
             }
         }
 
-        private void ViewDidAppearSearchImplementation()
+        private void ViewDidAppear_SearchImplementation()
         {
-            //Configure Theme
-            if (themeSubscription is null)
-            {
-                themeSubscription = searchPage.ObservableThemeChange
-                    .Subscribe(ev => InvokeOnMainThread(() =>
-                    {
-                        {
-                            searchController.SearchBar.SearchTextField.TextColor = searchPage.TextColor.ToUIColor();
-                            searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.PlaceholderText,
-                                attributes: new UIStringAttributes()
-                                {
-                                    ForegroundColor = searchPage.PlaceHolderColor.ToUIColor(),
-                                });
-                        }
-                    }));
-            }
-
             if (searchPage.Settings.InitialDisplay)
                 ParentViewController.NavigationController.NavigationBar.SizeToFit();
 
@@ -126,20 +124,102 @@ namespace Hymnal.XF.iOS.Renderers
             }
         }
 
-        private void ViewWillDisappearSearchImplementation()
+        private void ViewWillDisappear_SearchImplementation()
         {
             if (searchPage.Settings.HideWhenPageDisappear)
                 ParentViewController.NavigationItem.SearchController = null;
         }
 
+        #region IUISearchResultsUpdating
+        /// <summary>
+        /// Text changes
+        /// </summary>
+        /// <param name="searchController"></param>
         public void UpdateSearchResultsForSearchController(UISearchController searchController)
         {
             searchPage.OnSearchBarTextChanged(searchController.SearchBar.Text);
         }
+        #endregion
 
-        private void ViewWillDisposeSearchImplementation()
+        #region IUISearchBarDelegate
+        /// <summary>
+        /// Cancel button tapped
+        /// </summary>
+        /// <param name="searchBar"></param>
+        [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        [Export("searchBarCancelButtonClicked:")]
+        [Unavailable(PlatformName.TvOS, PlatformArchitecture.All, null)]
+        public virtual void CancelButtonClicked(UISearchBar searchBar)
         {
-            themeSubscription?.Dispose();
+            // Search will become empty but for logic in VM, is better to have it empty already
+            searchPage.OnSearchBarTextChanged(string.Empty);
+            searchPage.Canceled();
+        }
+
+        /// <summary>
+        /// Search button tapped
+        /// </summary>
+        /// <param name="searchBar"></param>
+        [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        [Export("searchBarSearchButtonClicked:")]
+        public virtual void SearchButtonClicked(UISearchBar searchBar)
+        {
+            searchPage.SearchTapped(searchBar.Text);
+        }
+        #endregion
+
+        #region UITextFieldDelegate
+        ///// <summary>
+        ///// End Editing when tap on search button and cancel without text
+        ///// <para></para>
+        ///// Check: <see cref="UITextFieldDelegate.EditingEnded(UITextField, UITextFieldDidEndEditingReason)"/>
+        ///// </summary>
+        ///// <param name="textField"></param>
+        //[BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        //[Export("textFieldDidEndEditing:reason:")]
+        //[Introduced(PlatformName.iOS, 10, 0, PlatformArchitecture.All, null)]
+        //public void EditingEnded(UITextField textField, UITextFieldDidEndEditingReason reason)
+        //{
+        //}
+
+        /// <summary>
+        /// Start Editing
+        /// <para></para>
+        /// Check: <see cref="UITextFieldDelegate.EditingStarted(UITextField)"/>
+        /// </summary>
+        /// <param name="textField"></param>
+        [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        [Export("textFieldDidBeginEditing:")]
+        public void EditingStarted(UITextField textField)
+        {
+            searchPage.Focused();
+        }
+
+        /// <summary>
+        /// End Editing
+        /// <para></para>
+        /// Check: <see cref="UITextFieldDelegate.EditingEnded(UITextField)"/>
+        /// </summary>
+        /// <param name="textField"></param>
+        [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        [Export("textFieldDidEndEditing:")]
+        public void EditingEnded(UITextField textField)
+        {
+            searchPage.Unfocused();
+        }
+        #endregion
+
+        private void ViewWillDispose_SearchImplementation()
+        { }
+
+        private void TraitCollectionDidChange_SearchImplementation(UIUserInterfaceStyle currentUserInterfaceStyle, UIUserInterfaceStyle previousUserInterfaceStyle)
+        {
+            searchController.SearchBar.SearchTextField.TextColor = searchPage.TextColor.ToUIColor();
+            searchController.SearchBar.SearchTextField.AttributedPlaceholder = new NSAttributedString(searchPage.PlaceholderText,
+                attributes: new UIStringAttributes()
+                {
+                    ForegroundColor = searchPage.PlaceHolderColor.ToUIColor(),
+                });
         }
     }
 }
