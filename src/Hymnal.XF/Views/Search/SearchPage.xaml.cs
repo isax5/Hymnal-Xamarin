@@ -64,9 +64,7 @@ namespace Hymnal.XF.Views
         ISearchPageSettings ISearchPage.Settings { get; } = new SearchPageSettings { };
 
         string ISearchPage.PlaceholderText => HymnSearchBar.Placeholder;
-
         Color ISearchPage.PlaceHolderColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["PrimaryLightColor"];
-
         Color ISearchPage.TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["NavBarTextColor"];
 
         void ISearchPage.OnSearchBarTextChanged(in string text) => ViewModel.TextSearchBar = text;

@@ -31,6 +31,7 @@ namespace Hymnal.XF
             // App Theme
             app.ThemeHelper = new ThemeHelper(app);
 
+            // Restore Preferences
             var preferencesService = app.Container.Resolve(typeof(IPreferencesService)) as IPreferencesService;
 
             #region Hymnals Language
