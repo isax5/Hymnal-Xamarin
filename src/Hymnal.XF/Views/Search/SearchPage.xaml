@@ -67,10 +67,10 @@
                 x:DataType="{x:Null}"
                 AutomationProperties.IsInAccessibleTree="False"
                 BackgroundColor="Transparent"
-                Footer=""
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding Hymns}"
-                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
+                SelectedItem="{Binding SelectedHymn,
+                                       Mode=TwoWay}"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

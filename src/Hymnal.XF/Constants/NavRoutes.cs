@@ -2,10 +2,6 @@ namespace Hymnal.XF.Constants
 {
     public static class NavRoutes
     {
-#if DEBUG
-        public const string SimplePage = "SimplePage";
-#endif
-
         public const string NavPage = "NavigationPage";
         public const string FormSheetNavPage = "FormSheetNavigationPage";
 

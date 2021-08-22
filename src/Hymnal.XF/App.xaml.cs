@@ -38,14 +38,10 @@ namespace Hymnal.XF
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +
                 $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.SettingsPage}");
         }
-         
+
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             Setup.RegisterDependencies(containerRegistry);
-
-#if DEBUG
-            containerRegistry.RegisterForNavigation<SimplePage, SimpleViewModel>();
-#endif
 
             // Register Pages
             containerRegistry.RegisterForNavigation<CustomNavigationPage>(NavRoutes.NavPage);

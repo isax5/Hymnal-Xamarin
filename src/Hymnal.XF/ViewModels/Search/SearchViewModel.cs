@@ -44,8 +44,8 @@ namespace Hymnal.XF.ViewModels
             get => textSearchBar;
             set
             {
-                SetProperty(ref textSearchBar, value);
-                observableTextSearchBar.NextValue(value);
+                if (!SetProperty(ref textSearchBar, value))
+                    observableTextSearchBar.NextValue(value);
             }
         }
         private readonly ObservableValue<string> observableTextSearchBar = new(false);
@@ -69,6 +69,7 @@ namespace Hymnal.XF.ViewModels
 
             observableTextSearchBar
                 .DistinctUntilChanged()
+                .Skip(1)
                 .Throttle(TimeSpan.FromSeconds(0.3))
                 .Subscribe(text => this.mainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }

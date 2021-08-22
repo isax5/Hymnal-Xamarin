@@ -1,6 +1,5 @@
 using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
-using Prism.Navigation;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Views
@@ -8,36 +7,16 @@ namespace Hymnal.XF.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class RecordsPage : BaseContentPage<RecordsViewModel>, IModalPage
     {
-        private readonly INavigationService navigationService;
 
-        public string CloseButtonText => Languages.Generic_Close;
-
-        public RecordsPage(INavigationService navigationService)
+        public RecordsPage()
         {
             InitializeComponent();
-            this.navigationService = navigationService;
         }
 
-        public void PopModal() => navigationService.GoBackAsync(null, true, true);
+        #region IModalPage
+        public string CloseButtonText => Languages.Generic_Close;
 
-        //public MvxBasePresentationAttribute PresentationAttribute(MvxViewModelRequest request)
-        //{
-        //    if (Device.RuntimePlatform == Device.iOS && DeviceInfo.Version.Major >= 13)
-        //    {
-        //        return new MvxModalPresentationAttribute
-        //        {
-        //            WrapInNavigationPage = false
-        //        };
-
-        //    }
-        //    else
-        //    {
-        //        return new MvxContentPagePresentationAttribute
-        //        {
-        //            WrapInNavigationPage = true,
-        //            NoHistory = false
-        //        };
-        //    }
-        //}
+        public void PopModal() => ViewModel.NavigationService.GoBackAsync(null, true, true);
+        #endregion
     }
 }

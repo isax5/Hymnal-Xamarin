@@ -3,7 +3,6 @@ using Prism;
 using Prism.Ioc;
 using UIKit;
 
-
 namespace Hymnal.XF.iOS
 {
     [Register(nameof(AppDelegate))]
@@ -12,10 +11,10 @@ namespace Hymnal.XF.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 #if ENABLE_TEST_CLOUD
-            Xamarin.Calabash.Start();
+            // Xamarin.Calabash.Start();
 #endif
-            global::Xamarin.Forms.Forms.Init();
-            global::Xamarin.Forms.FormsMaterial.Init();
+            Xamarin.Forms.Forms.Init();
+            Xamarin.Forms.FormsMaterial.Init();
             LoadApplication(new App(new IOSInitializer()));
 
             return base.FinishedLaunching(app, options);

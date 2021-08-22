@@ -22,11 +22,14 @@ namespace Hymnal.XF.Views
     public interface ISearchDelegate
     {
         string SearchText { get; set; }
+        void BecomeFirstResponder();
+        void DismissKeyboard(bool keepSearchControllerActive = true);
     }
 
     public interface ISearchPageSettings
     {
         bool InitialDisplay { get; }
+
         bool InitiallyFocus { get; }
 
         bool HideWhenPageDisappear { get; }
@@ -49,7 +52,9 @@ namespace Hymnal.XF.Views
     {
         public ISearchDelegate Delegate { get; set; } = null;
         public bool InitialDisplay { get; set; } = true;
+
         public bool InitiallyFocus { get; set; } = false;
+
         public bool HideWhenPageDisappear { get; set; } = false;
 
         /// <summary>

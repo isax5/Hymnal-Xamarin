@@ -1,11 +1,15 @@
-using System;
+using System.Runtime.CompilerServices;
+using System.Threading.Tasks;
+using CoreFoundation;
 using Foundation;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Views;
 using ObjCRuntime;
 using UIKit;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
+// ReSharper disable ParameterHidesMember
 
 [assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
 namespace Hymnal.XF.iOS.Renderers
@@ -66,15 +70,10 @@ namespace Hymnal.XF.iOS.Renderers
     }
 
     // SearchPage
-    public partial class ContentPageRenderer : ISearchDelegate, IUISearchResultsUpdating, IUISearchBarDelegate, IUITextFieldDelegate
+    public partial class ContentPageRenderer : ISearchDelegate, IUISearchResultsUpdating, IUISearchBarDelegate, IUITextFieldDelegate, IUISearchControllerDelegate
     {
         private ISearchPage searchPage => Element as ISearchPage;
         private UISearchController searchController;
-        string ISearchDelegate.SearchText
-        {
-            get => searchController.SearchBar.Text;
-            set => searchController.SearchBar.Text = value;
-        }
 
         private void ViewWillAppear_SearchImplementation()
         {
@@ -82,6 +81,7 @@ namespace Hymnal.XF.iOS.Renderers
             {
                 searchController = new()
                 {
+                    Delegate = this,
                     SearchResultsUpdater = this,
                     DimsBackgroundDuringPresentation = false,
 
@@ -111,17 +111,17 @@ namespace Hymnal.XF.iOS.Renderers
             }
         }
 
+        private bool firstTimeAppearing = true;
         private void ViewDidAppear_SearchImplementation()
         {
+            if (!firstTimeAppearing) return;
+            firstTimeAppearing = false;
+
             if (searchPage.Settings.InitialDisplay)
                 ParentViewController.NavigationController.NavigationBar.SizeToFit();
 
             if (searchPage.Settings.InitiallyFocus)
-            {
-                searchController.Active = searchPage.Settings.InitiallyFocus;
-
-                searchController.SearchBar.SearchTextField.BecomeFirstResponder();
-            }
+                searchController.Active = true;
         }
 
         private void ViewWillDisappear_SearchImplementation()
@@ -129,6 +129,32 @@ namespace Hymnal.XF.iOS.Renderers
             if (searchPage.Settings.HideWhenPageDisappear)
                 ParentViewController.NavigationItem.SearchController = null;
         }
+
+        #region ISearchDelegate
+        string ISearchDelegate.SearchText
+        {
+            get => searchController.SearchBar.Text;
+            set => searchController.SearchBar.Text = value;
+        }
+
+        void ISearchDelegate.BecomeFirstResponder()
+        {
+            if (!searchController.SearchBar.SearchTextField.IsFirstResponder)
+            {
+                searchController.Active = true;
+                searchController.SearchBar.BecomeFirstResponder();
+            }
+        }
+
+        void ISearchDelegate.DismissKeyboard(bool keepSearchControllerActive)
+        {
+            if (searchController.SearchBar.SearchTextField.IsFirstResponder)
+            {
+                searchController.Active = keepSearchControllerActive;
+                searchController.SearchBar.SearchTextField.EndEditing(true);
+            }
+        }
+        #endregion
 
         #region IUISearchResultsUpdating
         /// <summary>
@@ -144,6 +170,8 @@ namespace Hymnal.XF.iOS.Renderers
         #region IUISearchBarDelegate
         /// <summary>
         /// Cancel button tapped
+        /// <para></para>
+        /// Check: <see cref="UISearchBarDelegate.CancelButtonClicked(UISearchBar)"/>
         /// </summary>
         /// <param name="searchBar"></param>
         [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -158,6 +186,8 @@ namespace Hymnal.XF.iOS.Renderers
 
         /// <summary>
         /// Search button tapped
+        /// <para></para>
+        /// Check: <see cref="UISearchBarDelegate.SearchButtonClicked(UISearchBar)"/>
         /// </summary>
         /// <param name="searchBar"></param>
         [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
@@ -169,19 +199,6 @@ namespace Hymnal.XF.iOS.Renderers
         #endregion
 
         #region UITextFieldDelegate
-        ///// <summary>
-        ///// End Editing when tap on search button and cancel without text
-        ///// <para></para>
-        ///// Check: <see cref="UITextFieldDelegate.EditingEnded(UITextField, UITextFieldDidEndEditingReason)"/>
-        ///// </summary>
-        ///// <param name="textField"></param>
-        //[BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
-        //[Export("textFieldDidEndEditing:reason:")]
-        //[Introduced(PlatformName.iOS, 10, 0, PlatformArchitecture.All, null)]
-        //public void EditingEnded(UITextField textField, UITextFieldDidEndEditingReason reason)
-        //{
-        //}
-
         /// <summary>
         /// Start Editing
         /// <para></para>
@@ -206,6 +223,26 @@ namespace Hymnal.XF.iOS.Renderers
         public void EditingEnded(UITextField textField)
         {
             searchPage.Unfocused();
+        }
+        #endregion
+
+        #region IUISearchControllerDelegate
+        /// <summary>
+        /// Start Editing
+        /// <para></para>
+        /// Check: <see cref="UISearchControllerDelegate.DidPresentSearchController(UISearchController)"/>
+        /// </summary>
+        /// <param name="searchController"></param>
+        [Export("didPresentSearchController:")]
+        [BindingImpl(BindingImplOptions.GeneratedCode | BindingImplOptions.Optimizable)]
+        [MethodImpl(MethodImplOptions.NoInlining)]
+        public void DidPresentSearchController(UISearchController searchController)
+        {
+            if (searchPage.Settings.InitiallyFocus)
+                DispatchQueue.MainQueue.DispatchAsync(() =>
+                {
+                    searchController.SearchBar.BecomeFirstResponder();
+                });
         }
         #endregion
 

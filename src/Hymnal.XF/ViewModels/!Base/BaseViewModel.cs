@@ -10,13 +10,9 @@ namespace Hymnal.XF.ViewModels
 {
     public abstract class BaseViewModel : BindableBase, IInitialize, IInitializeAsync, INavigationAware, IDestructible, IPageLifecycleAware
     {
-        protected readonly INavigationService NavigationService;
+        public readonly INavigationService NavigationService;
 
         #region Properties
-#if DEBUG
-        public DelegateCommand SampleCommand { get; private set; }
-#endif
-
         private bool busy = false;
         public bool Busy
         {
@@ -34,13 +30,6 @@ namespace Hymnal.XF.ViewModels
         public BaseViewModel(INavigationService navigationService)
         {
             NavigationService = navigationService;
-
-#if DEBUG
-            SampleCommand = new DelegateCommand(() =>
-            {
-                NavigationService.NavigateAsync(NavRoutes.SimplePage);
-            }).ObservesCanExecute(() => NotBusy);
-#endif
         }
 
         #region Life Cycle
