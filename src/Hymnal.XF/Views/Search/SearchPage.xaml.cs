@@ -14,6 +14,26 @@ namespace Hymnal.XF.Views
             InitializeComponent();
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Focuse HymnSearchBar
+            if (string.IsNullOrWhiteSpace(HymnSearchBar.Text))
+            {
+                switch (Device.RuntimePlatform)
+                {
+                    case Device.iOS:
+                        @delegate.BecomeFirstResponder();
+                        break;
+
+                    default:
+                        HymnSearchBar.Focus();
+                        break;
+                }
+            }
+        }
+
         #region IModalPage
         string IModalPage.CloseButtonText => Languages.Generic_Close;
 

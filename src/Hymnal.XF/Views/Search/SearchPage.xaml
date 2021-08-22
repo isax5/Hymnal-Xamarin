@@ -23,7 +23,6 @@
     <NavigationPage.TitleView>
         <SearchBar
             x:Name="HymnSearchBar"
-            Grid.Row="0"
             iOS:SearchBar.SearchBarStyle="Minimal"
             AutomationId="HymnSearchBar"
             AutomationProperties.IsInAccessibleTree="False"
