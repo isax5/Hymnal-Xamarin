@@ -38,13 +38,13 @@ namespace Hymnal.XF.ViewModels
             }
         }
 
-        private string textSearchBar;
+        private string textSearchBar = string.Empty;
         public string TextSearchBar
         {
             get => textSearchBar;
             set
             {
-                if (!SetProperty(ref textSearchBar, value))
+                if (SetProperty(ref textSearchBar, value))
                     observableTextSearchBar.NextValue(value);
             }
         }
@@ -69,7 +69,6 @@ namespace Hymnal.XF.ViewModels
 
             observableTextSearchBar
                 .DistinctUntilChanged()
-                .Skip(1)
                 .Throttle(TimeSpan.FromSeconds(0.3))
                 .Subscribe(text => this.mainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(text)));
         }
@@ -106,17 +105,15 @@ namespace Hymnal.XF.ViewModels
 
         private async Task TextSearchExecuteAsync(string text)
         {
-            Hymns.Clear();
-
             IEnumerable<Hymn> hymns = (await hymnsService.GetHymnListAsync(_language)).OrderByNumber();
 
             if (string.IsNullOrWhiteSpace(text))
             {
-                Hymns.AddRange(hymns);
+                Hymns.ReplaceRange(hymns);
                 return;
             }
 
-            Hymns.AddRange(hymns.SearchQuery(text));
+            Hymns.ReplaceRange(hymns.SearchQuery(text));
         }
 
         private async Task SelectedHymnExecuteAsync(Hymn hymn)
