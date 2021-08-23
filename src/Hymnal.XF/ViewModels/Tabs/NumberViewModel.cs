@@ -5,6 +5,7 @@ using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
+using Microsoft.AppCenter.Analytics;
 using Prism.Commands;
 using Prism.Navigation;
 
@@ -45,17 +46,17 @@ namespace Hymnal.XF.ViewModels
 #endif
         }
 
-        //public override void OnAppearing()
-        //{
-        //    base.OnAppearing();
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
 
-        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-        //    {
-        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(NumberViewModel) },
-        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-        //    });
-        //}
+            Analytics.TrackEvent(TrackingConstants.TrackEv.Navigation, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(NumberViewModel) },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         #region Command Actions
         private async void OpenHymnAsync(string text)

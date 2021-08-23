@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
@@ -15,6 +16,7 @@ using Hymnal.XF.Views;
 using MediaManager;
 using MediaManager.Library;
 using MediaManager.Player;
+using Microsoft.AppCenter.Analytics;
 using Prism.Commands;
 using Prism.Navigation;
 using Prism.Services;
@@ -150,8 +152,23 @@ namespace Hymnal.XF.ViewModels
 
                 storageService.Add(Hymn.ToRecordHymn());
             }
+        }
 
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            // Precarga de datos para reproduccion
             azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
+
+            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnOpened, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() },
+                { "Font Size Hymnal", preferencesService.HymnalsFontSize.ToString() }
+            });
         }
 
         #region Events
@@ -192,25 +209,25 @@ namespace Hymnal.XF.ViewModels
             {
                 storageService.RemoveRange(favorites);
 
-                //Analytics.TrackEvent(Constants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
-                //{
-                //    { Constants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                //    { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                //    { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-                //});
+                Analytics.TrackEvent(TrackingConstants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
+                {
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                });
             }
             else
             {
                 storageService.Add(Hymn.ToFavoriteHymn());
 
-                //Analytics.TrackEvent(Constants.TrackEv.HymnAddedToFavorites, new Dictionary<string, string>
-                //{
-                //    { Constants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                //    { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                //    { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-                //});
+                Analytics.TrackEvent(TrackingConstants.TrackEv.HymnAddedToFavorites, new Dictionary<string, string>
+                {
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                });
             }
 
             IsFavorite = !IsFavorite;
@@ -222,13 +239,13 @@ namespace Hymnal.XF.ViewModels
                 title: hymn.Title,
                 text: $"{hymn.Title}\n\n{hymn.Content}\n\n{AppConstants.WebLinks.DeveloperWebSite}");
 
-            //Analytics.TrackEvent(Constants.TrackEv.HymnShared, new Dictionary<string, string>
-            //{
-            //    { Constants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-            //    { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-            //    { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-            //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-            //});
+            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnShared, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
         }
 
         private async void PlayExecuteAsync()
@@ -301,15 +318,15 @@ namespace Hymnal.XF.ViewModels
 
                     await mediaManager.Play(mediaItem);
 
-                    //Analytics.TrackEvent(Constants.TrackEv.HymnMusicPlayed, new Dictionary<string, string>
-                    //{
-                    //    { Constants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                    //    { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                    //    { Constants.TrackEv.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
-                    //    Constants.TrackEv.HymnReferenceScheme.InstrumentalMusic : Constants.TrackEv.HymnReferenceScheme.SungMusic },
-                    //    { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-                    //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-                    //});
+                    Analytics.TrackEvent(TrackingConstants.TrackEv.HymnMusicPlayed, new Dictionary<string, string>
+                    {
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
+                        TrackingConstants.TrackEv.HymnReferenceScheme.InstrumentalMusic : TrackingConstants.TrackEv.HymnReferenceScheme.SungMusic },
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                    });
                 }),
                 ex => ex.Report());
         }

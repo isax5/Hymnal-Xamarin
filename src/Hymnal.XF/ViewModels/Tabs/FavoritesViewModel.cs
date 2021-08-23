@@ -8,6 +8,7 @@ using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using Prism.Commands;
 using Prism.Navigation;
@@ -18,6 +19,7 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IHymnsService hymnsService;
         private readonly IStorageManagerService storageManager;
+        private readonly IPreferencesService preferencesService;
 
         public ObservableRangeCollection<Tuple<FavoriteHymn, Hymn>> Hymns { get; } = new();
 
@@ -41,11 +43,13 @@ namespace Hymnal.XF.ViewModels
         public FavoritesViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
-            IStorageManagerService storageManager
+            IStorageManagerService storageManager,
+            IPreferencesService preferencesService
             ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
             this.storageManager = storageManager;
+            this.preferencesService = preferencesService;
 
             DeleteHymnCommand = new DelegateCommand<Tuple<FavoriteHymn, Hymn>>(DeleteHymnExecute).ObservesCanExecute(() => NotBusy);
         }
@@ -91,19 +95,14 @@ namespace Hymnal.XF.ViewModels
 
             foreach (Tuple<FavoriteHymn, Hymn> item in toRemoveList)
                 Hymns.Remove(item);
+
+            Analytics.TrackEvent(TrackingConstants.TrackEv.Navigation, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
         }
-
-        //public override void ViewAppeared()
-        //{
-        //    base.ViewAppeared();
-
-        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-        //    {
-        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(FavoritesViewModel) },
-        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-        //    });
-        //}
 
         #region Command Actions
         private async Task SelectedHymnExecuteAsync(Tuple<FavoriteHymn, Hymn> hymn)
@@ -119,13 +118,13 @@ namespace Hymnal.XF.ViewModels
 
         private void DeleteHymnExecute(Tuple<FavoriteHymn, Hymn> favoriteHymn)
         {
-            //Analytics.TrackEvent(Constants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
-            //{
-            //    { Constants.TrackEv.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
-            //    { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
-            //    { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-            //    { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-            //});
+            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, favoriteHymn.Item1.Number.ToString() },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, favoriteHymn.Item1.HymnalLanguageId },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
 
             Busy = true;
             try
@@ -135,14 +134,11 @@ namespace Hymnal.XF.ViewModels
             }
             catch (Exception ex)
             {
-                ex.Report();
-                //var properties = new Dictionary<string, string>()
-                //    {
-                //        { "File", nameof(FavoritesViewModel) },
-                //        { "Deleting Favorite", favoriteHymn.Item1.Number.ToString() }
-                //    };
-
-                //Crashes.TrackError(ex, properties);
+                ex.Report(new Dictionary<string, string>()
+                    {
+                        { "File", nameof(FavoritesViewModel) },
+                        { "Deleting Favorite", favoriteHymn.Item1.Number.ToString() }
+                    });
             }
             finally
             {

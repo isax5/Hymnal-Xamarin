@@ -1,5 +1,9 @@
+using System;
+using System.Collections.Generic;
+using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models.Parameters;
+using Microsoft.AppCenter.Analytics;
 using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
@@ -24,19 +28,17 @@ namespace Hymnal.XF.ViewModels
             ImageSource = parameter.HymnalLanguage.GetMusicSheetSource(parameter.Number);
         }
 
-        //public override void ViewAppeared()
-        //{
-        //    base.ViewAppeared();
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
 
-        //    logger.LogInformation($"Opening Hymn Sheet: {HymnId} of {Language.Id}");
-
-        //    Analytics.TrackEvent(Constants.TrackEv.HymnMusicSheetOpened, new Dictionary<string, string>
-        //    {
-        //        { Constants.TrackEv.HymnReferenceScheme.Number, HymnId.Number.ToString() },
-        //        { Constants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-        //        { Constants.TrackEv.HymnReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-        //        { Constants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
-        //    });
-        //}
+            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnMusicSheetOpened, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Parameter.Number.ToString() },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Parameter.HymnalLanguage.Id },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+            });
+        }
     }
 }

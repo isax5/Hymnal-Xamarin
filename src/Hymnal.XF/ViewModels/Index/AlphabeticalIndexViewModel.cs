@@ -1,9 +1,11 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using Prism.Navigation;
 
@@ -57,17 +59,17 @@ namespace Hymnal.XF.ViewModels
             await CheckAsync(language);
         }
 
-        //public override void ViewAppeared()
-        //{
-        //    base.ViewAppeared();
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
 
-        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-        //    {
-        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(AlphabeticalIndexViewModel) },
-        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-        //    });
-        //}
+            Analytics.TrackEvent(TrackingConstants.TrackEv.Navigation, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(AlphabeticalIndexViewModel) },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
         {

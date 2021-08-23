@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.XF.Constants;
@@ -7,6 +8,7 @@ using Hymnal.XF.Models;
 using Hymnal.XF.Models.Parameters;
 using Hymnal.XF.Models.Realm;
 using Hymnal.XF.Services;
+using Microsoft.AppCenter.Analytics;
 using MvvmHelpers;
 using Prism.Navigation;
 
@@ -16,6 +18,7 @@ namespace Hymnal.XF.ViewModels
     {
         private readonly IHymnsService hymnsService;
         private readonly IStorageManagerService storageManager;
+        private readonly IPreferencesService preferencesService;
 
         public ObservableRangeCollection<Tuple<RecordHymn, Hymn>> Hymns { get; } = new();
 
@@ -35,11 +38,13 @@ namespace Hymnal.XF.ViewModels
         public RecordsViewModel(
             INavigationService navigationService,
             IHymnsService hymnsService,
-            IStorageManagerService storageManager
+            IStorageManagerService storageManager,
+            IPreferencesService preferencesService
             ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
             this.storageManager = storageManager;
+            this.preferencesService = preferencesService;
         }
 
         public override async Task InitializeAsync(INavigationParameters parameters)
@@ -55,17 +60,17 @@ namespace Hymnal.XF.ViewModels
             Hymns.AddRange(hymns);
         }
 
-        //public override void ViewAppeared()
-        //{
-        //    base.ViewAppeared();
+        public override void OnAppearing()
+        {
+            base.OnAppearing();
 
-        //    Analytics.TrackEvent(Constants.TrackEv.Navigation, new Dictionary<string, string>
-        //    {
-        //        { Constants.TrackEv.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
-        //        { Constants.TrackEv.NavigationReferenceScheme.CultureInfo, Constants.CurrentCultureInfo.Name },
-        //        { Constants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-        //    });
-        //}
+            Analytics.TrackEvent(TrackingConstants.TrackEv.Navigation, new Dictionary<string, string>
+            {
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(RecordsViewModel) },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+            });
+        }
 
         private async Task SelectedHymnExecuteAsync(Tuple<RecordHymn, Hymn> hymn)
         {
