@@ -3,7 +3,6 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <NeutralLanguage>en</NeutralLanguage>
     <LangVersion>latest</LangVersion>
-    <UserSecretsId>079d1f9e-eabd-43ed-a88f-96d81a24d810</UserSecretsId>
   </PropertyGroup>
 
   <!-- Lyrics JSON & Fonts -->

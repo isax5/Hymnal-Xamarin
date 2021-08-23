@@ -14,5 +14,6 @@
   <assembly fullname="Prism.Forms" />
   <assembly fullname="Prism.DryIoc.Forms" />
   <assembly fullname="DryIoc" />
+  <assembly fullname="Hymnal.XF" />
 
 </linker>
