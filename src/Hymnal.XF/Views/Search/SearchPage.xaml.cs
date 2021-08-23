@@ -65,8 +65,8 @@ namespace Hymnal.XF.Views
         };
 
         string ISearchPage.PlaceholderText => HymnSearchBar.Placeholder;
-        Color ISearchPage.PlaceHolderColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["PrimaryLightColor"];
-        Color ISearchPage.TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["NavBarTextColor"];
+        Color ISearchPage.PlaceHolderColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["Color.Primary"];
+        Color ISearchPage.TextColor => (Color)App.Current.ThemeHelper.CurrentResourceDictionaryTheme["Color.NavBarText"];
 
         void ISearchPage.OnSearchBarTextChanged(in string text) => ViewModel.TextSearchBar = text;
         void ISearchPage.SearchTapped(in string text) { }

@@ -6,6 +6,6 @@
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     iOS:NavigationPage.IsNavigationBarTranslucent="False"
     iOS:NavigationPage.PrefersLargeTitles="True"
-    BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-    BarBackgroundColor="{DynamicResource PrimaryBackgroudColor}"
-    BarTextColor="{DynamicResource NavBarTextColor}" />
+    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+    BarBackgroundColor="{DynamicResource Color.PrimaryBackground}"
+    BarTextColor="{DynamicResource Color.NavBarText}" />

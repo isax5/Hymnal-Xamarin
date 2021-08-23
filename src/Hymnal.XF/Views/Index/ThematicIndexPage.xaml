@@ -10,7 +10,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:ThematicIndexViewModel"
     x:TypeArguments="viewModels:ThematicIndexViewModel"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
 
@@ -25,8 +25,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -41,10 +41,13 @@
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
-            SelectedItem="{Binding SelectedThematic, Mode=TwoWay}">
+            SelectedItem="{Binding SelectedThematic,
+                                   Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding ThematicName}" TextColor="{DynamicResource PrimaryTextColor}" />
+                    <TextCell
+                        Text="{Binding ThematicName}"
+                        TextColor="{DynamicResource Color.PrimaryText}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

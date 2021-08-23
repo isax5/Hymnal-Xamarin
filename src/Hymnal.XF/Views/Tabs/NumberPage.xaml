@@ -17,11 +17,13 @@
     x:DataType="viewModels:NumberViewModel"
     x:TypeArguments="viewModels:NumberViewModel"
     AutomationId="NumberPage"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
     <ContentPage.IconImageSource>
-        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
+        <FontImageSource
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
     </ContentPage.IconImageSource>
 
     <ContentPage.ToolbarItems>
@@ -32,7 +34,9 @@
             Command="{Binding OpenRecordsCommand}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.History}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.History}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -41,7 +45,9 @@
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -58,8 +64,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundMainPageFilter}"
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundMainPageFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -79,13 +85,14 @@
 
                 <Grid Padding="0">
                     <Frame
-                        BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+                        BackgroundColor="{DynamicResource Color.PrimaryBackground}"
                         CornerRadius="10"
                         HasShadow="True"
                         HorizontalOptions="CenterAndExpand"
                         Opacity="0.3"
                         VerticalOptions="FillAndExpand"
-                        WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />
+                        WidthRequest="{Binding Source={x:Reference EntryContainer},
+                                               Path=Width}" />
 
                     <StackLayout
                         x:Name="EntryContainer"
@@ -98,7 +105,7 @@
                             FontAttributes="Bold"
                             FontSize="45"
                             Text="#"
-                            TextColor="{DynamicResource PrimaryTextColor}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
                             VerticalOptions="FillAndExpand"
                             VerticalTextAlignment="Center" />
 
@@ -116,14 +123,16 @@
                             HorizontalTextAlignment="Center"
                             Keyboard="Numeric"
                             Placeholder="...."
-                            PlaceholderColor="{DynamicResource PrimaryLightColor}"
+                            PlaceholderColor="{DynamicResource Color.PrimaryLight}"
                             Text="{Binding HymnNumber}"
-                            TextColor="{DynamicResource PrimaryTextColor}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
                             VerticalOptions="CenterAndExpand"
                             Visual="Default"
                             WidthRequest="150">
                             <Entry.Behaviors>
-                                <behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />
+                                <behaviors:FastEntryBehaviour
+                                    IsNumeric="True"
+                                    Mask="###" />
                             </Entry.Behaviors>
                             <Entry.Effects>
                                 <effects:NoBorderLineEffect />
@@ -138,7 +147,8 @@
                     AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenHymnButton}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnCommand}"
-                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry},
+                                               Path=Text}"
                     HorizontalOptions="CenterAndExpand"
                     Text="{extensions:Translate Generic_Open}"
                     WidthRequest="200">
@@ -146,7 +156,7 @@
                         <FontImageSource
                             FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
                             Glyph="{x:Static constans:FontAwesomeIcons.BookOpen}"
-                            Color="{DynamicResource NavBarTextColor}" />
+                            Color="{DynamicResource Color.NavBarText}" />
                     </Button.ImageSource>
                 </Button>
             </StackLayout>

@@ -16,11 +16,13 @@
     x:DataType="viewModels:FavoritesViewModel"
     x:TypeArguments="viewModels:FavoritesViewModel"
     AutomationId="FavoritesPage"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
     <ContentPage.IconImageSource>
-        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Heart}" />
+        <FontImageSource
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.Heart}" />
     </ContentPage.IconImageSource>
 
     <ContentPage.Content>
@@ -35,8 +37,8 @@
                 Source="{DynamicResource BackgroundImageFile}" />
 
             <StackLayout
-                BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-                Opacity="{DynamicResource BackgroundWhiteFilter}"
+                BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+                Opacity="{DynamicResource Opacity.BackgroundFilter}"
                 RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                        Property=Height}"
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -54,7 +56,8 @@
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                       Property=Width}"
                 RowHeight="50"
-                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
+                SelectedItem="{Binding SelectedHymn,
+                                       Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -63,7 +66,8 @@
                             <!--  Working in for this case: Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"  -->
                             <ViewCell.ContextActions>
                                 <MenuItem
-                                    Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"
+                                    Command="{Binding Path=BindingContext.DeleteHymnCommand,
+                                                      Source={x:Reference Name=list}}"
                                     CommandParameter="{Binding .}"
                                     IsDestructive="True"
                                     Text="{extensions:Translate Delete}" />
@@ -83,7 +87,7 @@
                                     AutomationProperties.HelpText="{Binding Item2.Title}"
                                     FontSize="Large"
                                     Text="{Binding Item2.Number}"
-                                    TextColor="{DynamicResource PrimaryTextColor}"
+                                    TextColor="{DynamicResource Color.PrimaryText}"
                                     VerticalOptions="CenterAndExpand" />
 
                                 <!--  Title  -->
@@ -94,7 +98,7 @@
                                     FontSize="Large"
                                     LineBreakMode="TailTruncation"
                                     Text="{Binding Item2.Title}"
-                                    TextColor="{DynamicResource PrimaryTextColor}"
+                                    TextColor="{DynamicResource Color.PrimaryText}"
                                     VerticalOptions="CenterAndExpand" />
 
                                 <!--  Preview  -->
@@ -105,7 +109,7 @@
                                     FontSize="Micro"
                                     LineBreakMode="TailTruncation"
                                     Text="{Binding Item2.PlainContent}"
-                                    TextColor="{DynamicResource SecondaryTextColor}"
+                                    TextColor="{DynamicResource Color.SecondaryText}"
                                     VerticalOptions="CenterAndExpand" />
 
                             </Grid>

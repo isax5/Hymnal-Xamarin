@@ -11,7 +11,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:NumericalIndexViewModel"
     x:TypeArguments="viewModels:NumericalIndexViewModel"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
 
@@ -26,8 +26,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -47,7 +47,8 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
             RowHeight="50"
-            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
+            SelectedItem="{Binding SelectedHymn,
+                                   Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
@@ -66,7 +67,7 @@
                                 AutomationProperties.HelpText="{Binding Title}"
                                 FontSize="Large"
                                 Text="{Binding Number}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Title  -->
@@ -77,7 +78,7 @@
                                 FontSize="Large"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding Title}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Preview  -->
@@ -88,7 +89,7 @@
                                 FontSize="Micro"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding PlainContent}"
-                                TextColor="{DynamicResource SecondaryTextColor}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                         </Grid>

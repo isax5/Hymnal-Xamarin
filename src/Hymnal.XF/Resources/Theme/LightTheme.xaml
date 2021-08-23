@@ -4,32 +4,30 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <x:Double x:Key="BackgroundMainPageFilter">0</x:Double>
+    <x:Double x:Key="Opacity.BackgroundMainPageFilter">0</x:Double>
     <!--  White filter for lists  -->
-    <x:Double x:Key="BackgroundWhiteFilter">0.5</x:Double>
+    <x:Double x:Key="Opacity.BackgroundFilter">0.5</x:Double>
 
     <!--  White filter for Hymns letters  -->
-    <x:Double x:Key="BackgroundWhiteFilterHymnLetters">0.6</x:Double>
+    <x:Double x:Key="Opacity.BackgroundHymnLettersFilter">0.6</x:Double>
 
-    <Color x:Key="PrimaryColor">#4c555a</Color>
+    <Color x:Key="Color.Primary">#4c555a</Color>
     <!--  Placeholder  -->
-    <Color x:Key="PrimaryLightColor">#788187</Color>
+    <Color x:Key="Color.PrimaryLight">#788187</Color>
 
-    <Color x:Key="AccentColor">#24b780</Color>
+    <Color x:Key="Color.Accent">#24b780</Color>
 
-    <Color x:Key="PrimaryTextColor">#000000</Color>
-    <Color x:Key="SecondaryTextColor">#666666</Color>
-    <Color x:Key="NavBarTextColor">#ffffff</Color>
+    <Color x:Key="Color.PrimaryText">#000000</Color>
+    <Color x:Key="Color.SecondaryText">#666666</Color>
+    <Color x:Key="Color.NavBarText">#ffffff</Color>
 
     <!--  Background in Navigation and Tab Bar  -->
-    <Color x:Key="PrimaryBackgroudColor">#000000</Color>
-    <Color x:Key="SecondaryBackgroudColor">#ffffff</Color>
-    <Color x:Key="BackgroundColorFilterHymnLetters">#ffffff</Color>
+    <Color x:Key="Color.PrimaryBackground">#000000</Color>
+    <Color x:Key="Color.SecondaryBackground">#ffffff</Color>
+    <Color x:Key="Color.BackgroundHymnLettersFilter">#ffffff</Color>
 
-    <Color x:Key="SelectedTabColor">#000</Color>
-    <Color x:Key="UnselectedTabColor">#737373</Color>
-    <Color x:Key="BackgroundTabColor">#f5f5f5</Color>
-
-    <Color x:Key="Experiment">#00ffff</Color>
+    <Color x:Key="Color.SelectedTab">#000</Color>
+    <Color x:Key="Color.UnselectedTab">#737373</Color>
+    <Color x:Key="Color.BackgroundTab">#f5f5f5</Color>
 
 </ResourceDictionary>

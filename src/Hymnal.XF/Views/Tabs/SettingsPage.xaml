@@ -15,11 +15,13 @@
     x:DataType="viewModels:SettingsViewModel"
     x:TypeArguments="viewModels:SettingsViewModel"
     AutomationId="SettingsPage"
-    BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
     Visual="Material">
 
     <ContentPage.IconImageSource>
-        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Cog}" />
+        <FontImageSource
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.Cog}" />
     </ContentPage.IconImageSource>
 
     <ContentPage.Resources>
@@ -27,7 +29,7 @@
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="{OnPlatform Default=16, iOS=17, Android=15}" />
                 <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-                <Setter Property="TextColor" Value="{DynamicResource PrimaryTextColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource Color.PrimaryText}" />
             </Style>
 
             <Style TargetType="Grid">
@@ -56,7 +58,9 @@
                         ColumnDefinitions="auto, auto"
                         RowDefinitions="auto, *">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding ChooseLanguageCommand}" />
+                            <TapGestureRecognizer
+                                x:DataType="{x:Null}"
+                                Command="{Binding ChooseLanguageCommand}" />
                         </Grid.GestureRecognizers>
 
                         <Image
@@ -86,7 +90,7 @@
                             Grid.Row="1"
                             Grid.Column="1"
                             FontSize="Micro"
-                            TextColor="{DynamicResource SecondaryTextColor}">
+                            TextColor="{DynamicResource Color.SecondaryText}">
                             <Label.FormattedText>
                                 <FormattedString>
                                     <Span Text="{Binding Path=HymnalLanguage.Detail, Mode=OneWay}" />
@@ -101,7 +105,10 @@
 
                 <!--  Always Screen On  -->
                 <ViewCell>
-                    <Grid ColumnDefinitions="*, auto" IsVisible="{OnPlatform Default=True, Tizen=False}">
+                    <Grid
+                        ColumnDefinitions="*, auto"
+                        IsVisible="{OnPlatform Default=True,
+                                               Tizen=False}">
                         <Label
                             Grid.Column="0"
                             AutomationProperties.IsInAccessibleTree="False"
@@ -138,7 +145,8 @@
                             Grid.Column="1"
                             Margin="15,0"
                             AutomationProperties.IsInAccessibleTree="False"
-                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
+                            Text="{Binding Source={x:Reference LetterSize},
+                                           Path=Value}" />
 
                         <Slider
                             x:Name="LetterSize"
@@ -147,10 +155,10 @@
                             Grid.ColumnSpan="2"
                             AutomationProperties.Name="{extensions:Translate FontSize}"
                             Maximum="{Binding MaximumHymnFontSize}"
-                            MaximumTrackColor="{DynamicResource PrimaryColor}"
+                            MaximumTrackColor="{DynamicResource Color.Primary}"
                             Minimum="{Binding MinimumHymnFontSize}"
-                            MinimumTrackColor="{DynamicResource AccentColor}"
-                            ThumbColor="{DynamicResource AccentColor}"
+                            MinimumTrackColor="{DynamicResource Color.Accent}"
+                            ThumbColor="{DynamicResource Color.Accent}"
                             ValueChanged="LetterSize_ValueChanged"
                             Value="{Binding HymnFontSize}" />
 
@@ -159,7 +167,8 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
                             AutomationProperties.IsInAccessibleTree="False"
-                            FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
+                            FontSize="{Binding Source={x:Reference LetterSize},
+                                               Path=Value}"
                             Text="{extensions:Translate Example}"
                             VerticalOptions="FillAndExpand" />
 
@@ -168,7 +177,9 @@
             </TableSection>
 
             <!--  Support  -->
-            <TableSection x:Name="supportSection" Title="{extensions:Translate Support}">
+            <TableSection
+                x:Name="supportSection"
+                Title="{extensions:Translate Support}">
 
                 <!--  Donations  HAY QUE AGREGAR LAS FLAGS  -->
                 <!--<ViewCell>
@@ -234,7 +245,9 @@
                         RowDefinitions="auto, auto"
                         RowSpacing="15">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding OpenGitHubCommand}" />
+                            <TapGestureRecognizer
+                                x:DataType="{x:Null}"
+                                Command="{Binding OpenGitHubCommand}" />
                         </Grid.GestureRecognizers>
 
                         <Label
@@ -265,12 +278,20 @@
                 </ViewCell>
 
                 <!--  Developer  -->
-                <ViewCell x:Name="developerCell" IsEnabled="{OnPlatform Default=True, Tizen=False}">
+                <ViewCell
+                    x:Name="developerCell"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}">
                     <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding DeveloperCommand}" />
+                            <TapGestureRecognizer
+                                x:DataType="{x:Null}"
+                                Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label FontSize="{OnPlatform Default=Default, Tizen=Large}" Text="{extensions:Translate Developing}" />
+                        <Label
+                            FontSize="{OnPlatform Default=Default,
+                                                  Tizen=Large}"
+                            Text="{extensions:Translate Developing}" />
                     </Grid>
                 </ViewCell>
 
@@ -287,27 +308,29 @@
             </TableSection>
 
             <!--  Developing  -->
-            <TableSection x:Name="developerSection" Title="{extensions:Translate Developing}">
+            <TableSection
+                x:Name="developerSection"
+                Title="{extensions:Translate Developing}">
 
                 <!--  App version  -->
                 <TextCell
                     x:Name="appVersionCell"
                     Detail="{Binding AppVersionString}"
-                    DetailColor="{DynamicResource SecondaryTextColor}"
+                    DetailColor="{DynamicResource Color.SecondaryText}"
                     IsEnabled="{OnPlatform Default=True,
                                            Tizen=False}"
                     Text="{extensions:Translate AppVersion}"
-                    TextColor="{DynamicResource PrimaryTextColor}" />
+                    TextColor="{DynamicResource Color.PrimaryText}" />
 
                 <!--  Build Version  -->
                 <TextCell
                     x:Name="appBuildCell"
                     Detail="{Binding AppBuildString}"
-                    DetailColor="{DynamicResource SecondaryTextColor}"
+                    DetailColor="{DynamicResource Color.SecondaryText}"
                     IsEnabled="{OnPlatform Default=True,
                                            Tizen=False}"
                     Text="{extensions:Translate AppBuild}"
-                    TextColor="{DynamicResource PrimaryTextColor}" />
+                    TextColor="{DynamicResource Color.PrimaryText}" />
             </TableSection>
 
         </TableRoot>

@@ -12,11 +12,13 @@
     iOS:Page.UseSafeArea="True"
     prism:ViewModelLocator.AutowireViewModel="True"
     AutomationId="IndexPage"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
     <CarouselPage.IconImageSource>
-        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.ListUl}" />
+        <FontImageSource
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.ListUl}" />
     </CarouselPage.IconImageSource>
 
     <CarouselPage.ToolbarItems>
@@ -26,7 +28,9 @@
             Clicked="AlphabeticalListToolbar_Clicked"
             Priority="1">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.SortAlphaDown}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.SortAlphaDown}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -35,7 +39,9 @@
             Clicked="NumericalListToolbar_Clicked"
             Priority="2">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.ListOl}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.ListOl}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -44,7 +50,9 @@
             Clicked="ThematicListToolbar_Clicked"
             Priority="3">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Book}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Book}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </CarouselPage.ToolbarItems>

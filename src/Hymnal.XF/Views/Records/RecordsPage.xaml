@@ -14,7 +14,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:RecordsViewModel"
     x:TypeArguments="viewModels:RecordsViewModel"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
 
@@ -29,8 +29,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -51,7 +51,8 @@
                 BackgroundColor="Transparent"
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding Hymns}"
-                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
+                SelectedItem="{Binding SelectedHymn,
+                                       Mode=TwoWay}"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -70,7 +71,7 @@
                                 AutomationProperties.HelpText="{Binding Item2.Title}"
                                 FontSize="Large"
                                 Text="{Binding Item2.Number}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Title  -->
@@ -81,7 +82,7 @@
                                 FontSize="Large"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding Item2.Title}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Preview  -->
@@ -92,7 +93,7 @@
                                 FontSize="Micro"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding Item2.PlainContent}"
-                                TextColor="{DynamicResource SecondaryTextColor}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Date  -->
@@ -103,8 +104,9 @@
                                 Margin="5,0,0,0"
                                 AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Micro"
-                                Text="{Binding Item1.SavedAt, StringFormat='{0:dd/MM}'}"
-                                TextColor="{DynamicResource SecondaryTextColor}"
+                                Text="{Binding Item1.SavedAt,
+                                               StringFormat='{0:dd/MM}'}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                         </Grid>

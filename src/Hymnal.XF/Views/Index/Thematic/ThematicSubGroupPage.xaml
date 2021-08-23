@@ -13,7 +13,7 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:ThematicSubGroupViewModel"
     x:TypeArguments="viewModels:ThematicSubGroupViewModel"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
 
@@ -28,8 +28,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -45,10 +45,13 @@
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
-            SelectedItem="{Binding SelectedAmbit, Mode=TwoWay}">
+            SelectedItem="{Binding SelectedAmbit,
+                                   Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding AmbitName}" TextColor="{DynamicResource PrimaryTextColor}" />
+                    <TextCell
+                        Text="{Binding AmbitName}"
+                        TextColor="{DynamicResource Color.PrimaryText}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

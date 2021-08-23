@@ -10,13 +10,14 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{Binding Hymn.Number, StringFormat='# {0}'}"
+    Title="{Binding Hymn.Number,
+                    StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="True"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
     AutomationId="HymnPage"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
     <ContentPage.Resources>
@@ -36,17 +37,23 @@
         <ToolbarItem
             x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"
-            AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
+            AutomationProperties.HelpText="{Binding IsPlaying,
+                                                    Converter={StaticResource TranslateConverter},
+                                                    ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
-            IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
+            IconImageSource="{Binding IsPlaying,
+                                      StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.HelpText="{Binding IsFavorite, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
+            AutomationProperties.HelpText="{Binding IsFavorite,
+                                                    Converter={StaticResource TranslateConverter},
+                                                    ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
-            IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
+            IconImageSource="{Binding IsFavorite,
+                                      StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
             x:Name="SheetToolbar"
@@ -55,7 +62,9 @@
             Command="{Binding OpenSheetCommand}"
             Priority="3">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}" Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -64,7 +73,9 @@
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -81,8 +92,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource BackgroundColorFilterHymnLetters}"
-            Opacity="{DynamicResource BackgroundWhiteFilterHymnLetters}"
+            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -106,7 +117,7 @@
                     IsVisible="{OnPlatform Default=True,
                                            Tizen=False}"
                     Text="{Binding Hymn.Title}"
-                    TextColor="{DynamicResource PrimaryTextColor}" />
+                    TextColor="{DynamicResource Color.PrimaryText}" />
 
                 <Label
                     x:Name="hymnContentLabel"
@@ -118,7 +129,7 @@
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
                     Text="{Binding Hymn.Content}"
-                    TextColor="{DynamicResource PrimaryTextColor}" />
+                    TextColor="{DynamicResource Color.PrimaryText}" />
             </StackLayout>
         </ScrollView>
 

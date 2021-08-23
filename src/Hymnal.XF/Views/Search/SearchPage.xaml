@@ -16,7 +16,7 @@
     x:DataType="viewModels:SearchViewModel"
     x:TypeArguments="viewModels:SearchViewModel"
     AutomationId="SearchPage"
-    BackgroundColor="{DynamicResource PrimaryBackgroudColor}"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material"
     mc:Ignorable="d">
 
@@ -26,13 +26,13 @@
             iOS:SearchBar.SearchBarStyle="Minimal"
             AutomationId="HymnSearchBar"
             AutomationProperties.IsInAccessibleTree="False"
-            CancelButtonColor="{DynamicResource PrimaryColor}"
+            CancelButtonColor="{DynamicResource Color.Primary}"
             IsVisible="{OnPlatform Default=True,
                                    iOS=False}"
             Placeholder="{extensions:Translate Searcher}"
-            PlaceholderColor="{DynamicResource PrimaryLightColor}"
+            PlaceholderColor="{DynamicResource Color.PrimaryLight}"
             Text="{Binding TextSearchBar}"
-            TextColor="{DynamicResource NavBarTextColor}" />
+            TextColor="{DynamicResource Color.NavBarText}" />
     </NavigationPage.TitleView>
 
     <RelativeLayout>
@@ -47,8 +47,8 @@
             Source="{DynamicResource BackgroundImageFile}" />
 
         <StackLayout
-            BackgroundColor="{DynamicResource SecondaryBackgroudColor}"
-            Opacity="{DynamicResource BackgroundWhiteFilter}"
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -90,7 +90,7 @@
                                 AutomationProperties.HelpText="{Binding Title}"
                                 FontSize="Large"
                                 Text="{Binding Number}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Title  -->
@@ -101,7 +101,7 @@
                                 FontSize="Large"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding Title}"
-                                TextColor="{DynamicResource PrimaryTextColor}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                             <!--  Preview  -->
@@ -112,7 +112,7 @@
                                 FontSize="Micro"
                                 LineBreakMode="TailTruncation"
                                 Text="{Binding PlainContent}"
-                                TextColor="{DynamicResource SecondaryTextColor}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
                         </Grid>
