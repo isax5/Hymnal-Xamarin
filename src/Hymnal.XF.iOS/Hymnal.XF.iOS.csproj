@@ -2112,6 +2112,7 @@
     <Content Include="Resources\PianoSheet_NewHymnal_ru_081_1.png" />
     -->
   </ItemGroup>
+  <!-- PIANO SHEET -->
   <ItemGroup>
     <LinkDescription Include="LinkerSettings.xml" />
   </ItemGroup>
@@ -2120,12 +2121,7 @@
       <Project>{9731f4de-0968-4217-8934-e6b8594d0aa6}</Project>
       <Name>Hymnal.XF</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Helpers\Helpers\Helpers.csproj">
-      <Project>{DCB68EE1-1F43-42AB-9FD0-6BFE3BF228CE}</Project>
-      <Name>Helpers</Name>
-    </ProjectReference>
   </ItemGroup>
-  <!-- PIANO SHEET -->
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -10,7 +10,7 @@ namespace Hymnal.AzureFunctions.Client
 #elif RELEASE
     [Headers("x-functions-key: yad6c0vLVcvxLfa/47aWkoAvfwOAcz1NJUF2AgEzQPCJiYLp1jxNag==")]
 #endif
-    public interface IMusicAPI
+    public interface IMusicApi
     {
         [Post("/v1/music/settings")]
         IObservable<IEnumerable<HymnSettingsResponse>> ObserveSettings();

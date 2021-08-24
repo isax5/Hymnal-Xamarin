@@ -21,7 +21,7 @@ namespace Hymnal.AzureFunctions.Client
         }
 
         private readonly HttpClient httpClient;
-        private readonly IMusicAPI musicAPI;
+        private readonly IMusicApi musicApi;
 
         private readonly ObservableValues<HymnSettingsResponse> musicSettingsObservable = new ObservableValues<HymnSettingsResponse>();
 
@@ -31,7 +31,7 @@ namespace Hymnal.AzureFunctions.Client
             {
                 BaseAddress = new Uri(@"https://hymnal-functions.azurewebsites.net/api")
             };
-            musicAPI = RestService.For<IMusicAPI>(httpClient);
+            musicApi = RestService.For<IMusicApi>(httpClient);
         }
 
         private bool loadingSettings = false;
@@ -40,7 +40,7 @@ namespace Hymnal.AzureFunctions.Client
             if ((!loadingSettings && musicSettingsObservable.Current == null) || reload)
             {
                 loadingSettings = true;
-                musicAPI.ObserveSettings().Subscribe(x =>
+                musicApi.ObserveSettings().Subscribe(x =>
                 {
                     musicSettingsObservable.NextValues(x);
                     loadingSettings = false;

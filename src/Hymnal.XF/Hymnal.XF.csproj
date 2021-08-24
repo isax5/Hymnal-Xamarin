@@ -76,7 +76,4 @@
       <LastGenOutput>LanguageResources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <LinkDescription Include="LinkerSettings.xml" />
-  </ItemGroup>
 </Project>
