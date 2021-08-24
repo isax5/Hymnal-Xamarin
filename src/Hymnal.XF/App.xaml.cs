@@ -15,7 +15,7 @@ namespace Hymnal.XF
     public partial class App : PrismApplication
     {
         public static new App Current;
-        public Setup Setup = new();
+        private readonly Setup setup = new();
         public ThemeHelper ThemeHelper;
 
         public App(IPlatformInitializer initializer)
@@ -26,9 +26,9 @@ namespace Hymnal.XF
 
         protected override async void OnInitialized()
         {
-            Setup.InitializeFirstChance(this);
+            setup.InitializeFirstChance(this);
             InitializeComponent();
-            Setup.InitializeLastChance(this);
+            setup.InitializeLastChance(this);
 
             //await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
 
@@ -41,7 +41,7 @@ namespace Hymnal.XF
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            Setup.RegisterDependencies(containerRegistry);
+            setup.RegisterDependencies(containerRegistry);
 
             // Register Pages
             containerRegistry.RegisterForNavigation<CustomNavigationPage>(NavRoutes.NavPage);
