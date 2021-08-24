@@ -1,8 +1,12 @@
 using System;
+using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Windows.Input;
 using Foundation;
+using MvvmHelpers;
+using Prism.Commands;
+using Prism.Mvvm;
 using UIKit;
 
 namespace Hymnal.XF.iOS.Linker
@@ -101,7 +105,7 @@ namespace Hymnal.XF.iOS.Linker
 
         #endregion
 
-        #region Mvx
+        #region Prism
 
         public void Include(ICommand command)
         {
@@ -122,6 +126,33 @@ namespace Hymnal.XF.iOS.Linker
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.ForegroundColor = ConsoleColor.DarkGray;
+        }
+
+        public void Include(DelegateCommand delegateCommand)
+        {
+            delegateCommand.CanExecuteChanged += (s, e) =>
+            {
+                if (delegateCommand.CanExecute()) delegateCommand.Execute();
+            };
+        }
+
+        public void Include(BindableBase bindableBase)
+        {
+            bindableBase.PropertyChanged += (s, e) =>
+            {
+                _ = e.PropertyName;
+            };
+        }
+
+        #endregion
+
+        #region  MVVMHelpers
+
+        public void Include(ObservableRangeCollection<object> rangeCollection)
+        {
+            rangeCollection.Clear();
+            rangeCollection.ReplaceRange(new List<object>());
+            rangeCollection.Remove(new object());
         }
 
         #endregion

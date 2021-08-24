@@ -1,12 +1,10 @@
 using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using CoreFoundation;
 using Foundation;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Views;
 using ObjCRuntime;
 using UIKit;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 // ReSharper disable ParameterHidesMember
@@ -14,6 +12,7 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
 namespace Hymnal.XF.iOS.Renderers
 {
+    [Preserve(AllMembers = true)]
     public partial class ContentPageRenderer : PageRenderer
     {
         public override void ViewWillAppear(bool animated)

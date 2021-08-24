@@ -5,6 +5,7 @@ using UIKit;
 
 namespace Hymnal.XF.iOS
 {
+    [Preserve(AllMembers = true)]
     [Register(nameof(AppDelegate))]
     public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
@@ -48,6 +49,7 @@ namespace Hymnal.XF.iOS
         //}
     }
 
+    [Preserve(AllMembers = true)]
     public class IOSInitializer : IPlatformInitializer
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
