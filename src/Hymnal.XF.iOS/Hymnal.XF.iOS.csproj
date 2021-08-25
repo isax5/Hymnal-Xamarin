@@ -30,6 +30,7 @@
     <MtouchDebug>true</MtouchDebug>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugSymbols>false</DebugSymbols>
@@ -40,10 +41,11 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchUseLlvm>false</MtouchUseLlvm>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <OptimizePNGs>false</OptimizePNGs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
@@ -64,6 +66,7 @@
     <MtouchInterpreter>-all</MtouchInterpreter>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
@@ -71,13 +74,13 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchUseLlvm>false</MtouchUseLlvm>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <BuildIpa>true</BuildIpa>
     <OptimizePNGs>false</OptimizePNGs>
-    <MtouchUseLlvm>true</MtouchUseLlvm>
     <!--<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>-->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
