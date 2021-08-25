@@ -37,7 +37,7 @@ namespace Hymnal.XF
             #region Hymnals Language
             if (preferencesService.ConfiguratedHymnalLanguage == null)
             {
-                List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterISOLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
+                List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterIsoLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
                 preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
             #endregion

@@ -12,7 +12,6 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
 namespace Hymnal.XF.iOS.Renderers
 {
-    [Preserve(AllMembers = true)]
     public partial class ContentPageRenderer : PageRenderer
     {
         public override void ViewWillAppear(bool animated)

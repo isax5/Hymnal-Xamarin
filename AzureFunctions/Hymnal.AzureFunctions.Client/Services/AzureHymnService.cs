@@ -1,29 +1,29 @@
+#define NEWTONSOFT
+//#define SYSTEMJSON
+
 using System;
 using System.Net.Http;
 using Helpers;
 using Hymnal.AzureFunctions.Models;
 using Refit;
+#if NEWTONSOFT
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+#elif SYSTEMJSON
+using System.Text.Json;
+#endif
 
 namespace Hymnal.AzureFunctions.Client
 {
     public class AzureHymnService : IAzureHymnService
     {
         private static IAzureHymnService current;
-        public static IAzureHymnService Current
-        {
-            get
-            {
-                if (current == null)
-                    current = new AzureHymnService();
-
-                return current;
-            }
-        }
+        public static IAzureHymnService Current => current ??= new AzureHymnService();
 
         private readonly HttpClient httpClient;
         private readonly IMusicApi musicApi;
 
-        private readonly ObservableValues<HymnSettingsResponse> musicSettingsObservable = new ObservableValues<HymnSettingsResponse>();
+        private readonly ObservableValues<HymnSettingsResponse> musicSettingsObservable = new();
 
         private AzureHymnService()
         {
@@ -31,7 +31,23 @@ namespace Hymnal.AzureFunctions.Client
             {
                 BaseAddress = new Uri(@"https://hymnal-functions.azurewebsites.net/api")
             };
-            musicApi = RestService.For<IMusicApi>(httpClient);
+            var settings = new RefitSettings
+            {
+#if NEWTONSOFT
+                ContentSerializer = new NewtonsoftJsonContentSerializer(new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                }),
+#elif SYSTEMJSON
+                ContentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions()
+                {
+                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+                    WriteIndented = true,
+                }),
+#endif
+            };
+
+            musicApi = RestService.For<IMusicApi>(httpClient, settings);
         }
 
         private bool loadingSettings = false;

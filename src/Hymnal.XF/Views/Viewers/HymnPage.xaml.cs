@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Hymnal.XF.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -24,12 +25,21 @@ namespace Hymnal.XF.Views
             }
         }
 
-        protected override void OnAppearing()
+        protected override void OnBindingContextChanged()
         {
-            base.OnAppearing();
+            base.OnBindingContextChanged();
+            ViewModel.PropertyChanged += ViewModelOnPropertyChanged;
+        }
 
-            if (!ViewModel.Language.SupportSheets)
-                ToolbarItems.Remove(SheetToolbar);
+        private void ViewModelOnPropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            if (e.PropertyName.Equals(nameof(ViewModel.Language)) && ViewModel.Language is not null)
+            {
+                ViewModel.PropertyChanged -= ViewModelOnPropertyChanged;
+
+                if (!ViewModel.Language.SupportSheets)
+                    ToolbarItems.Remove(SheetToolbar);
+            }
         }
     }
 }

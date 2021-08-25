@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Foundation;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Views;
 using UIKit;
@@ -10,7 +9,6 @@ using Xamarin.Forms.Platform.iOS;
 [assembly: ExportRenderer(typeof(HymnPage), typeof(ContentPageNavbarButtonRenderer))]
 namespace Hymnal.XF.iOS.Renderers
 {
-    [Preserve(AllMembers = true)]
     /// <summary>
     /// Custom renderer for ContentPage that allows for action buttons to be on the left
     /// or the right hand side (ex: a modal with cancel and done buttons)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
@@ -166,7 +167,7 @@ namespace Hymnal.XF.ViewModels
                 { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
                 { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
                 { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() },
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) },
                 { "Font Size Hymnal", preferencesService.HymnalsFontSize.ToString() }
             });
         }
@@ -202,7 +203,6 @@ namespace Hymnal.XF.ViewModels
 
         private void FavoriteExecute()
         {
-
             IQueryable<FavoriteHymn> favorites = storageService.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             if (IsFavorite || favorites.Count() > 0)
@@ -214,7 +214,7 @@ namespace Hymnal.XF.ViewModels
                     { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
                     { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
                     { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
                 });
             }
             else
@@ -226,7 +226,7 @@ namespace Hymnal.XF.ViewModels
                     { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
                     { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
                     { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
                 });
             }
 
@@ -244,7 +244,7 @@ namespace Hymnal.XF.ViewModels
                 { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
                 { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
                 { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
             });
         }
 
@@ -286,12 +286,12 @@ namespace Hymnal.XF.ViewModels
 
                         if (result.Equals(instrumentalTitle))
                         {
-                            songUrl = hymnSettings.GetInstrumentURL(Hymn.Number);
+                            songUrl = hymnSettings.GetInstrumentUrl(Hymn.Number);
                             isPlayingInstrumentalMusic = true;
                         }
                         else if (result.Equals(sungTitle))
                         {
-                            songUrl = hymnSettings.GetSungURL(hymn.Number);
+                            songUrl = hymnSettings.GetSungUrl(hymn.Number);
                             isPlayingInstrumentalMusic = false;
                         }
                         // Tap on "Close"
@@ -303,8 +303,8 @@ namespace Hymnal.XF.ViewModels
 
                     if (string.IsNullOrWhiteSpace(songUrl))
                     {
-                        isPlayingInstrumentalMusic = language.SupportInstrumentalMusic;
-                        songUrl = language.SupportInstrumentalMusic ? hymnSettings.GetInstrumentURL(Hymn.Number) : hymnSettings.GetSungURL(Hymn.Number);
+                        isPlayingInstrumentalMusic = hymnSettings.SupportsInstrumentalMusic();
+                        songUrl = hymnSettings.SupportsInstrumentalMusic() ? hymnSettings.GetInstrumentUrl(Hymn.Number) : hymnSettings.GetSungUrl(Hymn.Number);
                     }
 
                     // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
@@ -325,7 +325,7 @@ namespace Hymnal.XF.ViewModels
                         { TrackingConstants.TrackEv.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
                         TrackingConstants.TrackEv.HymnReferenceScheme.InstrumentalMusic : TrackingConstants.TrackEv.HymnReferenceScheme.SungMusic },
                         { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                        { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString() }
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
                     });
                 }),
                 ex => ex.Report());

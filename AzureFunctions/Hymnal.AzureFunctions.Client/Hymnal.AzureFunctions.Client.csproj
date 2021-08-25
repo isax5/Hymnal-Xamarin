@@ -6,7 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Refit" Version="6.0.38" />
+    <PackageReference Include="Refit" Version="6.0.94" />
+    <PackageReference Include="Refit.Newtonsoft.Json" Version="6.0.94" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
   </ItemGroup>
 

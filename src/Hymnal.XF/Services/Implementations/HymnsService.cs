@@ -1,12 +1,10 @@
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
 using Hymnal.XF.Models.Realm;
-using Microsoft.AppCenter.Crashes;
 using Newtonsoft.Json;
 
 namespace Hymnal.XF.Services
@@ -58,15 +56,12 @@ namespace Hymnal.XF.Services
                 }
                 catch (Exception ex)
                 {
-                    ex.Report();
-                    //var properties = new Dictionary<string, string>()
-                    //{
-                    //    { "File", nameof(HymnsService) },
-                    //    { "Hymnal Version", language.Id }
-                    //};
-
-                    //Debug.WriteLine("Exception reading hymnbook", ex, properties);
-                    //Crashes.TrackError(ex, properties);
+                    var properties = new Dictionary<string, string>()
+                    {
+                        { "File", nameof(HymnsService) },
+                        { "Hymnal Version", language.Id }
+                    };
+                    ex.Report(properties);
 
                     return new List<Hymn>();
                 }

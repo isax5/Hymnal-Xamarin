@@ -11,7 +11,7 @@ namespace Hymnal.XF.Models
         /// Identifier for comparative Equals
         /// </summary>
         public string Id { get; set; }
-        public string TwoLetterISOLanguageName { get; set; }
+        public string TwoLetterIsoLanguageName { get; set; }
         public string Name { get; set; }
         public string Detail { get; set; }
         public int Year { get; set; }
@@ -19,12 +19,6 @@ namespace Hymnal.XF.Models
 
         public string ThematicHymnsFileName { get; set; }
         public bool SupportThematicList => !string.IsNullOrWhiteSpace(ThematicHymnsFileName);
-
-        public string SungMusic { get; set; }
-        public string InstrumentalMusic { get; set; }
-        public bool SupportInstrumentalMusic => !string.IsNullOrWhiteSpace(InstrumentalMusic);
-        public bool SupportSungMusic => !string.IsNullOrWhiteSpace(SungMusic);
-        public bool SupportMusic => SupportInstrumentalMusic || SupportSungMusic;
 
         public string HymnsSheetsFileName { get; set; }
         public bool SupportSheets => !string.IsNullOrWhiteSpace(HymnsSheetsFileName);
