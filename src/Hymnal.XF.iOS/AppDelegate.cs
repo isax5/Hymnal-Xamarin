@@ -20,6 +20,7 @@ namespace Hymnal.XF.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        // TODO: Startup actions (shortcuts) are not working yet
         //public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
         //{
         //    //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);

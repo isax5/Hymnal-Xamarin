@@ -57,13 +57,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
-    <MtouchLink>None</MtouchLink>
     <MtouchInterpreter>-all</MtouchInterpreter>
+    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugSymbols>false</DebugSymbols>
@@ -74,14 +74,15 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
     <MtouchUseLlvm>false</MtouchUseLlvm>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <BuildIpa>true</BuildIpa>
     <OptimizePNGs>false</OptimizePNGs>
-    <!--<AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>-->
+    <!--<BuildIpa>true</BuildIpa>-->
+    <!--<AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>-->
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
@@ -94,10 +95,13 @@
     <Compile Include="Renderers\ContentPageNavbarButtonRenderer.cs" />
     <Compile Include="Renderers\ContentPageRenderer.cs" />
     <Compile Include="Renderers\CustomCarouselPageRenderer.cs" />
+    <LinkDescription Include="LinkerSettings.xml" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>
+    <None Include="FodyWeavers.xml" />
+    <None Include="FodyWeavers.xsd" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <BundleResource Include="Resources\Base.lproj\InfoPlist.strings" />
     <BundleResource Include="Resources\en.lproj\InfoPlist.strings" />
@@ -2116,9 +2120,6 @@
     -->
   </ItemGroup>
   <!-- PIANO SHEET -->
-  <ItemGroup>
-    <LinkDescription Include="LinkerSettings.xml" />
-  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Hymnal.XF\Hymnal.XF.csproj">
       <Project>{9731f4de-0968-4217-8934-e6b8594d0aa6}</Project>
