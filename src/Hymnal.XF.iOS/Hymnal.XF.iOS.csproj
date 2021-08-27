@@ -73,14 +73,13 @@
     <WarningLevel>4</WarningLevel>
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
-    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
-    <MtouchInterpreter>-all</MtouchInterpreter>
-    <MtouchUseLlvm>false</MtouchUseLlvm>
+    <MtouchUseLlvm>true</MtouchUseLlvm>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
-    <OptimizePNGs>false</OptimizePNGs>
+    <OptimizePNGs>true</OptimizePNGs>
+    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
     <!--
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <BuildIpa>true</BuildIpa>
@@ -277,7 +276,6 @@
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == 'Release' ">
     <Content Include="Resources\PianoSheet_NewHymnal_en_001.png" />
-    <!--
     <Content Include="Resources\PianoSheet_NewHymnal_en_002.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_en_003.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_en_004.png" />
@@ -2120,7 +2118,6 @@
     <Content Include="Resources\PianoSheet_NewHymnal_ru_312.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_ru_306.png" />
     <Content Include="Resources\PianoSheet_NewHymnal_ru_081_1.png" />
-    -->
   </ItemGroup>
   <!-- PIANO SHEET -->
   <ItemGroup>

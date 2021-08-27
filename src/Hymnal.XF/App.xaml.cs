@@ -1,4 +1,5 @@
 using Hymnal.XF.Constants;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.ViewModels;
 using Hymnal.XF.Views;
@@ -7,6 +8,7 @@ using Prism;
 using Prism.DryIoc;
 using Prism.Ioc;
 using Prism.Navigation;
+using Xamarin.Essentials;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF
@@ -30,13 +32,11 @@ namespace Hymnal.XF
             InitializeComponent();
             setup.InitializeLastChance(this);
 
-            //await NavigationService.NavigateAsync($"{nameof(SimplePage)}");
-
             await NavigationService.NavigateAsync($"{NavRoutes.RootPage}" +
-                $"?{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.NumberPage}" +
-                $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.IndexPage}" +
-                $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +
-                $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.SettingsPage}");
+                                                  $"?{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.NumberPage}" +
+                                                  $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.IndexPage}" +
+                                                  $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +
+                                                  $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.SettingsPage}");
         }
 
         protected override void RegisterTypes(IContainerRegistry containerRegistry)
@@ -62,6 +62,14 @@ namespace Hymnal.XF
             containerRegistry.RegisterForNavigation<ThematicIndexPage, ThematicIndexViewModel>();
             containerRegistry.RegisterForNavigation<ThematicHymnsListPage, ThematicHymnsListViewModel>();
             containerRegistry.RegisterForNavigation<ThematicSubGroupPage, ThematicSubGroupViewModel>();
+        }
+
+        public void PerformPageRequest(string navRoute, bool modal = false, bool animated = true)
+        {
+            MainThread.InvokeOnMainThreadAsync(async delegate
+            {
+                await NavigationService.NavigateAsync(navRoute, modal, animated);
+            });
         }
     }
 }

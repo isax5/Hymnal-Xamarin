@@ -1,4 +1,5 @@
 using Foundation;
+using Hymnal.XF.Constants;
 using Prism;
 using Prism.Ioc;
 using UIKit;
@@ -15,42 +16,35 @@ namespace Hymnal.XF.iOS
 #endif
             Xamarin.Forms.Forms.Init();
             Xamarin.Forms.FormsMaterial.Init();
-            LoadApplication(new App(new IOSInitializer()));
+            LoadApplication(new App(new IosInitializer()));
 
             return base.FinishedLaunching(app, options);
         }
 
-        // TODO: Startup actions (shortcuts) are not working yet
-        //public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
-        //{
-        //    //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
+    // TODO: Startup actions (shortcuts) are not working yet
+    public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
+    {
+        //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
 
-        //    if (shortcutItem == null || Core.App.Current == null)
-        //    {
-        //        Debug.WriteLine("No shortcut or app not deployed");
-        //        return;
-        //    }
+        if (shortcutItem == null || App.Current == null) return;
 
-        //    Debug.WriteLine($"Shortcut ${shortcutItem.Type}");
+        switch (shortcutItem.Type)
+        {
+            case "SearchAction":
+                App.Current?.PerformPageRequest(NavRoutes.SearchPageAsFormSheetModal, true);
+                break;
 
-        //    switch (shortcutItem.Type)
-        //    {
-        //        case "SearchAction":
-        //            Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Search);
-        //            break;
+            case "HistoryAction":
+                App.Current?.PerformPageRequest(NavRoutes.RecordsPageAsFormSheetModal, true);
+                break;
 
-        //        case "HistoryAction":
-        //            Core.App.Current?.PerformPageRequest(Core.Models.PageRequest.Records);
-        //            break;
-
-        //        default:
-        //            break;
-        //    }
-        //}
+            default:
+                break;
+        }
+    }
     }
 
-    [Preserve(AllMembers = true)]
-    public class IOSInitializer : IPlatformInitializer
+    public class IosInitializer : IPlatformInitializer
     {
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {

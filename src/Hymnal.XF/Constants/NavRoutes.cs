@@ -20,9 +20,9 @@ namespace Hymnal.XF.Constants
         public const string ThematicHymnsListPage = "ThematicHymnsListPage";
         public const string ThematicSubGroupPage = "ThematicSubGroupPage";
 
-        public static string HymnViewerAsModal = $"{NavPage}/{HymnPage}";
-        public static string HymnViewerAsFormSheetModal = $"{FormSheetNavPage}/{HymnPage}";
-        public static string RecordsPageAsFormSheetModal = $"{FormSheetNavPage}/{RecordsPage}";
-        public static string SearchPageAsFormSheetModal = $"{FormSheetNavPage}/{SearchPage}";
+        public static readonly string HymnViewerAsModal = $"{NavPage}/{HymnPage}";
+        public static readonly string HymnViewerAsFormSheetModal = $"{FormSheetNavPage}/{HymnPage}";
+        public static readonly string RecordsPageAsFormSheetModal = $"{FormSheetNavPage}/{RecordsPage}";
+        public static readonly string SearchPageAsFormSheetModal = $"{FormSheetNavPage}/{SearchPage}";
     }
 }
