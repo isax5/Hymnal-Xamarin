@@ -8,7 +8,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class MusicSheetViewModel : BaseViewModelParameter<HymnIdParameter>
+    public sealed class MusicSheetViewModel : BaseViewModelParameter<HymnIdParameter>
     {
         private string imageSource;
         public string ImageSource

@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Models.Parameters
 {
-    public class GenericNavigationResult<T> : NavigationResult
+    public abstract class GenericNavigationResult<T> : NavigationResult
     {
         public T Value { get; private set; }
 

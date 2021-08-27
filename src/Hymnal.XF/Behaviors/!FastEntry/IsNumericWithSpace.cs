@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Behaviors.FastEntry
 {
-    public class IsNumericWithSpace
+    public sealed class IsNumericWithSpace
     {
         public string ProcessIsNumericWithSpace(string entryText, string oldString, string newString)
         {

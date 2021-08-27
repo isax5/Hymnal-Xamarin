@@ -2,7 +2,7 @@ using System.Threading.Tasks;
 
 namespace Hymnal.XF.Services
 {
-    public class FilesService : IFilesService
+    public sealed class FilesService : IFilesService
     {
         private readonly IAssetsService assetsService;
 

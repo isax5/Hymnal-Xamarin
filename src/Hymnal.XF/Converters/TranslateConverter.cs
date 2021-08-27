@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace Hymnal.XF.Converters
 {
-    public class TranslateConverter : IValueConverter
+    public sealed class TranslateConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {

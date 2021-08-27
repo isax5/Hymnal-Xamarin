@@ -26,7 +26,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class HymnViewModel : BaseViewModelParameter<HymnIdParameter>
+    public sealed class HymnViewModel : BaseViewModelParameter<HymnIdParameter>
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;

@@ -4,7 +4,7 @@ using Xamarin.Essentials;
 
 namespace Hymnal.XF.Services
 {
-    public class DataStorageService : IDataStorageService
+    public sealed class DataStorageService : IDataStorageService
     {
         private string identifier<T>() => nameof(T) + typeof(T);
 

@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Models.Parameters
 {
-    public class NavigationResult : INavigationObject
+    public abstract class NavigationResult : INavigationObject
     {
         public static string Key => typeof(NavigationResult).Name;
 

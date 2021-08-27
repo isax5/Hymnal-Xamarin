@@ -7,7 +7,7 @@ namespace Hymnal.XF.Views
     /// Continues in <see cref="ThematicSubGroupPage"/>
     /// </summary>
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ThematicIndexPage : BaseContentPage<ThematicIndexViewModel>
+    public sealed partial class ThematicIndexPage : BaseContentPage<ThematicIndexViewModel>
     {
         public ThematicIndexPage()
         {

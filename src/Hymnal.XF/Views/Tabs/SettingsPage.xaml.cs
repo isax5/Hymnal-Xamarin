@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SettingsPage : BaseContentPage<SettingsViewModel>, ITabbedPage
+    public sealed partial class SettingsPage : BaseContentPage<SettingsViewModel>, ITabbedPage
     {
         public string TabbedPageName => Languages.Settings;
 

@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage, IModalPage
+    public sealed partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage, IModalPage
     {
         public SearchPage()
         {

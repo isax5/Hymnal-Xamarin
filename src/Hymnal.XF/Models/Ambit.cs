@@ -5,7 +5,7 @@ namespace Hymnal.XF.Models
     /// <summary>
     /// <see cref="Ambit"/> for <see cref="Thematic"/> for <see cref="Hymn"/>
     /// </summary>
-    public class Ambit
+    public sealed class Ambit
     {
         [JsonProperty("ambit")]
         public string AmbitName { get; set; }

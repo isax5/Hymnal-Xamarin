@@ -289,7 +289,7 @@ namespace Hymnal.XF.Extensions
     /// </summary>
     /// <typeparam name="S"></typeparam>
     /// <typeparam name="T"></typeparam>
-    public class ObservableGroupCollection<S, T> : ObservableRangeCollection<T>
+    public sealed class ObservableGroupCollection<S, T> : ObservableRangeCollection<T>
     {
         public S Key { get; private set; }
 

@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Behaviors.FastEntry
 {
-    public class IsNumeric
+    public sealed class IsNumeric
     {
         public string ProcessIsNumeric(string entryText, string oldString, string newString)
         {

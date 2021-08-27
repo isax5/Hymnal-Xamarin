@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace Hymnal.XF.Helpers
 {
-    public class ThemeHelper
+    public sealed class ThemeHelper
     {
         private readonly App app;
 

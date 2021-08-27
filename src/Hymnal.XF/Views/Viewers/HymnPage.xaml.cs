@@ -6,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HymnPage : BaseContentPage<HymnViewModel>
+    public sealed partial class HymnPage : BaseContentPage<HymnViewModel>
     {
         public HymnPage()
         {

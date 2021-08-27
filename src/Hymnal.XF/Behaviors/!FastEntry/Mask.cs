@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Behaviors.FastEntry
 {
-    public class Mask
+    public sealed class Mask
     {
         public string ProcessMask(string entryText, string oldString, string newString, string mask)
         {

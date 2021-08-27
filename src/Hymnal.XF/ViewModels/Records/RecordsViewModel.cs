@@ -14,7 +14,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class RecordsViewModel : BaseViewModel
+    public sealed class RecordsViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
         private readonly IStorageManagerService storageManager;

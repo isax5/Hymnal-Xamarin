@@ -6,7 +6,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class DevelopersViewModel : BaseViewModel
+    public sealed class DevelopersViewModel : BaseViewModel
     {
         private readonly IPreferencesService preferencesService;
 

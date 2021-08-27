@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 
 namespace Hymnal.XF.Services
 {
-    public class HymnsService : IHymnsService
+    public sealed class HymnsService : IHymnsService
     {
         private readonly IFilesService filesService;
 

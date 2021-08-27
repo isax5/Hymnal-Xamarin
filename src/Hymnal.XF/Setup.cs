@@ -18,7 +18,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF
 {
-    public class Setup
+    public sealed class Setup
     {
         public void InitializeFirstChance(App app)
         {
@@ -35,7 +35,7 @@ namespace Hymnal.XF
             var preferencesService = app.Container.Resolve(typeof(IPreferencesService)) as IPreferencesService;
 
             #region Hymnals Language
-            if (preferencesService.ConfiguratedHymnalLanguage == null)
+            if (preferencesService is { ConfiguratedHymnalLanguage: null })
             {
                 List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterIsoLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
                 preferencesService.ConfiguratedHymnalLanguage = lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();

@@ -7,7 +7,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.Services
 {
-    public class PreferencesService : IPreferencesService
+    public sealed class PreferencesService : IPreferencesService
     {
         private readonly IPreferences preferences;
         public event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged;

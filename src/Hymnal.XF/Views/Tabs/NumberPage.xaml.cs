@@ -7,7 +7,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NumberPage : BaseContentPage<NumberViewModel>, ITabbedPage
+    public sealed partial class NumberPage : BaseContentPage<NumberViewModel>, ITabbedPage
     {
         public string TabbedPageName => Languages.Number;
 

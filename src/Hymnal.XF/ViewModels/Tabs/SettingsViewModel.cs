@@ -15,7 +15,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class SettingsViewModel : BaseViewModel
+    public sealed class SettingsViewModel : BaseViewModel
     {
         private readonly IPreferencesService preferencesService;
         private readonly IPageDialogService dialogService;

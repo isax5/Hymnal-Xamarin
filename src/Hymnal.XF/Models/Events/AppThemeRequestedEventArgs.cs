@@ -2,7 +2,7 @@ using Xamarin.Forms;
 
 namespace Hymnal.XF.Models.Events
 {
-    public class AppThemeRequestedEventArgs
+    public sealed class AppThemeRequestedEventArgs
     {
         public OSAppTheme RequestedTheme { get; }
         public ResourceDictionary ThemeResources { get; }

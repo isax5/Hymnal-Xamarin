@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Behaviors.FastEntry
 {
-    public class IsAmount
+    public sealed class IsAmount
     {
         public string ProcessIsAmount(string entryText, string oldString, string newString)
         {

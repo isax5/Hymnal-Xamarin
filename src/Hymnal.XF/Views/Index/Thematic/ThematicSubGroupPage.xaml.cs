@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ThematicSubGroupPage : BaseContentPage<ThematicSubGroupViewModel>
+    public sealed partial class ThematicSubGroupPage : BaseContentPage<ThematicSubGroupViewModel>
     {
         public ThematicSubGroupPage()
         {

@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class IndexPage : CarouselPage, ITabbedPage, IInitialize, IInitializeAsync
+    public sealed partial class IndexPage : CarouselPage, ITabbedPage, IInitialize, IInitializeAsync
     {
         public string TabbedPageName => Languages.Index;
 

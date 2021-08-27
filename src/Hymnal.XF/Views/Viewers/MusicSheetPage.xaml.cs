@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MusicSheetPage : BaseContentPage<MusicSheetViewModel>
+    public sealed partial class MusicSheetPage : BaseContentPage<MusicSheetViewModel>
     {
         public MusicSheetPage()
         {

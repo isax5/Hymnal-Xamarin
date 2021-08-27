@@ -14,7 +14,7 @@ namespace Hymnal.XF.ViewModels
     /// <summary>
     /// Navigable from <see cref="ThematicIndexViewModel"/>
     /// </summary>
-    public class ThematicSubGroupViewModel : BaseViewModelParameter<GenericNavigationParameter<Thematic>>
+    public sealed class ThematicSubGroupViewModel : BaseViewModelParameter<GenericNavigationParameter<Thematic>>
     {
         private readonly IPreferencesService preferencesService;
 

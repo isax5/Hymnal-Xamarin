@@ -14,7 +14,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class App : PrismApplication
+    public sealed partial class App : PrismApplication
     {
         public static new App Current;
         private readonly Setup setup = new();

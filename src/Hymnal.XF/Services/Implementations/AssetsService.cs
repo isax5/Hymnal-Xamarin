@@ -5,7 +5,7 @@ using System.Reflection;
 
 namespace Hymnal.XF.Services
 {
-    public class AssetsService : IAssetsService
+    public sealed class AssetsService : IAssetsService
     {
         public Stream GetResourceStream(Assembly assembly, string resourceFileName)
         {

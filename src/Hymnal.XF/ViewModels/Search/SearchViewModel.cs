@@ -15,7 +15,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class SearchViewModel : BaseViewModel
+    public sealed class SearchViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;

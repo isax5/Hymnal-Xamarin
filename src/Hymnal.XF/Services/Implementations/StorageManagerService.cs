@@ -7,7 +7,7 @@ namespace Hymnal.XF.Services
     /// <summary>
     /// DB implementation using Realm
     /// </summary>
-    public class StorageManagerService : IStorageManagerService
+    public sealed class StorageManagerService : IStorageManagerService
     {
         private readonly Realm realmInstance;
 

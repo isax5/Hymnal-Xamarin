@@ -7,7 +7,7 @@ using Xamarin.Essentials;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class RootViewModel : BaseViewModel
+    public sealed class RootViewModel : BaseViewModel
     {
         private readonly IPreferencesService preferencesService;
 

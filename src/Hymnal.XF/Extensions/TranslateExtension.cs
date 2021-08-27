@@ -9,7 +9,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Extensions
 {
     [ContentProperty("Text")]
-    public class TranslateExtension : IMarkupExtension
+    public sealed class TranslateExtension : IMarkupExtension
     {
         private static CultureInfo currentCultureInfo;
         public static CultureInfo CurrentCultureInfo

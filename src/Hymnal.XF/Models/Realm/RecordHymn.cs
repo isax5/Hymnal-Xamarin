@@ -3,7 +3,7 @@ using Realms;
 
 namespace Hymnal.XF.Models.Realm
 {
-    public class RecordHymn : RealmObject, IHymnReference, IStorageModel
+    public sealed class RecordHymn : RealmObject, IHymnReference, IStorageModel
     {
         /// <summary>
         /// Hymn Number

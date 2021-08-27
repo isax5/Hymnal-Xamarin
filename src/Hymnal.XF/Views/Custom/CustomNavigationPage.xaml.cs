@@ -4,7 +4,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views.Custom
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CustomNavigationPage : NavigationPage
+    public sealed partial class CustomNavigationPage : NavigationPage
     {
         public CustomNavigationPage() : base()
         {

@@ -11,7 +11,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class NumericalIndexViewModel : BaseViewModel
+    public sealed class NumericalIndexViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;

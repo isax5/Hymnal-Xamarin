@@ -1,6 +1,6 @@
 namespace Hymnal.XF.Behaviors.FastEntry
 {
-    public class MaxLength
+    public sealed class MaxLength
     {
         public string ProcessLength(string entryText, string oldString, string newString, int? maxLength)
         {

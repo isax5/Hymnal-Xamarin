@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 
 namespace Hymnal.XF.Models
 {
-    public class Hymn
+    public sealed class Hymn
     {
         [JsonProperty("number")]
         public int Number { get; set; }

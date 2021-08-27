@@ -12,7 +12,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class ThematicIndexViewModel : BaseViewModel
+    public sealed class ThematicIndexViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;

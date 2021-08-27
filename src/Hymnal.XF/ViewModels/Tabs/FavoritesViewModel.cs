@@ -15,7 +15,7 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public class FavoritesViewModel : BaseViewModel
+    public sealed class FavoritesViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
         private readonly IStorageManagerService storageManager;

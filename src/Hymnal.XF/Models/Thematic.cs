@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace Hymnal.XF.Models
 {
-    public class Thematic
+    public sealed class Thematic
     {
         [JsonProperty("thematic")]
         public string ThematicName { get; set; }

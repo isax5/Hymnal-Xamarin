@@ -3,7 +3,7 @@ using Xamarin.Forms;
 
 namespace Hymnal.XF.Behaviors
 {
-    public class FastEntryBehaviour : Behavior<Entry>
+    public sealed class FastEntryBehaviour : Behavior<Entry>
     {
         public int? MaxLength { get; set; }
         public string Mask { get; set; }

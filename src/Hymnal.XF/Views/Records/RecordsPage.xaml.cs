@@ -5,7 +5,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class RecordsPage : BaseContentPage<RecordsViewModel>, IModalPage
+    public sealed partial class RecordsPage : BaseContentPage<RecordsViewModel>, IModalPage
     {
 
         public RecordsPage()
