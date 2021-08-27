@@ -19,6 +19,8 @@ namespace Hymnal.XF.Services
 
         string LastVersionOpened { get; set; }
 
+        int OpeningCounter { get; set; }
+
         bool KeepScreenOn { get; set; }
     }
 }

@@ -1,17 +1,12 @@
-#define NEWTONSOFT
-//#define SYSTEMJSON
-
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Net.Http;
 using Helpers;
 using Hymnal.AzureFunctions.Models;
 using Refit;
-#if NEWTONSOFT
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
-#elif SYSTEMJSON
-using System.Text.Json;
-#endif
 
 namespace Hymnal.AzureFunctions.Client
 {
@@ -33,21 +28,18 @@ namespace Hymnal.AzureFunctions.Client
             };
             var settings = new RefitSettings
             {
-#if NEWTONSOFT
                 ContentSerializer = new NewtonsoftJsonContentSerializer(new JsonSerializerSettings
                 {
-                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                    ContractResolver = new CamelCasePropertyNamesContractResolver(),
                 }),
-#elif SYSTEMJSON
-                ContentSerializer = new SystemTextJsonContentSerializer(new JsonSerializerOptions()
-                {
-                    PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
-                    WriteIndented = true,
-                }),
-#endif
             };
 
             musicApi = RestService.For<IMusicApi>(httpClient, settings);
+        }
+
+        public void SetNextValues(IEnumerable<HymnSettingsResponse> settingsResponse)
+        {
+            musicSettingsObservable.NextValues(settingsResponse);
         }
 
         private bool loadingSettings = false;

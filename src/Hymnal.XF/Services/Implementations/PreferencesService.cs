@@ -35,6 +35,12 @@ namespace Hymnal.XF.Services
             }
         }
 
+        public int OpeningCounter
+        {
+            get => preferences.Get(nameof(OpeningCounter), 0);
+            set => preferences.Set(nameof(OpeningCounter), value);
+        }
+
         public string LastVersionOpened
         {
             get => preferences.Get(nameof(LastVersionOpened), string.Empty);
