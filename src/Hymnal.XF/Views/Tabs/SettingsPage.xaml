@@ -291,7 +291,7 @@
                         <Label
                             FontSize="{OnPlatform Default=Default,
                                                   Tizen=Large}"
-                            Text="{extensions:Translate Developing}" />
+                            Text="{extensions:Translate Development}" />
                     </Grid>
                 </ViewCell>
 

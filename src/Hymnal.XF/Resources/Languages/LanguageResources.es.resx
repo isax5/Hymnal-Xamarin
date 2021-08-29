@@ -20,7 +20,7 @@
     <value>Cerrar</value>
     <comment>HymnPage: Close page</comment>
   </data>
-  <data name="Developing" xml:space="preserve">
+  <data name="Development" xml:space="preserve">
     <value>Desarrollo</value>
     <comment>Settings: Developing</comment>
   </data>

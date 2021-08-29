@@ -53,7 +53,7 @@ namespace Hymnal.XF
             }
 
             // Not needed for startup
-            Task.Run(() => MainThread.BeginInvokeOnMainThread(() =>
+            Task.Run(() => MainThread.BeginInvokeOnMainThread(delegate
             {
                 var dataStorageService = app.Container.Resolve(typeof(IDataStorageService)) as IDataStorageService;
                 var azureHymnService = app.Container.Resolve(typeof(IAzureHymnService)) as IAzureHymnService;

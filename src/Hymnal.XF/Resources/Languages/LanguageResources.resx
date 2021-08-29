@@ -208,8 +208,8 @@
     <value>Delete</value>
     <comment>Favorites: Delete</comment>
   </data>
-  <data name="Developing" xml:space="preserve">
-    <value>Developing</value>
+  <data name="Development" xml:space="preserve">
+    <value>Development</value>
     <comment>Settings: Developing</comment>
   </data>
   <data name="DisplayAndTypography" xml:space="preserve">

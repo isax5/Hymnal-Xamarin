@@ -62,7 +62,7 @@
     <ProjectReference Include="..\..\Helpers\Helpers\Helpers.csproj" />
   </ItemGroup>
 
-  <!-- Resources files (languages) -->
+  <!-- Languages -->
   <ItemGroup>
     <Compile Update="Resources\Languages\LanguageResources.Designer.cs">
       <DesignTime>True</DesignTime>

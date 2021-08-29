@@ -28,6 +28,7 @@
     <MtouchArch>x86_64</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
     <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
@@ -42,6 +43,7 @@
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>x86_64</MtouchArch>
     <MtouchUseLlvm>false</MtouchUseLlvm>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignProvision>VS: WildCard Development</CodesignProvision>
@@ -61,6 +63,7 @@
     <MtouchArch>ARM64</MtouchArch>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
     <MtouchInterpreter>-all</MtouchInterpreter>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
@@ -74,12 +77,13 @@
     <MtouchLink>Full</MtouchLink>
     <MtouchArch>ARM64</MtouchArch>
     <MtouchUseLlvm>true</MtouchUseLlvm>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
     <ConsolePause>false</ConsolePause>
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignProvision>Automatic:AppStore</CodesignProvision>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <OptimizePNGs>true</OptimizePNGs>
-    <MtouchExtraArgs>--interpreter</MtouchExtraArgs>
     <!--
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <BuildIpa>true</BuildIpa>
