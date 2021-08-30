@@ -85,7 +85,6 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <OptimizePNGs>true</OptimizePNGs>
     <!--
-    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <BuildIpa>true</BuildIpa>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     -->
