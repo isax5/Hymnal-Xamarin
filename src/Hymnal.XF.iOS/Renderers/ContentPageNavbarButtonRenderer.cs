@@ -1,13 +1,12 @@
 using System.Collections.Generic;
 using Hymnal.XF.iOS.Renderers;
-using Hymnal.XF.UI.Pages;
+using Hymnal.XF.Views;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly: ExportRenderer(typeof(NumberPage), typeof(ContentPageNavbarButtonRenderer))]
 [assembly: ExportRenderer(typeof(HymnPage), typeof(ContentPageNavbarButtonRenderer))]
-[assembly: ExportRenderer(typeof(PlayerContent), typeof(ContentPageNavbarButtonRenderer))]
 namespace Hymnal.XF.iOS.Renderers
 {
     /// <summary>

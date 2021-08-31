@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.Views.RecordsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    Title="{extensions:Translate History}"
+    iOS:Page.ModalPresentationStyle="PageSheet"
+    iOS:Page.UseSafeArea="True"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewModels:RecordsViewModel"
+    x:TypeArguments="viewModels:RecordsViewModel"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
+    Visual="Material">
+
+
+    <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <Grid
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            RowDefinitions="auto, *"
+            RowSpacing="0">
+
+            <CollectionView
+                Grid.Row="1"
+                x:DataType="{x:Null}"
+                AutomationProperties.IsInAccessibleTree="False"
+                BackgroundColor="Transparent"
+                ItemSizingStrategy="MeasureFirstItem"
+                ItemsSource="{Binding Hymns}"
+                SelectedItem="{Binding SelectedHymn,
+                                       Mode=TwoWay}"
+                SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid
+                            Padding="20,0,10,0"
+                            ColumnDefinitions="0.2*, *, 0.2*"
+                            ColumnSpacing="0"
+                            RowDefinitions="0.7*, 0.3*"
+                            RowSpacing="0">
+
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                AutomationProperties.HelpText="{Binding Item2.Title}"
+                                FontSize="Large"
+                                Text="{Binding Item2.Number}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Large"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Item2.Title}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Preview  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Micro"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Item2.PlainContent}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Date  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="2"
+                                Margin="5,0,0,0"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Micro"
+                                Text="{Binding Item1.SavedAt,
+                                               StringFormat='{0:dd/MM}'}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Grid>
+    </RelativeLayout>
+
+</views:BaseContentPage>
