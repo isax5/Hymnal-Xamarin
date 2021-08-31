@@ -1,0 +1,79 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <NeutralLanguage>en</NeutralLanguage>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <!-- Lyrics JSON & Fonts -->
+  <ItemGroup>
+    <None Remove="Resources\Assets\new-hymnal-en.json" />
+    <None Remove="Resources\Assets\new-hymnal-es.json" />
+    <None Remove="Resources\Assets\new-hymnal-pt.json" />
+    <None Remove="Resources\Assets\new-hymnal-ru.json" />
+    <None Remove="Resources\Assets\new-hymnal-thematic-list-en.json" />
+    <None Remove="Resources\Assets\new-hymnal-thematic-list-es.json" />
+    <None Remove="Resources\Assets\new-hymnal-thematic-list-pt.json" />
+    <None Remove="Resources\Assets\new-hymnal-thematic-list-ru.json" />
+    <None Remove="Resources\Assets\old-hymnal-en.json" />
+    <None Remove="Resources\Assets\old-hymnal-es.json" />
+    <None Remove="Resources\Assets\old-hymnal-thematic-list-en.json" />
+    <None Remove="Resources\Assets\old-hymnal-thematic-list-es.json" />
+    <None Remove="Resources\Fonts\FontAwesome5BrandsRegular.otf" />
+    <None Remove="Resources\Fonts\FontAwesome5Regular.otf" />
+    <None Remove="Resources\Fonts\FontAwesome5Solid.otf" />
+    <None Remove="Models\Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-en.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-es.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-pt.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-ru.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-thematic-list-en.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-thematic-list-es.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-thematic-list-pt.json" />
+    <EmbeddedResource Include="Resources\Assets\new-hymnal-thematic-list-ru.json" />
+    <EmbeddedResource Include="Resources\Assets\old-hymnal-en.json" />
+    <EmbeddedResource Include="Resources\Assets\old-hymnal-es.json" />
+    <EmbeddedResource Include="Resources\Assets\old-hymnal-thematic-list-en.json" />
+    <EmbeddedResource Include="Resources\Assets\old-hymnal-thematic-list-es.json" />
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome5BrandsRegular.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome5Regular.otf" />
+    <EmbeddedResource Include="Resources\Fonts\FontAwesome5Solid.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AppCenter.Analytics" Version="4.3.0" />
+    <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.3.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Plugin.MediaManager" Version="1.0.9" />
+    <PackageReference Include="Realm" Version="10.3.0" />
+    <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
+    <PackageReference Include="System.Reactive" Version="5.0.0" />
+    <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2083" />
+    <PackageReference Include="Xamarin.Essentials.Interfaces" Version="1.7.0" />
+    <PackageReference Include="Prism.DryIoc.Forms" Version="8.1.97" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2083" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\AzureFunctions\Hymnal.AzureFunctions.Client\Hymnal.AzureFunctions.Client.csproj" />
+    <ProjectReference Include="..\..\Helpers\Helpers\Helpers.csproj" />
+  </ItemGroup>
+
+  <!-- Languages -->
+  <ItemGroup>
+    <Compile Update="Resources\Languages\LanguageResources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>LanguageResources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Languages\LanguageResources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LanguageResources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
