@@ -1,6 +1,5 @@
-using System.Collections.Generic;
 using Hymnal.XF.iOS.Renderers;
-using Hymnal.XF.UI.Pages;
+using Hymnal.XF.Views;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;

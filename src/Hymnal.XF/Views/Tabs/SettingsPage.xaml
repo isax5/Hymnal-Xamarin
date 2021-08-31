@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.Views.SettingsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:constans="clr-namespace:Hymnal.XF.Constants"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    Title="{extensions:Translate AdventistHymnal}"
+    iOS:Page.UseSafeArea="True"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewModels:SettingsViewModel"
+    x:TypeArguments="viewModels:SettingsViewModel"
+    AutomationId="SettingsPage"
+    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+    Visual="Material">
+
+    <ContentPage.IconImageSource>
+        <FontImageSource
+            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+            Glyph="{x:Static constans:FontAwesomeIcons.Cog}" />
+    </ContentPage.IconImageSource>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="{OnPlatform Default=16, iOS=17, Android=15}" />
+                <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                <Setter Property="TextColor" Value="{DynamicResource Color.PrimaryText}" />
+            </Style>
+
+            <Style TargetType="Grid">
+                <Setter Property="Padding" Value="15, 15" />
+                <Setter Property="ColumnSpacing" Value="25" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <TableView
+        HasUnevenRows="True"
+        HeightRequest="50"
+        Intent="Settings">
+        <TableRoot>
+            <!--  Display and typography  -->
+            <TableSection
+                x:Name="preferencesSection"
+                Title="{extensions:Translate DisplayAndTypography}"
+                AutomationProperties.IsInAccessibleTree="False">
+
+                <!--  Choose Language  -->
+                <ViewCell x:Name="hymnLanguageCell">
+                    <Grid
+                        BackgroundColor="{OnPlatform Default=Transparent,
+                                                     Tizen=White}"
+                        ColumnDefinitions="auto, auto"
+                        RowDefinitions="auto, *">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                x:DataType="{x:Null}"
+                                Command="{Binding ChooseLanguageCommand}" />
+                        </Grid.GestureRecognizers>
+
+                        <Image
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                                    Glyph="{x:Static constans:FontAwesomeIcons.GlobeAmericas}"
+                                    Size="50"
+                                    Color="Gray" />
+                            </Image.Source>
+                        </Image>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutomationProperties.HelpText="{extensions:Translate AutomationSettingsPageHelpTextChangeHymn}"
+                            AutomationProperties.Name="{extensions:Translate AutomationSettingsPageChangeHymn}"
+                            FontSize="{OnPlatform Default=Default,
+                                                  Tizen=Large}"
+                            Text="{extensions:Translate VersionsAndLanguages}" />
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            FontSize="Micro"
+                            TextColor="{DynamicResource Color.SecondaryText}">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="{Binding Path=HymnalLanguage.Detail, Mode=OneWay}" />
+                                    <Span Text=" - " />
+                                    <Span Text="{Binding Path=HymnalLanguage.Name, Mode=OneWay}" />
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                    </Grid>
+                </ViewCell>
+
+                <!--  Always Screen On  -->
+                <ViewCell>
+                    <Grid
+                        ColumnDefinitions="*, auto"
+                        IsVisible="{OnPlatform Default=True,
+                                               Tizen=False}">
+                        <Label
+                            Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Text="{extensions:Translate KeepScreenAlwaysOn}" />
+                        <Switch
+                            Grid.Column="1"
+                            AutomationProperties.Name="{extensions:Translate KeepScreenAlwaysOn}"
+                            IsToggled="{Binding KeepScreenOn}" />
+                    </Grid>
+                </ViewCell>
+
+                <!--  Font Size  -->
+                <ViewCell
+                    x:Name="fontSizeCell"
+                    Height="{OnPlatform Default=150,
+                                        iOS=150,
+                                        Android=150}"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}">
+                    <Grid
+                        BackgroundColor="{OnPlatform Default=Transparent,
+                                                     Tizen=White}"
+                        ColumnDefinitions="*, auto"
+                        RowDefinitions="auto, auto">
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Text="{extensions:Translate FontSize}" />
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="15,0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Text="{Binding Source={x:Reference LetterSize},
+                                           Path=Value}" />
+
+                        <Slider
+                            x:Name="LetterSize"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            AutomationProperties.Name="{extensions:Translate FontSize}"
+                            Maximum="{Binding MaximumHymnFontSize}"
+                            MaximumTrackColor="{DynamicResource Color.Primary}"
+                            Minimum="{Binding MinimumHymnFontSize}"
+                            MinimumTrackColor="{DynamicResource Color.Accent}"
+                            ThumbColor="{DynamicResource Color.Accent}"
+                            ValueChanged="LetterSize_ValueChanged"
+                            Value="{Binding HymnFontSize}" />
+
+                        <Label
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="{Binding Source={x:Reference LetterSize},
+                                               Path=Value}"
+                            Text="{extensions:Translate Example}"
+                            VerticalOptions="FillAndExpand" />
+
+                    </Grid>
+                </ViewCell>
+            </TableSection>
+
+            <!--  Support  -->
+            <TableSection
+                x:Name="supportSection"
+                Title="{extensions:Translate Support}">
+
+                <!--  Donations  HAY QUE AGREGAR LAS FLAGS  -->
+                <!--<ViewCell>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+
+                        <Label
+                            Grid.Row="0"
+                            Text="{extensions:Translate Donations}" />
+
+                        <CarouselView
+                            x:Name="carousel"
+                            Grid.Row="1"
+                            HeightRequest="120"
+                            HorizontalScrollBarVisibility="Never"
+                            PeekAreaInsets="50, 0, 180, 0"
+                            VerticalOptions="CenterAndExpand">
+                            <CarouselView.ItemsLayout>
+                                <LinearItemsLayout
+                                    ItemSpacing="20"
+                                    Orientation="Horizontal"
+                                    SnapPointsAlignment="End"
+                                    SnapPointsType="None" />
+                            </CarouselView.ItemsLayout>
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout
+                                        Margin="5,0"
+                                        Padding="5">
+
+                                        <Label
+                                            HorizontalOptions="CenterAndExpand"
+                                            Text="Tip #6" />
+
+                                        <Frame
+                                            Padding="0"
+                                            BorderColor="Black"
+                                            CornerRadius="5"
+                                            HasShadow="False"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="CenterAndExpand">
+
+                                            <Button
+                                                BackgroundColor="Transparent"
+                                                BorderColor="Transparent"
+                                                Text="{Binding .}"
+                                                TextColor="{DynamicResource PrimaryTextColor}" />
+                                        </Frame>
+                                    </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
+                    </Grid>
+                </ViewCell>-->
+
+                <!--  Contribute  -->
+                <ViewCell>
+                    <Grid
+                        ColumnDefinitions="auto, auto"
+                        RowDefinitions="auto, auto"
+                        RowSpacing="15">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                x:DataType="{x:Null}"
+                                Command="{Binding OpenGitHubCommand}" />
+                        </Grid.GestureRecognizers>
+
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Text="{extensions:Translate Contribute}" />
+
+                        <Image
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False">
+                            <Image.Source>
+                                <FontImageSource
+                                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
+                                    Glyph="{x:Static constans:FontAwesomeIcons.Github}"
+                                    Size="50"
+                                    Color="Gray" />
+                            </Image.Source>
+                        </Image>
+
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Text="{extensions:Translate GitHub}" />
+
+                    </Grid>
+                </ViewCell>
+
+                <!--  Developer  -->
+                <ViewCell
+                    x:Name="developerCell"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}">
+                    <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                x:DataType="{x:Null}"
+                                Command="{Binding DeveloperCommand}" />
+                        </Grid.GestureRecognizers>
+                        <Label
+                            FontSize="{OnPlatform Default=Default,
+                                                  Tizen=Large}"
+                            Text="{extensions:Translate Development}" />
+                    </Grid>
+                </ViewCell>
+
+                <!--  Help  -->
+                <!--<ViewCell>
+                    <Grid>
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding HelpCommand}" />
+                        </Grid.GestureRecognizers>
+                        <Label Text="{extensions:Translate Help}" />
+                    </Grid>
+                </ViewCell>-->
+
+            </TableSection>
+
+            <!--  Developing  -->
+            <TableSection
+                x:Name="developerSection"
+                Title="{extensions:Translate Developing}">
+
+                <!--  App version  -->
+                <TextCell
+                    x:Name="appVersionCell"
+                    Detail="{Binding AppVersionString}"
+                    DetailColor="{DynamicResource Color.SecondaryText}"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}"
+                    Text="{extensions:Translate AppVersion}"
+                    TextColor="{DynamicResource Color.PrimaryText}" />
+
+                <!--  Build Version  -->
+                <TextCell
+                    x:Name="appBuildCell"
+                    Detail="{Binding AppBuildString}"
+                    DetailColor="{DynamicResource Color.SecondaryText}"
+                    IsEnabled="{OnPlatform Default=True,
+                                           Tizen=False}"
+                    Text="{extensions:Translate AppBuild}"
+                    TextColor="{DynamicResource Color.PrimaryText}" />
+            </TableSection>
+
+        </TableRoot>
+    </TableView>
+
+</views:BaseContentPage>

@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.XF.Views.NumericalIndexPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
+    xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:prism="http://prismlibrary.com"
+    xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.XF.Views"
+    prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewModels:NumericalIndexViewModel"
+    x:TypeArguments="viewModels:NumericalIndexViewModel"
+    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
+    Visual="Material">
+
+
+    <RelativeLayout>
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundFilter}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}" />
+
+        <ListView
+            x:DataType="{x:Null}"
+            BackgroundColor="Transparent"
+            CachingStrategy="RecycleElement"
+            Footer=""
+            GroupDisplayBinding="{Binding Key}"
+            GroupShortNameBinding="{Binding Key}"
+            IsGroupingEnabled="True"
+            ItemsSource="{Binding Hymns}"
+            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                   Property=Height}"
+            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                  Property=Width}"
+            RowHeight="50"
+            SelectedItem="{Binding SelectedHymn,
+                                   Mode=TwoWay}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                            Padding="20,0"
+                            ColumnDefinitions="0.2*, *"
+                            ColumnSpacing="0"
+                            RowDefinitions="0.7*, 0.3*"
+                            RowSpacing="0">
+
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                AutomationProperties.HelpText="{Binding Title}"
+                                FontSize="Large"
+                                Text="{Binding Number}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Large"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Title}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Preview  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Micro"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding PlainContent}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </RelativeLayout>
+
+</views:BaseContentPage>
