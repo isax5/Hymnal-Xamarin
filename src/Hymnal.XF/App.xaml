@@ -3,6 +3,7 @@
     x:Class="Hymnal.XF.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Hymnal.XF.Converters;assembly=Hymnal.XF"
     xmlns:prism="http://prismlibrary.com"
     xmlns:theme="clr-namespace:Hymnal.XF.Resources.Theme;assembly=Hymnal.XF">
 
@@ -12,6 +13,10 @@
                 <theme:StaticTheme />
                 <theme:LightTheme />
             </ResourceDictionary.MergedDictionaries>
+
+            <!--  Converters  -->
+            <converters:TranslateConverter x:Key="TranslateConverter" />
+            <converters:ImageSourceResourceConverter x:Key="ImageSourceResourceConverter" />
 
             <x:String x:Key="BackgroundImageFile">Background</x:String>
 

@@ -4,7 +4,6 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
-    xmlns:converters="clr-namespace:Hymnal.XF.Converters"
     xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
     xmlns:prism="http://prismlibrary.com"
@@ -19,12 +18,6 @@
     AutomationId="HymnPage"
     BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <converters:TranslateConverter x:Key="TranslateConverter" />
-        </ResourceDictionary>
-    </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem

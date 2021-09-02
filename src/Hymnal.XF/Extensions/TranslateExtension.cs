@@ -1,5 +1,6 @@
 using System;
 using System.Globalization;
+using System.Net.Mime;
 using System.Reflection;
 using System.Resources;
 using Hymnal.XF.Resources.Languages;
@@ -8,7 +9,7 @@ using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Extensions
 {
-    [ContentProperty("Text")]
+    [ContentProperty(nameof(Text))]
     public sealed class TranslateExtension : IMarkupExtension
     {
         private static CultureInfo currentCultureInfo;
