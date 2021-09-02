@@ -8,7 +8,7 @@ namespace Hymnal.AzureFunctions.Client
 #if DEBUG
     [Headers("x-functions-key: yad6c0vLVcvxLfa/47aWkoAvfwOAcz1NJUF2AgEzQPCJiYLp1jxNag==")]
 #elif RELEASE
-    [Headers("x-functions-key: yad6c0vLVcvxLfa/47aWkoAvfwOAcz1NJUF2AgEzQPCJiYLp1jxNag==")]
+    [Headers("x-functions-key: HYMNAL_AZURE_FUNCTIONS_API_KEY")]
 #endif
     public interface IMusicApi
     {
