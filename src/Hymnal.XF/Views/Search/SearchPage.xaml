@@ -27,8 +27,6 @@
             AutomationId="HymnSearchBar"
             AutomationProperties.IsInAccessibleTree="False"
             CancelButtonColor="{DynamicResource Color.Primary}"
-            IsVisible="{OnPlatform Default=True,
-                                   iOS=False}"
             Placeholder="{extensions:Translate Searcher}"
             PlaceholderColor="{DynamicResource Color.PrimaryLight}"
             Text="{Binding TextSearchBar}"

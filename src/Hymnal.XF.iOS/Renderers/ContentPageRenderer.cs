@@ -28,15 +28,18 @@ namespace Hymnal.XF.iOS.Renderers
                 NavigationController.TopViewController.NavigationItem.SetLeftBarButtonItem(leftItem, false);
             }
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 ViewWillAppear_SearchImplementation();
+
+            if (Element is BaseContentPage page)
+                page.CallOnRendered();
         }
 
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 ViewDidAppear_SearchImplementation();
         }
 
@@ -44,7 +47,7 @@ namespace Hymnal.XF.iOS.Renderers
         {
             base.ViewWillDisappear(animated);
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 ViewWillDisappear_SearchImplementation();
         }
 
@@ -53,7 +56,7 @@ namespace Hymnal.XF.iOS.Renderers
             base.Dispose(disposing);
 
             // At this point Element is already null
-            if (disposing)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && disposing)
             {
                 ViewWillDispose_SearchImplementation();
             }
@@ -62,7 +65,7 @@ namespace Hymnal.XF.iOS.Renderers
         {
             base.TraitCollectionDidChange(previousTraitCollection);
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 TraitCollectionDidChange_SearchImplementation(TraitCollection.UserInterfaceStyle, previousTraitCollection.UserInterfaceStyle);
         }
     }

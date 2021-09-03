@@ -7,7 +7,7 @@ using UIKit;
 namespace Hymnal.XF.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
+    public partial class AppDelegate : Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
@@ -16,12 +16,12 @@ namespace Hymnal.XF.iOS
 #endif
             Xamarin.Forms.Forms.Init();
             Xamarin.Forms.FormsMaterial.Init();
+            MediaManager.CrossMediaManager.Current.Init();
             LoadApplication(new App(new IosInitializer()));
 
             return base.FinishedLaunching(app, options);
         }
 
-    // TODO: Startup actions (shortcuts) are not working yet
     public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
     {
         //base.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
