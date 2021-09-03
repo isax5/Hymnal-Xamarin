@@ -44,7 +44,7 @@ namespace Hymnal.AzureFunctions
             {
                 Id = "pt-newVersion",
                 TwoLetterISOLanguageName = "pt",
-                SungMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/portuguese/1996%20version/sung/###.mp3"
+                SungMusicUrl = @"https://s3.us-east-2.wasabisys.com/hymnalstorage/portuguese/1996%20version/sung/###.mp3"
             },
 
             // RUSSIAN
@@ -53,7 +53,7 @@ namespace Hymnal.AzureFunctions
             {
                 Id = "ru-newVersion",
                 TwoLetterISOLanguageName = "ru",
-                InstrumentalMusicUrl = @"https://hymnalstorage.blob.core.windows.net/hymn-music/russian/1997%20version/instrumental/###.mp3"
+                InstrumentalMusicUrl = @"https://s3.us-east-2.wasabisys.com/hymnalstorage/russian/1997%20version/instrumental/###.mp3"
             }
         };
     }
