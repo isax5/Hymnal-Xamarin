@@ -1,5 +1,4 @@
 using System.ComponentModel;
-using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,7 +6,7 @@ using Xamarin.Forms.Xaml;
 namespace Hymnal.XF.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public sealed partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage, IModalPage
+    public sealed partial class SearchPage : BaseContentPage<SearchViewModel>, ISearchPage
     {
         public SearchPage()
         {
@@ -35,14 +34,6 @@ namespace Hymnal.XF.Views
                     @delegate.BecomeFirstResponder();
             }
         }
-
-        #region IModalPage
-
-        string IModalPage.CloseButtonText => Languages.Generic_Close;
-
-        void IModalPage.PopModal() => ViewModel.NavigationService.GoBackAsync(null, true, true);
-
-        #endregion
 
         #region ISearchPage
 
