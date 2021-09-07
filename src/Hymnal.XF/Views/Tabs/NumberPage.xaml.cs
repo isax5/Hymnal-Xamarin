@@ -17,7 +17,7 @@ namespace Hymnal.XF.Views
 
             if (Device.RuntimePlatform == Device.Tizen)
             {
-                backgroundImage.Source = new FileImageSource { File = "Background.png" };
+                backgroundImage.Source = new FileImageSource { File = "Background" };
             }
 
             SizeChanged += (s, args) =>
