@@ -7,7 +7,6 @@
     xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
-    xmlns:views="clr-namespace:Hymnal.XF.Views"
     Title="{extensions:Translate AdventistHymnal}"
     android:TabbedPage.ToolbarPlacement="Bottom"
     prism:ViewModelLocator.AutowireViewModel="True"

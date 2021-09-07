@@ -1,13 +1,14 @@
+using System.Linq;
 using System.Runtime.CompilerServices;
 using CoreFoundation;
 using Foundation;
 using Hymnal.XF.iOS.Renderers;
 using Hymnal.XF.Views;
+using Hymnal.XF.Views.Custom;
 using ObjCRuntime;
 using UIKit;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
-// ReSharper disable ParameterHidesMember
 
 [assembly: ExportRenderer(typeof(ContentPage), typeof(ContentPageRenderer))]
 namespace Hymnal.XF.iOS.Renderers
@@ -18,25 +19,29 @@ namespace Hymnal.XF.iOS.Renderers
         {
             base.ViewWillAppear(animated);
 
-            if (Element is IModalPage modalPage)
+            if (Element is ContentPage page && page.Navigation.ModalStack.FirstOrDefault() is FormSheetNavigationPage { BackButtonConfigured: false } navPage)
             {
-                var leftItem = new UIBarButtonItem(modalPage.CloseButtonText, UIBarButtonItemStyle.Plain, (sender, e) =>
+                navPage.BackButtonConfigured = true;
+                var leftItem = new UIBarButtonItem(navPage.CloseButtonText, UIBarButtonItemStyle.Plain, (sender, e) =>
                 {
-                    modalPage.PopModal();
+                    navPage.Navigation.PopModalAsync();
                 });
 
                 NavigationController.TopViewController.NavigationItem.SetLeftBarButtonItem(leftItem, false);
             }
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 ViewWillAppear_SearchImplementation();
+
+            if (Element is BaseContentPage baseContentPage)
+                baseContentPage.CallOnRendered();
         }
 
         public override void ViewDidAppear(bool animated)
         {
             base.ViewDidAppear(animated);
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 ViewDidAppear_SearchImplementation();
         }
 
@@ -44,7 +49,7 @@ namespace Hymnal.XF.iOS.Renderers
         {
             base.ViewWillDisappear(animated);
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 ViewWillDisappear_SearchImplementation();
         }
 
@@ -53,7 +58,7 @@ namespace Hymnal.XF.iOS.Renderers
             base.Dispose(disposing);
 
             // At this point Element is already null
-            if (disposing)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && disposing)
             {
                 ViewWillDispose_SearchImplementation();
             }
@@ -62,7 +67,7 @@ namespace Hymnal.XF.iOS.Renderers
         {
             base.TraitCollectionDidChange(previousTraitCollection);
 
-            if (Element is ISearchPage)
+            if (UIDevice.CurrentDevice.CheckSystemVersion(13, 0) && Element is ISearchPage)
                 TraitCollectionDidChange_SearchImplementation(TraitCollection.UserInterfaceStyle, previousTraitCollection.UserInterfaceStyle);
         }
     }

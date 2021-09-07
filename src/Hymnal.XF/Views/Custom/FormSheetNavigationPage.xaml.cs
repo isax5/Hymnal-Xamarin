@@ -1,3 +1,4 @@
+using Hymnal.XF.Resources.Languages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,5 +16,9 @@ namespace Hymnal.XF.Views.Custom
         {
             InitializeComponent();
         }
+
+        public bool BackButtonConfigured;
+
+        public string CloseButtonText => LanguageResources.Generic_Close;
     }
 }

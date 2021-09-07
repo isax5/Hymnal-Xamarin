@@ -1,6 +1,5 @@
 # Adventist Hymnal Xamarin
-> New version of the adventist hymnal multi-platform in Xamarin (Forms and Native) with MVVMCROSS
-
+> New version of the adventist hymnal multi-platform in Xamarin
 
 
 ## Features
@@ -34,10 +33,10 @@ Table of contents
 ### Main Packages in version 4
 |Package                       |NuGet Link                                                       |
 |------------------------------|-----------------------------------------------------------------|
+|System.Reactive               |https://www.nuget.org/packages/System.Reactive/                  |
 |Xamarin.Forms                 |https://www.nuget.org/packages/Xamarin.Forms/                    |
 |Xamarin.Essentials            |https://www.nuget.org/packages/Xamarin.Essentials/               |
-|MvvmCross                     |https://www.nuget.org/packages/MvvmCross/                        |
-|MvvmCross.Forms               |https://www.nuget.org/packages/MvvmCross.Forms/                  |
+|Prism.Forms                   |https://www.nuget.org/packages/Prism.Forms/                      |
 |Xamarin.Forms.Visual.Material |https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/    |
 |Microsoft.AppCenter.Analytics |https://www.nuget.org/packages/Microsoft.AppCenter.Analytics/    |
 |Microsoft.AppCenter.Crashes   |https://www.nuget.org/packages/Microsoft.AppCenter.Crashes/      |
@@ -55,7 +54,7 @@ Table of contents
  -->
 |Platform       |Package Name    |Version           |Minimum Compatible OS         |AppCenter build                                                                                                                           |
 |---------------|----------------|------------------|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-|iOS            |Hymnal.XF.iOS   |4                 |iOS 10.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
+|iOS            |Hymnal.XF.iOS   |4                 |iOS 11.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
 |Android        |Hymnal.XF.Droid |4                 |Android 5.0 (API 21 Lollipop) |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)  |
 
 ## Usage
@@ -101,8 +100,7 @@ Table of contents
 ---
 
 ## Contributing
-
-> Just fork	
+> <a href="https://www.paypal.me/isax5">Donate on Paypal</a> or Just fork	
 
 
 ## Team
