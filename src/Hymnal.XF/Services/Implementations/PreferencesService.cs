@@ -10,7 +10,7 @@ namespace Hymnal.XF.Services
     public sealed class PreferencesService : IPreferencesService
     {
         private readonly IPreferences preferences;
-        public event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged;
+        public event EventHandler<HymnalLanguage> HymnalLanguageConfiguredChanged;
 
         public int HymnalsFontSize
         {
@@ -18,20 +18,20 @@ namespace Hymnal.XF.Services
             set => preferences.Set(nameof(HymnalsFontSize), value);
         }
 
-        public HymnalLanguage ConfiguratedHymnalLanguage
+        public HymnalLanguage ConfiguredHymnalLanguage
         {
             get
             {
-                var text = preferences.Get(nameof(ConfiguratedHymnalLanguage), string.Empty);
+                var text = preferences.Get(nameof(ConfiguredHymnalLanguage), string.Empty);
                 return string.IsNullOrWhiteSpace(text) ? null : JsonConvert.DeserializeObject<HymnalLanguage>(text).Configuration();
             }
             set
             {
                 var text = JsonConvert.SerializeObject(value);
-                preferences.Set(nameof(ConfiguratedHymnalLanguage), text);
+                preferences.Set(nameof(ConfiguredHymnalLanguage), text);
 
-                if (HymnalLanguageConfiguratedChanged != null)
-                    HymnalLanguageConfiguratedChanged.Invoke(this, value);
+                if (HymnalLanguageConfiguredChanged != null)
+                    HymnalLanguageConfiguredChanged.Invoke(this, value);
             }
         }
 
@@ -51,6 +51,12 @@ namespace Hymnal.XF.Services
         {
             get => preferences.Get(nameof(KeepScreenOn), false);
             set => preferences.Set(nameof(KeepScreenOn), value);
+        }
+
+        public bool ShowBackgroundImageInHymnal
+        {
+            get => preferences.Get(nameof(ShowBackgroundImageInHymnal), true);
+            set => preferences.Set(nameof(ShowBackgroundImageInHymnal), value);
         }
 
         public PreferencesService(IPreferences preferences)

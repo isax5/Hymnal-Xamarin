@@ -39,10 +39,12 @@ namespace Hymnal.XF.ViewModels
         private readonly IShare share;
 
         #region Properties
+
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
 
         private Hymn hymn;
+
         public Hymn Hymn
         {
             get => hymn;
@@ -50,6 +52,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private HymnalLanguage language;
+
         public HymnalLanguage Language
         {
             get => language;
@@ -57,6 +60,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private bool isFavorite;
+
         public bool IsFavorite
         {
             get => isFavorite;
@@ -64,6 +68,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private bool isPlaying;
+
         public bool IsPlaying
         {
             get => isPlaying;
@@ -71,19 +76,25 @@ namespace Hymnal.XF.ViewModels
         }
 
         private HymnIdParameter hymnParameter;
+
         public HymnIdParameter HymnParameter
         {
             get => hymnParameter;
             set => SetProperty(ref hymnParameter, value);
         }
+
+        public bool ShowBackgroundImageInHymnal => preferencesService.ShowBackgroundImageInHymnal;
+
         #endregion
 
         #region Commands
+
         public DelegateCommand FavoriteCommand { get; private set; }
         public DelegateCommand ShareCommand { get; private set; }
         public DelegateCommand PlayCommand { get; private set; }
         public DelegateCommand CloseCommand { get; private set; }
         public DelegateCommand OpenSheetCommand { get; private set; }
+
         #endregion
 
         public HymnViewModel(
@@ -97,7 +108,7 @@ namespace Hymnal.XF.ViewModels
             IMainThread mainThread,
             IConnectivity connectivity,
             IShare share
-            ) : base(navigationService)
+        ) : base(navigationService)
         {
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
@@ -142,13 +153,14 @@ namespace Hymnal.XF.ViewModels
             IsPlaying = mediaManager.IsPlaying();
 
             // Is Favorite
-            IsFavorite = storageService.All<FavoriteHymn>().ToList().Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+            IsFavorite = storageService.All<FavoriteHymn>().ToList()
+                .Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             // Record
             if (HymnParameter.SaveInRecords)
             {
-
-                IQueryable<RecordHymn> records = storageService.All<RecordHymn>().Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
+                IQueryable<RecordHymn> records = storageService.All<RecordHymn>()
+                    .Where(h => h.Number == Hymn.Number && h.HymnalLanguageId.Equals(Language.Id));
                 storageService.RemoveRange(records);
 
                 storageService.Add(Hymn.ToRecordHymn());
@@ -162,17 +174,25 @@ namespace Hymnal.XF.ViewModels
             // Precarga de datos para reproduccion
             azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
 
-            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnOpened, new Dictionary<string, string>
-            {
-                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) },
-                { "Font Size Hymnal", preferencesService.HymnalsFontSize.ToString() }
-            });
+            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnOpened,
+                new Dictionary<string, string>
+                {
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    {
+                        TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo,
+                        InfoConstants.CurrentCultureInfo.Name
+                    },
+                    {
+                        TrackingConstants.TrackEv.HymnReferenceScheme.Time,
+                        DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+                    },
+                    { "Font Size Hymnal", preferencesService.HymnalsFontSize.ToString() }
+                });
         }
 
         #region Events
+
         private void MediaManager_StateChanged(object sender, MediaManager.Playback.StateChangedEventArgs e)
         {
             switch (e.State)
@@ -193,9 +213,11 @@ namespace Hymnal.XF.ViewModels
                     break;
             }
         }
+
         #endregion
 
         #region Command Actions
+
         private async void OpenSheetAsync()
         {
             await NavigationService.NavigateAsync(nameof(MusicSheetPage), HymnParameter);
@@ -203,31 +225,46 @@ namespace Hymnal.XF.ViewModels
 
         private void FavoriteExecute()
         {
-            IQueryable<FavoriteHymn> favorites = storageService.All<FavoriteHymn>().Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+            IQueryable<FavoriteHymn> favorites = storageService.All<FavoriteHymn>()
+                .Where(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
 
             if (IsFavorite || favorites.Count() > 0)
             {
                 storageService.RemoveRange(favorites);
 
-                Analytics.TrackEvent(TrackingConstants.TrackEv.HymnRemoveFromFavorites, new Dictionary<string, string>
-                {
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
-                });
+                Analytics.TrackEvent(TrackingConstants.TrackEv.HymnRemoveFromFavorites,
+                    new Dictionary<string, string>
+                    {
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                        {
+                            TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo,
+                            InfoConstants.CurrentCultureInfo.Name
+                        },
+                        {
+                            TrackingConstants.TrackEv.HymnReferenceScheme.Time,
+                            DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+                        }
+                    });
             }
             else
             {
                 storageService.Add(Hymn.ToFavoriteHymn());
 
-                Analytics.TrackEvent(TrackingConstants.TrackEv.HymnAddedToFavorites, new Dictionary<string, string>
-                {
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                    { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
-                });
+                Analytics.TrackEvent(TrackingConstants.TrackEv.HymnAddedToFavorites,
+                    new Dictionary<string, string>
+                    {
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                        { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                        {
+                            TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo,
+                            InfoConstants.CurrentCultureInfo.Name
+                        },
+                        {
+                            TrackingConstants.TrackEv.HymnReferenceScheme.Time,
+                            DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+                        }
+                    });
             }
 
             IsFavorite = !IsFavorite;
@@ -239,13 +276,20 @@ namespace Hymnal.XF.ViewModels
                 title: hymn.Title,
                 text: $"{hymn.Title}\n\n{hymn.Content}\n\n{AppConstants.WebLinks.DeveloperWebSite}");
 
-            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnShared, new Dictionary<string, string>
-            {
-                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
-            });
+            Analytics.TrackEvent(TrackingConstants.TrackEv.HymnShared,
+                new Dictionary<string, string>
+                {
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                    { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                    {
+                        TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo,
+                        InfoConstants.CurrentCultureInfo.Name
+                    },
+                    {
+                        TrackingConstants.TrackEv.HymnReferenceScheme.Time,
+                        DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+                    }
+                });
         }
 
         private async void PlayExecuteAsync()
@@ -253,7 +297,8 @@ namespace Hymnal.XF.ViewModels
             // Check internet connection
             if (connectivity.NetworkAccess == NetworkAccess.None)
             {
-                await dialogService.DisplayAlertAsync(Languages.Error_WeHadAProblem, Languages.NoInternetConnection, Languages.Generic_Ok);
+                await dialogService.DisplayAlertAsync(Languages.Error_WeHadAProblem, Languages.NoInternetConnection,
+                    Languages.Generic_Ok);
                 return;
             }
 
@@ -270,71 +315,85 @@ namespace Hymnal.XF.ViewModels
             azureHymnService.ObserveSettings()
                 .Where(x => x.Id == Language.Id)
                 .Subscribe(hymnSettings => mainThread.InvokeOnMainThreadAsync(async () =>
-                {
-                    var songUrl = string.Empty;
-                    var isPlayingInstrumentalMusic = false;
-
-                    // Choose music
-                    if (hymnSettings.InstrumentalMusicUrl != null && hymnSettings.SungMusicUrl != null)
                     {
-                        var instrumentalTitle = Languages.Instrumental;
-                        var sungTitle = Languages.Sung;
+                        var songUrl = string.Empty;
+                        var isPlayingInstrumentalMusic = false;
 
-                        var result = await dialogService.DisplayActionSheetAsync(
-                            Languages.ChooseYourHymnal, Languages.Generic_Cancel,
-                            null, new[] { instrumentalTitle, sungTitle });
-
-                        if (result.Equals(instrumentalTitle))
+                        // Choose music
+                        if (hymnSettings.InstrumentalMusicUrl != null && hymnSettings.SungMusicUrl != null)
                         {
-                            songUrl = hymnSettings.GetInstrumentUrl(Hymn.Number);
-                            isPlayingInstrumentalMusic = true;
+                            var instrumentalTitle = Languages.Instrumental;
+                            var sungTitle = Languages.Sung;
+
+                            var result = await dialogService.DisplayActionSheetAsync(
+                                Languages.ChooseYourHymnal, Languages.Generic_Cancel,
+                                null, new[] { instrumentalTitle, sungTitle });
+
+                            if (result.Equals(instrumentalTitle))
+                            {
+                                songUrl = hymnSettings.GetInstrumentUrl(Hymn.Number);
+                                isPlayingInstrumentalMusic = true;
+                            }
+                            else if (result.Equals(sungTitle))
+                            {
+                                songUrl = hymnSettings.GetSungUrl(hymn.Number);
+                                isPlayingInstrumentalMusic = false;
+                            }
+                            // Tap on "Close"
+                            else
+                            {
+                                return;
+                            }
                         }
-                        else if (result.Equals(sungTitle))
+
+                        if (string.IsNullOrWhiteSpace(songUrl))
                         {
-                            songUrl = hymnSettings.GetSungUrl(hymn.Number);
-                            isPlayingInstrumentalMusic = false;
+                            isPlayingInstrumentalMusic = hymnSettings.SupportsInstrumentalMusic();
+                            songUrl = hymnSettings.SupportsInstrumentalMusic()
+                                ? hymnSettings.GetInstrumentUrl(Hymn.Number)
+                                : hymnSettings.GetSungUrl(Hymn.Number);
                         }
-                        // Tap on "Close"
-                        else
-                        {
-                            return;
-                        }
-                    }
 
-                    if (string.IsNullOrWhiteSpace(songUrl))
-                    {
-                        isPlayingInstrumentalMusic = hymnSettings.SupportsInstrumentalMusic();
-                        songUrl = hymnSettings.SupportsInstrumentalMusic() ? hymnSettings.GetInstrumentUrl(Hymn.Number) : hymnSettings.GetSungUrl(Hymn.Number);
-                    }
+                        // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
+                        IsPlaying = true;
+                        IMediaItem mediaItem = new MediaItem(songUrl) { IsMetadataExtracted = true };
+                        mediaItem = await mediaManager.Extractor.UpdateMediaItem(mediaItem).ConfigureAwait(false);
+                        mediaItem.DisplayTitle = Hymn.Title;
+                        mediaItem.Album = Language.Name;
+                        mediaItem.Year = Language.Year;
+                        mediaItem.MediaType = MediaType.Audio;
 
-                    // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
-                    IsPlaying = true;
-                    IMediaItem mediaItem = new MediaItem(songUrl) { IsMetadataExtracted = true };
-                    mediaItem = await mediaManager.Extractor.UpdateMediaItem(mediaItem).ConfigureAwait(false);
-                    mediaItem.DisplayTitle = Hymn.Title;
-                    mediaItem.Album = Language.Name;
-                    mediaItem.Year = Language.Year;
-                    mediaItem.MediaType = MediaType.Audio;
+                        await mediaManager.Play(mediaItem);
 
-                    await mediaManager.Play(mediaItem);
-
-                    Analytics.TrackEvent(TrackingConstants.TrackEv.HymnMusicPlayed, new Dictionary<string, string>
-                    {
-                        { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
-                        { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
-                        { TrackingConstants.TrackEv.HymnReferenceScheme.TypeOfMusicPlaying, isPlayingInstrumentalMusic ?
-                        TrackingConstants.TrackEv.HymnReferenceScheme.InstrumentalMusic : TrackingConstants.TrackEv.HymnReferenceScheme.SungMusic },
-                        { TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                        { TrackingConstants.TrackEv.HymnReferenceScheme.Time, DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture) }
-                    });
-                }),
-                ex => ex.Report());
+                        Analytics.TrackEvent(TrackingConstants.TrackEv.HymnMusicPlayed,
+                            new Dictionary<string, string>
+                            {
+                                { TrackingConstants.TrackEv.HymnReferenceScheme.Number, Hymn.Number.ToString() },
+                                { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                                {
+                                    TrackingConstants.TrackEv.HymnReferenceScheme.TypeOfMusicPlaying,
+                                    isPlayingInstrumentalMusic
+                                        ? TrackingConstants.TrackEv.HymnReferenceScheme.InstrumentalMusic
+                                        : TrackingConstants.TrackEv.HymnReferenceScheme.SungMusic
+                                },
+                                {
+                                    TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo,
+                                    InfoConstants.CurrentCultureInfo.Name
+                                },
+                                {
+                                    TrackingConstants.TrackEv.HymnReferenceScheme.Time,
+                                    DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+                                }
+                            });
+                    }),
+                    ex => ex.Report());
         }
 
         private async void CloseAsync()
         {
             await NavigationService.GoBackAsync();
         }
+
         #endregion
     }
 }

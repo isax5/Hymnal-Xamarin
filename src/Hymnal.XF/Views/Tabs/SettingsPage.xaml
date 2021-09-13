@@ -120,6 +120,20 @@
                     </Grid>
                 </ViewCell>
 
+                <!--  Background image in hymnal  -->
+                <ViewCell>
+                    <Grid ColumnDefinitions="*, auto">
+                        <Label
+                            Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Text="{extensions:Translate ShowBackgroundImageInHymnal}" />
+                        <Switch
+                            Grid.Column="1"
+                            AutomationProperties.Name="{extensions:Translate ShowBackgroundImageInHymnal}"
+                            IsToggled="{Binding ShowBackgroundImageInHymnal}" />
+                    </Grid>
+                </ViewCell>
+
                 <!--  Font Size  -->
                 <ViewCell
                     x:Name="fontSizeCell"

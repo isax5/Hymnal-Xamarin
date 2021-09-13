@@ -25,6 +25,7 @@ namespace Hymnal.XF.ViewModels
         private readonly IDeviceDisplay deviceDisplay;
 
         #region Properties
+
         private readonly BrowserLaunchOptions browserLaunchOptions = new BrowserLaunchOptions
         {
             LaunchMode = BrowserLaunchMode.SystemPreferred,
@@ -38,10 +39,12 @@ namespace Hymnal.XF.ViewModels
             get => preferencesService.HymnalsFontSize;
             set => preferencesService.HymnalsFontSize = value;
         }
+
         public int MinimumHymnFontSize => AppConstants.MINIMUM_HYMNALS_FONT_SIZE;
         public int MaximumHymnFontSize => AppConstants.MAXIMUM_HYMNALS_FONT_SIZE;
 
         private string appVersionString;
+
         public string AppVersionString
         {
             get => appVersionString;
@@ -49,6 +52,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private string appBuildString;
+
         public string AppBuildString
         {
             get => appBuildString;
@@ -56,6 +60,7 @@ namespace Hymnal.XF.ViewModels
         }
 
         private HymnalLanguage hymnalLanguage;
+
         public HymnalLanguage HymnalLanguage
         {
             get => hymnalLanguage;
@@ -70,8 +75,8 @@ namespace Hymnal.XF.ViewModels
                     deviceInfo.Platform == DevicePlatform.Android)
                 {
                     return deviceDisplay.KeepScreenOn;
-
                 }
+
                 return false;
             }
             set
@@ -81,13 +86,26 @@ namespace Hymnal.XF.ViewModels
                 RaisePropertyChanged(nameof(KeepScreenOn));
             }
         }
+
+        public bool ShowBackgroundImageInHymnal
+        {
+            get => preferencesService.ShowBackgroundImageInHymnal;
+            set
+            {
+                preferencesService.ShowBackgroundImageInHymnal = value;
+                RaisePropertyChanged(nameof(ShowBackgroundImageInHymnal));
+            }
+        }
+
         #endregion
 
         #region Commands
+
         public DelegateCommand ChooseLanguageCommand { get; internal set; }
         public DelegateCommand HelpCommand { get; internal set; }
         public DelegateCommand OpenGitHubCommand { get; internal set; }
         public DelegateCommand DeveloperCommand { get; internal set; }
+
         #endregion
 
         public SettingsViewModel(
@@ -98,7 +116,7 @@ namespace Hymnal.XF.ViewModels
             IAppInfo appInfo,
             IBrowser browser,
             IDeviceDisplay deviceDisplay
-            ) : base(navigationService)
+        ) : base(navigationService)
         {
             this.preferencesService = preferencesService;
             this.dialogService = dialogService;
@@ -116,7 +134,7 @@ namespace Hymnal.XF.ViewModels
         public override void Initialize(INavigationParameters parameters)
         {
             base.Initialize(parameters);
-            HymnalLanguage = preferencesService.ConfiguratedHymnalLanguage;
+            HymnalLanguage = preferencesService.ConfiguredHymnalLanguage;
 
             AppVersionString = appInfo.VersionString;
             AppBuildString = appInfo.BuildString;
@@ -126,15 +144,23 @@ namespace Hymnal.XF.ViewModels
         {
             base.OnAppearing();
 
-            Analytics.TrackEvent(TrackingConstants.TrackEv.Navigation, new Dictionary<string, string>
-            {
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(SettingsViewModel) },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
-            });
+            Analytics.TrackEvent(TrackingConstants.TrackEv.Navigation,
+                new Dictionary<string, string>
+                {
+                    { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(SettingsViewModel) },
+                    {
+                        TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo,
+                        InfoConstants.CurrentCultureInfo.Name
+                    },
+                    {
+                        TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion,
+                        preferencesService.ConfiguredHymnalLanguage.Id
+                    }
+                });
         }
 
         #region Command Actions
+
         private async void ChooseLanguageExecuteAsync()
         {
             var languages = new Dictionary<string, HymnalLanguage>();
@@ -152,13 +178,13 @@ namespace Hymnal.XF.ViewModels
                 cancelButton,
                 null,
                 languages.Select(hld => hld.Key).ToArray()
-                );
+            );
 
             if (string.IsNullOrEmpty(languageKey) || languageKey.Equals(cancelButton))
                 return;
 
             HymnalLanguage = languages[languageKey];
-            preferencesService.ConfiguratedHymnalLanguage = HymnalLanguage;
+            preferencesService.ConfiguredHymnalLanguage = HymnalLanguage;
         }
 
         private async void HelpExecuteAsync()
@@ -175,6 +201,7 @@ namespace Hymnal.XF.ViewModels
         {
             await browser.OpenAsync(AppConstants.WebLinks.DeveloperWebSite, browserLaunchOptions);
         }
+
         #endregion
     }
 }

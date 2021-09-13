@@ -16,7 +16,7 @@
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
     AutomationId="HymnPage"
-    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
+    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
     Visual="Material">
 
     <ContentPage.ToolbarItems>
@@ -78,6 +78,7 @@
             x:Name="backgroundImage"
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
+            IsVisible="{Binding ShowBackgroundImageInHymnal}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -86,6 +87,7 @@
 
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            IsVisible="{Binding ShowBackgroundImageInHymnal}"
             Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
