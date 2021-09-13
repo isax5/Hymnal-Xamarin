@@ -75,10 +75,10 @@
 
     <RelativeLayout>
         <Image
-            x:Name="backgroundImage"
+            x:Name="BackgroundImage"
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
-            IsVisible="{Binding ShowBackgroundImageInHymnal}"
+            IsVisible="{Binding BackgroundImageAppearance}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -87,7 +87,7 @@
 
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-            IsVisible="{Binding ShowBackgroundImageInHymnal}"
+            IsVisible="{Binding BackgroundImageAppearance}"
             Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"

@@ -304,4 +304,7 @@
     <value>We had a problem</value>
     <comment>Alert: We had a problem</comment>
   </data>
+  <data name="BackgroundImageAppearance" xml:space="preserve">
+    <value>Background image appearance</value>
+  </data>
 </root>

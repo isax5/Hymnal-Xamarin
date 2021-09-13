@@ -195,4 +195,7 @@
   <data name="Contribute" xml:space="preserve">
     <value>Способствовать</value>
   </data>
+  <data name="BackgroundImageAppearance" xml:space="preserve">
+    <value>Показать фоновое изображение</value>
+  </data>
 </root>

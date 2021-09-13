@@ -33,7 +33,6 @@
 
     <RelativeLayout>
         <Image
-            x:Name="backgroundImage"
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,

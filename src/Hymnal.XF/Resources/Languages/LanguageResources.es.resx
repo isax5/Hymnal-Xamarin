@@ -199,4 +199,7 @@
   <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
     <value>Cambiar a orden numérico</value>
   </data>
+  <data name="BackgroundImageAppearance" xml:space="preserve">
+    <value>Mostrar imagen de fondo en himnario</value>
+  </data>
 </root>

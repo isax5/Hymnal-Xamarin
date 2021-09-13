@@ -23,6 +23,6 @@ namespace Hymnal.XF.Services
 
         bool KeepScreenOn { get; set; }
 
-        bool ShowBackgroundImageInHymnal { get; set; }
+        bool BackgroundImageAppearance { get; set; }
     }
 }

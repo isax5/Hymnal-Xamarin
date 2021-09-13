@@ -83,7 +83,7 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref hymnParameter, value);
         }
 
-        public bool ShowBackgroundImageInHymnal => preferencesService.ShowBackgroundImageInHymnal;
+        public bool BackgroundImageAppearance => preferencesService.BackgroundImageAppearance;
 
         #endregion
 

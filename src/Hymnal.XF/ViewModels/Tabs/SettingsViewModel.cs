@@ -87,13 +87,13 @@ namespace Hymnal.XF.ViewModels
             }
         }
 
-        public bool ShowBackgroundImageInHymnal
+        public bool BackgroundImageAppearance
         {
-            get => preferencesService.ShowBackgroundImageInHymnal;
+            get => preferencesService.BackgroundImageAppearance;
             set
             {
-                preferencesService.ShowBackgroundImageInHymnal = value;
-                RaisePropertyChanged(nameof(ShowBackgroundImageInHymnal));
+                preferencesService.BackgroundImageAppearance = value;
+                RaisePropertyChanged(nameof(BackgroundImageAppearance));
             }
         }
 

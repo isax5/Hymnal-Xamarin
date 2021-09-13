@@ -53,10 +53,10 @@ namespace Hymnal.XF.Services
             set => preferences.Set(nameof(KeepScreenOn), value);
         }
 
-        public bool ShowBackgroundImageInHymnal
+        public bool BackgroundImageAppearance
         {
-            get => preferences.Get(nameof(ShowBackgroundImageInHymnal), true);
-            set => preferences.Set(nameof(ShowBackgroundImageInHymnal), value);
+            get => preferences.Get(nameof(BackgroundImageAppearance), true);
+            set => preferences.Set(nameof(BackgroundImageAppearance), value);
         }
 
         public PreferencesService(IPreferences preferences)
