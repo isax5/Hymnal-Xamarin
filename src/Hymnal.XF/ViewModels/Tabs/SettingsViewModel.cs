@@ -74,7 +74,7 @@ namespace Hymnal.XF.ViewModels
                 if (deviceInfo.Platform == DevicePlatform.iOS ||
                     deviceInfo.Platform == DevicePlatform.Android)
                 {
-                    return deviceDisplay.KeepScreenOn;
+                    return preferencesService.KeepScreenOn;
                 }
 
                 return false;
