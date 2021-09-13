@@ -15,7 +15,6 @@
     x:DataType="viewModels:SettingsViewModel"
     x:TypeArguments="viewModels:SettingsViewModel"
     AutomationId="SettingsPage"
-    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
     Visual="Material">
 
     <ContentPage.IconImageSource>
@@ -324,7 +323,7 @@
             <!--  Developing  -->
             <TableSection
                 x:Name="developerSection"
-                Title="{extensions:Translate Developing}">
+                Title="{extensions:Translate Development}">
 
                 <!--  App version  -->
                 <TextCell

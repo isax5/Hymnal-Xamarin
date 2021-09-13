@@ -11,7 +11,7 @@
     xmlns:views="clr-namespace:Hymnal.XF.Views"
     Title="{Binding Hymn.Number,
                     StringFormat='# {0}'}"
-    iOS:Page.UseSafeArea="True"
+    iOS:Page.UseSafeArea="False"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
