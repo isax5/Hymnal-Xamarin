@@ -44,11 +44,11 @@ namespace Hymnal.XF
             preferencesService.LastVersionOpened = AppInfo.VersionString;
 
             // Last hymnbook opened
-            if (preferencesService is { ConfiguratedHymnalLanguage: null })
+            if (preferencesService is { ConfiguredHymnalLanguage: null })
             {
                 List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l =>
                     l.TwoLetterIsoLanguageName == InfoConstants.CurrentCultureInfo.TwoLetterISOLanguageName);
-                preferencesService.ConfiguratedHymnalLanguage =
+                preferencesService.ConfiguredHymnalLanguage =
                     lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
 

@@ -196,4 +196,7 @@
   <data name="AutomationSettingsPageHelpTextChangeHymn" xml:space="preserve">
     <value>Em seguida, verifique a versão atual</value>
   </data>
+  <data name="BackgroundImageAppearance" xml:space="preserve">
+    <value>Mostrar imagem de fundo no hinário</value>
+  </data>
 </root>

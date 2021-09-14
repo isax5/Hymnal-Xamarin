@@ -54,7 +54,7 @@ namespace Hymnal.XF.ViewModels
             {
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(NumberViewModel) },
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguredHymnalLanguage.Id }
             });
         }
 
@@ -64,7 +64,7 @@ namespace Hymnal.XF.ViewModels
             Busy = true;
             var num = text ?? HymnNumber;
 
-            HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
+            HymnalLanguage language = preferencesService.ConfiguredHymnalLanguage;
             IEnumerable<Hymn> hymns = await hymnsService.GetHymnListAsync(language);
 
             if (int.TryParse(num, out var number))

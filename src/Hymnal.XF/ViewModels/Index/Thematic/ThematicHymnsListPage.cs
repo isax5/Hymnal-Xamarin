@@ -54,7 +54,7 @@ namespace Hymnal.XF.ViewModels
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
 
-            language = this.preferencesService.ConfiguratedHymnalLanguage;
+            language = this.preferencesService.ConfiguredHymnalLanguage;
         }
 
         public override async Task InitializeAsync(INavigationParameters parameters, GenericNavigationParameter<Ambit> parameter)
@@ -73,7 +73,7 @@ namespace Hymnal.XF.ViewModels
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(ThematicHymnsListViewModel) },
                 { "Ambit", Ambit.AmbitName },
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguredHymnalLanguage.Id }
             });
         }
 

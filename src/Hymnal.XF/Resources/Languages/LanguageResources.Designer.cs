@@ -356,5 +356,11 @@ namespace Hymnal.XF.Resources.Languages {
                 return ResourceManager.GetString("Error_WeHadAProblem", resourceCulture);
             }
         }
+        
+        public static string BackgroundImageAppearance {
+            get {
+                return ResourceManager.GetString("BackgroundImageAppearance", resourceCulture);
+            }
+        }
     }
 }

@@ -63,9 +63,9 @@ namespace Hymnal.XF.ViewModels
             this.hymnsService = hymnsService;
             this.preferencesService = preferencesService;
             this.mainThread = mainThread;
-            _language = this.preferencesService.ConfiguratedHymnalLanguage;
+            _language = this.preferencesService.ConfiguredHymnalLanguage;
 
-            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            preferencesService.HymnalLanguageConfiguredChanged += PreferencesServiceHymnalLanguageConfiguredChanged;
 
             observableTextSearchBar
                 .DistinctUntilChanged()
@@ -75,7 +75,7 @@ namespace Hymnal.XF.ViewModels
 
         ~SearchViewModel()
         {
-            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            preferencesService.HymnalLanguageConfiguredChanged -= PreferencesServiceHymnalLanguageConfiguredChanged;
             observableTextSearchBar.DisposeAll();
         }
 
@@ -85,7 +85,7 @@ namespace Hymnal.XF.ViewModels
             Task.Run(() => mainThread.InvokeOnMainThreadAsync(async () => await TextSearchExecuteAsync(string.Empty)));
         }
 
-        private void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
+        private void PreferencesServiceHymnalLanguageConfiguredChanged(object sender, HymnalLanguage e)
         {
             _language = e;
             observableTextSearchBar.NextValue(string.Empty);
@@ -99,7 +99,7 @@ namespace Hymnal.XF.ViewModels
             {
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(SearchViewModel) },
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguredHymnalLanguage.Id }
             });
         }
 

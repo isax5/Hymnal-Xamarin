@@ -16,7 +16,7 @@ namespace Hymnal.XF.Views
             {
                 this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
                 hymnContentLabel.FontSize = 80;
-                backgroundImage.Source = new FileImageSource { File = "Background.png" };
+                BackgroundImage.Source = new FileImageSource { File = "Background.png" };
             }
 
             if (Device.RuntimePlatform != Device.iOS)
