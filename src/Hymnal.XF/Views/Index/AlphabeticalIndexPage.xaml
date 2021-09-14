@@ -10,7 +10,6 @@
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:AlphabeticalIndexViewModel"
     x:TypeArguments="viewModels:AlphabeticalIndexViewModel"
-    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
     Visual="Material">
 
 

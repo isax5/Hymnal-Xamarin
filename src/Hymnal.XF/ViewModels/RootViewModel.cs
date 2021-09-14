@@ -26,7 +26,7 @@ namespace Hymnal.XF.ViewModels
             Analytics.TrackEvent(TrackingConstants.TrackEv.AppOpened, new Dictionary<string, string>
             {
                 { TrackingConstants.TrackEv.AppOpenedScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id },
+                { TrackingConstants.TrackEv.AppOpenedScheme.HymnalVersion, preferencesService.ConfiguredHymnalLanguage.Id },
                 { TrackingConstants.TrackEv.AppOpenedScheme.ThemeConfigurated, AppInfo.RequestedTheme.ToString() }
             });
         }

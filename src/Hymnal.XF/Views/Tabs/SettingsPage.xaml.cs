@@ -17,7 +17,7 @@ namespace Hymnal.XF.Views
 
             if (Device.RuntimePlatform == Device.Tizen)
             {
-                preferencesSection.Remove(fontSizeCell);
+                PreferencesSection.Remove(FontSizeCell);
 
                 developerSection.Remove(developerCell);
                 developerSection.Remove(appVersionCell);

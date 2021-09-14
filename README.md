@@ -1,6 +1,8 @@
 # Adventist Hymnal Xamarin
 > New version of the adventist hymnal multi-platform in Xamarin
 
+> If you like this app, help me supporting this project </br>
+> * <a href="https://www.paypal.me/isax5">Paypal</a>
 
 ## Features
 - Music

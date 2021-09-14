@@ -15,7 +15,6 @@
     x:DataType="viewModels:SettingsViewModel"
     x:TypeArguments="viewModels:SettingsViewModel"
     AutomationId="SettingsPage"
-    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
     Visual="Material">
 
     <ContentPage.IconImageSource>
@@ -46,12 +45,12 @@
         <TableRoot>
             <!--  Display and typography  -->
             <TableSection
-                x:Name="preferencesSection"
+                x:Name="PreferencesSection"
                 Title="{extensions:Translate DisplayAndTypography}"
                 AutomationProperties.IsInAccessibleTree="False">
 
                 <!--  Choose Language  -->
-                <ViewCell x:Name="hymnLanguageCell">
+                <ViewCell>
                     <Grid
                         BackgroundColor="{OnPlatform Default=Transparent,
                                                      Tizen=White}"
@@ -120,9 +119,23 @@
                     </Grid>
                 </ViewCell>
 
+                <!--  Background Image Appearance  -->
+                <ViewCell>
+                    <Grid ColumnDefinitions="*, auto">
+                        <Label
+                            Grid.Column="0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            Text="{extensions:Translate BackgroundImageAppearance}" />
+                        <Switch
+                            Grid.Column="1"
+                            AutomationProperties.Name="{extensions:Translate BackgroundImageAppearance}"
+                            IsToggled="{Binding BackgroundImageAppearance}" />
+                    </Grid>
+                </ViewCell>
+
                 <!--  Font Size  -->
                 <ViewCell
-                    x:Name="fontSizeCell"
+                    x:Name="FontSizeCell"
                     Height="{OnPlatform Default=150,
                                         iOS=150,
                                         Android=150}"
@@ -177,9 +190,7 @@
             </TableSection>
 
             <!--  Support  -->
-            <TableSection
-                x:Name="supportSection"
-                Title="{extensions:Translate Support}">
+            <TableSection Title="{extensions:Translate Support}">
 
                 <!--  Donations  HAY QUE AGREGAR LAS FLAGS  -->
                 <!--<ViewCell>
@@ -310,7 +321,7 @@
             <!--  Developing  -->
             <TableSection
                 x:Name="developerSection"
-                Title="{extensions:Translate Developing}">
+                Title="{extensions:Translate Development}">
 
                 <!--  App version  -->
                 <TextCell

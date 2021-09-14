@@ -26,7 +26,7 @@ namespace Hymnal.XF.ViewModels
             {
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(DevelopersViewModel) },
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguredHymnalLanguage.Id }
             });
         }
     }

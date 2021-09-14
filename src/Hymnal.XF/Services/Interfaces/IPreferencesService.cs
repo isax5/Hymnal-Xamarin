@@ -8,19 +8,21 @@ namespace Hymnal.XF.Services
         int HymnalsFontSize { get; set; }
 
         /// <summary>
-        /// Language configurated in the app
+        /// Language configured in the app
         /// </summary>
-        HymnalLanguage ConfiguratedHymnalLanguage { get; set; }
+        HymnalLanguage ConfiguredHymnalLanguage { get; set; }
 
         /// <summary>
-        /// The language configurated in the app has changed
+        /// The language configured in the app has changed
         /// </summary>
-        event EventHandler<HymnalLanguage> HymnalLanguageConfiguratedChanged;
+        event EventHandler<HymnalLanguage> HymnalLanguageConfiguredChanged;
 
         string LastVersionOpened { get; set; }
 
         int OpeningCounter { get; set; }
 
         bool KeepScreenOn { get; set; }
+
+        bool BackgroundImageAppearance { get; set; }
     }
 }

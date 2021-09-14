@@ -47,15 +47,15 @@ namespace Hymnal.XF.ViewModels
 
         ~NumericalIndexViewModel()
         {
-            preferencesService.HymnalLanguageConfiguratedChanged -= PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            preferencesService.HymnalLanguageConfiguredChanged -= PreferencesServiceHymnalLanguageConfiguredChangedAsync;
         }
 
         public override async Task InitializeAsync(INavigationParameters parameters)
         {
             await base.InitializeAsync(parameters);
-            preferencesService.HymnalLanguageConfiguratedChanged += PreferencesService_HymnalLanguageConfiguratedChangedAsync;
+            preferencesService.HymnalLanguageConfiguredChanged += PreferencesServiceHymnalLanguageConfiguredChangedAsync;
 
-            HymnalLanguage language = preferencesService.ConfiguratedHymnalLanguage;
+            HymnalLanguage language = preferencesService.ConfiguredHymnalLanguage;
             await CheckAsync(language);
         }
 
@@ -67,11 +67,11 @@ namespace Hymnal.XF.ViewModels
             {
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.PageName, nameof(NumericalIndexViewModel) },
                 { TrackingConstants.TrackEv.NavigationReferenceScheme.CultureInfo, InfoConstants.CurrentCultureInfo.Name },
-                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguratedHymnalLanguage.Id }
+                { TrackingConstants.TrackEv.NavigationReferenceScheme.HymnalVersion, preferencesService.ConfiguredHymnalLanguage.Id }
             });
         }
 
-        private async void PreferencesService_HymnalLanguageConfiguratedChangedAsync(object sender, HymnalLanguage e)
+        private async void PreferencesServiceHymnalLanguageConfiguredChangedAsync(object sender, HymnalLanguage e)
         {
             await CheckAsync(e);
         }

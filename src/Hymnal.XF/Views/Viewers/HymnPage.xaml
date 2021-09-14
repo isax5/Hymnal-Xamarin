@@ -11,12 +11,12 @@
     xmlns:views="clr-namespace:Hymnal.XF.Views"
     Title="{Binding Hymn.Number,
                     StringFormat='# {0}'}"
-    iOS:Page.UseSafeArea="True"
+    iOS:Page.UseSafeArea="False"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
     AutomationId="HymnPage"
-    BackgroundColor="{DynamicResource Color.PrimaryBackground}"
+    BackgroundColor="{DynamicResource Color.SecondaryBackground}"
     Visual="Material">
 
     <ContentPage.ToolbarItems>
@@ -75,9 +75,10 @@
 
     <RelativeLayout>
         <Image
-            x:Name="backgroundImage"
+            x:Name="BackgroundImage"
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
+            IsVisible="{Binding BackgroundImageAppearance}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -86,6 +87,7 @@
 
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            IsVisible="{Binding BackgroundImageAppearance}"
             Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                    Property=Height}"
