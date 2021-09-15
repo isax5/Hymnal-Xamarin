@@ -8,6 +8,8 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     Title="{extensions:Translate AdventistHymnal}"
+    android:TabbedPage.IsSmoothScrollEnabled="False"
+    android:TabbedPage.IsSwipePagingEnabled="False"
     android:TabbedPage.ToolbarPlacement="Bottom"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:RootViewModel"
