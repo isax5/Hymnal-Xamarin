@@ -4,15 +4,34 @@
       For more information see the docs on creating custom Linker Settings
       https://docs.microsoft.com/en-us/xamarin/cross-platform/deploy-test/linker
   -->
-  <assembly fullname="Essential.Interfaces">
-    <type fullname="Xamarin.Essentials.Implementation.AppInfoImplementation">
-      <method name=".ctor" />
-    </type>
-  </assembly>
+    <assembly fullname="Hymnal.XF"/>
+    <assembly fullname="Hymnal.XF.Droid"/>
+    <assembly fullname="Hymnal.AzureFunctions.Models"/>
+    <assembly fullname="Hymnal.AzureFunctions.Client"/>
+    <assembly fullname="DryIoc"/>
 
-  <assembly fullname="Prism" />
-  <assembly fullname="Prism.Forms" />
-  <assembly fullname="Prism.DryIoc.Forms" />
-  <assembly fullname="DryIoc" />
+    <!--
+    DEFAULT IMPLEMENTATIONS BUT NOT REALLY NEEDED
+    
+    <assembly fullname="Essential.Interfaces">
+        <type fullname="Xamarin.Essentials.Implementation.AppInfoImplementation">
+            <method name=".ctor"/>
+        </type>
+    </assembly>
+    <assembly fullname="Prism"/>
+    <assembly fullname="Prism.Forms"/>
+    <assembly fullname="Prism.DryIoc.Forms"/>
+    -->
+
+    <!--
+    NOT NEEDED
+    
+    <assembly fullname="MediaManager"/>
+    <assembly fullname="Helpers"/>
+    <assembly fullname="Refit"/>
+    <assembly fullname="Newtonsoft.Json"/>
+    <assembly fullname="System.Text.Json"/>
+    <assembly fullname="System.Net.Http.Json"/>
+    -->
 
 </linker>
