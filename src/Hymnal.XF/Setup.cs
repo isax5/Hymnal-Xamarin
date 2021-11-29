@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.AzureFunctions.Models;
 using Hymnal.XF.Constants;
-using Hymnal.XF.Extensions;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.Models;
+using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.Services;
 using MediaManager;
 using Microsoft.AppCenter;
@@ -26,7 +26,8 @@ namespace Hymnal.XF
     {
         public void InitializeFirstChance(App app)
         {
-            TranslateExtension.CurrentCultureInfo = CultureInfo.InstalledUICulture;
+            VersionTracking.Track();
+            LanguageResources.Culture = CultureInfo.InstalledUICulture;
             InfoConstants.CurrentCultureInfo = CultureInfo.InstalledUICulture;
         }
 
@@ -52,7 +53,7 @@ namespace Hymnal.XF
                     lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
 
-            // Not needed for startup
+            // Not needed for startup time
             Task.Run(() => MainThread.BeginInvokeOnMainThread(delegate
             {
                 var dataStorageService = app.Container.Resolve(typeof(IDataStorageService)) as IDataStorageService;
