@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.AzureFunctions.Models;
 using Hymnal.XF.Constants;
+using Hymnal.XF.Extensions;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.Models;
 using Hymnal.XF.Resources.Languages;
@@ -27,8 +28,10 @@ namespace Hymnal.XF
         public void InitializeFirstChance(App app)
         {
             VersionTracking.Track();
-            LanguageResources.Culture = CultureInfo.InstalledUICulture;
             InfoConstants.CurrentCultureInfo = CultureInfo.InstalledUICulture;
+
+            TranslateExtension.Configure(LanguageResources.ResourceManager);
+            LanguageResources.Culture = CultureInfo.InstalledUICulture;
         }
 
         public void InitializeLastChance(App app)

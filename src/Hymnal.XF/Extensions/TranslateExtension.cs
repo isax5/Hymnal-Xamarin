@@ -1,6 +1,6 @@
 using System;
 using System.Globalization;
-using Hymnal.XF.Resources.Languages;
+using System.Resources;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,8 +11,13 @@ namespace Hymnal.XF.Extensions
     {
         public string Text { get; set; }
 
+        private static ResourceManager languageResources;
+
+        public static void Configure(ResourceManager resourceManager)
+            => languageResources = resourceManager;
+
         public static string GetTranslation(string text, CultureInfo ci = null)
-            => LanguageResources.ResourceManager.GetString(text, ci) ?? $"#Translation: {text}";
+            => languageResources.GetString(text, ci) ?? $"#Translation: {text}";
 
         public object ProvideValue(IServiceProvider serviceProvider)
             => GetTranslation(Text);
