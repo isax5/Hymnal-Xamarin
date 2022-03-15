@@ -12,7 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Helpers\Helpers\Helpers.csproj" />
     <ProjectReference Include="..\Hymnal.AzureFunctions.Models\Hymnal.AzureFunctions.Models.csproj" />
   </ItemGroup>
 
