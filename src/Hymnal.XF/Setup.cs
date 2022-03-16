@@ -5,7 +5,6 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Client;
-using Hymnal.AzureFunctions.Models;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Helpers;
@@ -72,24 +71,8 @@ namespace Hymnal.XF
                     DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
                 }
 
-                // Last Azure values downloaded
-                if (preferencesService.OpeningCounter % 5 != 0 &&
-                    dataStorageService.GetItems<HymnSettingsResponse>() is IList<HymnSettingsResponse> data &&
-                    data.Any())
-                {
-                    azureHymnService.SetNextValues(data);
-                }
-                else
-                {
-                    var hymnSettings = new List<HymnSettingsResponse>();
-                    azureHymnService.ObserveSettings()
-                        .Finally(() =>
-                        {
-                            if (hymnSettings.Any())
-                                dataStorageService.SetItems(hymnSettings);
-                        })
-                        .Subscribe(hymnSetting => hymnSettings.Add(hymnSetting));
-                }
+                // Pre-loading setting values
+                azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
 
                 // Increase opening counter
                 preferencesService.OpeningCounter += 1;
