@@ -26,7 +26,7 @@
     </NuGetPackageImportStamp>
     <AndroidKeyStore>false</AndroidKeyStore>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidLinkSkip>Hymnal.Core;Hymnal.XF.UI;</AndroidLinkSkip>
+    <AndroidLinkSkip></AndroidLinkSkip>
     <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -48,8 +48,6 @@
     <BundleAssemblies>false</BundleAssemblies>
     <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
     <AndroidDexTool>d8</AndroidDexTool>
-    <AndroidLinkSkip>
-    </AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -72,8 +70,6 @@
     <AndroidPackageFormat>aab</AndroidPackageFormat>
     <BundleAssemblies>true</BundleAssemblies>
     <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidLinkSkip>
-    </AndroidLinkSkip>
     <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
   </PropertyGroup>
