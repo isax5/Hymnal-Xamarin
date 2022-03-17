@@ -1,12 +1,11 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Net.Http;
 using Helpers;
 using Hymnal.AzureFunctions.Models;
-using Refit;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using Refit;
 
 namespace Hymnal.AzureFunctions.Client
 {
@@ -24,7 +23,7 @@ namespace Hymnal.AzureFunctions.Client
         {
             httpClient = new HttpClient(new HttpClientDiagnosticsHandler(new HttpClientHandler()))
             {
-                BaseAddress = new Uri(@"https://hymnal-functions.azurewebsites.net/api")
+                BaseAddress = new Uri(@"https://isax5.github.io/hymnal/backend-data/v1")
             };
             var settings = new RefitSettings
             {

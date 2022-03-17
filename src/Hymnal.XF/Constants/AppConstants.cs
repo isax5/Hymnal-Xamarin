@@ -13,7 +13,7 @@
             /// <summary>
             /// Developer promotion Webiste
             /// </summary>
-            public const string DeveloperWebSite = @"https://storage.googleapis.com/hymn-music/about/index.html";
+            public const string DeveloperWebSite = @"https://isax5.github.io/hymnal/";
 
             /// <summary>
             /// GitHub developing website

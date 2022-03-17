@@ -1,50 +1,25 @@
 using System;
 using System.Globalization;
-using System.Net.Mime;
-using System.Reflection;
 using System.Resources;
-using Hymnal.XF.Resources.Languages;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Hymnal.XF.Extensions
 {
-    [ContentProperty(nameof(Text))]
+    [ContentProperty("Text")]
     public sealed class TranslateExtension : IMarkupExtension
     {
-        private static CultureInfo currentCultureInfo;
-        public static CultureInfo CurrentCultureInfo
-        {
-            get => currentCultureInfo;
-            set
-            {
-                LanguageResources.Culture = value;
-                currentCultureInfo = value;
-            }
-        }
-        private const string ResourceId = "Hymnal.XF.Resources.Languages.LanguageResources";
-        private static readonly Lazy<ResourceManager> LanguajesResourcesManager = new Lazy<ResourceManager>(() => new ResourceManager(ResourceId, typeof(TranslateExtension).GetTypeInfo().Assembly));
-
         public string Text { get; set; }
 
+        private static ResourceManager languageResources;
+
+        public static void Configure(ResourceManager resourceManager)
+            => languageResources = resourceManager;
+
         public static string GetTranslation(string text, CultureInfo ci = null)
-        {
-            if (ci == null)
-                ci = CurrentCultureInfo;
-
-            var translation = LanguajesResourcesManager.Value.GetString(text, ci);
-
-            if (translation == null)
-            {
-                return $"#Translation: {text}";
-            }
-
-            return translation;
-        }
+            => languageResources.GetString(text, ci) ?? $"#Translation: {text}";
 
         public object ProvideValue(IServiceProvider serviceProvider)
-        {
-            return GetTranslation(Text);
-        }
+            => GetTranslation(Text);
     }
 }
