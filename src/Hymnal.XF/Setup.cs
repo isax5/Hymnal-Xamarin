@@ -5,11 +5,11 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
 using Hymnal.AzureFunctions.Client;
-using Hymnal.AzureFunctions.Models;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Helpers;
 using Hymnal.XF.Models;
+using Hymnal.XF.Resources.Languages;
 using Hymnal.XF.Services;
 using MediaManager;
 using Microsoft.AppCenter;
@@ -26,8 +26,11 @@ namespace Hymnal.XF
     {
         public void InitializeFirstChance(App app)
         {
-            TranslateExtension.CurrentCultureInfo = CultureInfo.InstalledUICulture;
+            VersionTracking.Track();
             InfoConstants.CurrentCultureInfo = CultureInfo.InstalledUICulture;
+
+            TranslateExtension.Configure(LanguageResources.ResourceManager);
+            LanguageResources.Culture = CultureInfo.InstalledUICulture;
         }
 
         public void InitializeLastChance(App app)
@@ -52,7 +55,7 @@ namespace Hymnal.XF
                     lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
             }
 
-            // Not needed for startup
+            // Not needed for startup time
             Task.Run(() => MainThread.BeginInvokeOnMainThread(delegate
             {
                 var dataStorageService = app.Container.Resolve(typeof(IDataStorageService)) as IDataStorageService;
@@ -68,24 +71,8 @@ namespace Hymnal.XF
                     DeviceDisplay.KeepScreenOn = preferencesService.KeepScreenOn;
                 }
 
-                // Last Azure values downloaded
-                if (preferencesService.OpeningCounter % 5 != 0 &&
-                    dataStorageService.GetItems<HymnSettingsResponse>() is IList<HymnSettingsResponse> data &&
-                    data.Any())
-                {
-                    azureHymnService.SetNextValues(data);
-                }
-                else
-                {
-                    var hymnSettings = new List<HymnSettingsResponse>();
-                    azureHymnService.ObserveSettings()
-                        .Finally(() =>
-                        {
-                            if (hymnSettings.Any())
-                                dataStorageService.SetItems(hymnSettings);
-                        })
-                        .Subscribe(hymnSetting => hymnSettings.Add(hymnSetting));
-                }
+                // Pre-loading setting values
+                azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
 
                 // Increase opening counter
                 preferencesService.OpeningCounter += 1;
