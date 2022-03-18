@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Reactive.Linq;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Hymnal.AzureFunctions.Client;
 using Hymnal.AzureFunctions.Extensions;
 using Hymnal.XF.Constants;
@@ -26,7 +27,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
-    public sealed class HymnViewModel : BaseViewModelParameter<HymnIdParameter>
+    public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParameter>
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
@@ -43,45 +44,20 @@ namespace Hymnal.XF.ViewModels
         public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
         public int HymnFontSize => preferencesService.HymnalsFontSize;
 
+        [ObservableProperty]
         private Hymn hymn;
 
-        public Hymn Hymn
-        {
-            get => hymn;
-            set => SetProperty(ref hymn, value);
-        }
-
+        [ObservableProperty]
         private HymnalLanguage language;
 
-        public HymnalLanguage Language
-        {
-            get => language;
-            set => SetProperty(ref language, value);
-        }
-
+        [ObservableProperty]
         private bool isFavorite;
 
-        public bool IsFavorite
-        {
-            get => isFavorite;
-            set => SetProperty(ref isFavorite, value);
-        }
-
+        [ObservableProperty]
         private bool isPlaying;
 
-        public bool IsPlaying
-        {
-            get => isPlaying;
-            set => SetProperty(ref isPlaying, value);
-        }
-
+        [ObservableProperty]
         private HymnIdParameter hymnParameter;
-
-        public HymnIdParameter HymnParameter
-        {
-            get => hymnParameter;
-            set => SetProperty(ref hymnParameter, value);
-        }
 
         public bool BackgroundImageAppearance => preferencesService.BackgroundImageAppearance;
 

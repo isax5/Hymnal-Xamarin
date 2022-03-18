@@ -31,7 +31,7 @@ namespace Hymnal.XF.ViewModels
                     return;
 
                 SelectedHymnExecuteAsync(value).ConfigureAwait(true);
-                RaisePropertyChanged(nameof(SelectedHymn));
+                OnPropertyChanged(nameof(SelectedHymn));
             }
         }
 

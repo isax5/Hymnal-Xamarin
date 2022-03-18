@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
@@ -11,23 +12,15 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public sealed class MusicSheetViewModel : BaseViewModelParameter<HymnIdParameter>
+    public sealed partial class MusicSheetViewModel : BaseViewModelParameter<HymnIdParameter>
     {
         private readonly IHymnsService hymnsService;
+
+        [ObservableProperty]
         private string imageSource;
-        public string ImageSource
-        {
-            get => imageSource;
-            set => SetProperty(ref imageSource, value);
-        }
 
+        [ObservableProperty]
         private Hymn hymn;
-
-        public Hymn Hymn
-        {
-            get => hymn;
-            set => SetProperty(ref hymn, value);
-        }
 
         public MusicSheetViewModel(
             INavigationService navigationService,

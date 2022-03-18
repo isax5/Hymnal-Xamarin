@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
@@ -11,17 +12,13 @@ using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public sealed class NumberViewModel : BaseViewModel
+    public sealed partial class NumberViewModel : BaseViewModel
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
+        [ObservableProperty]
         private string hymnNumber;
-        public string HymnNumber
-        {
-            get => hymnNumber;
-            set => SetProperty(ref hymnNumber, value);
-        }
 
         #region Commands
         public DelegateCommand<string> OpenHymnCommand { get; internal set; }

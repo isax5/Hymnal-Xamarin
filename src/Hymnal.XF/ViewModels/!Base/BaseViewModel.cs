@@ -1,28 +1,18 @@
 using System.Threading.Tasks;
-using Hymnal.XF.Constants;
-using Hymnal.XF.Views;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Prism.AppModel;
-using Prism.Commands;
-using Prism.Mvvm;
 using Prism.Navigation;
 
 namespace Hymnal.XF.ViewModels
 {
-    public abstract class BaseViewModel : BindableBase, IInitialize, IInitializeAsync, INavigationAware, IDestructible, IPageLifecycleAware
+    public abstract partial class BaseViewModel : ObservableObject, IInitialize, IInitializeAsync, INavigationAware, IDestructible, IPageLifecycleAware
     {
         public readonly INavigationService NavigationService;
 
         #region Properties
+        [ObservableProperty]
+        [AlsoNotifyChangeFor(nameof(NotBusy))]
         private bool busy = false;
-        public bool Busy
-        {
-            get => busy;
-            set
-            {
-                SetProperty(ref busy, value);
-                RaisePropertyChanged(nameof(NotBusy));
-            }
-        }
 
         public bool NotBusy => !busy;
         #endregion

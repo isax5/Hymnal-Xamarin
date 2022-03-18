@@ -3,7 +3,7 @@ using NavigationResult = Hymnal.XF.Models.Parameters.NavigationResult;
 
 namespace Hymnal.XF.ViewModels
 {
-    public abstract class BaseViewModelResult<TResult> : BaseViewModel where TResult : NavigationResult
+    public abstract partial class BaseViewModelResult<TResult> : BaseViewModel where TResult : NavigationResult
     {
         protected BaseViewModelResult(INavigationService navigationService) : base(navigationService)
         { }

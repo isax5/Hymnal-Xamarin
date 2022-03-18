@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Models;
 using Hymnal.XF.Resources.Languages;
@@ -15,7 +16,7 @@ using Xamarin.Essentials.Interfaces;
 
 namespace Hymnal.XF.ViewModels
 {
-    public sealed class SettingsViewModel : BaseViewModel
+    public sealed partial class SettingsViewModel : BaseViewModel
     {
         private readonly IPreferencesService preferencesService;
         private readonly IPageDialogService dialogService;
@@ -43,29 +44,14 @@ namespace Hymnal.XF.ViewModels
         public int MinimumHymnFontSize => AppConstants.MINIMUM_HYMNALS_FONT_SIZE;
         public int MaximumHymnFontSize => AppConstants.MAXIMUM_HYMNALS_FONT_SIZE;
 
+        [ObservableProperty]
         private string appVersionString;
 
-        public string AppVersionString
-        {
-            get => appVersionString;
-            set => SetProperty(ref appVersionString, value);
-        }
-
+        [ObservableProperty]
         private string appBuildString;
 
-        public string AppBuildString
-        {
-            get => appBuildString;
-            set => SetProperty(ref appBuildString, value);
-        }
-
+        [ObservableProperty]
         private HymnalLanguage hymnalLanguage;
-
-        public HymnalLanguage HymnalLanguage
-        {
-            get => hymnalLanguage;
-            set => SetProperty(ref hymnalLanguage, value);
-        }
 
         public bool KeepScreenOn
         {
@@ -83,7 +69,7 @@ namespace Hymnal.XF.ViewModels
             {
                 deviceDisplay.KeepScreenOn = value;
                 preferencesService.KeepScreenOn = value;
-                RaisePropertyChanged(nameof(KeepScreenOn));
+                OnPropertyChanged(nameof(KeepScreenOn));
             }
         }
 
@@ -93,7 +79,7 @@ namespace Hymnal.XF.ViewModels
             set
             {
                 preferencesService.BackgroundImageAppearance = value;
-                RaisePropertyChanged(nameof(BackgroundImageAppearance));
+                OnPropertyChanged(nameof(BackgroundImageAppearance));
             }
         }
 

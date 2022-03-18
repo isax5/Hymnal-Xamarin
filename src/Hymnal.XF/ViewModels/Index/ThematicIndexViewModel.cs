@@ -29,7 +29,7 @@ namespace Hymnal.XF.ViewModels
                     return;
 
                 SelectedThematicExecuteAsync(value).ConfigureAwait(true);
-                RaisePropertyChanged(nameof(SelectedThematic));
+                OnPropertyChanged(nameof(SelectedThematic));
             }
         }
 

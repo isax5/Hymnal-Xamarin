@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Extensions;
 using Hymnal.XF.Models;
@@ -14,18 +15,14 @@ namespace Hymnal.XF.ViewModels
     /// <summary>
     /// Navigable from <see cref="ThematicSubGroupViewModel"/>
     /// </summary>
-    public sealed class ThematicHymnsListViewModel : BaseViewModelParameter<GenericNavigationParameter<Ambit>>
+    public sealed partial class ThematicHymnsListViewModel : BaseViewModelParameter<GenericNavigationParameter<Ambit>>
     {
         private readonly IHymnsService hymnsService;
         private readonly IPreferencesService preferencesService;
 
         #region Properties
+        [ObservableProperty]
         private Ambit ambit;
-        public Ambit Ambit
-        {
-            get => ambit;
-            set => SetProperty(ref ambit, value);
-        }
 
         public ObservableRangeCollection<Hymn> Hymns { get; } = new();
 
@@ -38,7 +35,7 @@ namespace Hymnal.XF.ViewModels
                     return;
 
                 SelectedHymnExecuteAsync(value).ConfigureAwait(true);
-                RaisePropertyChanged(nameof(SelectedHymn));
+                OnPropertyChanged(nameof(SelectedHymn));
             }
         }
 

@@ -1,17 +1,14 @@
 using System.Threading.Tasks;
+using CommunityToolkit.Mvvm.ComponentModel;
 using Prism.Navigation;
 using NavigationParameter = Hymnal.XF.Models.Parameters.NavigationParameter;
 
 namespace Hymnal.XF.ViewModels
 {
-    public abstract class BaseViewModelParameter<TParameter> : BaseViewModel where TParameter : NavigationParameter
+    public abstract partial class BaseViewModelParameter<TParameter> : BaseViewModel where TParameter : NavigationParameter
     {
+        [ObservableProperty]
         private TParameter parameter;
-        public TParameter Parameter
-        {
-            get => parameter;
-            private set => SetProperty(ref parameter, value);
-        }
 
         protected BaseViewModelParameter(INavigationService navigationService) : base(navigationService)
         { }
