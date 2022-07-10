@@ -47,6 +47,7 @@
     <CodesignKey>Apple Distribution: Isaac Rebolledo Leal (NN5QG884Y4)</CodesignKey>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <OptimizePNGs>false</OptimizePNGs>
+    <CodesignProvision>Automático</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
     <DebugSymbols>true</DebugSymbols>
@@ -85,6 +86,7 @@
     <BuildIpa>true</BuildIpa>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     -->
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(RunConfiguration)' == 'Default' ">
     <AppExtensionDebugBundleId />
