@@ -32,5 +32,14 @@ namespace Hymnal.XF.Views
             if (string.IsNullOrWhiteSpace(HymnNumberEntry.Text))
                 HymnNumberEntry.Focus();
         }
+
+        private void HymnNumberEntry_Focused(object sender, FocusEventArgs e)
+        {
+            Dispatcher.BeginInvokeOnMainThread(() =>
+            {
+                HymnNumberEntry.CursorPosition = 0;
+                HymnNumberEntry.SelectionLength = HymnNumberEntry.Text != null ? HymnNumberEntry.Text.Length : 0;
+            });
+        }
     }
 }

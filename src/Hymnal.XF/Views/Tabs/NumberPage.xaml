@@ -116,6 +116,7 @@
                             BackgroundColor="Transparent"
                             FontAttributes="Bold"
                             FontSize="40"
+                            Focused="HymnNumberEntry_Focused"
                             HorizontalOptions="CenterAndExpand"
                             HorizontalTextAlignment="Center"
                             Keyboard="Numeric"
