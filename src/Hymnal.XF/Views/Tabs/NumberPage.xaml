@@ -122,6 +122,9 @@
                             Keyboard="Numeric"
                             Placeholder="...."
                             PlaceholderColor="{DynamicResource Color.PrimaryLight}"
+                            ReturnCommand="{Binding OpenHymnCommand}"
+                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry},
+                                                             Path=Text}"
                             Text="{Binding HymnNumber}"
                             TextColor="{DynamicResource Color.PrimaryText}"
                             VerticalOptions="CenterAndExpand"
