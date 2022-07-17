@@ -69,7 +69,7 @@ namespace Hymnal.XF.ViewModels
 
             if (int.TryParse(num, out var number))
             {
-                if (number < 0 || number > hymns.Count())
+                if (number < 1 || number > hymns.Count())
                 {
                     Busy = false;
                     return;
