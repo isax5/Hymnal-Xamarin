@@ -1,6 +1,6 @@
 [
   {
-    "thematic": "Workship",
+    "thematic": "Worship",
     "ambits": [
       {
         "ambit": "Adoration and Praise",
@@ -49,7 +49,7 @@
     "thematic": "God The Father",
     "ambits": [
       {
-        "ambit": "Love Of God",
+        "ambit": "Love of God",
         "star": 74,
         "end": 81,
         "backimage": "Fondo78a92"
@@ -120,7 +120,7 @@
         "backimage": "Fondo238a244"
       },
       {
-        "ambit": "Love of Christ For Us",
+        "ambit": "Love of Christ for Us",
         "star": 181,
         "end": 199,
         "backimage": "Fondo238a244"
@@ -157,10 +157,10 @@
     ]
   },
   {
-    "thematic": "Holy Scripture",
+    "thematic": "Holy Scriptures",
     "ambits": [
       {
-        "ambit": "Holy Scripture",
+        "ambit": "Holy Scriptures",
         "star": 271,
         "end": 278,
         "backimage": "Fondo209a237"
@@ -225,8 +225,8 @@
       },
       {
         "ambit": "Church Dedication",
-        "star": 576,
-        "end": 576,
+        "star": 376,
+        "end": 376,
         "backimage": "Fondo535a550"
       },
       {
@@ -277,7 +277,7 @@
         "backimage": "Fondo608a613"
       },
       {
-        "ambit": "Resurrection of The Saints",
+        "ambit": "Resurrection of the Saints",
         "star": 418,
         "end": 419,
         "backimage": "Fondo614a614"
@@ -305,7 +305,7 @@
     "thematic": "Christian Life",
     "ambits": [
       {
-        "ambit": "Our Love For God",
+        "ambit": "Our Love for God",
         "star": 455,
         "end": 460,
         "backimage": "Fondo589a589"
@@ -401,7 +401,7 @@
         "backimage": "Fondo614a614"
       },
       {
-        "ambit": "Love and Country",
+        "ambit": "Love of Country",
         "star": 645,
         "end": 649,
         "backimage": "Fondo614a614"
