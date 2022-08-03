@@ -59,14 +59,6 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref carouselHymns, value);
         }
 
-        private int carouselPosition;
-
-        public int CarouselPosition
-        {
-            get => carouselPosition;
-            set => SetProperty(ref carouselPosition, value);
-        }
-
         private Hymn carouselItem;
 
         public Hymn CarouselItem
@@ -167,7 +159,6 @@ namespace Hymnal.XF.ViewModels
             HymnParameter = parameter;
             Language = HymnParameter.HymnalLanguage;
             CarouselHymns = await hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage);
-            CarouselPosition = HymnParameter.Number - 1;
 
             try
             {
@@ -177,6 +168,7 @@ namespace Hymnal.XF.ViewModels
             {
                 ex.Report();
             }
+            CarouselItem = Hymn;
 
             IsPlaying = mediaManager.IsPlaying();
 

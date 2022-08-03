@@ -73,9 +73,7 @@
     </ContentPage.ToolbarItems>
 
     <CarouselView
-        x:Name="HymnCarouselView"
         ItemsSource="{Binding CarouselHymns}"
-        Position="{Binding CarouselPosition}"
         CurrentItem="{Binding CarouselItem}"
         PositionChangedCommand="{Binding PositionChangedCommand}"
         Loop="False" >
