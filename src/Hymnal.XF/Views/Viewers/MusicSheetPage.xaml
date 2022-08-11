@@ -12,18 +12,20 @@
     x:TypeArguments="viewModels:MusicSheetViewModel"
     Visual="Material">
 
-    <ScrollView>
-        <StackLayout Margin="5">
-            <StackLayout.GestureRecognizers>
-                <TapGestureRecognizer Tapped="StackLayoutTapped" />
-            </StackLayout.GestureRecognizers>
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_1.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_2.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_3.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_4.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_5.png'}" />
-        </StackLayout>
-    </ScrollView>
+    <views:PinchToZoomContainer>
+        <views:PinchToZoomContainer.GestureRecognizers>
+            <TapGestureRecognizer Tapped="StackLayoutTapped" />
+        </views:PinchToZoomContainer.GestureRecognizers>
+        <views:PinchToZoomContainer.Content>
+            <StackLayout Margin="5">
+                <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}.png'}" />
+                <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_1.png'}" />
+                <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_2.png'}" />
+                <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_3.png'}" />
+                <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_4.png'}" />
+                <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_5.png'}" />
+           </StackLayout>
+        </views:PinchToZoomContainer.Content>
+    </views:PinchToZoomContainer>
 
 </views:BaseContentPage>
