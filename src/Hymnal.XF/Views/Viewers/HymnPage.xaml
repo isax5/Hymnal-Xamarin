@@ -6,13 +6,14 @@
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
     xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:models="clr-namespace:Hymnal.XF.Models"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{Binding Hymn.Number,
-                    StringFormat='# {0}'}"
+    Title="{Binding CurrentHymn.Number, StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="False"
     prism:ViewModelLocator.AutowireViewModel="True"
+    x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
     AutomationId="HymnPage"
     BackgroundColor="{DynamicResource Color.SecondaryBackground}"
@@ -23,29 +24,23 @@
             x:Name="CloseToolbar"
             AutomationId="ClosePageToolbar"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageClose}"
-            Command="{Binding CloseCommand}"
+            Command="{prism:GoBack}"
             Priority="-1"
             Text="{extensions:Translate Generic_Close}" />
         <ToolbarItem
             x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"
-            AutomationProperties.HelpText="{Binding IsPlaying,
-                                                    Converter={StaticResource TranslateConverter},
-                                                    ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
+            AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
-            IconImageSource="{Binding IsPlaying,
-                                      StringFormat='ToolbarPlaying{0}'}"
+            IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.HelpText="{Binding IsFavorite,
-                                                    Converter={StaticResource TranslateConverter},
-                                                    ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
+            AutomationProperties.HelpText="{Binding IsFavorite, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
-            IconImageSource="{Binding IsFavorite,
-                                      StringFormat='ToolbarFavorite{0}'}"
+            IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
             x:Name="SheetToolbar"
@@ -54,9 +49,7 @@
             Command="{Binding OpenSheetCommand}"
             Priority="3">
             <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
-                    Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}" Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -65,23 +58,21 @@
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-                    Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
     <CarouselView
+        CurrentItem="{Binding CurrentHymn}"
         ItemsSource="{Binding CarouselHymns}"
-        CurrentItem="{Binding CarouselItem}"
-        PositionChangedCommand="{Binding PositionChangedCommand}"
-        Loop="False" >
+        Loop="False"
+        PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
         <CarouselView.ItemTemplate>
-            <DataTemplate>
+            <DataTemplate x:DataType="models:Hymn">
                 <RelativeLayout>
                     <Image
-                       x:Name="BackgroundImage"
+                        x:Name="BackgroundImage"
                         Aspect="AspectFill"
                         AutomationProperties.IsInAccessibleTree="False"
                         IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
