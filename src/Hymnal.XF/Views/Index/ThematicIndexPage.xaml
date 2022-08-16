@@ -41,13 +41,10 @@
                                                                    Property=Height}"
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
-            SelectedItem="{Binding SelectedThematic,
-                                   Mode=TwoWay}">
+            SelectedItem="{Binding SelectedThematic, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell
-                        Text="{Binding ThematicName}"
-                        TextColor="{DynamicResource Color.PrimaryText}" />
+                    <TextCell Text="{Binding ThematicName}" TextColor="{DynamicResource Color.PrimaryText}" />
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

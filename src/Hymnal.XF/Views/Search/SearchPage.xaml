@@ -63,8 +63,7 @@
                 BackgroundColor="Transparent"
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding Hymns}"
-                SelectedItem="{Binding SelectedHymn,
-                                       Mode=TwoWay}"
+                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

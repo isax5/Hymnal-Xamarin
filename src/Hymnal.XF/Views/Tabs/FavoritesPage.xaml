@@ -17,9 +17,7 @@
     Visual="Material">
 
     <ContentPage.IconImageSource>
-        <FontImageSource
-            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-            Glyph="{x:Static constans:FontAwesomeIcons.Heart}" />
+        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Heart}" />
     </ContentPage.IconImageSource>
 
     <ContentPage.Content>
@@ -53,8 +51,7 @@
                 RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                       Property=Width}"
                 RowHeight="50"
-                SelectedItem="{Binding SelectedHymn,
-                                       Mode=TwoWay}">
+                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -63,8 +60,7 @@
                             <!--  Working in for this case: Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"  -->
                             <ViewCell.ContextActions>
                                 <MenuItem
-                                    Command="{Binding Path=BindingContext.DeleteHymnCommand,
-                                                      Source={x:Reference Name=list}}"
+                                    Command="{Binding Path=BindingContext.DeleteHymnCommand, Source={x:Reference Name=list}}"
                                     CommandParameter="{Binding .}"
                                     IsDestructive="True"
                                     Text="{extensions:Translate Delete}" />

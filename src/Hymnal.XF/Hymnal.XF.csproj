@@ -1854,6 +1854,8 @@
 
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' ">
     <EmbeddedResource Include="Resources\Assets\MusicSheets\PianoSheet_NewHymnal_en_001.png" />
+    <EmbeddedResource Include="Resources\Assets\MusicSheets\PianoSheet_NewHymnal_en_004.png" />
+    <EmbeddedResource Include="Resources\Assets\MusicSheets\PianoSheet_NewHymnal_en_004_1.png" />
     <EmbeddedResource Include="Resources\Assets\MusicSheets\PianoSheet_NewHymnal_es_001.png" />
     <EmbeddedResource Include="Resources\Assets\MusicSheets\PianoSheet_NewHymnal_ru_001.png" />
   </ItemGroup>

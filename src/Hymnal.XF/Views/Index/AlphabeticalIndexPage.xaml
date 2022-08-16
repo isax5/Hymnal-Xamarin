@@ -45,8 +45,7 @@
             RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                   Property=Width}"
             RowHeight="50"
-            SelectedItem="{Binding SelectedHymn,
-                                   Mode=TwoWay}">
+            SelectedItem="{Binding SelectedHymn, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>

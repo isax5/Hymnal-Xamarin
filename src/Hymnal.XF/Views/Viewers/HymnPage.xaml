@@ -6,11 +6,11 @@
     xmlns:constans="clr-namespace:Hymnal.XF.Constants"
     xmlns:extensions="clr-namespace:Hymnal.XF.Extensions"
     xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+    xmlns:models="clr-namespace:Hymnal.XF.Models"
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{Binding Hymn.Number,
-                    StringFormat='# {0}'}"
+    Title="{Binding CurrentHymn.Number, StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="False"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:HymnViewModel"
@@ -24,29 +24,22 @@
             x:Name="CloseToolbar"
             AutomationId="ClosePageToolbar"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageClose}"
-            Command="{Binding CloseCommand}"
+            Command="{prism:GoBack}"
             Priority="-1"
             Text="{extensions:Translate Generic_Close}" />
         <ToolbarItem
-            x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"
-            AutomationProperties.HelpText="{Binding IsPlaying,
-                                                    Converter={StaticResource TranslateConverter},
-                                                    ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
+            AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
-            IconImageSource="{Binding IsPlaying,
-                                      StringFormat='ToolbarPlaying{0}'}"
+            IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.HelpText="{Binding IsFavorite,
-                                                    Converter={StaticResource TranslateConverter},
-                                                    ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
+            AutomationProperties.HelpText="{Binding IsFavorite, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
-            IconImageSource="{Binding IsFavorite,
-                                      StringFormat='ToolbarFavorite{0}'}"
+            IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
             x:Name="SheetToolbar"
@@ -55,9 +48,7 @@
             Command="{Binding OpenSheetCommand}"
             Priority="3">
             <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
-                    Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}" Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -66,68 +57,74 @@
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-                    Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
 
-    <RelativeLayout>
-        <Image
-            x:Name="BackgroundImage"
-            Aspect="AspectFill"
-            AutomationProperties.IsInAccessibleTree="False"
-            IsVisible="{Binding BackgroundImageAppearance}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}"
-            Source="{DynamicResource BackgroundImageFile}" />
+    <CarouselView
+        CurrentItem="{Binding CurrentHymn}"
+        ItemsSource="{Binding CarouselHymns}"
+        Loop="False"
+        PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
+        <CarouselView.ItemTemplate>
+            <DataTemplate x:DataType="models:Hymn">
+                <RelativeLayout>
+                    <Image
+                        Aspect="AspectFill"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                               Property=Height}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width}"
+                        Source="{DynamicResource BackgroundImageFile}" />
 
-        <StackLayout
-            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-            IsVisible="{Binding BackgroundImageAppearance}"
-            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}" />
-        <ScrollView
-            Padding="10,20"
-            RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                   Property=Height}"
-            RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                  Property=Width}">
-            <StackLayout Spacing="20">
+                    <StackLayout
+                        BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                        Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                               Property=Height}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width}" />
+                    <ScrollView
+                        Padding="10,20"
+                        RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                               Property=Height}"
+                        RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+                                                                              Property=Width}"
+                        VerticalScrollBarVisibility="Never">
+                        <StackLayout Spacing="20">
 
-                <Label
-                    x:Name="hymnTitleLabel"
-                    AutomationId="HymnTitleLabel"
-                    AutomationProperties.HelpText="{Binding Hymn.Title}"
-                    AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
-                    FontSize="{Binding HymnTitleFontSize}"
-                    HorizontalOptions="FillAndExpand"
-                    HorizontalTextAlignment="Center"
-                    IsVisible="{OnPlatform Default=True,
-                                           Tizen=False}"
-                    Text="{Binding Hymn.Title}"
-                    TextColor="{DynamicResource Color.PrimaryText}" />
+                            <Label
+                                AutomationProperties.HelpText="{Binding Title}"
+                                AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
+                                FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                IsVisible="{OnPlatform Default=True,
+                                                       Tizen=False}"
+                                Text="{Binding Title}"
+                                TextColor="{DynamicResource Color.PrimaryText}" />
 
-                <Label
-                    x:Name="hymnContentLabel"
-                    Margin="10"
-                    AutomationId="HymnContentLabel"
-                    AutomationProperties.HelpText="{Binding Hymn.Content}"
-                    AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
-                    FontSize="{Binding HymnFontSize}"
-                    HorizontalTextAlignment="Center"
-                    LineBreakMode="WordWrap"
-                    Text="{Binding Hymn.Content}"
-                    TextColor="{DynamicResource Color.PrimaryText}" />
-            </StackLayout>
-        </ScrollView>
+                            <Label
+                                x:Name="hymnContentLabel"
+                                Margin="10"
+                                AutomationId="HymnContentLabel"
+                                AutomationProperties.HelpText="{Binding Content}"
+                                AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
+                                FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="WordWrap"
+                                Text="{Binding Content}"
+                                TextColor="{DynamicResource Color.PrimaryText}" />
+                        </StackLayout>
+                    </ScrollView>
 
-    </RelativeLayout>
+                </RelativeLayout>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
 
 </views:BaseContentPage>
