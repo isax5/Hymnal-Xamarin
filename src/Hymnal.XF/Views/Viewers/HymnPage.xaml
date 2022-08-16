@@ -28,7 +28,6 @@
             Priority="-1"
             Text="{extensions:Translate Generic_Close}" />
         <ToolbarItem
-            x:Name="MusicToolbar"
             AutomationId="PlayPauseMusicToolbar"
             AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPagePlayer}"
@@ -72,7 +71,6 @@
             <DataTemplate x:DataType="models:Hymn">
                 <RelativeLayout>
                     <Image
-                        x:Name="BackgroundImage"
                         Aspect="AspectFill"
                         AutomationProperties.IsInAccessibleTree="False"
                         IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
@@ -95,15 +93,14 @@
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                                Property=Height}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
-                                                                              Property=Width}">
+                                                                              Property=Width}"
+                        VerticalScrollBarVisibility="Never">
                         <StackLayout Spacing="20">
 
                             <Label
-                                x:Name="hymnTitleLabel"
-                                AutomationId="HymnTitleLabel"
                                 AutomationProperties.HelpText="{Binding Title}"
                                 AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
-                                FontSize="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=HymnTitleFontSize}"
+                                FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
                                 HorizontalOptions="FillAndExpand"
                                 HorizontalTextAlignment="Center"
                                 IsVisible="{OnPlatform Default=True,
@@ -117,7 +114,7 @@
                                 AutomationId="HymnContentLabel"
                                 AutomationProperties.HelpText="{Binding Content}"
                                 AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
-                                FontSize="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=HymnFontSize}"
+                                FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
                                 HorizontalTextAlignment="Center"
                                 LineBreakMode="WordWrap"
                                 Text="{Binding Content}"
