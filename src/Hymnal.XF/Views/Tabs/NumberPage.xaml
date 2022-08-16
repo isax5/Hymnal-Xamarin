@@ -18,9 +18,7 @@
     Visual="Material">
 
     <ContentPage.IconImageSource>
-        <FontImageSource
-            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-            Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
+        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.BookReader}" />
     </ContentPage.IconImageSource>
 
     <ContentPage.ToolbarItems>
@@ -31,9 +29,7 @@
             Command="{Binding OpenRecordsCommand}"
             Priority="-1">
             <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-                    Glyph="{x:Static constans:FontAwesomeIcons.History}" />
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.History}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -42,9 +38,7 @@
             Command="{Binding OpenSearchCommand}"
             Priority="1">
             <ToolbarItem.IconImageSource>
-                <FontImageSource
-                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-                    Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
+                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Search}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -88,8 +82,7 @@
                         HorizontalOptions="CenterAndExpand"
                         Opacity="0.3"
                         VerticalOptions="FillAndExpand"
-                        WidthRequest="{Binding Source={x:Reference EntryContainer},
-                                               Path=Width}" />
+                        WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />
 
                     <StackLayout
                         x:Name="EntryContainer"
@@ -114,26 +107,23 @@
                             AutomationProperties.HelpText="{extensions:Translate AutomationNumberPageHelpTextEntry}"
                             AutomationProperties.Name="{extensions:Translate AutomationNumberPageEntry}"
                             BackgroundColor="Transparent"
+                            Focused="HymnNumberEntry_Focused"
                             FontAttributes="Bold"
                             FontSize="40"
-                            Focused="HymnNumberEntry_Focused"
                             HorizontalOptions="CenterAndExpand"
                             HorizontalTextAlignment="Center"
                             Keyboard="Numeric"
                             Placeholder="...."
                             PlaceholderColor="{DynamicResource Color.PrimaryLight}"
                             ReturnCommand="{Binding OpenHymnCommand}"
-                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry},
-                                                             Path=Text}"
+                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
                             Text="{Binding HymnNumber}"
                             TextColor="{DynamicResource Color.PrimaryText}"
                             VerticalOptions="CenterAndExpand"
                             Visual="Default"
                             WidthRequest="150">
                             <Entry.Behaviors>
-                                <behaviors:FastEntryBehaviour
-                                    IsNumeric="True"
-                                    Mask="###" />
+                                <behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />
                             </Entry.Behaviors>
                             <Entry.Effects>
                                 <effects:NoBorderLineEffect />
@@ -148,8 +138,7 @@
                     AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenHymnButton}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnCommand}"
-                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry},
-                                               Path=Text}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
                     HorizontalOptions="CenterAndExpand"
                     Text="{extensions:Translate Generic_Open}"
                     WidthRequest="200">

@@ -47,8 +47,7 @@
                 BackgroundColor="Transparent"
                 ItemSizingStrategy="MeasureFirstItem"
                 ItemsSource="{Binding Hymns}"
-                SelectedItem="{Binding SelectedHymn,
-                                       Mode=TwoWay}"
+                SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"
                 SelectionMode="Single">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
@@ -100,8 +99,7 @@
                                 Margin="5,0,0,0"
                                 AutomationProperties.IsInAccessibleTree="False"
                                 FontSize="Micro"
-                                Text="{Binding Item1.SavedAt,
-                                               StringFormat='{0:dd/MM}'}"
+                                Text="{Binding Item1.SavedAt, StringFormat='{0:dd/MM}'}"
                                 TextColor="{DynamicResource Color.SecondaryText}"
                                 VerticalOptions="CenterAndExpand" />
 
