@@ -15,8 +15,8 @@ namespace Hymnal.XF.Views
             if (Device.RuntimePlatform == Device.Tizen)
             {
                 this.SetBinding(TitleProperty, $"{nameof(ViewModel.Hymn)}.{nameof(ViewModel.Hymn.Title)}");
-                hymnContentLabel.FontSize = 80;
-                BackgroundImage.Source = new FileImageSource { File = "Background.png" };
+//                hymnContentLabel.FontSize = 80;
+//                BackgroundImage.Source = new FileImageSource { File = "Background.png" };
             }
 
             if (Device.RuntimePlatform != Device.iOS)

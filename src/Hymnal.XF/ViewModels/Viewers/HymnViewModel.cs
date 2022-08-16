@@ -51,6 +51,22 @@ namespace Hymnal.XF.ViewModels
             set => SetProperty(ref hymn, value);
         }
 
+        private IEnumerable<Hymn> carouselHymns;
+
+        public IEnumerable<Hymn> CarouselHymns
+        {
+            get => carouselHymns;
+            set => SetProperty(ref carouselHymns, value);
+        }
+
+        private Hymn carouselItem;
+
+        public Hymn CarouselItem
+        {
+            get => carouselItem;
+            set => SetProperty(ref carouselItem, value);
+        }
+
         private HymnalLanguage language;
 
         public HymnalLanguage Language
@@ -94,6 +110,7 @@ namespace Hymnal.XF.ViewModels
         public DelegateCommand PlayCommand { get; private set; }
         public DelegateCommand CloseCommand { get; private set; }
         public DelegateCommand OpenSheetCommand { get; private set; }
+        public DelegateCommand PositionChangedCommand { get; private set; }
 
         #endregion
 
@@ -127,6 +144,7 @@ namespace Hymnal.XF.ViewModels
             ShareCommand = new DelegateCommand(ShareExecute).ObservesCanExecute(() => NotBusy);
             PlayCommand = new DelegateCommand(PlayExecuteAsync).ObservesCanExecute(() => NotBusy);
             CloseCommand = new DelegateCommand(CloseAsync).ObservesCanExecute(() => NotBusy);
+            PositionChangedCommand = new DelegateCommand(PositionChangedExecute).ObservesCanExecute(() => NotBusy);
         }
 
         ~HymnViewModel()
@@ -140,6 +158,7 @@ namespace Hymnal.XF.ViewModels
 
             HymnParameter = parameter;
             Language = HymnParameter.HymnalLanguage;
+            CarouselHymns = await hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage);
 
             try
             {
@@ -149,6 +168,7 @@ namespace Hymnal.XF.ViewModels
             {
                 ex.Report();
             }
+            CarouselItem = Hymn;
 
             IsPlaying = mediaManager.IsPlaying();
 
@@ -392,6 +412,15 @@ namespace Hymnal.XF.ViewModels
         private async void CloseAsync()
         {
             await NavigationService.GoBackAsync();
+        }
+
+        private void PositionChangedExecute()
+        {
+            Hymn = CarouselItem;
+            HymnParameter.Number = Hymn.Number;
+
+            IsFavorite = storageService.All<FavoriteHymn>().ToList()
+                .Exists(f => f.Number == Hymn.Number && f.HymnalLanguageId.Equals(Language.Id));
         }
 
         #endregion
