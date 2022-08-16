@@ -5,7 +5,7 @@ using Xamarin.Forms;
 // and modified to scroll through a StackLayout with contents possibly larger than
 // will fit on screen. It expects a single StackLayout child.
 
-namespace Hymnal.XF.Views
+namespace Hymnal.XF.Controls
 {
     public class PinchToZoomContainer : ContentView
     {
@@ -45,9 +45,7 @@ namespace Hymnal.XF.Views
             var imageHeight = 0.0;
 
             foreach (View i in layout.Children)
-            {
                 imageHeight += i.Height;
-            }
             _totalHeight = imageHeight;
         }
         protected override void OnSizeAllocated(double width, double height)
@@ -72,9 +70,7 @@ namespace Hymnal.XF.Views
         private void OnTapped(object sender, EventArgs e)
         {
             if (Content.Scale > MinScale)
-            {
                 RestoreScaleValues();
-            }
             else
             {
                 //todo: Add tap position somehow
@@ -155,9 +151,9 @@ namespace Hymnal.XF.Views
             var deltaHeight = Height / (Content.Height * _startScale);
             var originY = (y - deltaY) * deltaHeight;
 
-            var targetX = _xOffset - (originX * Content.Width) * (_currentScale - _startScale);
-            var targetY = _yOffset - (originY * Content.Height) * (_currentScale - _startScale);
-            
+            var targetX = _xOffset - originX * Content.Width * (_currentScale - _startScale);
+            var targetY = _yOffset - originY * Content.Height * (_currentScale - _startScale);
+
             var maxTranslationY = Math.Max(0, _currentScale * Math.Max(_totalHeight, Content.Height) - Content.Height);
             targetY = Math.Max(-maxTranslationY, targetY);
 
