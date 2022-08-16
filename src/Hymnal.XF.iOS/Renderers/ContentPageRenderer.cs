@@ -63,6 +63,7 @@ namespace Hymnal.XF.iOS.Renderers
                 ViewWillDispose_SearchImplementation();
             }
         }
+
         public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
         {
             base.TraitCollectionDidChange(previousTraitCollection);

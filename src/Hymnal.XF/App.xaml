@@ -18,7 +18,10 @@
             <converters:TranslateConverter x:Key="TranslateConverter" />
             <converters:ImageSourceResourceConverter x:Key="ImageSourceResourceConverter" />
 
-            <x:String x:Key="BackgroundImageFile">Background</x:String>
+            <OnPlatform x:Key="BackgroundImageFile" x:TypeArguments="ImageSource">
+                <On Platform="Android, iOS" Value="Background" />
+                <On Platform="Tizen" Value="Background.png" />
+            </OnPlatform>
 
         </ResourceDictionary>
     </Application.Resources>
