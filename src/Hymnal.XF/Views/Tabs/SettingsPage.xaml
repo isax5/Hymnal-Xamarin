@@ -18,9 +18,7 @@
     Visual="Material">
 
     <ContentPage.IconImageSource>
-        <FontImageSource
-            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-            Glyph="{x:Static constans:FontAwesomeIcons.Cog}" />
+        <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Cog}" />
     </ContentPage.IconImageSource>
 
     <ContentPage.Resources>
@@ -57,9 +55,7 @@
                         ColumnDefinitions="auto, auto"
                         RowDefinitions="auto, *">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer
-                                x:DataType="{x:Null}"
-                                Command="{Binding ChooseLanguageCommand}" />
+                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding ChooseLanguageCommand}" />
                         </Grid.GestureRecognizers>
 
                         <Image
@@ -104,10 +100,7 @@
 
                 <!--  Always Screen On  -->
                 <ViewCell>
-                    <Grid
-                        ColumnDefinitions="*, auto"
-                        IsVisible="{OnPlatform Default=True,
-                                               Tizen=False}">
+                    <Grid ColumnDefinitions="*, auto" IsVisible="{OnPlatform Default=True, Tizen=False}">
                         <Label
                             Grid.Column="0"
                             AutomationProperties.IsInAccessibleTree="False"
@@ -158,8 +151,7 @@
                             Grid.Column="1"
                             Margin="15,0"
                             AutomationProperties.IsInAccessibleTree="False"
-                            Text="{Binding Source={x:Reference LetterSize},
-                                           Path=Value}" />
+                            Text="{Binding Source={x:Reference LetterSize}, Path=Value}" />
 
                         <Slider
                             x:Name="LetterSize"
@@ -180,8 +172,7 @@
                             Grid.Column="0"
                             Grid.ColumnSpan="2"
                             AutomationProperties.IsInAccessibleTree="False"
-                            FontSize="{Binding Source={x:Reference LetterSize},
-                                               Path=Value}"
+                            FontSize="{Binding Source={x:Reference LetterSize}, Path=Value}"
                             Text="{extensions:Translate Example}"
                             VerticalOptions="FillAndExpand" />
 
@@ -256,9 +247,7 @@
                         RowDefinitions="auto, auto"
                         RowSpacing="15">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer
-                                x:DataType="{x:Null}"
-                                Command="{Binding OpenGitHubCommand}" />
+                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding OpenGitHubCommand}" />
                         </Grid.GestureRecognizers>
 
                         <Label
@@ -289,20 +278,12 @@
                 </ViewCell>
 
                 <!--  Developer  -->
-                <ViewCell
-                    x:Name="developerCell"
-                    IsEnabled="{OnPlatform Default=True,
-                                           Tizen=False}">
+                <ViewCell x:Name="developerCell" IsEnabled="{OnPlatform Default=True, Tizen=False}">
                     <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                         <Grid.GestureRecognizers>
-                            <TapGestureRecognizer
-                                x:DataType="{x:Null}"
-                                Command="{Binding DeveloperCommand}" />
+                            <TapGestureRecognizer x:DataType="{x:Null}" Command="{Binding DeveloperCommand}" />
                         </Grid.GestureRecognizers>
-                        <Label
-                            FontSize="{OnPlatform Default=Default,
-                                                  Tizen=Large}"
-                            Text="{extensions:Translate Development}" />
+                        <Label FontSize="{OnPlatform Default=Default, Tizen=Large}" Text="{extensions:Translate Development}" />
                     </Grid>
                 </ViewCell>
 
@@ -319,9 +300,7 @@
             </TableSection>
 
             <!--  Developing  -->
-            <TableSection
-                x:Name="developerSection"
-                Title="{extensions:Translate Development}">
+            <TableSection x:Name="developerSection" Title="{extensions:Translate Development}">
 
                 <!--  App version  -->
                 <TextCell

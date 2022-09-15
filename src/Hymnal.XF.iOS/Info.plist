@@ -83,9 +83,9 @@
 	</array>
 	<key>CFBundleName</key>
 	<string>Hymnal</string>
-	<key>CFBundleShortVersionString</key>
-	<string>4.2.4</string>
 	<key>CFBundleVersion</key>
-	<string>1.0.2</string>
+	<string>1660731082</string>
+	<key>CFBundleShortVersionString</key>
+	<string>4.2.5</string>
 </dict>
 </plist>
