@@ -3749,7 +3749,7 @@
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="4.5.3" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Plugin.MediaManager" Version="1.1.1" />
-    <PackageReference Include="Realm" Version="10.15.1" />
+    <PackageReference Include="Realm" Version="10.17.0" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.6.2" />
     <PackageReference Include="System.Reactive" Version="5.0.0" />
     <PackageReference Include="Xamarin.Forms.Visual.Material" Version="5.0.0.2515" />

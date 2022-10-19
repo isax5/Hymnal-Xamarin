@@ -64,6 +64,7 @@
 
     <CarouselView
         CurrentItem="{Binding CurrentHymn}"
+        HorizontalScrollBarVisibility="Never"
         ItemsSource="{Binding CarouselHymns}"
         Loop="False"
         PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
