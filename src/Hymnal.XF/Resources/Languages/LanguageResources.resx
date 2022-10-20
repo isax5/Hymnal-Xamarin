@@ -200,10 +200,6 @@
     <value>Close</value>
     <comment>HymnPage: Close page</comment>
   </data>
-  <data name="Contribute" xml:space="preserve">
-    <value>Contribute</value>
-    <comment>Settings: Contribute app</comment>
-  </data>
   <data name="Delete" xml:space="preserve">
     <value>Delete</value>
     <comment>Favorites: Delete</comment>
@@ -306,5 +302,9 @@
   </data>
   <data name="BackgroundImageAppearance" xml:space="preserve">
     <value>Background image appearance</value>
+  </data>
+  <data name="SettingsPage_SupportProject" xml:space="preserve">
+    <value>Support this app</value>
+    <comment>Support this app</comment>
   </data>
 </root>

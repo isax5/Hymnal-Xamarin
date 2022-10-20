@@ -3,7 +3,7 @@ using Realms;
 
 namespace Hymnal.XF.Models.Realm
 {
-    public sealed class RecordHymn : RealmObject, IHymnReference, IStorageModel
+    public sealed class RecordHymn : RealmObject, IHymnReference, IStorageModel, IComparable
     {
         /// <summary>
         /// Hymn Number
@@ -19,5 +19,13 @@ namespace Hymnal.XF.Models.Realm
         /// Language Id <see cref="HymnalLanguage.Id"/>
         /// </summary>
         public string HymnalLanguageId { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            if (obj is null || obj is not RecordHymn recordHymn)
+                return 1;
+
+            return Number.CompareTo(recordHymn.Number);
+        }
     }
 }
