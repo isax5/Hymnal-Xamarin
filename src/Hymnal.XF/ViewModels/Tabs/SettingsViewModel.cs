@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Linq;
+using System.Windows.Input;
 using Hymnal.XF.Constants;
 using Hymnal.XF.Models;
 using Hymnal.XF.Resources.Languages;
@@ -26,9 +27,9 @@ namespace Hymnal.XF.ViewModels
 
         #region Properties
 
-        private readonly BrowserLaunchOptions browserLaunchOptions = new BrowserLaunchOptions
+        private readonly BrowserLaunchOptions browserLaunchOptions = new()
         {
-            LaunchMode = BrowserLaunchMode.SystemPreferred,
+            LaunchMode = BrowserLaunchMode.External,
             TitleMode = BrowserTitleMode.Show,
             PreferredToolbarColor = Color.Black,
             PreferredControlColor = Color.White
@@ -103,6 +104,7 @@ namespace Hymnal.XF.ViewModels
 
         public DelegateCommand ChooseLanguageCommand { get; internal set; }
         public DelegateCommand HelpCommand { get; internal set; }
+        public ICommand SupportProjectCommand { get; }
         public DelegateCommand OpenGitHubCommand { get; internal set; }
         public DelegateCommand DeveloperCommand { get; internal set; }
 
@@ -127,6 +129,7 @@ namespace Hymnal.XF.ViewModels
 
             ChooseLanguageCommand = new DelegateCommand(ChooseLanguageExecuteAsync).ObservesCanExecute(() => NotBusy);
             HelpCommand = new DelegateCommand(HelpExecuteAsync).ObservesCanExecute(() => NotBusy);
+            SupportProjectCommand = new DelegateCommand(SupportProjectExecuteAsync).ObservesCanExecute(() => NotBusy);
             OpenGitHubCommand = new DelegateCommand(OpenGitHubExecuteAsync).ObservesCanExecute(() => NotBusy);
             DeveloperCommand = new DelegateCommand(DeveloperExecuteAsync).ObservesCanExecute(() => NotBusy);
         }
@@ -190,6 +193,11 @@ namespace Hymnal.XF.ViewModels
         private async void HelpExecuteAsync()
         {
             await NavigationService.NavigateAsync(nameof(HelpPage));
+        }
+
+        private async void SupportProjectExecuteAsync()
+        {
+            await browser.OpenAsync(AppConstants.WebLinks.SupportProjectLink, browserLaunchOptions);
         }
 
         private async void OpenGitHubExecuteAsync()
