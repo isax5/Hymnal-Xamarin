@@ -32,9 +32,8 @@ namespace Hymnal.XF.ViewModels
                 if (value == null)
                     return;
 
-                RaisePropertyChanged(nameof(SelectedHymn));
-
                 SelectedHymnExecuteAsync(value).ConfigureAwait(true);
+                RaisePropertyChanged(nameof(SelectedHymn));
             }
         }
 

@@ -1,4 +1,4 @@
-﻿namespace Hymnal.XF.Constants
+namespace Hymnal.XF.Constants
 {
     public static class AppConstants
     {
@@ -14,6 +14,11 @@
             /// Developer promotion Webiste
             /// </summary>
             public const string DeveloperWebSite = @"https://isax5.github.io/hymnal/";
+
+            /// <summary>
+            /// Support project website
+            /// </summary>
+            public const string SupportProjectLink = @"https://isax5.github.io/donations/";
 
             /// <summary>
             /// GitHub developing website

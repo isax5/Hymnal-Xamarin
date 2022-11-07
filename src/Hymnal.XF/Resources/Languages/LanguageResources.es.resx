@@ -104,10 +104,6 @@
     <value>Eliminar</value>
     <comment>Favorites: Delete</comment>
   </data>
-  <data name="Contribute" xml:space="preserve">
-    <value>Contribuir</value>
-    <comment>Settings: Contribute app</comment>
-  </data>
   <data name="GitHub" xml:space="preserve">
     <value>GitHub</value>
     <comment>Settings: GitHub</comment>
@@ -201,5 +197,8 @@
   </data>
   <data name="BackgroundImageAppearance" xml:space="preserve">
     <value>Mostrar imagen de fondo en himnario</value>
+  </data>
+  <data name="SettingsPage_SupportProject" xml:space="preserve">
+    <value>Apoyar esta aplicación</value>
   </data>
 </root>
