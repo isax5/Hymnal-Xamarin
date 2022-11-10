@@ -1,3 +1,0 @@
-﻿Example assets file
-
-Compile as Android Assets
