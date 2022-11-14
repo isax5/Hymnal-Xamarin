@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Hymnal.Views.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+    xmlns:views="clr-namespace:Hymnal.Views"
+    Shell.FlyoutBehavior="Disabled">
+
+    <!--<ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate views:MainPage}"
+        Route="MainPage" />-->
+
+
+    <TabBar>
+        <Tab Title="Number">
+            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:MainPage}" />
+        </Tab>
+        <Tab Title="Index">
+            <ShellContent Title="Alfabetico">
+                <!--  Title of the page goes here  -->
+                <views:MainPage Title="Adventist Hymnal" />
+            </ShellContent>
+            <ShellContent Title="Numerico" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Temático" ContentTemplate="{DataTemplate views:MainPage}" />
+        </Tab>
+        <Tab Title="Favorites">
+            <ShellContent Title="Favoritos" ContentTemplate="{DataTemplate views:MainPage}" />
+        </Tab>
+        <Tab Title="Settings">
+            <ShellContent Title="Configuraciones" ContentTemplate="{DataTemplate views:MainPage}" />
+        </Tab>
+    </TabBar>
+
+</Shell>

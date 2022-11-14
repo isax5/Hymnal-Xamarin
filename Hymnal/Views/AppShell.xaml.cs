@@ -1,4 +1,4 @@
-﻿namespace Hymnal;
+namespace Hymnal.Views;
 
 public partial class AppShell : Shell
 {

@@ -1,4 +1,6 @@
-﻿namespace Hymnal;
+using Hymnal.Views;
+
+namespace Hymnal;
 
 public partial class App : Application
 {
