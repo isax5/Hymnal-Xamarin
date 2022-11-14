@@ -26,10 +26,10 @@
             <ShellContent Title="Temático" ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
         <Tab Title="Favorites">
-            <ShellContent Title="Favoritos" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
         <Tab Title="Settings">
-            <ShellContent Title="Configuraciones" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:MainPage}" />
         </Tab>
     </TabBar>
 
