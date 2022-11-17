@@ -3,14 +3,120 @@
     x:Class="Hymnal.Views.NumberPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extensions="clr-namespace:Hymnal.Extensions"
+    xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title="NumberPage">
+    Title="{extensions:Translate AdventistHymnal}"
+    x:DataType="viewModels:NumberViewModel"
+    x:TypeArguments="viewModels:NumberViewModel">
 
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+    <Grid>
+        <Image
+            x:Name="backgroundImage"
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <StackLayout BackgroundColor="{DynamicResource Color.SecondaryBackground}" Opacity="{DynamicResource Opacity.BackgroundMainPageFilter}" />
+
+        <StackLayout x:Name="MainStack" HorizontalOptions="CenterAndExpand">
+            <StackLayout
+                x:Name="ContainerStack"
+                Margin="0,30"
+                Padding="0,0,0,60">
+
+                <Grid Padding="0">
+                    <!--<Frame
+                        BackgroundColor="{DynamicResource Color.PrimaryBackground}"
+                        CornerRadius="10"
+                        HasShadow="True"
+                        HorizontalOptions="CenterAndExpand"
+                        Opacity="0.3"
+                        VerticalOptions="FillAndExpand"
+                        WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />-->
+
+                    <HorizontalStackLayout x:Name="EntryContainer" HorizontalOptions="CenterAndExpand">
+                        <Label
+                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontAttributes="Bold"
+                            FontSize="45"
+                            Text="#"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="FillAndExpand"
+                            VerticalTextAlignment="Center" />
+
+                        <Entry
+                            x:Name="HymnNumberEntry"
+                            AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
+                            AbsoluteLayout.LayoutFlags="All"
+                            AutomationId="HymnNumberEntry"
+                            AutomationProperties.HelpText="{extensions:Translate AutomationNumberPageHelpTextEntry}"
+                            AutomationProperties.Name="{extensions:Translate AutomationNumberPageEntry}"
+                            BackgroundColor="Transparent"
+                            Focused="HymnNumberEntry_Focused"
+                            FontAttributes="Bold"
+                            FontSize="40"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            Keyboard="Numeric"
+                            Placeholder="...."
+                            PlaceholderColor="{DynamicResource Color.PrimaryLight}"
+                            ReturnCommand="{Binding OpenHymnAsyncCommand}"
+                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
+                            Text="{Binding HymnNumber}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand"
+                            Visual="Default"
+                            WidthRequest="150">
+                            <Entry.Behaviors>
+                                <!--<behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />-->
+                            </Entry.Behaviors>
+                            <Entry.Effects>
+                                <!--<effects:NoBorderLineEffect />-->
+                            </Entry.Effects>
+                        </Entry>
+                    </HorizontalStackLayout>
+                </Grid>
+
+                <Button
+                    x:DataType="{x:Null}"
+                    AutomationId="OpenHymnButton"
+                    AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenHymnButton}"
+                    Clicked="OpenButton_Clicked"
+                    Command="{Binding OpenHymnAsyncCommand}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
+                    HorizontalOptions="CenterAndExpand"
+                    Text="{extensions:Translate Generic_Open}"
+                    WidthRequest="200">
+                    <!--<Button.ImageSource>
+                        <FontImageSource
+                            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                            Glyph="{x:Static constans:FontAwesomeIcons.BookOpen}"
+                            Color="{DynamicResource Color.NavBarText}" />
+                    </Button.ImageSource>-->
+                </Button>
+            </StackLayout>
+
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="OrientationStates">
+                    <VisualState x:Name="Portrait">
+                        <VisualState.Setters>
+                            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Vertical" />
+                        </VisualState.Setters>
+                    </VisualState>
+                    <VisualState x:Name="Landscape">
+                        <VisualState.Setters>
+                            <Setter Property="VerticalOptions" Value="StartAndExpand" />
+                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Horizontal" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </StackLayout>
+    </Grid>
+
 
 </views:BaseContentPage>

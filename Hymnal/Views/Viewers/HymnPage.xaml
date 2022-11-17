@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<views:BaseContentPage
+    x:Class="Hymnal.Views.HymnPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extensions="clr-namespace:Hymnal.Extensions"
+    xmlns:models="clr-namespace:Hymnal.Models"
+    xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
+    xmlns:views="clr-namespace:Hymnal.Views"
+    Title="HymnPage"
+    x:DataType="viewModels:HymnViewModel"
+    x:TypeArguments="viewModels:HymnViewModel">
+
+
+    <CarouselView
+        CurrentItem="{Binding CurrentHymn}"
+        HorizontalScrollBarVisibility="Never"
+        ItemsSource="{Binding CarouselHymns}"
+        Loop="False"
+        PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
+        <CarouselView.ItemTemplate>
+            <DataTemplate x:DataType="models:Hymn">
+                <Grid>
+                    <Image
+                        Aspect="AspectFill"
+                        AutomationProperties.IsInAccessibleTree="False"
+                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                        Source="{DynamicResource BackgroundImageFile}" />
+
+                    <StackLayout
+                        BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                        Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
+                    <ScrollView Padding="10,20" VerticalScrollBarVisibility="Never">
+                        <StackLayout Spacing="20">
+
+                            <Label
+                                AutomationProperties.HelpText="{Binding Title}"
+                                AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
+                                FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
+                                HorizontalOptions="FillAndExpand"
+                                HorizontalTextAlignment="Center"
+                                IsVisible="{OnPlatform Default=True,
+                                                       Tizen=False}"
+                                Text="{Binding Title}"
+                                TextColor="{DynamicResource Color.PrimaryText}" />
+
+                            <Label
+                                x:Name="hymnContentLabel"
+                                Margin="10"
+                                AutomationId="HymnContentLabel"
+                                AutomationProperties.HelpText="{Binding Content}"
+                                AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
+                                FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
+                                HorizontalTextAlignment="Center"
+                                LineBreakMode="WordWrap"
+                                Text="{Binding Content}"
+                                TextColor="{DynamicResource Color.PrimaryText}" />
+                        </StackLayout>
+                    </ScrollView>
+
+                </Grid>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+</views:BaseContentPage>

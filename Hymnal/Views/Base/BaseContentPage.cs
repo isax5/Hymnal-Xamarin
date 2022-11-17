@@ -7,4 +7,9 @@ public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : cl
         get => BindingContext as TViewModel;
         set => BindingContext = value;
     }
+
+    public BaseContentPage(TViewModel viewModel)
+    {
+        ViewModel = viewModel;
+    }
 }

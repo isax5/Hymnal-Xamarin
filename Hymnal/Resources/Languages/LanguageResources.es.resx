@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AdventistHymnal" xml:space="preserve">
+    <value>Himnario Adventista</value>
+    <comment>Tab:Number: Title</comment>
+  </data>
+  <data name="Generic_Close" xml:space="preserve">
+    <value>Cerrar</value>
+    <comment>HymnPage: Close page</comment>
+  </data>
+  <data name="Development" xml:space="preserve">
+    <value>Desarrollo</value>
+    <comment>Settings: Developing</comment>
+  </data>
+  <data name="DisplayAndTypography" xml:space="preserve">
+    <value>Visualización y Tipografía</value>
+    <comment>Settings: Display</comment>
+  </data>
+  <data name="Example" xml:space="preserve">
+    <value>Ejemplo</value>
+    <comment>Settings: TextSize Example</comment>
+  </data>
+  <data name="Favorites" xml:space="preserve">
+    <value>Favoritos</value>
+    <comment>Tab: Favorites, Favorites: Title</comment>
+  </data>
+  <data name="Help" xml:space="preserve">
+    <value>Ayuda</value>
+    <comment>Settings: Search help</comment>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>Historial</value>
+    <comment>Record:Title</comment>
+  </data>
+  <data name="Index" xml:space="preserve">
+    <value>Índice</value>
+    <comment>Tab: Index</comment>
+  </data>
+  <data name="Number" xml:space="preserve">
+    <value>Número</value>
+    <comment>Tab: Number</comment>
+  </data>
+  <data name="Generic_Open" xml:space="preserve">
+    <value>Abrir</value>
+    <comment>Tab:Number: Open</comment>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Buscar</value>
+    <comment>Search:Title</comment>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ajustes</value>
+    <comment>Settings: Title</comment>
+  </data>
+  <data name="Searcher" xml:space="preserve">
+    <value>Buscar ....</value>
+    <comment>Search: Placeholder of searcher</comment>
+  </data>
+  <data name="FontSize" xml:space="preserve">
+    <value>Tamaño de fuente</value>
+    <comment>Settings: FontSize</comment>
+  </data>
+  <data name="Generic_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+    <comment>Alert: Cancel</comment>
+  </data>
+  <data name="AppVersion" xml:space="preserve">
+    <value>Versión de la aplicación</value>
+    <comment>Settings: AppVersion</comment>
+  </data>
+  <data name="AppBuild" xml:space="preserve">
+    <value>Versión de compilación</value>
+    <comment>Settings: AppBuild</comment>
+  </data>
+  <data name="NoInternetConnection" xml:space="preserve">
+    <value>No hay conexión a Internet</value>
+    <comment>Alert: No internet</comment>
+  </data>
+  <data name="Error_WeHadAProblem" xml:space="preserve">
+    <value>Tuvimos un problema</value>
+    <comment>Alert: We had a problem</comment>
+  </data>
+  <data name="Generic_Ok" xml:space="preserve">
+    <value>Ok</value>
+    <comment>Alert: Ok</comment>
+  </data>
+  <data name="VersionsAndLanguages" xml:space="preserve">
+    <value>Versiones e idiomas</value>
+    <comment>Settings: Choose hymnal</comment>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Eliminar</value>
+    <comment>Favorites: Delete</comment>
+  </data>
+  <data name="GitHub" xml:space="preserve">
+    <value>GitHub</value>
+    <comment>Settings: GitHub</comment>
+  </data>
+  <data name="Support" xml:space="preserve">
+    <value>Soporte</value>
+    <comment>Settings: Support app</comment>
+  </data>
+  <data name="Tip" xml:space="preserve">
+    <value>Tip</value>
+    <comment>Settings:Support: Tip 1,2,3,4...</comment>
+  </data>
+  <data name="InstrumentalOrSung" xml:space="preserve">
+    <value>Instrumental o Cantado</value>
+    <comment>Select music: Instrumental or sung</comment>
+  </data>
+  <data name="Instrumental" xml:space="preserve">
+    <value>Instrumental</value>
+    <comment>Select Music: Instrumental</comment>
+  </data>
+  <data name="Sung" xml:space="preserve">
+    <value>Cantado</value>
+    <comment>Sung (cantada)</comment>
+  </data>
+  <data name="KeepScreenAlwaysOn" xml:space="preserve">
+    <value>Mantener la pantalla siempre encendida</value>
+    <comment>Settings: KeepScreenAlwaysOn</comment>
+  </data>
+  <data name="AutomationHymnPageClose" xml:space="preserve">
+    <value>Cerrar la página del himno</value>
+  </data>
+  <data name="AutomationHymnPageContent" xml:space="preserve">
+    <value>Letra del himno</value>
+  </data>
+  <data name="AutomationHymnPageFavorite" xml:space="preserve">
+    <value>Agregar o quitar de favoritos</value>
+  </data>
+  <data name="AutomationHymnPagePianoSheet" xml:space="preserve">
+    <value>Abrir partitura de piano</value>
+  </data>
+  <data name="AutomationHymnPagePlayer" xml:space="preserve">
+    <value>Reproducir o pausar música</value>
+  </data>
+  <data name="AutomationHymnPageShare" xml:space="preserve">
+    <value>Compartir himno</value>
+  </data>
+  <data name="AutomationHymnPageTitle" xml:space="preserve">
+    <value>Título del himno</value>
+  </data>
+  <data name="AutomationIndexPageThematicIndex" xml:space="preserve">
+    <value>Cambiar a índice temático</value>
+  </data>
+  <data name="AutomationNumberPageEntry" xml:space="preserve">
+    <value>Ingresar número de himno</value>
+  </data>
+  <data name="AutomationNumberPageHelpTextEntry" xml:space="preserve">
+    <value>Abajo hay un botón para abrir el himno</value>
+  </data>
+  <data name="AutomationNumberPageOpenHymnButton" xml:space="preserve">
+    <value>Abrir himno</value>
+  </data>
+  <data name="AutomationNumberPageOpenRecords" xml:space="preserve">
+    <value>Abrir página de historial</value>
+  </data>
+  <data name="AutomationNumberPageOpenSearch" xml:space="preserve">
+    <value>Abrir página de búsqueda</value>
+  </data>
+  <data name="AutomationSettingsPageChangeHymn" xml:space="preserve">
+    <value>Cambiar himnario</value>
+  </data>
+  <data name="AutomationSettingsPageHelpTextChangeHymn" xml:space="preserve">
+    <value>A continuación, verifique la versión actual</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsInFavoritesFalse" xml:space="preserve">
+    <value>El himno no está en favoritos</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsInFavoritesTrue" xml:space="preserve">
+    <value>El himno está en favoritos</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsPlayingFalse" xml:space="preserve">
+    <value>El himno no se está reproduciendo</value>
+  </data>
+  <data name="AutomationHymnPageHelpTextIsPlayingTrue" xml:space="preserve">
+    <value>El himno se está reproduciendo</value>
+  </data>
+  <data name="AutomationIndexPageAlphabeticalOrder" xml:space="preserve">
+    <value>Cambiar a orden alfabético</value>
+  </data>
+  <data name="AutomationIndexPageNumericalOrder" xml:space="preserve">
+    <value>Cambiar a orden numérico</value>
+  </data>
+  <data name="BackgroundImageAppearance" xml:space="preserve">
+    <value>Mostrar imagen de fondo en himnario</value>
+  </data>
+  <data name="SettingsPage_SupportProject" xml:space="preserve">
+    <value>Apoyar esta aplicación</value>
+  </data>
+</root>

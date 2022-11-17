@@ -15,7 +15,7 @@
 
     <TabBar>
         <Tab Title="Number">
-            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:NumberPage}" />
         </Tab>
         <Tab Title="Index">
             <ShellContent Title="Alfabetico">

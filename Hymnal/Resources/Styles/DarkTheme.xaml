@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/dotnet/2021/maui" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <!--  Opacity Filter for Main Page  -->
+    <x:Double x:Key="Opacity.BackgroundMainPageFilter">0.8</x:Double>
+    <!--  Opacity Filter for lists  -->
+    <x:Double x:Key="Opacity.BackgroundFilter">0.8</x:Double>
+    <!--  Opacity Filter for Hymns letters  -->
+    <x:Double x:Key="Opacity.BackgroundHymnLettersFilter">0.9</x:Double>
+
+    <!--  Slider's maximum color and searcher's words and numbers  -->
+    <Color x:Key="Color.Primary">#c1c5c7</Color>
+    <!--  Placeholders  -->
+    <Color x:Key="Color.PrimaryLight">#454545</Color>
+
+    <!--  Slider's thumb and slider's minimum color  -->
+    <Color x:Key="Color.Accent">#24b780</Color>
+
+    <!--  Hymn list, interface and lyrics text  -->
+    <Color x:Key="Color.PrimaryText">#c1c5c7</Color>
+    <!--  Hymn List's secondary text  -->
+    <Color x:Key="Color.SecondaryText">#c1c5c7</Color>
+    <!--  Navbar Title and Icons & Open (Hymnal number searcher)  -->
+    <Color x:Key="Color.NavBarText">#c1c5c7</Color>
+
+    <!--  Background Color Pages and numeric searcher in main page  -->
+    <Color x:Key="Color.PrimaryBackground">#000000</Color>
+    <!--  Hymn list's pages background and settings page  -->
+    <Color x:Key="Color.SecondaryBackground">#000000</Color>
+    <!--  Hymn lyrics background  -->
+    <Color x:Key="Color.BackgroundHymnLettersFilter">#000000</Color>
+
+    <!--  Selected Tab  -->
+    <Color x:Key="Color.SelectedTab">#c1c5c7</Color>
+    <!--  Unselected Tabs  -->
+    <Color x:Key="Color.UnselectedTab">#4a4a4a</Color>
+    <Color x:Key="Color.BackgroundTab">#000000</Color>
+
+</ResourceDictionary>
