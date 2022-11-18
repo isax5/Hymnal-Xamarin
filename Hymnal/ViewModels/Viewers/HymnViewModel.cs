@@ -1,10 +1,9 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Hymnal.Views;
 
 namespace Hymnal.ViewModels;
 
-public sealed partial class HymnViewModel : BaseViewModel
+public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParameter>
 {
     private readonly PreferencesService preferencesService;
 

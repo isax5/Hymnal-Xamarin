@@ -22,6 +22,15 @@ public sealed partial class NumberViewModel : BaseViewModel
     private async void OpenHymnAsync(string number)
     {
         await Shell.Current.DisplayAlert("Numero seleccionado", number ?? "NADA", "Ok");
-        await Shell.Current.GoToAsync(nameof(HymnPage));
+        await Shell.Current.GoToAsync(nameof(HymnPage),
+            new Dictionary<string, object>
+            {
+                ["Parameter"] = new HymnIdParameter()
+                {
+                    Number = int.Parse(number),
+                    SaveInRecords = true,
+                    HymnalLanguage = new() { },
+                }
+            });
     }
 }

@@ -9,4 +9,6 @@ public partial class HymnPage : BaseContentPage<HymnViewModel>
     {
         InitializeComponent();
     }
+
+    protected override void OnNavigatedTo(NavigatedToEventArgs args) => base.OnNavigatedTo(args);
 }
