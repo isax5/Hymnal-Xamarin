@@ -28,6 +28,8 @@ public static class MauiProgram
          */
 
         #region Services
+        builder.Services.AddSingleton<IPreferences>(Preferences.Default);
+
         builder.Services.AddSingleton<PreferencesService>();
         #endregion
 
