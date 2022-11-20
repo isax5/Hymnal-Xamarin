@@ -7,10 +7,10 @@
     xmlns:models="clr-namespace:Hymnal.Models"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title="HymnPage"
+    Title="{Binding Parameter.Number}"
     x:DataType="viewModels:HymnViewModel"
-    x:TypeArguments="viewModels:HymnViewModel">
-
+    x:TypeArguments="viewModels:HymnViewModel"
+    Shell.TabBarIsVisible="False">
 
     <CarouselView
         CurrentItem="{Binding CurrentHymn}"

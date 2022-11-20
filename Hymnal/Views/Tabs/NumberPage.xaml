@@ -10,6 +10,14 @@
     x:DataType="viewModels:NumberViewModel"
     x:TypeArguments="viewModels:NumberViewModel">
 
+    <Shell.SearchHandler>
+        <SearchHandler SearchBoxVisibility="Expanded" />
+    </Shell.SearchHandler>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="History" />
+    </ContentPage.ToolbarItems>
+
     <Grid>
         <Image
             x:Name="backgroundImage"

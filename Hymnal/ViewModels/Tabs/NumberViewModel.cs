@@ -21,7 +21,7 @@ public sealed partial class NumberViewModel : BaseViewModel
     [RelayCommand]
     private async void OpenHymnAsync(string number)
     {
-        await Shell.Current.DisplayAlert("Numero seleccionado", number ?? "NADA", "Ok");
+        //await Shell.Current.GoToAsync($"{nameof(ModalNavigationPage)}/{nameof(HymnPage)}",
         await Shell.Current.GoToAsync(nameof(HymnPage),
             new Dictionary<string, object>
             {

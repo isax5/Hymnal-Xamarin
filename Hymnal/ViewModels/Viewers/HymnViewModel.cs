@@ -1,5 +1,6 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Hymnal.Resources.Languages;
 
 namespace Hymnal.ViewModels;
 
@@ -39,6 +40,13 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     public HymnViewModel(PreferencesService preferencesService)
     {
         this.preferencesService = preferencesService;
+    }
+
+    public override async Task InitializeAsync(NavigatedToEventArgs args)
+    {
+        base.InitializeAsync(args);
+
+        await Shell.Current.DisplayAlert(null, $"Numero: {Parameter?.Number}", LanguageResources.Generic_Ok);
     }
 
 
