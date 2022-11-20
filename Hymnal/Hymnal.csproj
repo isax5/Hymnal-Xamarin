@@ -61,9 +61,6 @@
 	    <AutoGen>True</AutoGen>
 	    <DependentUpon>LanguageResources.resx</DependentUpon>
 	  </Compile>
-	  <Compile Update="Views\Base\ModalNavigationPage.xaml.cs">
-	    <DependentUpon>ModalNavigationPage.xaml</DependentUpon>
-	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
@@ -84,9 +81,6 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Base\BaseContentPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Views\Base\ModalNavigationPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\Tabs\NumberPage.xaml">
