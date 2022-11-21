@@ -1,7 +1,5 @@
 using CommunityToolkit.Maui;
 using Hymnal.Resources.Languages;
-using Hymnal.ViewModels;
-using Hymnal.Views;
 using Microsoft.Extensions.Logging;
 
 namespace Hymnal;
@@ -41,6 +39,9 @@ public static class MauiProgram
         // Viewers
         builder.Services.AddTransient<HymnPage>();
         builder.Services.AddTransient<HymnViewModel>();
+
+        builder.Services.AddTransient<MusicSheetPage>();
+        builder.Services.AddTransient<MusicSheetViewModel>();
         #endregion
 
 #if DEBUG

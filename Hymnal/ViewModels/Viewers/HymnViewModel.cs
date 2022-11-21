@@ -46,7 +46,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     {
         base.InitializeAsync(args);
 
-        await Shell.Current.DisplayAlert(null, $"Numero: {Parameter?.Number}", LanguageResources.Generic_Ok);
+        //await Shell.Current.DisplayAlert(null, $"Numero: {Parameter?.Number}", LanguageResources.Generic_Ok);
     }
 
 

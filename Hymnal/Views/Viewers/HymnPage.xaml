@@ -12,6 +12,11 @@
     x:TypeArguments="viewModels:HymnViewModel"
     Shell.TabBarIsVisible="False">
 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Command="{extensions:GoBack}" Text="Atrás" />
+        <ToolbarItem Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}" Text="Navegar" />
+    </ContentPage.ToolbarItems>
+
     <CarouselView
         CurrentItem="{Binding CurrentHymn}"
         HorizontalScrollBarVisibility="Never"
