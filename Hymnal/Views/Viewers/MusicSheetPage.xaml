@@ -6,7 +6,7 @@
     xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title="MusicSheetPage"
+    Title="{Binding Parameter.Number}"
     x:DataType="viewModels:MusicSheetViewModel"
     x:TypeArguments="viewModels:MusicSheetViewModel"
     Shell.TabBarIsVisible="False">

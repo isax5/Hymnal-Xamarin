@@ -1,5 +1,5 @@
 namespace Hymnal.ViewModels;
 
-public sealed partial class MusicSheetViewModel : BaseViewModel
+public sealed partial class MusicSheetViewModel : BaseViewModelParameter<HymnIdParameter>
 {
 }

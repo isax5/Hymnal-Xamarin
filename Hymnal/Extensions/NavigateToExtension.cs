@@ -1,10 +1,7 @@
-using System.Reflection;
-
 namespace Hymnal.Extensions;
 
 [ContentProperty(nameof(PageType))]
-public sealed class NavigateToExtension
-    : BindableObject, IMarkupExtension
+public sealed class NavigateToExtension : BindableObject, IMarkupExtension
 {
     public static readonly BindableProperty PageTypeProperty =
         BindableProperty.Create(nameof(PageType), typeof(Type), typeof(NavigateToExtension), null);
@@ -16,8 +13,11 @@ public sealed class NavigateToExtension
     }
 
     public object ProvideValue(IServiceProvider serviceProvider)
-        => new Command(() =>
+        => new Command(obj =>
         {
-            Shell.Current.GoToAsync(PageType.Name);
+            Shell.Current.GoToAsync(PageType.Name, true, new Dictionary<string, object>
+            {
+                [nameof(BaseViewModelParameter<object>.Parameter)] = obj,
+            });
         });
 }

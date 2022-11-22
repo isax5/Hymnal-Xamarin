@@ -14,7 +14,10 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem Command="{extensions:GoBack}" Text="Atrás" />
-        <ToolbarItem Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}" Text="Navegar" />
+        <ToolbarItem
+            Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
+            CommandParameter="{Binding Parameter}"
+            Text="Navegar" />
     </ContentPage.ToolbarItems>
 
     <CarouselView
