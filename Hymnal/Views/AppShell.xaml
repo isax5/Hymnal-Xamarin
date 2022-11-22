@@ -20,16 +20,16 @@
         <Tab Title="Index">
             <ShellContent Title="Alfabetico">
                 <!--  Title of the page goes here  -->
-                <views:MainPage Title="Adventist Hymnal" />
+                <views:AlphabeticalIndexPage Title="Adventist Hymnal" />
             </ShellContent>
-            <ShellContent Title="Numerico" ContentTemplate="{DataTemplate views:MainPage}" />
-            <ShellContent Title="Temático" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Numerico" ContentTemplate="{DataTemplate views:NumericalIndexPage}" />
+            <ShellContent Title="Temático" ContentTemplate="{DataTemplate views:ThematicIndexPage}" />
         </Tab>
         <Tab Title="Favorites">
-            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:FavoritesPage}" />
         </Tab>
         <Tab Title="Settings">
-            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:MainPage}" />
+            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </TabBar>
 

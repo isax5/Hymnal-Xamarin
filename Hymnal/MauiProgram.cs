@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui;
 using Hymnal.Resources.Languages;
+using Hymnal.ViewModels.Tabs;
 using Microsoft.Extensions.Logging;
 
 namespace Hymnal;
@@ -33,15 +34,17 @@ public static class MauiProgram
 
         #region Views and ViewModels
         // Tabs
-        builder.Services.AddSingleton<NumberViewModel>();
-        builder.Services.AddSingleton<NumberPage>();
+        builder.Services
+            .AddSingleton<NumberViewModel>().AddSingleton<NumberPage>()
+            .AddSingleton<AlphabeticalIndexPage>().AddSingleton<AlphabeticalIndexViewModel>()
+            .AddSingleton<NumericalIndexPage>().AddSingleton<NumericalIndexViewModel>()
+            .AddSingleton<ThematicIndexPage>().AddSingleton<ThematicIndexViewModel>()
+            .AddSingleton<FavoritesPage>().AddSingleton<FavoritesViewModel>()
+            .AddSingleton<SettingsPage>().AddSingleton<SettingsViewModel>()
 
         // Viewers
-        builder.Services.AddTransient<HymnPage>();
-        builder.Services.AddTransient<HymnViewModel>();
-
-        builder.Services.AddTransient<MusicSheetPage>();
-        builder.Services.AddTransient<MusicSheetViewModel>();
+            .AddTransient<HymnPage>().AddTransient<HymnViewModel>()
+            .AddTransient<MusicSheetPage>().AddTransient<MusicSheetViewModel>();
         #endregion
 
 #if DEBUG
