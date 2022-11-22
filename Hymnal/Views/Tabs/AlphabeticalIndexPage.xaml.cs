@@ -1,9 +1,10 @@
 namespace Hymnal.Views;
 
-public partial class AlphabeticalIndexPage : ContentPage
+public sealed partial class AlphabeticalIndexPage : BaseContentPage<AlphabeticalIndexViewModel>
 {
-	public AlphabeticalIndexPage()
-	{
-		InitializeComponent();
-	}
+    public AlphabeticalIndexPage(AlphabeticalIndexViewModel vm)
+        : base(vm)
+    {
+        InitializeComponent();
+    }
 }

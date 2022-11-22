@@ -1,9 +1,10 @@
 namespace Hymnal.Views;
 
-public partial class ThematicIndexPage : ContentPage
+public sealed partial class ThematicIndexPage : BaseContentPage<ThematicIndexViewModel>
 {
-	public ThematicIndexPage()
-	{
-		InitializeComponent();
-	}
+    public ThematicIndexPage(ThematicIndexViewModel vs)
+        : base(vs)
+    {
+        InitializeComponent();
+    }
 }

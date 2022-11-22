@@ -1,9 +1,10 @@
 namespace Hymnal.Views;
 
-public partial class NumericalIndexPage : ContentPage
+public sealed partial class NumericalIndexPage : BaseContentPage<NumericalIndexViewModel>
 {
-	public NumericalIndexPage()
-	{
-		InitializeComponent();
-	}
+    public NumericalIndexPage(NumericalIndexViewModel vm)
+        : base(vm)
+    {
+        InitializeComponent();
+    }
 }

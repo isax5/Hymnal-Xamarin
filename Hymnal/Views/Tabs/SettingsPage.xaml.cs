@@ -1,9 +1,10 @@
 namespace Hymnal.Views;
 
-public partial class SettingsPage : ContentPage
+public sealed partial class SettingsPage : BaseContentPage<SettingsViewModel>
 {
-	public SettingsPage()
-	{
-		InitializeComponent();
-	}
+    public SettingsPage(SettingsViewModel vm)
+        : base(vm)
+    {
+        InitializeComponent();
+    }
 }

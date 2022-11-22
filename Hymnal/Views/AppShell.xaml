@@ -18,10 +18,7 @@
             <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:NumberPage}" />
         </Tab>
         <Tab Title="Index">
-            <ShellContent Title="Alfabetico">
-                <!--  Title of the page goes here  -->
-                <views:AlphabeticalIndexPage Title="Adventist Hymnal" />
-            </ShellContent>
+            <ShellContent Title="Alfabetico" ContentTemplate="{DataTemplate views:AlphabeticalIndexPage}" />
             <ShellContent Title="Numerico" ContentTemplate="{DataTemplate views:NumericalIndexPage}" />
             <ShellContent Title="Temático" ContentTemplate="{DataTemplate views:ThematicIndexPage}" />
         </Tab>

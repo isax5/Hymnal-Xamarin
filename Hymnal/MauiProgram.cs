@@ -1,6 +1,5 @@
 using CommunityToolkit.Maui;
 using Hymnal.Resources.Languages;
-using Hymnal.ViewModels.Tabs;
 using Microsoft.Extensions.Logging;
 
 namespace Hymnal;

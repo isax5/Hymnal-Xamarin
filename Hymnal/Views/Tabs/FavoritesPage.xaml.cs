@@ -1,9 +1,10 @@
 namespace Hymnal.Views;
 
-public partial class FavoritesPage : ContentPage
+public sealed partial class FavoritesPage : BaseContentPage<FavoritesViewModel>
 {
-	public FavoritesPage()
-	{
-		InitializeComponent();
-	}
+    public FavoritesPage(FavoritesViewModel vm)
+        : base(vm)
+    {
+        InitializeComponent();
+    }
 }
