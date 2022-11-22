@@ -13,11 +13,5 @@ public sealed class NavigateToExtension : BindableObject, IMarkupExtension
     }
 
     public object ProvideValue(IServiceProvider serviceProvider)
-        => new Command(obj =>
-        {
-            Shell.Current.GoToAsync(PageType.Name, true, new Dictionary<string, object>
-            {
-                [nameof(BaseViewModelParameter<object>.Parameter)] = obj,
-            });
-        });
+        => new Command(obj => Shell.Current.GoToAsync(PageType.Name, true, obj?.AsParameter()));
 }
