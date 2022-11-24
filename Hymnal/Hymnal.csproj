@@ -49,6 +49,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Raw\new-hymnal-en.json" />
+	  <None Remove="Resources\Raw\new-hymnal-es.json" />
+	  <None Remove="Resources\Raw\new-hymnal-pt.json" />
+	  <None Remove="Resources\Raw\new-hymnal-ru.json" />
+	  <None Remove="Resources\Raw\new-hymnal-thematic-list-en.json" />
+	  <None Remove="Resources\Raw\new-hymnal-thematic-list-es.json" />
+	  <None Remove="Resources\Raw\new-hymnal-thematic-list-pt.json" />
+	  <None Remove="Resources\Raw\new-hymnal-thematic-list-ru.json" />
+	  <None Remove="Resources\Raw\old-hymnal-en.json" />
+	  <None Remove="Resources\Raw\old-hymnal-es.json" />
+	  <None Remove="Resources\Raw\old-hymnal-thematic-list-en.json" />
+	  <None Remove="Resources\Raw\old-hymnal-thematic-list-es.json" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />

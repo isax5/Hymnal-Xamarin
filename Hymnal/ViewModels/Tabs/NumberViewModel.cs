@@ -29,7 +29,7 @@ public sealed partial class NumberViewModel : BaseViewModel
                 {
                     Number = int.Parse(number),
                     SaveInRecords = true,
-                    HymnalLanguage = new() { },
+                    HymnalLanguage = InfoConstants.HymnsLanguages.First(),
                 }
             });
     }

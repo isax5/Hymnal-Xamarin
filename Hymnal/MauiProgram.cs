@@ -10,7 +10,7 @@ public static class MauiProgram
     {
         TranslateExtension.Configure(LanguageResources.ResourceManager);
 
-        var builder = MauiApp.CreateBuilder();
+        MauiAppBuilder builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>()
             .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
@@ -28,6 +28,8 @@ public static class MauiProgram
         #region Services
         builder.Services.AddSingleton<IPreferences>(e => Preferences.Default);
 
+        builder.Services.AddSingleton<FilesService>();
+        builder.Services.AddSingleton<HymnsService>();
         builder.Services.AddSingleton<PreferencesService>();
         #endregion
 

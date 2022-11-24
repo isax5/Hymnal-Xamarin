@@ -1,0 +1,439 @@
+[
+  {
+    "thematic": "Worship",
+    "ambits": [
+      {
+        "ambit": "Adoration and Praise",
+        "star": 1,
+        "end": 38,
+        "backimage": "Fondo1a21"
+      },
+      {
+        "ambit": "Morning Worship",
+        "star": 39,
+        "end": 45,
+        "backimage": "Fondo22a34"
+      },
+      {
+        "ambit": "Evening Worship",
+        "star": 46,
+        "end": 58,
+        "backimage": "Fondo35a45"
+      },
+      {
+        "ambit": "Opening Worship",
+        "star": 59,
+        "end": 63,
+        "backimage": "Fondo46a52"
+      },
+      {
+        "ambit": "Close of Worship",
+        "star": 64,
+        "end": 69,
+        "backimage": "Fondo46a52"
+      }
+    ]
+  },
+  {
+    "thematic": "Trinity",
+    "ambits": [
+      {
+        "ambit": "Trinity",
+        "star": 70,
+        "end": 73,
+        "fondo": "Fondo53a59"
+      }
+    ]
+  },
+  {
+    "thematic": "God The Father",
+    "ambits": [
+      {
+        "ambit": "Love of God",
+        "star": 74,
+        "end": 81,
+        "backimage": "Fondo78a92"
+      },
+      {
+        "ambit": "Majesty and Power of God",
+        "star": 82,
+        "end": 91,
+        "backimage": "Fondo93a102"
+      },
+      {
+        "ambit": "Power of God in Nature",
+        "star": 92,
+        "end": 98,
+        "backimage": "Fondo103a106"
+      },
+      {
+        "ambit": "Faithfulness of God",
+        "star": 99,
+        "end": 104,
+        "backimage": "Fondo107a126"
+      },
+      {
+        "ambit": "Grace and Mercy of God",
+        "star": 105,
+        "end": 114,
+        "backimage": "Fondo127a157"
+      }
+    ]
+  },
+  {
+    "thematic": "Jesus Christ",
+    "ambits": [
+      {
+        "ambit": "First Advent",
+        "star": 115,
+        "end": 117,
+        "backimage": "Fondo190a203"
+      },
+      {
+        "ambit": "Birth",
+        "star": 118,
+        "end": 143,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Life and Ministry",
+        "star": 144,
+        "end": 153,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Sufferings and Death",
+        "star": 154,
+        "end": 164,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Resurrection and Ascension",
+        "star": 165,
+        "end": 176,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Priesthood",
+        "star": 177,
+        "end": 180,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Love of Christ for Us",
+        "star": 181,
+        "end": 199,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Second Advent",
+        "star": 200,
+        "end": 221,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Kingdom and Reign",
+        "star": 222,
+        "end": 227,
+        "backimage": "Fondo238a244"
+      },
+      {
+        "ambit": "Glory and Praise",
+        "star": 228,
+        "end": 256,
+        "backimage": "Fondo238a244"
+      }
+    ]
+  },
+  {
+    "thematic": "Holy Spirit",
+    "ambits": [
+      {
+        "ambit": "Holy Spirit",
+        "star": 257,
+        "end": 270,
+        "backimage": "Fondo204a208"
+      }
+    ]
+  },
+  {
+    "thematic": "Holy Scriptures",
+    "ambits": [
+      {
+        "ambit": "Holy Scriptures",
+        "star": 271,
+        "end": 278,
+        "backimage": "Fondo209a237"
+      }
+    ]
+  },
+  {
+    "thematic": "Gospel",
+    "ambits": [
+      {
+        "ambit": "Invitation",
+        "star": 279,
+        "end": 290,
+        "backimage": "Fondo345a364"
+      },
+      {
+        "ambit": "Repentance",
+        "star": 291,
+        "end": 296,
+        "backimage": "Fondo365a372"
+      },
+      {
+        "ambit": "Forgiveness",
+        "star": 297,
+        "end": 300,
+        "backimage": "Fondo373a390"
+      },
+      {
+        "ambit": "Consecration",
+        "star": 301,
+        "end": 331,
+        "backimage": "Fondo391a438"
+      },
+      {
+        "ambit": "Baptism",
+        "star": 332,
+        "end": 333,
+        "backimage": "Fondo439a465"
+      },
+      {
+        "ambit": "Salvation and Redemption",
+        "star": 334,
+        "end": 343,
+        "backimage": "Fondo466a473"
+      }
+    ]
+  },
+  {
+    "thematic": "Christian Church",
+    "ambits": [
+      {
+        "ambit": "Community in Christ",
+        "star": 344,
+        "end": 354,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Mission of the Church",
+        "star": 355,
+        "end": 375,
+        "backimage": "Fondo528a534"
+      },
+      {
+        "ambit": "Church Dedication",
+        "star": 376,
+        "end": 376,
+        "backimage": "Fondo535a550"
+      },
+      {
+        "ambit": "Ordination",
+        "star": 377,
+        "end": 378,
+        "backimage": "Fondo551a578"
+      },
+      {
+        "ambit": "Child Dedication",
+        "star": 379,
+        "end": 379,
+        "backimage": "Fondo579a580"
+      }
+    ]
+  },
+  {
+    "thematic": "Doctrines",
+    "ambits": [
+      {
+        "ambit": "Sabbath",
+        "star": 380,
+        "end": 395,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Communion",
+        "star": 396,
+        "end": 411,
+        "backimage": "Fondo590a596"
+      },
+      {
+        "ambit": "Law and Grace",
+        "star": 412,
+        "end": 412,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Spiritual Gifts",
+        "star": 413,
+        "end": 414,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Judgment",
+        "star": 415,
+        "end": 417,
+        "backimage": "Fondo608a613"
+      },
+      {
+        "ambit": "Resurrection of the Saints",
+        "star": 418,
+        "end": 419,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Eternal Life",
+        "star": 420,
+        "end": 437,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "Early Advent",
+    "ambits": [
+      {
+        "ambit": "Early Advent",
+        "star": 438,
+        "end": 454,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "Christian Life",
+    "ambits": [
+      {
+        "ambit": "Our Love for God",
+        "star": 455,
+        "end": 460,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Joy and Peace",
+        "star": 461,
+        "end": 471,
+        "backimage": "Fondo590a596"
+      },
+      {
+        "ambit": "Hope and Comfort",
+        "star": 472,
+        "end": 477,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Meditation and Prayer",
+        "star": 478,
+        "end": 505,
+        "backimage": "Fondo597a607"
+      },
+      {
+        "ambit": "Faith and Trust",
+        "star": 506,
+        "end": 535,
+        "backimage": "Fondo608a613"
+      },
+      {
+        "ambit": "Guidance",
+        "star": 536,
+        "end": 555,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Thankfulness",
+        "star": 556,
+        "end": 566,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Humility",
+        "star": 567,
+        "end": 570,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Loving Service",
+        "star": 571,
+        "end": 584,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Love for One Another",
+        "star": 585,
+        "end": 589,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Obedience",
+        "star": 590,
+        "end": 591,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Watchfulness",
+        "star": 592,
+        "end": 605,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Christian Warfare",
+        "star": 606,
+        "end": 619,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Pilgrimage",
+        "star": 620,
+        "end": 633,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Stewardship",
+        "star": 634,
+        "end": 641,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Health and Wholeness",
+        "star": 642,
+        "end": 644,
+        "backimage": "Fondo614a614"
+      },
+      {
+        "ambit": "Love of Country",
+        "star": 645,
+        "end": 649,
+        "backimage": "Fondo614a614"
+      }
+    ]
+  },
+  {
+    "thematic": "Christian Home",
+    "ambits": [
+      {
+        "ambit": "Love in the Home",
+        "star": 650,
+        "end": 655,
+        "backimage": "Fondo589a589"
+      },
+      {
+        "ambit": "Marriage",
+        "star": 656,
+        "end": 659,
+        "backimage": "Fondo590a596"
+      }
+    ]
+  },
+  {
+    "thematic": "Sentences and Responses",
+    "ambits": [
+      {
+        "ambit": "Sentences and Responses",
+        "star": 660,
+        "end": 695,
+        "backimage": "Fondo589a589"
+      }
+    ]
+  }
+]
