@@ -1,6 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using Hymnal.Views;
 
 namespace Hymnal.ViewModels;
 
@@ -21,16 +20,15 @@ public sealed partial class NumberViewModel : BaseViewModel
     [RelayCommand]
     private async void OpenHymnAsync(string number)
     {
-        //await Shell.Current.GoToAsync($"{nameof(ModalNavigationPage)}/{nameof(HymnPage)}",
+        if (string.IsNullOrEmpty(number))
+            return;
+
         await Shell.Current.GoToAsync(nameof(HymnPage),
-            new Dictionary<string, object>
+            new HymnIdParameter()
             {
-                ["Parameter"] = new HymnIdParameter()
-                {
-                    Number = int.Parse(number),
-                    SaveInRecords = true,
-                    HymnalLanguage = InfoConstants.HymnsLanguages.First(),
-                }
-            });
+                Number = int.Parse(number),
+                SaveInRecords = true,
+                HymnalLanguage = InfoConstants.HymnsLanguages.First(),
+            }.AsParameter());
     }
 }

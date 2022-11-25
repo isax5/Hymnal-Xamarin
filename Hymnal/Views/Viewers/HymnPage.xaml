@@ -19,17 +19,6 @@
             Text="Navegar" />
     </ContentPage.ToolbarItems>
 
-    <!--<Label
-        Margin="10"
-        AutomationId="HymnContentLabel"
-        AutomationProperties.HelpText="{Binding CurrentHymn.Content}"
-        AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
-        FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
-        HorizontalTextAlignment="Center"
-        LineBreakMode="WordWrap"
-        Text="{Binding CurrentHymn.Content}"
-        TextColor="{DynamicResource Color.PrimaryText}" />-->
-
     <CarouselView
         CurrentItem="{Binding CurrentHymn}"
         HorizontalScrollBarVisibility="Never"
