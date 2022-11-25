@@ -10,12 +10,12 @@ public sealed class HymnsService
     /// <summary>
     /// <see cref="Hymn"/> cache
     /// </summary>
-    private static readonly Dictionary<string, IEnumerable<Hymn>> HymnsDictionary = new();
+    private static readonly Dictionary<string, List<Hymn>> HymnsDictionary = new();
 
     /// <summary>
     /// <see cref="Thematic"/> cache
     /// </summary>
-    private static readonly Dictionary<string, IEnumerable<Thematic>> ThematicDictionary = new();
+    private static readonly Dictionary<string, List<Thematic>> ThematicDictionary = new();
 
     public HymnsService(FilesService filesService)
     {
@@ -28,7 +28,7 @@ public sealed class HymnsService
     /// </summary>
     /// <param name="language"></param>
     /// <returns></returns>
-    public async Task<IEnumerable<Hymn>> GetHymnListAsync(HymnalLanguage language)
+    public async Task<List<Hymn>> GetHymnListAsync(HymnalLanguage language)
     {
         if (!HymnsDictionary.ContainsKey(language.Id))
         {
@@ -79,7 +79,7 @@ public sealed class HymnsService
         return GetHymnAsync(hymnReference.Number, HymnalLanguage.GetHymnalLanguageWithId(hymnReference.HymnalLanguageId));
     }
 
-    public async Task<IEnumerable<Thematic>> GetThematicListAsync(HymnalLanguage language)
+    public async Task<List<Thematic>> GetThematicListAsync(HymnalLanguage language)
     {
         if (!language.SupportThematicList)
         {

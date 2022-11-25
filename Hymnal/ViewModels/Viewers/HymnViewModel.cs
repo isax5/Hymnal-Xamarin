@@ -1,3 +1,5 @@
+using System.Reactive.Linq;
+using System.Reactive.Threading.Tasks;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
@@ -13,10 +15,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     public int HymnFontSize => preferencesService.HymnalsFontSize;
 
     [ObservableProperty]
-    private IEnumerable<Hymn> carouselHymns;
-
-    [ObservableProperty]
-    private Hymn carouselItem;
+    private List<Hymn> carouselHymns;
 
     [ObservableProperty]
     private Hymn currentHymn;
@@ -47,15 +46,19 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     {
         await base.InitializeAsync(args);
 
-        var HymnParameter = Parameter;
+        HymnParameter = Parameter;
         Language = HymnParameter.HymnalLanguage;
 
-        try
-        {
-            CarouselHymns = await hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage);
-            CurrentHymn = await hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage);
-        }
-        catch (Exception ex) { ex.Report(); }
+        Observable.Zip(
+            hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage).ToObservable(),
+            hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage).ToObservable(),
+            (list, hymn) => new Tuple<List<Hymn>, Hymn>(list, hymn))
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                CarouselHymns = result.Item1;
+                CurrentHymn = result.Item2;
+            }), error => error.Report());
+
 
         //IsPlaying = mediaManager.IsPlaying();
 
@@ -78,7 +81,6 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     [RelayCommand]
     private void CarouselViewPositionChanged()
     {
-        //CurrentHymn = CurrentHymn;
         HymnParameter.Number = CurrentHymn.Number;
     }
 }

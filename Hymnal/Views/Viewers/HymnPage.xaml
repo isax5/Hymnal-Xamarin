@@ -7,7 +7,7 @@
     xmlns:models="clr-namespace:Hymnal.Models"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title="{Binding CurrentHymn.Title}"
+    Title="{Binding CurrentHymn.Number, StringFormat='# {0}'}"
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
     Shell.TabBarIsVisible="False">
@@ -33,6 +33,7 @@
     <CarouselView
         CurrentItem="{Binding CurrentHymn}"
         HorizontalScrollBarVisibility="Never"
+        IsScrollAnimated="False"
         ItemsSource="{Binding CarouselHymns}"
         Loop="False"
         PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
