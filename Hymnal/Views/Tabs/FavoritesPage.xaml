@@ -2,6 +2,8 @@
 <views:BaseContentPage
     x:Class="Hymnal.Views.FavoritesPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:models="clr-namespace:Hymnal.Models"
+    xmlns:database="clr-namespace:Hymnal.Models.DataBase"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
@@ -11,9 +13,14 @@
     x:TypeArguments="viewModels:FavoritesViewModel">
 
     <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
+        <CollectionView
+            ItemsSource="{Binding Hymns}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="database:FavoriteHymn">
+                    <Label Text="{Binding Number}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </VerticalStackLayout>
 </views:BaseContentPage>

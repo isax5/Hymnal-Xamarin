@@ -74,7 +74,7 @@ public sealed class HymnsService
     /// </summary>
     /// <param name="hymnReference"></param>
     /// <returns></returns>
-    public Task<Hymn> GetHymnAsync(IHymnReference hymnReference)
+    public Task<Hymn> GetHymnAsync(HymnReference hymnReference)
     {
         return GetHymnAsync(hymnReference.Number, HymnalLanguage.GetHymnalLanguageWithId(hymnReference.HymnalLanguageId));
     }

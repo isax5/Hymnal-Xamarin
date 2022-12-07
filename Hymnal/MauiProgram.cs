@@ -31,6 +31,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<FilesService>();
         builder.Services.AddSingleton<HymnsService>();
         builder.Services.AddSingleton<PreferencesService>();
+        builder.Services.AddSingleton<DatabaseService>();
         #endregion
 
         #region Views and ViewModels

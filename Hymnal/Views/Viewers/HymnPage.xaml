@@ -7,16 +7,20 @@
     xmlns:models="clr-namespace:Hymnal.Models"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title="{Binding CurrentHymn.Number, StringFormat='# {0}'}"
+    Title="{Binding CurrentHymn.Number,
+                    StringFormat='# {0}'}"
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
     Shell.TabBarIsVisible="False">
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
+            Command="{Binding AddToFavoritesAsyncCommand}"
+            Text="Add Favorite" />
+        <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
             CommandParameter="{Binding Parameter}"
-            Text="Navegar" />
+            Text="Partitura" />
     </ContentPage.ToolbarItems>
 
     <CarouselView
@@ -40,7 +44,9 @@
                         IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
                         Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />-->
 
-                    <ScrollView Padding="10,20" VerticalScrollBarVisibility="Never">
+                    <ScrollView
+                        Padding="10,20"
+                        VerticalScrollBarVisibility="Never">
                         <StackLayout Spacing="20">
 
                             <!--  FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->

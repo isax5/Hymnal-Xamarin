@@ -9,6 +9,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 {
     private readonly PreferencesService preferencesService;
     private readonly HymnsService hymnsService;
+    private readonly DatabaseService databaseService;
 
     #region Properties
     public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
@@ -36,10 +37,14 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     #endregion
 
 
-    public HymnViewModel(PreferencesService preferencesService, HymnsService hymnsService)
+    public HymnViewModel(
+        PreferencesService preferencesService,
+        HymnsService hymnsService,
+        DatabaseService databaseService)
     {
         this.preferencesService = preferencesService;
         this.hymnsService = hymnsService;
+        this.databaseService = databaseService;
     }
 
     public override async Task InitializeAsync(NavigatedToEventArgs args)
@@ -82,5 +87,18 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     private void CarouselViewPositionChanged()
     {
         HymnParameter.Number = CurrentHymn.Number;
+    }
+
+    [RelayCommand]
+    private async void AddToFavoritesAsync()
+    {
+        try
+        {
+            await databaseService.InserAsync(CurrentHymn.ToFavoriteHymn());
+        }
+        catch (Exception ex)
+        {
+            ex.Report();
+        }
     }
 }

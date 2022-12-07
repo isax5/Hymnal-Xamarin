@@ -1,14 +1,14 @@
 namespace Hymnal.Models.DataBase;
 
-public interface IHymnReference
+public abstract class HymnReference : StorageModel
 {
     /// <summary>
     /// Hymn Number
     /// </summary>
-    int Number { get; set; }
+    public int Number { get; set; }
 
     /// <summary>
     /// Language Id <see cref="HymnalLanguage.Id"/>
     /// </summary>
-    string HymnalLanguageId { get; set; }
+    public string HymnalLanguageId { get; set; }
 }
