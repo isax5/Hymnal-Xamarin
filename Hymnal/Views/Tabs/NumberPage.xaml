@@ -6,7 +6,8 @@
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title="{extensions:Translate AdventistHymnal}"
+    Title="{localization:Translate AdventistHymnal}"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     x:DataType="viewModels:NumberViewModel"
     x:TypeArguments="viewModels:NumberViewModel">
 
@@ -25,9 +26,13 @@
             AutomationProperties.IsInAccessibleTree="False"
             Source="{DynamicResource BackgroundImageFile}" />
 
-        <StackLayout BackgroundColor="{DynamicResource Color.SecondaryBackground}" Opacity="{DynamicResource Opacity.BackgroundMainPageFilter}" />
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.SecondaryBackground}"
+            Opacity="{DynamicResource Opacity.BackgroundMainPageFilter}" />
 
-        <StackLayout x:Name="MainStack" HorizontalOptions="CenterAndExpand">
+        <StackLayout
+            x:Name="MainStack"
+            HorizontalOptions="CenterAndExpand">
             <StackLayout
                 x:Name="ContainerStack"
                 Margin="0,30"
@@ -43,7 +48,9 @@
                         VerticalOptions="FillAndExpand"
                         WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />-->
 
-                    <HorizontalStackLayout x:Name="EntryContainer" HorizontalOptions="CenterAndExpand">
+                    <HorizontalStackLayout
+                        x:Name="EntryContainer"
+                        HorizontalOptions="CenterAndExpand">
                         <Label
                             AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
@@ -60,8 +67,8 @@
                             AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
                             AbsoluteLayout.LayoutFlags="All"
                             AutomationId="HymnNumberEntry"
-                            AutomationProperties.HelpText="{extensions:Translate AutomationNumberPageHelpTextEntry}"
-                            AutomationProperties.Name="{extensions:Translate AutomationNumberPageEntry}"
+                            AutomationProperties.HelpText="{localization:Translate AutomationNumberPageHelpTextEntry}"
+                            AutomationProperties.Name="{localization:Translate AutomationNumberPageEntry}"
                             BackgroundColor="Transparent"
                             Focused="HymnNumberEntry_Focused"
                             FontAttributes="Bold"
@@ -72,7 +79,8 @@
                             Placeholder="...."
                             PlaceholderColor="{DynamicResource Color.PrimaryLight}"
                             ReturnCommand="{Binding OpenHymnAsyncCommand}"
-                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
+                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry},
+                                                             Path=Text}"
                             Text="{Binding HymnNumber}"
                             TextColor="{DynamicResource Color.PrimaryText}"
                             VerticalOptions="CenterAndExpand"
@@ -91,12 +99,13 @@
                 <Button
                     x:DataType="{x:Null}"
                     AutomationId="OpenHymnButton"
-                    AutomationProperties.Name="{extensions:Translate AutomationNumberPageOpenHymnButton}"
+                    AutomationProperties.Name="{localization:Translate AutomationNumberPageOpenHymnButton}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnAsyncCommand}"
-                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry}, Path=Text}"
+                    CommandParameter="{Binding Source={x:Reference HymnNumberEntry},
+                                               Path=Text}"
                     HorizontalOptions="CenterAndExpand"
-                    Text="{extensions:Translate Generic_Open}"
+                    Text="{localization:Translate Generic_Open}"
                     WidthRequest="200">
                     <!--<Button.ImageSource>
                         <FontImageSource

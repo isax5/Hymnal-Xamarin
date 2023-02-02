@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui;
 using Hymnal.Resources.Languages;
+using LocalizationResourceManager.Maui;
 using Microsoft.Extensions.Logging;
 
 namespace Hymnal;
@@ -8,10 +9,12 @@ public static class MauiProgram
 {
     public static MauiApp CreateMauiApp()
     {
-        TranslateExtension.Configure(LanguageResources.ResourceManager);
-
         MauiAppBuilder builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>()
+            .UseLocalizationResourceManager(settings =>
+            {
+                settings.AddResource(LanguageResources.ResourceManager);
+            })
             .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {

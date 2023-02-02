@@ -5,7 +5,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:models="clr-namespace:Hymnal.Models"
-    xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
+    xmlns:viewModels="clr-namespace:Hymnal.ViewModels" xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{Binding CurrentHymn.Number,
                     StringFormat='# {0}'}"
@@ -52,7 +52,7 @@
                             <!--  FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
                             <Label
                                 AutomationProperties.HelpText="{Binding Title}"
-                                AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
+                                AutomationProperties.Name="{localization:Translate AutomationHymnPageTitle}"
                                 HorizontalOptions="FillAndExpand"
                                 HorizontalTextAlignment="Center"
                                 IsVisible="{OnPlatform Default=True,
@@ -65,7 +65,7 @@
                                 Margin="10"
                                 AutomationId="HymnContentLabel"
                                 AutomationProperties.HelpText="{Binding Content}"
-                                AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
+                                AutomationProperties.Name="{localization:Translate AutomationHymnPageContent}"
                                 HorizontalTextAlignment="Center"
                                 LineBreakMode="WordWrap"
                                 Text="{Binding Content}"

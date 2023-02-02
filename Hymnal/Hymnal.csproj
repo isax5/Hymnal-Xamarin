@@ -66,6 +66,7 @@
 	<ItemGroup>
 		<PackageReference Include="CommunityToolkit.Maui" Version="3.0.0" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.0.0" />
+		<PackageReference Include="LocalizationResourceManager.Maui" Version="1.0.3" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="7.0.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
@@ -125,6 +126,10 @@
 	  <MauiXaml Update="Views\Viewers\MusicSheetPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Converters\" />
 	</ItemGroup>
 
 </Project>
