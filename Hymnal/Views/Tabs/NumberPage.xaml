@@ -107,12 +107,12 @@
                     HorizontalOptions="CenterAndExpand"
                     Text="{localization:Translate Generic_Open}"
                     WidthRequest="200">
-                    <!--<Button.ImageSource>
+                    <Button.ImageSource>
                         <FontImageSource
-                            FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
-                            Glyph="{x:Static constans:FontAwesomeIcons.BookOpen}"
+                            FontFamily="{StaticResource IconFonts.FASolid}"
+                            Glyph="{StaticResource IconFASolid.BookOpen}"
                             Color="{DynamicResource Color.NavBarText}" />
-                    </Button.ImageSource>-->
+                    </Button.ImageSource>
                 </Button>
             </StackLayout>
 

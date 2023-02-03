@@ -12,9 +12,16 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
 
+                <ResourceDictionary Source="Resources/Styles/IconFonts.xaml" />
+
                 <ResourceDictionary Source="Resources/Styles/StaticTheme.xaml" />
                 <ResourceDictionary Source="Resources/Styles/LightTheme.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!--  Fonts  -->
+            <x:String x:Key="Fonts.OpenSansRegular">OpenSansRegular</x:String>
+            <x:String x:Key="Fonts.OpenSansSemibold">OpenSansSemibold</x:String>
+
         </ResourceDictionary>
     </Application.Resources>
 
