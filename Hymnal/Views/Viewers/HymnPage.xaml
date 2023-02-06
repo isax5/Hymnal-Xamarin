@@ -5,7 +5,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:models="clr-namespace:Hymnal.Models"
-    xmlns:viewModels="clr-namespace:Hymnal.ViewModels" xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{Binding CurrentHymn.Number,
                     StringFormat='# {0}'}"
@@ -20,61 +21,74 @@
         <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
             CommandParameter="{Binding Parameter}"
+            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                              Glyph={StaticResource IconFASolid.Music}}"
             Text="Partitura" />
     </ContentPage.ToolbarItems>
 
-    <CarouselView
-        CurrentItem="{Binding CurrentHymn}"
-        HorizontalScrollBarVisibility="Never"
-        IsScrollAnimated="False"
-        ItemsSource="{Binding CarouselHymns}"
-        Loop="False"
-        PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
-        <CarouselView.ItemTemplate>
-            <DataTemplate x:DataType="models:Hymn">
-                <Grid>
-                    <!--<Image
-                        Aspect="AspectFill"
-                        AutomationProperties.IsInAccessibleTree="False"
-                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
-                        Source="{DynamicResource BackgroundImageFile}" />-->
+    <!--<CarouselView
+            x:Name="MainCarousel"
+            CurrentItem="{Binding CurrentHymn}"
+            HorizontalScrollBarVisibility="Never"
+            IsScrollAnimated="False"
+            ItemsSource="{Binding CarouselHymns}"
+            Loop="False"
+            PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
+            <CarouselView.ItemTemplate>
+                <DataTemplate x:DataType="models:Hymn">-->
+    <Grid>
+        <!--<Image
+                Aspect="AspectFill"
+                AutomationProperties.IsInAccessibleTree="False"
+                IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                Source="{DynamicResource BackgroundImageFile}" />-->
 
-                    <!--<StackLayout
-                        BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
-                        Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />-->
+        <!--<StackLayout
+                BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+                IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />-->
 
-                    <ScrollView
-                        Padding="10,20"
-                        VerticalScrollBarVisibility="Never">
-                        <StackLayout Spacing="20">
+        <ScrollView
+            Padding="10,20"
+            VerticalScrollBarVisibility="Never">
 
-                            <!--  FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
-                            <Label
-                                AutomationProperties.HelpText="{Binding Title}"
-                                AutomationProperties.Name="{localization:Translate AutomationHymnPageTitle}"
-                                HorizontalOptions="FillAndExpand"
-                                HorizontalTextAlignment="Center"
-                                IsVisible="{OnPlatform Default=True,
-                                                       Tizen=False}"
-                                Text="{Binding Title}"
-                                TextColor="{DynamicResource Color.PrimaryText}" />
+            <StackLayout Spacing="20">
+                <StackLayout.GestureRecognizers>
+                    <SwipeGestureRecognizer
+                        Direction="Right"
+                        Command="{Binding PreviousHymnCommand}" />
+                    <SwipeGestureRecognizer
+                        Direction="Left"
+                        Command="{Binding NextHymnCommand}" />
+                </StackLayout.GestureRecognizers>
 
-                            <!--  FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
-                            <Label
-                                Margin="10"
-                                AutomationId="HymnContentLabel"
-                                AutomationProperties.HelpText="{Binding Content}"
-                                AutomationProperties.Name="{localization:Translate AutomationHymnPageContent}"
-                                HorizontalTextAlignment="Center"
-                                LineBreakMode="WordWrap"
-                                Text="{Binding Content}"
-                                TextColor="{DynamicResource Color.PrimaryText}" />
-                        </StackLayout>
-                    </ScrollView>
+                <!--  FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
+                <Label
+                    AutomationProperties.HelpText="{Binding CurrentHymn.Title}"
+                    AutomationProperties.Name="{localization:Translate AutomationHymnPageTitle}"
+                    HorizontalOptions="FillAndExpand"
+                    HorizontalTextAlignment="Center"
+                    IsVisible="{OnPlatform Default=True,
+                                           Tizen=False}"
+                    Text="{Binding CurrentHymn.Title}"
+                    TextColor="{DynamicResource Color.PrimaryText}" />
 
-                </Grid>
-            </DataTemplate>
-        </CarouselView.ItemTemplate>
-    </CarouselView>
+                <!--  FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
+                <Label
+                    Margin="10"
+                    AutomationId="HymnContentLabel"
+                    AutomationProperties.HelpText="{Binding CurrentHymn.Content}"
+                    AutomationProperties.Name="{localization:Translate AutomationHymnPageContent}"
+                    HorizontalTextAlignment="Center"
+                    LineBreakMode="WordWrap"
+                    Text="{Binding CurrentHymn.Content}"
+                    TextColor="{DynamicResource Color.PrimaryText}" />
+            </StackLayout>
+        </ScrollView>
+
+    </Grid>
+    <!--</DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>-->
+
 </views:BaseContentPage>

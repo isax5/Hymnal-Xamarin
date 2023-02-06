@@ -54,16 +54,22 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         HymnParameter = Parameter;
         Language = HymnParameter.HymnalLanguage;
 
-        Observable.Zip(
-            hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage).ToObservable(),
-            hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage).ToObservable(),
-            (list, hymn) => new Tuple<List<Hymn>, Hymn>(list, hymn))
+        hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage)
+            .ToObservable()
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
-                CarouselHymns = result.Item1;
-                CurrentHymn = result.Item2;
+                CurrentHymn = result;
             }), error => error.Report());
 
+        //Observable.Zip(
+        //    hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage).ToObservable(),
+        //    hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage).ToObservable(),
+        //    (list, hymn) => new Tuple<List<Hymn>, Hymn>(list, hymn))
+        //    .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+        //    {
+        //        CarouselHymns = result.Item1;
+        //        CurrentHymn = result.Item2;
+        //    }), error => error.Report());
 
         //IsPlaying = mediaManager.IsPlaying();
 
@@ -83,10 +89,40 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     }
 
 
+    //[RelayCommand]
+    //private void CarouselViewPositionChanged()
+    //{
+    //    HymnParameter.Number = CurrentHymn.Number;
+    //}
+
     [RelayCommand]
-    private void CarouselViewPositionChanged()
+    private void PreviousHymn()
     {
-        HymnParameter.Number = CurrentHymn.Number;
+        hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                var newHymnIndex = CurrentHymn.Number - 1;
+
+                if (newHymnIndex > 0)
+                    CurrentHymn = result[newHymnIndex - 1];
+
+            }), error => error.Report());
+    }
+
+    [RelayCommand]
+    private void NextHymn()
+    {
+        hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                var newHymnIndex = CurrentHymn.Number + 1;
+
+                if (newHymnIndex <= result.Count)
+                    CurrentHymn = result[newHymnIndex - 1];
+
+            }), error => error.Report());
     }
 
     [RelayCommand]
