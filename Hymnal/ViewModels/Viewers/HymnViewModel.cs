@@ -1,6 +1,4 @@
 using System.Reactive.Linq;
-using System.Reactive.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Hymnal.ViewModels;
@@ -47,9 +45,9 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         this.databaseService = databaseService;
     }
 
-    public override async Task InitializeAsync(NavigatedToEventArgs args)
+    public override void Initialize()
     {
-        await base.InitializeAsync(args);
+        base.Initialize();
 
         HymnParameter = Parameter;
         Language = HymnParameter.HymnalLanguage;

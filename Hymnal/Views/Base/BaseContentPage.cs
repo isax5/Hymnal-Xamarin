@@ -1,5 +1,3 @@
-using Hymnal.ViewModels;
-
 namespace Hymnal.Views;
 
 public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : class
@@ -16,6 +14,20 @@ public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : cl
         ViewModel = viewModel;
     }
 
+    private bool pageLoaded;
+    protected override void OnParentSet()
+    {
+        base.OnParentSet();
+
+        if (!pageLoaded && ViewModel is BaseViewModel viewModel)
+        {
+            pageLoaded = true;
+
+            viewModel.Initialize();
+            viewModel.InitializeAsync().ConfigureAwait(true);
+        }
+    }
+
     protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
     {
         if (ViewModel is BaseViewModel viewModel)
@@ -24,21 +36,24 @@ public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : cl
         base.OnNavigatedFrom(args);
     }
 
-    private bool pageLoaded;
+    //protected override void OnChildAdded(Element child)
+    //{
+    //    base.OnChildAdded(child);
+
+    //    if (!pageLoaded && ViewModel is BaseViewModel viewModel)
+    //    {
+    //        pageLoaded = true;
+
+    //        viewModel.Initialize();
+    //        viewModel.InitializeAsync().ConfigureAwait(true);
+    //    }
+    //}
+
     protected override void OnNavigatedTo(NavigatedToEventArgs args)
     {
         if (ViewModel is BaseViewModel viewModel)
-        {
-            if (!pageLoaded)
-            {
-                viewModel.Initialize(args);
-                viewModel.InitializeAsync(args).ConfigureAwait(true);
-            }
-
             viewModel.OnNavigatedTo(args);
-        }
 
-        pageLoaded = true;
         base.OnNavigatedTo(args);
     }
 

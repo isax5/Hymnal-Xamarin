@@ -12,10 +12,10 @@ public abstract partial class BaseViewModel : ObservableObject
 
 
     #region Life Cycle
-    public virtual void Initialize(NavigatedToEventArgs args)
+    public virtual void Initialize()
     { }
 
-    public virtual Task InitializeAsync(NavigatedToEventArgs args)
+    public virtual Task InitializeAsync()
     {
         return Task.CompletedTask;
     }
