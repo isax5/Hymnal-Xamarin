@@ -23,8 +23,11 @@ public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : cl
         {
             pageLoaded = true;
 
-            viewModel.Initialize();
-            viewModel.InitializeAsync().ConfigureAwait(true);
+            new Thread(async () =>
+            {
+                await MainThread.InvokeOnMainThreadAsync(() => viewModel.Initialize());
+                await MainThread.InvokeOnMainThreadAsync(async () => await viewModel.InitializeAsync());
+            }).Start();
         }
     }
 
