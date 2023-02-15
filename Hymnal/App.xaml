@@ -22,6 +22,11 @@
             <x:String x:Key="Fonts.OpenSansRegular">OpenSansRegular</x:String>
             <x:String x:Key="Fonts.OpenSansSemibold">OpenSansSemibold</x:String>
 
+            <!--  Images  -->
+            <FileImageSource
+                File="wide_background"
+                x:Key="BackgroundImageFile" />
+
         </ResourceDictionary>
     </Application.Resources>
 

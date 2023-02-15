@@ -15,18 +15,30 @@
 
     <TabBar>
         <Tab Title="Number">
-            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:NumberPage}" />
+            <ShellContent
+                Title="Adventist Hymnal"
+                ContentTemplate="{DataTemplate views:NumberPage}" />
         </Tab>
         <Tab Title="Index">
-            <ShellContent Title="Alfabetico" ContentTemplate="{DataTemplate views:AlphabeticalIndexPage}" />
-            <ShellContent Title="Numerico" ContentTemplate="{DataTemplate views:NumericalIndexPage}" />
-            <ShellContent Title="Temático" ContentTemplate="{DataTemplate views:ThematicIndexPage}" />
+            <ShellContent
+                Title="Alfabetico"
+                ContentTemplate="{DataTemplate views:AlphabeticalIndexPage}" />
+            <ShellContent
+                Title="Numerico"
+                ContentTemplate="{DataTemplate views:NumericalIndexPage}" />
+            <ShellContent
+                Title="Temático"
+                ContentTemplate="{DataTemplate views:ThematicIndexPage}" />
         </Tab>
         <Tab Title="Favorites">
-            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:FavoritesPage}" />
+            <ShellContent
+                Title="Adventist Hymnal"
+                ContentTemplate="{DataTemplate views:FavoritesPage}" />
         </Tab>
         <Tab Title="Settings">
-            <ShellContent Title="Adventist Hymnal" ContentTemplate="{DataTemplate views:SettingsPage}" />
+            <ShellContent
+                Title="Adventist Hymnal"
+                ContentTemplate="{DataTemplate views:SettingsPage}" />
         </Tab>
     </TabBar>
 

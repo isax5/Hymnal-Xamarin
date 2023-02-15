@@ -9,10 +9,18 @@
     x:DataType="viewModels:ThematicIndexViewModel"
     x:TypeArguments="viewModels:ThematicIndexViewModel">
 
-    <VerticalStackLayout>
-        <Label
-            HorizontalOptions="Center"
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" />
-    </VerticalStackLayout>
+
+    <ListView
+        x:DataType="{x:Null}"
+        BackgroundColor="Transparent"
+        Footer=""
+        ItemsSource="{Binding Thematics}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell
+                    Text="{Binding ThematicName}"
+                    TextColor="{DynamicResource Color.PrimaryText}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 </views:BaseContentPage>
