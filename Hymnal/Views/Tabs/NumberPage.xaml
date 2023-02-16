@@ -21,7 +21,6 @@
 
     <Grid>
         <Image
-            x:Name="backgroundImage"
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
             Source="{DynamicResource BackgroundImageFile}" />

@@ -56,6 +56,6 @@ public sealed class PreferencesService
 
     public PreferencesService(IPreferences preferences)
     {
-        preferences = Preferences.Default;
+        this.preferences = preferences;
     }
 }

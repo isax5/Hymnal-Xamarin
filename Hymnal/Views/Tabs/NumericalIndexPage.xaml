@@ -9,65 +9,78 @@
     x:DataType="viewModels:NumericalIndexViewModel"
     x:TypeArguments="viewModels:NumericalIndexViewModel">
 
+    <Grid>
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            Source="{DynamicResource BackgroundImageFile}" />
 
-    <!--  SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"  -->
-    <ListView
-        x:DataType="{x:Null}"
-        BackgroundColor="Transparent"
-        CachingStrategy="RecycleElement"
-        Footer=""
-        GroupDisplayBinding="{Binding Key}"
-        GroupShortNameBinding="{Binding Key}"
-        IsGroupingEnabled="True"
-        ItemsSource="{Binding Hymns}"
-        RowHeight="50">
-        <ListView.ItemTemplate>
-            <DataTemplate x:DataType="{x:Null}">
-                <ViewCell>
-                    <Grid
-                        Padding="20,0"
-                        ColumnDefinitions="0.2*, *"
-                        ColumnSpacing="0"
-                        RowDefinitions="0.7*, 0.3*"
-                        RowSpacing="0">
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
 
-                        <!--  Number  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.RowSpan="2"
-                            Grid.Column="0"
-                            AutomationProperties.HelpText="{Binding Title}"
-                            FontSize="Large"
-                            Text="{Binding Number}"
-                            TextColor="{DynamicResource Color.PrimaryText}"
-                            VerticalOptions="CenterAndExpand" />
+        <!--  SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"  -->
+        <ListView
+            x:DataType="{x:Null}"
+            BackgroundColor="Transparent"
+            CachingStrategy="RecycleElement"
+            Footer=""
+            GroupDisplayBinding="{Binding Key}"
+            GroupShortNameBinding="{Binding Key}"
+            IsGroupingEnabled="True"
+            ItemsSource="{Binding Hymns}"
+            RowHeight="50">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="{x:Null}">
+                    <ViewCell>
+                        <Grid
+                            Padding="20,0"
+                            ColumnDefinitions="0.2*, *"
+                            ColumnSpacing="0"
+                            RowDefinitions="0.7*, 0.3*"
+                            RowSpacing="0">
 
-                        <!--  Title  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            FontSize="Large"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding Title}"
-                            TextColor="{DynamicResource Color.PrimaryText}"
-                            VerticalOptions="CenterAndExpand" />
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                AutomationProperties.HelpText="{Binding Title}"
+                                FontSize="Large"
+                                Text="{Binding Number}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
 
-                        <!--  Preview  -->
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            FontSize="Micro"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding PlainContent}"
-                            TextColor="{DynamicResource Color.SecondaryText}"
-                            VerticalOptions="CenterAndExpand" />
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Large"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Title}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
 
-                    </Grid>
-                </ViewCell>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+                            <!--  Preview  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Micro"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding PlainContent}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
 
 </views:BaseContentPage>

@@ -37,16 +37,17 @@
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="models:Hymn">-->
     <Grid>
-        <!--<Image
-                Aspect="AspectFill"
-                AutomationProperties.IsInAccessibleTree="False"
-                IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
-                Source="{DynamicResource BackgroundImageFile}" />-->
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            Source="{DynamicResource BackgroundImageFile}" />
 
-        <!--<StackLayout
-                BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-                IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
-                Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />-->
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            IsVisible="{Binding BackgroundImageAppearance}"
+            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
 
         <ScrollView
             Padding="10,20"

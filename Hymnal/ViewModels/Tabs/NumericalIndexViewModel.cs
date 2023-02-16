@@ -24,7 +24,7 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
             .ToObservable()
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
-                Hymns = result.OrderByTitle().GroupByTitle();
+                Hymns = result.OrderByNumber().GroupByNumber();
             }), error => error.Report());
     }
 }

@@ -9,18 +9,32 @@
     x:DataType="viewModels:ThematicIndexViewModel"
     x:TypeArguments="viewModels:ThematicIndexViewModel">
 
+    <Grid>
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            Source="{DynamicResource BackgroundImageFile}" />
 
-    <ListView
-        x:DataType="{x:Null}"
-        BackgroundColor="Transparent"
-        Footer=""
-        ItemsSource="{Binding Thematics}">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell
-                    Text="{Binding ThematicName}"
-                    TextColor="{DynamicResource Color.PrimaryText}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
+
+        <ListView
+            x:DataType="{x:Null}"
+            BackgroundColor="Transparent"
+            Footer=""
+            ItemsSource="{Binding Thematics}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Text="{Binding ThematicName}"
+                        TextColor="{DynamicResource Color.PrimaryText}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </Grid>
+
 </views:BaseContentPage>

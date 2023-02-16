@@ -5,7 +5,8 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
     private readonly HymnsService hymnsService;
 
     #region Properties
-    public ObservableRangeCollection<Thematic> Thematics { get; } = new();
+    [ObservableProperty]
+    private List<Thematic> thematics;
     #endregion
 
 
@@ -22,7 +23,7 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
             .ToObservable()
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
-                Thematics.ReplaceRange(result);
+                Thematics = result;
             }), error => error.Report());
     }
 }

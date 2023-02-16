@@ -24,7 +24,7 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
             .ToObservable()
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
-                Hymns = result.OrderByNumber().GroupByNumber();
+                Hymns = result.OrderByTitle().GroupByTitle();
             }), error => error.Report());
     }
 }
