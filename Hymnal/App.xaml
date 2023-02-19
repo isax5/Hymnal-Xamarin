@@ -23,9 +23,8 @@
             <x:String x:Key="Fonts.OpenSansSemibold">OpenSansSemibold</x:String>
 
             <!--  Images  -->
-            <FileImageSource
-                File="wide_background"
-                x:Key="BackgroundImageFile" />
+            <x:String x:Key="BackgroundImageFile">wide_background.png</x:String>
+            <!--<x:String x:Key="BackgroundImageFile">dotnet_bot</x:String>-->
 
         </ResourceDictionary>
     </Application.Resources>

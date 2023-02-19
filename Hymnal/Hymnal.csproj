@@ -40,7 +40,7 @@
 		<!-- Images (configure mdpi size)-->
 		<MauiImage Include="Resources\Images\*" />
 		<MauiImage Update="Resources\Images\dotnet_bot.svg" BaseSize="168,208" />
-    <MauiImage Update="Resources\Images\wide_background.jpg" BaseSize="423,285" />
+    <MauiImage Include="Resources\Images\wide_background.png" BaseSize="423,285" />
     
 		<!-- Custom Fonts -->
 		<MauiFont Include="Resources\Fonts\*" />

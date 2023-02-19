@@ -23,7 +23,7 @@
         <Image
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
-            Source="{DynamicResource BackgroundImageFile}" />
+            Source="{StaticResource BackgroundImageFile}" />
 
         <StackLayout
             BackgroundColor="{DynamicResource Color.SecondaryBackground}"

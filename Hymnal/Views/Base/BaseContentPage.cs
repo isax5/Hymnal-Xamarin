@@ -25,8 +25,15 @@ public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : cl
 
             new Thread(async () =>
             {
-                await MainThread.InvokeOnMainThreadAsync(() => viewModel.Initialize());
-                await MainThread.InvokeOnMainThreadAsync(async () => await viewModel.InitializeAsync());
+                try
+                {
+                    await MainThread.InvokeOnMainThreadAsync(() => viewModel.Initialize());
+                    await MainThread.InvokeOnMainThreadAsync(async () => await viewModel.InitializeAsync());
+                }
+                catch (Exception ex)
+                {
+                    ex.Report();
+                }
             }).Start();
         }
     }

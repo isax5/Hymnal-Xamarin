@@ -4,10 +4,12 @@ public static class ExceptionExtensions
 {
     public static void Report(this Exception exception, Dictionary<string, string> properties = null)
     {
-        MainThread.BeginInvokeOnMainThread(() =>
+        try
         {
-            Shell.Current.DisplayAlert("#Error", exception.Message, "Ok");
-        });
+            MainThread.BeginInvokeOnMainThread(() =>
+            {
+                Shell.Current.DisplayAlert("#Error", exception.Message, "Ok");
+            });
 #if DEBUG
 #elif RELEASE
             // TODO: Reportar algo
@@ -17,5 +19,7 @@ public static class ExceptionExtensions
                     Crashes.TrackError(exception, properties);
             });
 #endif
+        }
+        catch (Exception) { }
     }
 }
