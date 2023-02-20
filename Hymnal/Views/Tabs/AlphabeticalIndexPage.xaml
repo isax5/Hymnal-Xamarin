@@ -30,9 +30,11 @@
             Footer=""
             GroupDisplayBinding="{Binding Key}"
             GroupShortNameBinding="{Binding Key}"
-            IsGroupingEnabled="True"
+            IsGroupingEnabled="{OnPlatform Default=True,
+                                           WinUI=False}"
             ItemsSource="{Binding Hymns}"
-            RowHeight="50">
+            RowHeight="{OnPlatform Default=50,
+                                   WinUI=60}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Null}">
                     <ViewCell>

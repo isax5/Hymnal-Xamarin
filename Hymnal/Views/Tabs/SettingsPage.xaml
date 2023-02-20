@@ -3,10 +3,10 @@
     x:Class="Hymnal.Views.SettingsPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{localization:Translate AdventistHymnal}"
-    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     x:DataType="viewModels:SettingsViewModel"
     x:TypeArguments="viewModels:SettingsViewModel">
 

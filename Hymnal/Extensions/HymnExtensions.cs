@@ -1,5 +1,4 @@
 using System.Globalization;
-using CommunityToolkit.Mvvm.Collections;
 using Hymnal.Models.DataBase;
 
 namespace Hymnal.Extensions;
@@ -35,9 +34,9 @@ public static class HymnExtensions
         });
     }
 
-    public static ObservableGroupedCollection<string, Hymn> GroupByNumber(this IEnumerable<Hymn> hymns)
+    public static IEnumerable<IGrouping<string, Hymn>> GroupByNumber(this IEnumerable<Hymn> hymns)
     {
-        return new ObservableGroupedCollection<string, Hymn>(hymns.GroupBy(h =>
+        return hymns.GroupBy(h =>
         {
             switch (h.Number / 10)
             {
@@ -172,12 +171,12 @@ public static class HymnExtensions
             }
 
             return "";
-        }));
+        });
     }
 
-    public static ObservableGroupedCollection<string, Hymn> GroupByTitle(this IEnumerable<Hymn> hymns)
+    public static IEnumerable<IGrouping<string, Hymn>> GroupByTitle(this IEnumerable<Hymn> hymns)
     {
-        return new ObservableGroupedCollection<string, Hymn>(hymns.GroupBy(h =>
+        return hymns.GroupBy(h =>
         {
             var letterToUse = 0;
 
@@ -185,7 +184,7 @@ public static class HymnExtensions
                 letterToUse++;
 
             return h.Title[letterToUse].ToString().StringRender();
-        }));
+        });
     }
 
     public static IEnumerable<Hymn> GetRange(this IEnumerable<Hymn> hymns, int start, int end)

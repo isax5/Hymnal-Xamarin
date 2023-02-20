@@ -1,30 +1,32 @@
-using CommunityToolkit.Mvvm.Collections;
+using System.Collections;
 
 namespace Hymnal.ViewModels;
 public sealed partial class NumericalIndexViewModel : BaseViewModel
 {
     private readonly HymnsService hymnsService;
+    private readonly IDeviceInfo deviceInfo;
 
     #region Properties
     [ObservableProperty]
-    private ObservableGroupedCollection<string, Hymn> hymns;
+    private IEnumerable hymns;
     #endregion
 
 
-    public NumericalIndexViewModel(HymnsService hymnsService)
+    public NumericalIndexViewModel(
+        HymnsService hymnsService,
+        IDeviceInfo deviceInfo)
     {
         this.hymnsService = hymnsService;
+        this.deviceInfo = deviceInfo;
     }
 
-    public override void Initialize()
+    public override async Task InitializeAsync()
     {
-        base.Initialize();
+        await base.InitializeAsync();
 
-        hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
-            .ToObservable()
-            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
-            {
-                Hymns = result.OrderByNumber().GroupByNumber();
-            }), error => error.Report());
+        List<Hymn> result = await hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First());
+        Hymns = deviceInfo.Platform == DevicePlatform.WinUI
+            ? result.OrderByNumber()
+            : result.OrderByNumber().GroupByNumber();
     }
 }

@@ -2,13 +2,13 @@
 <views:BaseContentPage
     x:Class="Hymnal.Views.FavoritesPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:models="clr-namespace:Hymnal.Models"
-    xmlns:database="clr-namespace:Hymnal.Models.DataBase"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:database="clr-namespace:Hymnal.Models.DataBase"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
+    xmlns:models="clr-namespace:Hymnal.Models"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{localization:Translate AdventistHymnal}"
-    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     x:DataType="viewModels:FavoritesViewModel"
     x:TypeArguments="viewModels:FavoritesViewModel">
 

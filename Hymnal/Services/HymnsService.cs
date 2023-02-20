@@ -28,7 +28,7 @@ public sealed class HymnsService
     /// </summary>
     /// <param name="language"></param>
     /// <returns></returns>
-    public async Task<List<Hymn>> GetHymnListAsync(HymnalLanguage language)
+    public async ValueTask<List<Hymn>> GetHymnListAsync(HymnalLanguage language)
     {
         if (!HymnsDictionary.ContainsKey(language.Id))
         {
@@ -62,7 +62,7 @@ public sealed class HymnsService
         return HymnsDictionary[language.Id];
     }
 
-    public async Task<Hymn> GetHymnAsync(int number, HymnalLanguage language)
+    public async ValueTask<Hymn> GetHymnAsync(int number, HymnalLanguage language)
     {
         IEnumerable<Hymn> hymns = await GetHymnListAsync(language).ConfigureAwait(false);
 
@@ -74,12 +74,12 @@ public sealed class HymnsService
     /// </summary>
     /// <param name="hymnReference"></param>
     /// <returns></returns>
-    public Task<Hymn> GetHymnAsync(HymnReference hymnReference)
+    public ValueTask<Hymn> GetHymnAsync(HymnReference hymnReference)
     {
         return GetHymnAsync(hymnReference.Number, HymnalLanguage.GetHymnalLanguageWithId(hymnReference.HymnalLanguageId));
     }
 
-    public async Task<List<Thematic>> GetThematicListAsync(HymnalLanguage language)
+    public async ValueTask<List<Thematic>> GetThematicListAsync(HymnalLanguage language)
     {
         if (!language.SupportThematicList)
         {

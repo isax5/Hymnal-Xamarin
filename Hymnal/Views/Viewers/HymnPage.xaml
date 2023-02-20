@@ -4,9 +4,9 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
+    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:models="clr-namespace:Hymnal.Models"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
-    xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{Binding CurrentHymn.Number,
                     StringFormat='# {0}'}"
@@ -56,11 +56,11 @@
             <StackLayout Spacing="20">
                 <StackLayout.GestureRecognizers>
                     <SwipeGestureRecognizer
-                        Direction="Right"
-                        Command="{Binding PreviousHymnCommand}" />
+                        Command="{Binding PreviousHymnCommand}"
+                        Direction="Right" />
                     <SwipeGestureRecognizer
-                        Direction="Left"
-                        Command="{Binding NextHymnCommand}" />
+                        Command="{Binding NextHymnCommand}"
+                        Direction="Left" />
                 </StackLayout.GestureRecognizers>
 
                 <!--  FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->

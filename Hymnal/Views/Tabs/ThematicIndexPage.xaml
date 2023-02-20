@@ -25,7 +25,9 @@
             x:DataType="{x:Null}"
             BackgroundColor="Transparent"
             Footer=""
-            ItemsSource="{Binding Thematics}">
+            ItemsSource="{Binding Thematics}"
+            RowHeight="{OnPlatform Default=50,
+                                   WinUI=60}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell
