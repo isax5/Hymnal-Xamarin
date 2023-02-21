@@ -20,13 +20,17 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
         this.deviceInfo = deviceInfo;
     }
 
-    public override async Task InitializeAsync()
+    public override void Initialize()
     {
-        await base.InitializeAsync();
+        base.Initialize();
 
-        List<Hymn> result = await hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First());
-        Hymns = deviceInfo.Platform == DevicePlatform.WinUI
-            ? result.OrderByNumber()
-            : result.OrderByNumber().GroupByNumber();
+        hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                Hymns = deviceInfo.Platform == DevicePlatform.WinUI
+                    ? result.OrderByNumber()
+                    : result.OrderByNumber().GroupByNumber();
+            }), error => error.Report());
     }
 }

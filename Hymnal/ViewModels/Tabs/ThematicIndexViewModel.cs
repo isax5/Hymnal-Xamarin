@@ -15,11 +15,15 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
         this.hymnsService = hymnsService;
     }
 
-    public override async Task InitializeAsync()
+    public override void Initialize()
     {
-        await base.InitializeAsync();
+        base.Initialize();
 
-        List<Thematic> result = await hymnsService.GetThematicListAsync(InfoConstants.HymnsLanguages.First());
-        Thematics = result;
+        hymnsService.GetThematicListAsync(InfoConstants.HymnsLanguages.First())
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                Thematics = result;
+            }), error => error.Report());
     }
 }

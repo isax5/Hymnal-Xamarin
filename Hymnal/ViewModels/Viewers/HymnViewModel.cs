@@ -45,15 +45,19 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         this.databaseService = databaseService;
     }
 
-    public override async Task InitializeAsync()
+    public override void Initialize()
     {
-        await base.InitializeAsync();
+        base.Initialize();
 
         HymnParameter = Parameter;
         Language = HymnParameter.HymnalLanguage;
 
-        var result = await hymnsService.GetHymnAsync(HymnParameter.Number, Language);
-        CurrentHymn = result;
+        hymnsService.GetHymnAsync(HymnParameter.Number, Language)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                CurrentHymn = result;
+            }), error => error.Report());
 
         //Observable.Zip(
         //    hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage).ToObservable(),
@@ -90,23 +94,31 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     //}
 
     [RelayCommand]
-    private async void PreviousHymn()
+    private void PreviousHymn()
     {
-        var result = await hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage);
-        var newHymnIndex = CurrentHymn.Number - 1;
+        hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                var newHymnIndex = CurrentHymn.Number - 1;
 
-        if (newHymnIndex > 0)
-            CurrentHymn = result[newHymnIndex - 1];
+                if (newHymnIndex > 0)
+                    CurrentHymn = result[newHymnIndex - 1];
+            }), error => error.Report());
     }
 
     [RelayCommand]
-    private async void NextHymn()
+    private void NextHymn()
     {
-        var result = await hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage);
-        var newHymnIndex = CurrentHymn.Number + 1;
+        hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            {
+                var newHymnIndex = CurrentHymn.Number + 1;
 
-        if (newHymnIndex <= result.Count)
-            CurrentHymn = result[newHymnIndex - 1];
+                if (newHymnIndex <= result.Count)
+                    CurrentHymn = result[newHymnIndex - 1];
+            }), error => error.Report());
     }
 
     [RelayCommand]
