@@ -18,7 +18,7 @@ public static class InfoConstants
             TwoLetterIsoLanguageName = "en",
             HymnsFileName = "new-hymnal-en.json",
             ThematicHymnsFileName = "new-hymnal-thematic-list-en.json",
-            HymnsSheetsFileName = "PianoSheet_NewHymnal_en_###",
+            HymnsSheetsFileName = "piano_sheet_en_###.png",
         },
         new HymnalLanguage
         {
@@ -42,7 +42,7 @@ public static class InfoConstants
             TwoLetterIsoLanguageName = "es",
             HymnsFileName = "new-hymnal-es.json",
             ThematicHymnsFileName = "new-hymnal-thematic-list-es.json",
-            HymnsSheetsFileName = "PianoSheet_NewHymnal_es_###"
+            HymnsSheetsFileName = "piano_sheet_es_###.png"
         },
         new HymnalLanguage
         {
@@ -79,7 +79,7 @@ public static class InfoConstants
             TwoLetterIsoLanguageName = "ru",
             HymnsFileName = "new-hymnal-ru.json",
             ThematicHymnsFileName = "new-hymnal-thematic-list-ru.json",
-            HymnsSheetsFileName = "PianoSheet_NewHymnal_ru_###",
+            HymnsSheetsFileName = "piano_sheet_ru_###.png",
         }
     };
 }

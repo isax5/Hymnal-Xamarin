@@ -3,6 +3,7 @@
     x:Class="Hymnal.App"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:converters="clr-namespace:Hymnal.Converters"
     xmlns:local="clr-namespace:Hymnal"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
 
@@ -26,6 +27,8 @@
             <x:String x:Key="BackgroundImageFile">wide_background.png</x:String>
             <!--<x:String x:Key="BackgroundImageFile">dotnet_bot</x:String>-->
 
+            <!--  Converters  -->
+            <converters:HymnImageNameConverter x:Key="HymnImageNameConverter" />
         </ResourceDictionary>
     </Application.Resources>
 

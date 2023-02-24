@@ -17,12 +17,11 @@
         </controls:PinchToZoomContainer.GestureRecognizers>
 
         <StackLayout Margin="5">
-            <!--<Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_1.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_2.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_3.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_4.png'}" />
-            <Image Source="{Binding ImageSource, Converter={StaticResource ImageSourceResourceConverter}, ConverterParameter='Hymnal.XF.Resources.Assets.MusicSheets.{0}_5.png'}" />-->
+            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}}" />
+            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_2'}" />
+            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_3'}" />
+            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_4'}" />
+            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_5'}" />
         </StackLayout>
     </controls:PinchToZoomContainer>
 </views:BaseContentPage>

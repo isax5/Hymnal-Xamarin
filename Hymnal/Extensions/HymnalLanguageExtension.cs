@@ -17,8 +17,8 @@ public static class HymnalLanguageExtension
     /// <param name="hymnalLanguage"></param>
     /// <param name="hymnNymber"></param>
     /// <returns></returns>
-    public static string GetMusicSheetSource(this HymnalLanguage hymnalLanguage, int hymnNymber)
+    public static string GetMusicSheetSource(this HymnalLanguage hymnalLanguage, int hymnNymber, string sufix = null)
     {
-        return hymnalLanguage.HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3"));
+        return hymnalLanguage.HymnsSheetsFileName.Replace("###", hymnNymber.ToString("D3") + sufix ?? string.Empty);
     }
 }
