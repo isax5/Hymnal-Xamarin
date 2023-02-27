@@ -14,12 +14,18 @@
 
 
     <TabBar>
-        <Tab Title="Number">
+        <Tab
+            Title="Number"
+            Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                   Glyph={StaticResource IconFASolid.Book}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:NumberPage}" />
         </Tab>
-        <Tab Title="Index">
+        <Tab
+            Title="Index"
+            Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                   Glyph={StaticResource IconFASolid.Book}}">
             <ShellContent
                 Title="Alfabetico"
                 ContentTemplate="{DataTemplate views:AlphabeticalIndexPage}" />
@@ -30,12 +36,18 @@
                 Title="Temático"
                 ContentTemplate="{DataTemplate views:ThematicIndexPage}" />
         </Tab>
-        <Tab Title="Favorites">
+        <Tab
+            Title="Favorites"
+            Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                   Glyph={StaticResource IconFASolid.Book}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:FavoritesPage}" />
         </Tab>
-        <Tab Title="Settings">
+        <Tab
+            Title="Settings"
+            Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                   Glyph={StaticResource IconFASolid.Book}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:SettingsPage}" />
