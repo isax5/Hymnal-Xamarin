@@ -99,18 +99,20 @@
                     x:DataType="{x:Null}"
                     AutomationId="OpenHymnButton"
                     AutomationProperties.Name="{localization:Translate AutomationNumberPageOpenHymnButton}"
+                    BackgroundColor="{StaticResource Primary}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnAsyncCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumberEntry},
                                                Path=Text}"
                     HorizontalOptions="CenterAndExpand"
                     Text="{localization:Translate Generic_Open}"
+                    TextColor="{StaticResource White}"
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
                             FontFamily="{StaticResource IconFonts.FASolid}"
                             Glyph="{StaticResource IconFASolid.BookOpen}"
-                            Color="{DynamicResource Color.NavBarText}" />
+                            Color="{StaticResource White}" />
                     </Button.ImageSource>
                 </Button>
             </StackLayout>

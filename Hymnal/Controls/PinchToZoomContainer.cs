@@ -1,7 +1,13 @@
 namespace Hymnal.Controls;
 
-public sealed class PinchToZoomContainer : ContentView
+public sealed class PinchToZoomContainer :
+#if ANDROID || IOS
+    ContentView
+#else
+    ScrollView
+#endif
 {
+#if ANDROID || IOS
     private double _startScale, _currentScale;
     private double _startX, _startY;
     private double _xOffset, _yOffset;
@@ -161,4 +167,5 @@ public sealed class PinchToZoomContainer : ContentView
         _xOffset = Content.TranslationX;
         _yOffset = Content.TranslationY;
     }
+#endif
 }
