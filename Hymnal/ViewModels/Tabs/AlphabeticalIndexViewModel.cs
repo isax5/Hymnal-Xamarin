@@ -1,4 +1,6 @@
 using System.Collections;
+using System.Reactive.Concurrency;
+using System.Reactive.Linq;
 
 namespace Hymnal.ViewModels;
 public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
@@ -26,6 +28,7 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
 
         hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
             .ToObservable()
+            .SubscribeOn(new NewThreadScheduler())
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
                 Hymns = deviceInfo.Platform == DevicePlatform.WinUI

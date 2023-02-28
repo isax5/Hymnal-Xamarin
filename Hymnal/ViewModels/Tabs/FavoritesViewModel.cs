@@ -1,18 +1,20 @@
-using System.Reactive.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+using System.Reactive.Linq;
 using Hymnal.Models.DataBase;
 
 namespace Hymnal.ViewModels;
 
 public sealed partial class FavoritesViewModel : BaseViewModel
 {
+    private readonly HymnsService hymnsService;
     private readonly DatabaseService databaseService;
 
-    [ObservableProperty]
-    private List<FavoriteHymn> hymns;
+    public ObservableRangeCollection<Tuple<Hymn, FavoriteHymn>> Hymns { get; } = new();
 
-    public FavoritesViewModel(DatabaseService databaseService)
+    public FavoritesViewModel(
+        HymnsService hymnsService,
+        DatabaseService databaseService)
     {
+        this.hymnsService = hymnsService;
         this.databaseService = databaseService;
     }
 
@@ -23,9 +25,34 @@ public sealed partial class FavoritesViewModel : BaseViewModel
         databaseService.GetTable<FavoriteHymn>()
             .ToListAsync()
             .ToObservable()
-            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            .Subscribe(async hymnReferences =>
             {
-                Hymns = result;
-            }), error => error.Report());
+                try
+                {
+                    var values = GetHymnsAsync(hymnReferences.OrderBy(r => r.Order));
+
+                    await foreach (var value in values)
+                        MainThread.BeginInvokeOnMainThread(() => Hymns.Add(value));
+
+                    async IAsyncEnumerable<Tuple<Hymn, FavoriteHymn>> GetHymnsAsync(IEnumerable<FavoriteHymn> hymnReferences)
+                    {
+                        foreach (var hymnReference in hymnReferences)
+                            yield return new Tuple<Hymn, FavoriteHymn>(await hymnsService.GetHymnAsync(hymnReference), hymnReference);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ex.Report();
+                }
+            }, error => error.Report());
+        //.Select(items => Observable.Zip(items.Select(item => hymnsService.GetHymnAsync(item).ToObservable())))
+        //.Subscribe(values => values.Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+        //{
+        //    Hymns = result.OrderBy(h => h.order).ToList();
+        //}), error => error.Report()), error => error.Report());
+        //.Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+        //{
+        //    Hymns = result;
+        //}), error => error.Report());
     }
 }

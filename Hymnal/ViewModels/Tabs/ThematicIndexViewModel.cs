@@ -1,3 +1,6 @@
+using System.Reactive.Concurrency;
+using System.Reactive.Linq;
+
 namespace Hymnal.ViewModels;
 
 public sealed partial class ThematicIndexViewModel : BaseViewModel
@@ -21,6 +24,7 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
 
         hymnsService.GetThematicListAsync(InfoConstants.HymnsLanguages.First())
             .ToObservable()
+            .SubscribeOn(new NewThreadScheduler())
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
                 Thematics = result;

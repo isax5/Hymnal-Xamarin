@@ -17,8 +17,8 @@
             ItemsSource="{Binding Hymns}"
             SelectionMode="None">
             <CollectionView.ItemTemplate>
-                <DataTemplate x:DataType="database:FavoriteHymn">
-                    <Label Text="{Binding Number}" />
+                <DataTemplate x:DataType="{x:Null}">
+                    <Label Text="{Binding Item1.Title}" />
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
