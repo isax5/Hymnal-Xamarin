@@ -17,7 +17,7 @@
         <Tab
             Title="Number"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.Book}}">
+                                   Glyph={StaticResource IconFASolid.BookOpenReader}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:NumberPage}" />
@@ -25,7 +25,7 @@
         <Tab
             Title="Index"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.Book}}">
+                                   Glyph={StaticResource IconFASolid.ListUl}}">
             <ShellContent
                 Title="Alfabetico"
                 ContentTemplate="{DataTemplate views:AlphabeticalIndexPage}" />
@@ -39,7 +39,7 @@
         <Tab
             Title="Favorites"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.Book}}">
+                                   Glyph={StaticResource IconFASolid.Heart}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:FavoritesPage}" />
@@ -47,7 +47,7 @@
         <Tab
             Title="Settings"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.Book}}">
+                                   Glyph={StaticResource IconFASolid.Gear}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:SettingsPage}" />
