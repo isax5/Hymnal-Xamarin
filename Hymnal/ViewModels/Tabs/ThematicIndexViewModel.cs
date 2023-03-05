@@ -25,9 +25,7 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
         hymnsService.GetThematicListAsync(InfoConstants.HymnsLanguages.First())
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
-            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
-            {
-                Thematics = result;
-            }), error => error.Report());
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => Thematics = result),
+            error => error.Report());
     }
 }

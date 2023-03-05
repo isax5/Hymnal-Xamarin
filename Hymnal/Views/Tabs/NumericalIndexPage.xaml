@@ -33,7 +33,8 @@
                                            WinUI=False}"
             ItemsSource="{Binding Hymns}"
             RowHeight="{OnPlatform Default=50,
-                                   WinUI=60}">
+                                   WinUI=60}"
+            SelectionMode="None">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Null}">
                     <ViewCell>
@@ -43,6 +44,12 @@
                             ColumnSpacing="0"
                             RowDefinitions="0.7*, 0.3*"
                             RowSpacing="0">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding OpenHymnAsyncCommand,
+                                                      Source={RelativeSource AncestorType={x:Type viewModels:NumericalIndexViewModel}}}"
+                                    CommandParameter="{Binding .}" />
+                            </Grid.GestureRecognizers>
 
                             <!--  Number  -->
                             <Label

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using CommunityToolkit.Mvvm.Input;
 
 namespace Hymnal.ViewModels;
 public sealed partial class NumericalIndexViewModel : BaseViewModel
@@ -29,11 +30,28 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
         hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
-            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
+            .Subscribe(result =>
             {
-                Hymns = deviceInfo.Platform == DevicePlatform.WinUI
+                IEnumerable orderedHymns = deviceInfo.Platform == DevicePlatform.WinUI
                     ? result.OrderByNumber()
                     : result.OrderByNumber().GroupByNumber();
-            }), error => error.Report());
+
+                MainThread.BeginInvokeOnMainThread(() => Hymns = orderedHymns);
+            }, error => error.Report());
+    }
+
+    [RelayCommand]
+    private async void OpenHymnAsync(Hymn hymn)
+    {
+        if (hymn is null)
+            return;
+
+        await Shell.Current.GoToAsync(nameof(HymnPage),
+            new HymnIdParameter()
+            {
+                Number = hymn.Number,
+                SaveInRecords = true,
+                HymnalLanguage = InfoConstants.HymnsLanguages.First(),
+            }.AsParameter());
     }
 }
