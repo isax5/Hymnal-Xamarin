@@ -138,6 +138,12 @@
 	  <MauiXaml Update="Views\Tabs\ThematicIndexPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="Views\Tabs\Thematic\ThematicHymnsListPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\Tabs\Thematic\ThematicSubGroupPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\Viewers\HymnPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
