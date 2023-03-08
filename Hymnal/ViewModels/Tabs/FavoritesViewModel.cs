@@ -1,3 +1,4 @@
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using Hymnal.Models.DataBase;
 
@@ -25,6 +26,7 @@ public sealed partial class FavoritesViewModel : BaseViewModel
         databaseService.GetTable<FavoriteHymn>()
             .ToListAsync()
             .ToObservable()
+            .SubscribeOn(new NewThreadScheduler())
             .Subscribe(async hymnReferences =>
             {
                 try

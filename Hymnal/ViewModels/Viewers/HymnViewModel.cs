@@ -1,3 +1,4 @@
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using CommunityToolkit.Mvvm.Input;
 
@@ -54,10 +55,9 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
         hymnsService.GetHymnAsync(HymnParameter.Number, Language)
             .ToObservable()
-            .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
-            {
-                CurrentHymn = result;
-            }), error => error.Report());
+            .SubscribeOn(new NewThreadScheduler())
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => CurrentHymn = result),
+            error => error.Report());
 
         //Observable.Zip(
         //    hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage).ToObservable(),
