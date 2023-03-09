@@ -122,11 +122,11 @@
     <comment>Tab:Number: Title</comment>
   </data>
   <data name="AppBuild" xml:space="preserve">
-    <value>App Build</value>
+    <value>App Build: {0}</value>
     <comment>Settings: AppBuild</comment>
   </data>
   <data name="AppVersion" xml:space="preserve">
-    <value>App Version</value>
+    <value>App Version: {0}</value>
     <comment>Settings: AppVersion</comment>
   </data>
   <data name="AutomationHymnPageClose" xml:space="preserve">

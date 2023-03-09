@@ -70,7 +70,7 @@ namespace Hymnal.Resources.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a App Build.
+        ///   Busca una cadena traducida similar a App Build: {0}.
         /// </summary>
         public static string AppBuild {
             get {
@@ -79,7 +79,7 @@ namespace Hymnal.Resources.Languages {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a App Version.
+        ///   Busca una cadena traducida similar a App Version: {0}.
         /// </summary>
         public static string AppVersion {
             get {

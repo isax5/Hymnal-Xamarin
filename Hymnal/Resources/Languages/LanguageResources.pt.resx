@@ -77,11 +77,11 @@
     <comment>Alert: Cancel</comment>
   </data>
   <data name="AppVersion" xml:space="preserve">
-    <value>Versão do Aplicativo</value>
+    <value>Versão do Aplicativo: {0}</value>
     <comment>Settings: AppVersion</comment>
   </data>
   <data name="AppBuild" xml:space="preserve">
-    <value>Versão de compilação</value>
+    <value>Versão de compilação: {0}</value>
     <comment>Settings: AppBuild</comment>
   </data>
   <data name="NoInternetConnection" xml:space="preserve">
