@@ -25,8 +25,7 @@ public sealed class PreferencesService
             var text = JsonConvert.SerializeObject(value);
             preferences.Set(nameof(ConfiguredHymnalLanguage), text);
 
-            if (HymnalLanguageConfiguredChanged != null)
-                HymnalLanguageConfiguredChanged.Invoke(this, value);
+            HymnalLanguageConfiguredChanged?.Invoke(this, value);
         }
     }
 
@@ -34,12 +33,6 @@ public sealed class PreferencesService
     {
         get => preferences.Get(nameof(OpeningCounter), 0);
         set => preferences.Set(nameof(OpeningCounter), value);
-    }
-
-    public string LastVersionOpened
-    {
-        get => preferences.Get(nameof(LastVersionOpened), string.Empty);
-        set => preferences.Set(nameof(LastVersionOpened), value);
     }
 
     public bool KeepScreenOn

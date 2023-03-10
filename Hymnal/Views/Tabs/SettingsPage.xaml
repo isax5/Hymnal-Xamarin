@@ -80,16 +80,11 @@
                         Grid.Row="1"
                         Grid.Column="1"
                         FontSize="Micro"
+                        Text="{MultiBinding {Binding ConfiguredHymnalLanguage.Detail},
+                                            {Binding ConfiguredHymnalLanguage.Name},
+                                            StringFormat='{0} - {1}'}"
                         TextColor="{DynamicResource Color.SecondaryText}"
-                        VerticalOptions="Center">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <!--<Span Text="{Binding Path=HymnalLanguage.Detail, Mode=OneWay}" />-->
-                                <Span Text=" - " />
-                                <!--<Span Text="{Binding Path=HymnalLanguage.Name, Mode=OneWay}" />-->
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>
+                        VerticalOptions="Center" />
 
                 </Grid>
 
@@ -103,10 +98,10 @@
                         AutomationProperties.IsInAccessibleTree="False"
                         Text="{localization:Translate KeepScreenAlwaysOn}"
                         VerticalOptions="Center" />
-                    <!--  IsToggled="{Binding KeepScreenOn}"  -->
                     <Switch
                         Grid.Column="1"
                         AutomationProperties.Name="{localization:Translate KeepScreenAlwaysOn}"
+                        IsToggled="{Binding KeepScreenOn}"
                         VerticalOptions="Center" />
                 </Grid>
 
@@ -117,10 +112,10 @@
                         AutomationProperties.IsInAccessibleTree="False"
                         Text="{localization:Translate BackgroundImageAppearance}"
                         VerticalOptions="Center" />
-                    <!--  IsToggled="{Binding BackgroundImageAppearance}"  -->
                     <Switch
                         Grid.Column="1"
                         AutomationProperties.Name="{localization:Translate BackgroundImageAppearance}"
+                        IsToggled="{Binding BackgroundImageAppearance}"
                         VerticalOptions="Center" />
                 </Grid>
 
@@ -145,23 +140,18 @@
                         Text="{Binding Source={x:Reference letterSize},
                                        Path=Value}" />
 
-                    <!--
-                        Maximum="{Binding MaximumHymnFontSize}"
-                        Minimum="{Binding MinimumHymnFontSize}"
-                        Value="{Binding HymnFontSize}"
-                        ValueChanged="LetterSize_ValueChanged"
-                    -->
                     <Slider
                         x:Name="letterSize"
                         Grid.Row="1"
                         Grid.Column="0"
                         Grid.ColumnSpan="2"
                         AutomationProperties.Name="{localization:Translate FontSize}"
-                        Maximum="45"
+                        Maximum="{x:Static constants:AppConstants.MAXIMUM_HYMNALS_FONT_SIZE}"
                         MaximumTrackColor="{DynamicResource Color.Primary}"
-                        Minimum="9"
+                        Minimum="{x:Static constants:AppConstants.MINIMUM_HYMNALS_FONT_SIZE}"
                         MinimumTrackColor="{DynamicResource Color.Accent}"
-                        ThumbColor="{DynamicResource Color.Accent}" />
+                        ThumbColor="{DynamicResource Color.Accent}"
+                        Value="{Binding HymnalsFontSize}" />
 
                     <Label
                         Grid.Row="2"
