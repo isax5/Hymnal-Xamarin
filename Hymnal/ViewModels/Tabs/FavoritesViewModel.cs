@@ -7,21 +7,31 @@ namespace Hymnal.ViewModels;
 public sealed partial class FavoritesViewModel : BaseViewModel
 {
     private readonly HymnsService hymnsService;
+    private readonly PreferencesService preferencesService;
     private readonly DatabaseService databaseService;
 
     public ObservableRangeCollection<Tuple<Hymn, FavoriteHymn>> Hymns { get; } = new();
 
     public FavoritesViewModel(
         HymnsService hymnsService,
+        PreferencesService preferencesService,
         DatabaseService databaseService)
     {
         this.hymnsService = hymnsService;
+        this.preferencesService = preferencesService;
         this.databaseService = databaseService;
     }
 
     public override void OnAppearing()
     {
         base.OnAppearing();
+
+        LoadData();
+    }
+
+
+    private void LoadData()
+    {
 
         databaseService.GetTable<FavoriteHymn>()
             .ToListAsync()

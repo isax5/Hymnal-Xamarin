@@ -8,6 +8,7 @@ namespace Hymnal.ViewModels;
 public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
 {
     private readonly HymnsService hymnsService;
+    private readonly PreferencesService preferencesService;
     private readonly IDeviceInfo deviceInfo;
 
     #region Properties
@@ -18,9 +19,11 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
 
     public AlphabeticalIndexViewModel(
         HymnsService hymnsService,
+        PreferencesService preferencesService,
         IDeviceInfo deviceInfo)
     {
         this.hymnsService = hymnsService;
+        this.preferencesService = preferencesService;
         this.deviceInfo = deviceInfo;
     }
 
@@ -28,7 +31,7 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
     {
         base.Initialize();
 
-        hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
+        hymnsService.GetHymnListAsync(preferencesService.ConfiguredHymnalLanguage)
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
             .Subscribe(result =>
@@ -52,7 +55,7 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
             {
                 Number = hymn.Number,
                 SaveInRecords = true,
-                HymnalLanguage = InfoConstants.HymnsLanguages.First(),
+                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
             }.AsParameter());
     }
 }

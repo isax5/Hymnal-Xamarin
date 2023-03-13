@@ -8,6 +8,7 @@ namespace Hymnal.ViewModels;
 public sealed partial class ThematicHymnsListViewModel : BaseViewModelParameter<Ambit>
 {
     private readonly HymnsService hymnsService;
+    private readonly PreferencesService preferencesService;
 
     #region Properties
     [ObservableProperty]
@@ -15,16 +16,19 @@ public sealed partial class ThematicHymnsListViewModel : BaseViewModelParameter<
     #endregion
 
 
-    public ThematicHymnsListViewModel(HymnsService hymnsService)
+    public ThematicHymnsListViewModel(
+        HymnsService hymnsService,
+        PreferencesService preferencesService)
     {
         this.hymnsService = hymnsService;
+        this.preferencesService = preferencesService;
     }
 
     public override void Initialize()
     {
         base.Initialize();
 
-        hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
+        hymnsService.GetHymnListAsync(preferencesService.ConfiguredHymnalLanguage)
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
             .Select(result => result.GetRange(Parameter.Star, Parameter.End))
@@ -44,7 +48,7 @@ public sealed partial class ThematicHymnsListViewModel : BaseViewModelParameter<
             {
                 Number = hymn.Number,
                 SaveInRecords = true,
-                HymnalLanguage = InfoConstants.HymnsLanguages.First(),
+                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
             }.AsParameter());
     }
 }

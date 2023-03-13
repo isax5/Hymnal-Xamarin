@@ -6,6 +6,7 @@ namespace Hymnal.ViewModels;
 public sealed partial class ThematicIndexViewModel : BaseViewModel
 {
     private readonly HymnsService hymnsService;
+    private readonly PreferencesService preferencesService;
 
     #region Properties
     [ObservableProperty]
@@ -13,16 +14,25 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
     #endregion
 
 
-    public ThematicIndexViewModel(HymnsService hymnsService)
+    public ThematicIndexViewModel(
+        HymnsService hymnsService,
+        PreferencesService preferencesService)
     {
         this.hymnsService = hymnsService;
+        this.preferencesService = preferencesService;
     }
 
     public override void Initialize()
     {
         base.Initialize();
 
-        hymnsService.GetThematicListAsync(InfoConstants.HymnsLanguages.First())
+        LoadData();
+    }
+
+
+    private void LoadData()
+    {
+        hymnsService.GetThematicListAsync(preferencesService.ConfiguredHymnalLanguage)
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => Thematics = result),

@@ -48,8 +48,9 @@
                     ColumnSpacing="10"
                     RowDefinitions="auto, *">
                     <Grid.GestureRecognizers>
-                        <!--  Command="{Binding ChooseLanguageCommand}"  -->
-                        <TapGestureRecognizer x:DataType="{x:Null}" />
+                        <TapGestureRecognizer
+                            x:DataType="{x:Null}"
+                            Command="{Binding ChooseLanguageAsyncCommand}" />
                     </Grid.GestureRecognizers>
 
                     <Image
@@ -79,7 +80,7 @@
                     <Label
                         Grid.Row="1"
                         Grid.Column="1"
-                        FontSize="Micro"
+                        FontSize="Small"
                         Text="{MultiBinding {Binding ConfiguredHymnalLanguage.Detail},
                                             {Binding ConfiguredHymnalLanguage.Name},
                                             StringFormat='{0} - {1}'}"

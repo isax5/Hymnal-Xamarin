@@ -8,6 +8,7 @@ namespace Hymnal.ViewModels;
 public sealed partial class NumericalIndexViewModel : BaseViewModel
 {
     private readonly HymnsService hymnsService;
+    private readonly PreferencesService preferencesService;
     private readonly IDeviceInfo deviceInfo;
 
     #region Properties
@@ -18,9 +19,11 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
 
     public NumericalIndexViewModel(
         HymnsService hymnsService,
+        PreferencesService preferencesService,
         IDeviceInfo deviceInfo)
     {
         this.hymnsService = hymnsService;
+        this.preferencesService = preferencesService;
         this.deviceInfo = deviceInfo;
     }
 
@@ -28,7 +31,13 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
     {
         base.Initialize();
 
-        hymnsService.GetHymnListAsync(InfoConstants.HymnsLanguages.First())
+        LoadData();
+    }
+
+
+    private void LoadData()
+    {
+        hymnsService.GetHymnListAsync(preferencesService.ConfiguredHymnalLanguage)
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
             .Subscribe(result =>
@@ -52,7 +61,7 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
             {
                 Number = hymn.Number,
                 SaveInRecords = true,
-                HymnalLanguage = InfoConstants.HymnsLanguages.First(),
+                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
             }.AsParameter());
     }
 }

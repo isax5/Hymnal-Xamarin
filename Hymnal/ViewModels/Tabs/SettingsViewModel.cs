@@ -48,7 +48,7 @@ public sealed partial class SettingsViewModel : BaseViewModel
     }
 
     [RelayCommand]
-    private async void ChooseLanguageCommandAsync()
+    private async void ChooseLanguageAsync()
     {
         var languages = new Dictionary<string, HymnalLanguage>();
 

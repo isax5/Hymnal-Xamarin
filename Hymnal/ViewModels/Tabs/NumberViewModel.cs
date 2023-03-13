@@ -1,18 +1,20 @@
-using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 
 namespace Hymnal.ViewModels;
 
 public sealed partial class NumberViewModel : BaseViewModel
 {
+    private readonly PreferencesService preferencesService;
+
     [ObservableProperty]
     private string hymnNumber;
 
 
-    public NumberViewModel()
+    public NumberViewModel(PreferencesService preferencesService)
     {
 #if DEBUG
         hymnNumber = 255.ToString();
+        this.preferencesService = preferencesService;
 #endif
     }
 
@@ -28,7 +30,7 @@ public sealed partial class NumberViewModel : BaseViewModel
             {
                 Number = int.Parse(number),
                 SaveInRecords = true,
-                HymnalLanguage = InfoConstants.HymnsLanguages.First(),
+                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
             }.AsParameter());
     }
 }
