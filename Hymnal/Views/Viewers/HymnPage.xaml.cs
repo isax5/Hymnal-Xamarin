@@ -6,24 +6,13 @@ public sealed partial class HymnPage : BaseContentPage<HymnViewModel>
         : base(vm)
     {
         InitializeComponent();
-
-        SizeChanged += HymnPage_SizeChanged;
     }
 
-    ~HymnPage()
+    protected override void OnParentSet()
     {
-        SizeChanged -= HymnPage_SizeChanged;
-    }
+        base.OnParentSet();
 
-
-    private void HymnPage_SizeChanged(object sender, EventArgs e)
-    {
-        //var index = MainCarousel.ZIndex;
-        //Content = new StackLayout();
-        //Content = MainCarousel;
-        //MainCarousel.ZIndex = index;
-        //Content = MainCarousel;
-        //this.UpdateChildrenLayout();
-        //this.ForceLayout();
+        if (!ViewModel.Parameter.HymnalLanguage.SupportSheets)
+            ToolbarItems.Remove(openSheets);
     }
 }

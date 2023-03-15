@@ -19,6 +19,7 @@
             Command="{Binding AddToFavoritesAsyncCommand}"
             Text="Add Favorite" />
         <ToolbarItem
+            x:Name="openSheets"
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
             CommandParameter="{Binding Parameter}"
             IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
