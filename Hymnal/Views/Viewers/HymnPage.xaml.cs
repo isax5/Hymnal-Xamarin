@@ -10,6 +10,12 @@ public sealed partial class HymnPage : BaseContentPage<HymnViewModel>
         SizeChanged += HymnPage_SizeChanged;
     }
 
+    ~HymnPage()
+    {
+        SizeChanged -= HymnPage_SizeChanged;
+    }
+
+
     private void HymnPage_SizeChanged(object sender, EventArgs e)
     {
         //var index = MainCarousel.ZIndex;

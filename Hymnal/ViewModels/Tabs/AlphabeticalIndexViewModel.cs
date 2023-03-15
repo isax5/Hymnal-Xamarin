@@ -25,12 +25,27 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
         this.hymnsService = hymnsService;
         this.preferencesService = preferencesService;
         this.deviceInfo = deviceInfo;
+
+        preferencesService.HymnalLanguageConfiguredChanged += PreferencesService_HymnalLanguageConfiguredChanged;
     }
 
     public override void Initialize()
     {
         base.Initialize();
 
+        LoadData();
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        preferencesService.HymnalLanguageConfiguredChanged -= PreferencesService_HymnalLanguageConfiguredChanged;
+    }
+
+
+    private void LoadData()
+    {
         hymnsService.GetHymnListAsync(preferencesService.ConfiguredHymnalLanguage)
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
@@ -43,6 +58,8 @@ public sealed partial class AlphabeticalIndexViewModel : BaseViewModel
                 MainThread.BeginInvokeOnMainThread(() => Hymns = orderedHymns);
             }, error => error.Report());
     }
+
+    private void PreferencesService_HymnalLanguageConfiguredChanged(object sender, HymnalLanguage e) => LoadData();
 
     [RelayCommand]
     private async void OpenHymnAsync(Hymn hymn)

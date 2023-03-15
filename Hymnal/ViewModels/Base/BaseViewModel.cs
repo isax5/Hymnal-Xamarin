@@ -20,6 +20,8 @@ public abstract partial class BaseViewModel : ObservableObject
         return Task.CompletedTask;
     }
 
+    public virtual void OnDestroy() { }
+
     /// <summary>
     /// When navigate from this VM
     /// </summary>

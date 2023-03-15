@@ -25,6 +25,8 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
         this.hymnsService = hymnsService;
         this.preferencesService = preferencesService;
         this.deviceInfo = deviceInfo;
+
+        preferencesService.HymnalLanguageConfiguredChanged += PreferencesService_HymnalLanguageConfiguredChanged;
     }
 
     public override void Initialize()
@@ -32,6 +34,13 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
         base.Initialize();
 
         LoadData();
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        preferencesService.HymnalLanguageConfiguredChanged -= PreferencesService_HymnalLanguageConfiguredChanged;
     }
 
 
@@ -49,6 +58,8 @@ public sealed partial class NumericalIndexViewModel : BaseViewModel
                 MainThread.BeginInvokeOnMainThread(() => Hymns = orderedHymns);
             }, error => error.Report());
     }
+
+    private void PreferencesService_HymnalLanguageConfiguredChanged(object sender, HymnalLanguage e) => LoadData();
 
     [RelayCommand]
     private async void OpenHymnAsync(Hymn hymn)

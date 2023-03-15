@@ -20,6 +20,8 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
     {
         this.hymnsService = hymnsService;
         this.preferencesService = preferencesService;
+
+        preferencesService.HymnalLanguageConfiguredChanged += PreferencesService_HymnalLanguageConfiguredChanged;
     }
 
     public override void Initialize()
@@ -27,6 +29,13 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
         base.Initialize();
 
         LoadData();
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        preferencesService.HymnalLanguageConfiguredChanged -= PreferencesService_HymnalLanguageConfiguredChanged;
     }
 
 
@@ -38,4 +47,6 @@ public sealed partial class ThematicIndexViewModel : BaseViewModel
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => Thematics = result),
             error => error.Report());
     }
+
+    private void PreferencesService_HymnalLanguageConfiguredChanged(object sender, HymnalLanguage e) => LoadData();
 }

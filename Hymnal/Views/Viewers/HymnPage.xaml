@@ -63,10 +63,10 @@
                         Direction="Left" />
                 </StackLayout.GestureRecognizers>
 
-                <!--  FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
                 <Label
                     AutomationProperties.HelpText="{Binding CurrentHymn.Title}"
                     AutomationProperties.Name="{localization:Translate AutomationHymnPageTitle}"
+                    FontSize="{Binding HymnTitleFontSize}"
                     HorizontalOptions="FillAndExpand"
                     HorizontalTextAlignment="Center"
                     IsVisible="{OnPlatform Default=True,
@@ -74,12 +74,12 @@
                     Text="{Binding CurrentHymn.Title}"
                     TextColor="{DynamicResource Color.PrimaryText}" />
 
-                <!--  FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"  -->
                 <Label
                     Margin="10"
                     AutomationId="HymnContentLabel"
                     AutomationProperties.HelpText="{Binding CurrentHymn.Content}"
                     AutomationProperties.Name="{localization:Translate AutomationHymnPageContent}"
+                    FontSize="{Binding HymnFontSize}"
                     HorizontalTextAlignment="Center"
                     LineBreakMode="WordWrap"
                     Text="{Binding CurrentHymn.Content}"

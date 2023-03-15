@@ -14,6 +14,12 @@ public class BaseContentPage<TViewModel> : BaseContentPage where TViewModel : cl
         ViewModel = viewModel;
     }
 
+    ~BaseContentPage()
+    {
+        if (ViewModel is BaseViewModel viewModel)
+            viewModel.OnDestroy();
+    }
+
     private bool pageLoaded;
     protected override void OnParentSet()
     {
