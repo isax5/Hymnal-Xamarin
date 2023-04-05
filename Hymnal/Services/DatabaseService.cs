@@ -28,6 +28,11 @@ namespace Hymnal.Services
         {
             return databaseConnection.InsertAsync(item);
         }
+
+        public Task<int> Remove<T>(T item) where T: StorageModel, new()
+        {
+            return databaseConnection.DeleteAsync(item);
+        }
     }
 }
 

@@ -17,7 +17,7 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Command="{Binding AddToFavoritesAsyncCommand}"
-            Text="Add Favorite" />
+            Text="{Binding IsFavorite}" />
         <ToolbarItem
             x:Name="openSheets"
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"

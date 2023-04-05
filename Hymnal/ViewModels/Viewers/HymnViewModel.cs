@@ -128,13 +128,25 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     [RelayCommand]
     private async void AddToFavoritesAsync()
     {
-        try
-        {
-            await databaseService.InserAsync(CurrentHymn.ToFavoriteHymn());
-        }
-        catch (Exception ex)
-        {
-            ex.Report();
-        }
+        if (IsFavorite)
+            databaseService
+                .FindAsync<FavoriteHymn>(h => h.HymnalLanguageId == HymnParameter.HymnalLanguage.Id & h.Number == HymnParameter.Number)
+                .ToObservable()
+                .Subscribe(result =>
+                {
+                    if (result is not null)
+                    {
+                        databaseService.Remove(result)
+                            .ToObservable()
+                            .Subscribe(result2 => MainThread.BeginInvokeOnMainThread(() => IsFavorite = false),
+                            error => error.Report());
+                    }
+                },
+                error => error.Report());
+        else
+            databaseService.InserAsync(CurrentHymn.ToFavoriteHymn())
+                .ToObservable()
+                .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => IsFavorite = true),
+                error => error.Report());
     }
 }
