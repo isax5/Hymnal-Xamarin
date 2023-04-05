@@ -43,6 +43,7 @@ public sealed partial class FavoritesViewModel : BaseViewModel
                 {
                     var values = GetHymnsAsync(hymnReferences.OrderBy(r => r.Order));
 
+                    MainThread.BeginInvokeOnMainThread(() => Hymns.Clear());
                     await foreach (var value in values)
                         MainThread.BeginInvokeOnMainThread(() => Hymns.Add(value));
 

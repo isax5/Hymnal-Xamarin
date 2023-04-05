@@ -1,6 +1,7 @@
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using CommunityToolkit.Mvvm.Input;
+using Hymnal.Models.DataBase;
 
 namespace Hymnal.ViewModels;
 
@@ -71,9 +72,12 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
         //IsPlaying = mediaManager.IsPlaying();
 
-        //// Is Favorite
-        //IsFavorite = storageService.All<FavoriteHymn>().ToList()
-        //    .Exists(f => f.Number == CurrentHymn.Number && f.HymnalLanguageId.Equals(Language.Id));
+        // Is Favorite
+        databaseService
+            .FindAsync<FavoriteHymn>(h => h.HymnalLanguageId == HymnParameter.HymnalLanguage.Id & h.Number == HymnParameter.Number)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => IsFavorite = result is not null),
+            error => error.Report());
 
         //// Record
         //if (HymnParameter.SaveInRecords)
