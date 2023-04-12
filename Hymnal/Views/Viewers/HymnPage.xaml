@@ -6,6 +6,7 @@
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:models="clr-namespace:Hymnal.Models"
+    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{Binding CurrentHymn.Number,
@@ -14,10 +15,34 @@
     x:TypeArguments="viewModels:HymnViewModel"
     Shell.TabBarIsVisible="False">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Boolean x:Key="TrueValue">True</x:Boolean>
+
+            <FontImage
+                x:Key="IsFavorite"
+                FontFamily="{StaticResource IconFonts.FASolid}"
+                Glyph="{StaticResource IconFASolid.Star}" />
+
+            <FontImage
+                x:Key="IsNotFavorite"
+                FontFamily="{StaticResource IconFonts.FARegular}"
+                Glyph="{StaticResource IconFARegular.Star}" />
+
+            <toolkit:CompareConverter
+                x:Key="FavoriteIconConverter"
+                ComparingValue="{StaticResource TrueValue}"
+                ComparisonOperator="Equal"
+                FalseObject="{StaticResource IsNotFavorite}"
+                TrueObject="{StaticResource IsFavorite}" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Command="{Binding AddToFavoritesAsyncCommand}"
-            Text="{Binding IsFavorite}" />
+            IconImageSource="{Binding IsFavorite,
+                                      Converter={StaticResource FavoriteIconConverter}}" />
         <ToolbarItem
             x:Name="openSheets"
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
