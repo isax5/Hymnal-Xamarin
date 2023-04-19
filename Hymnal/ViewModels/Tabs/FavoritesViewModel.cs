@@ -1,5 +1,6 @@
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using CommunityToolkit.Mvvm.Input;
 using Hymnal.Models.DataBase;
 
 namespace Hymnal.ViewModels;
@@ -32,7 +33,6 @@ public sealed partial class FavoritesViewModel : BaseViewModel
 
     private void LoadData()
     {
-
         databaseService.GetTable<FavoriteHymn>()
             .ToListAsync()
             .ToObservable()
@@ -67,5 +67,20 @@ public sealed partial class FavoritesViewModel : BaseViewModel
         //{
         //    Hymns = result;
         //}), error => error.Report());
+    }
+
+    [RelayCommand]
+    private async void OpenHymnAsync(Tuple<Hymn, FavoriteHymn> hymn)
+    {
+        if (hymn is null)
+            return;
+
+        await Shell.Current.GoToAsync(nameof(HymnPage),
+            new HymnIdParameter()
+            {
+                Number = hymn.Item1.Number,
+                SaveInRecords = true,
+                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
+            }.AsParameter());
     }
 }
