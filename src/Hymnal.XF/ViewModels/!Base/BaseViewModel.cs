@@ -1,8 +1,5 @@
 using System.Threading.Tasks;
-using Hymnal.XF.Constants;
-using Hymnal.XF.Views;
 using Prism.AppModel;
-using Prism.Commands;
 using Prism.Mvvm;
 using Prism.Navigation;
 
@@ -13,6 +10,8 @@ namespace Hymnal.XF.ViewModels
         public readonly INavigationService NavigationService;
 
         #region Properties
+        public static INavigationService RootPageNavigationService { get; set; }
+
         private bool busy = false;
         public bool Busy
         {

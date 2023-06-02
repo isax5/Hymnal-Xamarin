@@ -32,7 +32,7 @@ namespace Hymnal.XF
             InitializeComponent();
             setup.InitializeLastChance(this);
 
-            await NavigationService.NavigateAsync($"{NavRoutes.RootPage}" +
+            await NavigationService.NavigateAsync($"/{NavRoutes.NavPage}/{NavRoutes.RootPage}" +
                                                   $"?{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.NumberPage}" +
                                                   $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.IndexPage}" +
                                                   $"&{KnownNavigationParameters.CreateTab}={NavRoutes.NavPage}|{NavRoutes.FavoritesPage}" +

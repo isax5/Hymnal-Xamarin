@@ -12,6 +12,7 @@
 
     <!--
     DEFAULT IMPLEMENTATIONS BUT NOT REALLY NEEDED
+    -->
     
     <assembly fullname="Essential.Interfaces">
         <type fullname="Xamarin.Essentials.Implementation.AppInfoImplementation">
@@ -21,10 +22,10 @@
     <assembly fullname="Prism"/>
     <assembly fullname="Prism.Forms"/>
     <assembly fullname="Prism.DryIoc.Forms"/>
-    -->
 
     <!--
     NOT NEEDED
+    -->
     
     <assembly fullname="MediaManager"/>
     <assembly fullname="Helpers"/>
@@ -32,6 +33,5 @@
     <assembly fullname="Newtonsoft.Json"/>
     <assembly fullname="System.Text.Json"/>
     <assembly fullname="System.Net.Http.Json"/>
-    -->
 
 </linker>

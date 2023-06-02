@@ -10,7 +10,8 @@
     xmlns:prism="http://prismlibrary.com"
     xmlns:viewModels="clr-namespace:Hymnal.XF.ViewModels"
     xmlns:views="clr-namespace:Hymnal.XF.Views"
-    Title="{Binding CurrentHymn.Number, StringFormat='# {0}'}"
+    Title="{Binding CurrentHymn.Number,
+                    StringFormat='# {0}'}"
     iOS:Page.UseSafeArea="False"
     prism:ViewModelLocator.AutowireViewModel="True"
     x:DataType="viewModels:HymnViewModel"
@@ -25,21 +26,31 @@
             AutomationId="ClosePageToolbar"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageClose}"
             Command="{prism:GoBack}"
-            Priority="-1"
+            IconImageSource="{OnPlatform Default={FontImageSource FontFamily={x:Static constans:FontAwesomeFamilies.Solid},
+                                                                  Glyph={x:Static constans:FontAwesomeIcons.Times}},
+                                         iOS={x:Null}}"
+            Priority="{OnPlatform Default=5,
+                                  iOS=-1}"
             Text="{extensions:Translate Generic_Close}" />
         <ToolbarItem
             AutomationId="PlayPauseMusicToolbar"
-            AutomationProperties.HelpText="{Binding IsPlaying, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
+            AutomationProperties.HelpText="{Binding IsPlaying,
+                                                    Converter={StaticResource TranslateConverter},
+                                                    ConverterParameter='AutomationHymnPageHelpTextIsPlaying{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPagePlayer}"
             Command="{Binding PlayCommand}"
-            IconImageSource="{Binding IsPlaying, StringFormat='ToolbarPlaying{0}'}"
+            IconImageSource="{Binding IsPlaying,
+                                      StringFormat='ToolbarPlaying{0}'}"
             Priority="1" />
         <ToolbarItem
             AutomationId="AddRemoveFavoriteToolbar"
-            AutomationProperties.HelpText="{Binding IsFavorite, Converter={StaticResource TranslateConverter}, ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
+            AutomationProperties.HelpText="{Binding IsFavorite,
+                                                    Converter={StaticResource TranslateConverter},
+                                                    ConverterParameter='AutomationHymnPageHelpTextIsInFavorites{0}'}"
             AutomationProperties.Name="{extensions:Translate AutomationHymnPageFavorite}"
             Command="{Binding FavoriteCommand}"
-            IconImageSource="{Binding IsFavorite, StringFormat='ToolbarFavorite{0}'}"
+            IconImageSource="{Binding IsFavorite,
+                                      StringFormat='ToolbarFavorite{0}'}"
             Priority="2" />
         <ToolbarItem
             x:Name="SheetToolbar"
@@ -48,7 +59,9 @@
             Command="{Binding OpenSheetCommand}"
             Priority="3">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}" Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Brands}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.ItunesNote}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
         <ToolbarItem
@@ -57,7 +70,9 @@
             Command="{Binding ShareCommand}"
             Priority="4">
             <ToolbarItem.IconImageSource>
-                <FontImageSource FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}" Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
+                <FontImageSource
+                    FontFamily="{x:Static constans:FontAwesomeFamilies.Solid}"
+                    Glyph="{x:Static constans:FontAwesomeIcons.Share}" />
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
@@ -74,7 +89,8 @@
                     <Image
                         Aspect="AspectFill"
                         AutomationProperties.IsInAccessibleTree="False"
-                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}},
+                                            Path=BackgroundImageAppearance}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                                Property=Height}"
                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
@@ -83,7 +99,8 @@
 
                     <StackLayout
                         BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"
+                        IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}},
+                                            Path=BackgroundImageAppearance}"
                         Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}"
                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
                                                                                Property=Height}"
@@ -101,7 +118,8 @@
                             <Label
                                 AutomationProperties.HelpText="{Binding Title}"
                                 AutomationProperties.Name="{extensions:Translate AutomationHymnPageTitle}"
-                                FontSize="{Binding HymnTitleFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
+                                FontSize="{Binding HymnTitleFontSize,
+                                                   Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
                                 HorizontalOptions="FillAndExpand"
                                 HorizontalTextAlignment="Center"
                                 IsVisible="{OnPlatform Default=True,
@@ -115,7 +133,8 @@
                                 AutomationId="HymnContentLabel"
                                 AutomationProperties.HelpText="{Binding Content}"
                                 AutomationProperties.Name="{extensions:Translate AutomationHymnPageContent}"
-                                FontSize="{Binding HymnFontSize, Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
+                                FontSize="{Binding HymnFontSize,
+                                                   Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}}"
                                 HorizontalTextAlignment="Center"
                                 LineBreakMode="WordWrap"
                                 Text="{Binding Content}"

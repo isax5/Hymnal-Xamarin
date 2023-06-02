@@ -15,6 +15,7 @@
     x:DataType="viewModels:RootViewModel"
     BarBackgroundColor="{DynamicResource Color.BackgroundTab}"
     BarTextColor="{DynamicResource Color.SelectedTab}"
+    NavigationPage.HasNavigationBar="False"
     SelectedTabColor="{DynamicResource Color.SelectedTab}"
     Style="{DynamicResource TabbedPageStyle}"
     UnselectedTabColor="{DynamicResource Color.UnselectedTab}"

@@ -75,26 +75,34 @@ namespace Hymnal.XF.ViewModels
                     return;
                 }
 
-                await NavigationService.NavigateAsync(
-                    NavRoutes.HymnViewerAsModal,
+                //await NavigationService.NavigateAsync(
+                // This is for android
+                await RootPageNavigationService?.NavigateAsync(
+                    //NavRoutes.HymnViewerAsFormSheetModal,
+                    NavRoutes.HymnPage,
                     new HymnIdParameter
                     {
                         Number = number,
                         HymnalLanguage = language
                     },
-                    true, true);
+                    false, true);
+                //true, true);
             }
             Busy = false;
         }
 
         private async void OpenRecordsAsync()
         {
-            await NavigationService.NavigateAsync(NavRoutes.RecordsPageAsFormSheetModal, true, true);
+            //await NavigationService.NavigateAsync(NavRoutes.RecordsPageAsFormSheetModal, true, true);
+            // This is for android
+            await RootPageNavigationService?.NavigateAsync(NavRoutes.RecordsPage, false, true);
         }
 
         private async void OpenSearchAsync()
         {
-            await NavigationService.NavigateAsync(NavRoutes.SearchPageAsFormSheetModal, true, true);
+            //await NavigationService.NavigateAsync(NavRoutes.SearchPageAsFormSheetModal, true, true);
+            // This is for android
+            await RootPageNavigationService?.NavigateAsync(NavRoutes.SearchPage, false, true);
         }
         #endregion
     }

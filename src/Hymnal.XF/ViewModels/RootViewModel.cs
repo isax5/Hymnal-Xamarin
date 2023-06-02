@@ -17,6 +17,7 @@ namespace Hymnal.XF.ViewModels
             ) : base(navigationService)
         {
             this.preferencesService = preferencesService;
+            RootPageNavigationService = navigationService;
         }
 
         public override void OnAppearing()
