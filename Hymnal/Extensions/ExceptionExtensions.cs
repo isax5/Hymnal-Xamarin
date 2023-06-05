@@ -13,11 +13,11 @@ public static class ExceptionExtensions
 #if DEBUG
 #elif RELEASE
             // TODO: Reportar algo
-            MainThread.BeginInvokeOnMainThread(() =>
-            {
-                if (properties is not null)
-                    Crashes.TrackError(exception, properties);
-            });
+            //MainThread.BeginInvokeOnMainThread(() =>
+            //{
+            //    if (properties is not null)
+            //        Crashes.TrackError(exception, properties);
+            //});
 #endif
         }
         catch (Exception) { }
