@@ -20,6 +20,10 @@
     </ContentPage.ToolbarItems>
 
     <Grid>
+        <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="GridTapGestureRecognizer_Tapped" />
+        </Grid.GestureRecognizers>
+
         <Image
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"

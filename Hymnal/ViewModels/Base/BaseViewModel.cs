@@ -1,5 +1,3 @@
-using CommunityToolkit.Mvvm.ComponentModel;
-
 namespace Hymnal.ViewModels;
 
 public abstract partial class BaseViewModel : ObservableObject

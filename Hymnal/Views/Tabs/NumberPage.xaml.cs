@@ -1,3 +1,5 @@
+using CommunityToolkit.Maui.Core.Platform;
+
 namespace Hymnal.Views;
 
 public sealed partial class NumberPage : BaseContentPage<NumberViewModel>
@@ -11,7 +13,12 @@ public sealed partial class NumberPage : BaseContentPage<NumberViewModel>
     protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
     {
         base.OnNavigatedFrom(args);
-        HymnNumberEntry.Unfocus(); // Maui problem dismissiong keyboard
+
+        if (HymnNumberEntry.IsSoftKeyboardShowing())
+        {
+            //HymnNumberEntry.Unfocus(); // Maui problem dismissiong keyboard
+            HymnNumberEntry.HideKeyboardAsync(CancellationToken.None);
+        }
     }
 
     private void HymnNumberEntry_Focused(object sender, FocusEventArgs e)
@@ -24,6 +31,18 @@ public sealed partial class NumberPage : BaseContentPage<NumberViewModel>
     private void OpenButton_Clicked(object sender, EventArgs e)
     {
         if (string.IsNullOrWhiteSpace(HymnNumberEntry.Text))
-            HymnNumberEntry.Focus(); // Maui problem showing keyboard
+        {
+            //HymnNumberEntry.Focus(); // Maui problem showing keyboard
+            HymnNumberEntry.ShowKeyboardAsync(CancellationToken.None);
+        }
+    }
+
+    private void GridTapGestureRecognizer_Tapped(object sender, TappedEventArgs e)
+    {
+        if (HymnNumberEntry.IsSoftKeyboardShowing())
+        {
+            //HymnNumberEntry.Unfocus(); // Maui problem dismissiong keyboard
+            HymnNumberEntry.HideKeyboardAsync(CancellationToken.None);
+        }
     }
 }
