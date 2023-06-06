@@ -80,7 +80,7 @@ public sealed partial class FavoritesViewModel : BaseViewModel
             {
                 Number = hymn.Item1.Number,
                 SaveInRecords = true,
-                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
+                HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item1.HymnalLanguageId),
             }.AsParameter());
     }
 }
