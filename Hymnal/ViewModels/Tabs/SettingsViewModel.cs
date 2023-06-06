@@ -73,4 +73,10 @@ public sealed partial class SettingsViewModel : BaseViewModel
         ConfiguredHymnalLanguage = languages[languageKey];
         preferencesService.ConfiguredHymnalLanguage = ConfiguredHymnalLanguage;
     }
+
+    [RelayCommand]
+    private async void OpenGitHubAsync()
+    {
+
+    }
 }

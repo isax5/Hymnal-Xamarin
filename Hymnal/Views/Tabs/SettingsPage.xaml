@@ -189,8 +189,9 @@
                     ColumnDefinitions="auto, auto"
                     ColumnSpacing="10">
                     <Grid.GestureRecognizers>
-                        <!--  Command="{Binding OpenGitHubCommand}"  -->
-                        <TapGestureRecognizer x:DataType="{x:Null}" />
+                        <TapGestureRecognizer
+                            x:DataType="{x:Null}"
+                            Command="{Binding OpenGitHubAsyncCommand}" />
                     </Grid.GestureRecognizers>
 
                     <Image
