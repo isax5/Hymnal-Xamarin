@@ -173,15 +173,44 @@
                     Style="{StaticResource cellTitleLabel}"
                     Text="{localization:Translate Support}" />
 
-                <Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
+                <!--<Grid BackgroundColor="{OnPlatform Default=Transparent, Tizen=White}">
                     <Grid.GestureRecognizers>
-                        <!--  Command="{Binding SupportProjectCommand}"  -->
-                        <TapGestureRecognizer x:DataType="{x:Null}" />
+                        <TapGestureRecognizer
+                            x:DataType="{x:Null}"
+                            Command="{Binding SupportProjectCommand}" />
                     </Grid.GestureRecognizers>
                     <Label
                         FontSize="{OnPlatform Default=Default,
                                               Tizen=Large}"
                         Text="{localization:Translate SettingsPage_SupportProject}" />
+                </Grid>-->
+
+                <!--  Support  -->
+                <Grid
+                    ColumnDefinitions="auto, auto"
+                    ColumnSpacing="10">
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            x:DataType="{x:Null}"
+                            Command="{Binding SupportProjectAsyncCommand}" />
+                    </Grid.GestureRecognizers>
+
+                    <Image
+                        Grid.Column="0"
+                        AutomationProperties.IsInAccessibleTree="False">
+                        <Image.Source>
+                            <FontImageSource
+                                FontFamily="{StaticResource IconFonts.FASolid}"
+                                Glyph="{StaticResource IconFASolid.HandHoldingDollar}"
+                                Size="45"
+                                Color="Gray" />
+                        </Image.Source>
+                    </Image>
+
+                    <Label
+                        Grid.Column="1"
+                        Text="{localization:Translate SettingsPage_SupportProject}"
+                        VerticalOptions="Center" />
                 </Grid>
 
                 <!--  GitHub  -->
@@ -210,7 +239,6 @@
                         Grid.Column="1"
                         Text="{localization:Translate GitHub}"
                         VerticalOptions="Center" />
-
                 </Grid>
 
                 <!--  Developer  -->

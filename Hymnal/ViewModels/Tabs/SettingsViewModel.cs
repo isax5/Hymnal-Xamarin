@@ -6,6 +6,17 @@ namespace Hymnal.ViewModels;
 public sealed partial class SettingsViewModel : BaseViewModel
 {
     private readonly PreferencesService preferencesService;
+    private readonly IBrowser browser;
+
+
+    #region Properties
+    private readonly BrowserLaunchOptions browserLaunchOptions = new()
+    {
+        LaunchMode = BrowserLaunchMode.External,
+        TitleMode = BrowserTitleMode.Show,
+        PreferredToolbarColor = Colors.Black,
+        PreferredControlColor = Colors.White,
+    };
 
     [ObservableProperty]
     private HymnalLanguage configuredHymnalLanguage;
@@ -39,11 +50,15 @@ public sealed partial class SettingsViewModel : BaseViewModel
             OnPropertyChanged(nameof(HymnalsFontSize));
         }
     }
+    #endregion
 
 
-    public SettingsViewModel(PreferencesService preferencesService)
+    public SettingsViewModel(PreferencesService preferencesService,
+        IBrowser browser)
     {
         this.preferencesService = preferencesService;
+        this.browser = browser;
+
         configuredHymnalLanguage = preferencesService.ConfiguredHymnalLanguage;
     }
 
@@ -77,6 +92,12 @@ public sealed partial class SettingsViewModel : BaseViewModel
     [RelayCommand]
     private async void OpenGitHubAsync()
     {
+        await browser.OpenAsync(AppConstants.WebLinks.GitHubDevelopingLink, browserLaunchOptions);
+    }
 
+    [RelayCommand]
+    private async void SupportProjectAsync()
+    {
+        await browser.OpenAsync(AppConstants.WebLinks.SupportProjectLink, browserLaunchOptions);
     }
 }
