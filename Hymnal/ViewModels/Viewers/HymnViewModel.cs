@@ -79,15 +79,38 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => IsFavorite = result is not null),
             error => error.Report());
 
-        //// Record
-        //if (HymnParameter.SaveInRecords)
-        //{
-        //    IQueryable<RecordHymn> records = storageService.All<RecordHymn>()
-        //        .Where(h => h.Number == CurrentHymn.Number && h.HymnalLanguageId.Equals(Language.Id));
-        //    storageService.RemoveRange(records);
+        // Record
+        if (HymnParameter.SaveInRecords)
+        {
+            databaseService.FindAsync<RecordHymn>(r => r.Number == HymnParameter.Number && r.HymnalLanguageId == HymnParameter.HymnalLanguage.Id)
+                .ToObservable()
+                .Subscribe(async reference =>
+                {
+                    try
+                    {
+                        if (reference is not null)
+                            await databaseService.RemoveAsync(reference);
 
-        //    storageService.Add(CurrentHymn.ToRecordHymn());
-        //}
+                        await databaseService.InserAsync(Parameter.ToRecordHymn());
+                        var count = await databaseService.GetTable<RecordHymn>().CountAsync();
+
+                        if (count > AppConstants.MAXIMUM_RECORDS)
+                        {
+                            do
+                            {
+                                RecordHymn toDelete = await databaseService.GetTable<RecordHymn>().OrderBy(r => r.Id).FirstAsync();
+                                await databaseService.RemoveAsync(toDelete);
+                                count--;
+                            } while (count > AppConstants.MAXIMUM_RECORDS);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        ex.Report();
+                    }
+                },
+                error => error.Report());
+        }
     }
 
 
@@ -136,7 +159,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
                 {
                     if (result is not null)
                     {
-                        databaseService.Remove(result)
+                        databaseService.RemoveAsync(result)
                             .ToObservable()
                             .Subscribe(result2 => MainThread.BeginInvokeOnMainThread(() => IsFavorite = false),
                             error => error.Report());

@@ -14,6 +14,23 @@ public static class HymnExtensions
         };
     }
 
+    public static RecordHymn ToRecordHymn(this Hymn hymn)
+    {
+        return new RecordHymn
+        {
+            Number = hymn.Number,
+            HymnalLanguageId = hymn.HymnalLanguageId
+        };
+    }
+
+    public static RecordHymn ToRecordHymn(this HymnIdParameter hymnIdParameter)
+    {
+        return new RecordHymn
+        {
+            Number = hymnIdParameter.Number,
+            HymnalLanguageId = hymnIdParameter.HymnalLanguage.Id
+        };
+    }
 
     #region Order
     public static IEnumerable<Hymn> OrderByNumber(this IEnumerable<Hymn> hymns)

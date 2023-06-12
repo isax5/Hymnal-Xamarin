@@ -53,6 +53,8 @@ public static class MauiProgram
             .AddSingleton<FavoritesPage>().AddSingleton<FavoritesViewModel>()
             .AddSingleton<SettingsPage>().AddSingleton<SettingsViewModel>()
 
+            .AddSingleton<RecordsPage>().AddSingleton<RecordsViewModel>()
+
         // Thematic
             .AddSingleton<ThematicHymnsListPage>().AddSingleton<ThematicHymnsListViewModel>()
             .AddSingleton<ThematicSubGroupPage>().AddSingleton<ThematicSubGroupViewModel>()

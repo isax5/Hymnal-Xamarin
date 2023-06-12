@@ -12,6 +12,7 @@ namespace Hymnal.Services
         {
             databaseConnection = new(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "hymn.db3"));
             databaseConnection.CreateTableAsync<FavoriteHymn>();
+            databaseConnection.CreateTableAsync<RecordHymn>();
         }
 
         public Task<T> FindAsync<T>(Expression<Func<T, bool>> predicate) where T : StorageModel, new()
@@ -29,7 +30,7 @@ namespace Hymnal.Services
             return databaseConnection.InsertAsync(item);
         }
 
-        public Task<int> Remove<T>(T item) where T: StorageModel, new()
+        public Task<int> RemoveAsync<T>(T item) where T : StorageModel, new()
         {
             return databaseConnection.DeleteAsync(item);
         }
