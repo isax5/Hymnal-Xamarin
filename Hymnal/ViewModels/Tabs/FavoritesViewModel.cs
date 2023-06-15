@@ -58,15 +58,6 @@ public sealed partial class FavoritesViewModel : BaseViewModel
                     ex.Report();
                 }
             }, error => error.Report());
-        //.Select(items => Observable.Zip(items.Select(item => hymnsService.GetHymnAsync(item).ToObservable())))
-        //.Subscribe(values => values.Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
-        //{
-        //    Hymns = result.OrderBy(h => h.order).ToList();
-        //}), error => error.Report()), error => error.Report());
-        //.Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
-        //{
-        //    Hymns = result;
-        //}), error => error.Report());
     }
 
     [RelayCommand]

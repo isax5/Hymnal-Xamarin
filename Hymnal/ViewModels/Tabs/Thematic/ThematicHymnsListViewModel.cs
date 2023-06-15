@@ -31,7 +31,7 @@ public sealed partial class ThematicHymnsListViewModel : BaseViewModelParameter<
         hymnsService.GetHymnListAsync(preferencesService.ConfiguredHymnalLanguage)
             .ToObservable()
             .SubscribeOn(new NewThreadScheduler())
-            .Select(result => result.GetRange(Parameter.Star, Parameter.End))
+            .Select(result => result.Where(h => h.Number >= Parameter.Star && h.Number <= Parameter.End))//.GetRange(Parameter.Star - 1, Parameter.End))
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => Hymns = result),
             error => error.Report());
     }

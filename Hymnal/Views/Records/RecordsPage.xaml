@@ -12,13 +12,91 @@
     x:DataType="viewModels:RecordsViewModel"
     x:TypeArguments="viewModels:RecordsViewModel">
 
-    <ContentPage.Content>
-        <StackLayout>
-            <Label
-                HorizontalOptions="CenterAndExpand"
-                Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    <Grid>
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <Image
+            Aspect="AspectFill"
+            AutomationProperties.IsInAccessibleTree="False"
+            Source="{DynamicResource BackgroundImageFile}" />
+
+        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
+        <StackLayout
+            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
+
+        <CollectionView
+            Grid.Row="1"
+            x:DataType="{x:Null}"
+            AutomationProperties.IsInAccessibleTree="False"
+            BackgroundColor="Transparent"
+            ItemSizingStrategy="MeasureFirstItem"
+            ItemsSource="{Binding Hymns}"
+            SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid
+                        Padding="20,0,10,0"
+                        ColumnDefinitions="0.2*, *, 0.2*"
+                        ColumnSpacing="0"
+                        RowDefinitions="0.7*, 0.3*"
+                        RowSpacing="0">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding OpenHymnAsyncCommand,
+                                                  Source={RelativeSource AncestorType={x:Type viewModels:RecordsViewModel}}}"
+                                CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
+
+                        <!--  Number  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            AutomationProperties.HelpText="{Binding Item1.Title}"
+                            FontSize="Large"
+                            Text="{Binding Item1.Number}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <!--  Title  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Large"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Item1.Title}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <!--  Preview  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Micro"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Item1.PlainContent}"
+                            TextColor="{DynamicResource Color.SecondaryText}"
+                            VerticalOptions="CenterAndExpand" />
+
+                        <!--  Date  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            Margin="5,0,0,0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Micro"
+                            Text="{Binding Item2.SavedAt,
+                                           StringFormat='{0:dd/MM}'}"
+                            TextColor="{DynamicResource Color.SecondaryText}"
+                            VerticalOptions="CenterAndExpand" />
+
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </Grid>
 
 </views:BaseContentPage>

@@ -37,9 +37,9 @@
                         RowSpacing="0">
                         <Grid.GestureRecognizers>
                             <TapGestureRecognizer
-                                    Command="{Binding OpenHymnAsyncCommand,
-                                                      Source={RelativeSource AncestorType={x:Type viewModels:FavoritesViewModel}}}"
-                                    CommandParameter="{Binding .}" />
+                                Command="{Binding OpenHymnAsyncCommand,
+                                                  Source={RelativeSource AncestorType={x:Type viewModels:RecordsViewModel}}}"
+                                CommandParameter="{Binding .}" />
                         </Grid.GestureRecognizers>
 
                         <!--  Number  -->

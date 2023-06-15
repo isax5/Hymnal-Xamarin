@@ -16,7 +16,9 @@
     </Shell.SearchHandler>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="History" />
+        <ToolbarItem
+            Command="{extensions:NavigateTo PageType={x:Type views:RecordsPage}}"
+            Text="History" />
     </ContentPage.ToolbarItems>
 
     <Grid>
