@@ -33,14 +33,18 @@ public static class MauiProgram
          */
 
         #region Services
-        builder.Services.AddSingleton<IPreferences>(e => Preferences.Default);
-        builder.Services.AddSingleton<IDeviceInfo>(e => DeviceInfo.Current);
-        builder.Services.AddSingleton<IBrowser>(e => Browser.Default);
+        builder.Services.AddSingleton<IPreferences>(e => Preferences.Default)
+            .AddSingleton<IDeviceInfo>(e => DeviceInfo.Current)
+            .AddSingleton<IBrowser>(e => Browser.Default)
+            .AddSingleton<IDeviceDisplay>(e => DeviceDisplay.Current)
 
-        builder.Services.AddSingleton<FilesService>();
-        builder.Services.AddSingleton<HymnsService>();
-        builder.Services.AddSingleton<PreferencesService>();
-        builder.Services.AddSingleton<DatabaseService>();
+            .AddSingleton<FilesService>()
+            .AddSingleton<HymnsService>()
+            .AddSingleton<PreferencesService>()
+            .AddSingleton<DatabaseService>()
+
+        // Setup
+            .AddSingleton<Setup>();
         #endregion
 
         #region Views and ViewModels

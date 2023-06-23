@@ -92,8 +92,9 @@
                 <!--  Always Screen On  -->
                 <Grid
                     ColumnDefinitions="*, auto"
-                    IsVisible="{OnPlatform Default=True,
-                                           Tizen=False}">
+                    IsVisible="{OnPlatform Default=False,
+                                           iOS=True,
+                                           Android=True}">
                     <Label
                         Grid.Column="0"
                         AutomationProperties.IsInAccessibleTree="False"

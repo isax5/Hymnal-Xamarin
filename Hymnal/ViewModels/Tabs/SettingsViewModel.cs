@@ -7,6 +7,8 @@ public sealed partial class SettingsViewModel : BaseViewModel
 {
     private readonly PreferencesService preferencesService;
     private readonly IBrowser browser;
+    private readonly IDeviceInfo deviceInfo;
+    private readonly IDeviceDisplay deviceDisplay;
 
 
     #region Properties
@@ -23,9 +25,16 @@ public sealed partial class SettingsViewModel : BaseViewModel
 
     public bool KeepScreenOn
     {
-        get => preferencesService.KeepScreenOn;
+        get
+        {
+            if (deviceInfo.Platform == DevicePlatform.iOS || deviceInfo.Platform == DevicePlatform.Android)
+                return preferencesService.KeepScreenOn;
+
+            return false;
+        }
         set
         {
+            deviceDisplay.KeepScreenOn = value;
             preferencesService.KeepScreenOn = value;
             OnPropertyChanged(nameof(KeepScreenOn));
         }
@@ -54,10 +63,14 @@ public sealed partial class SettingsViewModel : BaseViewModel
 
 
     public SettingsViewModel(PreferencesService preferencesService,
-        IBrowser browser)
+        IBrowser browser,
+        IDeviceInfo deviceInfo,
+        IDeviceDisplay deviceDisplay)
     {
         this.preferencesService = preferencesService;
         this.browser = browser;
+        this.deviceInfo = deviceInfo;
+        this.deviceDisplay = deviceDisplay;
 
         configuredHymnalLanguage = preferencesService.ConfiguredHymnalLanguage;
     }
