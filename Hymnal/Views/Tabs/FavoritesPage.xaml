@@ -29,53 +29,76 @@
             SelectionMode="None">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="{x:Null}">
-                    <Grid
-                        Padding="20,0"
-                        ColumnDefinitions="0.2*, *"
-                        ColumnSpacing="0"
-                        RowDefinitions="0.7*, 0.3*"
-                        RowSpacing="0">
-                        <Grid.GestureRecognizers>
-                            <TapGestureRecognizer
-                                Command="{Binding OpenHymnAsyncCommand,
-                                                  Source={RelativeSource AncestorType={x:Type viewModels:RecordsViewModel}}}"
-                                CommandParameter="{Binding .}" />
-                        </Grid.GestureRecognizers>
+                    <SwipeView>
+                        <SwipeView.RightItems>
+                            <SwipeItems>
 
-                        <!--  Number  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.RowSpan="2"
-                            Grid.Column="0"
-                            AutomationProperties.HelpText="{Binding Item2.Title}"
-                            FontSize="Large"
-                            Text="{Binding Item1.Number}"
-                            TextColor="{DynamicResource Color.PrimaryText}"
-                            VerticalOptions="CenterAndExpand" />
+                                <!--  Invoked="OnDeleteSwipeItemInvoked"  -->
+                                <SwipeItem
+                                    BackgroundColor="{AppThemeBinding Default=Red,
+                                                                      Dark=DarkRed}"
+                                    Command="{Binding RemoveHymnCommand,
+                                                      Source={RelativeSource AncestorType={x:Type viewModels:FavoritesViewModel}}}"
+                                    CommandParameter="{Binding .}">
+                                    <SwipeItem.IconImageSource>
+                                        <FontImageSource
+                                            FontFamily="{StaticResource IconFonts.FASolid}"
+                                            Glyph="{StaticResource IconFASolid.Trash}"
+                                            Color="{StaticResource White}" />
+                                    </SwipeItem.IconImageSource>
+                                </SwipeItem>
+                            </SwipeItems>
+                        </SwipeView.RightItems>
 
-                        <!--  Title  -->
-                        <Label
-                            Grid.Row="0"
-                            Grid.Column="1"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            FontSize="Large"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding Item1.Title}"
-                            TextColor="{DynamicResource Color.PrimaryText}"
-                            VerticalOptions="CenterAndExpand" />
+                        <Grid
+                            Padding="20,0"
+                            ColumnDefinitions="0.2*, *"
+                            ColumnSpacing="0"
+                            RowDefinitions="0.7*, 0.3*"
+                            RowSpacing="0">
+                            <Grid.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Command="{Binding OpenHymnAsyncCommand,
+                                                      Source={RelativeSource AncestorType={x:Type viewModels:FavoritesViewModel}}}"
+                                    CommandParameter="{Binding .}" />
+                            </Grid.GestureRecognizers>
 
-                        <!--  Preview  -->
-                        <Label
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            FontSize="Micro"
-                            LineBreakMode="TailTruncation"
-                            Text="{Binding Item1.PlainContent}"
-                            TextColor="{DynamicResource Color.SecondaryText}"
-                            VerticalOptions="CenterAndExpand" />
+                            <!--  Number  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.RowSpan="2"
+                                Grid.Column="0"
+                                AutomationProperties.HelpText="{Binding Item2.Title}"
+                                FontSize="Large"
+                                Text="{Binding Item1.Number}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
 
-                    </Grid>
+                            <!--  Title  -->
+                            <Label
+                                Grid.Row="0"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Large"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Item1.Title}"
+                                TextColor="{DynamicResource Color.PrimaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                            <!--  Preview  -->
+                            <Label
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                AutomationProperties.IsInAccessibleTree="False"
+                                FontSize="Micro"
+                                LineBreakMode="TailTruncation"
+                                Text="{Binding Item1.PlainContent}"
+                                TextColor="{DynamicResource Color.SecondaryText}"
+                                VerticalOptions="CenterAndExpand" />
+
+                        </Grid>
+
+                    </SwipeView>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>

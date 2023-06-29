@@ -74,4 +74,13 @@ public sealed partial class FavoritesViewModel : BaseViewModel
                 HymnalLanguage = HymnalLanguage.GetHymnalLanguageWithId(hymn.Item1.HymnalLanguageId),
             }.AsParameter());
     }
+
+    [RelayCommand]
+    private void RemoveHymn(Tuple<Hymn, FavoriteHymn> hymn)
+    {
+        databaseService.RemoveAsync(hymn.Item2)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => Hymns.Remove(hymn)),
+                       error => error.Report());
+    }
 }
