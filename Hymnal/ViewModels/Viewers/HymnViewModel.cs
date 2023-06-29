@@ -15,8 +15,8 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
     public int HymnFontSize => preferencesService.HymnalsFontSize;
 
-    [ObservableProperty]
-    private List<Hymn> carouselHymns;
+    //[ObservableProperty]
+    //private List<Hymn> carouselHymns;
 
     [ObservableProperty]
     private Hymn currentHymn;
@@ -73,11 +73,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         //IsPlaying = mediaManager.IsPlaying();
 
         // Is Favorite
-        databaseService
-            .FindAsync<FavoriteHymn>(h => h.HymnalLanguageId == HymnParameter.HymnalLanguage.Id & h.Number == HymnParameter.Number)
-            .ToObservable()
-            .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => IsFavorite = result is not null),
-            error => error.Report());
+        UpdateHymnIsFavorite();
 
         // Record
         if (HymnParameter.SaveInRecords)
@@ -114,6 +110,16 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     }
 
 
+    private void UpdateHymnIsFavorite()
+    {
+        var hymnNumber = CurrentHymn?.Number ?? HymnParameter.Number;
+        databaseService
+            .FindAsync<FavoriteHymn>(h => h.HymnalLanguageId == HymnParameter.HymnalLanguage.Id & h.Number == hymnNumber)
+            .ToObservable()
+            .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => IsFavorite = result is not null),
+            error => error.Report());
+    }
+
     //[RelayCommand]
     //private void CarouselViewPositionChanged()
     //{
@@ -125,6 +131,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     {
         hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage)
             .ToObservable()
+            .Finally(UpdateHymnIsFavorite)
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
                 var newHymnIndex = CurrentHymn.Number - 1;
@@ -139,6 +146,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     {
         hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage)
             .ToObservable()
+            .Finally(UpdateHymnIsFavorite)
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
             {
                 var newHymnIndex = CurrentHymn.Number + 1;
