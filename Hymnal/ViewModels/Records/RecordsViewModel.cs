@@ -37,7 +37,7 @@ namespace Hymnal.ViewModels
                 {
                     try
                     {
-                        var values = GetHymnsAsync(hymnReferences.OrderBy(r => r.SavedAt));
+                        var values = GetHymnsAsync(hymnReferences.OrderByDescending(r => r.SavedAt));
 
                         MainThread.BeginInvokeOnMainThread(() => Hymns.Clear());
                         await foreach (var value in values)
