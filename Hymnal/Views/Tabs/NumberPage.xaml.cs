@@ -45,4 +45,10 @@ public sealed partial class NumberPage : BaseContentPage<NumberViewModel>
             HymnNumberEntry.HideKeyboardAsync(CancellationToken.None);
         }
     }
+
+    private async void SearchHandler_FocusedAsync(object sender, EventArgs e)
+    {
+        // Maui problem selecting content of the entry
+        await Shell.Current.GoToAsync(nameof(SearchPage));
+    }
 }

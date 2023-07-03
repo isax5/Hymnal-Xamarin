@@ -11,11 +11,13 @@
     x:DataType="viewModels:NumberViewModel"
     x:TypeArguments="viewModels:NumberViewModel">
 
-    <Shell.SearchHandler>
-        <SearchHandler SearchBoxVisibility="Expanded" />
-    </Shell.SearchHandler>
-
     <ContentPage.ToolbarItems>
+        <ToolbarItem
+            Command="{extensions:NavigateTo PageType={x:Type views:SearchPage}}"
+            
+            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                              Glyph={StaticResource IconFASolid.MagnifyingGlass}}"
+            Text="{localization:Translate Search}" />
         <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:RecordsPage}}"
             Text="History" />
