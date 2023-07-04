@@ -21,4 +21,6 @@ public sealed class Hymn
     public string PlainContent => Content.Replace("\n", " ");
 
     public string[] ListContent => Content.Replace("\n\n", "¶").Split('¶');
+
+    public override string ToString() => $"Language: {HymnalLanguageId} - Number: {Number} - Title: {Title}";
 }
