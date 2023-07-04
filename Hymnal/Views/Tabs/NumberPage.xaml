@@ -14,11 +14,16 @@
 
     <Shell.SearchHandler>
         <controls:SearchHymnHandler
-            DisplayMemberName="Title"
             Hymns="{Binding Hymns}"
             Placeholder="{localization:Translate Search}"
             SearchBoxVisibility="Expanded"
             ShowsResults="true">
+            <controls:SearchHymnHandler.ClearIcon>
+                <FontImageSource
+                    FontFamily="{StaticResource IconFonts.FASolid}"
+                    Glyph="{StaticResource IconFASolid.Xmark}"
+                    Color="Black" />
+            </controls:SearchHymnHandler.ClearIcon>
             <controls:SearchHymnHandler.ItemTemplate>
                 <DataTemplate x:DataType="{x:Null}">
                     <Grid
