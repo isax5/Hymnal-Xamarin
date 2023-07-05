@@ -1,4 +1,5 @@
 using System.Globalization;
+using Hymnal.Helpers;
 
 namespace Hymnal;
 
@@ -8,6 +9,8 @@ public sealed class Setup
     private readonly IDeviceInfo deviceInfo;
     private readonly IDeviceDisplay deviceDisplay;
 
+    public ThemeHelper ThemeHelper;
+
     public Setup(PreferencesService preferencesService, IDeviceInfo deviceInfo, IDeviceDisplay deviceDisplay)
     {
         this.preferencesService = preferencesService;
@@ -15,7 +18,7 @@ public sealed class Setup
         this.deviceDisplay = deviceDisplay;
     }
 
-    public void InitializeFirstChance()
+    public void InitializeFirstChance(App app)
     {
         // Last hymnbook opened
         if (preferencesService is { ConfiguredHymnalLanguage: null })
@@ -25,6 +28,9 @@ public sealed class Setup
             List<HymnalLanguage> lngs = InfoConstants.HymnsLanguages.FindAll(l => l.TwoLetterIsoLanguageName == currentCulture.TwoLetterISOLanguageName);
             preferencesService.ConfiguredHymnalLanguage = lngs.Count == 0 ? InfoConstants.HymnsLanguages.First() : lngs.First();
         }
+
+        // Theme
+        ThemeHelper = new ThemeHelper(app);
     }
 
     public void InitializeLastChance()

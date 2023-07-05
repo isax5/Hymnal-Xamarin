@@ -6,7 +6,7 @@ public partial class App : Application
     {
         InitializeComponent();
 
-        setup.InitializeFirstChance();
+        setup.InitializeFirstChance(this);
 
         MainPage = new AppShell();
 

@@ -7,7 +7,7 @@ public sealed partial class HymnPage : BaseContentPage<HymnViewModel>
     {
         InitializeComponent();
 
-        // Executing last part of the setup here becouse I didn't find a better place
+        // TODO: Executing last part of the setup here becouse I didn't find a better place
         setup.AfterStartUp();
     }
 
