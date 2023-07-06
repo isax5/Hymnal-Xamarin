@@ -61,13 +61,21 @@ public sealed partial class NumberViewModel : BaseViewModel
         if (string.IsNullOrEmpty(number))
             return;
 
-        await Shell.Current.GoToAsync(nameof(HymnPage),
-            new HymnIdParameter()
-            {
-                Number = int.Parse(number),
-                SaveInRecords = true,
-                HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
-            }.AsParameter());
+        if (int.TryParse(string.Join("", number.Where(char.IsDigit)), out int hymnNumber) && hymnNumber > 0)
+        {
+            IEnumerable<Hymn> hymns = await hymnsService.GetHymnListAsync(preferencesService.ConfiguredHymnalLanguage);
+
+            if (hymnNumber > hymns.Count())
+                return;
+
+            await Shell.Current.GoToAsync(nameof(HymnPage),
+                new HymnIdParameter()
+                {
+                    Number = hymnNumber,
+                    SaveInRecords = true,
+                    HymnalLanguage = preferencesService.ConfiguredHymnalLanguage,
+                }.AsParameter());
+        }
     }
 
     private void PreferencesService_HymnalLanguageConfiguredChanged(object sender, HymnalLanguage e) => LoadData();
