@@ -48,8 +48,7 @@
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
             CommandParameter="{Binding Parameter}"
             IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                              Glyph={StaticResource IconFASolid.Music}}"
-            Text="Partitura" />
+                                              Glyph={StaticResource IconFASolid.Music}}" />
     </ContentPage.ToolbarItems>
 
     <!--<CarouselView

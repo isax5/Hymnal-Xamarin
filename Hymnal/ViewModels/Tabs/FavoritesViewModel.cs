@@ -31,6 +31,7 @@ public sealed partial class FavoritesViewModel : BaseViewModel
     }
 
 
+    // TODO: Problemas con Windows al recargar luego de abrir esta pag por segunda vez (la primera vez funciona bien)
     private void LoadData()
     {
         databaseService.GetTable<FavoriteHymn>()

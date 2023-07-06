@@ -75,7 +75,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:RecordsPage}}"
-            Text="History" />
+            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                              Glyph={StaticResource IconFASolid.ClockRotateLeft}}" />
     </ContentPage.ToolbarItems>
 
     <Grid>
