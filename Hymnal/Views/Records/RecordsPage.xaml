@@ -14,13 +14,11 @@
     Shell.TabBarIsVisible="False">
 
     <Grid>
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <Image
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
             Source="{DynamicResource BackgroundImageFile}" />
 
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
             Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />

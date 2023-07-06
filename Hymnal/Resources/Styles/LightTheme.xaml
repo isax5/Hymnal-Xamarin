@@ -15,7 +15,9 @@
     <!--  Placeholder  -->
     <Color x:Key="Color.PrimaryLight">#788187</Color>
 
-    <Color x:Key="Color.Accent">#24b780</Color>
+    <!--  Slider's thumb and slider's minimum color, Open button  -->
+    <!--  before: 24b780  -->
+    <Color x:Key="Color.Accent">#488286</Color>
 
     <Color x:Key="Color.PrimaryText">#000000</Color>
     <Color x:Key="Color.SecondaryText">#666666</Color>

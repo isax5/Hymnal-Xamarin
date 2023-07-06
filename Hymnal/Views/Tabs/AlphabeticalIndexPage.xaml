@@ -13,18 +13,15 @@
     x:TypeArguments="viewModels:AlphabeticalIndexViewModel">
 
     <Grid>
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <Image
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
             Source="{DynamicResource BackgroundImageFile}" />
 
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
             Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
 
-        <!--  SelectedItem="{Binding SelectedHymn, Mode=TwoWay}"  -->
         <ListView
             x:DataType="{x:Null}"
             BackgroundColor="Transparent"

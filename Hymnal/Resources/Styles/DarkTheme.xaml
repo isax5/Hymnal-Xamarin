@@ -16,8 +16,9 @@
     <!--  Placeholders  -->
     <Color x:Key="Color.PrimaryLight">#454545</Color>
 
-    <!--  Slider's thumb and slider's minimum color  -->
-    <Color x:Key="Color.Accent">#24b780</Color>
+    <!--  Slider's thumb and slider's minimum color, Open button  -->
+    <!--  before: 24b780  -->
+    <Color x:Key="Color.Accent">#305252</Color>
 
     <!--  Hymn list, interface and lyrics text  -->
     <Color x:Key="Color.PrimaryText">#c1c5c7</Color>

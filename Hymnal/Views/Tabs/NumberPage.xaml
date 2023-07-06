@@ -22,7 +22,7 @@
                 <FontImageSource
                     FontFamily="{StaticResource IconFonts.FASolid}"
                     Glyph="{StaticResource IconFASolid.Xmark}"
-                    Color="Black" />
+                    Color="{DynamicResource Color.Primary}" />
             </controls:SearchHymnHandler.ClearIcon>
             <controls:SearchHymnHandler.ItemTemplate>
                 <DataTemplate x:DataType="{x:Null}">
@@ -73,12 +73,6 @@
     </Shell.SearchHandler>
 
     <ContentPage.ToolbarItems>
-        <!--<ToolbarItem
-            Command="{extensions:NavigateTo PageType={x:Type views:SearchPage}}"
-
-            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                              Glyph={StaticResource IconFASolid.MagnifyingGlass}}"
-            Text="{localization:Translate Search}" />-->
         <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:RecordsPage}}"
             Text="History" />
@@ -168,7 +162,7 @@
                     x:DataType="{x:Null}"
                     AutomationId="OpenHymnButton"
                     AutomationProperties.Name="{localization:Translate AutomationNumberPageOpenHymnButton}"
-                    BackgroundColor="{StaticResource Primary}"
+                    BackgroundColor="{DynamicResource Color.Accent}"
                     Clicked="OpenButton_Clicked"
                     Command="{Binding OpenHymnAsyncCommand}"
                     CommandParameter="{Binding Source={x:Reference HymnNumberEntry},

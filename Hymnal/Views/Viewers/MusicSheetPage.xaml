@@ -6,11 +6,11 @@
     xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Title=""
+    Title="{Binding CurrentHymn.Number,
+                    StringFormat='# {0}'}"
     x:DataType="viewModels:MusicSheetViewModel"
     x:TypeArguments="viewModels:MusicSheetViewModel"
     Shell.TabBarIsVisible="False">
-    <!--  Title="{Binding Parameter.Number}"  -->
 
     <controls:PinchToZoomContainer>
         <controls:PinchToZoomContainer.GestureRecognizers>

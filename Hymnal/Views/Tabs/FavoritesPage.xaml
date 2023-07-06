@@ -13,13 +13,11 @@
     x:TypeArguments="viewModels:FavoritesViewModel">
 
     <Grid>
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <Image
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
             Source="{DynamicResource BackgroundImageFile}" />
 
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
             Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
@@ -33,7 +31,6 @@
                         <SwipeView.RightItems>
                             <SwipeItems>
 
-                                <!--  Invoked="OnDeleteSwipeItemInvoked"  -->
                                 <SwipeItem
                                     BackgroundColor="{AppThemeBinding Default=Red,
                                                                       Dark=DarkRed}"

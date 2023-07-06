@@ -63,13 +63,12 @@
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="models:Hymn">-->
     <Grid>
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <Image
             Aspect="AspectFill"
             AutomationProperties.IsInAccessibleTree="False"
+            IsVisible="{Binding BackgroundImageAppearance}"
             Source="{DynamicResource BackgroundImageFile}" />
 
-        <!--  IsVisible="{Binding Source={RelativeSource AncestorType={x:Type viewModels:HymnViewModel}}, Path=BackgroundImageAppearance}"  -->
         <StackLayout
             BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
             IsVisible="{Binding BackgroundImageAppearance}"
