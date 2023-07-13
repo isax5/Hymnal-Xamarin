@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+﻿<?xml version="1.0" encoding="UTF-8" ?>
 <Shell
     x:Class="Hymnal.Views.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:views="clr-namespace:Hymnal.Views"
-    Shell.FlyoutBehavior="Disabled">
+    Shell.FlyoutBehavior="Disabled"
+    Shell.TabBarBackgroundColor="{DynamicResource Color.BackgroundTab}"
+    Shell.TabBarUnselectedColor="{DynamicResource Color.UnselectedTab}"
+    Shell.TabBarForegroundColor="{DynamicResource Color.SelectedTab}">
 
     <!--<ShellContent
         Title="Home"

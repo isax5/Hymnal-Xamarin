@@ -28,8 +28,8 @@
     <Color x:Key="Color.SecondaryBackground">#ffffff</Color>
     <Color x:Key="Color.BackgroundHymnLettersFilter">#ffffff</Color>
 
-    <Color x:Key="Color.SelectedTab">#000</Color>
-    <Color x:Key="Color.UnselectedTab">#737373</Color>
-    <Color x:Key="Color.BackgroundTab">#f5f5f5</Color>
+    <Color x:Key="Color.SelectedTab">#f00</Color>
+    <Color x:Key="Color.UnselectedTab">#fff</Color>
+    <Color x:Key="Color.BackgroundTab">#4c555a</Color>
 
 </ResourceDictionary>
