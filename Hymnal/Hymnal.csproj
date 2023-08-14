@@ -15,7 +15,7 @@
 		<ApplicationTitle>Hymnal</ApplicationTitle>
 
 		<!-- App Identifier -->
-		<ApplicationId>com.companyname.hymnal</ApplicationId>
+		<ApplicationId>net.ddns.HimnarioAdventistaSPA</ApplicationId>
 		<ApplicationIdGuid>1d51a3be-f590-4fdd-9fa4-0c870a0ca8a0</ApplicationIdGuid>
 
 		<!-- Versions -->
@@ -30,6 +30,14 @@
 		<SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
 	</PropertyGroup>
 
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	  <CodesignKey>Apple Development: Isaac Eduardo Rebolledo Leal (5X6G7Z83E3)</CodesignKey>
+	  <CodesignProvision>Hymnal Development</CodesignProvision>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net7.0-ios|AnyCPU'">
+	  <CreatePackage>false</CreatePackage>
+	</PropertyGroup>
 	<ItemGroup>
 		<!-- App Icon -->
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#305252" />

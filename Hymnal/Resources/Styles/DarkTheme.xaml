@@ -35,9 +35,9 @@
     <Color x:Key="Color.BackgroundHymnLettersFilter">#000000</Color>
 
     <!--  Selected Tab  -->
-    <Color x:Key="Color.SelectedTab">#c1c5c7</Color>
+    <Color x:Key="Color.SelectedTab">#f00</Color>
     <!--  Unselected Tabs  -->
-    <Color x:Key="Color.UnselectedTab">#4a4a4a</Color>
-    <Color x:Key="Color.BackgroundTab">#000000</Color>
+    <Color x:Key="Color.UnselectedTab">#fff</Color>
+    <Color x:Key="Color.BackgroundTab">#305252</Color>
 
 </ResourceDictionary>
