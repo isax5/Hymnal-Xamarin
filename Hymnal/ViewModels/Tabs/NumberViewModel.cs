@@ -68,7 +68,8 @@ public sealed partial class NumberViewModel : BaseViewModel
             if (hymnNumber > hymns.Count())
                 return;
 
-            await Shell.Current.GoToAsync(nameof(HymnPage),
+            //await Shell.Current.GoToAsync($"{nameof(ModalNavPage)}/{nameof(HymnPage)}",
+            await Shell.Current.GoToAsync($"{nameof(HymnPage)}",
                 new HymnIdParameter()
                 {
                     Number = hymnNumber,

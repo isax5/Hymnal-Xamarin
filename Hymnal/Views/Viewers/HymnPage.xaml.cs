@@ -15,7 +15,7 @@ public sealed partial class HymnPage : BaseContentPage<HymnViewModel>
     {
         base.OnParentSet();
 
-        if (!ViewModel.Parameter.HymnalLanguage.SupportSheets)
-            ToolbarItems.Remove(openSheets);
+        //if (!ViewModel.Parameter.HymnalLanguage.SupportSheets)
+        //    ToolbarItems.Remove(openSheets);
     }
 }

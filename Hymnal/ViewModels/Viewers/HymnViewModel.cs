@@ -51,6 +51,9 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     {
         base.Initialize();
 
+        if (Parameter is null)
+            return;
+
         HymnParameter = Parameter;
         Language = HymnParameter.HymnalLanguage;
 

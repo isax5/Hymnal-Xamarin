@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xaml-comp compile="true" ?>
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:extensions="clr-namespace:Hymnal.Extensions">
+
+    <!--  Modal Page Navigation Bar  -->
+    <ControlTemplate x:Key="ModalPageTemplate">
+        <Grid RowDefinitions="auto,*">
+            <!--  Nav Bar  -->
+            <FlexLayout
+                AlignItems="Center"
+                BackgroundColor="{StaticResource Color.Accent}"
+                HeightRequest="60"
+                IsVisible="{TemplateBinding ShowNavigationBar}"
+                JustifyContent="SpaceBetween">
+                <!--  Back Button  -->
+                <ImageButton
+                    Command="{extensions:GoBack}"
+                    HeightRequest="25"
+                    Source="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                             Glyph={StaticResource IconFASolid.ChevronLeft}}" />
+
+                <!--  Page title  -->
+                <Label
+                    FontAttributes="Bold"
+                    FontSize="Large"
+                    Text="{TemplateBinding ContentPage.Title}"
+                    TextColor="{StaticResource Color.NavBarText}" />
+
+                <!--  Toolbar Items  -->
+                <HorizontalStackLayout BindableLayout.ItemsSource="{TemplateBinding ContentPage.ToolbarItems}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate x:DataType="ToolbarItem">
+                            <ImageButton
+                                Command="{Binding Command}"
+                                CommandParameter="{Binding CommandParameter}"
+                                HeightRequest="25"
+                                Source="{Binding IconImageSource}" />
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                </HorizontalStackLayout>
+            </FlexLayout>
+
+            <ContentPresenter Grid.Row="1" />
+        </Grid>
+    </ControlTemplate>
+
+    <ControlTemplate x:Key="BackgroundPageTemplate">
+        <Grid>
+            <Image
+                Aspect="AspectFill"
+                AutomationProperties.IsInAccessibleTree="False"
+                IsVisible="{Binding BackgroundImageAppearance}"
+                Source="{DynamicResource BackgroundImageFile}" />
+
+            <StackLayout
+                BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+                IsVisible="{Binding BackgroundImageAppearance}"
+                Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
+
+            <ContentPresenter />
+        </Grid>
+    </ControlTemplate>
+
+</ResourceDictionary>

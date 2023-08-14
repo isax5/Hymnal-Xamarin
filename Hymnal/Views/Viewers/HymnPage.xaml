@@ -3,20 +3,27 @@
     x:Class="Hymnal.Views.HymnPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:models="clr-namespace:Hymnal.Models"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
+    x:Name="page"
     Title="{Binding CurrentHymn.Number,
                     StringFormat='# {0}'}"
     x:DataType="viewModels:HymnViewModel"
     x:TypeArguments="viewModels:HymnViewModel"
-    Shell.TabBarIsVisible="False">
+    Shell.PresentationMode="ModalAnimated">
+
 
     <ContentPage.Resources>
         <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Controls/Templates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+
             <x:Boolean x:Key="TrueValue">True</x:Boolean>
 
             <FontImage
@@ -51,7 +58,11 @@
                                               Glyph={StaticResource IconFASolid.Music}}" />
     </ContentPage.ToolbarItems>
 
-    <!--<CarouselView
+    <controls:ModalPageHeader
+        ContentPage="{x:Reference page}"
+        ControlTemplate="{StaticResource ModalPageTemplate}">
+
+        <!--<CarouselView
             x:Name="MainCarousel"
             CurrentItem="{Binding CurrentHymn}"
             HorizontalScrollBarVisibility="Never"
@@ -61,59 +72,62 @@
             PositionChangedCommand="{Binding CarouselViewPositionChangedCommand}">
             <CarouselView.ItemTemplate>
                 <DataTemplate x:DataType="models:Hymn">-->
-    <Grid>
-        <Image
-            Aspect="AspectFill"
-            AutomationProperties.IsInAccessibleTree="False"
-            IsVisible="{Binding BackgroundImageAppearance}"
-            Source="{DynamicResource BackgroundImageFile}" />
 
-        <StackLayout
-            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-            IsVisible="{Binding BackgroundImageAppearance}"
-            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
+        <Grid>
+            <Image
+                Aspect="AspectFill"
+                AutomationProperties.IsInAccessibleTree="False"
+                IsVisible="{Binding BackgroundImageAppearance}"
+                Source="{DynamicResource BackgroundImageFile}" />
 
-        <ScrollView
-            Padding="10,20"
-            VerticalScrollBarVisibility="Never">
+            <StackLayout
+                BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
+                IsVisible="{Binding BackgroundImageAppearance}"
+                Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
 
-            <StackLayout Spacing="20">
-                <StackLayout.GestureRecognizers>
-                    <SwipeGestureRecognizer
-                        Command="{Binding PreviousHymnCommand}"
-                        Direction="Right" />
-                    <SwipeGestureRecognizer
-                        Command="{Binding NextHymnCommand}"
-                        Direction="Left" />
-                </StackLayout.GestureRecognizers>
+            <ScrollView
+                Padding="10,20"
+                VerticalScrollBarVisibility="Never">
 
-                <Label
-                    AutomationProperties.HelpText="{Binding CurrentHymn.Title}"
-                    AutomationProperties.Name="{localization:Translate AutomationHymnPageTitle}"
-                    FontSize="{Binding HymnTitleFontSize}"
-                    HorizontalOptions="FillAndExpand"
-                    HorizontalTextAlignment="Center"
-                    IsVisible="{OnPlatform Default=True,
-                                           Tizen=False}"
-                    Text="{Binding CurrentHymn.Title}"
-                    TextColor="{DynamicResource Color.PrimaryText}" />
+                <StackLayout Spacing="20">
+                    <StackLayout.GestureRecognizers>
+                        <SwipeGestureRecognizer
+                            Command="{Binding PreviousHymnCommand}"
+                            Direction="Right" />
+                        <SwipeGestureRecognizer
+                            Command="{Binding NextHymnCommand}"
+                            Direction="Left" />
+                    </StackLayout.GestureRecognizers>
 
-                <Label
-                    Margin="10"
-                    AutomationId="HymnContentLabel"
-                    AutomationProperties.HelpText="{Binding CurrentHymn.Content}"
-                    AutomationProperties.Name="{localization:Translate AutomationHymnPageContent}"
-                    FontSize="{Binding HymnFontSize}"
-                    HorizontalTextAlignment="Center"
-                    LineBreakMode="WordWrap"
-                    Text="{Binding CurrentHymn.Content}"
-                    TextColor="{DynamicResource Color.PrimaryText}" />
-            </StackLayout>
-        </ScrollView>
+                    <Label
+                        AutomationProperties.HelpText="{Binding CurrentHymn.Title}"
+                        AutomationProperties.Name="{localization:Translate AutomationHymnPageTitle}"
+                        FontSize="{Binding HymnTitleFontSize}"
+                        HorizontalOptions="FillAndExpand"
+                        HorizontalTextAlignment="Center"
+                        IsVisible="{OnPlatform Default=True,
+                                               Tizen=False}"
+                        Text="{Binding CurrentHymn.Title}"
+                        TextColor="{DynamicResource Color.PrimaryText}" />
 
-    </Grid>
-    <!--</DataTemplate>
+                    <Label
+                        Margin="10"
+                        AutomationId="HymnContentLabel"
+                        AutomationProperties.HelpText="{Binding CurrentHymn.Content}"
+                        AutomationProperties.Name="{localization:Translate AutomationHymnPageContent}"
+                        FontSize="{Binding HymnFontSize}"
+                        HorizontalTextAlignment="Center"
+                        LineBreakMode="WordWrap"
+                        Text="{Binding CurrentHymn.Content}"
+                        TextColor="{DynamicResource Color.PrimaryText}" />
+                </StackLayout>
+            </ScrollView>
+
+        </Grid>
+
+        <!--</DataTemplate>
             </CarouselView.ItemTemplate>
         </CarouselView>-->
+    </controls:ModalPageHeader>
 
 </views:BaseContentPage>
