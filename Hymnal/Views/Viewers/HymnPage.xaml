@@ -42,13 +42,13 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
-            Command="{Binding AddToFavoritesAsyncCommand}"
+            Command="{Binding AddToFavoritesCommand}"
             IconImageSource="{Binding IsFavorite,
                                       Converter={StaticResource FavoriteIconConverter}}" />
         <ToolbarItem
             x:Name="openSheets"
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
-            CommandParameter="{Binding Parameter}"
+            CommandParameter="{Binding HymnParameter}"
             IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
                                               Glyph={StaticResource IconFASolid.Music}}" />
     </ContentPage.ToolbarItems>

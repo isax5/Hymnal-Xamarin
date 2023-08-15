@@ -51,9 +51,6 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     {
         base.Initialize();
 
-        if (Parameter is null)
-            return;
-
         HymnParameter = Parameter;
         Language = HymnParameter.HymnalLanguage;
 
@@ -90,7 +87,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
                         if (reference is not null)
                             await databaseService.RemoveAsync(reference);
 
-                        await databaseService.InserAsync(Parameter.ToRecordHymn());
+                        await databaseService.InserAsync(HymnParameter.ToRecordHymn());
                         var count = await databaseService.GetTable<RecordHymn>().CountAsync();
 
                         if (count > AppConstants.MAXIMUM_RECORDS)
@@ -141,6 +138,13 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
                 if (newHymnIndex > 0)
                     CurrentHymn = result[newHymnIndex - 1];
+
+                HymnParameter = new()
+                {
+                    HymnalLanguage = Parameter.HymnalLanguage,
+                    Number = newHymnIndex,
+                    SaveInRecords = Parameter.SaveInRecords,
+                };
             }), error => error.Report());
     }
 
@@ -156,11 +160,18 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
                 if (newHymnIndex <= result.Count)
                     CurrentHymn = result[newHymnIndex - 1];
+
+                HymnParameter = new()
+                {
+                    HymnalLanguage = Parameter.HymnalLanguage,
+                    Number = newHymnIndex,
+                    SaveInRecords = Parameter.SaveInRecords,
+                };
             }), error => error.Report());
     }
 
     [RelayCommand]
-    private async void AddToFavoritesAsync()
+    private void AddToFavorites()
     {
         if (IsFavorite)
             databaseService
