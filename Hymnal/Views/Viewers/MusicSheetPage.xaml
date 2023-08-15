@@ -6,26 +6,38 @@
     xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
+    x:Name="page"
     Title="{Binding Parameter.Number,
                     StringFormat='# {0}'}"
     x:DataType="viewModels:MusicSheetViewModel"
     x:TypeArguments="viewModels:MusicSheetViewModel"
     Shell.TabBarIsVisible="False">
 
-    <controls:PinchToZoomContainer>
-        <controls:PinchToZoomContainer.GestureRecognizers>
-            <TapGestureRecognizer Tapped="ViewTapped" />
-        </controls:PinchToZoomContainer.GestureRecognizers>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Controls/Templates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <StackLayout Margin="5">
-            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}}" />
-            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_2'}" />
-            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_3'}" />
-            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_4'}" />
-            <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_5'}" />
-        </StackLayout>
-    </controls:PinchToZoomContainer>
+    <controls:ModalPageHeader
+        x:Name="header"
+        ContentPage="{x:Reference page}"
+        ControlTemplate="{StaticResource ModalPageTemplate}">
+        <controls:PinchToZoomContainer>
+            <controls:PinchToZoomContainer.GestureRecognizers>
+                <TapGestureRecognizer Tapped="ViewTapped" />
+            </controls:PinchToZoomContainer.GestureRecognizers>
 
-    <!--<Label Text="holi" />-->
+            <StackLayout Margin="5">
+                <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}}" />
+                <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_2'}" />
+                <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_3'}" />
+                <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_4'}" />
+                <Image Source="{Binding Parameter, Converter={StaticResource HymnImageNameConverter}, ConverterParameter='_5'}" />
+            </StackLayout>
+        </controls:PinchToZoomContainer>
+    </controls:ModalPageHeader>
 
 </views:BaseContentPage>

@@ -9,28 +9,33 @@
     <ControlTemplate x:Key="ModalPageTemplate">
         <Grid RowDefinitions="auto,*">
             <!--  Nav Bar  -->
-            <FlexLayout
-                AlignItems="Center"
+            <Grid
                 BackgroundColor="{StaticResource Color.Accent}"
                 HeightRequest="60"
-                IsVisible="{TemplateBinding ShowNavigationBar}"
-                JustifyContent="SpaceBetween">
-                <!--  Back Button  -->
-                <ImageButton
-                    Command="{extensions:GoBack}"
-                    HeightRequest="25"
-                    Source="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                             Glyph={StaticResource IconFASolid.ChevronLeft}}" />
-
+                IsVisible="{TemplateBinding ShowNavigationBar}">
                 <!--  Page title  -->
                 <Label
                     FontAttributes="Bold"
                     FontSize="Large"
+                    HorizontalOptions="Center"
                     Text="{TemplateBinding ContentPage.Title}"
-                    TextColor="{StaticResource Color.NavBarText}" />
+                    TextColor="{StaticResource Color.NavBarText}"
+                    VerticalOptions="Center" />
+
+                <!--  Back Button  -->
+                <ImageButton
+                    Command="{extensions:GoBack}"
+                    HeightRequest="25"
+                    HorizontalOptions="Start"
+                    Source="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                             Glyph={StaticResource IconFASolid.ChevronLeft}}"
+                    VerticalOptions="Center" />
 
                 <!--  Toolbar Items  -->
-                <HorizontalStackLayout BindableLayout.ItemsSource="{TemplateBinding ContentPage.ToolbarItems}">
+                <HorizontalStackLayout
+                    BindableLayout.ItemsSource="{TemplateBinding ContentPage.ToolbarItems}"
+                    HorizontalOptions="End"
+                    VerticalOptions="Center">
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="ToolbarItem">
                             <ImageButton
@@ -41,7 +46,7 @@
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </HorizontalStackLayout>
-            </FlexLayout>
+            </Grid>
 
             <ContentPresenter Grid.Row="1" />
         </Grid>
@@ -52,12 +57,12 @@
             <Image
                 Aspect="AspectFill"
                 AutomationProperties.IsInAccessibleTree="False"
-                IsVisible="{Binding BackgroundImageAppearance}"
-                Source="{DynamicResource BackgroundImageFile}" />
+                IsVisible="{TemplateBinding ImageVisibleProperty}"
+                Source="{StaticResource BackgroundImageFile}" />
 
             <StackLayout
                 BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-                IsVisible="{Binding BackgroundImageAppearance}"
+                IsVisible="{TemplateBinding ImageVisibleProperty}"
                 Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
 
             <ContentPresenter />

@@ -3,6 +3,7 @@
     x:Class="Hymnal.Views.ThematicSubGroupPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
@@ -11,16 +12,15 @@
     x:TypeArguments="viewModels:ThematicSubGroupViewModel"
     Shell.TabBarIsVisible="False">
 
-    <Grid>
-        <Image
-            Aspect="AspectFill"
-            AutomationProperties.IsInAccessibleTree="False"
-            Source="{DynamicResource BackgroundImageFile}" />
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Controls/Templates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <StackLayout
-            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
-
+    <controls:PageBackgroundView ControlTemplate="{StaticResource BackgroundPageTemplate}">
         <ListView
             x:DataType="{x:Null}"
             BackgroundColor="Transparent"
@@ -39,6 +39,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-    </Grid>
+    </controls:PageBackgroundView>
 
 </views:BaseContentPage>

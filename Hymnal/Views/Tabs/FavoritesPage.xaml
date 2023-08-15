@@ -3,6 +3,7 @@
     x:Class="Hymnal.Views.FavoritesPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:database="clr-namespace:Hymnal.Models.DataBase"
     xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:models="clr-namespace:Hymnal.Models"
@@ -12,16 +13,15 @@
     x:DataType="viewModels:FavoritesViewModel"
     x:TypeArguments="viewModels:FavoritesViewModel">
 
-    <Grid>
-        <Image
-            Aspect="AspectFill"
-            AutomationProperties.IsInAccessibleTree="False"
-            Source="{DynamicResource BackgroundImageFile}" />
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Controls/Templates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-        <StackLayout
-            BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
-            Opacity="{DynamicResource Opacity.BackgroundHymnLettersFilter}" />
-
+    <controls:PageBackgroundView ControlTemplate="{StaticResource BackgroundPageTemplate}">
         <CollectionView
             ItemsSource="{Binding Hymns}"
             SelectionMode="None">
@@ -99,6 +99,6 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </Grid>
+    </controls:PageBackgroundView>
 
 </views:BaseContentPage>

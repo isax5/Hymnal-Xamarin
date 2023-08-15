@@ -50,9 +50,6 @@ public static class MauiProgram
         #region Views and ViewModels
         // Tabs
         builder.Services
-            .AddTransient<ModalNavPage>()
-            .AddTransient<ModalHymnNavPage>()
-
             .AddSingleton<NumberViewModel>().AddSingleton<NumberPage>()
             .AddSingleton<AlphabeticalIndexPage>().AddSingleton<AlphabeticalIndexViewModel>()
             .AddSingleton<NumericalIndexPage>().AddSingleton<NumericalIndexViewModel>()

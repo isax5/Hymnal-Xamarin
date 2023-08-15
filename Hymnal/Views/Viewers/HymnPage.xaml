@@ -17,7 +17,6 @@
     x:TypeArguments="viewModels:HymnViewModel"
     Shell.PresentationMode="ModalAnimated">
 
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -78,7 +77,7 @@
                 Aspect="AspectFill"
                 AutomationProperties.IsInAccessibleTree="False"
                 IsVisible="{Binding BackgroundImageAppearance}"
-                Source="{DynamicResource BackgroundImageFile}" />
+                Source="{StaticResource BackgroundImageFile}" />
 
             <StackLayout
                 BackgroundColor="{DynamicResource Color.BackgroundHymnLettersFilter}"
