@@ -19,10 +19,6 @@
 
     <ContentPage.Resources>
         <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Controls/Templates.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-
             <x:Boolean x:Key="TrueValue">True</x:Boolean>
 
             <FontImage

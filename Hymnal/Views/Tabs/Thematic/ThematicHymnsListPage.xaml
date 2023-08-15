@@ -3,84 +3,74 @@
     x:Class="Hymnal.Views.ThematicHymnsListPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:controls="clr-namespace:Hymnal.Controls"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{Binding Parameter.AmbitName}"
     x:DataType="viewModels:ThematicHymnsListViewModel"
     x:TypeArguments="viewModels:ThematicHymnsListViewModel"
+    ControlTemplate="{StaticResource BackgroundPageTemplate}"
     Shell.TabBarIsVisible="False">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Controls/Templates.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </ContentPage.Resources>
+    <ListView
+        x:DataType="{x:Null}"
+        BackgroundColor="Transparent"
+        CachingStrategy="RecycleElement"
+        Footer=""
+        ItemsSource="{Binding Hymns}"
+        SelectedItem="{Binding SelectedHymn,
+                               Mode=TwoWay}"
+        SelectionMode="None">
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="{x:Null}">
+                <ViewCell>
+                    <Grid
+                        Padding="20,0"
+                        ColumnDefinitions="0.2*, *"
+                        ColumnSpacing="0"
+                        RowDefinitions="0.7*, 0.3*"
+                        RowSpacing="0">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding OpenHymnAsyncCommand,
+                                                  Source={RelativeSource AncestorType={x:Type viewModels:ThematicHymnsListViewModel}}}"
+                                CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
 
-    <controls:PageBackgroundView ControlTemplate="{StaticResource BackgroundPageTemplate}">
-        <ListView
-            x:DataType="{x:Null}"
-            BackgroundColor="Transparent"
-            CachingStrategy="RecycleElement"
-            Footer=""
-            ItemsSource="{Binding Hymns}"
-            SelectedItem="{Binding SelectedHymn,
-                                   Mode=TwoWay}"
-            SelectionMode="None">
-            <ListView.ItemTemplate>
-                <DataTemplate x:DataType="{x:Null}">
-                    <ViewCell>
-                        <Grid
-                            Padding="20,0"
-                            ColumnDefinitions="0.2*, *"
-                            ColumnSpacing="0"
-                            RowDefinitions="0.7*, 0.3*"
-                            RowSpacing="0">
-                            <Grid.GestureRecognizers>
-                                <TapGestureRecognizer
-                                    Command="{Binding OpenHymnAsyncCommand,
-                                                      Source={RelativeSource AncestorType={x:Type viewModels:ThematicHymnsListViewModel}}}"
-                                    CommandParameter="{Binding .}" />
-                            </Grid.GestureRecognizers>
+                        <!--  Number  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            FontSize="Large"
+                            Text="{Binding Number}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                            <!--  Number  -->
-                            <Label
-                                Grid.Row="0"
-                                Grid.RowSpan="2"
-                                Grid.Column="0"
-                                FontSize="Large"
-                                Text="{Binding Number}"
-                                TextColor="{DynamicResource Color.PrimaryText}"
-                                VerticalOptions="CenterAndExpand" />
+                        <!--  Title  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            FontSize="Large"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Title}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                            <!--  Title  -->
-                            <Label
-                                Grid.Row="0"
-                                Grid.Column="1"
-                                FontSize="Large"
-                                LineBreakMode="TailTruncation"
-                                Text="{Binding Title}"
-                                TextColor="{DynamicResource Color.PrimaryText}"
-                                VerticalOptions="CenterAndExpand" />
+                        <!--  Preview  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Micro"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding PlainContent}"
+                            TextColor="{DynamicResource Color.SecondaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                            <!--  Preview  -->
-                            <Label
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                AutomationProperties.IsInAccessibleTree="False"
-                                FontSize="Micro"
-                                LineBreakMode="TailTruncation"
-                                Text="{Binding PlainContent}"
-                                TextColor="{DynamicResource Color.SecondaryText}"
-                                VerticalOptions="CenterAndExpand" />
-
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-    </controls:PageBackgroundView>
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </views:BaseContentPage>

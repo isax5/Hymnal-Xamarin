@@ -13,14 +13,6 @@
     x:TypeArguments="viewModels:MusicSheetViewModel"
     Shell.TabBarIsVisible="False">
 
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="/Controls/Templates.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-
     <controls:ModalPageHeader
         x:Name="header"
         ContentPage="{x:Reference page}"

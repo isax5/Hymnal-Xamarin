@@ -17,6 +17,8 @@
 
                 <ResourceDictionary Source="Resources/Styles/StaticTheme.xaml" />
                 <ResourceDictionary Source="Resources/Styles/LightTheme.xaml" />
+
+                <ResourceDictionary Source="/Controls/Templates.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <!--  Fonts  -->
