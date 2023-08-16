@@ -60,8 +60,8 @@ public static class MauiProgram
             .AddTransient<RecordsPage>().AddSingleton<RecordsViewModel>()
 
         // Thematic
-            .AddTransient<ThematicHymnsListPage>().AddSingleton<ThematicHymnsListViewModel>()
             .AddSingleton<ThematicSubGroupPage>().AddSingleton<ThematicSubGroupViewModel>()
+            .AddTransient<ThematicHymnsListPage>().AddSingleton<ThematicHymnsListViewModel>()
 
         // Viewers
             .AddTransient<HymnPage>().AddTransient<HymnViewModel>()
