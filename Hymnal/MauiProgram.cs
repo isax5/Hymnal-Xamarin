@@ -28,7 +28,7 @@ public static class MauiProgram
 
         /**
          * Transient objects are always different; a new instance is provided to every controller and every service.
-         * Scoped objects are the same within a request, but different across different requests.
+         * Scoped objects are the same within a request, but different across different requests (makes sense in web environments).
          * Singleton objects are the same for every object and every request.
          */
 
