@@ -1,5 +1,6 @@
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
 using Hymnal.Models.DataBase;
 
@@ -10,6 +11,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     private readonly PreferencesService preferencesService;
     private readonly HymnsService hymnsService;
     private readonly DatabaseService databaseService;
+    private readonly MediaElement mediaElement;
 
     #region Properties
     public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
@@ -40,11 +42,13 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     public HymnViewModel(
         PreferencesService preferencesService,
         HymnsService hymnsService,
-        DatabaseService databaseService)
+        DatabaseService databaseService,
+        MediaElement mediaElement)
     {
         this.preferencesService = preferencesService;
         this.hymnsService = hymnsService;
         this.databaseService = databaseService;
+        this.mediaElement = mediaElement;
     }
 
     public override void Initialize()
@@ -168,6 +172,30 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
                     SaveInRecords = Parameter.SaveInRecords,
                 };
             }), error => error.Report());
+    }
+
+    [RelayCommand]
+    private void Play()
+    {
+        try
+        {
+            if (IsPlaying)
+            {
+                mediaElement.Stop();
+                IsPlaying = false;
+            }
+            else
+            {
+                //mediaElement.Source = new Uri(@"https://s3.us-east-2.wasabisys.com/hymnalstorage/english/1985%20version/instrumental/001.mp3");
+                mediaElement.Source = MediaSource.FromUri(@"https://s3.us-east-2.wasabisys.com/hymnalstorage/english/1985%20version/instrumental/002.mp3");
+                mediaElement.Play();
+                IsPlaying = true;
+            }
+        }
+        catch (Exception ex)
+        {
+            ex.Report();
+        }
     }
 
     [RelayCommand]

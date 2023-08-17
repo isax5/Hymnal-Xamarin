@@ -42,6 +42,10 @@
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
+            Command="{Binding PlayCommand}"
+            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                              Glyph={StaticResource IconFASolid.Play}}" />
+        <ToolbarItem
             Command="{Binding AddToFavoritesCommand}"
             IconImageSource="{Binding IsFavorite,
                                       Converter={StaticResource FavoriteIconConverter}}" />

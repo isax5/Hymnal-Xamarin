@@ -1,4 +1,5 @@
 using CommunityToolkit.Maui;
+using CommunityToolkit.Maui.Views;
 using Hymnal.Resources.Languages;
 using LocalizationResourceManager.Maui;
 using Microsoft.Extensions.Logging;
@@ -16,6 +17,7 @@ public static class MauiProgram
                 settings.AddResource(LanguageResources.ResourceManager);
             })
             .UseMauiCommunityToolkit()
+            .UseMauiCommunityToolkitMediaElement()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("fa-brands-400.ttf", "FABrands");
@@ -33,7 +35,8 @@ public static class MauiProgram
          */
 
         #region Services
-        builder.Services.AddSingleton<IPreferences>(e => Preferences.Default)
+        builder.Services
+            .AddSingleton<IPreferences>(e => Preferences.Default)
             .AddSingleton<IDeviceInfo>(e => DeviceInfo.Current)
             .AddSingleton<IBrowser>(e => Browser.Default)
             .AddSingleton<IDeviceDisplay>(e => DeviceDisplay.Current)
@@ -44,7 +47,10 @@ public static class MauiProgram
             .AddSingleton<DatabaseService>()
 
         // Setup
-            .AddSingleton<Setup>();
+            .AddSingleton<Setup>()
+
+            // As a service to share the same instance between all the pages and times it's needed
+            .AddSingleton<MediaElement>((_) => new() { IsVisible = false });
         #endregion
 
         #region Views and ViewModels

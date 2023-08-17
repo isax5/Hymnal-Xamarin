@@ -80,7 +80,7 @@
                                               Glyph={StaticResource IconFASolid.ClockRotateLeft}}" />
     </ContentPage.ToolbarItems>
 
-    <Grid>
+    <Grid x:Name="MainGrid">
         <Grid.GestureRecognizers>
             <TapGestureRecognizer Tapped="GridTapGestureRecognizer_Tapped" />
         </Grid.GestureRecognizers>
@@ -94,72 +94,60 @@
             BackgroundColor="{DynamicResource Color.SecondaryBackground}"
             Opacity="{DynamicResource Opacity.BackgroundMainPageFilter}" />
 
-        <StackLayout
-            x:Name="MainStack"
-            HorizontalOptions="CenterAndExpand">
+        <StackLayout HorizontalOptions="CenterAndExpand">
             <StackLayout
-                x:Name="ContainerStack"
-                Margin="0,30"
-                Padding="0,0,0,60">
+                Spacing="10"
+                VerticalOptions="CenterAndExpand">
 
-                <Grid Padding="0">
-                    <!--<Frame
-                        BackgroundColor="{DynamicResource Color.PrimaryBackground}"
-                        CornerRadius="10"
-                        HasShadow="True"
-                        HorizontalOptions="CenterAndExpand"
-                        Opacity="0.3"
+                <HorizontalStackLayout
+                    HorizontalOptions="CenterAndExpand"
+                    Spacing="10">
+                    <Label
+                        AutomationProperties.IsInAccessibleTree="False"
+                        FontAttributes="Bold"
+                        FontSize="45"
+                        Text="#"
+                        TextColor="{DynamicResource Color.PrimaryText}"
                         VerticalOptions="FillAndExpand"
-                        WidthRequest="{Binding Source={x:Reference EntryContainer}, Path=Width}" />-->
+                        VerticalTextAlignment="Center" />
 
-                    <HorizontalStackLayout
-                        x:Name="EntryContainer"
-                        HorizontalOptions="CenterAndExpand">
-                        <Label
-                            AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                            AbsoluteLayout.LayoutFlags="All"
-                            AutomationProperties.IsInAccessibleTree="False"
-                            FontAttributes="Bold"
-                            FontSize="45"
-                            Text="#"
-                            TextColor="{DynamicResource Color.PrimaryText}"
-                            VerticalOptions="FillAndExpand"
-                            VerticalTextAlignment="Center" />
-
-                        <Entry
-                            x:Name="HymnNumberEntry"
-                            AbsoluteLayout.LayoutBounds="0.1, 0, 1, 1"
-                            AbsoluteLayout.LayoutFlags="All"
-                            AutomationId="HymnNumberEntry"
-                            AutomationProperties.HelpText="{localization:Translate AutomationNumberPageHelpTextEntry}"
-                            AutomationProperties.Name="{localization:Translate AutomationNumberPageEntry}"
-                            BackgroundColor="Transparent"
-                            Focused="HymnNumberEntry_Focused"
-                            FontAttributes="Bold"
-                            FontSize="40"
-                            HorizontalOptions="CenterAndExpand"
-                            HorizontalTextAlignment="Center"
-                            Keyboard="Numeric"
-                            Placeholder="...."
-                            PlaceholderColor="{DynamicResource Color.PrimaryLight}"
-                            ReturnCommand="{Binding OpenHymnAsyncCommand}"
-                            ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry},
-                                                             Path=Text}"
-                            Text="{Binding HymnNumber}"
-                            TextColor="{DynamicResource Color.PrimaryText}"
-                            VerticalOptions="CenterAndExpand"
-                            Visual="Default"
-                            WidthRequest="150">
-                            <Entry.Behaviors>
-                                <!--<behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />-->
-                            </Entry.Behaviors>
-                            <Entry.Effects>
-                                <!--TODO: Needed for iOS-->
-                                <!--<effects:NoBorderLineEffect />-->
-                            </Entry.Effects>
-                        </Entry>
-                    </HorizontalStackLayout>
-                </Grid>
+                    <Entry
+                        x:Name="HymnNumberEntry"
+                        AutomationId="HymnNumberEntry"
+                        AutomationProperties.HelpText="{localization:Translate AutomationNumberPageHelpTextEntry}"
+                        AutomationProperties.Name="{localization:Translate AutomationNumberPageEntry}"
+                        BackgroundColor="#22ffffff"
+                        Focused="HymnNumberEntry_Focused"
+                        FontAttributes="Bold"
+                        FontSize="40"
+                        HeightRequest="80"
+                        HorizontalOptions="CenterAndExpand"
+                        HorizontalTextAlignment="Center"
+                        Keyboard="Numeric"
+                        Placeholder="...."
+                        PlaceholderColor="{DynamicResource Color.PrimaryLight}"
+                        ReturnCommand="{Binding OpenHymnAsyncCommand}"
+                        ReturnCommandParameter="{Binding Source={x:Reference HymnNumberEntry},
+                                                         Path=Text}"
+                        Text="{Binding HymnNumber}"
+                        TextColor="{DynamicResource Color.PrimaryText}"
+                        VerticalOptions="CenterAndExpand"
+                        Visual="Default"
+                        WidthRequest="150">
+                        <Entry.Clip>
+                            <RoundRectangleGeometry
+                                CornerRadius="10"
+                                Rect="0,0,150,80" />
+                        </Entry.Clip>
+                        <Entry.Behaviors>
+                            <!--<behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />-->
+                        </Entry.Behaviors>
+                        <Entry.Effects>
+                            <!--  TODO: Needed for iOS  -->
+                            <!--<effects:NoBorderLineEffect />-->
+                        </Entry.Effects>
+                    </Entry>
+                </HorizontalStackLayout>
 
                 <Button
                     x:DataType="{x:Null}"
@@ -173,6 +161,7 @@
                     HorizontalOptions="CenterAndExpand"
                     Text="{localization:Translate Generic_Open}"
                     TextColor="{StaticResource White}"
+                    VerticalOptions="EndAndExpand"
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
@@ -182,23 +171,6 @@
                     </Button.ImageSource>
                 </Button>
             </StackLayout>
-
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup x:Name="OrientationStates">
-                    <VisualState x:Name="Portrait">
-                        <VisualState.Setters>
-                            <Setter Property="VerticalOptions" Value="CenterAndExpand" />
-                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Vertical" />
-                        </VisualState.Setters>
-                    </VisualState>
-                    <VisualState x:Name="Landscape">
-                        <VisualState.Setters>
-                            <Setter Property="VerticalOptions" Value="StartAndExpand" />
-                            <Setter TargetName="ContainerStack" Property="StackLayout.Orientation" Value="Horizontal" />
-                        </VisualState.Setters>
-                    </VisualState>
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
         </StackLayout>
     </Grid>
 

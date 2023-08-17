@@ -1,13 +1,17 @@
 using CommunityToolkit.Maui.Core.Platform;
+using CommunityToolkit.Maui.Views;
 
 namespace Hymnal.Views;
 
 public sealed partial class NumberPage : BaseContentPage<NumberViewModel>
 {
-    public NumberPage(NumberViewModel vm)
+    public NumberPage(NumberViewModel vm, MediaElement mediaElement)
         : base(vm)
     {
         InitializeComponent();
+
+        // I didn't find a way to add the MediaElement to the XAML and keep the same instance all the time
+        MainGrid.Add(mediaElement, 0, 0);
     }
 
     protected override void OnNavigatedFrom(NavigatedFromEventArgs args)
