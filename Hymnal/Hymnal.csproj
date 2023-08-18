@@ -10,6 +10,7 @@
 		<UseMaui>true</UseMaui>
 		<SingleProject>true</SingleProject>
 		<ImplicitUsings>enable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
 
 		<!-- Display name -->
 		<ApplicationTitle>Hymnal</ApplicationTitle>
@@ -96,6 +97,11 @@
 		<PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.5" />
 		<PackageReference Include="System.Reactive" Version="6.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <ProjectReference Include="..\AzureFunctions\Hymnal.AzureFunctions.Client\Hymnal.AzureFunctions.Client.csproj" />
+	  <ProjectReference Include="..\AzureFunctions\Hymnal.AzureFunctions.Models\Hymnal.AzureFunctions.Models.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

@@ -2,16 +2,21 @@ using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
+using Hymnal.AzureFunctions.Client;
+using Hymnal.AzureFunctions.Extensions;
 using Hymnal.Models.DataBase;
+using Hymnal.Resources.Languages;
 
 namespace Hymnal.ViewModels;
 
 public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParameter>
 {
+    private readonly IConnectivity connectivity;
     private readonly PreferencesService preferencesService;
     private readonly HymnsService hymnsService;
     private readonly DatabaseService databaseService;
     private readonly MediaElement mediaElement;
+    private readonly IAzureHymnService azureHymnService;
 
     #region Properties
     public int HymnTitleFontSize => preferencesService.HymnalsFontSize + 10;
@@ -40,15 +45,19 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
 
     public HymnViewModel(
+        IConnectivity connectivity,
         PreferencesService preferencesService,
         HymnsService hymnsService,
         DatabaseService databaseService,
-        MediaElement mediaElement)
+        MediaElement mediaElement,
+        IAzureHymnService azureHymnService)
     {
+        this.connectivity = connectivity;
         this.preferencesService = preferencesService;
         this.hymnsService = hymnsService;
         this.databaseService = databaseService;
         this.mediaElement = mediaElement;
+        this.azureHymnService = azureHymnService;
     }
 
     public override void Initialize()
@@ -113,6 +122,14 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         }
     }
 
+    public override void OnAppearing()
+    {
+        base.OnAppearing();
+
+        // Pre-loading data for playing
+        azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
+    }
+
 
     private void UpdateHymnIsFavorite()
     {
@@ -175,27 +192,117 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
     }
 
     [RelayCommand]
-    private void Play()
+    private async void Play()
     {
-        try
+        // Check internet connection
+        if (connectivity.NetworkAccess == NetworkAccess.None)
         {
-            if (IsPlaying)
+            await Shell.Current.DisplayAlert(LanguageResources.Error_WeHadAProblem, LanguageResources.NoInternetConnection, LanguageResources.Generic_Ok);
+            return;
+        }
+
+        // Stop/Start playing
+        if (IsPlaying)
+        {
+            try
             {
                 mediaElement.Stop();
-                IsPlaying = false;
             }
-            else
+            catch (Exception ex)
             {
-                //mediaElement.Source = new Uri(@"https://s3.us-east-2.wasabisys.com/hymnalstorage/english/1985%20version/instrumental/001.mp3");
-                mediaElement.Source = MediaSource.FromUri(@"https://s3.us-east-2.wasabisys.com/hymnalstorage/english/1985%20version/instrumental/002.mp3");
-                mediaElement.Play();
-                IsPlaying = true;
+                ex.Report();
             }
+
+            // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not put play
+            IsPlaying = false;
+            return;
         }
-        catch (Exception ex)
-        {
-            ex.Report();
-        }
+
+        azureHymnService.ObserveSettings()
+            .SelectMany(x => x)
+            .Where(x => x.Id == Language.Id)
+            .Subscribe(hymnSettings => MainThread.InvokeOnMainThreadAsync(async delegate
+            {
+                var songUrl = string.Empty;
+                var isPlayingInstrumentalMusic = false;
+
+                // Choose music
+                if (hymnSettings.InstrumentalMusicUrl != null && hymnSettings.SungMusicUrl != null)
+                {
+                    var instrumentalTitle = LanguageResources.Instrumental;
+                    var sungTitle = LanguageResources.Sung;
+
+                    var result = await Shell.Current.DisplayActionSheet(
+                        LanguageResources.VersionsAndLanguages, LanguageResources.Generic_Cancel,
+                        null, new[] { instrumentalTitle, sungTitle });
+
+                    if (result.Equals(instrumentalTitle))
+                    {
+                        songUrl = hymnSettings.GetInstrumentUrl(CurrentHymn.Number);
+                        isPlayingInstrumentalMusic = true;
+                    }
+                    else if (result.Equals(sungTitle))
+                    {
+                        songUrl = hymnSettings.GetSungUrl(CurrentHymn.Number);
+                        isPlayingInstrumentalMusic = false;
+                    }
+                    // Tap on "Close"
+                    else
+                        return;
+                }
+
+                if (string.IsNullOrWhiteSpace(songUrl))
+                {
+                    isPlayingInstrumentalMusic = hymnSettings.SupportsInstrumentalMusic();
+                    songUrl = hymnSettings.SupportsInstrumentalMusic()
+                        ? hymnSettings.GetInstrumentUrl(CurrentHymn.Number)
+                        : hymnSettings.GetSungUrl(CurrentHymn.Number);
+                }
+
+                // IsPlaying is setted here becouse maybe the internet is not so fast enough and the song can be loading and not to put play from the first moment
+                try
+                {
+                    IsPlaying = true;
+                    mediaElement.Source = MediaSource.FromUri(songUrl);
+
+                    // Buffering
+                    mediaElement.Play();
+                    mediaElement.Pause();
+
+                    new Thread(() =>
+                    {
+                        Thread.Sleep(1500);
+                        MainThread.BeginInvokeOnMainThread(() => mediaElement.Play());
+                    }).Start();
+                }
+                catch (Exception ex)
+                {
+                    ex.Report();
+                    IsPlaying = false;
+                }
+
+                //Analytics.TrackEvent(TrackingConstants.TrackEv.HymnMusicPlayed,
+                //    new Dictionary<string, string>
+                //    {
+                //            { TrackingConstants.TrackEv.HymnReferenceScheme.Number, CurrentHymn.Number.ToString() },
+                //            { TrackingConstants.TrackEv.HymnReferenceScheme.HymnalVersion, Language.Id },
+                //            {
+                //                TrackingConstants.TrackEv.HymnReferenceScheme.TypeOfMusicPlaying,
+                //                isPlayingInstrumentalMusic
+                //                    ? TrackingConstants.TrackEv.HymnReferenceScheme.InstrumentalMusic
+                //                    : TrackingConstants.TrackEv.HymnReferenceScheme.SungMusic
+                //            },
+                //            {
+                //                TrackingConstants.TrackEv.HymnReferenceScheme.CultureInfo,
+                //                InfoConstants.CurrentCultureInfo.Name
+                //            },
+                //            {
+                //                TrackingConstants.TrackEv.HymnReferenceScheme.Time,
+                //                DateTime.Now.ToLocalTime().ToString(CultureInfo.InvariantCulture)
+                //            }
+                //    });
+            }),
+            ex => ex.Report());
     }
 
     [RelayCommand]

@@ -1,5 +1,6 @@
 using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Views;
+using Hymnal.AzureFunctions.Client;
 using Hymnal.Resources.Languages;
 using LocalizationResourceManager.Maui;
 using Microsoft.Extensions.Logging;
@@ -36,21 +37,24 @@ public static class MauiProgram
 
         #region Services
         builder.Services
-            .AddSingleton<IPreferences>(e => Preferences.Default)
-            .AddSingleton<IDeviceInfo>(e => DeviceInfo.Current)
-            .AddSingleton<IBrowser>(e => Browser.Default)
-            .AddSingleton<IDeviceDisplay>(e => DeviceDisplay.Current)
+            .AddSingleton<IPreferences>(_ => Preferences.Default)
+            .AddSingleton<IDeviceInfo>(_ => DeviceInfo.Current)
+            .AddSingleton<IBrowser>(_ => Browser.Default)
+            .AddSingleton<IDeviceDisplay>(_ => DeviceDisplay.Current)
+            .AddSingleton<IConnectivity>(_ => Connectivity.Current)
 
             .AddSingleton<FilesService>()
             .AddSingleton<HymnsService>()
             .AddSingleton<PreferencesService>()
             .AddSingleton<DatabaseService>()
 
-        // Setup
+            .AddSingleton<IAzureHymnService>(_ => AzureHymnService.Current)
+
+            // Setup
             .AddSingleton<Setup>()
 
             // As a service to share the same instance between all the pages and times it's needed
-            .AddSingleton<MediaElement>((_) => new() { IsVisible = false });
+            .AddSingleton<MediaElement>(_ => new() { IsVisible = false });
         #endregion
 
         #region Views and ViewModels
