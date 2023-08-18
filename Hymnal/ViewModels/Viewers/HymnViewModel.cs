@@ -278,7 +278,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
                     new Thread(() =>
                     {
-                        Thread.Sleep(1800);
+                        Thread.Sleep(2000);
 
                         // You can stop playing while buffering
                         if (!IsPlaying)
