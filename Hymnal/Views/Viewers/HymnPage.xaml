@@ -37,14 +37,31 @@
                 ComparisonOperator="Equal"
                 FalseObject="{StaticResource IsNotFavorite}"
                 TrueObject="{StaticResource IsFavorite}" />
+
+            <FontImage
+                x:Key="IsPlaying"
+                FontFamily="{StaticResource IconFonts.FASolid}"
+                Glyph="{StaticResource IconFASolid.Stop}" />
+
+            <FontImage
+                x:Key="IsNotPlaying"
+                FontFamily="{StaticResource IconFonts.FASolid}"
+                Glyph="{StaticResource IconFASolid.Play}" />
+
+            <toolkit:CompareConverter
+                x:Key="PlayingIconConverter"
+                ComparingValue="{StaticResource TrueValue}"
+                ComparisonOperator="Equal"
+                FalseObject="{StaticResource IsNotPlaying}"
+                TrueObject="{StaticResource IsPlaying}" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Command="{Binding PlayCommand}"
-            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                              Glyph={StaticResource IconFASolid.Play}}" />
+            IconImageSource="{Binding IsPlaying,
+                                      Converter={StaticResource PlayingIconConverter}}" />
         <ToolbarItem
             Command="{Binding AddToFavoritesCommand}"
             IconImageSource="{Binding IsFavorite,

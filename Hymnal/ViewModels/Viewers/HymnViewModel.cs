@@ -1,5 +1,6 @@
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using CommunityToolkit.Maui.Core.Primitives;
 using CommunityToolkit.Maui.Views;
 using CommunityToolkit.Mvvm.Input;
 using Hymnal.AzureFunctions.Client;
@@ -58,6 +59,15 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         this.databaseService = databaseService;
         this.mediaElement = mediaElement;
         this.azureHymnService = azureHymnService;
+
+        mediaElement.StateChanged += MediaElementStateChanged;
+    }
+
+    public override void OnDestroy()
+    {
+        base.OnDestroy();
+
+        mediaElement.StateChanged -= MediaElementStateChanged;
     }
 
     public override void Initialize()
@@ -73,17 +83,7 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
             .Subscribe(result => MainThread.BeginInvokeOnMainThread(() => CurrentHymn = result),
             error => error.Report());
 
-        //Observable.Zip(
-        //    hymnsService.GetHymnListAsync(HymnParameter.HymnalLanguage).ToObservable(),
-        //    hymnsService.GetHymnAsync(HymnParameter.Number, HymnParameter.HymnalLanguage).ToObservable(),
-        //    (list, hymn) => new Tuple<List<Hymn>, Hymn>(list, hymn))
-        //    .Subscribe(result => MainThread.BeginInvokeOnMainThread(delegate
-        //    {
-        //        CarouselHymns = result.Item1;
-        //        CurrentHymn = result.Item2;
-        //    }), error => error.Report());
-
-        //IsPlaying = mediaManager.IsPlaying();
+        IsPlaying = mediaElement.CurrentState == MediaElementState.Playing;
 
         // Is Favorite
         UpdateHymnIsFavorite();
@@ -130,6 +130,13 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
         azureHymnService.ObserveSettings().Subscribe(x => { }, ex => { });
     }
 
+
+    private void MediaElementStateChanged(object sender, MediaStateChangedEventArgs e)
+        => IsPlaying = e.NewState is
+            MediaElementState.Playing
+            or MediaElementState.Buffering
+            or MediaElementState.Opening
+            or MediaElementState.Paused;
 
     private void UpdateHymnIsFavorite()
     {
@@ -271,7 +278,12 @@ public sealed partial class HymnViewModel : BaseViewModelParameter<HymnIdParamet
 
                     new Thread(() =>
                     {
-                        Thread.Sleep(1500);
+                        Thread.Sleep(1800);
+
+                        // You can stop playing while buffering
+                        if (!IsPlaying)
+                            return;
+
                         MainThread.BeginInvokeOnMainThread(() => mediaElement.Play());
                     }).Start();
                 }
