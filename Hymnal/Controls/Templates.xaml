@@ -10,7 +10,7 @@
         <Grid RowDefinitions="auto,*">
             <!--  Nav Bar  -->
             <Grid
-                BackgroundColor="{StaticResource Color.Accent}"
+                BackgroundColor="{DynamicResource Color.Accent}"
                 HeightRequest="60"
                 IsVisible="{TemplateBinding ShowNavigationBar}">
                 <!--  Page title  -->
@@ -19,17 +19,20 @@
                     FontSize="Large"
                     HorizontalOptions="Center"
                     Text="{TemplateBinding ContentPage.Title}"
-                    TextColor="{StaticResource Color.NavBarText}"
+                    TextColor="{DynamicResource Color.NavBarText}"
                     VerticalOptions="Center" />
 
                 <!--  Back Button  -->
                 <ImageButton
                     Command="{extensions:GoBack}"
+                    Padding="{OnPlatform Default=0, iOS=10}"
                     HeightRequest="25"
+                    WidthRequest="25"
                     HorizontalOptions="Start"
                     Source="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                             Glyph={StaticResource IconFASolid.ChevronLeft}}"
-                    VerticalOptions="Center" />
+                                             Glyph={StaticResource IconFASolid.ChevronLeft},
+                                             Size={OnPlatform iOS=100, Android=-1}}"
+                    VerticalOptions="CenterAndExpand" />
 
                 <!--  Toolbar Items  -->
                 <HorizontalStackLayout
@@ -39,9 +42,11 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="ToolbarItem">
                             <ImageButton
+                                Padding="{OnPlatform Default=0, iOS=10}"
                                 Command="{Binding Command}"
                                 CommandParameter="{Binding CommandParameter}"
                                 HeightRequest="25"
+                                WidthRequest="25"
                                 Source="{Binding IconImageSource}" />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>

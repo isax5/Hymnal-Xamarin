@@ -77,7 +77,9 @@
         <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:RecordsPage}}"
             IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                              Glyph={StaticResource IconFASolid.ClockRotateLeft}}" />
+                                              Glyph={StaticResource IconFASolid.ClockRotateLeft},
+                                              Size=44,
+                                              FontAutoScalingEnabled=False}" />
     </ContentPage.ToolbarItems>
 
     <Grid x:Name="MainGrid">
@@ -162,12 +164,15 @@
                     Text="{localization:Translate Generic_Open}"
                     TextColor="{StaticResource White}"
                     VerticalOptions="EndAndExpand"
+                    HeightRequest="30"
                     WidthRequest="200">
                     <Button.ImageSource>
                         <FontImageSource
+                            FontAutoScalingEnabled="False"
                             FontFamily="{StaticResource IconFonts.FASolid}"
                             Glyph="{StaticResource IconFASolid.BookOpen}"
-                            Color="{StaticResource White}" />
+                            Color="{StaticResource White}"
+                            Size="30"/>
                     </Button.ImageSource>
                 </Button>
             </StackLayout>

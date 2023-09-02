@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <views:BaseContentPage
     x:Class="Hymnal.Views.HymnPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -24,12 +24,14 @@
             <FontImage
                 x:Key="IsFavorite"
                 FontFamily="{StaticResource IconFonts.FASolid}"
-                Glyph="{StaticResource IconFASolid.Star}" />
+                Glyph="{StaticResource IconFASolid.Star}"
+                Size="{OnPlatform iOS=100, Android=-1}" />
 
             <FontImage
                 x:Key="IsNotFavorite"
                 FontFamily="{StaticResource IconFonts.FARegular}"
-                Glyph="{StaticResource IconFARegular.Star}" />
+                Glyph="{StaticResource IconFARegular.Star}"
+                Size="{OnPlatform iOS=100, Android=-1}"  />
 
             <toolkit:CompareConverter
                 x:Key="FavoriteIconConverter"
@@ -41,12 +43,14 @@
             <FontImage
                 x:Key="IsPlaying"
                 FontFamily="{StaticResource IconFonts.FASolid}"
-                Glyph="{StaticResource IconFASolid.Stop}" />
+                Glyph="{StaticResource IconFASolid.Stop}"
+                Size="{OnPlatform iOS=100, Android=-1}" />
 
             <FontImage
                 x:Key="IsNotPlaying"
                 FontFamily="{StaticResource IconFonts.FASolid}"
-                Glyph="{StaticResource IconFASolid.Play}" />
+                Glyph="{StaticResource IconFASolid.Play}"
+                Size="{OnPlatform iOS=100, Android=-1}" />
 
             <toolkit:CompareConverter
                 x:Key="PlayingIconConverter"
@@ -71,7 +75,8 @@
             Command="{extensions:NavigateTo PageType={x:Type views:MusicSheetPage}}"
             CommandParameter="{Binding HymnParameter}"
             IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                              Glyph={StaticResource IconFASolid.Music}}" />
+                                              Glyph={StaticResource IconFASolid.Music},
+                                              Size={OnPlatform iOS=100, Android=-1}}" />
     </ContentPage.ToolbarItems>
 
     <controls:ModalPageHeader
