@@ -29,23 +29,23 @@ Table of contents
    * [Team](#team)
    * [Workflow](#workflow)
    * [Support](#support)
-   * [Donations](#donations-soon)
+   * [Donations](#donations)
 <!--te-->
 
 ### Main Packages in version 4
-|Package                       |NuGet Link                                                       |
-|------------------------------|-----------------------------------------------------------------|
-|System.Reactive               |https://www.nuget.org/packages/System.Reactive/                  |
-|Xamarin.Forms                 |https://www.nuget.org/packages/Xamarin.Forms/                    |
-|Xamarin.Essentials            |https://www.nuget.org/packages/Xamarin.Essentials/               |
-|Prism.Forms                   |https://www.nuget.org/packages/Prism.Forms/                      |
-|Xamarin.Forms.Visual.Material |https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/    |
-|Microsoft.AppCenter.Analytics |https://www.nuget.org/packages/Microsoft.AppCenter.Analytics/    |
-|Microsoft.AppCenter.Crashes   |https://www.nuget.org/packages/Microsoft.AppCenter.Crashes/      |
-|Newtonsoft.Json               |https://www.nuget.org/packages/Newtonsoft.Json/                  |
-|Realm                         |https://www.nuget.org/packages/Realm/                            |
-|Plugin.MediaManager           |https://www.nuget.org/packages/Plugin.MediaManager/              |
-|XamarinFastEntry.Behaviors    |https://www.nuget.org/packages/XamarinFastEntry.Behaviors/       |
+| Package                       | NuGet Link                                                    |
+|-------------------------------|---------------------------------------------------------------|
+| System.Reactive               | https://www.nuget.org/packages/System.Reactive/               |
+| Xamarin.Forms                 | https://www.nuget.org/packages/Xamarin.Forms/                 |
+| Xamarin.Essentials            | https://www.nuget.org/packages/Xamarin.Essentials/            |
+| Prism.Forms                   | https://www.nuget.org/packages/Prism.Forms/                   |
+| Xamarin.Forms.Visual.Material | https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/ |
+| Microsoft.AppCenter.Analytics | https://www.nuget.org/packages/Microsoft.AppCenter.Analytics/ |
+| Microsoft.AppCenter.Crashes   | https://www.nuget.org/packages/Microsoft.AppCenter.Crashes/   |
+| Newtonsoft.Json               | https://www.nuget.org/packages/Newtonsoft.Json/               |
+| Realm                         | https://www.nuget.org/packages/Realm/                         |
+| Plugin.MediaManager           | https://www.nuget.org/packages/Plugin.MediaManager/           |
+| XamarinFastEntry.Behaviors    | https://www.nuget.org/packages/XamarinFastEntry.Behaviors/    |
 
 
 ### Build status
@@ -54,10 +54,10 @@ Table of contents
 [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)
 [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge)](https://appcenter.ms)
  -->
-|Platform       |Package Name    |Version           |Minimum Compatible OS         |AppCenter build                                                                                                                           |
-|---------------|----------------|------------------|------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
-|iOS            |Hymnal.XF.iOS   |4                 |iOS 11.0                      |[![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
-|Android        |Hymnal.XF.Droid |4                 |Android 5.0 (API 21 Lollipop) |[![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)  |
+| Platform | Package Name    | Version | Minimum Compatible OS         | AppCenter build                                                                                                                           |
+|----------|-----------------|---------|-------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| iOS      | Hymnal.XF.iOS   | 4       | iOS 11.0                      | [![Build status](https://build.appcenter.ms/v0.1/apps/a84c27d5-4abc-449e-983e-9b2ac6953ffa/branches/master/badge?)](https://appcenter.ms) |
+| Android  | Hymnal.XF.Droid | 4       | Android 5.0 (API 21 Lollipop) | [![Build status](https://build.appcenter.ms/v0.1/apps/3d7e2f21-5600-40b5-91f3-6d57fe1227a4/branches/master/badge)](https://appcenter.ms)  |
 
 ## Usage
 
@@ -90,10 +90,10 @@ Table of contents
 ## Tests
 > Beta testing programs:
 
-|Platform    |Link                                                                                                              |
-|------------|------------------------------------------------------------------------------------------------------------------|
-|Android     |Beta testers program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA) |
-|iOS         |Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program                                  |
+| Platform | Link                                                                                                              |
+|----------|-------------------------------------------------------------------------------------------------------------------|
+| Android  | Beta testers program in [PlayStore](https://play.google.com/store/apps/details?id=net.ddns.HimnarioAdventistaSPA) |
+| iOS      | Public link for [TestFlight](https://testflight.apple.com/join/0zTExNbR) program                                  |
 
 ### Clone
 
@@ -131,3 +131,9 @@ Reach out to me at one of the following places!
 
 - Twitter at <a href="https://twitter.com/IsaacRebolledo" target="_blank">`@IsaacRebolledo`</a>
 - LinkedIn at <a href="https://www.linkedin.com/in/isaac-rebolledo-leal-47387698/" target="_blank">`Isaac Rebolledo`</a>
+
+---
+
+## Donations
+
+> <a href="https://www.paypal.me/isax5">Donate on Paypal</a>	
