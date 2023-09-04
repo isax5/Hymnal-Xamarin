@@ -37,7 +37,10 @@
     <!--  Selected Tab  -->
     <Color x:Key="Color.SelectedTab">#399999</Color>
     <!--  Unselected Tabs  -->
-    <Color x:Key="Color.UnselectedTab">#ffffff</Color>
+    <Color x:Key="Color.UnselectedTab">#fff</Color>
     <Color x:Key="Color.BackgroundTab">#363c40</Color>
+
+    <!--  View Background  -->
+    <Color x:Key="Color.ViewBackground">#393f42</Color>
 
 </ResourceDictionary>

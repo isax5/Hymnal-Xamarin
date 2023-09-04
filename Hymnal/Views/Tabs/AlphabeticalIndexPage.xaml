@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <views:BaseContentPage
     x:Class="Hymnal.Views.AlphabeticalIndexPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
@@ -18,7 +18,6 @@
         BackgroundColor="Transparent"
         CachingStrategy="RecycleElement"
         Footer=""
-        GroupDisplayBinding="{Binding Key}"
         GroupShortNameBinding="{Binding Key}"
         IsGroupingEnabled="{OnPlatform Default=True,
                                        WinUI=False}"
@@ -26,6 +25,19 @@
         RowHeight="{OnPlatform Default=50,
                                WinUI=60}"
         SelectionMode="None">
+        <ListView.GroupHeaderTemplate>
+            <DataTemplate x:DataType="{x:Null}">
+                <ViewCell >
+                    <Grid BackgroundColor="{DynamicResource Color.ViewBackground}">
+                        <Label VerticalOptions="Center"
+                               FontAttributes="Bold"
+                               FontSize="Large"
+                               Margin="20,0" Text="{Binding Key}"
+                               TextColor="{DynamicResource Color.PrimaryText}" />
+                    </Grid>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.GroupHeaderTemplate>
         <ListView.ItemTemplate>
             <DataTemplate x:DataType="{x:Null}">
                 <ViewCell>

@@ -11,11 +11,19 @@
     Shell.TabBarUnselectedColor="{DynamicResource Color.UnselectedTab}"
     Shell.TabBarForegroundColor="{DynamicResource Color.SelectedTab}">
 
+    <Shell.Resources>
+        <ResourceDictionary>
+            <x:Double x:Key="iconSize">20</x:Double>
+        </ResourceDictionary>
+    </Shell.Resources>
+
     <TabBar>
         <Tab
             Title="Number"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.BookOpenReader}}">
+                                   Glyph={StaticResource IconFASolid.BookOpenReader},
+                                   Size={OnPlatform Default={x:Null},
+                                                    iOS={StaticResource iconSize}}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:NumberPage}" />
@@ -23,7 +31,9 @@
         <Tab
             Title="Index"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.ListUl}}">
+                                   Glyph={StaticResource IconFASolid.ListUl},
+                                   Size={OnPlatform Default={x:Null},
+                                                    iOS={StaticResource iconSize}}}">
             <ShellContent
                 Title="Alfabetico"
                 ContentTemplate="{DataTemplate views:AlphabeticalIndexPage}" />
@@ -37,7 +47,9 @@
         <Tab
             Title="Favorites"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.Heart}}">
+                                   Glyph={StaticResource IconFASolid.Heart},
+                                   Size={OnPlatform Default={x:Null},
+                                                    iOS={StaticResource iconSize}}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:FavoritesPage}" />
@@ -45,7 +57,9 @@
         <Tab
             Title="Settings"
             Icon="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                   Glyph={StaticResource IconFASolid.Gear}}">
+                                   Glyph={StaticResource IconFASolid.Gear},
+                                   Size={OnPlatform Default={x:Null},
+                                                    iOS={StaticResource iconSize}}}">
             <ShellContent
                 Title="Adventist Hymnal"
                 ContentTemplate="{DataTemplate views:SettingsPage}" />

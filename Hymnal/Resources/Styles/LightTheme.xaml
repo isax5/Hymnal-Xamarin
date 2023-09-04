@@ -21,15 +21,18 @@
 
     <Color x:Key="Color.PrimaryText">#000000</Color>
     <Color x:Key="Color.SecondaryText">#666666</Color>
-    <Color x:Key="Color.NavBarText">#ffffff</Color>
+    <Color x:Key="Color.NavBarText">#fff</Color>
 
     <!--  Background in Navigation and Tab Bar  -->
     <Color x:Key="Color.PrimaryBackground">#000000</Color>
-    <Color x:Key="Color.SecondaryBackground">#ffffff</Color>
-    <Color x:Key="Color.BackgroundHymnLettersFilter">#ffffff</Color>
+    <Color x:Key="Color.SecondaryBackground">#fff</Color>
+    <Color x:Key="Color.BackgroundHymnLettersFilter">#fff</Color>
 
     <Color x:Key="Color.SelectedTab">#54a5ab</Color>
-    <Color x:Key="Color.UnselectedTab">#ffffff</Color>
+    <Color x:Key="Color.UnselectedTab">#fff</Color>
     <Color x:Key="Color.BackgroundTab">#4c555a</Color>
+
+    <!--  View Background  -->
+    <Color x:Key="Color.ViewBackground">#fff</Color>
 
 </ResourceDictionary>
