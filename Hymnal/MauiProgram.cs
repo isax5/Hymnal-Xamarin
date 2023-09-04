@@ -1,6 +1,7 @@
 using CommunityToolkit.Maui;
 using CommunityToolkit.Maui.Views;
 using Hymnal.AzureFunctions.Client;
+using Hymnal.Effects;
 using Hymnal.Resources.Languages;
 using LocalizationResourceManager.Maui;
 using Microsoft.Extensions.Logging;
@@ -13,6 +14,10 @@ public static class MauiProgram
     {
         MauiAppBuilder builder = MauiApp.CreateBuilder();
         builder.UseMauiApp<App>()
+            .ConfigureEffects(effects =>
+            {
+                effects.Add<NoBorderLineEffect, NoBorderLinePlatformEffect>();
+            })
             .UseLocalizationResourceManager(settings =>
             {
                 settings.AddResource(LanguageResources.ResourceManager);

@@ -7,6 +7,7 @@
     xmlns:extensions="clr-namespace:Hymnal.Extensions"
     xmlns:localization="clr-namespace:LocalizationResourceManager.Maui;assembly=LocalizationResourceManager.Maui"
     xmlns:viewModels="clr-namespace:Hymnal.ViewModels"
+    xmlns:effects="clr-namespace:Hymnal.Effects"
     xmlns:views="clr-namespace:Hymnal.Views"
     Title="{localization:Translate AdventistHymnal}"
     x:DataType="viewModels:NumberViewModel"
@@ -76,10 +77,10 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem
             Command="{extensions:NavigateTo PageType={x:Type views:RecordsPage}}"
-            IconImageSource="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                              Glyph={StaticResource IconFASolid.ClockRotateLeft},
-                                              Size=44,
-                                              FontAutoScalingEnabled=False}" />
+            IconImageSource="{OnPlatform Default={FontImageSource FontFamily={StaticResource IconFonts.FASolid},
+                                                                  Glyph={StaticResource IconFASolid.ClockRotateLeft}},
+                                         iOS={x:Null}}"
+            Text="Historial"/>
     </ContentPage.ToolbarItems>
 
     <Grid x:Name="MainGrid">
@@ -103,12 +104,20 @@
 
                 <HorizontalStackLayout
                     HorizontalOptions="CenterAndExpand"
+                    BackgroundColor="{AppThemeBinding Light=#55ffffff, Dark=#22ffffff}"
                     Spacing="10">
+                    <HorizontalStackLayout.Clip>
+                        <RoundRectangleGeometry
+                            CornerRadius="10"
+                            Rect="0,0,210,80" />
+                    </HorizontalStackLayout.Clip>
+
                     <Label
                         AutomationProperties.IsInAccessibleTree="False"
                         FontAttributes="Bold"
                         FontSize="45"
                         Text="#"
+                        WidthRequest="50"
                         TextColor="{DynamicResource Color.PrimaryText}"
                         VerticalOptions="FillAndExpand"
                         VerticalTextAlignment="Center" />
@@ -118,7 +127,6 @@
                         AutomationId="HymnNumberEntry"
                         AutomationProperties.HelpText="{localization:Translate AutomationNumberPageHelpTextEntry}"
                         AutomationProperties.Name="{localization:Translate AutomationNumberPageEntry}"
-                        BackgroundColor="#22ffffff"
                         Focused="HymnNumberEntry_Focused"
                         FontAttributes="Bold"
                         FontSize="40"
@@ -136,17 +144,11 @@
                         VerticalOptions="CenterAndExpand"
                         Visual="Default"
                         WidthRequest="150">
-                        <Entry.Clip>
-                            <RoundRectangleGeometry
-                                CornerRadius="10"
-                                Rect="0,0,150,80" />
-                        </Entry.Clip>
                         <Entry.Behaviors>
                             <!--<behaviors:FastEntryBehaviour IsNumeric="True" Mask="###" />-->
                         </Entry.Behaviors>
                         <Entry.Effects>
-                            <!--  TODO: Needed for iOS  -->
-                            <!--<effects:NoBorderLineEffect />-->
+                            <effects:NoBorderLineEffect />
                         </Entry.Effects>
                     </Entry>
                 </HorizontalStackLayout>
@@ -164,16 +166,12 @@
                     Text="{localization:Translate Generic_Open}"
                     TextColor="{StaticResource White}"
                     VerticalOptions="EndAndExpand"
-                    HeightRequest="30"
-                    WidthRequest="200">
-                    <Button.ImageSource>
-                        <FontImageSource
-                            FontAutoScalingEnabled="False"
-                            FontFamily="{StaticResource IconFonts.FASolid}"
-                            Glyph="{StaticResource IconFASolid.BookOpen}"
-                            Color="{StaticResource White}"
-                            Size="30"/>
-                    </Button.ImageSource>
+                    WidthRequest="200"
+                    ImageSource="{OnPlatform Default={FontImageSource
+                                                      FontFamily={StaticResource IconFonts.FASolid},
+                                                      Glyph={StaticResource IconFASolid.BookOpen},
+                                                      Color={StaticResource White}},
+                                             iOS={x:Null}}">
                 </Button>
             </StackLayout>
         </StackLayout>

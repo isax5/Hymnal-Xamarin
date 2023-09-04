@@ -85,6 +85,8 @@
 	  <None Remove="Resources\Raw\old-hymnal-es.json" />
 	  <None Remove="Resources\Raw\old-hymnal-thematic-list-en.json" />
 	  <None Remove="Resources\Raw\old-hymnal-thematic-list-es.json" />
+	  <None Remove="Effects\" />
+	  <None Remove="Platforms\iOS\Effects\" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -170,4 +172,8 @@
 	  </MauiXaml>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <Folder Include="Effects\" />
+	  <Folder Include="Platforms\iOS\Effects\" />
+	</ItemGroup>
 </Project>
