@@ -24,15 +24,28 @@
 
                 <!--  Back Button  -->
                 <ImageButton
+                    Padding="{OnPlatform Default=0,
+                                         iOS=10,
+                                         Android=1}"
                     Command="{extensions:GoBack}"
-                    Padding="{OnPlatform Default=0, iOS=10}"
-                    HeightRequest="25"
-                    WidthRequest="25"
+                    HeightRequest="{OnPlatform Default=25}"
                     HorizontalOptions="Start"
                     Source="{FontImageSource FontFamily={StaticResource IconFonts.FASolid},
-                                             Glyph={StaticResource IconFASolid.ChevronLeft},
-                                             Size={OnPlatform iOS=100, Android=-1}}"
-                    VerticalOptions="CenterAndExpand" />
+                                             Glyph={StaticResource IconFASolid.ArrowLeft},
+                                             Size={OnPlatform iOS=100,
+                                                              Android=-1}}"
+                    VerticalOptions="CenterAndExpand"
+                    WidthRequest="{OnPlatform Default=25}">
+                    <ImageButton.Margin>
+                        <OnPlatform
+                            x:TypeArguments="Thickness"
+                            Default="0">
+                            <On
+                                Platform="Android"
+                                Value="15,0,0,0" />
+                        </OnPlatform>
+                    </ImageButton.Margin>
+                </ImageButton>
 
                 <!--  Toolbar Items  -->
                 <HorizontalStackLayout
@@ -42,12 +55,13 @@
                     <BindableLayout.ItemTemplate>
                         <DataTemplate x:DataType="ToolbarItem">
                             <ImageButton
-                                Padding="{OnPlatform Default=0, iOS=10}"
+                                Padding="{OnPlatform Default=0,
+                                                     iOS=10}"
                                 Command="{Binding Command}"
                                 CommandParameter="{Binding CommandParameter}"
                                 HeightRequest="25"
-                                WidthRequest="25"
-                                Source="{Binding IconImageSource}" />
+                                Source="{Binding IconImageSource}"
+                                WidthRequest="25" />
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                 </HorizontalStackLayout>

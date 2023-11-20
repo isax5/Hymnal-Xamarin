@@ -14,78 +14,82 @@
     ControlTemplate="{StaticResource BackgroundPageTemplate}"
     Shell.TabBarIsVisible="False">
 
-    <CollectionView
-        Grid.Row="1"
+    <ListView
         x:DataType="{x:Null}"
         AutomationProperties.IsInAccessibleTree="False"
         BackgroundColor="Transparent"
-        ItemSizingStrategy="MeasureFirstItem"
+        CachingStrategy="RecycleElement"
+        Footer=""
         ItemsSource="{Binding Hymns}"
+        RowHeight="{OnPlatform Default=50,
+                               WinUI=60}"
         SelectionMode="None">
-        <CollectionView.ItemTemplate>
+        <ListView.ItemTemplate>
             <DataTemplate x:DataType="{x:Null}">
-                <Grid
-                    Padding="20,0,10,0"
-                    ColumnDefinitions="0.2*, *, 0.2*"
-                    ColumnSpacing="0"
-                    RowDefinitions="0.7*, 0.3*"
-                    RowSpacing="0">
-                    <Grid.GestureRecognizers>
-                        <TapGestureRecognizer
-                            Command="{Binding OpenHymnAsyncCommand,
-                                              Source={RelativeSource AncestorType={x:Type viewModels:RecordsViewModel}}}"
-                            CommandParameter="{Binding .}" />
-                    </Grid.GestureRecognizers>
+                <ViewCell>
+                    <Grid
+                        Padding="20,0,10,0"
+                        ColumnDefinitions="0.2*, *, 0.2*"
+                        ColumnSpacing="0"
+                        RowDefinitions="0.7*, 0.3*"
+                        RowSpacing="0">
+                        <Grid.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Command="{Binding OpenHymnAsyncCommand,
+                                                  Source={RelativeSource AncestorType={x:Type viewModels:RecordsViewModel}}}"
+                                CommandParameter="{Binding .}" />
+                        </Grid.GestureRecognizers>
 
-                    <!--  Number  -->
-                    <Label
-                        Grid.Row="0"
-                        Grid.RowSpan="2"
-                        Grid.Column="0"
-                        AutomationProperties.HelpText="{Binding Item1.Title}"
-                        FontSize="Large"
-                        Text="{Binding Item1.Number}"
-                        TextColor="{DynamicResource Color.PrimaryText}"
-                        VerticalOptions="CenterAndExpand" />
+                        <!--  Number  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="0"
+                            AutomationProperties.HelpText="{Binding Item1.Title}"
+                            FontSize="Large"
+                            Text="{Binding Item1.Number}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                    <!--  Title  -->
-                    <Label
-                        Grid.Row="0"
-                        Grid.Column="1"
-                        AutomationProperties.IsInAccessibleTree="False"
-                        FontSize="Large"
-                        LineBreakMode="TailTruncation"
-                        Text="{Binding Item1.Title}"
-                        TextColor="{DynamicResource Color.PrimaryText}"
-                        VerticalOptions="CenterAndExpand" />
+                        <!--  Title  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Large"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Item1.Title}"
+                            TextColor="{DynamicResource Color.PrimaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                    <!--  Preview  -->
-                    <Label
-                        Grid.Row="1"
-                        Grid.Column="1"
-                        AutomationProperties.IsInAccessibleTree="False"
-                        FontSize="Micro"
-                        LineBreakMode="TailTruncation"
-                        Text="{Binding Item1.PlainContent}"
-                        TextColor="{DynamicResource Color.SecondaryText}"
-                        VerticalOptions="CenterAndExpand" />
+                        <!--  Preview  -->
+                        <Label
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Micro"
+                            LineBreakMode="TailTruncation"
+                            Text="{Binding Item1.PlainContent}"
+                            TextColor="{DynamicResource Color.SecondaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                    <!--  Date  -->
-                    <Label
-                        Grid.Row="0"
-                        Grid.RowSpan="2"
-                        Grid.Column="2"
-                        Margin="5,0,0,0"
-                        AutomationProperties.IsInAccessibleTree="False"
-                        FontSize="Micro"
-                        Text="{Binding Item2.SavedAt,
-                                       StringFormat='{0:dd/MM}'}"
-                        TextColor="{DynamicResource Color.SecondaryText}"
-                        VerticalOptions="CenterAndExpand" />
+                        <!--  Date  -->
+                        <Label
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Grid.Column="2"
+                            Margin="5,0,0,0"
+                            AutomationProperties.IsInAccessibleTree="False"
+                            FontSize="Micro"
+                            Text="{Binding Item2.SavedAt,
+                                           StringFormat='{0:dd/MM}'}"
+                            TextColor="{DynamicResource Color.SecondaryText}"
+                            VerticalOptions="CenterAndExpand" />
 
-                </Grid>
+                    </Grid>
+                </ViewCell>
             </DataTemplate>
-        </CollectionView.ItemTemplate>
-    </CollectionView>
+        </ListView.ItemTemplate>
+    </ListView>
 
 </views:BaseContentPage>
