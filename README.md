@@ -1,4 +1,11 @@
-# Adventist Hymnal Xamarin
+# [DEPRECATED] Adventist Hymnal Xamarin
+
+> [!IMPORTANT]
+> This project has been replaced by the Flutter version located at:
+> **https://github.com/isax5/Hymnal-Flutter**
+> 
+> The new version of the Android app will also be available for download in that repository.
+
 > New version of the adventist hymnal multi-platform in Xamarin
 
 > If you like this app, help me supporting this project </br>
